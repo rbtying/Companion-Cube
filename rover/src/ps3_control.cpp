@@ -11,6 +11,9 @@
 
 #define expo(x) ((x) < (0)) ? ((-1) * (x) * (x)) : ((x) * (x))
 
+#define HALF_PI 1.57079633
+#define PI 3.14159265
+
 class TeleopRover {
 public:
 	TeleopRover();
@@ -64,17 +67,17 @@ void TeleopRover::joyCallback(const joy::Joy::ConstPtr& joy)
 	// set velocity
 	geometry_msgs::Twist cmd_vel;
 	cmd_vel.linear.x = scale(expo(joy->axes[m_linear]), -1.0, 1.0, -0.5, 0.5);
-	cmd_vel.angular.z = scale(expo(joy->axes[m_angular]), -1.0, 1.0, -3.14159265, 3.14159265);
+	cmd_vel.angular.z = scale(expo(joy->axes[m_angular]), -1.0, 1.0, -PI, PI);
 	m_cmd_vel_pub.publish(cmd_vel);
 
 	// set tilt servo
 	std_msgs::Float64 tiltServoAngle;
-	tiltServoAngle.data = scale(expo(joy->axes[m_tiltservo]), -1.0, 1.0, -1.57079633, 1.57079633);
+	tiltServoAngle.data = scale(expo(joy->axes[m_tiltservo]), -1.0, 1.0, -HALF_PI, HALF_PI);
 	m_servo_tilt_pub.publish(tiltServoAngle);
 
 	// set pan servo
 	std_msgs::Float64 panServoAngle;
-	panServoAngle.data = scale(expo(joy->axes[m_panservo]), -1.0, 1.0, -1.57079633, 1.57079633);
+	panServoAngle.data = scale(expo(joy->axes[m_panservo]), -1.0, 1.0, -HALF_PI, HALF_PI);
 	m_servo_pan_pub.publish(panServoAngle);
 
 	// set kinect
