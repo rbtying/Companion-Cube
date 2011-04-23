@@ -504,6 +504,7 @@ clean: CMakeFiles/roverInterface.dir/clean
 
 # All Build rule for target.
 CMakeFiles/rover_node.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+CMakeFiles/rover_node.dir/all: CMakeFiles/roverInterface.dir/all
 	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/depend
 	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles  6 7
@@ -516,7 +517,7 @@ all: CMakeFiles/rover_node.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rover_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rbtying/robot/rover/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rbtying/robot/rover/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rover_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rbtying/robot/rover/build/CMakeFiles 0
 .PHONY : CMakeFiles/rover_node.dir/rule

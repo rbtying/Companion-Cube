@@ -287,6 +287,7 @@ rover_node_EXTERNAL_OBJECTS =
 
 ../bin/rover_node: CMakeFiles/rover_node.dir/src/rover.o
 ../bin/rover_node: CMakeFiles/rover_node.dir/src/interface.o
+../bin/rover_node: ../lib/libroverInterface.so
 ../bin/rover_node: CMakeFiles/rover_node.dir/build.make
 ../bin/rover_node: CMakeFiles/rover_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../bin/rover_node"

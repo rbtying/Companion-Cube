@@ -1,8 +1,6 @@
 <package>
   <description brief="rover_gui">
-
      rover_gui
-
   </description>
   <author>Robert Ying</author>
   <license>BSD</license>

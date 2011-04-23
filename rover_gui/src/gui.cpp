@@ -22,7 +22,7 @@ public:
 private:
 	void kinectCallback(const std_msgs::Float64::ConstPtr& angle);
 	void panCallback(const std_msgs::Float64::ConstPtr& angle);
-	void tiltCallback(const std_msgs::Float64::ConstrPtr& angle);
+	void tiltCallback(const std_msgs::Float64::ConstPtr& angle);
 	void battCallback(const rover::Battery::ConstPtr& batt);
 	void odomCallback(const nav_msgs::Odometry::ConstPtr& odom);
 
@@ -51,7 +51,7 @@ RoverGui::RoverGui()
 
 void RoverGui::loop() {
 	ros::Rate r(20.0);
-	while (n.ok()) {
+	while (m_n.ok()) {
 		update();
 		ros::spinOnce();
 		r.sleep();
@@ -76,7 +76,7 @@ void RoverGui::panCallback(const std_msgs::Float64::ConstPtr& angle)
 	m_pan_angle = angle->data;
 }
 
-void RoverGui::tiltCallback(const std_msgs::Float64::ConstrPtr& angle)
+void RoverGui::tiltCallback(const std_msgs::Float64::ConstPtr& angle)
 {
 	m_tilt_angle = angle->data;
 }
@@ -88,8 +88,8 @@ void RoverGui::battCallback(const rover::Battery::ConstPtr& batt)
 
 void RoverGui::odomCallback(const nav_msgs::Odometry::ConstPtr& odom)
 {
-	m_velocity = odom->linear.x;
-	m_angular_velocity = odom->angular.z;
+	m_velocity = odom->twist.twist.linear.x;
+	m_angular_velocity = odom->twist.twist.angular.z;
 }
 
 int main(int argc, char** argv) {
