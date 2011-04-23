@@ -83,9 +83,9 @@ void TeleopRover::joyCallback(const joy::Joy::ConstPtr& joy)
 	kinectServoAngle.data = m_kinect_angle;
 
 	if (joy->buttons[m_tiltkinect_up]) {
-		kinectServoAngle.data += 0.03;
+		kinectServoAngle.data += 0.001;
 	} else if (joy->buttons[m_tiltkinect_down]) {
-		kinectServoAngle.data -= 0.03;
+		kinectServoAngle.data -= 0.001;
 	}
 
 	kinectServoAngle.data = constrain(kinectServoAngle.data, -0.523598776, 0.523598776);
