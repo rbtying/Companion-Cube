@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/138/trunk/unstable/roomba_robot/roomba_500_series/src
+END
+roomba500_lightweight.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/138/trunk/unstable/roomba_robot/roomba_500_series/src/roomba500_lightweight.cpp
+END
+godock_client.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/63/trunk/unstable/roomba_robot/roomba_500_series/src/godock_client.cpp
+END
+roomba560.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/138/trunk/unstable/roomba_robot/roomba_500_series/src/roomba560.cpp
+END
+godock_server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/63/trunk/unstable/roomba_robot/roomba_500_series/src/godock_server.cpp
+END

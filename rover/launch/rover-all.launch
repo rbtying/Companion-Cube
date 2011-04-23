@@ -1,0 +1,22 @@
+<launch>
+  <!-- drive train, odometry, and IMU -->
+  <include file="$(find rover)/launch/rover-drive.launch" />
+
+  <!-- kinect and laserscan -->
+  <include file="$(find rover)/launch/kinect_fakelaser.launch" />
+
+  <!-- camera -->
+  <include file="$(find rover)/launch/lifecam.launch" />
+
+  <!-- robot state -->
+  <param name="robot_description" command="cat $(find rover)/urdf/urdf.xml" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+  <!-- PS3 controller node -->
+  <node respawn="true" pkg="ps3joy" type="ps3_joy_node" name="PS3_joy" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.25" />
+  </node>
+
+  <node pkg="rover" type="rover_teleop_joy" name="teleop" />
+</launch>

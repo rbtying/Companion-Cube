@@ -1,0 +1,26 @@
+<package>
+  <description brief="rover">
+
+     Movement and odometry for a rover-bot.
+
+  </description>
+  <author></author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib -linterface"/>
+  </export>
+  <depend package="roscpp"/>
+  <depend package="actionlib"/>
+  <depend package="actionlib_msgs"/>
+  <depend package="tf"/>
+  <depend package="nav_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="sensor_msgs" />
+  <depend package="cereal_port" />
+  <depend package="ps3joy" />
+
+</package>
+
+
