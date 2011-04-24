@@ -28,19 +28,19 @@ std::string prefixTopic(std::string prefix, char * name) {
 // callback functions
 void recvKinectTiltAngle(const std_msgs::Float64::ConstPtr& tiltAngle) {
 	tilt_angle = tiltAngle->data;
-	ROS_INFO("Kinect Tilt Angle: %f", tilt_angle);
+	// ROS_INFO("Kinect Tilt Angle: %f", tilt_angle);
 }
 
 void recvTiltServoAngle(const std_msgs::Float64::ConstPtr& tiltAngle) {
 	tilt_servo_angle = tiltAngle->data;
 	bot->setServos(-pan_servo_angle, -tilt_servo_angle);
-	ROS_INFO("Tilt Servo Angle: %f", tilt_servo_angle);
+	// ROS_INFO("Tilt Servo Angle: %f", tilt_servo_angle);
 }
 
 void recvPanServoAngle(const std_msgs::Float64::ConstPtr& panAngle) {
 	pan_servo_angle = panAngle->data;
 	bot->setServos(-pan_servo_angle, -tilt_servo_angle);
-	ROS_INFO("Pan Servo Angle: %f", pan_servo_angle);
+	// ROS_INFO("Pan Servo Angle: %f", pan_servo_angle);
 }
 
 void cmdVelReceived(const geometry_msgs::Twist::ConstPtr& cmd_vel) {
@@ -79,9 +79,9 @@ int main(int argc, char** argv) {
 			"/tilt/angle", 1, recvTiltServoAngle);
 
 	// open serial port
-	if (bot->openSerialPort() == 0)
-		ROS_INFO("Connected to rover.");
-	else {
+	if (bot->openSerialPort() == 0) {
+		// ROS_INFO("Connected to rover.");
+	} else {
 		ROS_FATAL("Could not connect to rover.");
 		ROS_BREAK();
 	}
