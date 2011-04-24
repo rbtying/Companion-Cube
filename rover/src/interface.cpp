@@ -65,7 +65,7 @@ int rover::interface::driveDirect(int left_speed, int right_speed) {
 	int16_t right_speed_mm = MAX(right_speed, -ROVER_MAX_VEL_MM);
 	right_speed_mm = MIN(right_speed, ROVER_MAX_VEL_MM);
 
-	ROS_INFO("Driving at [left: %i mm/s, right: %i mm/s]", left_speed_mm, right_speed_mm);
+	// ROS_INFO("Driving at [left: %i mm/s, right: %i mm/s]", left_speed_mm, right_speed_mm);
 
 	// Compose comand
 	char cmd_buffer[10];
@@ -102,7 +102,7 @@ int rover::interface::setServos(double panAngle, double tiltAngle) {
 	unsigned char tiltDeg = MAX((unsigned char) (tiltAngle * 57.2957795) + 90, 0);
 	tiltDeg = MIN(tiltDeg, 180);
 
-	ROS_INFO("Setting servos to pan: %i degrees, tilt: %i degrees", panDeg, tiltDeg);
+	// ROS_INFO("Setting servos to pan: %i degrees, tilt: %i degrees", panDeg, tiltDeg);
 
 	char cmd_buffer[8];
 	cmd_buffer[0] = START_CHAR;
@@ -147,7 +147,7 @@ int rover::interface::getSensorPackets(int timeout) {
 
 		m_velocity_left = ((speedPacket[1] << 8 | speedPacket[2]) / 1000.0);
 		m_velocity_right = ((speedPacket[3] << 8 | speedPacket[4]) / 1000.0);
-		ROS_INFO("Encoders: Left: %f m/s, Right: %f m/s", (m_velocity_left), (m_velocity_right));
+		// ROS_INFO("Encoders: Left: %f m/s, Right: %f m/s", (m_velocity_left), (m_velocity_right));
 
 		this->calculateOdometry(dt);
 		m_lastSensorUpdateTime = current_time;
@@ -158,22 +158,23 @@ int rover::interface::getSensorPackets(int timeout) {
 	if (gyroPacket.length() == 6) {
 		m_gyro_yawrate = ((gyroPacket[1] << 8 | gyroPacket[2]) / 100.0);
 		m_gyro_yaw = ((gyroPacket[3] << 8 | gyroPacket[4]) / 100.0) - m_gyro_offset;
-		ROS_INFO("Yaw Gyro: Angle: %f rad, Rate: %f rad/s", m_gyro_yaw, m_gyro_yawrate);
+		// ROS_INFO("Yaw Gyro: Angle: %f rad, Rate: %f rad/s", m_gyro_yaw, m_gyro_yawrate);
 	} else {
 		ROS_ERROR("Gyro packet corrupted");
 	}
 
 	if (battPacket.length() == 4) {
 		m_battery_voltage = ((battPacket[1] << 8 | battPacket[2]) / 100.0);
-		ROS_INFO("Battery: %f volts", (m_battery_voltage));
+		// ROS_INFO("Battery: %f volts", (m_battery_voltage));
 	} else {
 		ROS_ERROR("Battery packet corrupted");
 	}
 
 	if (servoPacket.length() == 4) {
-		m_pan_angle = (servoPacket[1] - 90) * 0.0174532925; // convert to +- pi/2
-		m_tilt_angle = (servoPacket[2] - 90) * 0.0174532925; // convert to +- pi/2
-		ROS_INFO("Servos: Pan: %f rad, Tilt: %f rad", m_pan_angle, m_tilt_angle);
+		m_pan_angle = ((unsigned char) servoPacket[1]) * 0.0174532925 - 1.57079633; // convert to +- pi/2
+		m_tilt_angle = ((unsigned char) servoPacket[2]) * 0.0174532925 - 1.57079633; // convert to +- pi/2
+
+		ROS_INFO("Servos: Pan: %.02f rad, Tilt: %.02f rad", m_pan_angle, m_tilt_angle);
 	} else {
 		ROS_ERROR("Servo packet corrupted");
 	}
@@ -199,9 +200,9 @@ int rover::interface::getSensorPackets(int timeout) {
 				double lSet = ((packet[9] << 8 | packet[10]) / 1000.0);
 				double rSet = ((packet[11] << 8 | packet[12]) / 1000.0);
 
-				ROS_INFO("Setpoints: Left: %f m/s, Right: %f m/s", lSet, rSet);
-				ROS_INFO("Encoders: Left: %f m/s, Right: %f m/s", (m_velocity_left), (m_velocity_right));
-				ROS_INFO("Battery: %f volts, %f amps", m_battery_voltage, m_battery_current);
+				// ROS_INFO("Setpoints: Left: %f m/s, Right: %f m/s", lSet, rSet);
+				// ROS_INFO("Encoders: Left: %f m/s, Right: %f m/s", (m_velocity_left), (m_velocity_right));
+				// ROS_INFO("Battery: %f volts, %f amps", m_battery_voltage, m_battery_current);
 				this->calculateOdometry(dt);
 
 				m_lastSensorUpdateTime = current_time;
