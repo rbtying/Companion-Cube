@@ -14,6 +14,8 @@
 #define HALF_PI 1.57079633
 #define PI 3.14159265
 
+#define KINECT_LIMIT_ANGLE 0.523598776
+
 class TeleopRover {
 public:
 	TeleopRover();
@@ -26,6 +28,8 @@ private:
 	int m_linear, m_angular, m_panservo, m_tiltservo, m_tiltkinect_up, m_tiltkinect_down;
 
 	double m_kinect_angle;
+
+	double m_limit_speed, m_limit_angular_speed;
 
 	ros::Time lastUpdateTime;
 
@@ -48,6 +52,8 @@ TeleopRover::TeleopRover():
 	m_n.param("axis_tilt", m_tiltservo, m_tiltservo);
 	m_n.param("button_kinect_up", m_tiltkinect_up, m_tiltkinect_up);
 	m_n.param("button_kinect_down", m_tiltkinect_down, m_tiltkinect_down);
+	m_n.param("speed", m_limit_speed, 0.5);
+	m_n.param("angular_speed", m_limit_angular_speed, PI);
 
 	m_cmd_vel_pub = m_n.advertise<geometry_msgs::Twist>("cmd_vel", 1);
 	m_servo_tilt_pub = m_n.advertise<std_msgs::Float64>("tilt/angle", 1);
@@ -57,7 +63,7 @@ TeleopRover::TeleopRover():
 	m_joy_sub = m_n.subscribe<joy::Joy>("joy", 10, &TeleopRover::joyCallback, this);
 
 	std_msgs::Float64 kinect_msg;
-	kinect_msg.data = -0.523598776;
+	kinect_msg.data = -KINECT_LIMIT_ANGLE;
 	m_kinect_angle = kinect_msg.data;
 	m_kinect_tilt_pub.publish(kinect_msg);
 }
@@ -66,8 +72,8 @@ void TeleopRover::joyCallback(const joy::Joy::ConstPtr& joy)
 {
 	// set velocity
 	geometry_msgs::Twist cmd_vel;
-	cmd_vel.linear.x = scale(expo(joy->axes[m_linear]), -1.0, 1.0, -0.5, 0.5);
-	cmd_vel.angular.z = scale(expo(joy->axes[m_angular]), -1.0, 1.0, -PI, PI);
+	cmd_vel.linear.x = scale(expo(joy->axes[m_linear]), -1.0, 1.0, -m_limit_speed, m_limit_speed);
+	cmd_vel.angular.z = scale(expo(joy->axes[m_angular]), -1.0, 1.0, -m_limit_angular_speed, m_limit_angular_speed);
 	m_cmd_vel_pub.publish(cmd_vel);
 
 	// set tilt servo
@@ -91,7 +97,7 @@ void TeleopRover::joyCallback(const joy::Joy::ConstPtr& joy)
 		kinectServoAngle.data -= 0.001;
 	}
 
-	kinectServoAngle.data = constrain(kinectServoAngle.data, -0.523598776, 0.523598776);
+	kinectServoAngle.data = constrain(kinectServoAngle.data, -KINECT_LIMIT_ANGLE, KINECT_LIMIT_ANGLE);
 
 	m_kinect_angle = kinectServoAngle.data;
 
