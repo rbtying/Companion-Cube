@@ -9,6 +9,10 @@
 
 #include "interface.h"
 
+#define HALF_PI 1.57079633
+#define DEG_TO_RAD 0.0174532925
+#define RAD_TO_DEG 57.2957795
+
 rover::interface::interface(const char * new_serial_port) {
 	m_port_name = new_serial_port;
 
@@ -60,10 +64,10 @@ int rover::interface::drive(double linear_speed, double angular_speed) {
 
 int rover::interface::driveDirect(int left_speed, int right_speed) {
 	// limit velocities
-	int16_t left_speed_mm = MAX(left_speed, -ROVER_MAX_VEL_MM);
-	left_speed_mm = MIN(left_speed, ROVER_MAX_VEL_MM);
-	int16_t right_speed_mm = MAX(right_speed, -ROVER_MAX_VEL_MM);
-	right_speed_mm = MIN(right_speed, ROVER_MAX_VEL_MM);
+	int16_t left_speed_mm = max(left_speed, -ROVER_MAX_VEL_MM);
+	left_speed_mm = min(left_speed, ROVER_MAX_VEL_MM);
+	int16_t right_speed_mm = max(right_speed, -ROVER_MAX_VEL_MM);
+	right_speed_mm = min(right_speed, ROVER_MAX_VEL_MM);
 
 	// ROS_INFO("Driving at [left: %i mm/s, right: %i mm/s]", left_speed_mm, right_speed_mm);
 
@@ -91,16 +95,16 @@ int rover::interface::driveDirect(int left_speed, int right_speed) {
 
 int rover::interface::setServos(double panAngle, double tiltAngle) {
 	// limit angles to +- pi/2
-	panAngle = MAX(panAngle, -1.57079633);
-	panAngle = MIN(panAngle, 1.57079633);
-	tiltAngle = MAX(tiltAngle, -1.57079633);
-	tiltAngle = MIN(tiltAngle, 1.57079633);
+	panAngle = max(panAngle, -HALF_PI);
+	panAngle = min(panAngle, HALF_PI);
+	tiltAngle = max(tiltAngle, -HALF_PI);
+	tiltAngle = min(tiltAngle, HALF_PI);
 
 	// convert to servo degrees (0-180)
-	unsigned char panDeg = MAX((unsigned char) (panAngle * 57.2957795) + 90, 0);
-	panDeg = MIN(panDeg, 180);
-	unsigned char tiltDeg = MAX((unsigned char) (tiltAngle * 57.2957795) + 90, 0);
-	tiltDeg = MIN(tiltDeg, 180);
+	unsigned char panDeg = max((unsigned char) (panAngle * RAD_TO_DEG) + 90, 0);
+	panDeg = min(panDeg, 180);
+	unsigned char tiltDeg = max((unsigned char) (tiltAngle * RAD_TO_DEG) + 90, 0);
+	tiltDeg = min(tiltDeg, 180);
 
 	// ROS_INFO("Setting servos to pan: %i degrees, tilt: %i degrees", panDeg, tiltDeg);
 
@@ -171,10 +175,10 @@ int rover::interface::getSensorPackets(int timeout) {
 	}
 
 	if (servoPacket.length() == 4) {
-		m_pan_angle = ((unsigned char) servoPacket[1]) * 0.0174532925 - 1.57079633; // convert to +- pi/2
-		m_tilt_angle = ((unsigned char) servoPacket[2]) * 0.0174532925 - 1.57079633; // convert to +- pi/2
+		m_pan_angle = ((unsigned char) servoPacket[1]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+		m_tilt_angle = ((unsigned char) servoPacket[2]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
 
-		ROS_INFO("Servos: Pan: %.02f rad, Tilt: %.02f rad", m_pan_angle, m_tilt_angle);
+		// ROS_INFO("Servos: Pan: %.02f rad, Tilt: %.02f rad", m_pan_angle, m_tilt_angle);
 	} else {
 		ROS_ERROR("Servo packet corrupted");
 	}
@@ -219,10 +223,10 @@ int rover::interface::getSensorPackets(int timeout) {
 void rover::interface::calculateOdometry(double dt) {
 	double linSpeed = (m_velocity_left + m_velocity_right) / 2; // m/s
 	this->m_velocity_yaw
-			= NORMALIZE((m_velocity_left - m_velocity_right) / (m_roverAxleLength * 2)); // rad/s
+			= normalize((m_velocity_left - m_velocity_right) / (m_roverAxleLength * 2)); // rad/s
 
 	this->m_odometry_yaw
-			= NORMALIZE(this->m_odometry_yaw + this->m_velocity_yaw * dt); // rad
+			= normalize(this->m_odometry_yaw + this->m_velocity_yaw * dt); // rad
 
 	this->m_velocity_x = linSpeed * cos(this->m_odometry_yaw); // m/s
 	this->m_velocity_y = linSpeed * sin(this->m_odometry_yaw); // m/s

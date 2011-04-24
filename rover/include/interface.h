@@ -11,17 +11,17 @@
 #define START_CHAR ':'
 #define END_CHAR '!'
 
-#ifndef MIN
-#define MIN(a,b) ((a < b) ? (a) : (b))
+#ifndef min
+#define min(a,b) ((a < b) ? (a) : (b))
 #endif
-#ifndef MAX
-#define MAX(a,b) ((a > b) ? (a) : (b))
+#ifndef max
+#define max(a,b) ((a > b) ? (a) : (b))
 #endif
-#ifndef NORMALIZE
-#define NORMALIZE(z) atan2(sin(z), cos(z))
+#ifndef normalize
+#define normalize(z) atan2(sin(z), cos(z))
 #endif
-#ifndef ABS
-#define ABS(x) ((x < 0) ? (-x) : (x));
+#ifndef abs
+#define abs(x) ((x < 0) ? (-x) : (x));
 #endif
 
 namespace rover {
