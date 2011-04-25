@@ -183,7 +183,7 @@ TOOLCHAINCONFIG:FILEPATH=TOOLCHAINCONFIG-NOTFOUND
 USERCONFIG:FILEPATH=USERCONFIG-NOTFOUND
 
 //Path to a file.
-_file_name:FILEPATH=/home/rbtying/robot/rover_gui/src/gui.cpp
+_file_name:FILEPATH=/home/rbtying/robot/rover_gui/src/RoverGui.cpp
 
 //Value Computed by CMake
 rover_gui_BINARY_DIR:STATIC=/home/rbtying/robot/rover_gui/build

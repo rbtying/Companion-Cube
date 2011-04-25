@@ -1,3 +1,7 @@
+#include <ros/ros.h>
+#include <std_msgs/Float64.h>
+#include <rover/Battery.h>
+#include <nav_msgs/Odometry.h>
 #include "util.h"
 
 class RoverGui {

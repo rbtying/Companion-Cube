@@ -11,6 +11,10 @@ ros/ros.h
 -
 cereal_port/CerealPort.h
 ../include/cereal_port/CerealPort.h
+util.h
+../include/util.h
+
+../include/util.h
 
 ../msg_gen/cpp/include/rover/Battery.h
 string

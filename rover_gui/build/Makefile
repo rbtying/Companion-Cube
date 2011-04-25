@@ -304,6 +304,21 @@ tests/fast:
 .PHONY : tests/fast
 
 # target to build an object file
+src/RoverGui.o:
+	$(MAKE) -f CMakeFiles/rover_gui.dir/build.make CMakeFiles/rover_gui.dir/src/RoverGui.o
+.PHONY : src/RoverGui.o
+
+# target to preprocess a source file
+src/RoverGui.i:
+	$(MAKE) -f CMakeFiles/rover_gui.dir/build.make CMakeFiles/rover_gui.dir/src/RoverGui.i
+.PHONY : src/RoverGui.i
+
+# target to generate assembly for a file
+src/RoverGui.s:
+	$(MAKE) -f CMakeFiles/rover_gui.dir/build.make CMakeFiles/rover_gui.dir/src/RoverGui.s
+.PHONY : src/RoverGui.s
+
+# target to build an object file
 src/gui.o:
 	$(MAKE) -f CMakeFiles/rover_gui.dir/build.make CMakeFiles/rover_gui.dir/src/gui.o
 .PHONY : src/gui.o
@@ -342,6 +357,9 @@ help:
 	@echo "... test-results"
 	@echo "... test-results-run"
 	@echo "... tests"
+	@echo "... src/RoverGui.o"
+	@echo "... src/RoverGui.i"
+	@echo "... src/RoverGui.s"
 	@echo "... src/gui.o"
 	@echo "... src/gui.i"
 	@echo "... src/gui.s"

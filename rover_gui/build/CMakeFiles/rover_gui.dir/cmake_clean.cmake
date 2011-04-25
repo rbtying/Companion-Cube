@@ -1,5 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/rover_gui.dir/src/gui.o"
+  "CMakeFiles/rover_gui.dir/src/RoverGui.o"
   "../bin/rover_gui.pdb"
   "../bin/rover_gui"
 )

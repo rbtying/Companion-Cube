@@ -382,6 +382,21 @@ umbmark/fast:
 .PHONY : umbmark/fast
 
 # target to build an object file
+src/TeleopRover.o:
+	$(MAKE) -f CMakeFiles/rover_teleop_joy.dir/build.make CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.o
+.PHONY : src/TeleopRover.o
+
+# target to preprocess a source file
+src/TeleopRover.i:
+	$(MAKE) -f CMakeFiles/rover_teleop_joy.dir/build.make CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.i
+.PHONY : src/TeleopRover.i
+
+# target to generate assembly for a file
+src/TeleopRover.s:
+	$(MAKE) -f CMakeFiles/rover_teleop_joy.dir/build.make CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.s
+.PHONY : src/TeleopRover.s
+
+# target to build an object file
 src/interface.o:
 	$(MAKE) -f CMakeFiles/roverInterface.dir/build.make CMakeFiles/roverInterface.dir/src/interface.o
 	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/interface.o
@@ -474,6 +489,9 @@ help:
 	@echo "... test-results-run"
 	@echo "... tests"
 	@echo "... umbmark"
+	@echo "... src/TeleopRover.o"
+	@echo "... src/TeleopRover.i"
+	@echo "... src/TeleopRover.s"
 	@echo "... src/interface.o"
 	@echo "... src/interface.i"
 	@echo "... src/interface.s"

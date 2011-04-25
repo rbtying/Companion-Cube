@@ -3,6 +3,7 @@ FILE(REMOVE_RECURSE
   "../msg_gen"
   "../msg_gen"
   "CMakeFiles/rover_teleop_joy.dir/src/ps3_control.o"
+  "CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.o"
   "../bin/rover_teleop_joy.pdb"
   "../bin/rover_teleop_joy"
 )

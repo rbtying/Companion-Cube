@@ -26,15 +26,27 @@ ros/time.h
 std_msgs/Header.h
 /home/rbtying/robot/rover/msg_gen/cpp/include/rover/std_msgs/Header.h
 
-/home/rbtying/robot/rover_gui/src/gui.cpp
-ros/ros.h
--
+/home/rbtying/robot/rover_gui/src/RoverGui.cpp
 std_msgs/Float64.h
 -
 rover/Battery.h
 -
 nav_msgs/Odometry.h
 -
+RoverGui.h
+/home/rbtying/robot/rover_gui/src/RoverGui.h
+
+/home/rbtying/robot/rover_gui/src/RoverGui.h
+util.h
+/home/rbtying/robot/rover_gui/src/util.h
+
+/home/rbtying/robot/rover_gui/src/gui.cpp
+ros/ros.h
+-
+RoverGui.h
+/home/rbtying/robot/rover_gui/src/RoverGui.h
+
+/home/rbtying/robot/rover_gui/src/util.h
 
 /opt/ros/diamondback/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include/geometry_msgs/Point.h
 string

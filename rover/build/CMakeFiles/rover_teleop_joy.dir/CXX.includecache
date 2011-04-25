@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rbtying/robot/rover/src/ps3_control.cpp
+../include/TeleopRover.h
 ros/ros.h
 -
 std_msgs/Float64.h
@@ -15,6 +15,28 @@ geometry_msgs/Twist.h
 -
 joy/Joy.h
 -
+util.h
+../include/util.h
+
+../include/util.h
+
+/home/rbtying/robot/rover/src/TeleopRover.cpp
+ros/ros.h
+-
+std_msgs/Float64.h
+-
+geometry_msgs/Twist.h
+-
+joy/Joy.h
+-
+TeleopRover.h
+/home/rbtying/robot/rover/src/TeleopRover.h
+
+/home/rbtying/robot/rover/src/ps3_control.cpp
+ros/ros.h
+-
+TeleopRover.h
+/home/rbtying/robot/rover/src/TeleopRover.h
 
 /opt/ros/diamondback/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include/geometry_msgs/Twist.h
 string

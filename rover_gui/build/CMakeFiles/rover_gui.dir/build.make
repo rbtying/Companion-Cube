@@ -133,14 +133,103 @@ CMakeFiles/rover_gui.dir/src/gui.o.provides: CMakeFiles/rover_gui.dir/src/gui.o.
 CMakeFiles/rover_gui.dir/src/gui.o.provides.build: CMakeFiles/rover_gui.dir/src/gui.o
 .PHONY : CMakeFiles/rover_gui.dir/src/gui.o.provides.build
 
+CMakeFiles/rover_gui.dir/src/RoverGui.o: CMakeFiles/rover_gui.dir/flags.make
+CMakeFiles/rover_gui.dir/src/RoverGui.o: ../src/RoverGui.cpp
+CMakeFiles/rover_gui.dir/src/RoverGui.o: ../manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/ros/core/rosbuild/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/ros/core/roslang/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/utilities/cpp_common/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/utilities/rostime/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/ros/tools/rospack/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/ros/core/roslib/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/rosconsole/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/messages/std_msgs/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/clients/rospy/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/ros/tools/rosclean/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/rosgraph/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/rosmaster/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/rosout/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/roslaunch/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/ros/tools/rosunit/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/rostest/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/actionlib_msgs/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common/actionlib/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/topic_tools/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/rosbag/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/geometry_msgs/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/sensor_msgs/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/geometry/bullet/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/geometry/angles/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/rosnode/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/rosmsg/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/rostopic/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/rosservice/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/utilities/roswtf/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/utilities/message_filters/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/geometry/tf/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/nav_msgs/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /home/rbtying/robot/cereal_port/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/diagnostic_msgs/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/diagnostics/diagnostic_updater/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/joystick_drivers/joy/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/joystick_drivers/ps3joy/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /home/rbtying/robot/rover/manifest.xml
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/messages/std_msgs/msg_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/actionlib_msgs/msg_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common/actionlib/msg_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/geometry_msgs/msg_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/sensor_msgs/msg_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/sensor_msgs/srv_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/geometry/tf/msg_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/geometry/tf/srv_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/nav_msgs/msg_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/nav_msgs/srv_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/diagnostic_msgs/msg_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/common_msgs/diagnostic_msgs/srv_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /opt/ros/diamondback/stacks/joystick_drivers/joy/msg_gen/generated
+CMakeFiles/rover_gui.dir/src/RoverGui.o: /home/rbtying/robot/rover/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_gui/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/rover_gui.dir/src/RoverGui.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/rover_gui.dir/src/RoverGui.o -c /home/rbtying/robot/rover_gui/src/RoverGui.cpp
+
+CMakeFiles/rover_gui.dir/src/RoverGui.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rover_gui.dir/src/RoverGui.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rbtying/robot/rover_gui/src/RoverGui.cpp > CMakeFiles/rover_gui.dir/src/RoverGui.i
+
+CMakeFiles/rover_gui.dir/src/RoverGui.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rover_gui.dir/src/RoverGui.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rbtying/robot/rover_gui/src/RoverGui.cpp -o CMakeFiles/rover_gui.dir/src/RoverGui.s
+
+CMakeFiles/rover_gui.dir/src/RoverGui.o.requires:
+.PHONY : CMakeFiles/rover_gui.dir/src/RoverGui.o.requires
+
+CMakeFiles/rover_gui.dir/src/RoverGui.o.provides: CMakeFiles/rover_gui.dir/src/RoverGui.o.requires
+	$(MAKE) -f CMakeFiles/rover_gui.dir/build.make CMakeFiles/rover_gui.dir/src/RoverGui.o.provides.build
+.PHONY : CMakeFiles/rover_gui.dir/src/RoverGui.o.provides
+
+CMakeFiles/rover_gui.dir/src/RoverGui.o.provides.build: CMakeFiles/rover_gui.dir/src/RoverGui.o
+.PHONY : CMakeFiles/rover_gui.dir/src/RoverGui.o.provides.build
+
 # Object files for target rover_gui
 rover_gui_OBJECTS = \
-"CMakeFiles/rover_gui.dir/src/gui.o"
+"CMakeFiles/rover_gui.dir/src/gui.o" \
+"CMakeFiles/rover_gui.dir/src/RoverGui.o"
 
 # External object files for target rover_gui
 rover_gui_EXTERNAL_OBJECTS =
 
 ../bin/rover_gui: CMakeFiles/rover_gui.dir/src/gui.o
+../bin/rover_gui: CMakeFiles/rover_gui.dir/src/RoverGui.o
 ../bin/rover_gui: CMakeFiles/rover_gui.dir/build.make
 ../bin/rover_gui: CMakeFiles/rover_gui.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../bin/rover_gui"
@@ -151,6 +240,7 @@ CMakeFiles/rover_gui.dir/build: ../bin/rover_gui
 .PHONY : CMakeFiles/rover_gui.dir/build
 
 CMakeFiles/rover_gui.dir/requires: CMakeFiles/rover_gui.dir/src/gui.o.requires
+CMakeFiles/rover_gui.dir/requires: CMakeFiles/rover_gui.dir/src/RoverGui.o.requires
 .PHONY : CMakeFiles/rover_gui.dir/requires
 
 CMakeFiles/rover_gui.dir/clean:
