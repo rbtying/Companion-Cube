@@ -41,4 +41,4 @@ target_link_libraries(rover_node roverInterface)
 
 rosbuild_add_executable(umbmark src/umbmark.cpp)
 
-rosbuild_add_executable(rover_teleop_joy src/ps3_control.cpp)
+rosbuild_add_executable(rover_teleop_joy src/ps3_control.cpp src/TeleopRover.cpp)
