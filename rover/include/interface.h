@@ -1,5 +1,9 @@
+#ifndef INTERFACE_H_
+#define INTERFACE_H_
+
 #include <ros/ros.h>
 #include "cereal_port/CerealPort.h"
+#include "util.h"
 
 // dimensions
 #define ROVER_DEFAULT_AXLE_LENGTH 0.240164856
@@ -70,3 +74,5 @@ private:
 };
 
 }
+
+#endif
