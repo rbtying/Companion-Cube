@@ -9,10 +9,6 @@
 
 #include "interface.h"
 
-#define HALF_PI 1.57079633
-#define DEG_TO_RAD 0.0174532925
-#define RAD_TO_DEG 57.2957795
-
 rover::interface::interface(const char * new_serial_port) {
 	m_port_name = new_serial_port;
 
