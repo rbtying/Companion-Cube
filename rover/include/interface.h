@@ -15,19 +15,6 @@
 #define START_CHAR ':'
 #define END_CHAR '!'
 
-#ifndef min
-#define min(a,b) ((a < b) ? (a) : (b))
-#endif
-#ifndef max
-#define max(a,b) ((a > b) ? (a) : (b))
-#endif
-#ifndef normalize
-#define normalize(z) atan2(sin(z), cos(z))
-#endif
-#ifndef abs
-#define abs(x) ((x < 0) ? (-x) : (x));
-#endif
-
 namespace rover {
 class interface {
 public:
