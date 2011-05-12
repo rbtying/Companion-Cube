@@ -34,8 +34,8 @@ void TeleopRover::joyCallback(const joy::Joy::ConstPtr& joy)
 {
 	// set velocity
 	geometry_msgs::Twist cmd_vel;
-	cmd_vel.linear.x = scale(expo(joy->axes[m_linear]), -1.0, 1.0, -m_limit_speed, m_limit_speed);
-	cmd_vel.angular.z = scale(expo(joy->axes[m_angular]), -1.0, 1.0, -m_limit_angular_speed, m_limit_angular_speed);
+	cmd_vel.linear.x = scale(joy->axes[m_linear], -1.0, 1.0, -m_limit_speed, m_limit_speed);
+	cmd_vel.angular.z = scale(joy->axes[m_angular], -1.0, 1.0, -m_limit_angular_speed, m_limit_angular_speed);
 	m_cmd_vel_pub.publish(cmd_vel);
 
 	// set tilt servo

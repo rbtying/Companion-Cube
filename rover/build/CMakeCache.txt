@@ -144,7 +144,7 @@ CMAKE_SKIP_RPATH:BOOL=NO
 CMAKE_STRIP:FILEPATH=/usr/bin/strip
 
 //No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/opt/ros/diamondback/ros/core/rosbuild/rostoolchain.cmake
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/home/rbtying/ros/ros/core/rosbuild/rostoolchain.cmake
 
 //If true, cmake will use relative paths in makefiles and projects.
 CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
@@ -174,7 +174,7 @@ Project_BINARY_DIR:STATIC=/home/rbtying/robot/rover/build
 Project_SOURCE_DIR:STATIC=/home/rbtying/robot/rover
 
 //rospack executable
-ROSPACK_EXE:FILEPATH=/opt/ros/diamondback/ros/bin/rospack
+ROSPACK_EXE:FILEPATH=/home/rbtying/ros/ros/bin/rospack
 
 //Path to a file.
 TOOLCHAINCONFIG:FILEPATH=TOOLCHAINCONFIG-NOTFOUND
@@ -212,7 +212,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=2
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=8
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
