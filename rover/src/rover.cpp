@@ -183,6 +183,7 @@ int main(int argc, char** argv) {
 		batt_msg.header.stamp = current_time;
 		batt_msg.header.frame_id = "base_footprint";
 		batt_msg.voltage = bot->m_battery_voltage;
+		batt_msg.current = bot->m_battery_current;
 		
 		// send the message
 		batt_pub.publish(batt_msg);
