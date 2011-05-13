@@ -166,7 +166,7 @@ int rover::interface::getSensorPackets(int timeout) {
 	if (battPacket.length() == 6) {
 		m_battery_voltage = ((battPacket[1] << 8 | battPacket[2]) / 100.0);
 		m_battery_current = ((battPacket[3] << 8 | battPacket[4]) / 100.0);
-		// ROS_INFO("Battery: %f volts", (m_battery_voltage));
+		// ROS_INFO("Battery: %f volts, %f amps", (m_battery_voltage), (m_battery_current));
 	} else {
 		ROS_ERROR("Battery packet corrupted");
 	}

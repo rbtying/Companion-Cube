@@ -3,4 +3,6 @@
           HEADER
           VOLTAGE-VAL
           VOLTAGE
+          CURRENT-VAL
+          CURRENT
 ))

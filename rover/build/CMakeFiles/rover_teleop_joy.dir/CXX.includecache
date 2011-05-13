@@ -32,12 +32,6 @@ joy/Joy.h
 TeleopRover.h
 /home/rbtying/robot/rover/src/TeleopRover.h
 
-/home/rbtying/robot/rover/src/ps3_control.cpp
-ros/ros.h
--
-TeleopRover.h
-/home/rbtying/robot/rover/src/TeleopRover.h
-
 /opt/ros/diamondback/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include/geometry_msgs/Twist.h
 string
 -

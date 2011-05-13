@@ -150,17 +150,17 @@ int main(int argc, char** argv)
   std::cout << "Press any key to start" << std::endl;
   std::cin.get();
 
-  for (uint8_t i = 0; i < 4; i++) {
-    std::cout << "Driving forward 0.5m" << std::endl;
-    driver.driveForwardOdom(0.5);
-    std::cout << "Drove 0.5m forward, press any key to continue" << std::endl;
-    std::cin.get();
+//  for (uint8_t i = 0; i < 4; i++) {
+//    std::cout << "Driving forward 0.5m" << std::endl;
+//    driver.driveForwardOdom(0.5);
+//    std::cout << "Drove 0.5m forward, press any key to continue" << std::endl;
+//    std::cin.get();
 
     std::cout << "Turning Right pi/2 radians" << std::endl;
     driver.turnOdom(true, 1.57079633);
-    std::cout << "Turned pi/2 radians right, press any key to continue" << std::endl;
-    std::cin.get();
-  }
+//    std::cout << "Turned pi/2 radians right, press any key to continue" << std::endl;
+//    std::cin.get();
+//  }
   std::cout << "Done, press any key to exit" << std::endl;
   std::cin.get();
 }

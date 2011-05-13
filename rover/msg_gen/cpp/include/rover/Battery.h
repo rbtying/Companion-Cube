@@ -22,12 +22,14 @@ struct Battery_ : public ros::Message
   Battery_()
   : header()
   , voltage(0.0)
+  , current(0.0)
   {
   }
 
   Battery_(const ContainerAllocator& _alloc)
   : header(_alloc)
   , voltage(0.0)
+  , current(0.0)
   {
   }
 
@@ -36,6 +38,9 @@ struct Battery_ : public ros::Message
 
   typedef float _voltage_type;
   float voltage;
+
+  typedef float _current_type;
+  float current;
 
 
 private:
@@ -46,7 +51,7 @@ public:
   ROS_DEPRECATED const std::string __getDataType() const { return __s_getDataType_(); }
 
 private:
-  static const char* __s_getMD5Sum_() { return "b72130f0e7ffec93b2b5f573eb2542cb"; }
+  static const char* __s_getMD5Sum_() { return "75c8e4b7132acff3b679451f5604f145"; }
 public:
   ROS_DEPRECATED static const std::string __s_getMD5Sum() { return __s_getMD5Sum_(); }
 
@@ -55,6 +60,7 @@ public:
 private:
   static const char* __s_getMessageDefinition_() { return "Header header\n\
 float32 voltage\n\
+float32 current\n\
 \n\
 ================================================================================\n\
 MSG: std_msgs/Header\n\
@@ -85,6 +91,7 @@ public:
     ros::serialization::OStream stream(write_ptr, 1000000000);
     ros::serialization::serialize(stream, header);
     ros::serialization::serialize(stream, voltage);
+    ros::serialization::serialize(stream, current);
     return stream.getData();
   }
 
@@ -93,6 +100,7 @@ public:
     ros::serialization::IStream stream(read_ptr, 1000000000);
     ros::serialization::deserialize(stream, header);
     ros::serialization::deserialize(stream, voltage);
+    ros::serialization::deserialize(stream, current);
     return stream.getData();
   }
 
@@ -101,6 +109,7 @@ public:
     uint32_t size = 0;
     size += ros::serialization::serializationLength(header);
     size += ros::serialization::serializationLength(voltage);
+    size += ros::serialization::serializationLength(current);
     return size;
   }
 
@@ -129,12 +138,12 @@ template<class ContainerAllocator>
 struct MD5Sum< ::rover::Battery_<ContainerAllocator> > {
   static const char* value() 
   {
-    return "b72130f0e7ffec93b2b5f573eb2542cb";
+    return "75c8e4b7132acff3b679451f5604f145";
   }
 
   static const char* value(const  ::rover::Battery_<ContainerAllocator> &) { return value(); } 
-  static const uint64_t static_value1 = 0xb72130f0e7ffec93ULL;
-  static const uint64_t static_value2 = 0xb2b5f573eb2542cbULL;
+  static const uint64_t static_value1 = 0x75c8e4b7132acff3ULL;
+  static const uint64_t static_value2 = 0xb679451f5604f145ULL;
 };
 
 template<class ContainerAllocator>
@@ -153,6 +162,7 @@ struct Definition< ::rover::Battery_<ContainerAllocator> > {
   {
     return "Header header\n\
 float32 voltage\n\
+float32 current\n\
 \n\
 ================================================================================\n\
 MSG: std_msgs/Header\n\
@@ -194,6 +204,7 @@ template<class ContainerAllocator> struct Serializer< ::rover::Battery_<Containe
   {
     stream.next(m.header);
     stream.next(m.voltage);
+    stream.next(m.current);
   }
 
   ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -216,6 +227,8 @@ s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
     s << indent << "voltage: ";
     Printer<float>::stream(s, indent + "  ", v.voltage);
+    s << indent << "current: ";
+    Printer<float>::stream(s, indent + "  ", v.current);
   }
 };
 

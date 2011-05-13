@@ -5,11 +5,12 @@ import struct
 import std_msgs.msg
 
 class Battery(roslib.message.Message):
-  _md5sum = "b72130f0e7ffec93b2b5f573eb2542cb"
+  _md5sum = "75c8e4b7132acff3b679451f5604f145"
   _type = "rover/Battery"
   _has_header = True #flag to mark the presence of a Header object
   _full_text = """Header header
 float32 voltage
+float32 current
 
 ================================================================================
 MSG: std_msgs/Header
@@ -30,8 +31,8 @@ time stamp
 string frame_id
 
 """
-  __slots__ = ['header','voltage']
-  _slot_types = ['Header','float32']
+  __slots__ = ['header','voltage','current']
+  _slot_types = ['Header','float32','float32']
 
   def __init__(self, *args, **kwds):
     """
@@ -41,7 +42,7 @@ string frame_id
     changes.  You cannot mix in-order arguments and keyword arguments.
     
     The available fields are:
-       header,voltage
+       header,voltage,current
     
     @param args: complete set of field values, in .msg order
     @param kwds: use keyword arguments corresponding to message field names
@@ -54,9 +55,12 @@ string frame_id
         self.header = std_msgs.msg._Header.Header()
       if self.voltage is None:
         self.voltage = 0.
+      if self.current is None:
+        self.current = 0.
     else:
       self.header = std_msgs.msg._Header.Header()
       self.voltage = 0.
+      self.current = 0.
 
   def _get_types(self):
     """
@@ -76,7 +80,8 @@ string frame_id
       _x = self.header.frame_id
       length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_struct_f.pack(self.voltage))
+      _x = self
+      buff.write(_struct_2f.pack(_x.voltage, _x.current))
     except struct.error, se: self._check_types(se)
     except TypeError, te: self._check_types(te)
 
@@ -100,9 +105,10 @@ string frame_id
       start = end
       end += length
       self.header.frame_id = str[start:end]
+      _x = self
       start = end
-      end += 4
-      (self.voltage,) = _struct_f.unpack(str[start:end])
+      end += 8
+      (_x.voltage, _x.current,) = _struct_2f.unpack(str[start:end])
       return self
     except struct.error, e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
@@ -122,7 +128,8 @@ string frame_id
       _x = self.header.frame_id
       length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_struct_f.pack(self.voltage))
+      _x = self
+      buff.write(_struct_2f.pack(_x.voltage, _x.current))
     except struct.error, se: self._check_types(se)
     except TypeError, te: self._check_types(te)
 
@@ -148,13 +155,14 @@ string frame_id
       start = end
       end += length
       self.header.frame_id = str[start:end]
+      _x = self
       start = end
-      end += 4
-      (self.voltage,) = _struct_f.unpack(str[start:end])
+      end += 8
+      (_x.voltage, _x.current,) = _struct_2f.unpack(str[start:end])
       return self
     except struct.error, e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = roslib.message.struct_I
 _struct_3I = struct.Struct("<3I")
-_struct_f = struct.Struct("<f")
+_struct_2f = struct.Struct("<2f")
