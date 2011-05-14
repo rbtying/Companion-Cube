@@ -114,16 +114,7 @@
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
 <definedSymbol symbol="__AVR_ARCH__=2"/>
-<definedSymbol symbol="__AVR_ARCH__=5"/>
 <definedSymbol symbol="__AVR_2_BYTE_PC__=1"/>
-<definedSymbol symbol="__AVR_ATmega328P__=1"/>
-<definedSymbol symbol="__AVR_HAVE_MOVW__=1"/>
-<definedSymbol symbol="__AVR_HAVE_LPMX__=1"/>
-<definedSymbol symbol="__AVR_ENHANCED__=1"/>
-<definedSymbol symbol="__AVR_HAVE_MUL__=1"/>
-<definedSymbol symbol="__AVR_MEGA__=1"/>
-<definedSymbol symbol="__AVR_HAVE_JMP_CALL__=1"/>
-<definedSymbol symbol="F_CPU=16000000UL"/>
 </collector>
 </instance>
 <instance id="de.innot.avreclipse.configuration.lib.debug.1350487359;de.innot.avreclipse.configuration.lib.debug.1350487359.;de.innot.avreclipse.tool.cppcompiler.lib.debug.587731906;de.innot.avreclipse.cppcompiler.input.380459637">
@@ -242,16 +233,7 @@
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
 <definedSymbol symbol="__AVR_ARCH__=2"/>
-<definedSymbol symbol="__AVR_ARCH__=5"/>
 <definedSymbol symbol="__AVR_2_BYTE_PC__=1"/>
-<definedSymbol symbol="__AVR_ATmega328P__=1"/>
-<definedSymbol symbol="__AVR_HAVE_MOVW__=1"/>
-<definedSymbol symbol="__AVR_HAVE_LPMX__=1"/>
-<definedSymbol symbol="__AVR_ENHANCED__=1"/>
-<definedSymbol symbol="__AVR_HAVE_MUL__=1"/>
-<definedSymbol symbol="__AVR_MEGA__=1"/>
-<definedSymbol symbol="__AVR_HAVE_JMP_CALL__=1"/>
-<definedSymbol symbol="F_CPU=16000000UL"/>
 </collector>
 </instance>
 <instance id="de.innot.avreclipse.configuration.lib.release.541486057;de.innot.avreclipse.configuration.lib.release.541486057.">
