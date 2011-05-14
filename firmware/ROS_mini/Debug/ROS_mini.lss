@@ -2607,527 +2607,527 @@ Disassembly of section .text:
     14ea:	71 e0       	ldi	r23, 0x01	; 1
     14ec:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
     14f0:	00 97       	sbiw	r24, 0x00	; 0
-    14f2:	21 f0       	breq	.+8      	; 0x14fc <_ZN10Controller14processCommandEv+0xec>
-    14f4:	c4 01       	movw	r24, r8
-    14f6:	0e 94 05 09 	call	0x120a	; 0x120a <_ZN10Controller9printInfoEv>
-    14fa:	43 c2       	rjmp	.+1158   	; 0x1982 <_ZN10Controller14processCommandEv+0x572>
-    14fc:	c8 01       	movw	r24, r16
-    14fe:	6e e0       	ldi	r22, 0x0E	; 14
-    1500:	71 e0       	ldi	r23, 0x01	; 1
-    1502:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
-    1506:	00 97       	sbiw	r24, 0x00	; 0
-    1508:	09 f4       	brne	.+2      	; 0x150c <_ZN10Controller14processCommandEv+0xfc>
-    150a:	9d c0       	rjmp	.+314    	; 0x1646 <_ZN10Controller14processCommandEv+0x236>
-    150c:	89 e0       	ldi	r24, 0x09	; 9
-    150e:	94 e0       	ldi	r25, 0x04	; 4
-    1510:	60 e0       	ldi	r22, 0x00	; 0
-    1512:	71 e0       	ldi	r23, 0x01	; 1
-    1514:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
-    1518:	d4 01       	movw	r26, r8
-    151a:	54 96       	adiw	r26, 0x14	; 20
-    151c:	ed 91       	ld	r30, X+
-    151e:	fc 91       	ld	r31, X
-    1520:	55 97       	sbiw	r26, 0x15	; 21
-    1522:	20 81       	ld	r18, Z
-    1524:	31 81       	ldd	r19, Z+1	; 0x01
-    1526:	42 81       	ldd	r20, Z+2	; 0x02
-    1528:	53 81       	ldd	r21, Z+3	; 0x03
-    152a:	25 2f       	mov	r18, r21
-    152c:	55 27       	eor	r21, r21
-    152e:	27 fd       	sbrc	r18, 7
-    1530:	50 95       	com	r21
-    1532:	35 2f       	mov	r19, r21
-    1534:	45 2f       	mov	r20, r21
-    1536:	89 e0       	ldi	r24, 0x09	; 9
-    1538:	94 e0       	ldi	r25, 0x04	; 4
-    153a:	62 2f       	mov	r22, r18
-    153c:	40 e0       	ldi	r20, 0x00	; 0
-    153e:	50 e0       	ldi	r21, 0x00	; 0
-    1540:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    1544:	d4 01       	movw	r26, r8
-    1546:	54 96       	adiw	r26, 0x14	; 20
-    1548:	ed 91       	ld	r30, X+
-    154a:	fc 91       	ld	r31, X
-    154c:	55 97       	sbiw	r26, 0x15	; 21
-    154e:	20 81       	ld	r18, Z
-    1550:	31 81       	ldd	r19, Z+1	; 0x01
-    1552:	42 81       	ldd	r20, Z+2	; 0x02
-    1554:	53 81       	ldd	r21, Z+3	; 0x03
-    1556:	9a 01       	movw	r18, r20
-    1558:	55 27       	eor	r21, r21
-    155a:	37 fd       	sbrc	r19, 7
-    155c:	50 95       	com	r21
-    155e:	45 2f       	mov	r20, r21
-    1560:	89 e0       	ldi	r24, 0x09	; 9
-    1562:	94 e0       	ldi	r25, 0x04	; 4
-    1564:	62 2f       	mov	r22, r18
-    1566:	40 e0       	ldi	r20, 0x00	; 0
-    1568:	50 e0       	ldi	r21, 0x00	; 0
-    156a:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    156e:	d4 01       	movw	r26, r8
-    1570:	54 96       	adiw	r26, 0x14	; 20
-    1572:	ed 91       	ld	r30, X+
-    1574:	fc 91       	ld	r31, X
-    1576:	55 97       	sbiw	r26, 0x15	; 21
-    1578:	20 81       	ld	r18, Z
-    157a:	31 81       	ldd	r19, Z+1	; 0x01
-    157c:	42 81       	ldd	r20, Z+2	; 0x02
-    157e:	53 81       	ldd	r21, Z+3	; 0x03
-    1580:	23 2f       	mov	r18, r19
-    1582:	34 2f       	mov	r19, r20
-    1584:	45 2f       	mov	r20, r21
-    1586:	55 27       	eor	r21, r21
-    1588:	47 fd       	sbrc	r20, 7
-    158a:	5a 95       	dec	r21
-    158c:	89 e0       	ldi	r24, 0x09	; 9
-    158e:	94 e0       	ldi	r25, 0x04	; 4
-    1590:	62 2f       	mov	r22, r18
-    1592:	40 e0       	ldi	r20, 0x00	; 0
-    1594:	50 e0       	ldi	r21, 0x00	; 0
-    1596:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    159a:	d4 01       	movw	r26, r8
-    159c:	54 96       	adiw	r26, 0x14	; 20
-    159e:	ed 91       	ld	r30, X+
-    15a0:	fc 91       	ld	r31, X
-    15a2:	55 97       	sbiw	r26, 0x15	; 21
-    15a4:	89 e0       	ldi	r24, 0x09	; 9
-    15a6:	94 e0       	ldi	r25, 0x04	; 4
-    15a8:	60 81       	ld	r22, Z
+    14f2:	09 f1       	breq	.+66     	; 0x1536 <_ZN10Controller14processCommandEv+0x126>
+    14f4:	d4 01       	movw	r26, r8
+    14f6:	16 96       	adiw	r26, 0x06	; 6
+    14f8:	ed 91       	ld	r30, X+
+    14fa:	fc 91       	ld	r31, X
+    14fc:	17 97       	sbiw	r26, 0x07	; 7
+    14fe:	60 81       	ld	r22, Z
+    1500:	71 81       	ldd	r23, Z+1	; 0x01
+    1502:	82 81       	ldd	r24, Z+2	; 0x02
+    1504:	93 81       	ldd	r25, Z+3	; 0x03
+    1506:	20 e0       	ldi	r18, 0x00	; 0
+    1508:	30 e0       	ldi	r19, 0x00	; 0
+    150a:	40 e2       	ldi	r20, 0x20	; 32
+    150c:	51 e4       	ldi	r21, 0x41	; 65
+    150e:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
+    1512:	0e 94 57 05 	call	0xaae	; 0xaae <__fixsfsi>
+    1516:	7b 01       	movw	r14, r22
+    1518:	8c 01       	movw	r16, r24
+    151a:	d4 01       	movw	r26, r8
+    151c:	18 96       	adiw	r26, 0x08	; 8
+    151e:	ed 91       	ld	r30, X+
+    1520:	fc 91       	ld	r31, X
+    1522:	19 97       	sbiw	r26, 0x09	; 9
+    1524:	60 81       	ld	r22, Z
+    1526:	71 81       	ldd	r23, Z+1	; 0x01
+    1528:	82 81       	ldd	r24, Z+2	; 0x02
+    152a:	93 81       	ldd	r25, Z+3	; 0x03
+    152c:	20 e0       	ldi	r18, 0x00	; 0
+    152e:	30 e0       	ldi	r19, 0x00	; 0
+    1530:	40 e2       	ldi	r20, 0x20	; 32
+    1532:	51 e4       	ldi	r21, 0x41	; 65
+    1534:	28 c0       	rjmp	.+80     	; 0x1586 <_ZN10Controller14processCommandEv+0x176>
+    1536:	c8 01       	movw	r24, r16
+    1538:	6e e0       	ldi	r22, 0x0E	; 14
+    153a:	71 e0       	ldi	r23, 0x01	; 1
+    153c:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
+    1540:	00 97       	sbiw	r24, 0x00	; 0
+    1542:	09 f4       	brne	.+2      	; 0x1546 <_ZN10Controller14processCommandEv+0x136>
+    1544:	4b c0       	rjmp	.+150    	; 0x15dc <_ZN10Controller14processCommandEv+0x1cc>
+    1546:	d4 01       	movw	r26, r8
+    1548:	1a 96       	adiw	r26, 0x0a	; 10
+    154a:	ed 91       	ld	r30, X+
+    154c:	fc 91       	ld	r31, X
+    154e:	1b 97       	sbiw	r26, 0x0b	; 11
+    1550:	60 81       	ld	r22, Z
+    1552:	71 81       	ldd	r23, Z+1	; 0x01
+    1554:	82 81       	ldd	r24, Z+2	; 0x02
+    1556:	93 81       	ldd	r25, Z+3	; 0x03
+    1558:	20 e0       	ldi	r18, 0x00	; 0
+    155a:	30 e0       	ldi	r19, 0x00	; 0
+    155c:	48 ec       	ldi	r20, 0xC8	; 200
+    155e:	52 e4       	ldi	r21, 0x42	; 66
+    1560:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
+    1564:	0e 94 57 05 	call	0xaae	; 0xaae <__fixsfsi>
+    1568:	7b 01       	movw	r14, r22
+    156a:	8c 01       	movw	r16, r24
+    156c:	d4 01       	movw	r26, r8
+    156e:	1c 96       	adiw	r26, 0x0c	; 12
+    1570:	ed 91       	ld	r30, X+
+    1572:	fc 91       	ld	r31, X
+    1574:	1d 97       	sbiw	r26, 0x0d	; 13
+    1576:	60 81       	ld	r22, Z
+    1578:	71 81       	ldd	r23, Z+1	; 0x01
+    157a:	82 81       	ldd	r24, Z+2	; 0x02
+    157c:	93 81       	ldd	r25, Z+3	; 0x03
+    157e:	20 e0       	ldi	r18, 0x00	; 0
+    1580:	30 e0       	ldi	r19, 0x00	; 0
+    1582:	48 ec       	ldi	r20, 0xC8	; 200
+    1584:	52 e4       	ldi	r21, 0x42	; 66
+    1586:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
+    158a:	0e 94 57 05 	call	0xaae	; 0xaae <__fixsfsi>
+    158e:	5b 01       	movw	r10, r22
+    1590:	6c 01       	movw	r12, r24
+    1592:	89 e0       	ldi	r24, 0x09	; 9
+    1594:	94 e0       	ldi	r25, 0x04	; 4
+    1596:	60 e0       	ldi	r22, 0x00	; 0
+    1598:	71 e0       	ldi	r23, 0x01	; 1
+    159a:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
+    159e:	6f 2d       	mov	r22, r15
+    15a0:	77 27       	eor	r23, r23
+    15a2:	67 fd       	sbrc	r22, 7
+    15a4:	7a 95       	dec	r23
+    15a6:	89 e0       	ldi	r24, 0x09	; 9
+    15a8:	94 e0       	ldi	r25, 0x04	; 4
     15aa:	40 e0       	ldi	r20, 0x00	; 0
     15ac:	50 e0       	ldi	r21, 0x00	; 0
     15ae:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    15b2:	d4 01       	movw	r26, r8
-    15b4:	56 96       	adiw	r26, 0x16	; 22
-    15b6:	ed 91       	ld	r30, X+
-    15b8:	fc 91       	ld	r31, X
-    15ba:	57 97       	sbiw	r26, 0x17	; 23
-    15bc:	20 81       	ld	r18, Z
-    15be:	31 81       	ldd	r19, Z+1	; 0x01
-    15c0:	42 81       	ldd	r20, Z+2	; 0x02
-    15c2:	53 81       	ldd	r21, Z+3	; 0x03
-    15c4:	25 2f       	mov	r18, r21
-    15c6:	55 27       	eor	r21, r21
-    15c8:	27 fd       	sbrc	r18, 7
-    15ca:	50 95       	com	r21
-    15cc:	35 2f       	mov	r19, r21
-    15ce:	45 2f       	mov	r20, r21
-    15d0:	89 e0       	ldi	r24, 0x09	; 9
-    15d2:	94 e0       	ldi	r25, 0x04	; 4
-    15d4:	62 2f       	mov	r22, r18
-    15d6:	40 e0       	ldi	r20, 0x00	; 0
-    15d8:	50 e0       	ldi	r21, 0x00	; 0
-    15da:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    15de:	d4 01       	movw	r26, r8
-    15e0:	56 96       	adiw	r26, 0x16	; 22
-    15e2:	ed 91       	ld	r30, X+
-    15e4:	fc 91       	ld	r31, X
-    15e6:	57 97       	sbiw	r26, 0x17	; 23
-    15e8:	20 81       	ld	r18, Z
-    15ea:	31 81       	ldd	r19, Z+1	; 0x01
-    15ec:	42 81       	ldd	r20, Z+2	; 0x02
-    15ee:	53 81       	ldd	r21, Z+3	; 0x03
-    15f0:	9a 01       	movw	r18, r20
-    15f2:	55 27       	eor	r21, r21
-    15f4:	37 fd       	sbrc	r19, 7
-    15f6:	50 95       	com	r21
-    15f8:	45 2f       	mov	r20, r21
-    15fa:	89 e0       	ldi	r24, 0x09	; 9
-    15fc:	94 e0       	ldi	r25, 0x04	; 4
-    15fe:	62 2f       	mov	r22, r18
-    1600:	40 e0       	ldi	r20, 0x00	; 0
-    1602:	50 e0       	ldi	r21, 0x00	; 0
-    1604:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    1608:	d4 01       	movw	r26, r8
-    160a:	56 96       	adiw	r26, 0x16	; 22
-    160c:	ed 91       	ld	r30, X+
-    160e:	fc 91       	ld	r31, X
-    1610:	57 97       	sbiw	r26, 0x17	; 23
-    1612:	20 81       	ld	r18, Z
-    1614:	31 81       	ldd	r19, Z+1	; 0x01
-    1616:	42 81       	ldd	r20, Z+2	; 0x02
-    1618:	53 81       	ldd	r21, Z+3	; 0x03
-    161a:	23 2f       	mov	r18, r19
-    161c:	34 2f       	mov	r19, r20
-    161e:	45 2f       	mov	r20, r21
-    1620:	55 27       	eor	r21, r21
-    1622:	47 fd       	sbrc	r20, 7
-    1624:	5a 95       	dec	r21
-    1626:	89 e0       	ldi	r24, 0x09	; 9
-    1628:	94 e0       	ldi	r25, 0x04	; 4
-    162a:	62 2f       	mov	r22, r18
-    162c:	40 e0       	ldi	r20, 0x00	; 0
-    162e:	50 e0       	ldi	r21, 0x00	; 0
-    1630:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    1634:	d4 01       	movw	r26, r8
-    1636:	56 96       	adiw	r26, 0x16	; 22
-    1638:	ed 91       	ld	r30, X+
-    163a:	fc 91       	ld	r31, X
-    163c:	57 97       	sbiw	r26, 0x17	; 23
-    163e:	89 e0       	ldi	r24, 0x09	; 9
-    1640:	94 e0       	ldi	r25, 0x04	; 4
-    1642:	60 81       	ld	r22, Z
-    1644:	52 c0       	rjmp	.+164    	; 0x16ea <_ZN10Controller14processCommandEv+0x2da>
-    1646:	c8 01       	movw	r24, r16
-    1648:	63 e1       	ldi	r22, 0x13	; 19
-    164a:	71 e0       	ldi	r23, 0x01	; 1
-    164c:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
-    1650:	00 97       	sbiw	r24, 0x00	; 0
-    1652:	09 f4       	brne	.+2      	; 0x1656 <_ZN10Controller14processCommandEv+0x246>
-    1654:	53 c0       	rjmp	.+166    	; 0x16fc <_ZN10Controller14processCommandEv+0x2ec>
-    1656:	d4 01       	movw	r26, r8
-    1658:	16 96       	adiw	r26, 0x06	; 6
-    165a:	ed 91       	ld	r30, X+
-    165c:	fc 91       	ld	r31, X
-    165e:	17 97       	sbiw	r26, 0x07	; 7
-    1660:	60 81       	ld	r22, Z
-    1662:	71 81       	ldd	r23, Z+1	; 0x01
-    1664:	82 81       	ldd	r24, Z+2	; 0x02
-    1666:	93 81       	ldd	r25, Z+3	; 0x03
-    1668:	20 e0       	ldi	r18, 0x00	; 0
-    166a:	30 e0       	ldi	r19, 0x00	; 0
-    166c:	40 e2       	ldi	r20, 0x20	; 32
-    166e:	51 e4       	ldi	r21, 0x41	; 65
-    1670:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
-    1674:	0e 94 57 05 	call	0xaae	; 0xaae <__fixsfsi>
-    1678:	7b 01       	movw	r14, r22
-    167a:	8c 01       	movw	r16, r24
-    167c:	d4 01       	movw	r26, r8
-    167e:	18 96       	adiw	r26, 0x08	; 8
-    1680:	ed 91       	ld	r30, X+
-    1682:	fc 91       	ld	r31, X
-    1684:	19 97       	sbiw	r26, 0x09	; 9
-    1686:	60 81       	ld	r22, Z
-    1688:	71 81       	ldd	r23, Z+1	; 0x01
-    168a:	82 81       	ldd	r24, Z+2	; 0x02
-    168c:	93 81       	ldd	r25, Z+3	; 0x03
-    168e:	20 e0       	ldi	r18, 0x00	; 0
-    1690:	30 e0       	ldi	r19, 0x00	; 0
-    1692:	40 e2       	ldi	r20, 0x20	; 32
-    1694:	51 e4       	ldi	r21, 0x41	; 65
-    1696:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
-    169a:	0e 94 57 05 	call	0xaae	; 0xaae <__fixsfsi>
-    169e:	5b 01       	movw	r10, r22
-    16a0:	6c 01       	movw	r12, r24
-    16a2:	89 e0       	ldi	r24, 0x09	; 9
-    16a4:	94 e0       	ldi	r25, 0x04	; 4
-    16a6:	60 e0       	ldi	r22, 0x00	; 0
-    16a8:	71 e0       	ldi	r23, 0x01	; 1
-    16aa:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
-    16ae:	6f 2d       	mov	r22, r15
-    16b0:	77 27       	eor	r23, r23
-    16b2:	67 fd       	sbrc	r22, 7
-    16b4:	7a 95       	dec	r23
-    16b6:	89 e0       	ldi	r24, 0x09	; 9
-    16b8:	94 e0       	ldi	r25, 0x04	; 4
-    16ba:	40 e0       	ldi	r20, 0x00	; 0
-    16bc:	50 e0       	ldi	r21, 0x00	; 0
-    16be:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    16c2:	89 e0       	ldi	r24, 0x09	; 9
-    16c4:	94 e0       	ldi	r25, 0x04	; 4
-    16c6:	6e 2d       	mov	r22, r14
-    16c8:	40 e0       	ldi	r20, 0x00	; 0
-    16ca:	50 e0       	ldi	r21, 0x00	; 0
-    16cc:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    16d0:	6b 2d       	mov	r22, r11
-    16d2:	77 27       	eor	r23, r23
-    16d4:	67 fd       	sbrc	r22, 7
-    16d6:	7a 95       	dec	r23
-    16d8:	89 e0       	ldi	r24, 0x09	; 9
-    16da:	94 e0       	ldi	r25, 0x04	; 4
-    16dc:	40 e0       	ldi	r20, 0x00	; 0
-    16de:	50 e0       	ldi	r21, 0x00	; 0
-    16e0:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    16e4:	89 e0       	ldi	r24, 0x09	; 9
-    16e6:	94 e0       	ldi	r25, 0x04	; 4
-    16e8:	6a 2d       	mov	r22, r10
-    16ea:	40 e0       	ldi	r20, 0x00	; 0
-    16ec:	50 e0       	ldi	r21, 0x00	; 0
-    16ee:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    16f2:	89 e0       	ldi	r24, 0x09	; 9
-    16f4:	94 e0       	ldi	r25, 0x04	; 4
-    16f6:	62 e0       	ldi	r22, 0x02	; 2
-    16f8:	71 e0       	ldi	r23, 0x01	; 1
-    16fa:	3a c1       	rjmp	.+628    	; 0x1970 <_ZN10Controller14processCommandEv+0x560>
-    16fc:	c8 01       	movw	r24, r16
-    16fe:	68 e1       	ldi	r22, 0x18	; 24
-    1700:	71 e0       	ldi	r23, 0x01	; 1
-    1702:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
-    1706:	00 97       	sbiw	r24, 0x00	; 0
-    1708:	09 f1       	breq	.+66     	; 0x174c <_ZN10Controller14processCommandEv+0x33c>
-    170a:	d4 01       	movw	r26, r8
-    170c:	1a 96       	adiw	r26, 0x0a	; 10
-    170e:	ed 91       	ld	r30, X+
-    1710:	fc 91       	ld	r31, X
-    1712:	1b 97       	sbiw	r26, 0x0b	; 11
-    1714:	60 81       	ld	r22, Z
-    1716:	71 81       	ldd	r23, Z+1	; 0x01
-    1718:	82 81       	ldd	r24, Z+2	; 0x02
-    171a:	93 81       	ldd	r25, Z+3	; 0x03
-    171c:	20 e0       	ldi	r18, 0x00	; 0
-    171e:	30 e0       	ldi	r19, 0x00	; 0
-    1720:	48 ec       	ldi	r20, 0xC8	; 200
-    1722:	52 e4       	ldi	r21, 0x42	; 66
-    1724:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
-    1728:	0e 94 57 05 	call	0xaae	; 0xaae <__fixsfsi>
-    172c:	7b 01       	movw	r14, r22
-    172e:	8c 01       	movw	r16, r24
-    1730:	d4 01       	movw	r26, r8
-    1732:	1c 96       	adiw	r26, 0x0c	; 12
-    1734:	ed 91       	ld	r30, X+
-    1736:	fc 91       	ld	r31, X
-    1738:	1d 97       	sbiw	r26, 0x0d	; 13
-    173a:	60 81       	ld	r22, Z
-    173c:	71 81       	ldd	r23, Z+1	; 0x01
-    173e:	82 81       	ldd	r24, Z+2	; 0x02
-    1740:	93 81       	ldd	r25, Z+3	; 0x03
-    1742:	20 e0       	ldi	r18, 0x00	; 0
-    1744:	30 e0       	ldi	r19, 0x00	; 0
-    1746:	48 ec       	ldi	r20, 0xC8	; 200
-    1748:	52 e4       	ldi	r21, 0x42	; 66
-    174a:	a5 cf       	rjmp	.-182    	; 0x1696 <_ZN10Controller14processCommandEv+0x286>
-    174c:	c8 01       	movw	r24, r16
-    174e:	6d e1       	ldi	r22, 0x1D	; 29
-    1750:	71 e0       	ldi	r23, 0x01	; 1
-    1752:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
-    1756:	00 97       	sbiw	r24, 0x00	; 0
-    1758:	09 f4       	brne	.+2      	; 0x175c <_ZN10Controller14processCommandEv+0x34c>
-    175a:	45 c0       	rjmp	.+138    	; 0x17e6 <_ZN10Controller14processCommandEv+0x3d6>
-    175c:	f4 01       	movw	r30, r8
-    175e:	86 85       	ldd	r24, Z+14	; 0x0e
-    1760:	97 85       	ldd	r25, Z+15	; 0x0f
-    1762:	0e 94 8b 0f 	call	0x1f16	; 0x1f16 <_ZN12PowerMonitor10getVoltageEv>
-    1766:	20 e0       	ldi	r18, 0x00	; 0
-    1768:	30 e0       	ldi	r19, 0x00	; 0
-    176a:	48 ec       	ldi	r20, 0xC8	; 200
-    176c:	52 e4       	ldi	r21, 0x42	; 66
-    176e:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
-    1772:	0e 94 57 05 	call	0xaae	; 0xaae <__fixsfsi>
-    1776:	5b 01       	movw	r10, r22
-    1778:	6c 01       	movw	r12, r24
-    177a:	d4 01       	movw	r26, r8
-    177c:	1e 96       	adiw	r26, 0x0e	; 14
-    177e:	8d 91       	ld	r24, X+
-    1780:	9c 91       	ld	r25, X
-    1782:	1f 97       	sbiw	r26, 0x0f	; 15
-    1784:	0e 94 7a 0f 	call	0x1ef4	; 0x1ef4 <_ZN12PowerMonitor10getCurrentEv>
-    1788:	20 e0       	ldi	r18, 0x00	; 0
-    178a:	30 e0       	ldi	r19, 0x00	; 0
-    178c:	48 ec       	ldi	r20, 0xC8	; 200
-    178e:	52 e4       	ldi	r21, 0x42	; 66
-    1790:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
-    1794:	0e 94 57 05 	call	0xaae	; 0xaae <__fixsfsi>
-    1798:	7b 01       	movw	r14, r22
-    179a:	8c 01       	movw	r16, r24
-    179c:	89 e0       	ldi	r24, 0x09	; 9
-    179e:	94 e0       	ldi	r25, 0x04	; 4
-    17a0:	60 e0       	ldi	r22, 0x00	; 0
-    17a2:	71 e0       	ldi	r23, 0x01	; 1
-    17a4:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
-    17a8:	6b 2d       	mov	r22, r11
-    17aa:	77 27       	eor	r23, r23
-    17ac:	67 fd       	sbrc	r22, 7
-    17ae:	7a 95       	dec	r23
-    17b0:	89 e0       	ldi	r24, 0x09	; 9
-    17b2:	94 e0       	ldi	r25, 0x04	; 4
-    17b4:	40 e0       	ldi	r20, 0x00	; 0
-    17b6:	50 e0       	ldi	r21, 0x00	; 0
-    17b8:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    17bc:	89 e0       	ldi	r24, 0x09	; 9
-    17be:	94 e0       	ldi	r25, 0x04	; 4
-    17c0:	6a 2d       	mov	r22, r10
-    17c2:	40 e0       	ldi	r20, 0x00	; 0
-    17c4:	50 e0       	ldi	r21, 0x00	; 0
-    17c6:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    17ca:	6f 2d       	mov	r22, r15
-    17cc:	77 27       	eor	r23, r23
-    17ce:	67 fd       	sbrc	r22, 7
-    17d0:	7a 95       	dec	r23
-    17d2:	89 e0       	ldi	r24, 0x09	; 9
-    17d4:	94 e0       	ldi	r25, 0x04	; 4
+    15b2:	89 e0       	ldi	r24, 0x09	; 9
+    15b4:	94 e0       	ldi	r25, 0x04	; 4
+    15b6:	6e 2d       	mov	r22, r14
+    15b8:	40 e0       	ldi	r20, 0x00	; 0
+    15ba:	50 e0       	ldi	r21, 0x00	; 0
+    15bc:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    15c0:	6b 2d       	mov	r22, r11
+    15c2:	77 27       	eor	r23, r23
+    15c4:	67 fd       	sbrc	r22, 7
+    15c6:	7a 95       	dec	r23
+    15c8:	89 e0       	ldi	r24, 0x09	; 9
+    15ca:	94 e0       	ldi	r25, 0x04	; 4
+    15cc:	40 e0       	ldi	r20, 0x00	; 0
+    15ce:	50 e0       	ldi	r21, 0x00	; 0
+    15d0:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    15d4:	89 e0       	ldi	r24, 0x09	; 9
+    15d6:	94 e0       	ldi	r25, 0x04	; 4
+    15d8:	6a 2d       	mov	r22, r10
+    15da:	56 c1       	rjmp	.+684    	; 0x1888 <_ZN10Controller14processCommandEv+0x478>
+    15dc:	c8 01       	movw	r24, r16
+    15de:	63 e1       	ldi	r22, 0x13	; 19
+    15e0:	71 e0       	ldi	r23, 0x01	; 1
+    15e2:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
+    15e6:	00 97       	sbiw	r24, 0x00	; 0
+    15e8:	09 f4       	brne	.+2      	; 0x15ec <_ZN10Controller14processCommandEv+0x1dc>
+    15ea:	45 c0       	rjmp	.+138    	; 0x1676 <_ZN10Controller14processCommandEv+0x266>
+    15ec:	f4 01       	movw	r30, r8
+    15ee:	86 85       	ldd	r24, Z+14	; 0x0e
+    15f0:	97 85       	ldd	r25, Z+15	; 0x0f
+    15f2:	0e 94 8b 0f 	call	0x1f16	; 0x1f16 <_ZN12PowerMonitor10getVoltageEv>
+    15f6:	20 e0       	ldi	r18, 0x00	; 0
+    15f8:	30 e0       	ldi	r19, 0x00	; 0
+    15fa:	48 ec       	ldi	r20, 0xC8	; 200
+    15fc:	52 e4       	ldi	r21, 0x42	; 66
+    15fe:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
+    1602:	0e 94 57 05 	call	0xaae	; 0xaae <__fixsfsi>
+    1606:	5b 01       	movw	r10, r22
+    1608:	6c 01       	movw	r12, r24
+    160a:	d4 01       	movw	r26, r8
+    160c:	1e 96       	adiw	r26, 0x0e	; 14
+    160e:	8d 91       	ld	r24, X+
+    1610:	9c 91       	ld	r25, X
+    1612:	1f 97       	sbiw	r26, 0x0f	; 15
+    1614:	0e 94 7a 0f 	call	0x1ef4	; 0x1ef4 <_ZN12PowerMonitor10getCurrentEv>
+    1618:	20 e0       	ldi	r18, 0x00	; 0
+    161a:	30 e0       	ldi	r19, 0x00	; 0
+    161c:	48 ec       	ldi	r20, 0xC8	; 200
+    161e:	52 e4       	ldi	r21, 0x42	; 66
+    1620:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
+    1624:	0e 94 57 05 	call	0xaae	; 0xaae <__fixsfsi>
+    1628:	7b 01       	movw	r14, r22
+    162a:	8c 01       	movw	r16, r24
+    162c:	89 e0       	ldi	r24, 0x09	; 9
+    162e:	94 e0       	ldi	r25, 0x04	; 4
+    1630:	60 e0       	ldi	r22, 0x00	; 0
+    1632:	71 e0       	ldi	r23, 0x01	; 1
+    1634:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
+    1638:	6b 2d       	mov	r22, r11
+    163a:	77 27       	eor	r23, r23
+    163c:	67 fd       	sbrc	r22, 7
+    163e:	7a 95       	dec	r23
+    1640:	89 e0       	ldi	r24, 0x09	; 9
+    1642:	94 e0       	ldi	r25, 0x04	; 4
+    1644:	40 e0       	ldi	r20, 0x00	; 0
+    1646:	50 e0       	ldi	r21, 0x00	; 0
+    1648:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    164c:	89 e0       	ldi	r24, 0x09	; 9
+    164e:	94 e0       	ldi	r25, 0x04	; 4
+    1650:	6a 2d       	mov	r22, r10
+    1652:	40 e0       	ldi	r20, 0x00	; 0
+    1654:	50 e0       	ldi	r21, 0x00	; 0
+    1656:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    165a:	6f 2d       	mov	r22, r15
+    165c:	77 27       	eor	r23, r23
+    165e:	67 fd       	sbrc	r22, 7
+    1660:	7a 95       	dec	r23
+    1662:	89 e0       	ldi	r24, 0x09	; 9
+    1664:	94 e0       	ldi	r25, 0x04	; 4
+    1666:	40 e0       	ldi	r20, 0x00	; 0
+    1668:	50 e0       	ldi	r21, 0x00	; 0
+    166a:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    166e:	89 e0       	ldi	r24, 0x09	; 9
+    1670:	94 e0       	ldi	r25, 0x04	; 4
+    1672:	6e 2d       	mov	r22, r14
+    1674:	09 c1       	rjmp	.+530    	; 0x1888 <_ZN10Controller14processCommandEv+0x478>
+    1676:	c8 01       	movw	r24, r16
+    1678:	68 e1       	ldi	r22, 0x18	; 24
+    167a:	71 e0       	ldi	r23, 0x01	; 1
+    167c:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
+    1680:	00 97       	sbiw	r24, 0x00	; 0
+    1682:	29 f1       	breq	.+74     	; 0x16ce <_ZN10Controller14processCommandEv+0x2be>
+    1684:	f4 01       	movw	r30, r8
+    1686:	82 89       	ldd	r24, Z+18	; 0x12
+    1688:	93 89       	ldd	r25, Z+19	; 0x13
+    168a:	0e 94 42 1b 	call	0x3684	; 0x3684 <_ZN5Servo4readEv>
+    168e:	18 2f       	mov	r17, r24
+    1690:	d4 01       	movw	r26, r8
+    1692:	50 96       	adiw	r26, 0x10	; 16
+    1694:	8d 91       	ld	r24, X+
+    1696:	9c 91       	ld	r25, X
+    1698:	51 97       	sbiw	r26, 0x11	; 17
+    169a:	0e 94 42 1b 	call	0x3684	; 0x3684 <_ZN5Servo4readEv>
+    169e:	08 2f       	mov	r16, r24
+    16a0:	89 e0       	ldi	r24, 0x09	; 9
+    16a2:	94 e0       	ldi	r25, 0x04	; 4
+    16a4:	60 e0       	ldi	r22, 0x00	; 0
+    16a6:	71 e0       	ldi	r23, 0x01	; 1
+    16a8:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
+    16ac:	89 e0       	ldi	r24, 0x09	; 9
+    16ae:	94 e0       	ldi	r25, 0x04	; 4
+    16b0:	61 2f       	mov	r22, r17
+    16b2:	70 e0       	ldi	r23, 0x00	; 0
+    16b4:	40 e0       	ldi	r20, 0x00	; 0
+    16b6:	50 e0       	ldi	r21, 0x00	; 0
+    16b8:	0e 94 b4 17 	call	0x2f68	; 0x2f68 <_ZN5Print5printEii>
+    16bc:	89 e0       	ldi	r24, 0x09	; 9
+    16be:	94 e0       	ldi	r25, 0x04	; 4
+    16c0:	60 2f       	mov	r22, r16
+    16c2:	70 e0       	ldi	r23, 0x00	; 0
+    16c4:	40 e0       	ldi	r20, 0x00	; 0
+    16c6:	50 e0       	ldi	r21, 0x00	; 0
+    16c8:	0e 94 b4 17 	call	0x2f68	; 0x2f68 <_ZN5Print5printEii>
+    16cc:	e1 c0       	rjmp	.+450    	; 0x1890 <_ZN10Controller14processCommandEv+0x480>
+    16ce:	c8 01       	movw	r24, r16
+    16d0:	6d e1       	ldi	r22, 0x1D	; 29
+    16d2:	71 e0       	ldi	r23, 0x01	; 1
+    16d4:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
+    16d8:	00 97       	sbiw	r24, 0x00	; 0
+    16da:	39 f1       	breq	.+78     	; 0x172a <_ZN10Controller14processCommandEv+0x31a>
+    16dc:	c4 01       	movw	r24, r8
+    16de:	44 e6       	ldi	r20, 0x64	; 100
+    16e0:	50 e0       	ldi	r21, 0x00	; 0
+    16e2:	60 e0       	ldi	r22, 0x00	; 0
+    16e4:	70 e0       	ldi	r23, 0x00	; 0
+    16e6:	0e 94 d0 08 	call	0x11a0	; 0x11a0 <_ZN10Controller8nextByteEm>
+    16ea:	18 2f       	mov	r17, r24
+    16ec:	c4 01       	movw	r24, r8
+    16ee:	44 e6       	ldi	r20, 0x64	; 100
+    16f0:	50 e0       	ldi	r21, 0x00	; 0
+    16f2:	60 e0       	ldi	r22, 0x00	; 0
+    16f4:	70 e0       	ldi	r23, 0x00	; 0
+    16f6:	0e 94 d0 08 	call	0x11a0	; 0x11a0 <_ZN10Controller8nextByteEm>
+    16fa:	08 2f       	mov	r16, r24
+    16fc:	f4 01       	movw	r30, r8
+    16fe:	82 89       	ldd	r24, Z+18	; 0x12
+    1700:	93 89       	ldd	r25, Z+19	; 0x13
+    1702:	15 3b       	cpi	r17, 0xB5	; 181
+    1704:	08 f0       	brcs	.+2      	; 0x1708 <_ZN10Controller14processCommandEv+0x2f8>
+    1706:	14 eb       	ldi	r17, 0xB4	; 180
+    1708:	61 2f       	mov	r22, r17
+    170a:	70 e0       	ldi	r23, 0x00	; 0
+    170c:	0e 94 97 1b 	call	0x372e	; 0x372e <_ZN5Servo5writeEi>
+    1710:	d4 01       	movw	r26, r8
+    1712:	50 96       	adiw	r26, 0x10	; 16
+    1714:	8d 91       	ld	r24, X+
+    1716:	9c 91       	ld	r25, X
+    1718:	51 97       	sbiw	r26, 0x11	; 17
+    171a:	60 2f       	mov	r22, r16
+    171c:	05 3b       	cpi	r16, 0xB5	; 181
+    171e:	08 f0       	brcs	.+2      	; 0x1722 <_ZN10Controller14processCommandEv+0x312>
+    1720:	64 eb       	ldi	r22, 0xB4	; 180
+    1722:	70 e0       	ldi	r23, 0x00	; 0
+    1724:	0e 94 97 1b 	call	0x372e	; 0x372e <_ZN5Servo5writeEi>
+    1728:	2c c1       	rjmp	.+600    	; 0x1982 <_ZN10Controller14processCommandEv+0x572>
+    172a:	c8 01       	movw	r24, r16
+    172c:	62 e2       	ldi	r22, 0x22	; 34
+    172e:	71 e0       	ldi	r23, 0x01	; 1
+    1730:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
+    1734:	00 97       	sbiw	r24, 0x00	; 0
+    1736:	21 f0       	breq	.+8      	; 0x1740 <_ZN10Controller14processCommandEv+0x330>
+    1738:	c4 01       	movw	r24, r8
+    173a:	0e 94 05 09 	call	0x120a	; 0x120a <_ZN10Controller9printInfoEv>
+    173e:	21 c1       	rjmp	.+578    	; 0x1982 <_ZN10Controller14processCommandEv+0x572>
+    1740:	c8 01       	movw	r24, r16
+    1742:	67 e2       	ldi	r22, 0x27	; 39
+    1744:	71 e0       	ldi	r23, 0x01	; 1
+    1746:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
+    174a:	00 97       	sbiw	r24, 0x00	; 0
+    174c:	09 f4       	brne	.+2      	; 0x1750 <_ZN10Controller14processCommandEv+0x340>
+    174e:	a7 c0       	rjmp	.+334    	; 0x189e <_ZN10Controller14processCommandEv+0x48e>
+    1750:	89 e0       	ldi	r24, 0x09	; 9
+    1752:	94 e0       	ldi	r25, 0x04	; 4
+    1754:	60 e0       	ldi	r22, 0x00	; 0
+    1756:	71 e0       	ldi	r23, 0x01	; 1
+    1758:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
+    175c:	d4 01       	movw	r26, r8
+    175e:	54 96       	adiw	r26, 0x14	; 20
+    1760:	ed 91       	ld	r30, X+
+    1762:	fc 91       	ld	r31, X
+    1764:	55 97       	sbiw	r26, 0x15	; 21
+    1766:	20 81       	ld	r18, Z
+    1768:	31 81       	ldd	r19, Z+1	; 0x01
+    176a:	42 81       	ldd	r20, Z+2	; 0x02
+    176c:	53 81       	ldd	r21, Z+3	; 0x03
+    176e:	25 2f       	mov	r18, r21
+    1770:	55 27       	eor	r21, r21
+    1772:	27 fd       	sbrc	r18, 7
+    1774:	50 95       	com	r21
+    1776:	35 2f       	mov	r19, r21
+    1778:	45 2f       	mov	r20, r21
+    177a:	89 e0       	ldi	r24, 0x09	; 9
+    177c:	94 e0       	ldi	r25, 0x04	; 4
+    177e:	62 2f       	mov	r22, r18
+    1780:	40 e0       	ldi	r20, 0x00	; 0
+    1782:	50 e0       	ldi	r21, 0x00	; 0
+    1784:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    1788:	d4 01       	movw	r26, r8
+    178a:	54 96       	adiw	r26, 0x14	; 20
+    178c:	ed 91       	ld	r30, X+
+    178e:	fc 91       	ld	r31, X
+    1790:	55 97       	sbiw	r26, 0x15	; 21
+    1792:	20 81       	ld	r18, Z
+    1794:	31 81       	ldd	r19, Z+1	; 0x01
+    1796:	42 81       	ldd	r20, Z+2	; 0x02
+    1798:	53 81       	ldd	r21, Z+3	; 0x03
+    179a:	9a 01       	movw	r18, r20
+    179c:	55 27       	eor	r21, r21
+    179e:	37 fd       	sbrc	r19, 7
+    17a0:	50 95       	com	r21
+    17a2:	45 2f       	mov	r20, r21
+    17a4:	89 e0       	ldi	r24, 0x09	; 9
+    17a6:	94 e0       	ldi	r25, 0x04	; 4
+    17a8:	62 2f       	mov	r22, r18
+    17aa:	40 e0       	ldi	r20, 0x00	; 0
+    17ac:	50 e0       	ldi	r21, 0x00	; 0
+    17ae:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    17b2:	d4 01       	movw	r26, r8
+    17b4:	54 96       	adiw	r26, 0x14	; 20
+    17b6:	ed 91       	ld	r30, X+
+    17b8:	fc 91       	ld	r31, X
+    17ba:	55 97       	sbiw	r26, 0x15	; 21
+    17bc:	20 81       	ld	r18, Z
+    17be:	31 81       	ldd	r19, Z+1	; 0x01
+    17c0:	42 81       	ldd	r20, Z+2	; 0x02
+    17c2:	53 81       	ldd	r21, Z+3	; 0x03
+    17c4:	23 2f       	mov	r18, r19
+    17c6:	34 2f       	mov	r19, r20
+    17c8:	45 2f       	mov	r20, r21
+    17ca:	55 27       	eor	r21, r21
+    17cc:	47 fd       	sbrc	r20, 7
+    17ce:	5a 95       	dec	r21
+    17d0:	89 e0       	ldi	r24, 0x09	; 9
+    17d2:	94 e0       	ldi	r25, 0x04	; 4
+    17d4:	62 2f       	mov	r22, r18
     17d6:	40 e0       	ldi	r20, 0x00	; 0
     17d8:	50 e0       	ldi	r21, 0x00	; 0
     17da:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
-    17de:	89 e0       	ldi	r24, 0x09	; 9
-    17e0:	94 e0       	ldi	r25, 0x04	; 4
-    17e2:	6e 2d       	mov	r22, r14
-    17e4:	82 cf       	rjmp	.-252    	; 0x16ea <_ZN10Controller14processCommandEv+0x2da>
-    17e6:	c8 01       	movw	r24, r16
-    17e8:	62 e2       	ldi	r22, 0x22	; 34
-    17ea:	71 e0       	ldi	r23, 0x01	; 1
-    17ec:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
-    17f0:	00 97       	sbiw	r24, 0x00	; 0
-    17f2:	29 f1       	breq	.+74     	; 0x183e <_ZN10Controller14processCommandEv+0x42e>
-    17f4:	f4 01       	movw	r30, r8
-    17f6:	82 89       	ldd	r24, Z+18	; 0x12
-    17f8:	93 89       	ldd	r25, Z+19	; 0x13
-    17fa:	0e 94 42 1b 	call	0x3684	; 0x3684 <_ZN5Servo4readEv>
-    17fe:	18 2f       	mov	r17, r24
-    1800:	d4 01       	movw	r26, r8
-    1802:	50 96       	adiw	r26, 0x10	; 16
-    1804:	8d 91       	ld	r24, X+
-    1806:	9c 91       	ld	r25, X
-    1808:	51 97       	sbiw	r26, 0x11	; 17
-    180a:	0e 94 42 1b 	call	0x3684	; 0x3684 <_ZN5Servo4readEv>
-    180e:	08 2f       	mov	r16, r24
-    1810:	89 e0       	ldi	r24, 0x09	; 9
-    1812:	94 e0       	ldi	r25, 0x04	; 4
-    1814:	60 e0       	ldi	r22, 0x00	; 0
-    1816:	71 e0       	ldi	r23, 0x01	; 1
-    1818:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
-    181c:	89 e0       	ldi	r24, 0x09	; 9
-    181e:	94 e0       	ldi	r25, 0x04	; 4
-    1820:	61 2f       	mov	r22, r17
-    1822:	70 e0       	ldi	r23, 0x00	; 0
-    1824:	40 e0       	ldi	r20, 0x00	; 0
-    1826:	50 e0       	ldi	r21, 0x00	; 0
-    1828:	0e 94 b4 17 	call	0x2f68	; 0x2f68 <_ZN5Print5printEii>
-    182c:	89 e0       	ldi	r24, 0x09	; 9
-    182e:	94 e0       	ldi	r25, 0x04	; 4
-    1830:	60 2f       	mov	r22, r16
-    1832:	70 e0       	ldi	r23, 0x00	; 0
-    1834:	40 e0       	ldi	r20, 0x00	; 0
-    1836:	50 e0       	ldi	r21, 0x00	; 0
-    1838:	0e 94 b4 17 	call	0x2f68	; 0x2f68 <_ZN5Print5printEii>
-    183c:	5a cf       	rjmp	.-332    	; 0x16f2 <_ZN10Controller14processCommandEv+0x2e2>
-    183e:	c8 01       	movw	r24, r16
-    1840:	67 e2       	ldi	r22, 0x27	; 39
-    1842:	71 e0       	ldi	r23, 0x01	; 1
-    1844:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
-    1848:	00 97       	sbiw	r24, 0x00	; 0
-    184a:	39 f1       	breq	.+78     	; 0x189a <_ZN10Controller14processCommandEv+0x48a>
-    184c:	c4 01       	movw	r24, r8
-    184e:	44 e6       	ldi	r20, 0x64	; 100
-    1850:	50 e0       	ldi	r21, 0x00	; 0
-    1852:	60 e0       	ldi	r22, 0x00	; 0
-    1854:	70 e0       	ldi	r23, 0x00	; 0
-    1856:	0e 94 d0 08 	call	0x11a0	; 0x11a0 <_ZN10Controller8nextByteEm>
-    185a:	18 2f       	mov	r17, r24
-    185c:	c4 01       	movw	r24, r8
-    185e:	44 e6       	ldi	r20, 0x64	; 100
-    1860:	50 e0       	ldi	r21, 0x00	; 0
-    1862:	60 e0       	ldi	r22, 0x00	; 0
-    1864:	70 e0       	ldi	r23, 0x00	; 0
-    1866:	0e 94 d0 08 	call	0x11a0	; 0x11a0 <_ZN10Controller8nextByteEm>
-    186a:	08 2f       	mov	r16, r24
-    186c:	f4 01       	movw	r30, r8
-    186e:	82 89       	ldd	r24, Z+18	; 0x12
-    1870:	93 89       	ldd	r25, Z+19	; 0x13
-    1872:	15 3b       	cpi	r17, 0xB5	; 181
-    1874:	08 f0       	brcs	.+2      	; 0x1878 <_ZN10Controller14processCommandEv+0x468>
-    1876:	14 eb       	ldi	r17, 0xB4	; 180
-    1878:	61 2f       	mov	r22, r17
-    187a:	70 e0       	ldi	r23, 0x00	; 0
-    187c:	0e 94 97 1b 	call	0x372e	; 0x372e <_ZN5Servo5writeEi>
-    1880:	d4 01       	movw	r26, r8
-    1882:	50 96       	adiw	r26, 0x10	; 16
-    1884:	8d 91       	ld	r24, X+
-    1886:	9c 91       	ld	r25, X
-    1888:	51 97       	sbiw	r26, 0x11	; 17
-    188a:	60 2f       	mov	r22, r16
-    188c:	05 3b       	cpi	r16, 0xB5	; 181
-    188e:	08 f0       	brcs	.+2      	; 0x1892 <_ZN10Controller14processCommandEv+0x482>
-    1890:	64 eb       	ldi	r22, 0xB4	; 180
-    1892:	70 e0       	ldi	r23, 0x00	; 0
-    1894:	0e 94 97 1b 	call	0x372e	; 0x372e <_ZN5Servo5writeEi>
-    1898:	74 c0       	rjmp	.+232    	; 0x1982 <_ZN10Controller14processCommandEv+0x572>
-    189a:	c8 01       	movw	r24, r16
-    189c:	6c e2       	ldi	r22, 0x2C	; 44
-    189e:	71 e0       	ldi	r23, 0x01	; 1
-    18a0:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
-    18a4:	00 97       	sbiw	r24, 0x00	; 0
-    18a6:	31 f0       	breq	.+12     	; 0x18b4 <_ZN10Controller14processCommandEv+0x4a4>
-    18a8:	d4 01       	movw	r26, r8
-    18aa:	12 96       	adiw	r26, 0x02	; 2
-    18ac:	ed 91       	ld	r30, X+
-    18ae:	fc 91       	ld	r31, X
-    18b0:	13 97       	sbiw	r26, 0x03	; 3
-    18b2:	26 c0       	rjmp	.+76     	; 0x1900 <_ZN10Controller14processCommandEv+0x4f0>
-    18b4:	c8 01       	movw	r24, r16
-    18b6:	61 e3       	ldi	r22, 0x31	; 49
-    18b8:	71 e0       	ldi	r23, 0x01	; 1
-    18ba:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
-    18be:	00 97       	sbiw	r24, 0x00	; 0
-    18c0:	31 f0       	breq	.+12     	; 0x18ce <_ZN10Controller14processCommandEv+0x4be>
-    18c2:	d4 01       	movw	r26, r8
-    18c4:	14 96       	adiw	r26, 0x04	; 4
-    18c6:	ed 91       	ld	r30, X+
-    18c8:	fc 91       	ld	r31, X
-    18ca:	15 97       	sbiw	r26, 0x05	; 5
-    18cc:	19 c0       	rjmp	.+50     	; 0x1900 <_ZN10Controller14processCommandEv+0x4f0>
-    18ce:	c8 01       	movw	r24, r16
-    18d0:	66 e3       	ldi	r22, 0x36	; 54
-    18d2:	71 e0       	ldi	r23, 0x01	; 1
-    18d4:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
-    18d8:	00 97       	sbiw	r24, 0x00	; 0
-    18da:	31 f0       	breq	.+12     	; 0x18e8 <_ZN10Controller14processCommandEv+0x4d8>
-    18dc:	d4 01       	movw	r26, r8
-    18de:	16 96       	adiw	r26, 0x06	; 6
-    18e0:	ed 91       	ld	r30, X+
-    18e2:	fc 91       	ld	r31, X
-    18e4:	17 97       	sbiw	r26, 0x07	; 7
-    18e6:	0c c0       	rjmp	.+24     	; 0x1900 <_ZN10Controller14processCommandEv+0x4f0>
-    18e8:	c8 01       	movw	r24, r16
-    18ea:	6b e3       	ldi	r22, 0x3B	; 59
-    18ec:	71 e0       	ldi	r23, 0x01	; 1
-    18ee:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
-    18f2:	00 97       	sbiw	r24, 0x00	; 0
-    18f4:	81 f0       	breq	.+32     	; 0x1916 <_ZN10Controller14processCommandEv+0x506>
-    18f6:	d4 01       	movw	r26, r8
-    18f8:	18 96       	adiw	r26, 0x08	; 8
-    18fa:	ed 91       	ld	r30, X+
-    18fc:	fc 91       	ld	r31, X
-    18fe:	19 97       	sbiw	r26, 0x09	; 9
-    1900:	40 81       	ld	r20, Z
-    1902:	51 81       	ldd	r21, Z+1	; 0x01
-    1904:	62 81       	ldd	r22, Z+2	; 0x02
-    1906:	73 81       	ldd	r23, Z+3	; 0x03
-    1908:	89 e0       	ldi	r24, 0x09	; 9
-    190a:	94 e0       	ldi	r25, 0x04	; 4
-    190c:	2a e0       	ldi	r18, 0x0A	; 10
-    190e:	30 e0       	ldi	r19, 0x00	; 0
-    1910:	0e 94 78 18 	call	0x30f0	; 0x30f0 <_ZN5Print7printlnEdi>
-    1914:	36 c0       	rjmp	.+108    	; 0x1982 <_ZN10Controller14processCommandEv+0x572>
-    1916:	c8 01       	movw	r24, r16
-    1918:	60 e4       	ldi	r22, 0x40	; 64
-    191a:	71 e0       	ldi	r23, 0x01	; 1
-    191c:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
-    1920:	00 97       	sbiw	r24, 0x00	; 0
-    1922:	49 f1       	breq	.+82     	; 0x1976 <_ZN10Controller14processCommandEv+0x566>
-    1924:	f4 01       	movw	r30, r8
-    1926:	86 85       	ldd	r24, Z+14	; 0x0e
-    1928:	97 85       	ldd	r25, Z+15	; 0x0f
-    192a:	0e 94 8b 0f 	call	0x1f16	; 0x1f16 <_ZN12PowerMonitor10getVoltageEv>
-    192e:	ab 01       	movw	r20, r22
-    1930:	bc 01       	movw	r22, r24
-    1932:	89 e0       	ldi	r24, 0x09	; 9
-    1934:	94 e0       	ldi	r25, 0x04	; 4
-    1936:	2a e0       	ldi	r18, 0x0A	; 10
-    1938:	30 e0       	ldi	r19, 0x00	; 0
-    193a:	0e 94 75 18 	call	0x30ea	; 0x30ea <_ZN5Print5printEdi>
-    193e:	89 e0       	ldi	r24, 0x09	; 9
-    1940:	94 e0       	ldi	r25, 0x04	; 4
-    1942:	65 e4       	ldi	r22, 0x45	; 69
-    1944:	71 e0       	ldi	r23, 0x01	; 1
-    1946:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
-    194a:	d4 01       	movw	r26, r8
-    194c:	1e 96       	adiw	r26, 0x0e	; 14
-    194e:	8d 91       	ld	r24, X+
-    1950:	9c 91       	ld	r25, X
-    1952:	1f 97       	sbiw	r26, 0x0f	; 15
-    1954:	0e 94 7a 0f 	call	0x1ef4	; 0x1ef4 <_ZN12PowerMonitor10getCurrentEv>
-    1958:	ab 01       	movw	r20, r22
-    195a:	bc 01       	movw	r22, r24
-    195c:	89 e0       	ldi	r24, 0x09	; 9
-    195e:	94 e0       	ldi	r25, 0x04	; 4
-    1960:	2a e0       	ldi	r18, 0x0A	; 10
-    1962:	30 e0       	ldi	r19, 0x00	; 0
-    1964:	0e 94 75 18 	call	0x30ea	; 0x30ea <_ZN5Print5printEdi>
-    1968:	89 e0       	ldi	r24, 0x09	; 9
-    196a:	94 e0       	ldi	r25, 0x04	; 4
-    196c:	6e e4       	ldi	r22, 0x4E	; 78
-    196e:	71 e0       	ldi	r23, 0x01	; 1
-    1970:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
-    1974:	06 c0       	rjmp	.+12     	; 0x1982 <_ZN10Controller14processCommandEv+0x572>
+    17de:	d4 01       	movw	r26, r8
+    17e0:	54 96       	adiw	r26, 0x14	; 20
+    17e2:	ed 91       	ld	r30, X+
+    17e4:	fc 91       	ld	r31, X
+    17e6:	55 97       	sbiw	r26, 0x15	; 21
+    17e8:	89 e0       	ldi	r24, 0x09	; 9
+    17ea:	94 e0       	ldi	r25, 0x04	; 4
+    17ec:	60 81       	ld	r22, Z
+    17ee:	40 e0       	ldi	r20, 0x00	; 0
+    17f0:	50 e0       	ldi	r21, 0x00	; 0
+    17f2:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    17f6:	d4 01       	movw	r26, r8
+    17f8:	56 96       	adiw	r26, 0x16	; 22
+    17fa:	ed 91       	ld	r30, X+
+    17fc:	fc 91       	ld	r31, X
+    17fe:	57 97       	sbiw	r26, 0x17	; 23
+    1800:	20 81       	ld	r18, Z
+    1802:	31 81       	ldd	r19, Z+1	; 0x01
+    1804:	42 81       	ldd	r20, Z+2	; 0x02
+    1806:	53 81       	ldd	r21, Z+3	; 0x03
+    1808:	25 2f       	mov	r18, r21
+    180a:	55 27       	eor	r21, r21
+    180c:	27 fd       	sbrc	r18, 7
+    180e:	50 95       	com	r21
+    1810:	35 2f       	mov	r19, r21
+    1812:	45 2f       	mov	r20, r21
+    1814:	89 e0       	ldi	r24, 0x09	; 9
+    1816:	94 e0       	ldi	r25, 0x04	; 4
+    1818:	62 2f       	mov	r22, r18
+    181a:	40 e0       	ldi	r20, 0x00	; 0
+    181c:	50 e0       	ldi	r21, 0x00	; 0
+    181e:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    1822:	d4 01       	movw	r26, r8
+    1824:	56 96       	adiw	r26, 0x16	; 22
+    1826:	ed 91       	ld	r30, X+
+    1828:	fc 91       	ld	r31, X
+    182a:	57 97       	sbiw	r26, 0x17	; 23
+    182c:	20 81       	ld	r18, Z
+    182e:	31 81       	ldd	r19, Z+1	; 0x01
+    1830:	42 81       	ldd	r20, Z+2	; 0x02
+    1832:	53 81       	ldd	r21, Z+3	; 0x03
+    1834:	9a 01       	movw	r18, r20
+    1836:	55 27       	eor	r21, r21
+    1838:	37 fd       	sbrc	r19, 7
+    183a:	50 95       	com	r21
+    183c:	45 2f       	mov	r20, r21
+    183e:	89 e0       	ldi	r24, 0x09	; 9
+    1840:	94 e0       	ldi	r25, 0x04	; 4
+    1842:	62 2f       	mov	r22, r18
+    1844:	40 e0       	ldi	r20, 0x00	; 0
+    1846:	50 e0       	ldi	r21, 0x00	; 0
+    1848:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    184c:	d4 01       	movw	r26, r8
+    184e:	56 96       	adiw	r26, 0x16	; 22
+    1850:	ed 91       	ld	r30, X+
+    1852:	fc 91       	ld	r31, X
+    1854:	57 97       	sbiw	r26, 0x17	; 23
+    1856:	20 81       	ld	r18, Z
+    1858:	31 81       	ldd	r19, Z+1	; 0x01
+    185a:	42 81       	ldd	r20, Z+2	; 0x02
+    185c:	53 81       	ldd	r21, Z+3	; 0x03
+    185e:	23 2f       	mov	r18, r19
+    1860:	34 2f       	mov	r19, r20
+    1862:	45 2f       	mov	r20, r21
+    1864:	55 27       	eor	r21, r21
+    1866:	47 fd       	sbrc	r20, 7
+    1868:	5a 95       	dec	r21
+    186a:	89 e0       	ldi	r24, 0x09	; 9
+    186c:	94 e0       	ldi	r25, 0x04	; 4
+    186e:	62 2f       	mov	r22, r18
+    1870:	40 e0       	ldi	r20, 0x00	; 0
+    1872:	50 e0       	ldi	r21, 0x00	; 0
+    1874:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    1878:	d4 01       	movw	r26, r8
+    187a:	56 96       	adiw	r26, 0x16	; 22
+    187c:	ed 91       	ld	r30, X+
+    187e:	fc 91       	ld	r31, X
+    1880:	57 97       	sbiw	r26, 0x17	; 23
+    1882:	89 e0       	ldi	r24, 0x09	; 9
+    1884:	94 e0       	ldi	r25, 0x04	; 4
+    1886:	60 81       	ld	r22, Z
+    1888:	40 e0       	ldi	r20, 0x00	; 0
+    188a:	50 e0       	ldi	r21, 0x00	; 0
+    188c:	0e 94 6c 17 	call	0x2ed8	; 0x2ed8 <_ZN5Print5printEhi>
+    1890:	89 e0       	ldi	r24, 0x09	; 9
+    1892:	94 e0       	ldi	r25, 0x04	; 4
+    1894:	62 e0       	ldi	r22, 0x02	; 2
+    1896:	71 e0       	ldi	r23, 0x01	; 1
+    1898:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
+    189c:	72 c0       	rjmp	.+228    	; 0x1982 <_ZN10Controller14processCommandEv+0x572>
+    189e:	c8 01       	movw	r24, r16
+    18a0:	6c e2       	ldi	r22, 0x2C	; 44
+    18a2:	71 e0       	ldi	r23, 0x01	; 1
+    18a4:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
+    18a8:	00 97       	sbiw	r24, 0x00	; 0
+    18aa:	31 f0       	breq	.+12     	; 0x18b8 <_ZN10Controller14processCommandEv+0x4a8>
+    18ac:	d4 01       	movw	r26, r8
+    18ae:	12 96       	adiw	r26, 0x02	; 2
+    18b0:	ed 91       	ld	r30, X+
+    18b2:	fc 91       	ld	r31, X
+    18b4:	13 97       	sbiw	r26, 0x03	; 3
+    18b6:	26 c0       	rjmp	.+76     	; 0x1904 <_ZN10Controller14processCommandEv+0x4f4>
+    18b8:	c8 01       	movw	r24, r16
+    18ba:	61 e3       	ldi	r22, 0x31	; 49
+    18bc:	71 e0       	ldi	r23, 0x01	; 1
+    18be:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
+    18c2:	00 97       	sbiw	r24, 0x00	; 0
+    18c4:	31 f0       	breq	.+12     	; 0x18d2 <_ZN10Controller14processCommandEv+0x4c2>
+    18c6:	d4 01       	movw	r26, r8
+    18c8:	14 96       	adiw	r26, 0x04	; 4
+    18ca:	ed 91       	ld	r30, X+
+    18cc:	fc 91       	ld	r31, X
+    18ce:	15 97       	sbiw	r26, 0x05	; 5
+    18d0:	19 c0       	rjmp	.+50     	; 0x1904 <_ZN10Controller14processCommandEv+0x4f4>
+    18d2:	c8 01       	movw	r24, r16
+    18d4:	66 e3       	ldi	r22, 0x36	; 54
+    18d6:	71 e0       	ldi	r23, 0x01	; 1
+    18d8:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
+    18dc:	00 97       	sbiw	r24, 0x00	; 0
+    18de:	31 f0       	breq	.+12     	; 0x18ec <_ZN10Controller14processCommandEv+0x4dc>
+    18e0:	d4 01       	movw	r26, r8
+    18e2:	16 96       	adiw	r26, 0x06	; 6
+    18e4:	ed 91       	ld	r30, X+
+    18e6:	fc 91       	ld	r31, X
+    18e8:	17 97       	sbiw	r26, 0x07	; 7
+    18ea:	0c c0       	rjmp	.+24     	; 0x1904 <_ZN10Controller14processCommandEv+0x4f4>
+    18ec:	c8 01       	movw	r24, r16
+    18ee:	6b e3       	ldi	r22, 0x3B	; 59
+    18f0:	71 e0       	ldi	r23, 0x01	; 1
+    18f2:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
+    18f6:	00 97       	sbiw	r24, 0x00	; 0
+    18f8:	81 f0       	breq	.+32     	; 0x191a <_ZN10Controller14processCommandEv+0x50a>
+    18fa:	d4 01       	movw	r26, r8
+    18fc:	18 96       	adiw	r26, 0x08	; 8
+    18fe:	ed 91       	ld	r30, X+
+    1900:	fc 91       	ld	r31, X
+    1902:	19 97       	sbiw	r26, 0x09	; 9
+    1904:	40 81       	ld	r20, Z
+    1906:	51 81       	ldd	r21, Z+1	; 0x01
+    1908:	62 81       	ldd	r22, Z+2	; 0x02
+    190a:	73 81       	ldd	r23, Z+3	; 0x03
+    190c:	89 e0       	ldi	r24, 0x09	; 9
+    190e:	94 e0       	ldi	r25, 0x04	; 4
+    1910:	2a e0       	ldi	r18, 0x0A	; 10
+    1912:	30 e0       	ldi	r19, 0x00	; 0
+    1914:	0e 94 78 18 	call	0x30f0	; 0x30f0 <_ZN5Print7printlnEdi>
+    1918:	34 c0       	rjmp	.+104    	; 0x1982 <_ZN10Controller14processCommandEv+0x572>
+    191a:	c8 01       	movw	r24, r16
+    191c:	60 e4       	ldi	r22, 0x40	; 64
+    191e:	71 e0       	ldi	r23, 0x01	; 1
+    1920:	0e 94 0e 1e 	call	0x3c1c	; 0x3c1c <strstr>
+    1924:	00 97       	sbiw	r24, 0x00	; 0
+    1926:	39 f1       	breq	.+78     	; 0x1976 <_ZN10Controller14processCommandEv+0x566>
+    1928:	f4 01       	movw	r30, r8
+    192a:	86 85       	ldd	r24, Z+14	; 0x0e
+    192c:	97 85       	ldd	r25, Z+15	; 0x0f
+    192e:	0e 94 8b 0f 	call	0x1f16	; 0x1f16 <_ZN12PowerMonitor10getVoltageEv>
+    1932:	ab 01       	movw	r20, r22
+    1934:	bc 01       	movw	r22, r24
+    1936:	89 e0       	ldi	r24, 0x09	; 9
+    1938:	94 e0       	ldi	r25, 0x04	; 4
+    193a:	2a e0       	ldi	r18, 0x0A	; 10
+    193c:	30 e0       	ldi	r19, 0x00	; 0
+    193e:	0e 94 75 18 	call	0x30ea	; 0x30ea <_ZN5Print5printEdi>
+    1942:	89 e0       	ldi	r24, 0x09	; 9
+    1944:	94 e0       	ldi	r25, 0x04	; 4
+    1946:	65 e4       	ldi	r22, 0x45	; 69
+    1948:	71 e0       	ldi	r23, 0x01	; 1
+    194a:	0e 94 bd 16 	call	0x2d7a	; 0x2d7a <_ZN5Print5printEPKc>
+    194e:	d4 01       	movw	r26, r8
+    1950:	1e 96       	adiw	r26, 0x0e	; 14
+    1952:	8d 91       	ld	r24, X+
+    1954:	9c 91       	ld	r25, X
+    1956:	1f 97       	sbiw	r26, 0x0f	; 15
+    1958:	0e 94 7a 0f 	call	0x1ef4	; 0x1ef4 <_ZN12PowerMonitor10getCurrentEv>
+    195c:	ab 01       	movw	r20, r22
+    195e:	bc 01       	movw	r22, r24
+    1960:	89 e0       	ldi	r24, 0x09	; 9
+    1962:	94 e0       	ldi	r25, 0x04	; 4
+    1964:	2a e0       	ldi	r18, 0x0A	; 10
+    1966:	30 e0       	ldi	r19, 0x00	; 0
+    1968:	0e 94 75 18 	call	0x30ea	; 0x30ea <_ZN5Print5printEdi>
+    196c:	89 e0       	ldi	r24, 0x09	; 9
+    196e:	94 e0       	ldi	r25, 0x04	; 4
+    1970:	6e e4       	ldi	r22, 0x4E	; 78
+    1972:	71 e0       	ldi	r23, 0x01	; 1
+    1974:	91 cf       	rjmp	.-222    	; 0x1898 <_ZN10Controller14processCommandEv+0x488>
     1976:	89 e0       	ldi	r24, 0x09	; 9
     1978:	94 e0       	ldi	r25, 0x04	; 4
     197a:	66 e5       	ldi	r22, 0x56	; 86

@@ -61,23 +61,9 @@ void Controller::processCommand() {
 		*m_lSet = ((msg[0] << 8) | msg[1]) * 0.1; // mm/s -> cm/s
 		*m_rSet = ((msg[2] << 8) | msg[3]) * 0.1; // mm/s -> cm/s
 		newSpd = true;
-	} else if (strstr(m_buf, "gSEN") != NULL) {
-		printInfo();
-	} else if (strstr(m_buf, "gCNT") != NULL) {
-		Serial.print("<");
-		Serial.print((byte) (*m_lEnc >> 24), BYTE);
-		Serial.print((byte) (*m_lEnc >> 16), BYTE);
-		Serial.print((byte) (*m_lEnc >> 8), BYTE);
-		Serial.print((byte) (*m_lEnc), BYTE);
-
-		Serial.print((byte) (*m_rEnc >> 24), BYTE);
-		Serial.print((byte) (*m_rEnc >> 16), BYTE);
-		Serial.print((byte) (*m_rEnc >> 8), BYTE);
-		Serial.print((byte) (*m_rEnc), BYTE);
-		Serial.print(">");
 	} else if (strstr(m_buf, "gENC") != NULL) {
-		int16_t leftSpeed_mm = (int16_t) (*m_lMeas * 10); // cm to mm & truncate
-		int16_t rightSpeed_mm = (int16_t) (*m_rMeas * 10); // cm to mm & truncate
+		int16_t leftSpeed_mm = (int16_t)(*m_lMeas * 10); // cm to mm & truncate
+		int16_t rightSpeed_mm = (int16_t)(*m_rMeas * 10); // cm to mm & truncate
 		Serial.print("<");
 		Serial.print(highByte(leftSpeed_mm), BYTE); // print high byte
 		Serial.print(lowByte(leftSpeed_mm), BYTE); // print low byte
@@ -85,8 +71,8 @@ void Controller::processCommand() {
 		Serial.print(lowByte(rightSpeed_mm), BYTE); // print low byte
 		Serial.print(">");
 	} else if (strstr(m_buf, "gGYR") != NULL) {
-		int16_t yawRate = (int16_t) (*m_yawRate * 100);
-		int16_t yawVal = (int16_t) (*m_yawVal * 100);
+		int16_t yawRate = (int16_t)(*m_yawRate * 100);
+		int16_t yawVal = (int16_t)(*m_yawVal * 100);
 		Serial.print("<");
 		Serial.print(highByte(yawRate), BYTE);
 		Serial.print(lowByte(yawRate), BYTE);
@@ -94,8 +80,8 @@ void Controller::processCommand() {
 		Serial.print(lowByte(yawVal), BYTE);
 		Serial.print(">");
 	} else if (strstr(m_buf, "gBTY") != NULL) {
-		int16_t batVal = (int16_t) ((m_batt->getVoltage()) * 100);
-		int16_t curVal = (int16_t) ((m_batt->getCurrent()) * 100);
+		int16_t batVal = (int16_t)((m_batt->getVoltage()) * 100);
+		int16_t curVal = (int16_t)((m_batt->getCurrent()) * 100);
 		Serial.print("<");
 		Serial.print(highByte(batVal), BYTE);
 		Serial.print(lowByte(batVal), BYTE);
@@ -117,6 +103,20 @@ void Controller::processCommand() {
 		msg[1] = constrain(msg[1], 0, 180);
 		m_pan->write(msg[0]);
 		m_tilt->write(msg[1]);
+	} else if (strstr(m_buf, "gSEN") != NULL) {
+		printInfo();
+	} else if (strstr(m_buf, "gCNT") != NULL) {
+		Serial.print("<");
+		Serial.print((byte)(*m_lEnc >> 24), BYTE);
+		Serial.print((byte)(*m_lEnc >> 16), BYTE);
+		Serial.print((byte)(*m_lEnc >> 8), BYTE);
+		Serial.print((byte)(*m_lEnc), BYTE);
+
+		Serial.print((byte)(*m_rEnc >> 24), BYTE);
+		Serial.print((byte)(*m_rEnc >> 16), BYTE);
+		Serial.print((byte)(*m_rEnc >> 8), BYTE);
+		Serial.print((byte)(*m_rEnc), BYTE);
+		Serial.print(">");
 	} else if (strstr(m_buf, "gLSP") != NULL) {
 		Serial.println(*m_lSet, DEC);
 	} else if (strstr(m_buf, "gRSP") != NULL) {
@@ -139,12 +139,12 @@ void Controller::processCommand() {
 
 void Controller::printInfo() {
 	Serial.print("<");
-	int16_t leftSpeed_mm = (int16_t) (*m_lMeas * 10); // cm to mm & truncate
-	int16_t rightSpeed_mm = (int16_t) (*m_rMeas * 10); // cm to mm & truncate
-	int16_t batVal = (int16_t) ((m_batt->getVoltage()) * 100);
-	int16_t curVal = (int16_t) ((m_batt->getCurrent()) * 100);
-	int16_t leftSet_mm = (int16_t) (*m_lSet * 10);
-	int16_t rightSet_mm = (int16_t) (*m_rSet * 10);
+	int16_t leftSpeed_mm = (int16_t)(*m_lMeas * 10); // cm to mm & truncate
+	int16_t rightSpeed_mm = (int16_t)(*m_rMeas * 10); // cm to mm & truncate
+	int16_t batVal = (int16_t)((m_batt->getVoltage()) * 100);
+	int16_t curVal = (int16_t)((m_batt->getCurrent()) * 100);
+	int16_t leftSet_mm = (int16_t)(*m_lSet * 10);
+	int16_t rightSet_mm = (int16_t)(*m_rSet * 10);
 	Serial.print(highByte(leftSpeed_mm), BYTE); // print high byte
 	Serial.print(lowByte(leftSpeed_mm), BYTE); // print low byte
 	Serial.print(highByte(rightSpeed_mm), BYTE); // print high byte
