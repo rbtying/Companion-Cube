@@ -27,7 +27,6 @@ public:
 	void printInfo();
 
 	bool comm;
-	bool newSpd;
 
 private:
 	double *m_lSet, *m_rSet, *m_lMeas, *m_rMeas, *m_yawRate, *m_yawVal;

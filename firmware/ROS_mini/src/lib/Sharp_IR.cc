@@ -24,7 +24,7 @@ float Sharp_IR::get_dist() {
 		return 5 * 2769 / 2 / value/** pow(value, -.9988)*/; //I had to multiply by 5, different sensor
 		break;
 	case LR: //long range, aka GP2Y0A02YK (20-150cm)
-		return 11441 * pow(value, -.9792);
+		return 14251 * pow(value, -1.17);
 		break;
 	}
 	return 0;

@@ -141,12 +141,16 @@ int rover::interface::getSensorPackets(int timeout) {
 	try { m_port->write(getServoCmd, 6); } catch (cereal::Exception& e) {return (4); }
 	try { if ( !(m_port->readBetween(&servoPacket, '<', '>', timeout)) ) {return (4); }} catch (cereal::Exception& e) { return (4); }
 
-	if (speedPacket.length() == 6) {
+	if (speedPacket.length() == 7) {
 		ros::Time current_time = ros::Time::now();
 		double dt = (current_time - m_lastSensorUpdateTime).toSec();
-
-		m_velocity_left = ((speedPacket[1] << 8 | speedPacket[2]) / 1000.0);
-		m_velocity_right = ((speedPacket[3] << 8 | speedPacket[4]) / 1000.0);
+		
+		if (speedPacket[5] == (speedPacket[1] + speedPacket[2] + speedPacket[3] + speedPacket[4]) & 0x7f) {
+			m_velocity_left = ((speedPacket[1] << 8 | speedPacket[2]) / 1000.0);
+			m_velocity_right = ((speedPacket[3] << 8 | speedPacket[4]) / 1000.0);
+		} else {
+			ROS_ERROR("Encoder packet checksum failed");
+		}
 		// ROS_INFO("Encoders: Left: %f m/s, Right: %f m/s", (m_velocity_left), (m_velocity_right));
 
 		this->calculateOdometry(dt);
@@ -155,26 +159,37 @@ int rover::interface::getSensorPackets(int timeout) {
 		ROS_ERROR("Encoder packet corrupted");
 	}
 
-	if (gyroPacket.length() == 6) {
-		m_gyro_yawrate = ((gyroPacket[1] << 8 | gyroPacket[2]) / 100.0);
-		m_gyro_yaw = ((gyroPacket[3] << 8 | gyroPacket[4]) / 100.0) - m_gyro_offset;
+	if (gyroPacket.length() == 7) {
+		if (gyroPacket[5] == (gyroPacket[1] + gyroPacket[2] + gyroPacket[3] + gyroPacket[4]) & 0x7f) {
+			m_gyro_yawrate = ((gyroPacket[1] << 8 | gyroPacket[2]) / 100.0);
+			m_gyro_yaw = ((gyroPacket[3] << 8 | gyroPacket[4]) / 100.0) - m_gyro_offset;
+		} else {
+			ROS_ERROR("Gyro packet checksum failed");
+		}
 		// ROS_INFO("Yaw Gyro: Angle: %f rad, Rate: %f rad/s", m_gyro_yaw, m_gyro_yawrate);
 	} else {
 		ROS_ERROR("Gyro packet corrupted");
 	}
 
-	if (battPacket.length() == 6) {
-		m_battery_voltage = ((battPacket[1] << 8 | battPacket[2]) / 100.0);
-		m_battery_current = ((battPacket[3] << 8 | battPacket[4]) / 100.0);
+	if (battPacket.length() == 7) {
+		if (battPacket[5] == (battPacket[1] + battPacket[2] + battPacket[3] + battPacket[4]) & 0x7f) {
+			m_battery_voltage = ((battPacket[1] << 8 | battPacket[2]) / 100.0);
+			m_battery_current = ((battPacket[3] << 8 | battPacket[4]) / 100.0);
+		} else {
+			ROS_ERORR("Battery packet checksum failed");
+		}
 		// ROS_INFO("Battery: %f volts, %f amps", (m_battery_voltage), (m_battery_current));
 	} else {
 		ROS_ERROR("Battery packet corrupted");
 	}
 
-	if (servoPacket.length() == 4) {
-		m_pan_angle = ((unsigned char) servoPacket[1]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
-		m_tilt_angle = ((unsigned char) servoPacket[2]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
-
+	if (servoPacket.length() == 5) {
+		if (servoPacket[3] == (servoPacket[1] + servoPacket[2]) & 0x7f) {
+			m_pan_angle = ((unsigned char) servoPacket[1]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+			m_tilt_angle = ((unsigned char) servoPacket[2]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+		} else {
+			ROS_ERROR("Servo packet checksum failed");
+		}
 		// ROS_INFO("Servos: Pan: %.02f rad, Tilt: %.02f rad", m_pan_angle, m_tilt_angle);
 	} else {
 		ROS_ERROR("Servo packet corrupted");
