@@ -145,7 +145,7 @@ int rover::interface::getSensorPackets(int timeout) {
 		ros::Time current_time = ros::Time::now();
 		double dt = (current_time - m_lastSensorUpdateTime).toSec();
 		
-		if (speedPacket[5] == (speedPacket[1] + speedPacket[2] + speedPacket[3] + speedPacket[4]) & 0x7f) {
+		if (speedPacket[5] == ((speedPacket[1] + speedPacket[2] + speedPacket[3] + speedPacket[4]) & 0x7f)) {
 			m_velocity_left = ((speedPacket[1] << 8 | speedPacket[2]) / 1000.0);
 			m_velocity_right = ((speedPacket[3] << 8 | speedPacket[4]) / 1000.0);
 		} else {
@@ -160,7 +160,7 @@ int rover::interface::getSensorPackets(int timeout) {
 	}
 
 	if (gyroPacket.length() == 7) {
-		if (gyroPacket[5] == (gyroPacket[1] + gyroPacket[2] + gyroPacket[3] + gyroPacket[4]) & 0x7f) {
+		if (gyroPacket[5] == ((gyroPacket[1] + gyroPacket[2] + gyroPacket[3] + gyroPacket[4]) & 0x7f)) {
 			m_gyro_yawrate = ((gyroPacket[1] << 8 | gyroPacket[2]) / 100.0);
 			m_gyro_yaw = ((gyroPacket[3] << 8 | gyroPacket[4]) / 100.0) - m_gyro_offset;
 		} else {
@@ -172,11 +172,11 @@ int rover::interface::getSensorPackets(int timeout) {
 	}
 
 	if (battPacket.length() == 7) {
-		if (battPacket[5] == (battPacket[1] + battPacket[2] + battPacket[3] + battPacket[4]) & 0x7f) {
+		if (battPacket[5] == ((battPacket[1] + battPacket[2] + battPacket[3] + battPacket[4]) & 0x7f)) {
 			m_battery_voltage = ((battPacket[1] << 8 | battPacket[2]) / 100.0);
 			m_battery_current = ((battPacket[3] << 8 | battPacket[4]) / 100.0);
 		} else {
-			ROS_ERORR("Battery packet checksum failed");
+			ROS_ERROR("Battery packet checksum failed");
 		}
 		// ROS_INFO("Battery: %f volts, %f amps", (m_battery_voltage), (m_battery_current));
 	} else {
@@ -184,7 +184,7 @@ int rover::interface::getSensorPackets(int timeout) {
 	}
 
 	if (servoPacket.length() == 5) {
-		if (servoPacket[3] == (servoPacket[1] + servoPacket[2]) & 0x7f) {
+		if (servoPacket[3] == ((servoPacket[1] + servoPacket[2]) & 0x7f)) {
 			m_pan_angle = ((unsigned char) servoPacket[1]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
 			m_tilt_angle = ((unsigned char) servoPacket[2]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
 		} else {
