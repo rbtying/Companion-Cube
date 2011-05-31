@@ -3,5 +3,7 @@
   (:export
    "<BATTERY>"
    "BATTERY"
+   "<ENCODER>"
+   "ENCODER"
   ))
 

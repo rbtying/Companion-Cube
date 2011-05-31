@@ -1,8 +1,11 @@
 # Hashes of file build rules.
 60dd9478aec20d325ab584a1865a0563 ../msg_gen/cpp/include/rover/Battery.h
+f1a00c7962c06a8a9e2cd5d1d459143a ../msg_gen/cpp/include/rover/Encoder.h
 c52f0a28c4e29730016da8c79ceffd11 ../msg_gen/lisp/Battery.lisp
+4af8bb2a6d017c839f6bfbd166ca1311 ../msg_gen/lisp/Encoder.lisp
 62e57a591dd50cb71ce609857a968d34 ../src/rover/msg/_Battery.py
-bc371f50bebec67814ab0a986dcad8a0 ../src/rover/msg/__init__.py
+87ddac89c0a3940c72daf03264156d93 ../src/rover/msg/_Encoder.py
+7a77dba5e204d68f6e7c0b150dd6fd76 ../src/rover/msg/__init__.py
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genaction_msgs
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genmsg_cpp
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genmsg_lisp

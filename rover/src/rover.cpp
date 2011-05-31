@@ -6,6 +6,7 @@
 #include <sensor_msgs/JointState.h>		// joints
 #include <std_msgs/Float64.h>			// floats
 #include <rover/Battery.h>			// battery
+#include <rover/Encoder.h>			// encoders
 #include "interface.h"
 
 #include <string>
@@ -61,6 +62,7 @@ int main(int argc, char** argv) {
 
 	// publishers
 	ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry> ("/odom", 50);
+	ros::Publisher enc_pub = n.advertise<rover::Encoder> ("/encoders", 50);
 	ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu> ("/imu", 50);
 	ros::Publisher batt_pub = n.advertise<rover::Battery> ("/battery", 50);
 	ros::Publisher joint_pub = n.advertise<sensor_msgs::JointState> ("/joint_states", 1);
@@ -187,6 +189,16 @@ int main(int argc, char** argv) {
 		
 		// send the message
 		batt_pub.publish(batt_msg);
+
+		// prepare an encoder message
+		rover::Encoder enc_msg;
+		enc_msg.header.stamp = current_time;
+		enc_msg.header.frame_id = "base_footprint";
+		enc_msg.left = bot->m_velocity_left;
+		enc_msg.right = bot->m_velocity_right;
+
+		// send the message
+		enc_pub.publish(enc_msg);
 
 		// prepare a joint state message
 		joint_state.header.stamp = current_time;

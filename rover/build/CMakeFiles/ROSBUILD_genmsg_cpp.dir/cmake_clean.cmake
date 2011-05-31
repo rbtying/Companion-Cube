@@ -4,6 +4,7 @@ FILE(REMOVE_RECURSE
   "../msg_gen"
   "CMakeFiles/ROSBUILD_genmsg_cpp"
   "../msg_gen/cpp/include/rover/Battery.h"
+  "../msg_gen/cpp/include/rover/Encoder.h"
 )
 
 # Per-language clean rules from dependency scanning.
