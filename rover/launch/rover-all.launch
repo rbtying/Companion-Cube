@@ -2,6 +2,9 @@
   <!-- drive train, odometry, and IMU -->
   <include file="$(find rover)/launch/rover-drive.launch" />
 
+  <!-- gps client -->
+  <node name="gpsd_client" pkg="gpsd_client" type="gpsd_client" />
+
   <!-- kinect and laserscan -->
   <include file="$(find rover)/launch/kinect_fakelaser.launch" />
 
@@ -18,5 +21,6 @@
     <param name="deadzone" value="0.25" />
   </node>
 
+  <!-- ps3 teleoperation -->
   <node pkg="rover" type="rover_teleop_joy" name="teleop" />
 </launch>
