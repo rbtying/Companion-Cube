@@ -59,6 +59,7 @@ CMakeFiles/rover_node.dir/src/rover.o
  ../include/interface.h
  ../include/util.h
  ../msg_gen/cpp/include/rover/Battery.h
+ ../msg_gen/cpp/include/rover/Encoder.h
  /home/rbtying/robot/cereal_port/include/cereal_port/CerealPort.h
  /home/rbtying/robot/rover/src/rover.cpp
  /opt/ros/diamondback/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include/geometry_msgs/Point.h

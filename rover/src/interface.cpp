@@ -228,7 +228,7 @@ int rover::interface::getSensorPackets(int timeout) {
 void rover::interface::calculateOdometry(double dt) {
 	double linSpeed = (m_velocity_left + m_velocity_right) / 2; // m/s
 	this->m_velocity_yaw
-			= normalize((m_velocity_left - m_velocity_right) / (m_roverAxleLength * 2)); // rad/s
+			= normalize((m_velocity_right - m_velocity_left) / (m_roverAxleLength * 2)); // rad/s
 
 	this->m_odometry_yaw
 			= normalize(this->m_odometry_yaw + this->m_velocity_yaw * dt); // rad

@@ -6,6 +6,9 @@ FILE(REMOVE_RECURSE
   "../msg_gen/lisp/Battery.lisp"
   "../msg_gen/lisp/_package.lisp"
   "../msg_gen/lisp/_package_Battery.lisp"
+  "../msg_gen/lisp/Encoder.lisp"
+  "../msg_gen/lisp/_package.lisp"
+  "../msg_gen/lisp/_package_Encoder.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

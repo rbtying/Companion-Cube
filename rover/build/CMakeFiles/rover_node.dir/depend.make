@@ -58,6 +58,7 @@ CMakeFiles/rover_node.dir/src/interface.o: /opt/ros/diamondback/stacks/ros_comm/
 CMakeFiles/rover_node.dir/src/rover.o: ../include/interface.h
 CMakeFiles/rover_node.dir/src/rover.o: ../include/util.h
 CMakeFiles/rover_node.dir/src/rover.o: ../msg_gen/cpp/include/rover/Battery.h
+CMakeFiles/rover_node.dir/src/rover.o: ../msg_gen/cpp/include/rover/Encoder.h
 CMakeFiles/rover_node.dir/src/rover.o: /home/rbtying/robot/cereal_port/include/cereal_port/CerealPort.h
 CMakeFiles/rover_node.dir/src/rover.o: ../src/rover.cpp
 CMakeFiles/rover_node.dir/src/rover.o: /opt/ros/diamondback/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include/geometry_msgs/Point.h

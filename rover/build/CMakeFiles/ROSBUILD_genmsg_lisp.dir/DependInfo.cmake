@@ -7,6 +7,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/rbtying/robot/rover/msg_gen/lisp/_package.lisp" "/home/rbtying/robot/rover/msg_gen/lisp/Battery.lisp"
   "/home/rbtying/robot/rover/msg_gen/lisp/_package_Battery.lisp" "/home/rbtying/robot/rover/msg_gen/lisp/Battery.lisp"
+  "/home/rbtying/robot/rover/msg_gen/lisp/_package_Encoder.lisp" "/home/rbtying/robot/rover/msg_gen/lisp/Encoder.lisp"
   )
 
 
