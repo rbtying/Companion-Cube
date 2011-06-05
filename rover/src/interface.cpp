@@ -20,7 +20,11 @@ rover::interface::interface(const char * new_serial_port) {
 
 	m_roverAxleLength = ROVER_DEFAULT_AXLE_LENGTH;
 
-	m_port->startReadLineStream(rover::interface::processPacket);
+	boost::function<void(std::string*)> callback;
+
+	callback = boost::bind(&rover::interface::processPacket, this, _1);
+
+	m_port->startReadLineStream(callback);
 }
 
 rover::interface::~interface() {

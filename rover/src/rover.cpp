@@ -92,7 +92,7 @@ int main(int argc, char** argv) {
 
 	ros::Time current_time, last_time;
 
-	long packetNum = 0;
+	// long packetNum = 0;
 
 	ros::Rate r(20.0);
 
@@ -110,7 +110,7 @@ int main(int argc, char** argv) {
 		// }
 
 		if (bot->newPacket) {
-			newPacket = false;
+			bot->newPacket = false;
 			// generate quaternion from odometry yaw
 			geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(
 					bot->m_odometry_yaw);
