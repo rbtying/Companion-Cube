@@ -21,10 +21,9 @@ rover::interface::interface(const char * new_serial_port) {
 	m_roverAxleLength = ROVER_DEFAULT_AXLE_LENGTH;
 
 	boost::function<void(std::string*)> callback;
-
 	callback = boost::bind(&rover::interface::processPacket, this, _1);
-
-	m_port->startReadLineStream(callback);
+//	m_port->startReadLineStream(callback);
+	m_port->startReadBetweenStream(callback, '<', '>');
 }
 
 rover::interface::~interface() {
@@ -129,24 +128,43 @@ int rover::interface::setServos(double panAngle, double tiltAngle) {
 }
 
 void rover::interface::processPacket(std::string * packet) {
-	char data[packet->size() + 1];
-	strcpy(data, packet->c_str());
+	uint8_t data[packet->size()];
+	for(uint8_t i = 0; i < packet->size(); i++) {
+		data[i] = static_cast<uint8_t>(packet->at(i));
+	}
 
-	if (packet->size() >= 16) {
+	if (packet->size() == 17) {
 		ros::Time current_time = ros::Time::now();
 		double dt = (current_time - m_lastSensorUpdateTime).toSec();
 
-		m_velocity_left = ((data[0] << 8 | data[1]) / 1000.0);
-		m_velocity_right = ((data[2] << 8 | data[3]) / 1000.0);
+		uint16_t leftSpeed = data[1] << 8  | data[2];
+		uint16_t rightSpeed = data[3] << 8 | data[4];
+		uint16_t yawRate = data[5] << 8 | data[6];
+		uint16_t yaw = data[7] << 8 | data[9];
+
+		m_velocity_left = leftSpeed / 10000.0;
+		m_velocity_right = rightSpeed / 10000.0;
+
+		if (!(data[9] & (1 << 0)))
+			m_velocity_left *= -1;
+		if (!(data[9] & (1 << 1)))
+			m_velocity_right *= -1;
 		
-		m_gyro_yawrate = ((data[4] << 8 | data[5]) / 100.0);
-		m_gyro_yaw = ((data[6] << 8 | data[7]) / 100.0) - m_gyro_offset;
+		m_gyro_yawrate = yawRate / 1000.0;
+		m_gyro_yaw = yaw / 1000.0;
 
-		m_battery_voltage = ((data[8] << 8 | data[9]) / 100.0);
-		m_battery_current = ((data[10] << 8 | data[11]) / 100.0);
+		if (!(data[9] & (1 << 2)))
+			m_gyro_yawrate *= -1;
+		if (!(data[9] & (1 << 3)))
+			m_gyro_yaw *= -1;
 
-		m_pan_angle = ((unsigned char) data[12]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
-		m_tilt_angle = ((unsigned char) data[13]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+		m_gyro_yaw -= m_gyro_offset;
+
+		m_battery_voltage = ((data[9] << 8 | data[10]) / 100.0);
+		m_battery_current = ((data[11] << 8 | data[12]) / 100.0);
+
+		m_pan_angle = ((unsigned char) data[13]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+		m_tilt_angle = ((unsigned char) data[14]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
 	
 		this->calculateOdometry(dt);
 		m_lastSensorUpdateTime = current_time;
@@ -157,6 +175,20 @@ void rover::interface::processPacket(std::string * packet) {
 int rover::interface::getSensorPackets(int timeout) {
 	m_port->flush();
 
+	std::string in;
+
+	try {
+		m_port->readBetween(&in, '<', '>', timeout);
+	} catch (cereal::Exception& e) {
+		return 1;
+	} catch (std::length_error& e) {
+		return 2;
+	}
+
+	rover::interface::processPacket(&in);
+
+	return 0;
+/*
 	char getSpeedCmd[6] = { START_CHAR, 'g', 'E', 'N', 'C', END_CHAR };
 	char getBatteryCmd[6] = { START_CHAR, 'g', 'B', 'T', 'Y', END_CHAR };
 	char getGyroCmd[6] = { START_CHAR, 'g', 'G', 'Y', 'R', END_CHAR };
@@ -226,7 +258,7 @@ int rover::interface::getSensorPackets(int timeout) {
 	} else {
 		ROS_ERROR("Servo packet corrupted");
 	}
-	return 0;
+	return 0; */
 }
 
 void rover::interface::calculateOdometry(double dt) {
