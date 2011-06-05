@@ -13,8 +13,8 @@
 #include "libraries/Servo/Servo.h"
 
 #define CMD_BUFFER_SIZE 8
-#define CMD_PACKET_SIZE 16
-#define CMD_PACKET_INTERVAL 50 // 20 Hz
+#define CMD_PACKET_SIZE 17
+#define CMD_PACKET_INTERVAL 100 // 10 Hz
 #define CMD_STARTCHAR ':'
 #define CMD_ENDCHAR '!'
 #define CMD_TIMEOUT 1000
