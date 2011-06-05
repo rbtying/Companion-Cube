@@ -19,6 +19,8 @@ rover::interface::interface(const char * new_serial_port) {
 	m_port = new cereal::CerealPort();
 
 	m_roverAxleLength = ROVER_DEFAULT_AXLE_LENGTH;
+
+	m_port->startReadLineStream(rover::interface::processPacket);
 }
 
 rover::interface::~interface() {
@@ -122,6 +124,32 @@ int rover::interface::setServos(double panAngle, double tiltAngle) {
 	return (0);
 }
 
+void rover::interface::processPacket(std::string * packet) {
+	char data[packet->size() + 1];
+	strcpy(data, packet->c_str());
+
+	if (packet->size() >= 16) {
+		ros::Time current_time = ros::Time::now();
+		double dt = (current_time - m_lastSensorUpdateTime).toSec();
+
+		m_velocity_left = ((data[0] << 8 | data[1]) / 1000.0);
+		m_velocity_right = ((data[2] << 8 | data[3]) / 1000.0);
+		
+		m_gyro_yawrate = ((data[4] << 8 | data[5]) / 100.0);
+		m_gyro_yaw = ((data[6] << 8 | data[7]) / 100.0) - m_gyro_offset;
+
+		m_battery_voltage = ((data[8] << 8 | data[9]) / 100.0);
+		m_battery_current = ((data[10] << 8 | data[11]) / 100.0);
+
+		m_pan_angle = ((unsigned char) data[12]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+		m_tilt_angle = ((unsigned char) data[13]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+	
+		this->calculateOdometry(dt);
+		m_lastSensorUpdateTime = current_time;
+		newPacket = true;
+	}
+}
+
 int rover::interface::getSensorPackets(int timeout) {
 	m_port->flush();
 
@@ -194,41 +222,6 @@ int rover::interface::getSensorPackets(int timeout) {
 	} else {
 		ROS_ERROR("Servo packet corrupted");
 	}
-/*
-	try {
-		m_port->write(cmd, 6);
-	} catch (cereal::Exception& e) {
-		return (-1);
-	}
-	std::string packet;
-	try {
-		if (m_port->readBetween(&packet, '<', '>', timeout)) {
-			if (packet.length() == 14) {
-				ros::Time current_time = ros::Time::now();
-				double dt = (current_time - m_lastSensorUpdateTime).toSec();
-
-				m_velocity_left = ((packet[1] << 8 | packet[2]) / 1000.0);
-				m_velocity_right = ((packet[3] << 8 | packet[4]) / 1000.0);
-
-				m_battery_voltage = (int16_t) (((packet[5] << 8) | packet[6])) / 100.0;
-				m_battery_current = (int16_t) (((packet[7] << 8) | packet[8])) / 100.0;
-
-				double lSet = ((packet[9] << 8 | packet[10]) / 1000.0);
-				double rSet = ((packet[11] << 8 | packet[12]) / 1000.0);
-
-				// ROS_INFO("Setpoints: Left: %f m/s, Right: %f m/s", lSet, rSet);
-				// ROS_INFO("Encoders: Left: %f m/s, Right: %f m/s", (m_velocity_left), (m_velocity_right));
-				// ROS_INFO("Battery: %f volts, %f amps", m_battery_voltage, m_battery_current);
-				this->calculateOdometry(dt);
-
-				m_lastSensorUpdateTime = current_time;
-
-			}
-		}
-	} catch (cereal::Exception& e) {
-		return (-1);
-	}
-*/
 	return 0;
 }
 

@@ -52,12 +52,15 @@ public:
 	double m_pan_angle;
 
 	double m_roverAxleLength;
+
+	bool newPacket;
 private:
 	long m_last_enc_left, m_last_enc_right;
 	ros::Time m_lastSensorUpdateTime;
 	std::string m_port_name;
 	cereal::CerealPort * m_port;
 	void calculateOdometry(double dt);
+	void processPacket(std::string * packet);
 };
 
 }

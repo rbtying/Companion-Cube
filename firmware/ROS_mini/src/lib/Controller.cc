@@ -35,6 +35,9 @@ Controller::Controller(double *lSet, double *rSet, double *lMeas,
  * Update the buffer
  */
 void Controller::update() {
+	if (m_lastPacketSendTime - millis() > CMD_PACKET_INTERVAL) {
+		Controller::sendDataPacket();
+	}
 	while (Serial.available()) {
 		m_lastUpdateTime = millis();
 		char c = Serial.read();
@@ -52,8 +55,6 @@ void Controller::update() {
 	comm = (millis() - m_lastUpdateTime) <= CMD_TIMEOUT;
 }
 void Controller::processCommand() {
-	byte m[11];
-
 	if (strstr(m_buf, "sDRV") != NULL) {
 		byte msg[4];
 		for (uint8_t i = 0; i < 4; i++) {
@@ -65,52 +66,52 @@ void Controller::processCommand() {
 		int16_t leftSpeed_mm = (int16_t) (*m_lMeas * 10); // cm to mm & truncate
 		int16_t rightSpeed_mm = (int16_t) (*m_rMeas * 10); // cm to mm & truncate
 
-		m[0] = '<';
-		m[1] = highByte(leftSpeed_mm);
-		m[2] = lowByte(leftSpeed_mm);
-		m[3] = highByte(rightSpeed_mm);
-		m[4] = lowByte(rightSpeed_mm);
-		m[5] = (m[1] + m[2] + m[3] + m[4]) & 0x7f;
-		m[6] = '>';
+		m_dataPacket[0] = '<';
+		m_dataPacket[1] = highByte(leftSpeed_mm);
+		m_dataPacket[2] = lowByte(leftSpeed_mm);
+		m_dataPacket[3] = highByte(rightSpeed_mm);
+		m_dataPacket[4] = lowByte(rightSpeed_mm);
+		m_dataPacket[5] = (m_dataPacket[1] + m_dataPacket[2] + m_dataPacket[3] + m_dataPacket[4]) & 0x7f;
+		m_dataPacket[6] = '>';
 
-		Serial.write(m, 7);
+		Serial.write(m_dataPacket, 7);
 	} else if (strstr(m_buf, "gGYR") != NULL) {
 		int16_t yawRate = (int16_t) (*m_yawRate * 100);
 		int16_t yawVal = (int16_t) (*m_yawVal * 100);
 
-		m[0] = '<';
-		m[1] = highByte(yawRate);
-		m[2] = lowByte(yawRate);
-		m[3] = highByte(yawVal);
-		m[4] = lowByte(yawVal);
-		m[5] = (m[1] + m[2] + m[3] + m[4]) & 0x7f;
-		m[6] = '>';
+		m_dataPacket[0] = '<';
+		m_dataPacket[1] = highByte(yawRate);
+		m_dataPacket[2] = lowByte(yawRate);
+		m_dataPacket[3] = highByte(yawVal);
+		m_dataPacket[4] = lowByte(yawVal);
+		m_dataPacket[5] = (m_dataPacket[1] + m_dataPacket[2] + m_dataPacket[3] + m_dataPacket[4]) & 0x7f;
+		m_dataPacket[6] = '>';
 
-		Serial.write(m, 7);
+		Serial.write(m_dataPacket, 7);
 	} else if (strstr(m_buf, "gBTY") != NULL) {
 		int16_t batVal = (int16_t) ((m_batt->getVoltage()) * 100);
 		int16_t curVal = (int16_t) ((m_batt->getCurrent()) * 100);
 
-		m[0] = '<';
-		m[1] = highByte(batVal);
-		m[2] = lowByte(batVal);
-		m[3] = highByte(curVal);
-		m[4] = lowByte(curVal);
-		m[5] = (m[1] + m[2] + m[3] + m[4]) & 0x7f;
-		m[6] = '>';
+		m_dataPacket[0] = '<';
+		m_dataPacket[1] = highByte(batVal);
+		m_dataPacket[2] = lowByte(batVal);
+		m_dataPacket[3] = highByte(curVal);
+		m_dataPacket[4] = lowByte(curVal);
+		m_dataPacket[5] = (m_dataPacket[1] + m_dataPacket[2] + m_dataPacket[3] + m_dataPacket[4]) & 0x7f;
+		m_dataPacket[6] = '>';
 
-		Serial.write(m, 7);
+		Serial.write(m_dataPacket, 7);
 	} else if (strstr(m_buf, "gSER") != NULL) {
 		uint8_t panAngle = (uint8_t) m_pan->read();
 		uint8_t tiltAngle = (uint8_t) m_tilt->read();
 
-		m[0] = '<';
-		m[1] = panAngle & 0xFF;
-		m[2] = tiltAngle & 0xFF;
-		m[3] = (m[1] + m[2]) & 0x7f;
-		m[4] = '>';
+		m_dataPacket[0] = '<';
+		m_dataPacket[1] = panAngle & 0xFF;
+		m_dataPacket[2] = tiltAngle & 0xFF;
+		m_dataPacket[3] = (m_dataPacket[1] + m_dataPacket[2]) & 0x7f;
+		m_dataPacket[4] = '>';
 
-		Serial.write(m, 5);
+		Serial.write(m_dataPacket, 5);
 	} else if (strstr(m_buf, "sSER") != NULL) {
 		byte msg[2];
 		msg[0] = nextByte(100);
@@ -120,18 +121,18 @@ void Controller::processCommand() {
 		m_pan->write(msg[0]);
 		m_tilt->write(msg[1]);
 	} else if (strstr(m_buf, "gCNT") != NULL) {
-		m[0] = '<';
-		m[1] = *m_lEnc >> 24;
-		m[2] = *m_lEnc >> 16;
-		m[3] = *m_lEnc >> 8;
-		m[4] = *m_lEnc & 0xFF;
-		m[5] = *m_rEnc >> 24;
-		m[6] = *m_rEnc >> 16;
-		m[7] = *m_rEnc >> 8;
-		m[8] = *m_rEnc & 0xFF;
-		m[9] = '>';
+		m_dataPacket[0] = '<';
+		m_dataPacket[1] = *m_lEnc >> 24;
+		m_dataPacket[2] = *m_lEnc >> 16;
+		m_dataPacket[3] = *m_lEnc >> 8;
+		m_dataPacket[4] = *m_lEnc & 0xFF;
+		m_dataPacket[5] = *m_rEnc >> 24;
+		m_dataPacket[6] = *m_rEnc >> 16;
+		m_dataPacket[7] = *m_rEnc >> 8;
+		m_dataPacket[8] = *m_rEnc & 0xFF;
+		m_dataPacket[9] = '>';
 
-		Serial.write(m, 10);
+		Serial.write(m_dataPacket, 10);
 	} else if (strstr(m_buf, "gLSP") != NULL) {
 		Serial.println(*m_lSet, DEC);
 	} else if (strstr(m_buf, "gRSP") != NULL) {
@@ -150,6 +151,39 @@ void Controller::processCommand() {
 	}
 
 	Controller::flush();
+}
+
+/**
+ * Send a full data packet
+ */
+void Controller::sendDataPacket() {
+	int16_t leftSpeed_mm = (int16_t) (*m_lMeas * 10); // cm to mm & truncate
+	int16_t rightSpeed_mm = (int16_t) (*m_rMeas * 10); // cm to mm & truncate
+	int16_t batVal = (int16_t) ((m_batt->getVoltage()) * 100);
+	int16_t curVal = (int16_t) ((m_batt->getCurrent()) * 100);
+	int16_t yawRate = (int16_t) (*m_yawRate * 100);
+	int16_t yawVal = (int16_t) (*m_yawVal * 100);
+	uint8_t panAngle = (uint8_t) m_pan->read();
+	uint8_t tiltAngle = (uint8_t) m_tilt->read();
+
+	m_dataPacket[0] = highByte(leftSpeed_mm);
+	m_dataPacket[1] = lowByte(leftSpeed_mm);
+	m_dataPacket[2] = highByte(rightSpeed_mm);
+	m_dataPacket[3] = lowByte(rightSpeed_mm);
+	m_dataPacket[4] = highByte(yawRate);
+	m_dataPacket[5] = lowByte(yawRate);
+	m_dataPacket[6] = highByte(yawVal);
+	m_dataPacket[7] = lowByte(yawVal);
+	m_dataPacket[8] = highByte(batVal);
+	m_dataPacket[9] = lowByte(batVal);
+	m_dataPacket[10] = highByte(curVal);
+	m_dataPacket[11] = lowByte(curVal);
+	m_dataPacket[12] = panAngle & 0xFF;
+	m_dataPacket[13] = tiltAngle & 0xFF;
+	m_dataPacket[14] = '\r';
+	m_dataPacket[15] = '\n';
+
+	Serial.write(m_dataPacket, CMD_PACKET_SIZE);
 }
 
 /**
