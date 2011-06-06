@@ -160,11 +160,11 @@ void rover::interface::processPacket(std::string * packet) {
 
 		m_gyro_yaw -= m_gyro_offset;
 
-		m_battery_voltage = ((data[9] << 8 | data[10]) / 100.0);
-		m_battery_current = ((data[11] << 8 | data[12]) / 100.0);
+		m_battery_voltage = ((data[10] << 8 | data[11]) / 100.0);
+		m_battery_current = ((data[12] << 8 | data[13]) / 100.0);
 
-		m_pan_angle = ((unsigned char) data[13]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
-		m_tilt_angle = ((unsigned char) data[14]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+		m_pan_angle = data[14] * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+		m_tilt_angle = data[15] * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
 	
 		this->calculateOdometry(dt);
 		m_lastSensorUpdateTime = current_time;
