@@ -14,12 +14,12 @@
 <coolItem id="net.sourceforge.vrapper.toolbar" itemType="typeToolBarContribution" x="40" y="38"/>
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="156" y="38"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="82" y="38"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="38"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="38"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="96" y="38"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="162" y="38"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="38"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -29,31 +29,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" partName="pins.h" path="/home/rbtying/robot/firmware/ROS_mini/src/pins.h" title="pins.h" tooltip="ROS_mini/src/pins.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/pins.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/Main.cc" title="Main.cc" tooltip="ROS_mini/src/Main.cc" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1087" selectionTopPixel="629"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" partName="Controller.h" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/Controller.h" title="Controller.h" tooltip="ROS_mini/src/lib/Controller.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/lib/Controller.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="260" selectionTopPixel="85"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" partName="Controller.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/Controller.cc" title="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/lib/Controller.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4917" selectionTopPixel="2674"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
@@ -69,9 +48,7 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Targets"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors (9 items)"/>
-<category IMemento.internal.id="Warnings"/>
+<expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -89,7 +66,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -304,137 +281,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/pins.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/Main.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
-</editors>
-<item historyLabel="pins.h" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2542" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="1087" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="363" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="6330" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="363" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="974" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="954" y="22"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5883" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="954" y="22"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5883" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="4727" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5147" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="1059" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="1087" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5878" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="1062" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="685" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="837" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="685" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="720" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="837" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="720" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="1044" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="442" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="1" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="1062" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="1" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5229" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5235" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5825" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5831" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5000" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5874" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="260" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="1087" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5874" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position/>
-</item>
-<item active="true" historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="5583" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -451,17 +298,23 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc">
-<persistable path="/ROS_mini/src/lib/Controller.cc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="Blinkenlights/src/Main.cc">
+<persistable path="/Blinkenlights/src/Main.cc"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" tooltip="ROS_mini/src/lib/Controller.h">
-<persistable path="/ROS_mini/src/lib/Controller.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" tooltip="Blinkenlights/src/pins.h">
+<persistable path="/Blinkenlights/src/pins.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mini/src/Main.cc">
 <persistable path="/ROS_mini/src/Main.cc"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" tooltip="ROS_mini/src/pins.h">
 <persistable path="/ROS_mini/src/pins.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc">
+<persistable path="/ROS_mini/src/lib/Controller.cc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" tooltip="ROS_mini/src/lib/Controller.h">
+<persistable path="/ROS_mini/src/lib/Controller.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Sharp_IR.cc" tooltip="ROS_mini/src/lib/Sharp_IR.cc">
 <persistable path="/ROS_mini/src/lib/Sharp_IR.cc"/>
