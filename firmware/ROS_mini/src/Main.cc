@@ -88,7 +88,7 @@ int main() {
 	ctrl.pan.write(90);
 	ctrl.pan.attach(PANSERVO);
 	ctrl.tilt.write(90);
-	ctrl.pan.attach(TILTSERVO);
+	ctrl.tilt.attach(TILTSERVO);
 
 	// motors
 	setSpeeds(0, 0);
