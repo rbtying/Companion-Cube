@@ -14,7 +14,7 @@ Controller::Controller(control_data * ctrl) {
 
 	m_bufPtr = 0;
 	comm = false;
-	m_poll = false;
+	m_poll = true;
 	m_lastUpdateTime = 0;
 }
 
