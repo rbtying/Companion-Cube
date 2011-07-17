@@ -6,6 +6,7 @@
  */
 #include "WProgram.h"
 #include "pins.h"
+#include "lib/control_struct.h"
 #include "lib/Controller.h"
 #include "lib/PowerMonitor.h"
 #include "lib/Gyro.h"
@@ -16,11 +17,11 @@
 // Control
 #define TIME_INTERVAL 100
 #define LED_INTERVAL 500
+
 unsigned long nexTime = 0, cTime = 0, ledTime = 0;
 
-double lSet, rSet, lMeasSpeed, rMeasSpeed;
-double lacc, racc, lprev, rprev, lout, rout;
-double lPID[3] = { .3, .05, 0 }, rPID[3] = { .3, 0.05, 0 }; // PID
+// control data
+control_data ctrl;
 
 volatile long leftEncCount, rightEncCount, pleftEncCount, prightEncCount;
 volatile bool leftEncBSet, rightEncBSet;
@@ -32,9 +33,6 @@ int16_t lspeed, rspeed;
 // adc mux:
 CD74HC4067 mux(MUX_1, MUX_2, MUX_3, MUX_4, MUX_ADC);
 
-// Battery
-PowerMonitor batt(VOLTAGE_SENS, CURRENT_SENS);
-
 // Yaw Gyroscope
 Gyro yawGyro(&mux, YAW_GYRO, YAW_REF, LPR510_CONVERSION_FACTOR);
 double yawVal = 0, yawRate = 0;
@@ -45,9 +43,7 @@ Servo panServo, tiltServo;
 // Motors
 Servo lMot, rMot;
 
-Controller cmd(&lSet, &rSet, &lMeasSpeed, &rMeasSpeed, (long*) (&leftEncCount),
-		(long*) (&rightEncCount), &batt, &yawRate, &yawVal, &panServo,
-		&tiltServo);
+Controller cmd(&ctrl);
 
 /**
  * Sets speeds, +1000 to -1000
@@ -88,16 +84,28 @@ int main() {
 
 	Serial.begin(115200);
 
+	// battery
+	ctrl.batt.set(VOLTAGE_SENS, CURRENT_SENS);
+
 	// servos
-	panServo.write(90);
-	tiltServo.write(90);
-	panServo.attach(PANSERVO);
-	tiltServo.attach(TILTSERVO);
+	ctrl.pan.write(90);
+	ctrl.pan.attach(PANSERVO);
+	ctrl.tilt.write(90);
+	ctrl.pan.attach(TILTSERVO);
 
 	// motors
 	setSpeeds(0, 0);
 	lMot.attach(LMOT);
 	rMot.attach(RMOT);
+
+	// PID
+	ctrl.leftPID.proportional = 0.3;
+	ctrl.leftPID.integral = 0.05;
+	ctrl.leftPID.derivative = 0;
+
+	ctrl.rightPID.proportional = 0.3;
+	ctrl.rightPID.integral = 0.05;
+	ctrl.rightPID.derivative = 0;
 
 	// setup encoders
 	uint8_t enc_pins[4] = { RENC_A, RENC_B, LENC_A, LENC_B };
@@ -131,41 +139,48 @@ int main() {
 			float dt = (TIME_INTERVAL + (cTime - nexTime)) * 0.001;
 
 			// update gyro
-			yawRate = yawGyro.getValue();
-			yawVal += yawRate * dt;
+			ctrl.yaw.rate = yawGyro.getValue();
+			ctrl.yaw.val += yawRate * dt;
 
 			// correct for zero drift
-			if (abs(yawRate) <= 0.001 && lSet == 0 && rSet == 0) {// bot is not moving
+			if (abs(ctrl.yaw.rate) <= 0.001 && ctrl.leftPID.set == 0
+					&& ctrl.rightPID.set == 0) {// bot is not moving
 				yawGyro.calibrate(1000, true); // update calibration
 			}
 
 			// PID processing
-			double lerr, rerr;
-			lerr = lSet - lMeasSpeed;
-			rerr = rSet - rMeasSpeed;
-
-			lMeasSpeed = (leftEncCount - pleftEncCount) * QPPS_TO_CMPS_LEFT
-					/ dt;
-			rMeasSpeed = (rightEncCount - prightEncCount) * QPPS_TO_CMPS_RIGHT
-					/ dt;
+			ctrl.leftPID.input = (leftEncCount - pleftEncCount)
+					* QPPS_TO_CMPS_LEFT / dt;
+			ctrl.rightPID.input = (rightEncCount - prightEncCount)
+					* QPPS_TO_CMPS_RIGHT / dt;
 			pleftEncCount = leftEncCount;
 			prightEncCount = rightEncCount;
-			lacc += lerr * dt;
-			racc += rerr * dt;
 
-			lacc = constrain(lacc, -127, 127);
-			racc = constrain(racc, -127, 127);
+			ctrl.leftPID.error = ctrl.leftPID.set - ctrl.leftPID.input;
+			ctrl.rightPID.error = ctrl.rightPID.set - ctrl.rightPID.input;
 
-			lout = lPID[0] * lerr + lPID[1] * lacc + lPID[2] * ((lerr - lprev)
-					/ (TIME_INTERVAL * 0.001));
-			rout = rPID[0] * rerr + rPID[1] * racc + rPID[2] * ((rerr - rprev)
-					/ (TIME_INTERVAL * 0.001));
+			ctrl.leftPID.accumulated += ctrl.leftPID.error * dt;
+			ctrl.rightPID.accumulated += ctrl.rightPID.error * dt;
 
-			lprev = lerr;
-			rprev = rerr;
+			ctrl.leftPID.accumulated
+					= constrain(ctrl.leftPID.accumulated, -127, 127);
+			ctrl.rightPID.accumulated
+					= constrain(ctrl.rightPID.accumulated, -127, 127);
 
-			lspeed += lout;
-			rspeed += rout;
+			ctrl.leftPID.output = ctrl.leftPID.proportional * ctrl.leftPID.error
+					+ ctrl.leftPID.integral * ctrl.leftPID.accumulated
+					+ ctrl.leftPID.derivative * (ctrl.leftPID.error
+							- ctrl.leftPID.previous) / dt;
+			ctrl.rightPID.output = ctrl.rightPID.proportional
+					* ctrl.rightPID.error + ctrl.rightPID.integral
+					* ctrl.rightPID.accumulated + ctrl.rightPID.derivative
+					* (ctrl.rightPID.error - ctrl.rightPID.previous) / dt;
+
+			ctrl.leftPID.previous = ctrl.leftPID.error;
+			ctrl.rightPID.previous = ctrl.rightPID.error;
+
+			lspeed += ctrl.leftPID.output;
+			rspeed += ctrl.rightPID.output;
 
 			lspeed = constrain(lspeed, -127, 127);
 			rspeed = constrain(rspeed, -127, 127);

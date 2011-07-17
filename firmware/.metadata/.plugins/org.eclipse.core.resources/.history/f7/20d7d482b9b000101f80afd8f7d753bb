@@ -1,0 +1,39 @@
+/*
+ * control_struct.h
+ *
+ *  Created on: Jul 17, 2011
+ *      Author: rbtying
+ */
+
+#ifndef CONTROL_STRUCT_H_
+#define CONTROL_STRUCT_H_
+
+struct PID_params {
+	double set;
+	double input;
+	double output;
+	double accumulated;
+	double previous;
+
+	double proportional;
+	double integral;
+	double derivative;
+};
+
+typedef struct PID_params PID_params;
+
+struct control_data {
+	long lEnc;
+	long rEnc;
+	PowerMonitor batt;
+	double yawRate;
+	double yawVal;
+	Servo pan;
+	Servo tilt;
+	PID_params left;
+	PID_params right;
+};
+
+typedef struct control_data control_data;
+
+#endif /* CONTROL_STRUCT_H_ */

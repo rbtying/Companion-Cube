@@ -10,7 +10,9 @@
 
 class PowerMonitor {
 public:
+	PowerMonitor();
 	PowerMonitor(uint8_t vPin, uint8_t iPin);
+	void set(uint8_t vPin, uint8_t iPin);
 	float getVoltage();
 	float getCurrent();
 private:

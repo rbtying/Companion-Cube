@@ -8,13 +8,23 @@
 #include "WProgram.h"
 #include "PowerMonitor.h"
 
+PowerMonitor::PowerMonitor() {
+	PowerMonitor::PowerMonitor(0, 0);
+}
+
 PowerMonitor::PowerMonitor(uint8_t vPin, uint8_t iPin) {
-	m_vPin = vPin;
-	m_iPin = iPin;
-	pinMode(m_vPin, INPUT);
-	pinMode(m_iPin, INPUT);
-	digitalWrite(m_vPin, LOW); // turn off pullup
-	digitalWrite(m_iPin, LOW); // turn off pullup
+	PowerMonitor::set(vPin, iPin);
+}
+
+void PowerMonitor::set(uint8_t vPin, uint8_t iPin) {
+	if (vPin != 0 && iPin != 0) {
+		m_vPin = vPin;
+		m_iPin = iPin;
+		pinMode(m_vPin, INPUT);
+		pinMode(m_iPin, INPUT);
+		digitalWrite(m_vPin, LOW); // turn off pullup
+		digitalWrite(m_iPin, LOW); // turn off pullup
+	}
 }
 
 float PowerMonitor::getVoltage() {
