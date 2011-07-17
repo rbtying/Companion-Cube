@@ -37,9 +37,6 @@ CD74HC4067 mux(MUX_1, MUX_2, MUX_3, MUX_4, MUX_ADC);
 Gyro yawGyro(&mux, YAW_GYRO, YAW_REF, LPR510_CONVERSION_FACTOR);
 double yawVal = 0, yawRate = 0;
 
-// Servos
-Servo panServo, tiltServo;
-
 // Motors
 Servo lMot, rMot;
 
