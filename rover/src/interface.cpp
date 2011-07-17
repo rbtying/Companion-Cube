@@ -43,8 +43,8 @@ int rover::interface::openSerialPort() {
 	cmd[0] = ':';
 	cmd[1] = 's';
 	cmd[2] = 's';
-	cmd[3] = 0x01;
-	cmd[4] = '!';
+	cmd[3] = '!';
+	cmd[4] = 0x01;
 
 	try {
 		m_port->write(cmd, 5);
@@ -62,8 +62,8 @@ int rover::interface::closeSerialPort() {
 	cmd[0] = ':';
 	cmd[1] = 's';
 	cmd[2] = 's';
-	cmd[3] = 0x00;
-	cmd[4] = '!';
+	cmd[3] = '!';
+	cmd[4] = 0x00;
 
 	try {
 		m_port->write(cmd, 5);
@@ -209,77 +209,48 @@ int rover::interface::getSensorPackets(int timeout) {
 	rover::interface::processPacket(&in);
 
 	return 0;
-/*
-	char getSpeedCmd[6] = { START_CHAR, 'g', 'E', 'N', 'C', END_CHAR };
-	char getBatteryCmd[6] = { START_CHAR, 'g', 'B', 'T', 'Y', END_CHAR };
-	char getGyroCmd[6] = { START_CHAR, 'g', 'G', 'Y', 'R', END_CHAR };
-	char getServoCmd[6] = { START_CHAR, 'g', 'S', 'E', 'R', END_CHAR };
+}
 
-	std::string speedPacket, battPacket, gyroPacket, servoPacket;	
+void rover::interface::setPID(double lP, double lI, double lD, double rP, double rI, double rD) {
+	int16_t lpt = (int16_t) (lP * 100);
+	int16_t lit = (int16_t) (lI * 100);
+	int16_t ldt = (int16_t) (lD * 100);
 
-	try { m_port->write(getSpeedCmd, 6); } catch (cereal::Exception& e) { return (1); }
-	try { if ( !(m_port->readBetween(&speedPacket, '<', '>', timeout)) ) { return (1); }} catch (cereal::Exception& e) { return (1); }
-	try { m_port->write(getBatteryCmd, 6); } catch (cereal::Exception& e) { return (2); }
-	try { if ( !(m_port->readBetween(&battPacket, '<', '>', timeout)) ) {return (2); }} catch (cereal::Exception& e) { return (2); }
-	try { m_port->write(getGyroCmd, 6); } catch (cereal::Exception& e) {return (3); }
-	try { if ( !(m_port->readBetween(&gyroPacket, '<', '>', timeout)) ) { return (3); }} catch (cereal::Exception& e) { return (3); }
-	try { m_port->write(getServoCmd, 6); } catch (cereal::Exception& e) {return (4); }
-	try { if ( !(m_port->readBetween(&servoPacket, '<', '>', timeout)) ) {return (4); }} catch (cereal::Exception& e) { return (4); }
+	int16_t rpt = (int16_t) (rP * 100);
+	int16_t rit = (int16_t) (rI * 100);
+	int16_t rdt = (int16_t) (rD * 100);
 
-	if (speedPacket.length() == 7) {
-		ros::Time current_time = ros::Time::now();
-		double dt = (current_time - m_lastSensorUpdateTime).toSec();
+	char msg[18];
+	msg[0] = ':';
+	msg[1] = 's';
+	msg[2] = 'P';
+	msg[3] = 'I';
+	msg[4] = 'D';
+	msg[5] = '!';
+
+	msg[6] = lpt >> 8;
+	msg[7] = lpt & 0xff;
+
+	msg[8] = lit >> 8;
+	msg[9] = lit & 0xff;
+
+	msg[10] = ldt >> 8;
+	msg[11] = ldt & 0xff;
+
+	msg[12] = rpt >> 8;
+	msg[13] = rpt & 0xff;
+
+	msg[14] = rit >> 8;
+	msg[15] = rit & 0xff;
+
+	msg[16] = rdt >> 8;
+	msg[17] = rdt & 0xff;
+
+	try {
+		m_port->write(msg, 18);
+	} catch (cereal::Exception& e) {
 		
-		if (speedPacket[5] == ((speedPacket[1] + speedPacket[2] + speedPacket[3] + speedPacket[4]) & 0x7f)) {
-			m_velocity_left = ((speedPacket[1] << 8 | speedPacket[2]) / 1000.0);
-			m_velocity_right = ((speedPacket[3] << 8 | speedPacket[4]) / 1000.0);
-		} else {
-			ROS_ERROR("Encoder packet checksum failed");
-		}
-		// ROS_INFO("Encoders: Left: %f m/s, Right: %f m/s", (m_velocity_left), (m_velocity_right));
-
-		this->calculateOdometry(dt);
-		m_lastSensorUpdateTime = current_time;
-	} else {
-		ROS_ERROR("Encoder packet corrupted");
 	}
-
-	if (gyroPacket.length() == 7) {
-		if (gyroPacket[5] == ((gyroPacket[1] + gyroPacket[2] + gyroPacket[3] + gyroPacket[4]) & 0x7f)) {
-			m_gyro_yawrate = ((gyroPacket[1] << 8 | gyroPacket[2]) / 100.0);
-			m_gyro_yaw = ((gyroPacket[3] << 8 | gyroPacket[4]) / 100.0) - m_gyro_offset;
-		} else {
-			ROS_ERROR("Gyro packet checksum failed");
-		}
-		// ROS_INFO("Yaw Gyro: Angle: %f rad, Rate: %f rad/s", m_gyro_yaw, m_gyro_yawrate);
-	} else {
-		ROS_ERROR("Gyro packet corrupted");
-	}
-
-	if (battPacket.length() == 7) {
-		if (battPacket[5] == ((battPacket[1] + battPacket[2] + battPacket[3] + battPacket[4]) & 0x7f)) {
-			m_battery_voltage = ((battPacket[1] << 8 | battPacket[2]) / 100.0);
-			m_battery_current = ((battPacket[3] << 8 | battPacket[4]) / 100.0);
-		} else {
-			ROS_ERROR("Battery packet checksum failed");
-		}
-		// ROS_INFO("Battery: %f volts, %f amps", (m_battery_voltage), (m_battery_current));
-	} else {
-		ROS_ERROR("Battery packet corrupted");
-	}
-
-	if (servoPacket.length() == 5) {
-		if (servoPacket[3] == ((servoPacket[1] + servoPacket[2]) & 0x7f)) {
-			m_pan_angle = ((unsigned char) servoPacket[1]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
-			m_tilt_angle = ((unsigned char) servoPacket[2]) * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
-		} else {
-			ROS_ERROR("Servo packet checksum failed");
-		}
-		// ROS_INFO("Servos: Pan: %.02f rad, Tilt: %.02f rad", m_pan_angle, m_tilt_angle);
-	} else {
-		ROS_ERROR("Servo packet corrupted");
-	}
-	return 0; */
 }
 
 void rover::interface::calculateOdometry(double dt) {

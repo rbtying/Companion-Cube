@@ -57,8 +57,18 @@ int main(int argc, char** argv) {
 
 	bot = new rover::interface(port.c_str());
 
+	double lP, lI, lD, rP, rI, rD;
+	
+	// parameters
 	n.param<double> ("rover/axleLength", bot->m_roverAxleLength,
 			bot->m_roverAxleLength);
+	n.param<double> ("rover/left/proportional", lP, 0.3);
+	n.param<double> ("rover/left/integral", lI, 0.05);
+	n.param<double> ("rover/left/derivative", lD, 0);
+
+	n.param<double> ("rover/right/proportional", rP, 0.3);
+	n.param<double> ("rover/right/integral", rI, 0.05);
+	n.param<double> ("rover/right/derivative", rD, 0);
 
 	// publishers
 	ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry> ("/odom", 50);
@@ -98,16 +108,11 @@ int main(int argc, char** argv) {
 
 	sensor_msgs::JointState joint_state;
 
+	bot->setPID(lP, lI, lD, rP, rI, rD);
+
 	// main processing loop
 	while (n.ok()) {
 		current_time = ros::Time::now();
-
-		// get a sensor packet
-		//packetNum++;
-		//int error = bot->getSensorPackets(100);
-		//if (error != 0) {
-		//	ROS_ERROR("Could not retrieve sensor packet #%li part %i",packetNum, error);
-		//}
 
 		// generate quaternion from odometry yaw
 		geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(

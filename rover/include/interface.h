@@ -32,6 +32,8 @@ public:
 
 	int setServos(double panAngle, double tiltAngle);
 
+	void setPID(double lP, double lI, double lD, double rP, double rI, double rD);
+
 	void resetOdometry();
 	void setOdometry(double new_x, double new_y, double new_yaw);
 
