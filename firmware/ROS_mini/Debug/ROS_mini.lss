@@ -4444,7 +4444,7 @@ Disassembly of section .text:
     246c:	6a e5       	ldi	r22, 0x5A	; 90
     246e:	70 e0       	ldi	r23, 0x00	; 0
     2470:	0e 94 b9 1c 	call	0x3972	; 0x3972 <_ZN5Servo5writeEi>
-    2474:	81 e1       	ldi	r24, 0x11	; 17
+    2474:	84 e1       	ldi	r24, 0x14	; 20
     2476:	93 e0       	ldi	r25, 0x03	; 3
     2478:	69 e0       	ldi	r22, 0x09	; 9
     247a:	70 e0       	ldi	r23, 0x00	; 0
