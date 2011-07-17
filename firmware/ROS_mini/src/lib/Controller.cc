@@ -13,9 +13,8 @@ Controller::Controller(control_data * ctrl) {
 	m_ctrl = ctrl;
 
 	m_bufPtr = 0;
-
 	comm = false;
-
+	m_poll = false;
 	m_lastUpdateTime = 0;
 }
 
@@ -23,7 +22,7 @@ Controller::Controller(control_data * ctrl) {
  * Update the buffer
  */
 void Controller::update() {
-	if (m_lastPacketSendTime - millis() > CMD_PACKET_INTERVAL) {
+	if (m_poll && (m_lastPacketSendTime - millis() > CMD_PACKET_INTERVAL)) {
 		Controller::sendDataPacket();
 	}
 	while (Serial.available()) {
@@ -43,7 +42,9 @@ void Controller::update() {
 	comm = (millis() - m_lastUpdateTime) <= CMD_TIMEOUT;
 }
 void Controller::processCommand() {
-	if (strstr(m_buf, "sDRV") != NULL) {
+	if (strstr(m_buf, "ss") != NULL) {
+		m_poll = nextByte(250);
+	} else if (strstr(m_buf, "sDRV") != NULL) {
 		byte msg[4];
 		for (uint8_t i = 0; i < 4; i++) {
 			msg[i] = nextByte(250);

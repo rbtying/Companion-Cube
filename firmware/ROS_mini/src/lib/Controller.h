@@ -32,6 +32,7 @@ public:
 private:
 	control_data * m_ctrl;
 
+	bool m_poll;
 	unsigned long m_lastUpdateTime, m_lastPacketSendTime;
 	char m_buf[CMD_BUFFER_SIZE];
 	uint8_t m_dataPacket[CMD_PACKET_SIZE];
