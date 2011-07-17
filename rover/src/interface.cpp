@@ -39,13 +39,34 @@ int rover::interface::openSerialPort() {
 		return (-1);
 	}
 
+	char cmd[5];
+	cmd[0] = ':';
+	cmd[1] = 's';
+	cmd[2] = 's';
+	cmd[3] = 0x01;
+	cmd[4] = '!';
+
+	try {
+		m_port->write(cmd, 5);
+	} catch (cereal::Exception& e) {
+		return (-1);
+	}
+
 	return (0);
 }
 
 int rover::interface::closeSerialPort() {
 	this->drive(0.0, 0.0);
 
+	char cmd[5];
+	cmd[0] = ':';
+	cmd[1] = 's';
+	cmd[2] = 's';
+	cmd[3] = 0x00;
+	cmd[4] = '!';
+
 	try {
+		m_port->write(cmd, 5);
 		m_port->close();
 	} catch (cereal::Exception& e) {
 		return (-1);
