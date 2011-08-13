@@ -11,6 +11,7 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/CMakeCCompiler.cmake"
   "CMakeFiles/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeSystem.cmake"
+  "/opt/ros/diamondback/ros/core/rosbuild/ProcessorCount.cmake"
   "/opt/ros/diamondback/ros/core/rosbuild/private.cmake"
   "/opt/ros/diamondback/ros/core/rosbuild/public.cmake"
   "/opt/ros/diamondback/ros/core/rosbuild/rosbuild.cmake"
