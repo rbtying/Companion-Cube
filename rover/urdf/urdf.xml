@@ -211,7 +211,7 @@
     </collision>
   </link>
 
-  <link name="camera" />
+  <link name="lifecam" />
 
   <link name="kinect_stand">
     <visual>
@@ -362,7 +362,7 @@
 
   <joint name="camera_joint" type="fixed">
     <parent link="camera_body" />
-    <child link="camera" />
+    <child link="lifecam" />
     <origin xyz="0 0 0.03" rpy="0 0 -1.57079633"/>
     <axis xyz="0 1 0" />
   </joint>

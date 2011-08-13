@@ -5,6 +5,7 @@
   <node name="kinect_aux_functions" pkg="kinect_aux" type="kinect_aux_node">
     <remap from="tilt_angle" to="/kinect/angle" />
     <remap from="cur_tilt_angle" to="/kinect/cur_angle" />
+    <remap from="imu" to="/kinect/accelerometer" />
   </node>
 
   <!-- openni manager -->
@@ -18,10 +19,12 @@
   </node>
 
   <!-- fake laser -->
+  <!--
   <node pkg="nodelet" type="nodelet" name="kinect_laser" args="load pcl_to_laser/CloudToScan openni_manager">
     <param name="output_frame_id" value="/openni_depth_frame"/>
     <remap from="cloud" to="cloud_throttled"/>
   </node>
+  -->
 
   <!-- horizontal laser -->
   <node pkg="nodelet" type="nodelet" name="tilt_laser" args="load pcl_to_laser/CloudToScanHoriz openni_manager">
