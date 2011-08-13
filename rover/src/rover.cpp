@@ -182,6 +182,10 @@ int main(int argc, char** argv) {
 
 		imu_msg.linear_acceleration_covariance[0] = -1; // no accelerometers, so just set covariance to -1
 
+		imu_msg.linear_acceleration.x = 0.0;
+		imu_msg.linear_acceleration.y = 0.0;
+		imu_msg.linear_acceleration.z = 0.0;
+
 		// send the message
 		imu_pub.publish(imu_msg);
 

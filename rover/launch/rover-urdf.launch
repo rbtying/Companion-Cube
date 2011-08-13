@@ -1,6 +1,4 @@
 <launch>
-  <include file="$(find rover)/launch/rover-drive.launch" />
-
   <param name="robot_description" command="cat $(find rover)/urdf/urdf.xml" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
 </launch>
