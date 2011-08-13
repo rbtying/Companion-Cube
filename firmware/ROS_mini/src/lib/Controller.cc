@@ -165,8 +165,8 @@ void Controller::processCommand() {
 void Controller::sendDataPacket() {
 	uint16_t leftSpeed_mm = (uint16_t) (abs(m_ctrl->leftPID.input * 100)); // cm to mm & truncate
 	uint16_t rightSpeed_mm = (uint16_t) (abs(m_ctrl->rightPID.input * 100)); // cm to mm & truncate
-	uint16_t yawRate = (uint16_t) (m_ctrl->yaw.rate * 1000);
-	uint16_t yawVal = (uint16_t) (m_ctrl->yaw.val * 1000);
+	uint16_t yawRate = (uint16_t) (abs(m_ctrl->yaw.rate) * 1000);
+	uint16_t yawVal = (uint16_t) (abs(m_ctrl->yaw.val) * 1000);
 	uint8_t signs = 0;
 	signs |= (m_ctrl->leftPID.input >= 0) << 0;
 	signs |= (m_ctrl->rightPID.input >= 0) << 1;
