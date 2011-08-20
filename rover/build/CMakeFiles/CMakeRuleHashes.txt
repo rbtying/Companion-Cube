@@ -5,7 +5,7 @@ c52f0a28c4e29730016da8c79ceffd11 ../msg_gen/lisp/Battery.lisp
 4af8bb2a6d017c839f6bfbd166ca1311 ../msg_gen/lisp/Encoder.lisp
 62e57a591dd50cb71ce609857a968d34 ../src/rover/msg/_Battery.py
 87ddac89c0a3940c72daf03264156d93 ../src/rover/msg/_Encoder.py
-7a77dba5e204d68f6e7c0b150dd6fd76 ../src/rover/msg/__init__.py
+1b1b57577d32f1202fa62ddfd97012a2 ../src/rover/msg/__init__.py
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genaction_msgs
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genmsg_cpp
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genmsg_lisp

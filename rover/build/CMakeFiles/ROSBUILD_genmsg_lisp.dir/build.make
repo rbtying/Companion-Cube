@@ -39,85 +39,12 @@ CMAKE_BINARY_DIR = /home/rbtying/robot/rover/build
 
 # Utility rule file for ROSBUILD_genmsg_lisp.
 
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Battery.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Battery.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Encoder.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Encoder.lisp
-
-../msg_gen/lisp/Battery.lisp: ../msg/Battery.msg
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/core/roslib/scripts/gendeps
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/messages/std_msgs/msg/Header.msg
-../msg_gen/lisp/Battery.lisp: ../manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/core/rosbuild/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/core/roslang/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/utilities/cpp_common/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/utilities/rostime/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/tools/rospack/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/core/roslib/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosconsole/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/messages/std_msgs/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/rospy/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/tools/rosclean/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosgraph/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosmaster/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosout/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/roslaunch/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/tools/rosunit/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rostest/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/actionlib_msgs/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common/actionlib/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/topic_tools/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosbag/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosbagmigration/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/geometry_msgs/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/sensor_msgs/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/geometry/bullet/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/geometry/angles/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosnode/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosmsg/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rostopic/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosservice/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/utilities/roswtf/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/utilities/message_filters/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/geometry/tf/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/nav_msgs/manifest.xml
-../msg_gen/lisp/Battery.lisp: /home/rbtying/robot/cereal_port/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/diagnostic_msgs/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/diagnostics/diagnostic_updater/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/joystick_drivers/joy/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/joystick_drivers/ps3joy/manifest.xml
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/messages/std_msgs/msg_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/actionlib_msgs/msg_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common/actionlib/msg_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/topic_tools/srv_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/geometry_msgs/msg_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/sensor_msgs/msg_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/sensor_msgs/srv_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/geometry/tf/msg_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/geometry/tf/srv_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/nav_msgs/msg_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/nav_msgs/srv_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/diagnostic_msgs/msg_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/diagnostic_msgs/srv_gen/generated
-../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/joystick_drivers/joy/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Battery.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Battery.lisp"
-	/opt/ros/diamondback/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/Battery.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/Battery.lisp
-
-../msg_gen/lisp/_package_Battery.lisp: ../msg_gen/lisp/Battery.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Battery.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Battery.lisp
 
 ../msg_gen/lisp/Encoder.lisp: ../msg/Encoder.msg
 ../msg_gen/lisp/Encoder.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
@@ -184,7 +111,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Encoder.lisp
 ../msg_gen/lisp/Encoder.lisp: /opt/ros/diamondback/stacks/common_msgs/diagnostic_msgs/msg_gen/generated
 ../msg_gen/lisp/Encoder.lisp: /opt/ros/diamondback/stacks/common_msgs/diagnostic_msgs/srv_gen/generated
 ../msg_gen/lisp/Encoder.lisp: /opt/ros/diamondback/stacks/joystick_drivers/joy/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Encoder.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Encoder.lisp"
 	/opt/ros/diamondback/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/Encoder.msg
 
@@ -192,13 +119,86 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Encoder.lisp
 
 ../msg_gen/lisp/_package_Encoder.lisp: ../msg_gen/lisp/Encoder.lisp
 
+../msg_gen/lisp/Battery.lisp: ../msg/Battery.msg
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/core/roslib/scripts/gendeps
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/messages/std_msgs/msg/Header.msg
+../msg_gen/lisp/Battery.lisp: ../manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/core/rosbuild/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/core/roslang/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/utilities/cpp_common/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/utilities/rostime/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/tools/rospack/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/core/roslib/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosconsole/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/messages/std_msgs/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/rospy/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/tools/rosclean/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosgraph/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosmaster/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosout/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/roslaunch/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/ros/tools/rosunit/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rostest/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/actionlib_msgs/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common/actionlib/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/topic_tools/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosbag/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/geometry_msgs/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/sensor_msgs/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/geometry/bullet/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/geometry/angles/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosnode/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosmsg/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rostopic/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/rosservice/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/utilities/roswtf/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/utilities/message_filters/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/geometry/tf/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/nav_msgs/manifest.xml
+../msg_gen/lisp/Battery.lisp: /home/rbtying/robot/cereal_port/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/diagnostic_msgs/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/diagnostics/diagnostic_updater/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/joystick_drivers/joy/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/joystick_drivers/ps3joy/manifest.xml
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/messages/std_msgs/msg_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/actionlib_msgs/msg_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common/actionlib/msg_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/geometry_msgs/msg_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/sensor_msgs/msg_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/sensor_msgs/srv_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/geometry/tf/msg_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/geometry/tf/srv_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/nav_msgs/msg_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/nav_msgs/srv_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/diagnostic_msgs/msg_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/common_msgs/diagnostic_msgs/srv_gen/generated
+../msg_gen/lisp/Battery.lisp: /opt/ros/diamondback/stacks/joystick_drivers/joy/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Battery.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Battery.lisp"
+	/opt/ros/diamondback/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/Battery.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/Battery.lisp
+
+../msg_gen/lisp/_package_Battery.lisp: ../msg_gen/lisp/Battery.lisp
+
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Battery.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Battery.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Encoder.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Encoder.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Battery.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Battery.lisp
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make
 .PHONY : ROSBUILD_genmsg_lisp
 

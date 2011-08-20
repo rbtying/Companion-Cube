@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
-  "../src/rover/msg"
   "../msg_gen"
+  "../src/rover/msg"
   "../msg_gen"
   "CMakeFiles/rosbuild_precompile"
 )

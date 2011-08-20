@@ -1,6 +1,4 @@
-/home/rbtying/robot/cereal_port/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir
 /home/rbtying/robot/cereal_port/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir
-/home/rbtying/robot/cereal_port/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir
 /home/rbtying/robot/cereal_port/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir
 /home/rbtying/robot/cereal_port/build/CMakeFiles/cereal_port.dir
 /home/rbtying/robot/cereal_port/build/CMakeFiles/clean-test-results.dir

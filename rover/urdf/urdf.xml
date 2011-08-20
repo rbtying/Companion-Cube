@@ -1,83 +1,124 @@
-<robot name="rover">
+<?xml version="1.0" ?>
+
+<robot name="rover" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+  <!-- Colors -->
+  <xacro:macro name="color_blue">
+    <material name="blue">
+      <color rgba="0 0 0.75 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_yellow">
+    <material name="yellow">
+      <color rgba="0.75 0.75 0 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_red_green">
+    <material name="red_green">
+      <color rgba="1.0 1.0 0 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_dark_gray">
+    <material name="dark_gray">
+      <color rgba="0.3 0.3 0.3 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_dark_green">
+    <material name="dark_green">
+      <color rgba="0 0.75 0.1 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_dark_purple">
+    <material name="dark_purple">
+      <color rgba="0.3 0 0.3 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_magenta">
+    <material name="magenta">
+      <color rgba="1.0 0 1.0 0.5" />
+    </material>
+  </xacro:macro>
+
   <!-- Links --> 
   <link name="base_footprint" />
 
+  <xacro:property name="robot_base_dim" value="0.205 0.13 0.065" />
   <link name="robot_base">
     <visual>
       <geometry>
-        <box size="0.205 0.13 0.065" />
+        <box size="${robot_base_dim}" />
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 0.75 1.0" />
-      </material>
+      <xacro:color_blue />
     </visual>
     <collision>
       <geometry>
-        <box size="0.205 0.13 0.065" />
+        <box size="${robot_base_dim}" />
       </geometry>
     </collision>
   </link>
 
+  <xacro:property name="robot_base_xbar_dim" value="0.085 0.21 0.065" />
   <link name="robot_base_crossbar">
     <visual>
       <geometry>
-        <box size="0.085 0.21 0.065" />
+        <box size="${robot_base_xbar_dim}" />
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 0.75 1.0" />
-      </material>
+      <xacro:color_blue />
     </visual>
     <collision>
       <geometry>
-        <box size="0.085 0.21 0.065" />
+        <box size="${robot_base_xbar_dim}" />
       </geometry>
     </collision>
   </link>
 
+  <xacro:property name="robot_base_plate_dim" value="0.2051 0.211 0.015" />
   <link name="robot_base_plate">
     <visual>
       <geometry>
-        <box size="0.2051 0.211 0.015" />
+        <box size="${robot_base_plate_dim}" />
       </geometry>
-      <material name="yellow">
-        <color rgba="0.75 0.75 0 1.0" />
-      </material>
+      <xacro:color_yellow />
     </visual>
     <collision>
       <geometry>
-        <box size="0.2051 0.211 0.015" />
+        <box size="${robot_base_plate_dim}" />
       </geometry>
     </collision>
   </link>
 
+  <xacro:property name="robot_base_standoff_dim" value="0.095 0.135 0.025" />
   <link name="robot_base_standoff">
     <visual>
       <geometry>
-        <box size="0.095 0.135 0.025" />
+        <box size="${robot_base_standoff_dim}" />
       </geometry>
-      <material name="red-green">
-        <color rgba="1 1 0 1.0" />
-      </material>
+      <xacro:color_red_green />
     </visual>
     <collision>
       <geometry>
-        <box size="0.095 0.135 0.025" />
+        <box size="${robot_base_standoff_dim}" />
       </geometry>
     </collision>
   </link>
 
+  <xacro:property name="wheel_radius" value="0.027051" />
+  <xacro:property name="wheel_length" value="0.0531" />
   <link name="front_left_wheel">
     <visual>
       <geometry>
-        <cylinder radius="0.027051" length="0.0531" />
+        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
       </geometry>
-      <material name="dark_gray">
-        <color rgba="0.3 0.3 0.3 1.0" />
-      </material>
+      <xacro:color_dark_gray />
     </visual>
     <collision>
       <geometry>
-        <cylinder radius="0.027051" length="0.0531" />
+        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
       </geometry>
     </collision>
   </link>
@@ -85,15 +126,13 @@
   <link name="front_right_wheel">
     <visual>
       <geometry>
-        <cylinder radius="0.027051" length="0.0531" />
+        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
       </geometry>
-      <material name="dark_gray">
-        <color rgba="0.3 0.3 0.3 1.0" />
-      </material>
+      <xacro:color_dark_gray />
     </visual>
     <collision>
       <geometry>
-        <cylinder radius="0.027051" length="0.0531" />
+        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
       </geometry>
     </collision>
   </link>
@@ -101,15 +140,13 @@
   <link name="back_left_wheel">
     <visual>
       <geometry>
-        <cylinder radius="0.027051" length="0.0531" />
+        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
       </geometry>
-      <material name="dark_gray">
-        <color rgba="0.3 0.3 0.3 1.0" />
-      </material>
+      <xacro:color_dark_gray />
     </visual>
     <collision>
       <geometry>
-        <cylinder radius="0.027051" length="0.0531" />
+        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
       </geometry>
     </collision>
   </link>
@@ -117,146 +154,136 @@
   <link name="back_right_wheel">
     <visual>
       <geometry>
-        <cylinder radius="0.027051" length="0.0531" />
+        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
       </geometry>
-      <material name="dark_gray">
-        <color rgba="0.3 0.3 0.3 1.0" />
-      </material>
+      <xacro:color_dark_gray />
     </visual>
     <collision>
       <geometry>
-        <cylinder radius="0.027051" length="0.0531" />
+        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
       </geometry>
     </collision>
   </link>
 
- <link name="laptop_link">
+  <xacro:property name="laptop_link_dim" value="0.3075 0.35 0.0475" />
+  <link name="laptop_link">
     <visual>
       <geometry>
-        <box size="0.3075 0.35 0.0475" />
+        <box size="${laptop_link_dim}" />
       </geometry>
-      <material name="darkish_green">
-        <color rgba="0 0.75 0.1 1.0" />
-      </material>
+      <xacro:color_dark_green />
     </visual>
     <collision>
       <geometry>
-        <box size="0.3075 0.35 0.0475" />
+        <box size="${laptop_link_dim}" />
       </geometry>
     </collision>
   </link>
 
-
+  <xacro:property name="kinect_stand_base_dim" value="0.075 0.35 0.04" />
   <link name="kinect_stand_base">
     <visual>
       <geometry>
-        <box size="0.075 0.35 0.04" />
+        <box size="${kinect_stand_base_dim}" />
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 0.3 1.0" />
-      </material>
+      <xacro:color_blue />
     </visual>
     <collision>
       <geometry>
-        <box size="0.075 0.35 0.04" />
+        <box size="${kinect_stand_base_dim}" />
       </geometry>
     </collision>
   </link>
 
+  <xacro:property name="pan_servo_dim" value="0.04 0.02 0.035" />
   <link name="pan_servo">
     <visual>
       <geometry>
-        <box size="0.04 0.02 0.035" />
+        <box size="${pan_servo_dim}" />
       </geometry>
-      <material name="yellow">
-        <color rgba="0.9 0.9 0.5 1.0" />
-      </material>
+      <xacro:color_yellow />
     </visual>
     <collision>
       <geometry>
-        <box size="0.04 0.02 0.035" />
+        <box size="${pan_servo_dim}" />
       </geometry>
     </collision>
   </link>
 
+  <xacro:property name="tilt_servo_dim" value="0.05 0.035 0.04" />
   <link name="tilt_servo">
     <visual>
       <geometry>
-        <box size="0.05 0.035 0.04" />
+        <box size="${tilt_servo_dim}" />
       </geometry>
-      <material name="dark_purple">
-        <color rgba="0.3 0 0.3 1.0" />
-      </material>
+      <xacro:color_dark_purple />
     </visual>
     <collision>
       <geometry>
-        <box size="0.05 0.035 0.04" />
+        <box size="${tilt_servo_dim}" />
       </geometry>
     </collision>
   </link>
 
+  <xacro:property name="camera_body_rad" value="0.0125" />
+  <xacro:property name="camera_body_len" value="0.055" />
   <link name="camera_body">
     <visual>
       <geometry>
-	<cylinder radius="0.0125" length="0.055" />
+	<cylinder radius="${camera_body_rad}" length="${camera_body_len}" />
       </geometry>
-      <material name="magenta">
-        <color rgba="1 0 1 1.0" />
-      </material>
+      <xacro:color_magenta />
     </visual>
     <collision>
       <geometry>
-        <cylinder radius="0.0125" length="0.055" />
+        <cylinder radius="${camera_body_rad}" length="${camera_body_len}" />
       </geometry>
     </collision>
   </link>
 
   <link name="lifecam" />
 
+  <xacro:property name="kinect_stand_dim" value="0.045 0.055 0.305" />
   <link name="kinect_stand">
     <visual>
       <geometry>
-        <box size="0.045 0.055 0.305" />
+        <box size="${kinect_stand_dim}" />
       </geometry>
-      <material name="dark_green">
-        <color rgba="0 0.7 0 1.0" />
-      </material>
+      <xacro:color_dark_green />
     </visual>
     <collision>
       <geometry>
-        <box size="0.045 0.055 0.305" />
+        <box size="${kinect_stand_dim}" />
       </geometry>
     </collision>
   </link>
 
+  <xacro:property name="kinect_base_dim" value="0.06 0.075 0.03" />
   <link name="kinect_base">
     <visual>
       <geometry>
-        <box size="0.06 0.075 0.03" />
+        <box size="${kinect_base_dim}" />
       </geometry>
-      <material name="purple">
-        <color rgba="0.3 0 0.3 0.5" />
-      </material>
+      <xacro:color_dark_purple />
     </visual>
     <collision>
       <geometry>
-        <box size="0.06 0.075 0.03" />
+        <box size="${kinect_base_dim}" />
       </geometry>
     </collision>
   </link>
 
+  <xacro:property name="openni_camera_dim" value="0.06 0.285 0.035" />
   <link name="openni_camera">
     <visual>
       <geometry>
-        <box size="0.06 0.285 0.035" />
+        <box size="${openni_camera_dim}" />
       </geometry>
-      <material name="magenta">
-        <color rgba="1 0 1 1.0" />
-      </material>
+      <xacro:color_magenta />
     </visual>
     <collision>
       <geometry>
-        <box size="0.06 0.285 0.035" />
+        <box size="${openni_camera_dim}" />
       </geometry>
     </collision>
   </link>

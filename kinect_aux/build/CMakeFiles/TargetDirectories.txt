@@ -1,0 +1,16 @@
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/clean-test-results.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/kinect_aux_node.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/rosbuild_precompile.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/rosbuild_premsgsrvgen.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/rospack_genmsg.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/rospack_genmsg_libexe.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/rospack_gensrv.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/test.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/test-future.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/test-results.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/test-results-run.dir
+/home/rbtying/robot/kinect_aux/build/CMakeFiles/tests.dir

@@ -96,19 +96,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ROSBUILD_genmsg_cpp
-
-# Build rule for target.
-ROSBUILD_genmsg_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_genmsg_cpp
-.PHONY : ROSBUILD_genmsg_cpp
-
-# fast build rule for target.
-ROSBUILD_genmsg_cpp/fast:
-	$(MAKE) -f CMakeFiles/ROSBUILD_genmsg_cpp.dir/build.make CMakeFiles/ROSBUILD_genmsg_cpp.dir/build
-.PHONY : ROSBUILD_genmsg_cpp/fast
-
-#=============================================================================
 # Target rules for targets named ROSBUILD_genmsg_lisp
 
 # Build rule for target.
@@ -120,19 +107,6 @@ ROSBUILD_genmsg_lisp: cmake_check_build_system
 ROSBUILD_genmsg_lisp/fast:
 	$(MAKE) -f CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make CMakeFiles/ROSBUILD_genmsg_lisp.dir/build
 .PHONY : ROSBUILD_genmsg_lisp/fast
-
-#=============================================================================
-# Target rules for targets named ROSBUILD_gensrv_cpp
-
-# Build rule for target.
-ROSBUILD_gensrv_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_gensrv_cpp
-.PHONY : ROSBUILD_gensrv_cpp
-
-# fast build rule for target.
-ROSBUILD_gensrv_cpp/fast:
-	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_cpp.dir/build.make CMakeFiles/ROSBUILD_gensrv_cpp.dir/build
-.PHONY : ROSBUILD_gensrv_cpp/fast
 
 #=============================================================================
 # Target rules for targets named ROSBUILD_gensrv_lisp
@@ -324,9 +298,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_genmsg_lisp"
-	@echo "... ROSBUILD_gensrv_cpp"
 	@echo "... ROSBUILD_gensrv_lisp"
 	@echo "... cereal_port"
 	@echo "... clean-test-results"

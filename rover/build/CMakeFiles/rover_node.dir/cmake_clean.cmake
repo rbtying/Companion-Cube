@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
-  "../src/rover/msg"
   "../msg_gen"
+  "../src/rover/msg"
   "../msg_gen"
   "CMakeFiles/rover_node.dir/src/rover.o"
   "CMakeFiles/rover_node.dir/src/interface.o"

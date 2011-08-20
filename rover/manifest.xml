@@ -5,7 +5,7 @@
 
   </description>
   <author></author>
-  <license>BSD</license>
+  <license>GPL</license>
   <review status="unreviewed" notes=""/>
   <url></url>
   <export>
@@ -20,7 +20,6 @@
   <depend package="sensor_msgs" />
   <depend package="cereal_port" />
   <depend package="ps3joy" />
-
 </package>
 
 

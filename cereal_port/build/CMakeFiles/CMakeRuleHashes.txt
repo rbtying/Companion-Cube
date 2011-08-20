@@ -1,7 +1,5 @@
 # Hashes of file build rules.
-5ca80faa03b6a0feb911dae31d523634 CMakeFiles/ROSBUILD_genmsg_cpp
 5ca80faa03b6a0feb911dae31d523634 CMakeFiles/ROSBUILD_genmsg_lisp
-5ca80faa03b6a0feb911dae31d523634 CMakeFiles/ROSBUILD_gensrv_cpp
 5ca80faa03b6a0feb911dae31d523634 CMakeFiles/ROSBUILD_gensrv_lisp
 6f4411c1eedc81d1ac5b1f379759fe76 CMakeFiles/clean-test-results
 5ca80faa03b6a0feb911dae31d523634 CMakeFiles/rosbuild_precompile
