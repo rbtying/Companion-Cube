@@ -32,6 +32,18 @@
     </material>
   </xacro:macro>
 
+  <xacro:macro name="color_olive">
+    <material name="olive">
+      <color rgba="0.5 0.5 0 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_aqua">
+    <material name="aqua">
+      <color rgba="0.25 0.3 0 1.0" />
+    </material>
+  </xacro:macro>
+
   <xacro:macro name="color_dark_purple">
     <material name="dark_purple">
       <color rgba="0.3 0 0.3 1.0" />
@@ -47,6 +59,7 @@
   <!-- Links --> 
   <link name="base_footprint" />
 
+  <!-- Robot movement base representation -->
   <xacro:property name="robot_base_dim" value="0.205 0.13 0.065" />
   <link name="robot_base">
     <visual>
@@ -92,7 +105,7 @@
     </collision>
   </link>
 
-  <xacro:property name="robot_base_standoff_dim" value="0.095 0.135 0.025" />
+  <xacro:property name="robot_base_standoff_dim" value="0.095 0.095 0.025" />
   <link name="robot_base_standoff">
     <visual>
       <geometry>
@@ -130,36 +143,72 @@
   <xacro:wheel name="back_left_wheel" />
   <xacro:wheel name="back_right_wheel" />
 
-  <xacro:property name="laptop_link_dim" value="0.3075 0.35 0.0475" />
-  <link name="laptop_link">
+  <!-- computer representation -->
+  <xacro:property name="computer_link_dim" value="0.10 0.145 0.05" />
+  <link name="computer_link">
     <visual>
       <geometry>
-        <box size="${laptop_link_dim}" />
+        <box size="${computer_link_dim}" />
       </geometry>
       <xacro:color_green />
     </visual>
     <collision>
       <geometry>
-        <box size="${laptop_link_dim}" />
+        <box size="${computer_link_dim}" />
       </geometry>
     </collision>
   </link>
 
-  <xacro:property name="kinect_stand_base_dim" value="0.075 0.35 0.04" />
-  <link name="kinect_stand_base">
+  <!-- wifi antenna representation -->
+  <xacro:property name="wifi_dim_rad" value="0.005" />
+  <xacro:property name="wifi_dim_len" value="0.35" />
+  <link name="wifi_link">
     <visual>
       <geometry>
-        <box size="${kinect_stand_base_dim}" />
+        <cylinder radius="${wifi_dim_rad}" length="${wifi_dim_len}" />
       </geometry>
-      <xacro:color_blue />
+      <xacro:color_dark_gray />
     </visual>
     <collision>
       <geometry>
-        <box size="${kinect_stand_base_dim}" />
+        <cylinder radius="${wifi_dim_rad}" length="${wifi_dim_len}" />
       </geometry>
     </collision>
   </link>
 
+  <!-- USB hub representation -->
+  <xacro:property name="usb_dim" value="0.19 0.035 0.02" />
+  <link name="usb_link">
+    <visual>
+      <geometry>
+        <box size="${usb_dim}" />
+      </geometry>
+      <xacro:color_olive />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${usb_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- wiring mess representation -->
+  <xacro:property name="wiring_dim" value="0.08 0.17 0.04" />
+  <link name="wiring_link">
+    <visual>
+      <geometry>
+        <box size="${wiring_dim}" />
+      </geometry>
+      <xacro:color_aqua />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${wiring_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- pan/tilt camera representation -->
   <xacro:property name="pan_servo_dim" value="0.04 0.02 0.035" />
   <link name="pan_servo">
     <visual>
@@ -208,21 +257,7 @@
 
   <link name="lifecam" />
 
-  <xacro:property name="kinect_stand_dim" value="0.045 0.055 0.305" />
-  <link name="kinect_stand">
-    <visual>
-      <geometry>
-        <box size="${kinect_stand_dim}" />
-      </geometry>
-      <xacro:color_green />
-    </visual>
-    <collision>
-      <geometry>
-        <box size="${kinect_stand_dim}" />
-      </geometry>
-    </collision>
-  </link>
-
+  <!-- kinect representation -->
   <xacro:property name="kinect_base_dim" value="0.06 0.075 0.03" />
   <link name="kinect_base">
     <visual>
@@ -276,13 +311,6 @@
     <axis xyz="0 1 0" />
   </joint>
 
-  <joint name="standoff_joint" type="fixed">
-    <parent link="robot_base" />
-    <child link="robot_base_standoff" />
-    <origin xyz="0 0 0.045" rpy="0 0 0" />
-    <axis xyz="0 1 0" />
-  </joint>
-
   <joint name="front_left_wheel_joint" type="continuous">
     <parent link="robot_base" />
     <child link="front_left_wheel" />
@@ -315,24 +343,45 @@
     <limit effort="1000.0" velocity="100.0"/>
   </joint>
 
-  <joint name="laptop_joint" type="fixed">
-    <parent link="robot_base_standoff" />
-    <child link="laptop_link" />
-    <origin xyz="0 0 0.03625" rpy="0 0 0" />
+  <joint name="standoff_joint" type="fixed">
+    <parent link="robot_base" />
+    <child link="robot_base_standoff" />
+    <origin xyz="-.0375 0 0.045" rpy="0 0 0" />
     <axis xyz="0 1 0" />
   </joint>
 
-  <joint name="stand_base_joint" type="fixed">
-    <parent link="laptop_link" />
-    <child link="kinect_stand_base" />
-    <origin xyz="-0.11625 0 0.04375" rpy="0 0 0" />
+  <joint name="usb_joint" type="fixed">
+    <parent link="robot_base" />
+    <child link="usb_link" />
+    <origin xyz="-0.005 -0.085 0.0425" rpy="0 0 0" />
+    <axis xyz="0 1 0" /> 
+  </joint>
+
+  <joint name="wiring_joint" type="fixed">
+    <parent link="robot_base" />
+    <child link="wiring_link" />
+    <origin xyz="0.06 0.015 0.0525" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="computer_joint" type="fixed">
+    <parent link="robot_base_standoff" />
+    <child link="computer_link" />
+    <origin xyz="0 0 0.0375" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="wifi_joint" type="fixed">
+    <parent link="computer_link" />
+    <child link="wifi_link" />
+    <origin xyz="-0.06 0 0.15" rpy="0 0 0" />
     <axis xyz="0 1 0" />
   </joint>
 
   <joint name="pan_servo_base" type="fixed">
-    <parent link="kinect_stand_base" />
+    <parent link="robot_base" />
     <child link="pan_servo" />
-    <origin xyz="0.0575 0 0.015" rpy="0 0 0" />
+    <origin xyz="0.10 0.035 .02" rpy="0 0 0" />
     <axis xyz="0 1 0" />
   </joint>
 
@@ -359,17 +408,10 @@
     <axis xyz="0 1 0" />
   </joint>
 
-  <joint name="stand_joint" type="fixed">
-    <parent link="kinect_stand_base" />
-    <child link="kinect_stand" />
-    <origin xyz="-0.01 0.01 0.1725" rpy="0 0 0" />
-    <axis xyz="0 1 0" />
-  </joint>
-
   <joint name="kinect_base_joint" type="fixed">
-    <parent link="kinect_stand" />
+    <parent link="computer_link" />
     <child link="kinect_base" />
-    <origin xyz="0 0 0.1675" rpy="0 0 0" />
+    <origin xyz="-0.02 0 0.04" rpy="0 0 0" />
     <axis xyz="0 1 0" />
   </joint>
 
