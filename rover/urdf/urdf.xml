@@ -26,8 +26,8 @@
     </material>
   </xacro:macro>
 
-  <xacro:macro name="color_dark_green">
-    <material name="dark_green">
+  <xacro:macro name="color_green">
+    <material name="green">
       <color rgba="0 0.75 0.1 1.0" />
     </material>
   </xacro:macro>
@@ -109,7 +109,8 @@
 
   <xacro:property name="wheel_radius" value="0.027051" />
   <xacro:property name="wheel_length" value="0.0531" />
-  <link name="front_left_wheel">
+  <xacro:macro name="wheel" params="name">
+  <link name="${name}">
     <visual>
       <geometry>
         <cylinder radius="${wheel_radius}" length="${wheel_length}" />
@@ -122,48 +123,12 @@
       </geometry>
     </collision>
   </link>
+  </xacro:macro>
 
-  <link name="front_right_wheel">
-    <visual>
-      <geometry>
-        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
-      </geometry>
-      <xacro:color_dark_gray />
-    </visual>
-    <collision>
-      <geometry>
-        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
-      </geometry>
-    </collision>
-  </link>
-
-  <link name="back_left_wheel">
-    <visual>
-      <geometry>
-        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
-      </geometry>
-      <xacro:color_dark_gray />
-    </visual>
-    <collision>
-      <geometry>
-        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
-      </geometry>
-    </collision>
-  </link>
-
-  <link name="back_right_wheel">
-    <visual>
-      <geometry>
-        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
-      </geometry>
-      <xacro:color_dark_gray />
-    </visual>
-    <collision>
-      <geometry>
-        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
-      </geometry>
-    </collision>
-  </link>
+  <xacro:wheel name="front_left_wheel" />
+  <xacro:wheel name="front_right_wheel" />
+  <xacro:wheel name="back_left_wheel" />
+  <xacro:wheel name="back_right_wheel" />
 
   <xacro:property name="laptop_link_dim" value="0.3075 0.35 0.0475" />
   <link name="laptop_link">
@@ -171,7 +136,7 @@
       <geometry>
         <box size="${laptop_link_dim}" />
       </geometry>
-      <xacro:color_dark_green />
+      <xacro:color_green />
     </visual>
     <collision>
       <geometry>
@@ -249,7 +214,7 @@
       <geometry>
         <box size="${kinect_stand_dim}" />
       </geometry>
-      <xacro:color_dark_green />
+      <xacro:color_green />
     </visual>
     <collision>
       <geometry>
