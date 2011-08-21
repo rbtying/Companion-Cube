@@ -1,7 +1,7 @@
 ---
-image_width: 640
-image_height: 480
-camera_name: camera
+image_width: 320
+image_height: 240
+camera_name: lifecam
 camera_matrix:
   rows: 3
   cols: 3

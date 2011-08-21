@@ -12,7 +12,7 @@
 	<param name="rover/right/derivative" value="0" type="double" />
 
 	<node pkg="rover" name="roverBot" type="rover_node" />
-
+<!--
 	<node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
 		<param name="output_frame" value="odom" />
 		<param name="freq" value="20.0" />
@@ -25,4 +25,5 @@
 		<param name="self_diagnose" value="false" />
 		<remap from="imu_data" to="gyro" />
 	</node>
+-->
 </launch>

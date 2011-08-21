@@ -4,7 +4,7 @@
       <param name="width" type="int" value="320" />
       <param name="height" type="int" value="240" />
       <param name="fps" type="int" value="10" />
-      <param name="num_worker_threads" type="int" value="2" />
+      <param name="num_worker_threads" type="int" value="1" />
       <param name="skip_frames" type="int" value="0" />
       <param name="frame_id" type="string" value="lifecam" />
       <param name="device" type="string" value="/dev/video0" />

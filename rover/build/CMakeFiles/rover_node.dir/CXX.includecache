@@ -72,26 +72,6 @@ boost/function.hpp
 boost/thread/thread.hpp
 -
 
-/home/rbtying/robot/rover/src/interface.cpp
-ros/ros.h
--
-stdlib.h
--
-string.h
--
-math.h
--
-stdio.h
--
-string
--
-netinet/in.h
--
-sys/types.h
--
-interface.h
-/home/rbtying/robot/rover/src/interface.h
-
 /home/rbtying/robot/rover/src/rover.cpp
 ros/ros.h
 -

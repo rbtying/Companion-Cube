@@ -1,0 +1,379 @@
+<?xml version="1.0" ?>
+
+<robot name="rover" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+  <!-- Colors -->
+  <xacro:macro name="color_blue">
+    <material name="blue">
+      <color rgba="0 0 0.75 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_yellow">
+    <material name="yellow">
+      <color rgba="0.75 0.75 0 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_red_green">
+    <material name="red_green">
+      <color rgba="1.0 1.0 0 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_dark_gray">
+    <material name="dark_gray">
+      <color rgba="0.3 0.3 0.3 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_green">
+    <material name="green">
+      <color rgba="0 0.75 0.1 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_olive">
+    <material name="olive">
+      <color rgba="0.5 0.5 0 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_aqua">
+    <material name="aqua">
+      <color rgba="0.25 0.3 0 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_dark_purple">
+    <material name="dark_purple">
+      <color rgba="0.3 0 0.3 1.0" />
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="color_magenta">
+    <material name="magenta">
+      <color rgba="1.0 0 1.0 0.5" />
+    </material>
+  </xacro:macro>
+
+  <!-- Links --> 
+  <link name="base_footprint" />
+
+  <!-- Robot movement base representation -->
+  <xacro:property name="robot_base_dim" value="0.205 0.13 0.065" />
+  <link name="robot_base">
+    <visual>
+      <geometry>
+        <box size="${robot_base_dim}" />
+      </geometry>
+      <xacro:color_blue />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${robot_base_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <xacro:property name="robot_base_xbar_dim" value="0.085 0.21 0.065" />
+  <link name="robot_base_crossbar">
+    <visual>
+      <geometry>
+        <box size="${robot_base_xbar_dim}" />
+      </geometry>
+      <xacro:color_blue />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${robot_base_xbar_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <xacro:property name="robot_base_plate_dim" value="0.2051 0.211 0.015" />
+  <link name="robot_base_plate">
+    <visual>
+      <geometry>
+        <box size="${robot_base_plate_dim}" />
+      </geometry>
+      <xacro:color_yellow />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${robot_base_plate_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <xacro:property name="robot_base_standoff_dim" value="0.095 0.095 0.025" />
+  <link name="robot_base_standoff">
+    <visual>
+      <geometry>
+        <box size="${robot_base_standoff_dim}" />
+      </geometry>
+      <xacro:color_red_green />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${robot_base_standoff_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <xacro:property name="wheel_radius" value="0.027051" />
+  <xacro:property name="wheel_length" value="0.0531" />
+  <xacro:macro name="wheel" params="name">
+  <link name="${name}">
+    <visual>
+      <geometry>
+        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
+      </geometry>
+      <xacro:color_dark_gray />
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="${wheel_radius}" length="${wheel_length}" />
+      </geometry>
+    </collision>
+  </link>
+  </xacro:macro>
+
+  <xacro:wheel name="front_left_wheel" />
+  <xacro:wheel name="front_right_wheel" />
+  <xacro:wheel name="back_left_wheel" />
+  <xacro:wheel name="back_right_wheel" />
+
+  <!-- computer representation -->
+  <xacro:property name="computer_link_dim" value="0.10 0.145 0.05" />
+  <link name="computer_link">
+    <visual>
+      <geometry>
+        <box size="${computer_link_dim}" />
+      </geometry>
+      <xacro:color_green />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${computer_link_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- USB hub representation -->
+  <xacro:property name="usb_dim" value="0.19 0.035 0.02" />
+  <link name="usb_link">
+    <visual>
+      <geometry>
+        <box size="${usb_dim}" />
+      </geometry>
+      <xacro:color_olive />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${usb_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- pan/tilt camera representation -->
+  <xacro:property name="pan_servo_dim" value="0.04 0.02 0.035" />
+  <link name="pan_servo">
+    <visual>
+      <geometry>
+        <box size="${pan_servo_dim}" />
+      </geometry>
+      <xacro:color_yellow />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${pan_servo_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <xacro:property name="tilt_servo_dim" value="0.05 0.035 0.04" />
+  <link name="tilt_servo">
+    <visual>
+      <geometry>
+        <box size="${tilt_servo_dim}" />
+      </geometry>
+      <xacro:color_dark_purple />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${tilt_servo_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <xacro:property name="camera_body_rad" value="0.0125" />
+  <xacro:property name="camera_body_len" value="0.055" />
+  <link name="camera_body">
+    <visual>
+      <geometry>
+	<cylinder radius="${camera_body_rad}" length="${camera_body_len}" />
+      </geometry>
+      <xacro:color_magenta />
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="${camera_body_rad}" length="${camera_body_len}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="lifecam" />
+
+  <!-- kinect representation -->
+  <xacro:property name="kinect_base_dim" value="0.06 0.075 0.03" />
+  <link name="kinect_base">
+    <visual>
+      <geometry>
+        <box size="${kinect_base_dim}" />
+      </geometry>
+      <xacro:color_dark_purple />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${kinect_base_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <xacro:property name="openni_camera_dim" value="0.06 0.285 0.035" />
+  <link name="openni_camera">
+    <visual>
+      <geometry>
+        <box size="${openni_camera_dim}" />
+      </geometry>
+      <xacro:color_magenta />
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${openni_camera_dim}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joints -->
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="robot_base" />
+    <origin xyz="0 0 0.0335" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="crossbar_joint" type="fixed">
+    <parent link="robot_base" />
+    <child link="robot_base_crossbar" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="plate_joint" type="fixed">
+    <parent link="robot_base" />
+    <child link="robot_base_plate" />
+    <origin xyz="0 0 0.02575" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="front_left_wheel_joint" type="continuous">
+    <parent link="robot_base" />
+    <child link="front_left_wheel" />
+    <origin xyz="0.07 0.085 -0.01" rpy="-1.57079633 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" velocity="100.0"/>
+  </joint>
+
+  <joint name="front_right_wheel_joint" type="continuous">
+    <parent link="robot_base" />
+    <child link="front_right_wheel" />
+    <origin xyz="0.07 -0.085 -0.01" rpy="1.57079633 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" velocity="100.0"/>
+  </joint>
+
+  <joint name="back_left_wheel_joint" type="continuous">
+    <parent link="robot_base" />
+    <child link="back_left_wheel" />
+    <origin xyz="-0.07 0.085 -0.01" rpy="-1.57079633 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" velocity="100.0"/>
+  </joint>
+
+  <joint name="back_right_wheel_joint" type="continuous">
+    <parent link="robot_base" />
+    <child link="back_right_wheel" />
+    <origin xyz="-0.07 -0.085 -0.01" rpy="1.57079633 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" velocity="100.0"/>
+  </joint>
+
+  <joint name="standoff_joint" type="fixed">
+    <parent link="robot_base" />
+    <child link="robot_base_standoff" />
+    <origin xyz="-.0375 0 0.045" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="usb_joint" type="fixed">
+    <parent link="robot_base" />
+    <child link="usb_link" />
+    <origin xyz="-0.005 -0.085 0.0425" rpy="0 0 0" />
+    <axis xyz="0 1 0" /> 
+  </joint>
+
+  <joint name="computer_joint" type="fixed">
+    <parent link="robot_base_standoff" />
+    <child link="computer_link" />
+    <origin xyz="0 0 0.0375" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="pan_servo_base" type="fixed">
+    <parent link="robot_base" />
+    <child link="pan_servo" />
+    <origin xyz="0.10 0.035 .02" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="pan_servo_joint" type="revolute">
+    <parent link="pan_servo" />
+    <child link="tilt_servo" />
+    <origin xyz="0.02 0 0.0375" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" velocity="1.0" lower="-1.57079633" upper="1.57079633" />
+  </joint>
+
+  <joint name="tilt_servo_joint" type="revolute">
+    <parent link="tilt_servo" />
+    <child link="camera_body" />
+    <origin xyz="0.025 -0.02375 0.01" rpy="0 1.57079633 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="1000.0" velocity="1.0" lower="-1.57079633" upper="1.57079633" />
+  </joint>
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="camera_body" />
+    <child link="lifecam" />
+    <origin xyz="0 0 0.03" rpy="0 0 -1.57079633"/>
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="kinect_base_joint" type="fixed">
+    <parent link="computer_link" />
+    <child link="kinect_base" />
+    <origin xyz="-0.02 0 0.04" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="kinect_joint" type="revolute">
+    <parent link="kinect_base" />
+    <child link="openni_camera" />
+    <origin xyz="0 0 0.0375" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="1000.0" lower="-0.523598776" upper="0.523598776" velocity="0.5" />
+  </joint>
+
+</robot>

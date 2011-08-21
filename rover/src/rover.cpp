@@ -104,7 +104,7 @@ int main(int argc, char** argv) {
 
 	long packetNum = 0;
 
-	ros::Rate r(20.0);
+	ros::Rate r(10.0);
 
 	sensor_msgs::JointState joint_state;
 
