@@ -4,6 +4,11 @@
 	<section name="completion_proposal_size">
 	</section>
 	<section name="CRenameRefactoringInputPage">
+		<item value="false" key="preprocessor"/>
+		<item value="3" key="scope"/>
+		<item value="false" key="comment"/>
+		<item value="false" key="references_inv"/>
+		<item value="" key="workingset"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>

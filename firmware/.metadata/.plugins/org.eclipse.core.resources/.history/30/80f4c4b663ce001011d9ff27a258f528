@@ -104,8 +104,8 @@ int main() {
 	ctrl.rightPID.integral = 0.05;
 	ctrl.rightPID.derivative = 0;
 
-	ctrl.conv.cmPerCountLeft = QP_TO_CM_LEFT;
-	ctrl.conv.cmPerCountRight = QP_TO_CM_RIGHT;
+	ctrl.cmPerCountLeft = QP_TO_CM_LEFT;
+	ctrl.cmPerCountRight = QP_TO_CM_RIGHT;
 
 	// setup encoders
 	uint8_t enc_pins[4] = { RENC_A, RENC_B, LENC_A, LENC_B };
@@ -150,9 +150,9 @@ int main() {
 
 			// PID processing
 			ctrl.leftPID.input = (leftEncCount - pleftEncCount)
-					* ctrl.conv.cmPerCountLeft / dt;
+					* QP_TO_CM_LEFT / dt;
 			ctrl.rightPID.input = (rightEncCount - prightEncCount)
-					* ctrl.conv.cmPerCountRight / dt;
+					* QP_TO_CM_RIGHT / dt;
 			pleftEncCount = leftEncCount;
 			prightEncCount = rightEncCount;
 

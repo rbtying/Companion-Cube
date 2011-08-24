@@ -19,10 +19,10 @@ rover::interface::interface(const char * new_serial_port) {
 	m_port = new cereal::CerealPort();
 
 	m_roverAxleLength = ROVER_DEFAULT_AXLE_LENGTH;
+    m_max_vel = ROVER_MAX_VEL_MM;
 
 	boost::function<void(std::string*)> callback;
 	callback = boost::bind(&rover::interface::processPacket, this, _1);
-//	m_port->startReadLineStream(callback);
 	m_port->startReadBetweenStream(callback, '<', '>');
 }
 
@@ -86,10 +86,10 @@ int rover::interface::drive(double linear_speed, double angular_speed) {
 
 int rover::interface::driveDirect(int left_speed, int right_speed) {
 	// limit velocities
-	int16_t left_speed_mm = max(left_speed, -ROVER_MAX_VEL_MM);
-	left_speed_mm = min(left_speed, ROVER_MAX_VEL_MM);
-	int16_t right_speed_mm = max(right_speed, -ROVER_MAX_VEL_MM);
-	right_speed_mm = min(right_speed, ROVER_MAX_VEL_MM);
+	int16_t left_speed_mm = max(left_speed, -(m_max_vel * 0.001));
+	left_speed_mm = min(left_speed, (m_max_vel * 0.001 ));
+	int16_t right_speed_mm = max(right_speed, -(m_max_vel * 0.001));
+	right_speed_mm = min(right_speed, (m_max_vel * 0.001));
 
 	// ROS_INFO("Driving at [left: %i mm/s, right: %i mm/s]", left_speed_mm, right_speed_mm);
 
@@ -209,6 +209,30 @@ int rover::interface::getSensorPackets(int timeout) {
 	rover::interface::processPacket(&in);
 
 	return 0;
+}
+
+void rover::interface::setConversionFactors(double left, double right) {
+    int16_t left_conv = left * 10000;
+    int16_t right_conv = right * 10000;
+
+    char msg[11];
+    msg[0] = ':';
+    msg[1] = 's';
+    msg[2] = 'C';
+    msg[3] = 'O';
+    msg[4] = 'N';
+    msg[5] = 'V';
+    msg[6] = '!';
+    msg[7] = left_conv >> 8;
+    msg[8] = left_conv & 0xff;
+    msg[9] = right_conv >> 8;
+    msg[10] = right_conv & 0xff;
+
+    try {
+        m_port->write(msg, 11);
+    } catch (cereal::Exception& e) {
+
+    }
 }
 
 void rover::interface::setPID(double lP, double lI, double lD, double rP, double rI, double rD) {

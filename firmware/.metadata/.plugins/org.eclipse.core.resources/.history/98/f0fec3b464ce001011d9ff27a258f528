@@ -33,13 +33,6 @@ struct gyro_data {
 
 typedef struct gyro_data gyro_data;
 
-struct conversion_data {
-	double cmPerCountLeft;
-	double cmPerCountRight;
-};
-
-typedef struct conversion_data conversion_data;
-
 struct control_data {
 	PowerMonitor batt;
 	gyro_data yaw;
@@ -47,7 +40,8 @@ struct control_data {
 	Servo tilt;
 	PID_params leftPID;
 	PID_params rightPID;
-	conversion_data conv;
+	double cmPerCountLeft;
+	double cmPerCountRight;
 };
 
 typedef struct control_data control_data;

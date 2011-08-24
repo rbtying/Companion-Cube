@@ -76,8 +76,8 @@ void Controller::processCommand() {
 		for (uint8_t i = 0; i < 4; i++) {
 			msg[i] = nextByte(250);
 		}
-		m_ctrl->conv.cmPerCountLeft = ((msg[0] << 8) | msg[1]) * 0.00001;
-		m_ctrl->conv.cmPerCountRight = ((msg[2] << 8) | msg[3]) * 0.00001;
+		m_ctrl->cmPerCountLeft = ((msg[0] << 8) | msg[1]) * 0.00001;
+		m_ctrl->cmPerCountRight = ((msg[2] << 8) | msg[3]) * 0.00001;
 	} else if (strstr(m_buf, "gPIDH") != NULL) {
 		Serial.print("left PID: [");
 		Serial.print(m_ctrl->leftPID.proportional, DEC);

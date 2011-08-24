@@ -25,8 +25,8 @@ control_data ctrl;
 
 volatile long leftEncCount, rightEncCount, pleftEncCount, prightEncCount;
 volatile bool leftEncBSet, rightEncBSet;
-#define QP_TO_CM_LEFT (0.00199491134)
-#define QP_TO_CM_RIGHT (0.00199491134)
+#define QP_TO_CM (0.004249148)
+#define QPPS_TO_CMPS_RIGHT (0.004249148)
 
 int16_t lspeed, rspeed;
 
@@ -104,9 +104,6 @@ int main() {
 	ctrl.rightPID.integral = 0.05;
 	ctrl.rightPID.derivative = 0;
 
-	ctrl.conv.cmPerCountLeft = QP_TO_CM_LEFT;
-	ctrl.conv.cmPerCountRight = QP_TO_CM_RIGHT;
-
 	// setup encoders
 	uint8_t enc_pins[4] = { RENC_A, RENC_B, LENC_A, LENC_B };
 	for (uint8_t i = 0; i < 4; i++) {
@@ -150,9 +147,9 @@ int main() {
 
 			// PID processing
 			ctrl.leftPID.input = (leftEncCount - pleftEncCount)
-					* ctrl.conv.cmPerCountLeft / dt;
+					* QP_TO_CM / dt;
 			ctrl.rightPID.input = (rightEncCount - prightEncCount)
-					* ctrl.conv.cmPerCountRight / dt;
+					* QPPS_TO_CMPS_RIGHT / dt;
 			pleftEncCount = leftEncCount;
 			prightEncCount = rightEncCount;
 

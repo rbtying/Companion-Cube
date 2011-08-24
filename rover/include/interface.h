@@ -32,6 +32,7 @@ public:
 
 	int setServos(double panAngle, double tiltAngle);
 
+    void setConversionFactors(double left, double right);
 	void setPID(double lP, double lI, double lD, double rP, double rI, double rD);
 
 	void resetOdometry();
@@ -54,6 +55,7 @@ public:
 	double m_pan_angle;
 
 	double m_roverAxleLength;
+    double m_max_vel;
 
 	bool newPacket;
 private:
