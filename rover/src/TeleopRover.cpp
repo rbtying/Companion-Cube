@@ -25,7 +25,7 @@ TeleopRover::TeleopRover():
 	m_joy_sub = m_n.subscribe<joy::Joy>("joy", 10, &TeleopRover::joyCallback, this);
 
 	std_msgs::Float64 kinect_msg;
-	kinect_msg.data = 0;
+	m_n.param("kinect_default_angle", kinect_msg.data, 0.0);
 	m_kinect_angle = kinect_msg.data;
 	m_kinect_tilt_pub.publish(kinect_msg);
 }

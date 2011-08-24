@@ -62,7 +62,7 @@ int main(int argc, char** argv) {
 	// parameters
 	n.param<double> ("rover/axleLength", bot->m_roverAxleLength,
 			bot->m_roverAxleLength);
-    n.param<double> ("rover/maxSpeed", bot->m_max_vel,
+	n.param<double> ("rover/maxSpeed", bot->m_max_vel,
             bot->m_max_vel);
 	n.param<double> ("rover/left/proportional", lP, 0.3);
 	n.param<double> ("rover/left/integral", lI, 0.05);
@@ -72,8 +72,8 @@ int main(int argc, char** argv) {
 	n.param<double> ("rover/right/integral", rI, 0.05);
 	n.param<double> ("rover/right/derivative", rD, 0);
 
-    n.param<double> ("rover/left/conversion_factor", le, 0.00199491134);
-    n.param<double> ("rover/right/conversion_factor", re, 0.00199491134);
+    	n.param<double> ("rover/left/conversion_factor", le, 0.00199491134);
+    	n.param<double> ("rover/right/conversion_factor", re, 0.00199491134);
 
 	// publishers
 	ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry> ("/odom", 50);
@@ -114,7 +114,7 @@ int main(int argc, char** argv) {
 	sensor_msgs::JointState joint_state;
 
 	bot->setPID(lP, lI, lD, rP, rI, rD);
-    bot->setConversionFactors(le, re);
+    	bot->setConversionFactors(le, re);
 
 	// main processing loop
 	while (n.ok()) {

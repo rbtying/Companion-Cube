@@ -2,6 +2,7 @@
 	<param name="rover/port" value="/dev/ttyRoverFTDI" type="str" />
 
 	<param name="rover/axleLength" value="0.202666667" type="double" />
+	<param name="rover/maxSpeed" value="0.5" type="double" />
 
 	<param name="rover/left/proportional" value="0.5" type="double" />
 	<param name="rover/left/integral" value="0.01" type="double" />
@@ -10,6 +11,9 @@
 	<param name="rover/right/proportional" value="0.5" type="double" />
 	<param name="rover/right/integral" value="0.01" type="double" />
 	<param name="rover/right/derivative" value="0" type="double" />
+
+	<param name="rover/left/conversion_factor" value="0.00199491134" type="double" />
+	<param name="rover/right/conversion_factor" value="0.00199491134" type="double" />
 
 	<node pkg="rover" name="roverBot" type="rover_node" />
 
