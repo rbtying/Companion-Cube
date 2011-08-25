@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="22" version="2.0">
+<workbench progressCount="14" version="2.0">
 <workbenchAdvisor/>
 <window height="741" maximized="true" width="1010" x="296" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -36,22 +36,17 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/Main.cc" title="Main.cc" tooltip="ROS_mini/src/Main.cc" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="873" selectionTopPixel="141"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" partName="Controller.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/Controller.cc" title="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" partName="Controller.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/Controller.cc" title="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/lib/Controller.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2121" selectionTopPixel="935"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2076" selectionTopPixel="957"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" partName="control_struct.h" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/control_struct.h" title="control_struct.h" tooltip="ROS_mini/src/lib/control_struct.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/lib/control_struct.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="784" selectionTopPixel="413"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/Main.cc" title="Main.cc" tooltip="ROS_mini/src/Main.cc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/Main.cc"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3104" selectionTopPixel="2147"/>
 </editor>
 </editors>
 <views>
@@ -317,88 +312,13 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/control_struct.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/Main.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/control_struct.h"/>
 </editors>
 <item historyLabel="Controller.cc" index="0">
-<position info="not_deleted" x="4313" y="0"/>
+<position info="not_deleted" x="2076" y="0"/>
 </item>
-<item historyLabel="control_struct.h" index="1">
-<position info="not_deleted" x="712" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="2">
+<item active="true" historyLabel="Main.cc" index="1">
 <position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="1542" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="4">
-<position/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="1836" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="4">
-<position/>
-</item>
-<item historyLabel="control_struct.h" index="4">
-<position/>
-</item>
-<item historyLabel="Main.cc" index="2">
-<position info="not_deleted" x="2447" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="1836" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="2010" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="2045" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="2057" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="2073" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="2119" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="2216" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="2">
-<position info="not_deleted" x="617" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="2216" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="2216" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="4">
-<position info="not_deleted" x="784" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="2121" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="2">
-<position info="not_deleted" x="617" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="4">
-<position info="not_deleted" x="784" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="2121" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="2">
-<position info="not_deleted" x="873" y="0"/>
-</item>
-<item active="true" historyLabel="Controller.cc" index="3">
-<position info="not_deleted" x="2121" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -417,14 +337,14 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" tooltip="ROS_mini/src/lib/control_struct.h">
-<persistable path="/ROS_mini/src/lib/control_struct.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mini/src/Main.cc">
+<persistable path="/ROS_mini/src/Main.cc"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc">
 <persistable path="/ROS_mini/src/lib/Controller.cc"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mini/src/Main.cc">
-<persistable path="/ROS_mini/src/Main.cc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" tooltip="ROS_mini/src/lib/control_struct.h">
+<persistable path="/ROS_mini/src/lib/control_struct.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Gyro.h" tooltip="ROS_mini/src/lib/Gyro.h">
 <persistable path="/ROS_mini/src/lib/Gyro.h"/>
