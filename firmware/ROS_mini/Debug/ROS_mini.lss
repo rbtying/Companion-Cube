@@ -2918,10 +2918,10 @@ Disassembly of section .text:
     1782:	80 95       	com	r24
     1784:	98 2f       	mov	r25, r24
     1786:	0e 94 f9 04 	call	0x9f2	; 0x9f2 <__floatsisf>
-    178a:	2c ea       	ldi	r18, 0xAC	; 172
-    178c:	35 ec       	ldi	r19, 0xC5	; 197
-    178e:	47 e2       	ldi	r20, 0x27	; 39
-    1790:	57 e3       	ldi	r21, 0x37	; 55
+    178a:	27 e1       	ldi	r18, 0x17	; 23
+    178c:	37 eb       	ldi	r19, 0xB7	; 183
+    178e:	41 ed       	ldi	r20, 0xD1	; 209
+    1790:	58 e3       	ldi	r21, 0x38	; 56
     1792:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
     1796:	f8 01       	movw	r30, r16
     1798:	61 93       	st	Z+, r22
@@ -2940,10 +2940,10 @@ Disassembly of section .text:
     17b2:	80 95       	com	r24
     17b4:	98 2f       	mov	r25, r24
     17b6:	0e 94 f9 04 	call	0x9f2	; 0x9f2 <__floatsisf>
-    17ba:	2c ea       	ldi	r18, 0xAC	; 172
-    17bc:	35 ec       	ldi	r19, 0xC5	; 197
-    17be:	47 e2       	ldi	r20, 0x27	; 39
-    17c0:	57 e3       	ldi	r21, 0x37	; 55
+    17ba:	27 e1       	ldi	r18, 0x17	; 23
+    17bc:	37 eb       	ldi	r19, 0xB7	; 183
+    17be:	41 ed       	ldi	r20, 0xD1	; 209
+    17c0:	58 e3       	ldi	r21, 0x38	; 56
     17c2:	0e 94 63 02 	call	0x4c6	; 0x4c6 <__mulsf3>
     17c6:	d8 01       	movw	r26, r16
     17c8:	6d 93       	st	X+, r22

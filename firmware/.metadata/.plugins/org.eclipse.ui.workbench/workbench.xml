@@ -40,13 +40,13 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" partName="Controller.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/Controller.cc" title="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" partName="Controller.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/Controller.cc" title="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/lib/Controller.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2076" selectionTopPixel="957"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2208" selectionTopPixel="957"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/Main.cc" title="Main.cc" tooltip="ROS_mini/src/Main.cc" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/Main.cc" title="Main.cc" tooltip="ROS_mini/src/Main.cc" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3346" selectionTopPixel="2147"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2238" selectionTopPixel="1887"/>
 </editor>
 </editors>
 <views>
@@ -314,12 +314,19 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/Main.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/Main.cc"/>
 </editors>
 <item historyLabel="Controller.cc" index="0">
 <position info="not_deleted" x="2076" y="0"/>
 </item>
 <item historyLabel="Main.cc" index="1">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="2">
+<position info="not_deleted" x="2076" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="3">
+<position info="not_deleted" x="3346" y="0"/>
 </item>
 <item active="true" historyLabel="Controller.cc" index="2">
 <position info="not_deleted" x="2076" y="0"/>
