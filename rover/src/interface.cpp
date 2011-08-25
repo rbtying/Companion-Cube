@@ -19,7 +19,7 @@ rover::interface::interface(const char * new_serial_port) {
 	m_port = new cereal::CerealPort();
 
 	m_roverAxleLength = ROVER_DEFAULT_AXLE_LENGTH;
-    m_max_vel = ROVER_MAX_VEL_MM;
+    	m_max_vel = ROVER_MAX_VEL_MM;
 
 	boost::function<void(std::string*)> callback;
 	callback = boost::bind(&rover::interface::processPacket, this, _1);
@@ -86,10 +86,10 @@ int rover::interface::drive(double linear_speed, double angular_speed) {
 
 int rover::interface::driveDirect(int left_speed, int right_speed) {
 	// limit velocities
-	int16_t left_speed_mm = max(left_speed, -(m_max_vel * 0.001));
-	left_speed_mm = min(left_speed, (m_max_vel * 0.001 ));
-	int16_t right_speed_mm = max(right_speed, -(m_max_vel * 0.001));
-	right_speed_mm = min(right_speed, (m_max_vel * 0.001));
+	int16_t left_speed_mm = max(left_speed, -(m_max_vel * 1000));
+	left_speed_mm = min(left_speed, (m_max_vel * 1000 ));
+	int16_t right_speed_mm = max(right_speed, -(m_max_vel * 1000));
+	right_speed_mm = min(right_speed, (m_max_vel * 1000));
 
 	// ROS_INFO("Driving at [left: %i mm/s, right: %i mm/s]", left_speed_mm, right_speed_mm);
 
