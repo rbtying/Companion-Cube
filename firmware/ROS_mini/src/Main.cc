@@ -150,9 +150,9 @@ int main() {
 
 			// PID processing
 			ctrl.leftPID.input = (leftEncCount - pleftEncCount)
-					* QP_TO_CM_LEFT/*ctrl.conv.cmPerCountLeft*/ / dt;
+					* ctrl.conv.cmPerCountLeft / dt;
 			ctrl.rightPID.input = (rightEncCount - prightEncCount)
-					* QP_TO_CM_RIGHT/*ctrl.conv.cmPerCountRight*/ / dt;
+					* ctrl.conv.cmPerCountRight / dt;
 			pleftEncCount = leftEncCount;
 			prightEncCount = rightEncCount;
 

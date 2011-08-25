@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="22" version="2.0">
 <workbenchAdvisor/>
 <window height="741" maximized="true" width="1010" x="296" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -46,7 +46,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/Main.cc" title="Main.cc" tooltip="ROS_mini/src/Main.cc" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3104" selectionTopPixel="2147"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3346" selectionTopPixel="2147"/>
 </editor>
 </editors>
 <views>
@@ -313,12 +313,16 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/Main.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
 </editors>
 <item historyLabel="Controller.cc" index="0">
 <position info="not_deleted" x="2076" y="0"/>
 </item>
-<item active="true" historyLabel="Main.cc" index="1">
+<item historyLabel="Main.cc" index="1">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="Controller.cc" index="2">
+<position info="not_deleted" x="2076" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
