@@ -9,5 +9,6 @@
   </node>
 
   <!-- ps3 teleoperation -->
+  <param name="speed" type="double" value="0.25" />
   <node pkg="rover" type="rover_teleop_joy" name="teleop" />
 </launch>
