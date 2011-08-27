@@ -7,8 +7,8 @@
 		<item value="false" key="preprocessor"/>
 		<item value="3" key="scope"/>
 		<item value="false" key="comment"/>
-		<item value="false" key="references_inv"/>
 		<item value="" key="workingset"/>
+		<item value="false" key="references_inv"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>

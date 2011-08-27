@@ -24,6 +24,10 @@ private:
 
   int m_linear, m_angular, m_panservo, m_tiltservo, m_tiltkinect_up, m_tiltkinect_down;
 
+  int m_enable, m_autonomous_on, m_autonomous_off;
+
+  bool m_autoMode;
+
   double m_kinect_angle;
 
   double m_limit_speed, m_limit_angular_speed;

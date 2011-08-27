@@ -315,6 +315,7 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/Main.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/Main.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/Main.cc"/>
 </editors>
 <item historyLabel="Controller.cc" index="0">
 <position info="not_deleted" x="2076" y="0"/>
@@ -328,8 +329,11 @@
 <item historyLabel="Main.cc" index="3">
 <position info="not_deleted" x="3346" y="0"/>
 </item>
-<item active="true" historyLabel="Controller.cc" index="2">
+<item historyLabel="Controller.cc" index="2">
 <position info="not_deleted" x="2076" y="0"/>
+</item>
+<item active="true" historyLabel="Main.cc" index="4">
+<position info="not_deleted" x="2238" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
