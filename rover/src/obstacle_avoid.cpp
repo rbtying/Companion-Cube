@@ -29,7 +29,7 @@ void laserCallback( const boost::shared_ptr<const LaserScan>& scan ) {
     // the increment is givne as well.
     double MAX_ANG = scan->angle_max;
     double MIN_ANG = scan->angle_min;
-    double inc = scan->angle_icrement;
+    double inc = scan->angle_increment;
 
     // we can only iterate through the number of scan indices given
     int bins = ( int ) ( ( MAX_ANG - MIN_ANG ) / inc );
@@ -42,7 +42,7 @@ void laserCallback( const boost::shared_ptr<const LaserScan>& scan ) {
 
     // iterate through everything to find min/max values of angle and distance.
     for ( int bin = 0; bin < bins; bin++ ) {
-        double angle = MIN_ANGLE + bin * inc;
+        double angle = MIN_ANG + bin * inc;
         double range = scan->ranges[bin];
 
         if ( range > scan->range_min && range < minDist ) {
@@ -102,6 +102,8 @@ int main ( int argc, char** argv ) {
     n.param( "turn_rate_in_place", turn_in_place_rate, 0.2 );
     n.param( "speed", cruise_speed, CRUISING_SPEED );
 
+    int automatic;
+
     // loop while node is active
     while ( n.ok() ) {
         current_time = ros::Time::now();
@@ -126,4 +128,14 @@ int main ( int argc, char** argv ) {
         ros::spinOnce();
         loop_rate.sleep();
     }
+
+    geometry_msgs::Twist cmdVelMsg;
+    cmdVelMsg.angular.x = 0.0;
+    cmdVelMsg.angular.y = 0.0;
+    cmdVelMsg.angular.z = 0.0;
+    cmdVelMsg.linear.x = 0.0;
+    cmdVelMsg.linear.y = 0.0;
+    cmdVelMsg.linear.z = 0.0;
+
+    cmdVelPub.publish( cmdVelMsg );
 }

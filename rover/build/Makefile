@@ -381,6 +381,19 @@ umbmark/fast:
 	$(MAKE) -f CMakeFiles/umbmark.dir/build.make CMakeFiles/umbmark.dir/build
 .PHONY : umbmark/fast
 
+#=============================================================================
+# Target rules for targets named wanderer
+
+# Build rule for target.
+wanderer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wanderer
+.PHONY : wanderer
+
+# fast build rule for target.
+wanderer/fast:
+	$(MAKE) -f CMakeFiles/wanderer.dir/build.make CMakeFiles/wanderer.dir/build
+.PHONY : wanderer/fast
+
 # target to build an object file
 src/TeleopRover.o:
 	$(MAKE) -f CMakeFiles/rover_teleop_joy.dir/build.make CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.o
@@ -413,6 +426,21 @@ src/interface.s:
 	$(MAKE) -f CMakeFiles/roverInterface.dir/build.make CMakeFiles/roverInterface.dir/src/interface.s
 	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/interface.s
 .PHONY : src/interface.s
+
+# target to build an object file
+src/obstacle_avoid.o:
+	$(MAKE) -f CMakeFiles/wanderer.dir/build.make CMakeFiles/wanderer.dir/src/obstacle_avoid.o
+.PHONY : src/obstacle_avoid.o
+
+# target to preprocess a source file
+src/obstacle_avoid.i:
+	$(MAKE) -f CMakeFiles/wanderer.dir/build.make CMakeFiles/wanderer.dir/src/obstacle_avoid.i
+.PHONY : src/obstacle_avoid.i
+
+# target to generate assembly for a file
+src/obstacle_avoid.s:
+	$(MAKE) -f CMakeFiles/wanderer.dir/build.make CMakeFiles/wanderer.dir/src/obstacle_avoid.s
+.PHONY : src/obstacle_avoid.s
 
 # target to build an object file
 src/ps3_control.o:
@@ -489,12 +517,16 @@ help:
 	@echo "... test-results-run"
 	@echo "... tests"
 	@echo "... umbmark"
+	@echo "... wanderer"
 	@echo "... src/TeleopRover.o"
 	@echo "... src/TeleopRover.i"
 	@echo "... src/TeleopRover.s"
 	@echo "... src/interface.o"
 	@echo "... src/interface.i"
 	@echo "... src/interface.s"
+	@echo "... src/obstacle_avoid.o"
+	@echo "... src/obstacle_avoid.i"
+	@echo "... src/obstacle_avoid.s"
 	@echo "... src/ps3_control.o"
 	@echo "... src/ps3_control.i"
 	@echo "... src/ps3_control.s"

@@ -64,4 +64,10 @@ void TeleopRover::joyCallback(const joy::Joy::ConstPtr& joy)
 	m_kinect_angle = kinectServoAngle.data;
 
 	m_kinect_tilt_pub.publish(kinectServoAngle);
+
+    if (joy->buttons[14]) {
+        m_n.setParam("autoMode", 1);
+    } else {
+        m_n.setParam("autoMode", 0);
+    }
 }

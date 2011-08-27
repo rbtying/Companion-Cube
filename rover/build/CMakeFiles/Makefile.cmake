@@ -76,4 +76,5 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test-results-run.dir/DependInfo.cmake"
   "CMakeFiles/tests.dir/DependInfo.cmake"
   "CMakeFiles/umbmark.dir/DependInfo.cmake"
+  "CMakeFiles/wanderer.dir/DependInfo.cmake"
   )

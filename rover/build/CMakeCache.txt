@@ -183,7 +183,7 @@ TOOLCHAINCONFIG:FILEPATH=TOOLCHAINCONFIG-NOTFOUND
 USERCONFIG:FILEPATH=USERCONFIG-NOTFOUND
 
 //Path to a file.
-_file_name:FILEPATH=/home/rbtying/robot/rover/src/TeleopRover.cpp
+_file_name:FILEPATH=/home/rbtying/robot/rover/src/obstacle_avoid.cpp
 
 //Dependencies for the target
 roverInterface_LIB_DEPENDS:STATIC=general;actionlib;general;tf;general;BulletDynamics;general;BulletCollision;general;LinearMath;general;message_filters;general;sensor_msgs;general;cereal_port;general;rosbag;general;topic_tools;general;ros;general;boost_signals-mt;general;roscpp_serialization;general;XmlRpc;general;rosconsole;general;boost_thread-mt;general;log4cxx;general;rostime;general;cpp_common;general;roslib;general;rospack;general;rosstack;

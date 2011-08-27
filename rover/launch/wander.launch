@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="rover" type="wanderer" name="wanderer_node" output="screen">
+        <remap from="scan" to="laserScanHoriz" />
+        <param name="threshold" value="0.5" />
+        <param name="speed" value="0.05" />
+        <param name="turn_rate" value="0.50" />
+        <param name="turn_rate_in_place" value="0.20" />
+    </node>
+</launch>

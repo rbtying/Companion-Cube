@@ -761,6 +761,41 @@ clean: CMakeFiles/umbmark.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/wanderer.dir
+
+# All Build rule for target.
+CMakeFiles/wanderer.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/wanderer.dir/build.make CMakeFiles/wanderer.dir/depend
+	$(MAKE) -f CMakeFiles/wanderer.dir/build.make CMakeFiles/wanderer.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles  14
+	@echo "Built target wanderer"
+.PHONY : CMakeFiles/wanderer.dir/all
+
+# Include target in all.
+all: CMakeFiles/wanderer.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/wanderer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rbtying/robot/rover/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/wanderer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rbtying/robot/rover/build/CMakeFiles 0
+.PHONY : CMakeFiles/wanderer.dir/rule
+
+# Convenience name for target.
+wanderer: CMakeFiles/wanderer.dir/rule
+.PHONY : wanderer
+
+# clean rule for target.
+CMakeFiles/wanderer.dir/clean:
+	$(MAKE) -f CMakeFiles/wanderer.dir/build.make CMakeFiles/wanderer.dir/clean
+.PHONY : CMakeFiles/wanderer.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/wanderer.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.
