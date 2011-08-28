@@ -5,4 +5,8 @@
           LEFT
           RIGHT-VAL
           RIGHT
+          LEFTCOUNT-VAL
+          LEFTCOUNT
+          RIGHTCOUNT-VAL
+          RIGHTCOUNT
 ))

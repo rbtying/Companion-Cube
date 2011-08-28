@@ -154,7 +154,7 @@ void rover::interface::processPacket(std::string * packet) {
 		data[i] = static_cast<uint8_t>(packet->at(i));
 	}
 
-	if (packet->size() == 17) {
+	if (packet->size() == 25) {
 		ros::Time current_time = ros::Time::now();
 		double dt = (current_time - m_lastSensorUpdateTime).toSec();
 
@@ -166,13 +166,25 @@ void rover::interface::processPacket(std::string * packet) {
 		m_velocity_left = leftSpeed / 10000.0;
 		m_velocity_right = rightSpeed / 10000.0;
 
+        uint32_t leftCount = data[16] << 24u | data[17] << 16u | data[18] << 8u 
+            | data[19];
+        uint32_t rightCount = data[20] << 24u | data[21] << 16u | data[22] << 8u
+            | data[23];
+
+        m_encoder_left = leftCount;
+        m_encoder_right = rightCount;
+
 		if (!(data[9] & (1 << 0)))
 			m_velocity_left *= -1;
 		if (!(data[9] & (1 << 1)))
 			m_velocity_right *= -1;
+        if (!(data[9] & (1 << 4)))
+            m_encoder_left *= -1;
+        if (!(data[9] & (1 << 5)))
+            m_encoder_right *= -1;
 		
-		m_gyro_yawrate = yawRate / 1000.0;
-		m_gyro_yaw = yaw / 1000.0;
+		m_gyro_yawrate = yawRate / 1000.0 * m_gyro_correction;
+		m_gyro_yaw += m_gyro_yawrate * dt;
 
 		if (!(data[9] & (1 << 2)))
 			m_gyro_yawrate *= -1;

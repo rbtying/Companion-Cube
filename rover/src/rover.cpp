@@ -77,6 +77,7 @@ int main(int argc, char** argv) {
 
     double gyro_bias;
     n.param<double> ("rover/gyro_bias", gyro_bias, 0.0);
+    n.param<double> ("rover/gyro_correction", bot->m_gyro_correction, 1.0);
 
     double batt_threshold;
     n.param<double> ("rover/batt_threshold", batt_threshold, 13.0);
@@ -84,8 +85,8 @@ int main(int argc, char** argv) {
 	// publishers
 	ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry> ("/odom", 50);
 	ros::Publisher enc_pub = n.advertise<rover::Encoder> ("/encoders", 50);
-	ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu> ("/gyro/raw", 50);
-    ros::Publisher imu_bias_pub = n.advertise<sensor_msgs::Imu> ("/gyro/data", 50);
+	ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu> ("/imu/raw", 50);
+    ros::Publisher imu_bias_pub = n.advertise<sensor_msgs::Imu> ("/imu/data", 50);
 	ros::Publisher batt_pub = n.advertise<rover::Battery> ("/battery", 50);
 	ros::Publisher joint_pub = n.advertise<sensor_msgs::JointState> ("/joint_states", 1);
 	ros::Publisher pan_pub = n.advertise<std_msgs::Float64> ("/pan/cur_angle", 1);
@@ -116,7 +117,7 @@ int main(int argc, char** argv) {
 
 	long packetNum = 0;
 
-	ros::Rate r(10.0);
+	ros::Rate r(25.0);
 
 	sensor_msgs::JointState joint_state;
 
@@ -227,6 +228,8 @@ int main(int argc, char** argv) {
 			enc_msg.header.frame_id = "base_footprint";
 			enc_msg.left = bot->m_velocity_left;
 			enc_msg.right = bot->m_velocity_right;
+            enc_msg.leftCount = bot->m_encoder_left;
+            enc_msg.rightCount = bot->m_encoder_right;
 
 			// send the message
 			enc_pub.publish(enc_msg);

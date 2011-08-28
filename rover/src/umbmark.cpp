@@ -94,9 +94,9 @@ public:
     
     //we will be sending commands of type "twist"
     geometry_msgs::Twist base_cmd;
-    //the command will be to turn at 0.75 rad/s
+    //the command will be to turn at 0.1 rad/s
     base_cmd.linear.x = base_cmd.linear.y = 0.0;
-    base_cmd.angular.z = 0.75;
+    base_cmd.angular.z = 0.1;
     if (clockwise) base_cmd.angular.z = -base_cmd.angular.z;
     
     //the axis we want to be rotating by

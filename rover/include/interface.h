@@ -50,12 +50,14 @@ public:
 	double m_battery_voltage;
 	double m_battery_current;
 	double m_velocity_left, m_velocity_right;
+    long m_encoder_left, m_encoder_right;
 
 	double m_tilt_angle;
 	double m_pan_angle;
 
 	double m_roverAxleLength;
     double m_max_vel;
+    double m_gyro_correction;
 
 	bool newPacket;
 private:

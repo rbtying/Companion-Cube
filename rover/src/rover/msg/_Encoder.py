@@ -5,12 +5,14 @@ import struct
 import std_msgs.msg
 
 class Encoder(roslib.message.Message):
-  _md5sum = "b7824dbc6876539e023bc92130e483cb"
+  _md5sum = "de119eee212c1abe8e3499aeef85f36a"
   _type = "rover/Encoder"
   _has_header = True #flag to mark the presence of a Header object
   _full_text = """Header header
 float32 left
 float32 right
+int32 leftCount
+int32 rightCount
 
 ================================================================================
 MSG: std_msgs/Header
@@ -31,8 +33,8 @@ time stamp
 string frame_id
 
 """
-  __slots__ = ['header','left','right']
-  _slot_types = ['Header','float32','float32']
+  __slots__ = ['header','left','right','leftCount','rightCount']
+  _slot_types = ['Header','float32','float32','int32','int32']
 
   def __init__(self, *args, **kwds):
     """
@@ -42,7 +44,7 @@ string frame_id
     changes.  You cannot mix in-order arguments and keyword arguments.
     
     The available fields are:
-       header,left,right
+       header,left,right,leftCount,rightCount
     
     @param args: complete set of field values, in .msg order
     @param kwds: use keyword arguments corresponding to message field names
@@ -57,10 +59,16 @@ string frame_id
         self.left = 0.
       if self.right is None:
         self.right = 0.
+      if self.leftCount is None:
+        self.leftCount = 0
+      if self.rightCount is None:
+        self.rightCount = 0
     else:
       self.header = std_msgs.msg._Header.Header()
       self.left = 0.
       self.right = 0.
+      self.leftCount = 0
+      self.rightCount = 0
 
   def _get_types(self):
     """
@@ -81,7 +89,7 @@ string frame_id
       length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_2f.pack(_x.left, _x.right))
+      buff.write(_struct_2f2i.pack(_x.left, _x.right, _x.leftCount, _x.rightCount))
     except struct.error, se: self._check_types(se)
     except TypeError, te: self._check_types(te)
 
@@ -107,8 +115,8 @@ string frame_id
       self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 8
-      (_x.left, _x.right,) = _struct_2f.unpack(str[start:end])
+      end += 16
+      (_x.left, _x.right, _x.leftCount, _x.rightCount,) = _struct_2f2i.unpack(str[start:end])
       return self
     except struct.error, e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
@@ -129,7 +137,7 @@ string frame_id
       length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_2f.pack(_x.left, _x.right))
+      buff.write(_struct_2f2i.pack(_x.left, _x.right, _x.leftCount, _x.rightCount))
     except struct.error, se: self._check_types(se)
     except TypeError, te: self._check_types(te)
 
@@ -157,12 +165,12 @@ string frame_id
       self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 8
-      (_x.left, _x.right,) = _struct_2f.unpack(str[start:end])
+      end += 16
+      (_x.left, _x.right, _x.leftCount, _x.rightCount,) = _struct_2f2i.unpack(str[start:end])
       return self
     except struct.error, e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = roslib.message.struct_I
 _struct_3I = struct.Struct("<3I")
-_struct_2f = struct.Struct("<2f")
+_struct_2f2i = struct.Struct("<2f2i")

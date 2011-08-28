@@ -23,6 +23,8 @@ struct Encoder_ : public ros::Message
   : header()
   , left(0.0)
   , right(0.0)
+  , leftCount(0)
+  , rightCount(0)
   {
   }
 
@@ -30,6 +32,8 @@ struct Encoder_ : public ros::Message
   : header(_alloc)
   , left(0.0)
   , right(0.0)
+  , leftCount(0)
+  , rightCount(0)
   {
   }
 
@@ -42,6 +46,12 @@ struct Encoder_ : public ros::Message
   typedef float _right_type;
   float right;
 
+  typedef int32_t _leftCount_type;
+  int32_t leftCount;
+
+  typedef int32_t _rightCount_type;
+  int32_t rightCount;
+
 
 private:
   static const char* __s_getDataType_() { return "rover/Encoder"; }
@@ -51,7 +61,7 @@ public:
   ROS_DEPRECATED const std::string __getDataType() const { return __s_getDataType_(); }
 
 private:
-  static const char* __s_getMD5Sum_() { return "b7824dbc6876539e023bc92130e483cb"; }
+  static const char* __s_getMD5Sum_() { return "de119eee212c1abe8e3499aeef85f36a"; }
 public:
   ROS_DEPRECATED static const std::string __s_getMD5Sum() { return __s_getMD5Sum_(); }
 
@@ -61,6 +71,8 @@ private:
   static const char* __s_getMessageDefinition_() { return "Header header\n\
 float32 left\n\
 float32 right\n\
+int32 leftCount\n\
+int32 rightCount\n\
 \n\
 ================================================================================\n\
 MSG: std_msgs/Header\n\
@@ -92,6 +104,8 @@ public:
     ros::serialization::serialize(stream, header);
     ros::serialization::serialize(stream, left);
     ros::serialization::serialize(stream, right);
+    ros::serialization::serialize(stream, leftCount);
+    ros::serialization::serialize(stream, rightCount);
     return stream.getData();
   }
 
@@ -101,6 +115,8 @@ public:
     ros::serialization::deserialize(stream, header);
     ros::serialization::deserialize(stream, left);
     ros::serialization::deserialize(stream, right);
+    ros::serialization::deserialize(stream, leftCount);
+    ros::serialization::deserialize(stream, rightCount);
     return stream.getData();
   }
 
@@ -110,6 +126,8 @@ public:
     size += ros::serialization::serializationLength(header);
     size += ros::serialization::serializationLength(left);
     size += ros::serialization::serializationLength(right);
+    size += ros::serialization::serializationLength(leftCount);
+    size += ros::serialization::serializationLength(rightCount);
     return size;
   }
 
@@ -138,12 +156,12 @@ template<class ContainerAllocator>
 struct MD5Sum< ::rover::Encoder_<ContainerAllocator> > {
   static const char* value() 
   {
-    return "b7824dbc6876539e023bc92130e483cb";
+    return "de119eee212c1abe8e3499aeef85f36a";
   }
 
   static const char* value(const  ::rover::Encoder_<ContainerAllocator> &) { return value(); } 
-  static const uint64_t static_value1 = 0xb7824dbc6876539eULL;
-  static const uint64_t static_value2 = 0x023bc92130e483cbULL;
+  static const uint64_t static_value1 = 0xde119eee212c1abeULL;
+  static const uint64_t static_value2 = 0x8e3499aeef85f36aULL;
 };
 
 template<class ContainerAllocator>
@@ -163,6 +181,8 @@ struct Definition< ::rover::Encoder_<ContainerAllocator> > {
     return "Header header\n\
 float32 left\n\
 float32 right\n\
+int32 leftCount\n\
+int32 rightCount\n\
 \n\
 ================================================================================\n\
 MSG: std_msgs/Header\n\
@@ -205,6 +225,8 @@ template<class ContainerAllocator> struct Serializer< ::rover::Encoder_<Containe
     stream.next(m.header);
     stream.next(m.left);
     stream.next(m.right);
+    stream.next(m.leftCount);
+    stream.next(m.rightCount);
   }
 
   ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -229,6 +251,10 @@ s << std::endl;
     Printer<float>::stream(s, indent + "  ", v.left);
     s << indent << "right: ";
     Printer<float>::stream(s, indent + "  ", v.right);
+    s << indent << "leftCount: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.leftCount);
+    s << indent << "rightCount: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.rightCount);
   }
 };
 
