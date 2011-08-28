@@ -6,8 +6,9 @@
 
 TeleopRover::TeleopRover():
 	m_linear(1), m_angular(0), m_panservo(2), m_tiltservo(3)
-	, m_tiltkinect_up(4), m_tiltkinect_down(6), m_kinect_angle(0)
-    , m_enable(16), m_autonomous_on(14), m_autonomous_off(15)
+	, m_tiltkinect_up(4), m_tiltkinect_down(6)
+    , m_enable_cam(11), m_autonomous_on(14), m_autonomous_off(15)
+    , m_enable_motors(10), m_kinect_angle(0)
 {
 	m_n.param("axis_linear", m_linear, m_linear);
 	m_n.param("axis_angular", m_angular, m_angular);
@@ -17,7 +18,8 @@ TeleopRover::TeleopRover():
 	m_n.param("button_kinect_down", m_tiltkinect_down, m_tiltkinect_down);
     m_n.param("button_autonomous_mode_on", m_autonomous_on, m_autonomous_on);
     m_n.param("button_autonomous_mode_off", m_autonomous_off, m_autonomous_off);
-    m_n.param("button_enable_movement", m_enable, m_enable);
+    m_n.param("button_enable_cam", m_enable_cam, m_enable_cam);
+    m_n.param("button_enable_move", m_enable_motors, m_enable_motors);
 	m_n.param("speed", m_limit_speed, 0.5);
 	m_n.param("angular_speed", m_limit_angular_speed, PI);
 
@@ -48,13 +50,27 @@ void TeleopRover::joyCallback(const joy::Joy::ConstPtr& joy)
         m_n.setParam("autoMode", 1);
     } else {
         m_n.setParam("autoMode", 0);
-        if (joy->buttons[m_enable]) {
+        
+        // set kinect
+        std_msgs::Float64 kinectServoAngle;
+
+        kinectServoAngle.data = m_kinect_angle;
+
+        if (joy->buttons[m_enable_motors]) {
             // set velocity
             geometry_msgs::Twist cmd_vel;
             cmd_vel.linear.x = scale(joy->axes[m_linear], -1.0, 1.0, -m_limit_speed, m_limit_speed);
             cmd_vel.angular.z = scale(joy->axes[m_angular], -1.0, 1.0, -m_limit_angular_speed, m_limit_angular_speed);
             m_cmd_vel_pub.publish(cmd_vel);
+        } else {
+            // stop the robot
+            geometry_msgs::Twist cmd_vel;
+            cmd_vel.linear.x = 0.0;
+            cmd_vel.angular.z = 0.0;
+            m_cmd_vel_pub.publish(cmd_vel);
+        }
 
+        if (joy->buttons[m_enable_cam]) {
             // set tilt servo
             std_msgs::Float64 tiltServoAngle;
             tiltServoAngle.data = scale(expo(joy->axes[m_tiltservo]), -1.0, 1.0, -HALF_PI, HALF_PI);
@@ -65,28 +81,17 @@ void TeleopRover::joyCallback(const joy::Joy::ConstPtr& joy)
             panServoAngle.data = scale(expo(joy->axes[m_panservo]), -1.0, 1.0, -HALF_PI, HALF_PI);
             m_servo_pan_pub.publish(panServoAngle);
 
-            // set kinect
-            std_msgs::Float64 kinectServoAngle;
+            // if (joy->buttons[m_tiltkinect_up]) {
+            //     kinectServoAngle.data += 0.001;
+            // } else if (joy->buttons[m_tiltkinect_down]) {
+            //     kinectServoAngle.data -= 0.001;
+            // }
 
-            kinectServoAngle.data = m_kinect_angle;
+            // kinectServoAngle.data = constrain(kinectServoAngle.data, -KINECT_LIMIT_ANGLE, KINECT_LIMIT_ANGLE);
 
-            if (joy->buttons[m_tiltkinect_up]) {
-                kinectServoAngle.data += 0.001;
-            } else if (joy->buttons[m_tiltkinect_down]) {
-                kinectServoAngle.data -= 0.001;
-            }
+            // m_kinect_angle = kinectServoAngle.data;
 
-            kinectServoAngle.data = constrain(kinectServoAngle.data, -KINECT_LIMIT_ANGLE, KINECT_LIMIT_ANGLE);
-
-            m_kinect_angle = kinectServoAngle.data;
-
-            m_kinect_tilt_pub.publish(kinectServoAngle);
-        } else {
-            // stop the robot
-            geometry_msgs::Twist cmd_vel;
-            cmd_vel.linear.x = 0.0;
-            cmd_vel.angular.z = 0.0;
-            m_cmd_vel_pub.publish(cmd_vel);
+            // m_kinect_tilt_pub.publish(kinectServoAngle);
         }
     }
 }

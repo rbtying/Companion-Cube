@@ -368,12 +368,12 @@
     <axis xyz="0 1 0" />
   </joint>
 
-  <joint name="kinect_joint" type="revolute">
+  <joint name="kinect_joint" type="fixed">
     <parent link="kinect_base" />
     <child link="openni_camera" />
     <origin xyz="0 0 0.0375" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit effort="1000.0" lower="-0.523598776" upper="0.523598776" velocity="0.5" />
+    <!--<limit effort="1000.0" lower="-0.523598776" upper="0.523598776" velocity="0.5" />-->
   </joint>
 
 </robot>

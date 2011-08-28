@@ -15,7 +15,7 @@ std::string port;
 
 rover::interface * bot;
 
-double tilt_angle = 0;
+/* double tilt_angle = 0; */
 double tilt_servo_angle = 0;
 double pan_servo_angle = 0;
 
@@ -27,10 +27,10 @@ std::string prefixTopic(std::string prefix, char * name) {
 }
 
 // callback functions
-void recvKinectTiltAngle(const std_msgs::Float64::ConstPtr& tiltAngle) {
-	tilt_angle = tiltAngle->data;
-	// ROS_INFO("Kinect Tilt Angle: %f", tilt_angle);
-}
+// void recvKinectTiltAngle(const std_msgs::Float64::ConstPtr& tiltAngle) {
+// 	tilt_angle = tiltAngle->data;
+// 	// ROS_INFO("Kinect Tilt Angle: %f", tilt_angle);
+// }
 
 void recvTiltServoAngle(const std_msgs::Float64::ConstPtr& tiltAngle) {
 	tilt_servo_angle = tiltAngle->data;
@@ -88,8 +88,8 @@ int main(int argc, char** argv) {
 	// subscribers
 	ros::Subscriber cmd_vel_sub = n.subscribe<geometry_msgs::Twist> (
 			"/cmd_vel", 1, cmdVelReceived);
- 	ros::Subscriber tilt_angle_sub = n.subscribe<std_msgs::Float64> (
-			"/kinect/cur_angle", 1, recvKinectTiltAngle);
+ 	// ros::Subscriber tilt_angle_sub = n.subscribe<std_msgs::Float64> (
+    //			"/kinect/cur_angle", 1, recvKinectTiltAngle);
   	ros::Subscriber pan_servo_sub = n.subscribe<std_msgs::Float64> (
 			"/pan/angle", 1, recvPanServoAngle);
 	ros::Subscriber tilt_servo_sub = n.subscribe<std_msgs::Float64> (
@@ -223,26 +223,23 @@ int main(int argc, char** argv) {
 			joint_state.name.resize(7);
 			joint_state.position.resize(7);
 
-			joint_state.name[0]="kinect_joint";
-			joint_state.position[0]=-tilt_angle;
-
-			joint_state.name[1]="front_left_wheel_joint";
-			joint_state.position[1]=bot->m_velocity_left / 0.027051;
+			joint_state.name[0]="front_left_wheel_joint";
+			joint_state.position[0]=bot->m_velocity_left / 0.027051;
 			
-			joint_state.name[2]="front_right_wheel_joint";
-			joint_state.position[2]=bot->m_velocity_right / 0.027051;
+			joint_state.name[1]="front_right_wheel_joint";
+			joint_state.position[1]=bot->m_velocity_right / 0.027051;
 
-			joint_state.name[3]="back_left_wheel_joint";
-			joint_state.position[3]=bot->m_velocity_left / 0.027051;
+			joint_state.name[2]="back_left_wheel_joint";
+			joint_state.position[2]=bot->m_velocity_left / 0.027051;
 
-			joint_state.name[4]="back_right_wheel_joint";
-			joint_state.position[4]=bot->m_velocity_right / 0.027051;
+			joint_state.name[3]="back_right_wheel_joint";
+			joint_state.position[3]=bot->m_velocity_right / 0.027051;
 
-			joint_state.name[5]="pan_servo_joint";
-			joint_state.position[5]=-(bot->m_pan_angle);
+			joint_state.name[4]="pan_servo_joint";
+			joint_state.position[4]=-(bot->m_pan_angle);
 
-			joint_state.name[6]="tilt_servo_joint";
-			joint_state.position[6]=(bot->m_tilt_angle);
+			joint_state.name[5]="tilt_servo_joint";
+			joint_state.position[5]=(bot->m_tilt_angle);
 
 			joint_pub.publish(joint_state);
 
