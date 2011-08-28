@@ -72,13 +72,20 @@ int main(int argc, char** argv) {
 	n.param<double> ("rover/right/integral", rI, 0.05);
 	n.param<double> ("rover/right/derivative", rD, 0);
 
-    	n.param<double> ("rover/left/conversion_factor", le, 0.00199491134);
-    	n.param<double> ("rover/right/conversion_factor", re, 0.00199491134);
+    n.param<double> ("rover/left/conversion_factor", le, 0.00199491134);
+    n.param<double> ("rover/right/conversion_factor", re, 0.00199491134);
+
+    double gyro_bias;
+    n.param<double> ("rover/gyro_bias", gyro_bias, 0.0);
+
+    double batt_threshold;
+    n.param<double> ("rover/batt_threshold", batt_threshold, 13.0);
 
 	// publishers
 	ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry> ("/odom", 50);
 	ros::Publisher enc_pub = n.advertise<rover::Encoder> ("/encoders", 50);
-	ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu> ("/gyro", 50);
+	ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu> ("/gyro/raw", 50);
+    ros::Publisher imu_bias_pub = n.advertise<sensor_msgs::Imu> ("/gyro/data", 50);
 	ros::Publisher batt_pub = n.advertise<rover::Battery> ("/battery", 50);
 	ros::Publisher joint_pub = n.advertise<sensor_msgs::JointState> ("/joint_states", 1);
 	ros::Publisher pan_pub = n.advertise<std_msgs::Float64> ("/pan/cur_angle", 1);
@@ -197,6 +204,9 @@ int main(int argc, char** argv) {
 			// send the message
 			imu_pub.publish(imu_msg);
 
+            imu_msg.angular_velocity.z = bot->m_gyro_yawrate - gyro_bias;
+            imu_bias_pub.publish(imu_msg);
+
 			// prepare a battery state message
 			rover::Battery batt_msg;
 			batt_msg.header.stamp = current_time;
@@ -206,6 +216,10 @@ int main(int argc, char** argv) {
 			
 			// send the message
 			batt_pub.publish(batt_msg);
+
+            if (bot->m_battery_voltage < batt_threshold) {
+                ROS_ERROR("Battery voltage low: %.02f volts", bot->m_battery_voltage);
+            }
 
 			// prepare an encoder message
 			rover::Encoder enc_msg;
