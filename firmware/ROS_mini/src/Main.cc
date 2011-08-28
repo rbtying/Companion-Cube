@@ -15,7 +15,7 @@
 #include "libraries/Servo/Servo.h"
 
 // Control
-#define TIME_INTERVAL 100
+#define TIME_INTERVAL 20 // 50 Hz
 #define LED_INTERVAL 500
 
 unsigned long nexTime = 0, cTime = 0, ledTime = 0;
@@ -23,7 +23,7 @@ unsigned long nexTime = 0, cTime = 0, ledTime = 0;
 // control data
 control_data ctrl;
 
-volatile long leftEncCount, rightEncCount, pleftEncCount, prightEncCount;
+volatile long pleftEncCount, prightEncCount;
 volatile bool leftEncBSet, rightEncBSet;
 #define QP_TO_CM_LEFT (0.00199491134)
 #define QP_TO_CM_RIGHT (0.00199491134)
@@ -58,18 +58,18 @@ void setSpeeds(int8_t left, int8_t right) {
 void lEncHandler() {
 	leftEncBSet = digitalReadFast(LENC_B);
 #ifdef LENCREV
-	leftEncCount -= leftEncBSet ? -1 : +1;
+	ctrl.enc.leftCount -= leftEncBSet ? -1 : +1;
 #else
-	leftEncCount += leftEncBSet ? -1 : +1;
+	ctrl.enc.leftCount += leftEncBSet ? -1 : +1;
 #endif
 }
 
 void rEncHandler() {
 	rightEncBSet = digitalReadFast(RENC_B);
 #ifdef LENCREV
-	rightEncCount -= rightEncBSet ? -1 : +1;
+	ctrl.enc.rightCount -= rightEncBSet ? -1 : +1;
 #else
-	rightEncCount += rightEncBSet ? -1 : +1;
+	ctrl.enc.rightCount += rightEncBSet ? -1 : +1;
 #endif
 }
 
@@ -149,12 +149,12 @@ int main() {
 			}
 
 			// PID processing
-			ctrl.leftPID.input = (leftEncCount - pleftEncCount)
+			ctrl.leftPID.input = (ctrl.enc.leftCount - pleftEncCount)
 					* ctrl.conv.cmPerCountLeft / dt;
-			ctrl.rightPID.input = (rightEncCount - prightEncCount)
+			ctrl.rightPID.input = (ctrl.enc.rightCount - prightEncCount)
 					* ctrl.conv.cmPerCountRight / dt;
-			pleftEncCount = leftEncCount;
-			prightEncCount = rightEncCount;
+			pleftEncCount = ctrl.enc.leftCount;
+			prightEncCount = ctrl.enc.rightCount;
 
 			ctrl.leftPID.error = ctrl.leftPID.set - ctrl.leftPID.input;
 			ctrl.rightPID.error = ctrl.rightPID.set - ctrl.rightPID.input;
@@ -186,20 +186,6 @@ int main() {
 			rspeed = constrain(rspeed, -127, 127);
 
 			setSpeeds(lspeed & 0xff, rspeed & 0xff);
-
-			//			Serial.print("left: ");
-			//			Serial.print(lMeasSpeed, 2);
-			//			Serial.print(" right: ");
-			//			Serial.print(rMeasSpeed, 2);
-			//			Serial.print(" lcount: ");
-			//			Serial.print(leftEncCount);
-			//			Serial.print(" rcount: ");
-			//			Serial.print(rightEncCount);
-			//			Serial.print(" lspd: ");
-			//			Serial.print(lspeed);
-			//			Serial.print(" rspd: ");
-			//			Serial.print(rspeed);
-			//			Serial.print("\r\n");
 
 			nexTime = cTime + TIME_INTERVAL;
 		}
