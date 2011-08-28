@@ -171,6 +171,8 @@ void Controller::processCommand() {
 void Controller::sendDataPacket() {
 	uint16_t leftSpeed_mm = (uint16_t) (abs(m_ctrl->leftPID.input * 100)); // cm to mm & truncate
 	uint16_t rightSpeed_mm = (uint16_t) (abs(m_ctrl->rightPID.input * 100)); // cm to mm & truncate
+	uint32_t leftEncCount = abs(m_ctrl->enc.leftCount);
+	uint32_t rightEncCount = abs(m_ctrl->enc.rightCount);
 	uint16_t yawRate = (uint16_t) (abs(m_ctrl->yaw.rate) * 1000);
 	uint16_t yawVal = (uint16_t) (abs(m_ctrl->yaw.val) * 1000);
 	uint8_t signs = 0;
@@ -178,6 +180,8 @@ void Controller::sendDataPacket() {
 	signs |= (m_ctrl->rightPID.input >= 0) << 1;
 	signs |= (m_ctrl->yaw.rate >= 0) << 2;
 	signs |= (m_ctrl->yaw.val >= 0) << 3;
+	signs |= (m_ctrl->enc.leftCount >= 0) << 4;
+	signs |= (m_ctrl->enc.rightCount >= 0) << 5;
 	int16_t batVal = (int16_t) (m_ctrl->batt.getVoltage() * 100);
 	int16_t curVal = (int16_t) (m_ctrl->batt.getCurrent() * 100);
 	uint8_t panAngle = (uint8_t) m_ctrl->pan.read();
@@ -199,7 +203,15 @@ void Controller::sendDataPacket() {
 	m_dataPacket[13] = lowByte(curVal);
 	m_dataPacket[14] = panAngle & 0xFF;
 	m_dataPacket[15] = tiltAngle & 0xFF;
-	m_dataPacket[16] = '>';
+	m_dataPacket[16] = leftEncCount >> 24u;
+	m_dataPacket[17] = leftEncCount >> 16u;
+	m_dataPacket[18] = leftEncCount >> 8u;
+	m_dataPacket[19] = leftEncCount & 0xFF;
+	m_dataPacket[20] = rightEncCount >> 24u;
+	m_dataPacket[21] = rightEncCount >> 16u;
+	m_dataPacket[22] = rightEncCount >> 8u;
+	m_dataPacket[23] = rightEncCount & 0xFF;
+	m_dataPacket[24] = '>';
 
 	Serial.write(m_dataPacket, CMD_PACKET_SIZE);
 }
