@@ -164,7 +164,7 @@ int main() {
 						/ (abs(ctrl.leftEnc.time - ctrl.leftEnc.pTime)
 								* 0.000001);
 			} else {
-				ctrl.rightEnc.velocity = 0.0;
+				ctrl.leftEnc.velocity = 0.0;
 			}
 
 			if (ctrl.rightEnc.pCount != ctrl.rightEnc.count) {
