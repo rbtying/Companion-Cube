@@ -48,7 +48,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/Main.cc" title="Main.cc" tooltip="ROS_mini/src/Main.cc" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4225" selectionTopPixel="2589"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3800" selectionTopPixel="2589"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" partName="Controller.h" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/Controller.h" title="Controller.h" tooltip="ROS_mini/src/lib/Controller.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/lib/Controller.h"/>
@@ -76,8 +76,7 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Targets"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
+<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -325,20 +324,12 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/control_struct.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Arduino-328P/libraries/Servo/Servo.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Arduino-328P/libraries/Servo/Servo.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Arduino-328P/wiring.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Arduino-328P/wiring.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/control_struct.h"/>
 </editors>
-<item historyLabel="Servo.cc" index="5">
-<position info="not_deleted" x="3172" y="0"/>
-</item>
-<item historyLabel="Servo.h" index="4">
-<position info="not_deleted" x="3293" y="0"/>
-</item>
-<item historyLabel="Servo.cc" index="5">
-<position info="not_deleted" x="3172" y="0"/>
-</item>
 <item historyLabel="Main.cc" index="0">
 <position info="not_deleted" x="474" y="0"/>
 </item>
@@ -393,13 +384,13 @@
 <item historyLabel="Main.cc" index="0">
 <position info="not_deleted" x="1351" y="0"/>
 </item>
-<item historyLabel="wiring.h" index="6">
+<item historyLabel="wiring.h" index="4">
 <position info="not_deleted" x="3093" y="6"/>
 </item>
-<item historyLabel="wiring.c" index="7">
+<item historyLabel="wiring.c" index="5">
 <position info="not_deleted" x="2651" y="0"/>
 </item>
-<item historyLabel="wiring.h" index="6">
+<item historyLabel="wiring.h" index="4">
 <position info="not_deleted" x="3093" y="6"/>
 </item>
 <item historyLabel="Controller.cc" index="1">
@@ -447,7 +438,7 @@
 <item historyLabel="control_struct.h" index="3">
 <position info="not_deleted" x="1004" y="0"/>
 </item>
-<item historyLabel="wiring.h" index="6">
+<item historyLabel="wiring.h" index="4">
 <position info="not_deleted" x="3093" y="6"/>
 </item>
 <item historyLabel="control_struct.h" index="3">
@@ -477,8 +468,17 @@
 <item historyLabel="Controller.cc" index="1">
 <position info="not_deleted" x="4326" y="0"/>
 </item>
-<item active="true" historyLabel="Main.cc" index="0">
+<item historyLabel="Main.cc" index="0">
 <position info="not_deleted" x="4225" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="6">
+<position info="not_deleted" x="4326" y="0"/>
+</item>
+<item historyLabel="Controller.h" index="7">
+<position info="not_deleted" x="403" y="0"/>
+</item>
+<item active="true" historyLabel="control_struct.h" index="8">
+<position info="not_deleted" x="625" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
