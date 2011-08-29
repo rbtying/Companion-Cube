@@ -53,34 +53,40 @@ int main(int argc, char** argv) {
 
 	ros::NodeHandle n;
 
-	n.param<std::string> ("rover/port", port, "/dev/ttyUSB0");
+	n.param<std::string> ("/rover/port", port, "/dev/ttyUSB0");
 
 	bot = new rover::interface(port.c_str());
 
 	double lP, lI, lD, rP, rI, rD, le, re;
 	
 	// parameters
-	n.param<double> ("rover/axleLength", bot->m_roverAxleLength,
+	n.param<double> ("/rover/axleLength", bot->m_roverAxleLength,
 			bot->m_roverAxleLength);
-	n.param<double> ("rover/maxSpeed", bot->m_max_vel,
+	n.param<double> ("/rover/maxSpeed", bot->m_max_vel,
             bot->m_max_vel);
-	n.param<double> ("rover/left/proportional", lP, 0.3);
-	n.param<double> ("rover/left/integral", lI, 0.05);
-	n.param<double> ("rover/left/derivative", lD, 0);
+	n.param<double> ("/rover/left/proportional", lP, 0.3);
+	n.param<double> ("/rover/left/integral", lI, 0.05);
+	n.param<double> ("/rover/left/derivative", lD, 0);
 
-	n.param<double> ("rover/right/proportional", rP, 0.3);
-	n.param<double> ("rover/right/integral", rI, 0.05);
-	n.param<double> ("rover/right/derivative", rD, 0);
+	n.param<double> ("/rover/right/proportional", rP, 0.3);
+	n.param<double> ("/rover/right/integral", rI, 0.05);
+	n.param<double> ("/rover/right/derivative", rD, 0);
 
-    n.param<double> ("rover/left/conversion_factor", le, 0.00199491134);
-    n.param<double> ("rover/right/conversion_factor", re, 0.00199491134);
+    n.param<double> ("/rover/left/conversion_factor", le, 0.00199491134);
+    n.param<double> ("/rover/right/conversion_factor", re, 0.00199491134);
 
     double gyro_bias;
-    n.param<double> ("rover/gyro_bias", gyro_bias, 0.0);
-    n.param<double> ("rover/gyro_correction", bot->m_gyro_correction, 1.0);
+    n.param<double> ("/rover/gyro_bias", gyro_bias, 0.0);
+    n.param<double> ("/rover/gyro_correction", bot->m_gyro_correction, 1.0);
 
     double batt_threshold;
-    n.param<double> ("rover/batt_threshold", batt_threshold, 13.0);
+    n.param<double> ("/rover/batt_threshold", batt_threshold, 13.0);
+
+    std::string odom_frame_id;
+    n.param<std::string> ("/rover/odom_frame_id", odom_frame_id, "/odom");
+
+    bool publish_tf;
+    n.param<bool> ("/rover/publish_tf", publish_tf, true);
 
 	// publishers
 	ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry> ("/odom", 50);
@@ -91,7 +97,7 @@ int main(int argc, char** argv) {
 	ros::Publisher joint_pub = n.advertise<sensor_msgs::JointState> ("/joint_states", 1);
 	ros::Publisher pan_pub = n.advertise<std_msgs::Float64> ("/pan/cur_angle", 1);
 	ros::Publisher tilt_pub = n.advertise<std_msgs::Float64> ("/tilt/cur_angle", 1);
-	tf::TransformBroadcaster odom_broadcaster;
+    tf::TransformBroadcaster odom_broadcaster;
 
 	// subscribers
 	ros::Subscriber cmd_vel_sub = n.subscribe<geometry_msgs::Twist> (
@@ -115,8 +121,6 @@ int main(int argc, char** argv) {
 
 	ros::Time current_time, last_time;
 
-	long packetNum = 0;
-
 	ros::Rate r(25.0);
 
 	sensor_msgs::JointState joint_state;
@@ -134,24 +138,26 @@ int main(int argc, char** argv) {
 			geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(
 					bot->m_odometry_yaw);
 
-			// create a tf message
-			geometry_msgs::TransformStamped odom_trans;
-			odom_trans.header.stamp = current_time;
-			odom_trans.header.frame_id = "/odom";
-			odom_trans.child_frame_id = "base_footprint";
+            if (publish_tf) {
+                // create a tf message
+                geometry_msgs::TransformStamped odom_trans;
+                odom_trans.header.stamp = current_time;
+                odom_trans.header.frame_id = odom_frame_id.c_str();
+                odom_trans.child_frame_id = "base_footprint";
 
-			odom_trans.transform.translation.x = bot->m_odometry_x;
-			odom_trans.transform.translation.y = bot->m_odometry_y;
-			odom_trans.transform.translation.z = 0.0;
-			odom_trans.transform.rotation = odom_quat;
+                odom_trans.transform.translation.x = bot->m_odometry_x;
+                odom_trans.transform.translation.y = bot->m_odometry_y;
+                odom_trans.transform.translation.z = 0.0;
+                odom_trans.transform.rotation = odom_quat;
 
-			//send the transform
-			odom_broadcaster.sendTransform(odom_trans);
+                //send the transform
+                odom_broadcaster.sendTransform(odom_trans);
+            }
 
 			// create a odometry msg
 			nav_msgs::Odometry odom;
 			odom.header.stamp = current_time;
-			odom.header.frame_id = "/odom";
+			odom.header.frame_id = odom_frame_id.c_str();
 
 			// set the position
 			odom.pose.pose.position.x = bot->m_odometry_x;
