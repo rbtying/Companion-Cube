@@ -15,7 +15,7 @@
 #include "libraries/Servo/Servo.h"
 
 // Control
-#define TIME_INTERVAL 20 // 50 Hz
+#define TIME_INTERVAL 100 // 10 Hz
 #define LED_INTERVAL 500
 
 unsigned long nexTime = 0, cTime = 0, ledTime = 0;
@@ -150,32 +150,34 @@ int main() {
 				yawGyro.calibrate(1000, true); // update calibration
 			}
 
-			// Encoder processing
-			//			ctrl.leftEnc.velocity = (ctrl.leftEnc.count - ctrl.leftEnc.pCount)
-			//					* ctrl.leftEnc.cmPerCount / dt;
-			//			ctrl.rightEnc.velocity = (ctrl.rightEnc.count - ctrl.rightEnc.pCount)
-			//					* ctrl.rightEnc.cmPerCount / dt;
-#ifndef SIGN
-#define SIGN(x) ((x) ? +1 : -1)
-#endif
-			if (ctrl.leftEnc.pCount != ctrl.leftEnc.count) {
-				ctrl.leftEnc.velocity = SIGN(ctrl.leftEnc.dir)
-						* ctrl.leftEnc.cmPerCount
-						/ (abs(ctrl.leftEnc.time - ctrl.leftEnc.pTime)
-								* 0.000001);
-			} else {
-				ctrl.leftEnc.velocity = 0.0;
-			}
+			//			 Encoder processing
+			ctrl.leftEnc.velocity = (ctrl.leftEnc.count - ctrl.leftEnc.pCount)
+					* ctrl.leftEnc.cmPerCount / dt;
+			ctrl.rightEnc.velocity = (ctrl.rightEnc.count
+					- ctrl.rightEnc.pCount) * ctrl.rightEnc.cmPerCount / dt;
+			/*
+			 #ifndef SIGN
+			 #define SIGN(x) ((x) ? +1 : -1)
+			 #endif
+			 if (ctrl.leftEnc.pCount != ctrl.leftEnc.count) {
+			 ctrl.leftEnc.velocity = SIGN(ctrl.leftEnc.dir)
+			 * ctrl.leftEnc.cmPerCount
+			 / (abs(ctrl.leftEnc.time - ctrl.leftEnc.pTime)
+			 * 0.000001);
+			 } else {
+			 ctrl.leftEnc.velocity = 0.0;
+			 }
 
-			if (ctrl.rightEnc.pCount != ctrl.rightEnc.count) {
-				ctrl.rightEnc.velocity = SIGN(ctrl.rightEnc.dir)
-						* ctrl.rightEnc.cmPerCount
-						/ (abs(ctrl.rightEnc.time - ctrl.rightEnc.pTime)
-								* 0.000001);
-			} else {
-				ctrl.rightEnc.velocity = 0.0;
-			}
-#undef SIGN
+			 if (ctrl.rightEnc.pCount != ctrl.rightEnc.count) {
+			 ctrl.rightEnc.velocity = SIGN(ctrl.rightEnc.dir)
+			 * ctrl.rightEnc.cmPerCount
+			 / (abs(ctrl.rightEnc.time - ctrl.rightEnc.pTime)
+			 * 0.000001);
+			 } else {
+			 ctrl.rightEnc.velocity = 0.0;
+			 }
+			 #undef SIGN
+			 */
 
 			ctrl.leftEnc.pCount = ctrl.leftEnc.count;
 			ctrl.rightEnc.pCount = ctrl.rightEnc.count;

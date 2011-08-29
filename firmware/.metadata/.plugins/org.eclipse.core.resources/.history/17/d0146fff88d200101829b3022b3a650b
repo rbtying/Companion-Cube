@@ -15,7 +15,7 @@
 #include "libraries/Servo/Servo.h"
 
 // Control
-#define TIME_INTERVAL 20
+#define TIME_INTERVAL 20 // 50 Hz
 #define LED_INTERVAL 500
 
 unsigned long nexTime = 0, cTime = 0, ledTime = 0;
@@ -23,8 +23,6 @@ unsigned long nexTime = 0, cTime = 0, ledTime = 0;
 // control data
 control_data ctrl;
 
-volatile long leftEncCount, rightEncCount, pleftEncCount, prightEncCount;
-volatile bool leftEncBSet, rightEncBSet;
 #define QP_TO_CM_LEFT (0.00199491134)
 #define QP_TO_CM_RIGHT (0.00199491134)
 
@@ -56,21 +54,25 @@ void setSpeeds(int8_t left, int8_t right) {
  * Encoder handlers
  */
 void lEncHandler() {
-	leftEncBSet = digitalReadFast(LENC_B);
-#ifdef LENCREV
-	leftEncCount -= leftEncBSet ? -1 : +1;
+#ifndef LENCREV
+	ctrl.leftEnc.dir = !digitalReadFast(LENC_B);
 #else
-	leftEncCount += leftEncBSet ? -1 : +1;
+	ctrl.leftEnc.dir = digitalReadFast(LENC_B);
 #endif
+	ctrl.leftEnc.count += ctrl.leftEnc.dir ? +1 : -1;
+	ctrl.leftEnc.pTime = ctrl.leftEnc.time;
+	ctrl.leftEnc.time = micros();
 }
 
 void rEncHandler() {
-	rightEncBSet = digitalReadFast(RENC_B);
-#ifdef LENCREV
-	rightEncCount -= rightEncBSet ? -1 : +1;
+#ifndef RENCREV
+	ctrl.rightEnc.dir = !digitalReadFast(RENC_B);
 #else
-	rightEncCount += rightEncBSet ? -1 : +1;
+	ctrl.rightEnc.dir = digitalReadFast(RENC_B);
 #endif
+	ctrl.rightEnc.count += ctrl.rightEnc.dir ? +1 : -1;
+	ctrl.rightEnc.pTime = ctrl.rightEnc.time;
+	ctrl.rightEnc.time = micros();
 }
 
 /**
@@ -104,8 +106,8 @@ int main() {
 	ctrl.rightPID.integral = 0.05;
 	ctrl.rightPID.derivative = 0;
 
-	ctrl.conv.cmPerCountLeft = QP_TO_CM_LEFT;
-	ctrl.conv.cmPerCountRight = QP_TO_CM_RIGHT;
+	ctrl.leftEnc.cmPerCount = QP_TO_CM_LEFT;
+	ctrl.rightEnc.cmPerCount = QP_TO_CM_RIGHT;
 
 	// setup encoders
 	uint8_t enc_pins[4] = { RENC_A, RENC_B, LENC_A, LENC_B };
@@ -148,13 +150,39 @@ int main() {
 				yawGyro.calibrate(1000, true); // update calibration
 			}
 
+			// Encoder processing
+			//			ctrl.leftEnc.velocity = (ctrl.leftEnc.count - ctrl.leftEnc.pCount)
+			//					* ctrl.leftEnc.cmPerCount / dt;
+			//			ctrl.rightEnc.velocity = (ctrl.rightEnc.count - ctrl.rightEnc.pCount)
+			//					* ctrl.rightEnc.cmPerCount / dt;
+#ifndef SIGN
+#define SIGN(x) ((x) ? +1 : -1)
+#endif
+			if (ctrl.leftEnc.pCount != ctrl.leftEnc.count) {
+				ctrl.leftEnc.velocity = SIGN(ctrl.leftEnc.dir)
+						* ctrl.leftEnc.cmPerCount
+						/ (abs(ctrl.leftEnc.time - ctrl.leftEnc.pTime)
+								* 0.000001);
+			} else {
+				ctrl.leftEnc.velocity = 0.0;
+			}
+
+			if (ctrl.rightEnc.pCount != ctrl.rightEnc.count) {
+				ctrl.rightEnc.velocity = SIGN(ctrl.rightEnc.dir)
+						* ctrl.rightEnc.cmPerCount
+						/ (abs(ctrl.rightEnc.time - ctrl.rightEnc.pTime)
+								* 0.000001);
+			} else {
+				ctrl.rightEnc.velocity = 0.0;
+			}
+#undef SIGN
+
+			ctrl.leftEnc.pCount = ctrl.leftEnc.count;
+			ctrl.rightEnc.pCount = ctrl.rightEnc.count;
+
 			// PID processing
-			ctrl.leftPID.input = (leftEncCount - pleftEncCount)
-					* ctrl.conv.cmPerCountLeft / dt;
-			ctrl.rightPID.input = (rightEncCount - prightEncCount)
-					* ctrl.conv.cmPerCountRight / dt;
-			pleftEncCount = leftEncCount;
-			prightEncCount = rightEncCount;
+			ctrl.leftPID.input = ctrl.leftEnc.velocity;
+			ctrl.rightPID.input = ctrl.rightEnc.velocity;
 
 			ctrl.leftPID.error = ctrl.leftPID.set - ctrl.leftPID.input;
 			ctrl.rightPID.error = ctrl.rightPID.set - ctrl.rightPID.input;
@@ -167,10 +195,10 @@ int main() {
 			ctrl.rightPID.accumulated
 					= constrain(ctrl.rightPID.accumulated, -127, 127);
 
-			ctrl.leftPID.output = ctrl.leftPID.proportional * ctrl.leftPID.error
-					+ ctrl.leftPID.integral * ctrl.leftPID.accumulated
-					+ ctrl.leftPID.derivative * (ctrl.leftPID.error
-							- ctrl.leftPID.previous) / dt;
+			ctrl.leftPID.output = ctrl.leftPID.proportional
+					* ctrl.leftPID.error + ctrl.leftPID.integral
+					* ctrl.leftPID.accumulated + ctrl.leftPID.derivative
+					* (ctrl.leftPID.error - ctrl.leftPID.previous) / dt;
 			ctrl.rightPID.output = ctrl.rightPID.proportional
 					* ctrl.rightPID.error + ctrl.rightPID.integral
 					* ctrl.rightPID.accumulated + ctrl.rightPID.derivative
@@ -186,20 +214,6 @@ int main() {
 			rspeed = constrain(rspeed, -127, 127);
 
 			setSpeeds(lspeed & 0xff, rspeed & 0xff);
-
-			//			Serial.print("left: ");
-			//			Serial.print(lMeasSpeed, 2);
-			//			Serial.print(" right: ");
-			//			Serial.print(rMeasSpeed, 2);
-			//			Serial.print(" lcount: ");
-			//			Serial.print(leftEncCount);
-			//			Serial.print(" rcount: ");
-			//			Serial.print(rightEncCount);
-			//			Serial.print(" lspd: ");
-			//			Serial.print(lspeed);
-			//			Serial.print(" rspd: ");
-			//			Serial.print(rspeed);
-			//			Serial.print("\r\n");
 
 			nexTime = cTime + TIME_INTERVAL;
 		}
