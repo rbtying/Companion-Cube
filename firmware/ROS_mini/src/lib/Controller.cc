@@ -76,8 +76,8 @@ void Controller::processCommand() {
 		for (uint8_t i = 0; i < 4; i++) {
 			msg[i] = nextByte(250);
 		}
-		m_ctrl->conv.cmPerCountLeft = ((msg[0] << 8) | msg[1]) * 0.0001;
-		m_ctrl->conv.cmPerCountRight = ((msg[2] << 8) | msg[3]) * 0.0001;
+		m_ctrl->leftEnc.cmPerCount = ((msg[0] << 8) | msg[1]) * 0.0001;
+		m_ctrl->rightEnc.cmPerCount = ((msg[2] << 8) | msg[3]) * 0.0001;
 	} else if (strstr(m_buf, "gPIDH") != NULL) {
 		Serial.print("left PID: [");
 		Serial.print(m_ctrl->leftPID.proportional, DEC);
@@ -171,8 +171,8 @@ void Controller::processCommand() {
 void Controller::sendDataPacket() {
 	uint16_t leftSpeed_mm = (uint16_t) (abs(m_ctrl->leftPID.input * 100)); // cm to mm & truncate
 	uint16_t rightSpeed_mm = (uint16_t) (abs(m_ctrl->rightPID.input * 100)); // cm to mm & truncate
-	uint32_t leftEncCount = abs(m_ctrl->enc.leftCount);
-	uint32_t rightEncCount = abs(m_ctrl->enc.rightCount);
+	uint32_t leftEncCount = abs(m_ctrl->leftEnc.count);
+	uint32_t rightEncCount = abs(m_ctrl->rightEnc.count);
 	uint16_t yawRate = (uint16_t) (abs(m_ctrl->yaw.rate) * 1000);
 	uint16_t yawVal = (uint16_t) (abs(m_ctrl->yaw.val) * 1000);
 	uint8_t signs = 0;
@@ -180,8 +180,8 @@ void Controller::sendDataPacket() {
 	signs |= (m_ctrl->rightPID.input >= 0) << 1;
 	signs |= (m_ctrl->yaw.rate >= 0) << 2;
 	signs |= (m_ctrl->yaw.val >= 0) << 3;
-	signs |= (m_ctrl->enc.leftCount >= 0) << 4;
-	signs |= (m_ctrl->enc.rightCount >= 0) << 5;
+	signs |= (m_ctrl->leftEnc.count >= 0) << 4;
+	signs |= (m_ctrl->rightEnc.count >= 0) << 5;
 	int16_t batVal = (int16_t) (m_ctrl->batt.getVoltage() * 100);
 	int16_t curVal = (int16_t) (m_ctrl->batt.getCurrent() * 100);
 	uint8_t panAngle = (uint8_t) m_ctrl->pan.read();
