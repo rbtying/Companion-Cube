@@ -973,7 +973,7 @@ LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x4094
+.text           0x0000000000000000     0x42e8
  *(.vectors)
  .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
                 0x0000000000000000                __vectors
@@ -1108,208 +1108,208 @@ LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
                 0x0000000000001138       0x6a ./src/lib/Controller.o
                 0x0000000000001138                Controller::nextByte(unsigned long)
  .text._ZN10Controller14sendDataPacketEv
-                0x00000000000011a2      0x430 ./src/lib/Controller.o
+                0x00000000000011a2      0x438 ./src/lib/Controller.o
                 0x00000000000011a2                Controller::sendDataPacket()
  .text._ZN10Controller14processCommandEv
-                0x00000000000015d2      0x78c ./src/lib/Controller.o
-                0x00000000000015d2                Controller::processCommand()
+                0x00000000000015da      0x78e ./src/lib/Controller.o
+                0x00000000000015da                Controller::processCommand()
  .text._ZN10Controller6updateEv
-                0x0000000000001d5e       0xd0 ./src/lib/Controller.o
-                0x0000000000001d5e                Controller::update()
+                0x0000000000001d68       0xd0 ./src/lib/Controller.o
+                0x0000000000001d68                Controller::update()
  .text._ZN11FlexiTimer29_overflowEv
-                0x0000000000001e2e       0x7e ./src/lib/FlexiTimer2.o
-                0x0000000000001e2e                FlexiTimer2::_overflow()
+                0x0000000000001e38       0x7e ./src/lib/FlexiTimer2.o
+                0x0000000000001e38                FlexiTimer2::_overflow()
  .text.__vector_9
-                0x0000000000001eac       0x54 ./src/lib/FlexiTimer2.o
-                0x0000000000001eac                __vector_9
+                0x0000000000001eb6       0x54 ./src/lib/FlexiTimer2.o
+                0x0000000000001eb6                __vector_9
  .text._ZN4GyroC1EP10CD74HC4067hhf
-                0x0000000000001f00       0x28 ./src/lib/Gyro.o
-                0x0000000000001f00                Gyro::Gyro(CD74HC4067*, unsigned char, unsigned char, float)
+                0x0000000000001f0a       0x28 ./src/lib/Gyro.o
+                0x0000000000001f0a                Gyro::Gyro(CD74HC4067*, unsigned char, unsigned char, float)
  .text._ZN4Gyro8getValueEv
-                0x0000000000001f28       0x6a ./src/lib/Gyro.o
-                0x0000000000001f28                Gyro::getValue()
+                0x0000000000001f32       0x6a ./src/lib/Gyro.o
+                0x0000000000001f32                Gyro::getValue()
  .text._ZN4Gyro9calibrateEjb
-                0x0000000000001f92      0x186 ./src/lib/Gyro.o
-                0x0000000000001f92                Gyro::calibrate(unsigned int, bool)
+                0x0000000000001f9c      0x186 ./src/lib/Gyro.o
+                0x0000000000001f9c                Gyro::calibrate(unsigned int, bool)
  .text._ZN13NewSoftSerial4recvEv
-                0x0000000000002118       0xd4 ./src/lib/NewSoftSerial.o
-                0x0000000000002118                NewSoftSerial::recv()
+                0x0000000000002122       0xd4 ./src/lib/NewSoftSerial.o
+                0x0000000000002122                NewSoftSerial::recv()
  .text._ZN13NewSoftSerial16handle_interruptEv
-                0x00000000000021ec       0x12 ./src/lib/NewSoftSerial.o
-                0x00000000000021ec                NewSoftSerial::handle_interrupt()
+                0x00000000000021f6       0x12 ./src/lib/NewSoftSerial.o
+                0x00000000000021f6                NewSoftSerial::handle_interrupt()
  .text.__vector_3
-                0x00000000000021fe       0x48 ./src/lib/NewSoftSerial.o
-                0x00000000000021fe                __vector_3
+                0x0000000000002208       0x48 ./src/lib/NewSoftSerial.o
+                0x0000000000002208                __vector_3
  .text.__vector_4
-                0x0000000000002246       0x48 ./src/lib/NewSoftSerial.o
-                0x0000000000002246                __vector_4
+                0x0000000000002250       0x48 ./src/lib/NewSoftSerial.o
+                0x0000000000002250                __vector_4
  .text.__vector_5
-                0x000000000000228e       0x48 ./src/lib/NewSoftSerial.o
-                0x000000000000228e                __vector_5
+                0x0000000000002298       0x48 ./src/lib/NewSoftSerial.o
+                0x0000000000002298                __vector_5
  .text._ZN12PowerMonitor10getCurrentEv
-                0x00000000000022d6       0x22 ./src/lib/PowerMonitor.o
-                0x00000000000022d6                PowerMonitor::getCurrent()
+                0x00000000000022e0       0x22 ./src/lib/PowerMonitor.o
+                0x00000000000022e0                PowerMonitor::getCurrent()
  .text._ZN12PowerMonitor10getVoltageEv
-                0x00000000000022f8       0x22 ./src/lib/PowerMonitor.o
-                0x00000000000022f8                PowerMonitor::getVoltage()
+                0x0000000000002302       0x22 ./src/lib/PowerMonitor.o
+                0x0000000000002302                PowerMonitor::getVoltage()
  .text._ZN12PowerMonitor3setEhh
-                0x000000000000231a       0x38 ./src/lib/PowerMonitor.o
-                0x000000000000231a                PowerMonitor::set(unsigned char, unsigned char)
+                0x0000000000002324       0x38 ./src/lib/PowerMonitor.o
+                0x0000000000002324                PowerMonitor::set(unsigned char, unsigned char)
  .text._ZN12PowerMonitorC1Ev
-                0x0000000000002352       0x20 ./src/lib/PowerMonitor.o
-                0x0000000000002352                PowerMonitor::PowerMonitor()
- .text._Z11lEncHandlerv
-                0x0000000000002372       0x58 ./src/Main.o
-                0x0000000000002372                lEncHandler()
- .text._Z11rEncHandlerv
-                0x00000000000023ca       0x5e ./src/Main.o
-                0x00000000000023ca                rEncHandler()
+                0x000000000000235c       0x20 ./src/lib/PowerMonitor.o
+                0x000000000000235c                PowerMonitor::PowerMonitor()
  .text._GLOBAL__I_nexTime
-                0x0000000000002428       0x94 ./src/Main.o
+                0x000000000000237c       0x94 ./src/Main.o
+ .text._Z11rEncHandlerv
+                0x0000000000002410       0x8e ./src/Main.o
+                0x0000000000002410                rEncHandler()
+ .text._Z11lEncHandlerv
+                0x000000000000249e       0x86 ./src/Main.o
+                0x000000000000249e                lEncHandler()
  .text._Z9setSpeedsaa
-                0x00000000000024bc      0x106 ./src/Main.o
-                0x00000000000024bc                setSpeeds(signed char, signed char)
- .text.main     0x00000000000025c2      0x81a ./src/Main.o
-                0x00000000000025c2                main
+                0x0000000000002524      0x106 ./src/Main.o
+                0x0000000000002524                setSpeeds(signed char, signed char)
+ .text.main     0x000000000000262a      0xa06 ./src/Main.o
+                0x000000000000262a                main
  .text.__vector_18
-                0x0000000000002ddc       0x7a /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000002ddc                __vector_18
+                0x0000000000003030       0x7a /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000003030                __vector_18
  .text._ZN14HardwareSerial5beginEl
-                0x0000000000002e56      0x1e2 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000002e56                HardwareSerial::begin(long)
+                0x00000000000030aa      0x1e2 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000000030aa                HardwareSerial::begin(long)
  .text._ZN14HardwareSerial9availableEv
-                0x0000000000003038       0x28 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000003038                HardwareSerial::available()
+                0x000000000000328c       0x28 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
+                0x000000000000328c                HardwareSerial::available()
  .text._ZN14HardwareSerial4peekEv
-                0x0000000000003060       0x34 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000003060                HardwareSerial::peek()
+                0x00000000000032b4       0x34 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000000032b4                HardwareSerial::peek()
  .text._ZN14HardwareSerial4readEv
-                0x0000000000003094       0x50 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000003094                HardwareSerial::read()
+                0x00000000000032e8       0x50 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000000032e8                HardwareSerial::read()
  .text._ZN14HardwareSerial5flushEv
-                0x00000000000030e4       0x18 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000030e4                HardwareSerial::flush()
+                0x0000000000003338       0x18 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000003338                HardwareSerial::flush()
  .text._ZN14HardwareSerial5writeEh
-                0x00000000000030fc       0x26 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000030fc                HardwareSerial::write(unsigned char)
+                0x0000000000003350       0x26 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000003350                HardwareSerial::write(unsigned char)
  .text._GLOBAL__I_rx_buffer
-                0x0000000000003122       0x74 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000003376       0x74 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
  .text._ZN5Print5writeEPKc
-                0x0000000000003196       0x30 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
-                0x0000000000003196                Print::write(char const*)
+                0x00000000000033ea       0x30 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
+                0x00000000000033ea                Print::write(char const*)
  .text._ZN5Print5writeEPKhj
-                0x00000000000031c6       0x3e /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
-                0x00000000000031c6                Print::write(unsigned char const*, unsigned int)
+                0x000000000000341a       0x3e /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
+                0x000000000000341a                Print::write(unsigned char const*, unsigned int)
  .text._ZN5Print5printEPKc
-                0x0000000000003204       0x10 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
-                0x0000000000003204                Print::print(char const*)
+                0x0000000000003458       0x10 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
+                0x0000000000003458                Print::print(char const*)
  .text._ZN5Print11printNumberEmh
-                0x0000000000003214      0x130 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
-                0x0000000000003214                Print::printNumber(unsigned long, unsigned char)
+                0x0000000000003468      0x130 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
+                0x0000000000003468                Print::printNumber(unsigned long, unsigned char)
  .text._ZN5Print5printEmi
-                0x0000000000003344       0x1e /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
-                0x0000000000003344                Print::print(unsigned long, int)
+                0x0000000000003598       0x1e /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
+                0x0000000000003598                Print::print(unsigned long, int)
  .text._ZN5Print5printEli
-                0x0000000000003362       0x6c /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
-                0x0000000000003362                Print::print(long, int)
+                0x00000000000035b6       0x6c /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
+                0x00000000000035b6                Print::print(long, int)
  .text._ZN5Print7printlnEv
-                0x00000000000033ce       0x2e /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
-                0x00000000000033ce                Print::println()
+                0x0000000000003622       0x2e /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
+                0x0000000000003622                Print::println()
  .text._ZN5Print7printlnEPKc
-                0x00000000000033fc       0x16 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
-                0x00000000000033fc                Print::println(char const*)
+                0x0000000000003650       0x16 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
+                0x0000000000003650                Print::println(char const*)
  .text._ZN5Print10printFloatEdh
-                0x0000000000003412      0x118 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
-                0x0000000000003412                Print::printFloat(double, unsigned char)
+                0x0000000000003666      0x118 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
+                0x0000000000003666                Print::printFloat(double, unsigned char)
  .text._ZN5Print5printEdi
-                0x000000000000352a        0x6 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
-                0x000000000000352a                Print::print(double, int)
+                0x000000000000377e        0x6 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
+                0x000000000000377e                Print::print(double, int)
  .text._ZN5Print7printlnEdi
-                0x0000000000003530       0x16 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
-                0x0000000000003530                Print::println(double, int)
+                0x0000000000003784       0x16 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Print.o)
+                0x0000000000003784                Print::println(double, int)
  .text.attachInterrupt
-                0x0000000000003546       0x46 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WInterrupts.o)
-                0x0000000000003546                attachInterrupt
+                0x000000000000379a       0x46 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WInterrupts.o)
+                0x000000000000379a                attachInterrupt
  .text.__vector_1
-                0x000000000000358c       0x5a /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WInterrupts.o)
-                0x000000000000358c                __vector_1
+                0x00000000000037e0       0x5a /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WInterrupts.o)
+                0x00000000000037e0                __vector_1
  .text.__vector_2
-                0x00000000000035e6       0x5a /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WInterrupts.o)
-                0x00000000000035e6                __vector_2
+                0x000000000000383a       0x5a /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WInterrupts.o)
+                0x000000000000383a                __vector_2
  .text._Z3maplllll
-                0x0000000000003640       0x92 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WMath.o)
-                0x0000000000003640                map(long, long, long, long, long)
+                0x0000000000003894       0x92 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WMath.o)
+                0x0000000000003894                map(long, long, long, long, long)
  .text.__vector_16
-                0x00000000000036d2       0x90 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
-                0x00000000000036d2                __vector_16
- .text.millis   0x0000000000003762       0x1c /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
-                0x0000000000003762                millis
- .text.micros   0x000000000000377e       0x4c /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
-                0x000000000000377e                micros
- .text.delay    0x00000000000037ca       0x4c /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
-                0x00000000000037ca                delay
- .text.init     0x0000000000003816       0x76 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
-                0x0000000000003816                init
+                0x0000000000003926       0x90 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
+                0x0000000000003926                __vector_16
+ .text.millis   0x00000000000039b6       0x1c /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
+                0x00000000000039b6                millis
+ .text.micros   0x00000000000039d2       0x4c /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
+                0x00000000000039d2                micros
+ .text.delay    0x0000000000003a1e       0x4c /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
+                0x0000000000003a1e                delay
+ .text.init     0x0000000000003a6a       0x76 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
+                0x0000000000003a6a                init
  .text.analogRead
-                0x000000000000388c       0x44 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring_analog.o)
-                0x000000000000388c                analogRead
- .text.pinMode  0x00000000000038d0       0x4c /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring_digital.o)
-                0x00000000000038d0                pinMode
+                0x0000000000003ae0       0x44 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring_analog.o)
+                0x0000000000003ae0                analogRead
+ .text.pinMode  0x0000000000003b24       0x4c /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring_digital.o)
+                0x0000000000003b24                pinMode
  .text.digitalWrite
-                0x000000000000391c       0xa8 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring_digital.o)
-                0x000000000000391c                digitalWrite
+                0x0000000000003b70       0xa8 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring_digital.o)
+                0x0000000000003b70                digitalWrite
  .text._ZN5ServoC1Ev
-                0x00000000000039c4       0x34 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
-                0x00000000000039c4                Servo::Servo()
+                0x0000000000003c18       0x34 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
+                0x0000000000003c18                Servo::Servo()
  .text._ZN5Servo17writeMicrosecondsEi
-                0x00000000000039f8       0x8e /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
-                0x00000000000039f8                Servo::writeMicroseconds(int)
+                0x0000000000003c4c       0x8e /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
+                0x0000000000003c4c                Servo::writeMicroseconds(int)
  .text._ZN5Servo16readMicrosecondsEv
-                0x0000000000003a86       0x3e /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
-                0x0000000000003a86                Servo::readMicroseconds()
+                0x0000000000003cda       0x3e /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
+                0x0000000000003cda                Servo::readMicroseconds()
  .text._ZN5Servo4readEv
-                0x0000000000003ac4       0xaa /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
-                0x0000000000003ac4                Servo::read()
+                0x0000000000003d18       0xaa /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
+                0x0000000000003d18                Servo::read()
  .text._ZN5Servo5writeEi
-                0x0000000000003b6e       0xd0 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
-                0x0000000000003b6e                Servo::write(int)
+                0x0000000000003dc2       0xd0 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
+                0x0000000000003dc2                Servo::write(int)
  .text._ZN5Servo6attachEiii
-                0x0000000000003c3e       0xfe /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
-                0x0000000000003c3e                Servo::attach(int, int, int)
+                0x0000000000003e92       0xfe /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
+                0x0000000000003e92                Servo::attach(int, int, int)
  .text._ZN5Servo6attachEi
-                0x0000000000003d3c        0xe /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
-                0x0000000000003d3c                Servo::attach(int)
+                0x0000000000003f90        0xe /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
+                0x0000000000003f90                Servo::attach(int)
  .text.__vector_11
-                0x0000000000003d4a      0x17a /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
-                0x0000000000003d4a                __vector_11
- .text.libgcc   0x0000000000003ec4       0x3e /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mulsi3.o)
-                0x0000000000003ec4                __mulsi3
- .text.libgcc   0x0000000000003f02       0x18 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodqi4.o)
-                0x0000000000003f02                __udivmodqi4
- .text.libgcc   0x0000000000003f1a       0x28 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
-                0x0000000000003f1a                __udivmodhi4
- .text.libgcc   0x0000000000003f42       0x26 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodhi4.o)
-                0x0000000000003f42                __divmodhi4
-                0x0000000000003f42                _div
- .text.libgcc   0x0000000000003f68       0x44 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodsi4.o)
-                0x0000000000003f68                __udivmodsi4
- .text.libgcc   0x0000000000003fac       0x36 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodsi4.o)
-                0x0000000000003fac                __divmodsi4
- .text.libgcc   0x0000000000003fe2       0x38 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
-                0x0000000000003fe2                __prologue_saves__
- .text.libgcc   0x000000000000401a       0x36 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
-                0x000000000000401a                __epilogue_restores__
- .text.libgcc   0x0000000000004050        0xc /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_tablejump.o)
-                0x0000000000004050                __tablejump2__
-                0x0000000000004054                __tablejump__
+                0x0000000000003f9e      0x17a /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
+                0x0000000000003f9e                __vector_11
+ .text.libgcc   0x0000000000004118       0x3e /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mulsi3.o)
+                0x0000000000004118                __mulsi3
+ .text.libgcc   0x0000000000004156       0x18 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodqi4.o)
+                0x0000000000004156                __udivmodqi4
+ .text.libgcc   0x000000000000416e       0x28 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+                0x000000000000416e                __udivmodhi4
+ .text.libgcc   0x0000000000004196       0x26 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodhi4.o)
+                0x0000000000004196                __divmodhi4
+                0x0000000000004196                _div
+ .text.libgcc   0x00000000000041bc       0x44 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodsi4.o)
+                0x00000000000041bc                __udivmodsi4
+ .text.libgcc   0x0000000000004200       0x36 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000004200                __divmodsi4
+ .text.libgcc   0x0000000000004236       0x38 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+                0x0000000000004236                __prologue_saves__
+ .text.libgcc   0x000000000000426e       0x36 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+                0x000000000000426e                __epilogue_restores__
+ .text.libgcc   0x00000000000042a4        0xc /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_tablejump.o)
+                0x00000000000042a4                __tablejump2__
+                0x00000000000042a8                __tablejump__
  .text.avr-libc
-                0x000000000000405c       0x34 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strstr.o)
-                0x000000000000405c                strstr
-                0x0000000000004090                . = ALIGN (0x2)
+                0x00000000000042b0       0x34 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strstr.o)
+                0x00000000000042b0                strstr
+                0x00000000000042e4                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000004090        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
-                0x0000000000004090                exit
-                0x0000000000004090                _exit
+ .fini9         0x00000000000042e4        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+                0x00000000000042e4                exit
+                0x00000000000042e4                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1328,11 +1328,11 @@ LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000004090        0x4 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+ .fini0         0x00000000000042e4        0x4 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000004094                _etext = .
+                0x00000000000042e8                _etext = .
 
-.data           0x0000000000800100      0x1ac load address 0x0000000000004094
+.data           0x0000000000800100      0x1ac load address 0x00000000000042e8
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800100       0x8e ./src/lib/Controller.o
@@ -1356,7 +1356,7 @@ LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
                 0x00000000008002ac                _edata = .
                 0x00000000008002ac                PROVIDE (__data_end, .)
 
-.bss            0x00000000008002ac      0x1e8
+.bss            0x00000000008002ac      0x200
                 0x00000000008002ac                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
@@ -1393,68 +1393,56 @@ LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
                 0x0000000000800301                cTime
  .bss.ledTime   0x0000000000800305        0x4 ./src/Main.o
                 0x0000000000800305                ledTime
- .bss.ctrl      0x0000000000800309       0x68 ./src/Main.o
+ .bss.ctrl      0x0000000000800309       0x8a ./src/Main.o
                 0x0000000000800309                ctrl
- .bss.pleftEncCount
-                0x0000000000800371        0x4 ./src/Main.o
-                0x0000000000800371                pleftEncCount
- .bss.prightEncCount
-                0x0000000000800375        0x4 ./src/Main.o
-                0x0000000000800375                prightEncCount
- .bss.leftEncBSet
-                0x0000000000800379        0x1 ./src/Main.o
-                0x0000000000800379                leftEncBSet
- .bss.rightEncBSet
-                0x000000000080037a        0x1 ./src/Main.o
-                0x000000000080037a                rightEncBSet
- .bss.lspeed    0x000000000080037b        0x2 ./src/Main.o
-                0x000000000080037b                lspeed
- .bss.rspeed    0x000000000080037d        0x2 ./src/Main.o
-                0x000000000080037d                rspeed
- .bss.mux       0x000000000080037f        0x6 ./src/Main.o
-                0x000000000080037f                mux
- .bss.yawGyro   0x0000000000800385        0xd ./src/Main.o
-                0x0000000000800385                yawGyro
- .bss.yawRate   0x0000000000800392        0x4 ./src/Main.o
-                0x0000000000800392                yawRate
- .bss.lMot      0x0000000000800396        0x3 ./src/Main.o
-                0x0000000000800396                lMot
- .bss.rMot      0x0000000000800399        0x3 ./src/Main.o
-                0x0000000000800399                rMot
- .bss.cmd       0x000000000080039c       0x2e ./src/Main.o
-                0x000000000080039c                cmd
+ .bss.lspeed    0x0000000000800393        0x2 ./src/Main.o
+                0x0000000000800393                lspeed
+ .bss.rspeed    0x0000000000800395        0x2 ./src/Main.o
+                0x0000000000800395                rspeed
+ .bss.mux       0x0000000000800397        0x6 ./src/Main.o
+                0x0000000000800397                mux
+ .bss.yawGyro   0x000000000080039d        0xd ./src/Main.o
+                0x000000000080039d                yawGyro
+ .bss.yawRate   0x00000000008003aa        0x4 ./src/Main.o
+                0x00000000008003aa                yawRate
+ .bss.lMot      0x00000000008003ae        0x3 ./src/Main.o
+                0x00000000008003ae                lMot
+ .bss.rMot      0x00000000008003b1        0x3 ./src/Main.o
+                0x00000000008003b1                rMot
+ .bss.cmd       0x00000000008003b4       0x2e ./src/Main.o
+                0x00000000008003b4                cmd
  .bss.rx_buffer
-                0x00000000008003ca       0x84 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000008003ca                rx_buffer
- .bss.Serial    0x000000000080044e       0x13 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
-                0x000000000080044e                Serial
- .bss.intFunc   0x0000000000800461        0x4 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WInterrupts.o)
+                0x00000000008003e2       0x84 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000008003e2                rx_buffer
+ .bss.Serial    0x0000000000800466       0x13 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800466                Serial
+ .bss.intFunc   0x0000000000800479        0x4 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WInterrupts.o)
  .bss.timer0_overflow_count
-                0x0000000000800465        0x4 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
-                0x0000000000800465                timer0_overflow_count
+                0x000000000080047d        0x4 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
+                0x000000000080047d                timer0_overflow_count
  .bss.timer0_millis
-                0x0000000000800469        0x4 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
-                0x0000000000800469                timer0_millis
+                0x0000000000800481        0x4 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
+                0x0000000000800481                timer0_millis
  .bss.timer0_fract
-                0x000000000080046d        0x1 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
+                0x0000000000800485        0x1 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
  .bss.ServoCount
-                0x000000000080046e        0x1 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
-                0x000000000080046e                ServoCount
+                0x0000000000800486        0x1 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
+                0x0000000000800486                ServoCount
  .bss._ZL6servos
-                0x000000000080046f       0x24 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
+                0x0000000000800487       0x24 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
  .bss._ZL7Channel
-                0x0000000000800493        0x1 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
+                0x00000000008004ab        0x1 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(Servo.o)
  *(COMMON)
-                0x0000000000800494                PROVIDE (__bss_end, .)
-                0x0000000000004094                __data_load_start = LOADADDR (.data)
-                0x0000000000004240                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000000008004ac                PROVIDE (__bss_end, .)
+                0x00000000000042e8                __data_load_start = LOADADDR (.data)
+                0x0000000000004494                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800494        0x0
-                0x0000000000800494                PROVIDE (__noinit_start, .)
+.noinit         0x00000000008004ac        0x0
+                0x00000000008004ac                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0000000000800494                PROVIDE (__noinit_end, .)
-                0x0000000000800494                _end = .
-                0x0000000000800494                PROVIDE (__heap_start, .)
+                0x00000000008004ac                PROVIDE (__noinit_end, .)
+                0x00000000008004ac                _end = .
+                0x00000000008004ac                PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
  *(.eeprom*)
@@ -2204,7 +2192,6 @@ lMot                                              ./src/Main.o
 ldexp                                             /home/rbtying/robot/firmware/Arduino-328P/Debug/libm.a(ldexp.o)
                                                   /home/rbtying/robot/firmware/Arduino-328P/Debug/libm.a(exp.o)
 ledTime                                           ./src/Main.o
-leftEncBSet                                       ./src/Main.o
 log                                               /home/rbtying/robot/firmware/Arduino-328P/Debug/libm.a(log.o)
                                                   /home/rbtying/robot/firmware/Arduino-328P/Debug/libm.a(pow.o)
 lspeed                                            ./src/Main.o
@@ -2222,6 +2209,7 @@ map(long, long, long, long, long)                 /home/rbtying/robot/firmware/A
                                                   ./src/lib/TSL1401.o
                                                   ./src/lib/RC_CTRL.o
 micros                                            /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
+                                                  ./src/Main.o
 millis                                            /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring.o)
                                                   ./src/Main.o
                                                   ./src/lib/RoboClaw.o
@@ -2245,7 +2233,6 @@ pinMode                                           /home/rbtying/robot/firmware/A
                                                   ./src/lib/LEDDisplay.o
                                                   ./src/lib/Gyro.o
                                                   ./src/lib/CD74HC4067.o
-pleftEncCount                                     ./src/Main.o
 port_to_input_PGM                                 /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(pins_arduino.o)
                                                   /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring_pulse.o)
                                                   /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring_digital.o)
@@ -2257,7 +2244,6 @@ port_to_output_PGM                                /home/rbtying/robot/firmware/A
                                                   ./src/lib/NewSoftSerial.o
 pow                                               /home/rbtying/robot/firmware/Arduino-328P/Debug/libm.a(pow.o)
                                                   ./src/lib/Sharp_IR.o
-prightEncCount                                    ./src/Main.o
 pulseIn                                           /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring_pulse.o)
                                                   ./src/lib/RC_CTRL.o
                                                   ./src/lib/Ping.o
@@ -2269,7 +2255,6 @@ random(long)                                      /home/rbtying/robot/firmware/A
 random(long, long)                                /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WMath.o)
 randomSeed(unsigned int)                          /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(WMath.o)
 random_r                                          /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
-rightEncBSet                                      ./src/Main.o
 rspeed                                            ./src/Main.o
 rx_buffer                                         /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(HardwareSerial.o)
 setSpeeds(signed char, signed char)               ./src/Main.o

@@ -31,19 +31,22 @@ struct gyro_data {
 	double val;
 };
 
-struct encoder_data {
-	volatile long leftCount;
-	volatile long rightCount;
-};
-
 typedef struct gyro_data gyro_data;
 
-struct conversion_data {
-	double cmPerCountLeft;
-	double cmPerCountRight;
+struct encoder_data {
+	volatile long count;
+	volatile long pCount;
+
+	volatile unsigned long time;
+	volatile unsigned long pTime;
+
+	volatile bool dir;
+	volatile double velocity;
+
+	double cmPerCount;
 };
 
-typedef struct conversion_data conversion_data;
+typedef struct encoder_data encoder_data;
 
 struct control_data {
 	PowerMonitor batt;
@@ -52,8 +55,8 @@ struct control_data {
 	Servo tilt;
 	PID_params leftPID;
 	PID_params rightPID;
-	conversion_data conv;
-	encoder_data enc;
+	encoder_data leftEnc;
+	encoder_data rightEnc;
 };
 
 typedef struct control_data control_data;
