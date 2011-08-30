@@ -184,14 +184,13 @@ void rover::interface::processPacket(std::string * packet) {
             m_encoder_right *= -1;
 		
 		m_gyro_yawrate = yawRate / 1000.0 * m_gyro_correction;
-		m_gyro_yaw += m_gyro_yawrate * dt;
 
 		if (!(data[9] & (1 << 2)))
 			m_gyro_yawrate *= -1;
 		if (!(data[9] & (1 << 3)))
 			m_gyro_yaw *= -1;
 
-		m_gyro_yaw -= m_gyro_offset;
+		m_gyro_yaw += m_gyro_yawrate * dt - m_gyro_offset;
 
 		m_battery_voltage = ((data[10] << 8 | data[11]) / 100.0);
 		m_battery_current = ((data[12] << 8 | data[13]) / 100.0);
