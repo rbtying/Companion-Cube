@@ -4407,7 +4407,7 @@ Disassembly of section .text:
     23fe:	df 91       	pop	r29
     2400:	08 95       	ret
 
-00002402 <_Z10processPIDP10PID_paramsf>:
+00002402 <_Z10processPIDR10PID_paramsf>:
     2402:	2f 92       	push	r2
     2404:	3f 92       	push	r3
     2406:	4f 92       	push	r4
@@ -4470,17 +4470,17 @@ Disassembly of section .text:
     247e:	95 01       	movw	r18, r10
     2480:	0e 94 99 04 	call	0x932	; 0x932 <__ltsf2>
     2484:	88 23       	and	r24, r24
-    2486:	1c f4       	brge	.+6      	; 0x248e <_Z10processPIDP10PID_paramsf+0x8c>
+    2486:	1c f4       	brge	.+6      	; 0x248e <_Z10processPIDR10PID_paramsf+0x8c>
     2488:	35 01       	movw	r6, r10
     248a:	46 01       	movw	r8, r12
-    248c:	0a c0       	rjmp	.+20     	; 0x24a2 <_Z10processPIDP10PID_paramsf+0xa0>
+    248c:	0a c0       	rjmp	.+20     	; 0x24a2 <_Z10processPIDR10PID_paramsf+0xa0>
     248e:	c8 01       	movw	r24, r16
     2490:	b7 01       	movw	r22, r14
     2492:	a4 01       	movw	r20, r8
     2494:	93 01       	movw	r18, r6
     2496:	0e 94 39 04 	call	0x872	; 0x872 <__gtsf2>
     249a:	18 16       	cp	r1, r24
-    249c:	14 f0       	brlt	.+4      	; 0x24a2 <_Z10processPIDP10PID_paramsf+0xa0>
+    249c:	14 f0       	brlt	.+4      	; 0x24a2 <_Z10processPIDR10PID_paramsf+0xa0>
     249e:	37 01       	movw	r6, r14
     24a0:	48 01       	movw	r8, r16
     24a2:	6c 86       	std	Y+12, r6	; 0x0c
@@ -5275,12 +5275,12 @@ Disassembly of section .text:
     2c96:	93 e0       	ldi	r25, 0x03	; 3
     2c98:	b6 01       	movw	r22, r12
     2c9a:	a5 01       	movw	r20, r10
-    2c9c:	0e 94 01 12 	call	0x2402	; 0x2402 <_Z10processPIDP10PID_paramsf>
+    2c9c:	0e 94 01 12 	call	0x2402	; 0x2402 <_Z10processPIDR10PID_paramsf>
     2ca0:	85 e4       	ldi	r24, 0x45	; 69
     2ca2:	93 e0       	ldi	r25, 0x03	; 3
     2ca4:	b6 01       	movw	r22, r12
     2ca6:	a5 01       	movw	r20, r10
-    2ca8:	0e 94 01 12 	call	0x2402	; 0x2402 <_Z10processPIDP10PID_paramsf>
+    2ca8:	0e 94 01 12 	call	0x2402	; 0x2402 <_Z10processPIDR10PID_paramsf>
     2cac:	60 91 a1 03 	lds	r22, 0x03A1
     2cb0:	70 91 a2 03 	lds	r23, 0x03A2
     2cb4:	88 27       	eor	r24, r24
