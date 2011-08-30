@@ -31,6 +31,7 @@ public:
 	int driveDirect(int left_speed, int right_speed);
 
 	int setServos(double panAngle, double tiltAngle);
+    int setMotorsRaw(int8_t left, int8_t right);
 
     void setConversionFactors(double left, double right);
 	void setPID(double lP, double lI, double lD, double rP, double rI, double rD);
@@ -51,6 +52,9 @@ public:
 	double m_battery_current;
 	double m_velocity_left, m_velocity_right;
     long m_encoder_left, m_encoder_right;
+
+    int8_t m_left_raw;
+    int8_t m_right_raw;
 
 	double m_tilt_angle;
 	double m_pan_angle;

@@ -22,6 +22,8 @@ struct PID_params {
 	double proportional;
 	double integral;
 	double derivative;
+
+	double accLimit;
 };
 
 typedef struct PID_params PID_params;
@@ -48,6 +50,13 @@ struct encoder_data {
 
 typedef struct encoder_data encoder_data;
 
+struct motor_data {
+	int16_t leftSpeed;
+	int16_t rightSpeed;
+};
+
+typedef struct motor_data motor_data;
+
 struct control_data {
 	PowerMonitor batt;
 	gyro_data yaw;
@@ -57,6 +66,7 @@ struct control_data {
 	PID_params rightPID;
 	encoder_data leftEnc;
 	encoder_data rightEnc;
+	motor_data mot;
 };
 
 typedef struct control_data control_data;

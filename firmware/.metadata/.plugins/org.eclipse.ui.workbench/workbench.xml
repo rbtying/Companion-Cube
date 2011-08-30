@@ -30,33 +30,39 @@
 </coolbarLayout>
 <page aggregateWorkingSetId="Aggregate for window 1305346145769" focus="true" label="Workspace - C/C++">
 <editors>
-<editorArea activeWorkbook="DefaultEditorWorkbook">
-<info part="DefaultEditorWorkbook">
+<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@3a444767">
+<info part="org.eclipse.ui.internal.EditorStack@3a444767">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info part="DefaultEditorWorkbook" ratio="0.5" ratioLeft="462" ratioRight="462" relationship="2" relative="org.eclipse.ui.internal.EditorStack@3a444767">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/Main.cc" title="Main.cc" tooltip="ROS_mini/src/Main.cc" workbook="DefaultEditorWorkbook">
+<editor focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/Main.cc" title="Main.cc" tooltip="ROS_mini/src/Main.cc" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4692" selectionTopPixel="3269"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" partName="Controller.h" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/Controller.h" title="Controller.h" tooltip="ROS_mini/src/lib/Controller.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/lib/Controller.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="403" selectionTopPixel="204"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4210" selectionTopPixel="2481"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" partName="control_struct.h" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/control_struct.h" title="control_struct.h" tooltip="ROS_mini/src/lib/control_struct.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/lib/control_struct.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="625" selectionTopPixel="566"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="818" selectionTopPixel="577"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="wiring.c" partName="wiring.c" path="/home/rbtying/robot/firmware/Arduino-328P/wiring.c" title="wiring.c" tooltip="Arduino-328P/wiring.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Arduino-328P/wiring.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2383" selectionTopPixel="1127"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" partName="Controller.h" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/Controller.h" title="Controller.h" tooltip="ROS_mini/src/lib/Controller.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/lib/Controller.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="144" selectionOffset="379" selectionTopPixel="204"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" partName="Controller.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/lib/Controller.cc" title="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc" workbook="org.eclipse.ui.internal.EditorStack@3a444767">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/lib/Controller.cc"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2012" selectionTopPixel="900"/>
 </editor>
 </editors>
 <views>
@@ -76,7 +82,9 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Targets"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
+<expanded>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -192,7 +200,7 @@
 </mainWindow>
 </layout>
 </perspective>
-<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -244,17 +252,30 @@
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
-<view id="org.eclipse.ui.views.ProblemView"/>
-<view id="org.eclipse.ui.views.TaskList"/>
-<view id="org.eclipse.ui.views.PropertySheet"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.cdt.ui.includeBrowser"/>
-<view id="org.eclipse.search.ui.views.SearchView"/>
-<view id="org.eclipse.cdt.ui.typeHierarchy"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.cdt.make.ui.views.MakeView"/>
-<fastViewBars/>
+<fastViewBars>
+<fastViewBar fastViewLocation="16384" id="org.eclipse.ui.internal.ViewStack@892399" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="1">
+<fastViews>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="topRight" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="1">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+<view id="org.eclipse.cdt.make.ui.views.MakeView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
+<fastViews>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
+<view id="org.eclipse.ui.views.PropertySheet" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
+<view id="org.eclipse.cdt.ui.includeBrowser" ratio="0.3"/>
+<view id="org.eclipse.search.ui.views.SearchView" ratio="0.3"/>
+<view id="org.eclipse.cdt.ui.typeHierarchy" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="topLeft">
@@ -274,42 +295,29 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@892399" ratio="0.15185444" ratioLeft="217" ratioRight="1212" relationship="2" relative="topLeft">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="bottom" ratio="0.7826087" ratioLeft="576" ratioRight="160" relationship="4" relative="org.eclipse.ui.internal.ViewStack@892399">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
-<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="org.eclipse.cdt.ui.includeBrowser" label="Include Browser"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
-<page content="org.eclipse.cdt.ui.typeHierarchy" label="Type Hierarchy"/>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.ui.includeBrowser" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.ui.typeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="topRight" ratio="0.8684395" ratioLeft="1241" ratioRight="188" relationship="2" relative="org.eclipse.ui.internal.ViewStack@892399">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<page content="org.eclipse.cdt.make.ui.views.MakeView" label="Make Targets"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.make.ui.views.MakeView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.2536349" ratioLeft="314" ratioRight="924" relationship="2" relative="org.eclipse.ui.internal.ViewStack@892399"/>
@@ -320,171 +328,160 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/Main.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/control_struct.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Arduino-328P/wiring.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Arduino-328P/wiring.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/control_struct.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/Main.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Controller.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Arduino-328P/wiring.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Arduino-328P/wiring.h"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/usr/lib/avr/include/util/delay.h" project="Arduino-328P"/>
 </editors>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="766" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="5609" y="0"/>
 </item>
-<item historyLabel="control_struct.h" index="3">
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="5635" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
 <position/>
 </item>
-<item historyLabel="Controller.cc" index="1">
-<position info="not_deleted" x="1822" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="725" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="1355" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="1351" y="0"/>
-</item>
-<item historyLabel="wiring.h" index="4">
-<position info="not_deleted" x="3093" y="6"/>
-</item>
-<item historyLabel="wiring.c" index="5">
-<position info="not_deleted" x="2651" y="0"/>
-</item>
-<item historyLabel="wiring.h" index="4">
-<position info="not_deleted" x="3093" y="6"/>
+<item historyLabel="Controller.h" index="0">
+<position info="not_deleted" x="523" y="0"/>
 </item>
 <item historyLabel="Controller.cc" index="1">
-<position info="not_deleted" x="1822" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="2728" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="403" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="3">
-<position info="not_deleted" x="454" y="0"/>
+<position info="not_deleted" x="6334" y="0"/>
 </item>
 <item historyLabel="Controller.cc" index="1">
-<position info="not_deleted" x="1822" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="1687" y="0"/>
+<position info="not_deleted" x="8017" y="0"/>
 </item>
 <item historyLabel="Controller.cc" index="1">
-<position info="not_deleted" x="6068" y="0"/>
+<position info="not_deleted" x="6243" y="0"/>
 </item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3305" y="0"/>
+<item historyLabel="Controller.h" index="0">
+<position info="not_deleted" x="750" y="0"/>
 </item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="403" y="0"/>
-</item>
-<item historyLabel="Controller.cc" index="1">
-<position info="not_deleted" x="6068" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="3">
-<position info="not_deleted" x="879" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3376" y="10"/>
+<item historyLabel="Controller.h" index="0">
+<position info="not_deleted" x="1494" y="0"/>
 </item>
 <item historyLabel="Controller.cc" index="1">
-<position info="not_deleted" x="2175" y="0"/>
+<position info="not_deleted" x="3678" y="0"/>
 </item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="4316" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="3">
-<position info="not_deleted" x="1004" y="0"/>
-</item>
-<item historyLabel="wiring.h" index="4">
-<position info="not_deleted" x="3093" y="6"/>
-</item>
-<item historyLabel="control_struct.h" index="3">
-<position info="not_deleted" x="1004" y="0"/>
+<item historyLabel="Controller.h" index="0">
+<position info="not_deleted" x="1470" y="0"/>
 </item>
 <item historyLabel="Controller.cc" index="1">
-<position info="not_deleted" x="2175" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="4316" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3617" y="5"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3557" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="4225" y="0"/>
-</item>
-<item historyLabel="Controller.h" index="2">
-<position info="not_deleted" x="403" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="3">
-<position info="not_deleted" x="625" y="0"/>
+<position info="not_deleted" x="3924" y="0"/>
 </item>
 <item historyLabel="Controller.cc" index="1">
-<position info="not_deleted" x="4326" y="0"/>
+<position info="not_deleted" x="8016" y="0"/>
 </item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="4225" y="0"/>
+<item historyLabel="Controller.h" index="0">
+<position info="not_deleted" x="417" y="0"/>
 </item>
-<item historyLabel="Controller.cc" index="6">
-<position info="not_deleted" x="4326" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="8016" y="0"/>
 </item>
-<item historyLabel="Controller.h" index="7">
-<position info="not_deleted" x="403" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="6843" y="0"/>
 </item>
-<item historyLabel="control_struct.h" index="8">
-<position info="not_deleted" x="625" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="6882" y="0"/>
 </item>
-<item historyLabel="Main.cc" index="9">
-<position info="not_deleted" x="3796" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="6925" y="0"/>
 </item>
-<item historyLabel="Controller.cc" index="10">
-<position info="not_deleted" x="4326" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="6969" y="0"/>
 </item>
-<item historyLabel="Controller.h" index="11">
-<position info="not_deleted" x="403" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7013" y="0"/>
 </item>
-<item historyLabel="control_struct.h" index="8">
-<position info="not_deleted" x="625" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7058" y="0"/>
 </item>
-<item historyLabel="wiring.c" index="12">
-<position info="not_deleted" x="2653" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7105" y="0"/>
 </item>
-<item historyLabel="wiring.h" index="13">
-<position info="not_deleted" x="2220" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7153" y="0"/>
 </item>
-<item historyLabel="delay.h" index="14">
-<position info="not_deleted" x="3765" y="5"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7197" y="0"/>
 </item>
-<item historyLabel="wiring.h" index="13">
-<position info="not_deleted" x="2220" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7316" y="0"/>
 </item>
-<item historyLabel="wiring.c" index="12">
-<position info="not_deleted" x="2383" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7556" y="0"/>
 </item>
-<item historyLabel="Controller.cc" index="10">
-<position info="not_deleted" x="3" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7599" y="0"/>
 </item>
-<item historyLabel="wiring.c" index="12">
-<position info="not_deleted" x="2383" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7682" y="0"/>
 </item>
-<item active="true" historyLabel="Main.cc" index="9">
-<position info="not_deleted" x="1352" y="0"/>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7724" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7767" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7809" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7852" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7897" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="8006" y="0"/>
+</item>
+<item historyLabel="Controller.h" index="0">
+<position info="not_deleted" x="1100" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="7835" y="0"/>
+</item>
+<item historyLabel="Controller.h" index="0">
+<position info="not_deleted" x="379" y="144"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="4304" y="0"/>
+</item>
+<item historyLabel="control_struct.h" index="2">
+<position info="not_deleted" x="818" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="3">
+<position info="not_deleted" x="4289" y="9"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="4679" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="2264" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="2274" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="2290" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="2300" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="2316" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="2350" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="2387" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="3">
+<position info="not_deleted" x="4210" y="0"/>
+</item>
+<item active="true" historyLabel="Controller.cc" index="1">
+<position info="not_deleted" x="2079" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -492,6 +489,12 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@892399"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="topRight"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -499,10 +502,17 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" tooltip="ROS_mini/src/lib/Controller.h">
+<persistable path="/ROS_mini/src/lib/Controller.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc">
+<persistable path="/ROS_mini/src/lib/Controller.cc"/>
+</file>
 <file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="delay.h" tooltip="/usr/lib/avr/include/util/delay.h">
 <persistable path="/usr/lib/avr/include/util/delay.h" project="Arduino-328P"/>
 </file>
@@ -521,14 +531,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" tooltip="ROS_mini/src/lib/control_struct.h">
 <persistable path="/ROS_mini/src/lib/control_struct.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" tooltip="ROS_mini/src/lib/Controller.h">
-<persistable path="/ROS_mini/src/lib/Controller.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mini/src/Main.cc">
 <persistable path="/ROS_mini/src/Main.cc"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc">
-<persistable path="/ROS_mini/src/lib/Controller.cc"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Gyro.h" tooltip="ROS_mini/src/lib/Gyro.h">
 <persistable path="/ROS_mini/src/lib/Gyro.h"/>

@@ -115,6 +115,25 @@ int rover::interface::driveDirect(int left_speed, int right_speed) {
 	return (0);
 }
 
+int rover::interface::setMotorsRaw(int8_t left, int8_t right) {
+	char cmd_buffer[8];
+	cmd_buffer[0] = START_CHAR;
+	cmd_buffer[1] = 's';
+	cmd_buffer[2] = 'M';
+	cmd_buffer[3] = 'O';
+	cmd_buffer[4] = 'T';
+	cmd_buffer[5] = END_CHAR;
+	cmd_buffer[6] = (char) (left & 0xFF);
+	cmd_buffer[7] = (char) (right & 0xFF);
+
+	try {
+		m_port->write(cmd_buffer, 8);
+	} catch (cereal::Exception& e) {
+		return (-1);
+	}
+	return (0);
+}
+
 int rover::interface::setServos(double panAngle, double tiltAngle) {
 	// limit angles to +- pi/2
 	panAngle = max(panAngle, -HALF_PI);
@@ -154,49 +173,55 @@ void rover::interface::processPacket(std::string * packet) {
 		data[i] = static_cast<uint8_t>(packet->at(i));
 	}
 
-	if (packet->size() == 25) {
+	if (packet->size() == 27) {
 		ros::Time current_time = ros::Time::now();
 		double dt = (current_time - m_lastSensorUpdateTime).toSec();
 
-		uint16_t leftSpeed = data[1] << 8  | data[2];
-		uint16_t rightSpeed = data[3] << 8 | data[4];
-		uint16_t yawRate = data[5] << 8 | data[6];
-		uint16_t yaw = data[7] << 8 | data[9];
+        uint32_t leftCount, rightCount;
+        uint16_t leftSpeed, rightSpeed, yawRate, yawVal;
+        int16_t voltage, current;
+        uint8_t sign, panAngle, tiltAngle;
+        int8_t leftOutSpeed, rightOutSpeed;
 
-		m_velocity_left = leftSpeed / 10000.0;
-		m_velocity_right = rightSpeed / 10000.0;
+#define SIGN_LEFT_VEL (1 << 0)
+#define SIGN_RIGHT_VEL (1 << 1)
+#define SIGN_YAW_RATE (1 << 2)
+#define SIGN_YAW_VAL (1 << 3)
+#define SIGN_LEFT_ENC (1 << 4)
+#define SIGN_RIGHT_ENC (1 << 5)
+#define SIGN(x) ((sign & (x)) ? (1) : (-1))
 
-        uint32_t leftCount = data[16] << 24u | data[17] << 16u | data[18] << 8u 
-            | data[19];
-        uint32_t rightCount = data[20] << 24u | data[21] << 16u | data[22] << 8u
-            | data[23];
+        sign = data[1];
+        leftSpeed = data[2] << 8u | data[3];
+        rightSpeed = data[4] << 8u | data[5];
+        leftOutSpeed = data[6];
+        rightOutSpeed = data[7];
+        leftCount = data[8] << 24u | data[9] << 16u | data[10] << 8u | data[11];
+        rightCount = data[12] << 24u | data[13] << 16u | data[14] << 8u | data[15];
+        yawRate = data[16] << 8u | data[17];
+        yawVal = data[18] << 8u | data[19];
+        voltage = data[20] << 8u | data[21];
+        current = data[22] << 8u | data[23];
+        tiltAngle = data[24];
+        panAngle = data[25];
 
-        m_encoder_left = leftCount;
-        m_encoder_right = rightCount;
+        m_left_raw = leftOutSpeed;
+        m_right_raw = rightOutSpeed;
 
-		if (!(data[9] & (1 << 0)))
-			m_velocity_left *= -1;
-		if (!(data[9] & (1 << 1)))
-			m_velocity_right *= -1;
-        if (!(data[9] & (1 << 4)))
-            m_encoder_left *= -1;
-        if (!(data[9] & (1 << 5)))
-            m_encoder_right *= -1;
+		m_velocity_left = leftSpeed / 10000.0 * SIGN(SIGN_LEFT_VEL);
+		m_velocity_right = rightSpeed / 10000.0 * SIGN(SIGN_RIGHT_VEL);
+
+        m_encoder_left = leftCount * SIGN(SIGN_LEFT_ENC);
+        m_encoder_right = rightCount * SIGN(SIGN_RIGHT_ENC);
+
+        m_gyro_yawrate = yawRate / 1000.0 * m_gyro_correction * SIGN(SIGN_YAW_RATE);
+        m_gyro_yaw += m_gyro_yawrate * dt - m_gyro_offset;
 		
-		m_gyro_yawrate = yawRate / 1000.0 * m_gyro_correction;
+		m_battery_voltage = voltage / 100.0;
+		m_battery_current = current / 100.0;
 
-		if (!(data[9] & (1 << 2)))
-			m_gyro_yawrate *= -1;
-		if (!(data[9] & (1 << 3)))
-			m_gyro_yaw *= -1;
-
-		m_gyro_yaw += m_gyro_yawrate * dt - m_gyro_offset;
-
-		m_battery_voltage = ((data[10] << 8 | data[11]) / 100.0);
-		m_battery_current = ((data[12] << 8 | data[13]) / 100.0);
-
-		m_pan_angle = data[14] * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
-		m_tilt_angle = data[15] * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+		m_pan_angle = panAngle * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+		m_tilt_angle = tiltAngle * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
 	
 		this->calculateOdometry(dt);
 		m_lastSensorUpdateTime = current_time;

@@ -72,8 +72,8 @@ int main(int argc, char** argv) {
 	n.param<double> ("/rover/right/integral", rI, 0.05);
 	n.param<double> ("/rover/right/derivative", rD, 0);
 
-    n.param<double> ("/rover/left/conversion_factor", le, 0.00199491134);
-    n.param<double> ("/rover/right/conversion_factor", re, 0.00199491134);
+    n.param<double> ("/rover/left/conversion_factor", le, 0.004);
+    n.param<double> ("/rover/right/conversion_factor", re, 0.004);
 
     double gyro_bias;
     n.param<double> ("/rover/gyro_bias", gyro_bias, 0.0);
@@ -87,6 +87,10 @@ int main(int argc, char** argv) {
 
     bool publish_tf;
     n.param<bool> ("/rover/publish_tf", publish_tf, true);
+
+    int left_initial, right_initial;
+    n.param<int> ("/rover/initial_left_motor", left_initial, 0);
+    n.param<int> ("/rover/initial_right_motor", right_initial, 0);
 
 	// publishers
 	ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry> ("/odom", 50);
@@ -126,7 +130,8 @@ int main(int argc, char** argv) {
 	sensor_msgs::JointState joint_state;
 
 	bot->setPID(lP, lI, lD, rP, rI, rD);
-    	bot->setConversionFactors(le, re);
+    bot->setConversionFactors(le, re);
+    bot->setMotorsRaw(left_initial, right_initial);
 
 	// main processing loop
 	while (n.ok()) {
@@ -236,6 +241,8 @@ int main(int argc, char** argv) {
 			enc_msg.right = bot->m_velocity_right;
             enc_msg.leftCount = bot->m_encoder_left;
             enc_msg.rightCount = bot->m_encoder_right;
+            enc_msg.leftMotor = bot->m_left_raw;
+            enc_msg.rightMotor = bot->m_right_raw;
 
 			// send the message
 			enc_pub.publish(enc_msg);
