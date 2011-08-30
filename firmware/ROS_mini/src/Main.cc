@@ -73,6 +73,15 @@ void rEncHandler() {
 	ctrl.rightEnc.time = micros();
 }
 
+void processPID(PID_params * p, float dt) {
+	p->error = p->set - p->input;
+	p->accumulated += p->error * dt;
+	p->accumulated = constrain(p->accumulated, -(p->accLimit), p->accLimit);
+	p->output = p->proportional * p->error + p->integral * p->accumulated
+			+ p->derivative * (p->error - p->previous) / dt;
+	p->previous = p->error;
+}
+
 /**
  * Main execution loop
  */
@@ -159,19 +168,11 @@ int main() {
 			ctrl.leftEnc.pCount = ctrl.leftEnc.count;
 			ctrl.rightEnc.pCount = ctrl.rightEnc.count;
 
-			ctrl.leftPID.error = ctrl.leftPID.set - ctrl.leftPID.input;
-			ctrl.leftPID.accumulated += ctrl.leftPID.error * dt;
-			ctrl.leftPID.accumulated = constrain(ctrl.leftPID.accumulated, -(ctrl.leftPID.accLimit), ctrl.leftPID.accLimit);
-			ctrl.leftPID.output = ctrl.leftPID.proportional * ctrl.leftPID.error + ctrl.leftPID.integral * ctrl.leftPID.accumulated
-					+ ctrl.leftPID.derivative + (ctrl.leftPID.error - ctrl.leftPID.previous) / dt;
-			ctrl.leftPID.previous = ctrl.leftPID.error;
+			ctrl.leftPID.input = ctrl.leftEnc.velocity;
+			ctrl.rightPID.input = ctrl.rightEnc.velocity;
 
-			ctrl.rightPID.error = ctrl.rightPID.set - ctrl.rightPID.input;
-			ctrl.rightPID.accumulated += ctrl.rightPID.error * dt;
-			ctrl.rightPID.accumulated = constrain(ctrl.rightPID.accumulated, -(ctrl.rightPID.accLimit), ctrl.rightPID.accLimit);
-			ctrl.rightPID.output = ctrl.rightPID.proportional * ctrl.rightPID.error + ctrl.rightPID.integral * ctrl.rightPID.accumulated
-					+ ctrl.rightPID.derivative + (ctrl.rightPID.error - ctrl.rightPID.previous) / dt;
-			ctrl.rightPID.previous = ctrl.rightPID.error;
+			processPID(&ctrl.leftPID, dt);
+			processPID(&ctrl.rightPID, dt);
 
 			ctrl.mot.leftSpeed += ctrl.leftPID.output;
 			ctrl.mot.rightSpeed += ctrl.rightPID.output;

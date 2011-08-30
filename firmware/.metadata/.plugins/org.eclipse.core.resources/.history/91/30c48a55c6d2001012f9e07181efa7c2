@@ -15,7 +15,7 @@
 #include "libraries/Servo/Servo.h"
 
 // Control
-#define TIME_INTERVAL 20 // 50 Hz
+#define TIME_INTERVAL 100 // 10 Hz
 #define LED_INTERVAL 500
 
 unsigned long nexTime = 0, cTime = 0, ledTime = 0;
@@ -23,10 +23,8 @@ unsigned long nexTime = 0, cTime = 0, ledTime = 0;
 // control data
 control_data ctrl;
 
-#define QP_TO_CM_LEFT (0.00199491134)
-#define QP_TO_CM_RIGHT (0.00199491134)
-
-int16_t lspeed, rspeed;
+#define QP_TO_CM_LEFT (0.004)
+#define QP_TO_CM_RIGHT (0.004)
 
 // adc mux:
 CD74HC4067 mux(MUX_1, MUX_2, MUX_3, MUX_4, MUX_ADC);
@@ -59,24 +57,32 @@ void lEncHandler() {
 #else
 	ctrl.leftEnc.dir = digitalReadFast(LENC_B);
 #endif
-#ifdef LENCREV
-	ctrl.leftEnc.count -= ctrl.leftEnc.dir ? -1 : +1;
-#else
 	ctrl.leftEnc.count += ctrl.leftEnc.dir ? +1 : -1;
-#endif
 	ctrl.leftEnc.pTime = ctrl.leftEnc.time;
 	ctrl.leftEnc.time = micros();
 }
 
 void rEncHandler() {
-	ctrl.rightEnc.dir = digitalReadFast(RENC_B);
-#ifdef LENCREV
-	ctrl.rightEnc.count -= ctrl.rightEnc.dir ? -1 : +1;
+#ifndef RENCREV
+	ctrl.rightEnc.dir = !digitalReadFast(RENC_B);
 #else
-	ctrl.rightEnc.count += ctrl.rightEnc.dir ? -1 : +1;
+	ctrl.rightEnc.dir = digitalReadFast(RENC_B);
 #endif
+	ctrl.rightEnc.count += ctrl.rightEnc.dir ? +1 : -1;
 	ctrl.rightEnc.pTime = ctrl.rightEnc.time;
 	ctrl.rightEnc.time = micros();
+}
+
+void processPID(PID_params * p, float dt) {
+	ctrl.leftPID.error = ctrl.leftPID.set - ctrl.leftPID.input;
+	ctrl.leftPID.accumulated += ctrl.leftPID.error * dt;
+	ctrl.leftPID.accumulated
+			= constrain(ctrl.leftPID.accumulated, -(ctrl.leftPID.accLimit), ctrl.leftPID.accLimit);
+	ctrl.leftPID.output = ctrl.leftPID.proportional * ctrl.leftPID.error
+			+ ctrl.leftPID.integral * ctrl.leftPID.accumulated
+			+ ctrl.leftPID.derivative * (ctrl.leftPID.error
+					- ctrl.leftPID.previous) / dt;
+	ctrl.leftPID.previous = ctrl.leftPID.error;
 }
 
 /**
@@ -105,10 +111,12 @@ int main() {
 	ctrl.leftPID.proportional = 0.3;
 	ctrl.leftPID.integral = 0.05;
 	ctrl.leftPID.derivative = 0;
+	ctrl.leftPID.accLimit = 127;
 
 	ctrl.rightPID.proportional = 0.3;
 	ctrl.rightPID.integral = 0.05;
 	ctrl.rightPID.derivative = 0;
+	ctrl.rightPID.accLimit = 127;
 
 	ctrl.leftEnc.cmPerCount = QP_TO_CM_LEFT;
 	ctrl.rightEnc.cmPerCount = QP_TO_CM_RIGHT;
@@ -154,53 +162,25 @@ int main() {
 				yawGyro.calibrate(1000, true); // update calibration
 			}
 
-			// Encoder processing
-//			ctrl.leftEnc.velocity = (ctrl.leftEnc.count - ctrl.leftEnc.pCount)
-//					* ctrl.leftEnc.cmPerCount / dt;
-//			ctrl.rightEnc.velocity = (ctrl.rightEnc.count - ctrl.rightEnc.pCount)
-//					* ctrl.rightEnc.cmPerCount / dt;
-#ifndef SIGN
-#define SIGN(x) ((x) ? 1 : -1);
-#endif
+			//			 Encoder processing
+			ctrl.leftEnc.velocity = (ctrl.leftEnc.count - ctrl.leftEnc.pCount)
+					* ctrl.leftEnc.cmPerCount / dt;
+			ctrl.rightEnc.velocity = (ctrl.rightEnc.count
+					- ctrl.rightEnc.pCount) * ctrl.rightEnc.cmPerCount / dt;
 
-			ctrl.leftEnc.velocity = SIGN(ctrl.leftEnc.dir);
 			ctrl.leftEnc.pCount = ctrl.leftEnc.count;
 			ctrl.rightEnc.pCount = ctrl.rightEnc.count;
 
-			// PID processing
 			ctrl.leftPID.input = ctrl.leftEnc.velocity;
 			ctrl.rightPID.input = ctrl.rightEnc.velocity;
 
-			ctrl.leftPID.error = ctrl.leftPID.set - ctrl.leftPID.input;
-			ctrl.rightPID.error = ctrl.rightPID.set - ctrl.rightPID.input;
+			ctrl.mot.leftSpeed += ctrl.leftPID.output;
+			ctrl.mot.rightSpeed += ctrl.rightPID.output;
 
-			ctrl.leftPID.accumulated += ctrl.leftPID.error * dt;
-			ctrl.rightPID.accumulated += ctrl.rightPID.error * dt;
+			ctrl.mot.leftSpeed = constrain(ctrl.mot.leftSpeed, -127, 127);
+			ctrl.mot.rightSpeed = constrain(ctrl.mot.rightSpeed, -127, 127);
 
-			ctrl.leftPID.accumulated
-					= constrain(ctrl.leftPID.accumulated, -127, 127);
-			ctrl.rightPID.accumulated
-					= constrain(ctrl.rightPID.accumulated, -127, 127);
-
-			ctrl.leftPID.output = ctrl.leftPID.proportional * ctrl.leftPID.error
-					+ ctrl.leftPID.integral * ctrl.leftPID.accumulated
-					+ ctrl.leftPID.derivative * (ctrl.leftPID.error
-							- ctrl.leftPID.previous) / dt;
-			ctrl.rightPID.output = ctrl.rightPID.proportional
-					* ctrl.rightPID.error + ctrl.rightPID.integral
-					* ctrl.rightPID.accumulated + ctrl.rightPID.derivative
-					* (ctrl.rightPID.error - ctrl.rightPID.previous) / dt;
-
-			ctrl.leftPID.previous = ctrl.leftPID.error;
-			ctrl.rightPID.previous = ctrl.rightPID.error;
-
-			lspeed += ctrl.leftPID.output;
-			rspeed += ctrl.rightPID.output;
-
-			lspeed = constrain(lspeed, -127, 127);
-			rspeed = constrain(rspeed, -127, 127);
-
-			setSpeeds(lspeed & 0xff, rspeed & 0xff);
+			setSpeeds(ctrl.mot.leftSpeed & 0xff, ctrl.mot.rightSpeed & 0xff);
 
 			nexTime = cTime + TIME_INTERVAL;
 		}

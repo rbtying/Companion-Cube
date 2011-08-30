@@ -3,18 +3,19 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="316" key="DIALOG_WIDTH"/>
 		<item value="109" key="DIALOG_Y_ORIGIN"/>
-		<item value="1094" key="DIALOG_X_ORIGIN"/>
 		<item value="437" key="DIALOG_HEIGHT"/>
+		<item value="1101" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Controller" key="selection"/>
+		<item value="p-&gt;" key="selection"/>
 		<list key="findhistory">
+			<item value="ctrl.leftPID."/>
 			<item value="controller"/>
 			<item value="leftSpeed"/>
 			<item value="enc.pRightCount"/>
@@ -22,9 +23,9 @@
 			<item value="enc.pLeftCount"/>
 			<item value="enc.leftCount"/>
 			<item value="enc.leftDir"/>
-			<item value="QP_TO_CM_LEFT"/>
 		</list>
 		<list key="replacehistory">
+			<item value="p-&gt;"/>
 			<item value="rightEnc.pCount"/>
 			<item value="leftEnc.pCount"/>
 			<item value="leftEnc.count"/>
