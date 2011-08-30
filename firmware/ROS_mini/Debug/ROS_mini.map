@@ -1158,9 +1158,9 @@ LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
  .text._ZN12PowerMonitorC1Ev
                 0x00000000000023e2       0x20 ./src/lib/PowerMonitor.o
                 0x00000000000023e2                PowerMonitor::PowerMonitor()
- .text._Z10processPIDR10PID_paramsf
+ .text._Z10processPIDP10PID_paramsf
                 0x0000000000002402      0x14a ./src/Main.o
-                0x0000000000002402                processPID(PID_params&, float)
+                0x0000000000002402                processPID(PID_params*, float)
  .text._GLOBAL__I_nexTime
                 0x000000000000254c       0x94 ./src/Main.o
  .text._Z11rEncHandlerv
@@ -2241,7 +2241,7 @@ port_to_output_PGM                                /home/rbtying/robot/firmware/A
                                                   ./src/lib/NewSoftSerial.o
 pow                                               /home/rbtying/robot/firmware/Arduino-328P/Debug/libm.a(pow.o)
                                                   ./src/lib/Sharp_IR.o
-processPID(PID_params&, float)                    ./src/Main.o
+processPID(PID_params*, float)                    ./src/Main.o
 pulseIn                                           /home/rbtying/robot/firmware/Arduino-328P/Debug/libArduino.a(wiring_pulse.o)
                                                   ./src/lib/RC_CTRL.o
                                                   ./src/lib/Ping.o
