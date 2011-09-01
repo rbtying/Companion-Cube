@@ -1,0 +1,107 @@
+#include <avr/interrupt.h>
+#include <avr/pgmspace.h>
+#include "WConstants.h"
+#include "pins_arduino.h"
+#include "txOnlySerial.h"
+
+// 19200 baud
+#if F_CPU == 16000000
+#define TX_DELAY 114
+const int XMIT_START_ADJUSTMENT = 5;
+#elif F_CPU == 8000000
+#define TX_DELAY 52
+const int XMIT_START_ADJUSTMENT = 4;
+#elif F_CPU == 20000000
+#define TX_DELAY 145
+const int XMIT_START_ADJUSTMENT = 6;
+#else
+#error This version of the Sabertooth library only supports 8Mhz/16Mhz/20Mhz processors
+#endif
+
+//
+// Statics
+//
+txSerial *txSerial::active_object = 0;
+
+//
+// Private methods
+//
+
+/* static */
+inline void txSerial::tunedDelay(uint16_t delay) {
+	uint8_t tmp = 0;
+
+	asm volatile("sbiw    %0, 0x01 \n\t"
+			"ldi %1, 0xFF \n\t"
+			"cpi %A0, 0xFF \n\t"
+			"cpc %B0, %1 \n\t"
+			"brne .-10 \n\t"
+			: "+r" (delay), "+a" (tmp)
+			: "0" (delay)
+	);
+}
+
+void txSerial::tx_pin_write(uint8_t pin_state) {
+	if (pin_state == LOW)
+		*_transmitPortRegister &= ~_transmitBitMask;
+	else
+		*_transmitPortRegister |= _transmitBitMask;
+}
+
+//
+// Constructor
+//
+txSerial::txSerial(uint8_t transmitPin) :
+	_tx_delay(0) {
+	setTX(transmitPin);
+}
+
+void txSerial::setTX(uint8_t tx) {
+	pinMode(tx, OUTPUT);
+	digitalWrite(tx, HIGH);
+	_transmitBitMask = digitalPinToBitMask(tx);
+	uint8_t port = digitalPinToPort(tx);
+	_transmitPortRegister = portOutputRegister(port);
+}
+
+//
+// Public methods
+//
+
+void txSerial::begin(long speed) {
+	_tx_delay = TX_DELAY;
+
+	tunedDelay(_tx_delay); // if we were low this establishes the end
+}
+
+void txSerial::write(uint8_t b) {
+	if (_tx_delay == 0)
+		return;
+
+	uint8_t oldSREG = SREG;
+	cli();
+	// turn off interrupts for a clean txmit
+
+	// Write the start bit
+	tx_pin_write(LOW);
+	tunedDelay(_tx_delay + XMIT_START_ADJUSTMENT);
+
+	for (byte mask = 0x01; mask; mask <<= 1) {
+		if (b & mask) // choose bit
+			tx_pin_write(HIGH); // send 1
+		else
+			tx_pin_write(LOW); // send 0
+
+		tunedDelay(_tx_delay);
+	}
+
+	tx_pin_write(HIGH); // restore pin to natural state
+
+	SREG = oldSREG; // turn interrupts back on
+	tunedDelay(_tx_delay);
+}
+
+#if !defined(cbi)
+#define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit))
+#define sbi(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))
+#endif

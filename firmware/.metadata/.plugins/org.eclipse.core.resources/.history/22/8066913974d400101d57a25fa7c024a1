@@ -1,0 +1,101 @@
+/*
+ * Sabertooth.cc
+ *
+ *  Created on: Aug 31, 2011
+ *      Author: rbtying
+ */
+
+#include "Sabertooth.h"
+
+Sabertooth::Sabertooth(uint8_t address, uint8_t txPin, uint8_t emStopPin) :
+	txSerial(txPin) {
+	m_stopPin = emStopPin;
+	m_address = address;
+	m_em_stop_en = true;
+	begin(SBT_BAUD_RATE);
+
+	pinMode(m_stopPin, OUTPUT);
+	reset();
+}
+
+Sabertooth::Sabertooth(uint8_t address, uint8_t txPin) :
+	txSerial(txPin) {
+	begin(SBT_BAUD_RATE);
+
+	m_address = address;
+	m_em_stop_en = false;
+
+	reset();
+}
+
+void Sabertooth::reset() {
+	print(SBT_BAUDING_CHAR, BYTE);
+	if (m_em_stop_en)
+		digitalWrite(m_stopPin, HIGH);
+}
+
+void Sabertooth::setMinVoltage(float voltage) {
+	voltage = max(voltage, 6.0);
+	uint8_t data = (uint8_t) ((voltage - 6.0) * 5.0);
+	sendPacket(SBT_OP_MIN_VOLT, data);
+}
+
+void Sabertooth::setMaxVoltage(float voltage) {
+	uint8_t data = (uint8_t) (voltage * 5.12);
+	sendPacket(SBT_OP_MAX_VOLT, data);
+}
+
+void Sabertooth::setSpeed(int8_t left, int8_t right) {
+	reset();
+	setLeftSpeed(left);
+	setRightSpeed(right);
+}
+
+void Sabertooth::setSpeed(int8_t left, int8_t right, bool leftFwd,
+		bool rightFwd) {
+	setSpeed((leftFwd ? (1) : (-1)) * left, (rightFwd ? (1) : (-1)) * right);
+}
+
+int16_t Sabertooth::getLeftSpeed() {
+	return m_left_speed;
+}
+
+int16_t Sabertooth::getRightSpeed() {
+	return m_right_speed;
+}
+
+void Sabertooth::setLeftSpeed(int8_t spd) {
+	if (spd >= 0)
+		setMotorSpeed(SBT_OP_M2_FWD, abs(spd));
+	else
+		setMotorSpeed(SBT_OP_M2_REV, abs(spd));
+}
+
+void Sabertooth::setRightSpeed(int8_t spd) {
+	if (spd >= 0)
+		setMotorSpeed(SBT_OP_M1_FWD, abs(spd));
+	else
+		setMotorSpeed(SBT_OP_M1_REV, abs(spd));
+}
+
+void Sabertooth::setMotorSpeed(uint8_t op, uint8_t spd) {
+	spd = constrain(spd, 0, 127);
+	sendPacket(op, spd);
+}
+
+void Sabertooth::emStop() {
+	setSpeed(0, 0);
+	if (m_em_stop_en)
+		digitalWrite(m_stopPin, LOW);
+}
+
+void Sabertooth::sendPacket(uint8_t op, uint8_t data) {
+	print(m_address, BYTE);
+	print(op, BYTE);
+	print(data, BYTE);
+	print(checksum(op, data), BYTE);
+}
+
+uint8_t Sabertooth::checksum(uint8_t op, uint8_t data) {
+	return (m_address + op + data) & 0b01111111;
+}

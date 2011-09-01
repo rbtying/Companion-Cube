@@ -1,0 +1,36 @@
+/*
+ * Sabertooth.h
+ *
+ *  Created on: Aug 31, 2011
+ *      Author: rbtying
+ */
+
+#ifndef SABERTOOTH_H_
+#define SABERTOOTH_H_
+
+#include <WProgram.h>
+
+#define SBT_BAUD_RATE 38400
+
+#define SBT_OP_M1_FWD 0
+#define SBT_OP_M1_REV 1
+#define SBT_OP_M2_FWD 4
+#define SBT_OP_M2_REV 5
+
+class Sabertooth {
+public:
+	Sabertooth(uint8_t m_address);
+	void update();
+	void setSpeed(int16_t left, int16_t right);
+	int16_t getLeftSpeed();
+	int16_t getRightSpeed();
+
+private:
+	uint8_t m_address;
+	int16_t m_left_speed, m_right_speed;
+	void setLeftSpeed(int16_t spd);
+	void setRightSpeed(int16_t spd);
+	uint8_t checksum(uint8_t op, uint8_t data);
+};
+
+#endif /* SABERTOOTH_H_ */

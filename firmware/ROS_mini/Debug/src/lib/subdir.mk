@@ -18,6 +18,7 @@ CC_SRCS += \
 ../src/lib/Ping.cc \
 ../src/lib/RC_CTRL.cc \
 ../src/lib/RoboClaw.cc \
+../src/lib/Sabertooth.cc \
 ../src/lib/Sharp_IR.cc \
 ../src/lib/TSL1401.cc 
 
@@ -34,6 +35,7 @@ OBJS += \
 ./src/lib/PowerMonitor.o \
 ./src/lib/RC_CTRL.o \
 ./src/lib/RoboClaw.o \
+./src/lib/Sabertooth.o \
 ./src/lib/Sharp_IR.o \
 ./src/lib/TSL1401.o 
 
@@ -48,6 +50,7 @@ CC_DEPS += \
 ./src/lib/Ping.d \
 ./src/lib/RC_CTRL.d \
 ./src/lib/RoboClaw.d \
+./src/lib/Sabertooth.d \
 ./src/lib/Sharp_IR.d \
 ./src/lib/TSL1401.d 
 

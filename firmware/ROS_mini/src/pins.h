@@ -47,8 +47,9 @@
 // ======= END ENCODERS =========
 
 // ======= START MOTORS =========
-#define LMOT 7
-#define RMOT 6
+#define SBT_ADDRESS 128
+#define SBT_PIN1 7
+#define SBT_PIN2 6
 // ======= END MOTORS ===========
 
 // ======= START SERVOS =========

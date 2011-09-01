@@ -1,0 +1,21 @@
+#ifndef txSerial_h
+#define txSerial_h
+
+#include <inttypes.h>
+#include "Print.h"
+
+class txSerial: public Print {
+private:
+	uint8_t _transmitBitMask;
+	volatile uint8_t *_transmitPortRegister;
+
+	uint16_t m_tx_delay;
+
+	virtual void write(uint8_t byte);
+	static inline void tunedDelay(uint16_t delay);
+
+public:
+	txSerial(uint8_t transmitPin);
+};
+
+#endif

@@ -1,0 +1,58 @@
+#ifndef txSerial_h
+#define txSerial_h
+
+#include <inttypes.h>
+#include "Print.h"
+
+/******************************************************************************
+ * Definitions
+ ******************************************************************************/
+
+class txSerial: public Print {
+private:
+	uint8_t _transmitBitMask;
+	volatile uint8_t *_transmitPortRegister;
+
+	uint16_t _tx_delay;
+
+	uint16_t _buffer_overflow :1;
+	uint16_t _inverse_logic :1;
+
+	// static data
+	static txSerial *active_object;
+
+	bool activate();
+	virtual void write(uint8_t byte);
+	void tx_pin_write(uint8_t pin_state);
+	void setTX(uint8_t transmitPin);
+
+	// private static method for timing
+	static inline void tunedDelay(uint16_t delay);
+
+public:
+	// public methods
+	txSerial(uint8_t receivePin, uint8_t transmitPin);
+	void begin(long speed);
+	bool active() {
+		return this == active_object;
+	}
+	bool overflow() {
+		bool ret = _buffer_overflow;
+		_buffer_overflow = false;
+		return ret;
+	}
+	static void enable_timer0(bool enable);
+	void flush();
+
+};
+
+// Arduino 0012 workaround
+#undef int
+#undef char
+#undef long
+#undef byte
+#undef float
+#undef abs
+#undef round
+
+#endif
