@@ -169,22 +169,22 @@ int main() {
 			processPID(&ctrl.leftPID, dt);
 			processPID(&ctrl.rightPID, dt);
 
-			ctrl.mot.leftSpeed += ctrl.leftPID.output;
-			ctrl.mot.rightSpeed += ctrl.rightPID.output;
+			ctrl.mot.leftSpeed += constrain(ctrl.leftPID.output, -40, 40);
+			ctrl.mot.rightSpeed += constrain(ctrl.rightPID.output, -40, 40);
 
 			ctrl.mot.leftSpeed = constrain(ctrl.mot.leftSpeed, -127, 127);
 			ctrl.mot.rightSpeed = constrain(ctrl.mot.rightSpeed, -127, 127);
 
 			// detach servos to avoid jitter from interrupts disabled in software serial
-			ctrl.pan.detach();
-			ctrl.tilt.detach();
+			//			ctrl.pan.detach();
+			//			ctrl.tilt.detach();
 
 			m.setSpeed(ctrl.mot.leftSpeed & 0xff, ctrl.mot.rightSpeed & 0xff,
 					false, true);
 
 			// reattach servos here
-			ctrl.pan.attach(PANSERVO);
-			ctrl.tilt.attach(TILTSERVO);
+			//			ctrl.pan.attach(PANSERVO);
+			//			ctrl.tilt.attach(TILTSERVO);
 
 			nexTime = cTime + TIME_INTERVAL;
 		}

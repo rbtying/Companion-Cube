@@ -20,8 +20,7 @@ CC_SRCS += \
 ../src/lib/RoboClaw.cc \
 ../src/lib/Sabertooth.cc \
 ../src/lib/Sharp_IR.cc \
-../src/lib/TSL1401.cc \
-../src/lib/txOnlySerial.cc 
+../src/lib/TSL1401.cc 
 
 OBJS += \
 ./src/lib/CD74HC4067.o \
@@ -38,8 +37,7 @@ OBJS += \
 ./src/lib/RoboClaw.o \
 ./src/lib/Sabertooth.o \
 ./src/lib/Sharp_IR.o \
-./src/lib/TSL1401.o \
-./src/lib/txOnlySerial.o 
+./src/lib/TSL1401.o 
 
 CC_DEPS += \
 ./src/lib/CD74HC4067.d \
@@ -54,8 +52,7 @@ CC_DEPS += \
 ./src/lib/RoboClaw.d \
 ./src/lib/Sabertooth.d \
 ./src/lib/Sharp_IR.d \
-./src/lib/TSL1401.d \
-./src/lib/txOnlySerial.d 
+./src/lib/TSL1401.d 
 
 CPP_DEPS += \
 ./src/lib/FlexiTimer2.d \

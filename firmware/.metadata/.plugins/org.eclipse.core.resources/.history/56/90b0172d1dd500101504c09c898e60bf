@@ -12,6 +12,7 @@
 #include "lib/Gyro.h"
 #include "lib/fastIO.h"
 #include "lib/CD74HC4067.h"
+#include "lib/Sabertooth.h"
 #include "libraries/Servo/Servo.h"
 
 // Control
@@ -34,19 +35,9 @@ Gyro yawGyro(&mux, YAW_GYRO, YAW_REF, LPR510_CONVERSION_FACTOR);
 double yawVal = 0, yawRate = 0;
 
 // Motors
-Servo lMot, rMot;
+Sabertooth m(SBT_ADDRESS, SBT_PIN2);
 
 Controller cmd(&ctrl);
-
-/**
- * Sets speeds, +1000 to -1000
- */
-void setSpeeds(int8_t left, int8_t right) {
-	lMot.writeMicroseconds(map(constrain(left, -127, 127), -127, 127, 2000,
-			1000));
-	rMot.writeMicroseconds(map(constrain(right, -127, 127), -127, 127, 1000,
-			2000));
-}
 
 /**
  * Encoder handlers
@@ -78,7 +69,7 @@ void processPID(PID_params * p, float dt) {
 	p->accumulated += p->error * dt;
 	p->accumulated = constrain(p->accumulated, -(p->accLimit), p->accLimit);
 	p->output = p->proportional * p->error + p->integral * p->accumulated
-			+ p->derivative + (p->error - p->previous) / dt;
+			+ p->derivative * (p->error - p->previous) / dt;
 	p->previous = p->error;
 }
 
@@ -100,18 +91,19 @@ int main() {
 	ctrl.tilt.attach(TILTSERVO);
 
 	// motors
-	setSpeeds(0, 0);
-	lMot.attach(LMOT);
-	rMot.attach(RMOT);
-
+	/*
+	 setSpeeds(0, 0);
+	 lMot.attach(SBT_PIN1);
+	 rMot.attach(SBT_PIN2);
+	 */
 	// PID
-	ctrl.leftPID.proportional = 0.3;
-	ctrl.leftPID.integral = 0.05;
+	ctrl.leftPID.proportional = 0.6;
+	ctrl.leftPID.integral = 0.1;
 	ctrl.leftPID.derivative = 0;
 	ctrl.leftPID.accLimit = 127;
 
-	ctrl.rightPID.proportional = 0.3;
-	ctrl.rightPID.integral = 0.05;
+	ctrl.rightPID.proportional = 0.6;
+	ctrl.rightPID.integral = 0.1;
 	ctrl.rightPID.derivative = 0;
 	ctrl.rightPID.accLimit = 127;
 
@@ -147,6 +139,9 @@ int main() {
 		}
 
 		if (nexTime <= cTime) {
+			Serial.print("Loop: ");
+			Serial.println(loops);
+
 			float dt = (TIME_INTERVAL + (cTime - nexTime)) * 0.001;
 
 			// update gyro
@@ -168,7 +163,9 @@ int main() {
 			ctrl.leftEnc.pCount = ctrl.leftEnc.count;
 			ctrl.rightEnc.pCount = ctrl.rightEnc.count;
 
-			// PID processing
+			ctrl.leftPID.input = ctrl.leftEnc.velocity;
+			ctrl.rightPID.input = ctrl.rightEnc.velocity;
+
 			processPID(&ctrl.leftPID, dt);
 			processPID(&ctrl.rightPID, dt);
 
@@ -178,7 +175,16 @@ int main() {
 			ctrl.mot.leftSpeed = constrain(ctrl.mot.leftSpeed, -127, 127);
 			ctrl.mot.rightSpeed = constrain(ctrl.mot.rightSpeed, -127, 127);
 
-			setSpeeds(ctrl.mot.leftSpeed & 0xff, ctrl.mot.rightSpeed & 0xff);
+			// detach servos to avoid jitter from interrupts disabled in software serial
+			ctrl.pan.detach();
+			ctrl.tilt.detach();
+
+			m.setSpeed(ctrl.mot.leftSpeed & 0xff, ctrl.mot.rightSpeed & 0xff,
+					false, true);
+
+			// reattach servos here
+			ctrl.pan.attach(PANSERVO);
+			ctrl.tilt.attach(TILTSERVO);
 
 			nexTime = cTime + TIME_INTERVAL;
 		}
