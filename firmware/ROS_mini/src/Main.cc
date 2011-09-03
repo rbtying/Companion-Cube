@@ -12,7 +12,6 @@
 #include "lib/Gyro.h"
 #include "lib/fastIO.h"
 #include "lib/CD74HC4067.h"
-#include "lib/Sabertooth.h"
 #include "libraries/Servo/Servo.h"
 
 // Control
@@ -35,9 +34,19 @@ Gyro yawGyro(&mux, YAW_GYRO, YAW_REF, LPR510_CONVERSION_FACTOR);
 double yawVal = 0, yawRate = 0;
 
 // Motors
-Sabertooth m(SBT_ADDRESS, SBT_PIN2);
+Servo lMot, rMot;
 
 Controller cmd(&ctrl);
+
+/**
+ * Sets speeds, +1000 to -1000
+ */
+void setSpeeds(int8_t left, int8_t right) {
+	lMot.writeMicroseconds(map(constrain(left, -127, 127), -127, 127, 2000,
+			1000));
+	rMot.writeMicroseconds(map(constrain(right, -127, 127), -127, 127, 1000,
+			2000));
+}
 
 /**
  * Encoder handlers
@@ -91,19 +100,18 @@ int main() {
 	ctrl.tilt.attach(TILTSERVO);
 
 	// motors
-	/*
-	 setSpeeds(0, 0);
-	 lMot.attach(SBT_PIN1);
-	 rMot.attach(SBT_PIN2);
-	 */
+	setSpeeds(0, 0);
+	lMot.attach(SBT_PIN1);
+	rMot.attach(SBT_PIN2);
+
 	// PID
-	ctrl.leftPID.proportional = 0.6;
-	ctrl.leftPID.integral = 0.1;
+	ctrl.leftPID.proportional = 0.3;
+	ctrl.leftPID.integral = 0.05;
 	ctrl.leftPID.derivative = 0;
 	ctrl.leftPID.accLimit = 127;
 
-	ctrl.rightPID.proportional = 0.6;
-	ctrl.rightPID.integral = 0.1;
+	ctrl.rightPID.proportional = 0.3;
+	ctrl.rightPID.integral = 0.05;
 	ctrl.rightPID.derivative = 0;
 	ctrl.rightPID.accLimit = 127;
 
@@ -139,9 +147,6 @@ int main() {
 		}
 
 		if (nexTime <= cTime) {
-			Serial.print("Loop: ");
-			Serial.println(loops);
-
 			float dt = (TIME_INTERVAL + (cTime - nexTime)) * 0.001;
 
 			// update gyro
@@ -169,22 +174,13 @@ int main() {
 			processPID(&ctrl.leftPID, dt);
 			processPID(&ctrl.rightPID, dt);
 
-			ctrl.mot.leftSpeed += constrain(ctrl.leftPID.output, -40, 40);
-			ctrl.mot.rightSpeed += constrain(ctrl.rightPID.output, -40, 40);
+			ctrl.mot.leftSpeed += ctrl.leftPID.output;
+			ctrl.mot.rightSpeed += ctrl.rightPID.output;
 
 			ctrl.mot.leftSpeed = constrain(ctrl.mot.leftSpeed, -127, 127);
 			ctrl.mot.rightSpeed = constrain(ctrl.mot.rightSpeed, -127, 127);
 
-			// detach servos to avoid jitter from interrupts disabled in software serial
-			//			ctrl.pan.detach();
-			//			ctrl.tilt.detach();
-
-			m.setSpeed(ctrl.mot.leftSpeed & 0xff, ctrl.mot.rightSpeed & 0xff,
-					false, true);
-
-			// reattach servos here
-			//			ctrl.pan.attach(PANSERVO);
-			//			ctrl.tilt.attach(TILTSERVO);
+			setSpeeds(ctrl.mot.leftSpeed & 0xff, ctrl.mot.rightSpeed & 0xff);
 
 			nexTime = cTime + TIME_INTERVAL;
 		}

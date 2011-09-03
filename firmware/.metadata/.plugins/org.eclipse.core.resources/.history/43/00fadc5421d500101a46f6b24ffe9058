@@ -78,7 +78,7 @@ void processPID(PID_params * p, float dt) {
 	p->accumulated += p->error * dt;
 	p->accumulated = constrain(p->accumulated, -(p->accLimit), p->accLimit);
 	p->output = p->proportional * p->error + p->integral * p->accumulated
-			+ p->derivative + (p->error - p->previous) / dt;
+			+ p->derivative * (p->error - p->previous) / dt;
 	p->previous = p->error;
 }
 
@@ -168,9 +168,11 @@ int main() {
 			ctrl.leftEnc.pCount = ctrl.leftEnc.count;
 			ctrl.rightEnc.pCount = ctrl.rightEnc.count;
 
-			// PID processing
-			processPID(&(ctrl.leftPID), dt);
-			processPID(&(ctrl.rightPID), dt);
+			ctrl.leftPID.input = ctrl.leftEnc.velocity;
+			ctrl.rightPID.input = ctrl.rightEnc.velocity;
+
+			processPID(&ctrl.leftPID, dt);
+			processPID(&ctrl.rightPID, dt);
 
 			ctrl.mot.leftSpeed += ctrl.leftPID.output;
 			ctrl.mot.rightSpeed += ctrl.rightPID.output;
