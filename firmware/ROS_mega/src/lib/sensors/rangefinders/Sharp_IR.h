@@ -4,7 +4,7 @@
  *  Created on: Nov 20, 2010
  *      Author: rbtying
  */
-#include "WProgram.h"
+#include <WProgram.h>
 #include "Rangefinder.h"
 
 #ifndef SHARP_IR_H_

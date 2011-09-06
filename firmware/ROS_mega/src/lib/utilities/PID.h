@@ -8,8 +8,6 @@
 #ifndef PID_H_
 #define PID_H_
 
-#include "WProgram.h"
-
 struct PID_params {
 	double set;
 	double input;

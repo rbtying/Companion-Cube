@@ -7,7 +7,7 @@
 
 #ifndef TSL1401_H_
 #define TSL1401_H_
-#include "WProgram.h"
+#include <WProgram.h>
 
 #define NUM_PIXELS 128
 #define DEFAULT_EXPO (10)

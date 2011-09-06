@@ -8,7 +8,7 @@
 #ifndef RC_CTRL_H_
 #define RC_CTRL_H_
 
-#include "WProgram.h"
+#include <WProgram.h>
 
 class RC_CTRL {
 public:

@@ -8,7 +8,7 @@
 #ifndef CONTROLLER_H_
 #define CONTROLLER_H_
 
-#include "WProgram.h"
+#include <WProgram.h>
 #include "sensors/Battery.h"
 #include "control_struct.h"
 #include "libraries/Servo/Servo.h"

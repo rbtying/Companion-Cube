@@ -5,7 +5,6 @@
  *      Author: rbtying
  */
 
-#include "WProgram.h"
 #include "Battery.h"
 
 Battery::Battery() {

@@ -4,7 +4,7 @@
  *  Created on: September 4th, 2011
  *      Author: rbtying
  */
-#include "WProgram.h"
+#include <WProgram.h>
 #include "pins.h"
 #include "control_struct.h"
 #include "Controller.h"

@@ -35,8 +35,11 @@ void PID::process(double dt) {
 	m_param->accumulated += m_param->error * dt;
 
 	// limit the integrated error to +/- accLimit
-	m_param->accumulated = constrain(m_param->accumulated,
-			-(m_param->accLimit), m_param->accLimit);
+	if (m_param->accumulated > m_param->accLimit) {
+		m_param->accumulated = m_param->accLimit;
+	} else if (m_param->accumulated < -m_param->accLimit) {
+		m_param->accumulated = -m_param->accLimit;
+	}
 
 	// do the actual PID calculation
 	m_param->output = m_param->proportional * m_param->error

@@ -7,7 +7,7 @@
 
 #ifndef PING_H_
 #define PING_H_
-#include "WProgram.h"
+#include <WProgram.h>
 #include "Rangefinder.h"
 
 class Ping: Rangefinder {

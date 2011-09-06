@@ -9,8 +9,8 @@
 #define LCD_H_
 
 #include <inttypes.h>
-#include "Print.h"
-#include "WProgram.h"
+#include <WProgram.h>
+#include <Print.h>
 typedef void (*FuncPtr)(int8_t chip);
 
 // commands
