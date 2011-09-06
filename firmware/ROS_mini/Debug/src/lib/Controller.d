@@ -7,7 +7,8 @@ src/lib/Controller.d src/lib/Controller.o: ../src/lib/Controller.cc \
   /home/rbtying/robot/firmware/Arduino-328P/HardwareSerial.h \
   /home/rbtying/robot/firmware/Arduino-328P/Stream.h \
   /home/rbtying/robot/firmware/Arduino-328P/Print.h \
-  ../src/lib/PowerMonitor.h ../src/lib/control_struct.h \
+  ../src/lib/PowerMonitor.h ../src/lib/CD74HC4067.h \
+  ../src/lib/control_struct.h \
   /home/rbtying/robot/firmware/Arduino-328P/libraries/Servo/Servo.h
 
 ../src/lib/Controller.h:
@@ -27,6 +28,8 @@ src/lib/Controller.d src/lib/Controller.o: ../src/lib/Controller.cc \
 /home/rbtying/robot/firmware/Arduino-328P/Print.h:
 
 ../src/lib/PowerMonitor.h:
+
+../src/lib/CD74HC4067.h:
 
 ../src/lib/control_struct.h:
 

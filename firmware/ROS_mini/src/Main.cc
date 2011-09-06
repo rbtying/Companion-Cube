@@ -91,7 +91,8 @@ int main() {
 	Serial.begin(115200);
 
 	// battery
-	ctrl.batt.set(VOLTAGE_SENS, CURRENT_SENS);
+	ctrl.cpu_batt.set(&mux, VOLTAGE_SENS, CURRENT_SENS);
+	ctrl.mot_batt.set(&mux, MOTOR_VOLTAGE_SENS, MOTOR_CURRENT_SENS);
 
 	// servos
 	ctrl.pan.write(90);

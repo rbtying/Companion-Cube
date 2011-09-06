@@ -1,0 +1,16 @@
+/*
+ * DriveController.h
+ *
+ *  Created on: Sep 5, 2011
+ *      Author: rbtying
+ */
+
+#ifndef DRIVECONTROLLER_H_
+#define DRIVECONTROLLER_H_
+
+class DriveController {
+public:
+	DriveController();
+};
+
+#endif /* DRIVECONTROLLER_H_ */

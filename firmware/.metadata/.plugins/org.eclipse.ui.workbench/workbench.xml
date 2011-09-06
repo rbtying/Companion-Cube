@@ -39,9 +39,9 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mini/src/Main.cc" title="Main.cc" tooltip="ROS_mini/src/Main.cc" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mini/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="773" selectionTopPixel="680"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/Main.cc" title="Main.cc" tooltip="ROS_mega/src/Main.cc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/Main.cc"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3908" selectionTopPixel="2810"/>
 </editor>
 </editors>
 <views>
@@ -61,7 +61,9 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Targets"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
+<expanded>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -305,161 +307,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Sabertooth.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/Sabertooth.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/Main.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/txOnlySerial.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mini/src/lib/txOnlySerial.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/Main.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/control_struct.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/sensors/Encoders.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/Controller.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/devices/LCD.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/devices/LCD.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/pins.h"/>
 </editors>
-<item historyLabel="txOnlySerial.h" index="4">
-<position info="not_deleted" x="307" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="1060" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.h" index="4">
-<position info="not_deleted" x="250" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="1063" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.h" index="4">
-<position info="not_deleted" x="339" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="1063" y="0"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="651" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="26" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.h" index="4">
-<position info="not_deleted" x="306" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="26" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.cc" index="3">
+<item historyLabel="Encoders.h" index="2">
 <position/>
 </item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="730" y="0"/>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="3817" y="0"/>
 </item>
-<item historyLabel="txOnlySerial.h" index="4">
-<position info="not_deleted" x="250" y="0"/>
+<item historyLabel="Main.cc" index="0">
+<position/>
 </item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="747" y="0"/>
+<item historyLabel="Encoders.h" index="2">
+<position/>
 </item>
-<item historyLabel="txOnlySerial.h" index="4">
-<position info="not_deleted" x="192" y="0"/>
+<item historyLabel="Main.cc" index="0">
+<position/>
 </item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="651" y="0"/>
+<item historyLabel="Encoders.h" index="2">
+<position/>
 </item>
-<item historyLabel="Sabertooth.h" index="1">
-<position info="not_deleted" x="824" y="0"/>
+<item historyLabel="Controller.cc" index="3">
+<position/>
 </item>
-<item historyLabel="txOnlySerial.h" index="4">
-<position info="not_deleted" x="122" y="176"/>
+<item historyLabel="Encoders.h" index="2">
+<position/>
 </item>
-<item historyLabel="Sabertooth.h" index="1">
-<position info="not_deleted" x="926" y="0"/>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="3928" y="0"/>
 </item>
-<item historyLabel="txOnlySerial.h" index="4">
-<position info="not_deleted" x="338" y="0"/>
+<item historyLabel="Encoders.h" index="2">
+<position/>
 </item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="820" y="243"/>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="3754" y="0"/>
 </item>
-<item historyLabel="Sabertooth.h" index="1">
-<position info="not_deleted" x="926" y="0"/>
+<item historyLabel="Encoders.h" index="2">
+<position/>
 </item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="815" y="0"/>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1269" y="0"/>
 </item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="0" y="102"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="1" y="0"/>
-</item>
-<item historyLabel="Sabertooth.h" index="1">
-<position info="not_deleted" x="926" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="130" y="371"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="592" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="130" y="371"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="170" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="503" y="249"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="929" y="0"/>
-</item>
-<item historyLabel="txOnlySerial.cc" index="3">
-<position info="not_deleted" x="1067" y="546"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="3125" y="0"/>
-</item>
-<item historyLabel="Sabertooth.h" index="1">
-<position info="not_deleted" x="926" y="0"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="893" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="2">
-<position info="not_deleted" x="4204" y="0"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="3120" y="0"/>
-</item>
-<item historyLabel="Sabertooth.h" index="1">
-<position info="not_deleted" x="139" y="0"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="84" y="56"/>
-</item>
-<item historyLabel="Sabertooth.h" index="1">
-<position info="not_deleted" x="764" y="0"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="3125" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="2">
-<position info="not_deleted" x="790" y="0"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="3125" y="0"/>
-</item>
-<item historyLabel="Sabertooth.h" index="1">
-<position info="not_deleted" x="420" y="0"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="282" y="0"/>
-</item>
-<item historyLabel="Sabertooth.h" index="1">
-<position info="not_deleted" x="144" y="0"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="0">
-<position info="not_deleted" x="282" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="2">
-<position info="not_deleted" x="790" y="0"/>
-</item>
-<item active="true" historyLabel="Main.cc" index="2">
+<item historyLabel="Encoders.h" index="2">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1269" y="0"/>
+</item>
+<item historyLabel="Encoders.h" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Encoders.h" index="2">
+<position info="not_deleted" x="503" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1207" y="145"/>
+</item>
+<item historyLabel="Encoders.h" index="2">
+<position info="not_deleted" x="501" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1182" y="0"/>
+</item>
+<item historyLabel="Encoders.h" index="2">
+<position info="not_deleted" x="501" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1161" y="0"/>
+</item>
+<item historyLabel="Encoders.h" index="2">
+<position info="not_deleted" x="410" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1205" y="0"/>
+</item>
+<item historyLabel="Encoders.h" index="2">
+<position info="not_deleted" x="409" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="569" y="0"/>
+</item>
+<item historyLabel="control_struct.h" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="control_struct.h" index="1">
+<position info="not_deleted" x="558" y="0"/>
+</item>
+<item historyLabel="control_struct.h" index="1">
+<position info="not_deleted" x="196" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="2346" y="0"/>
+</item>
+<item historyLabel="control_struct.h" index="1">
+<position info="not_deleted" x="555" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="2346" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="3">
+<position info="not_deleted" x="2204" y="0"/>
+</item>
+<item historyLabel="control_struct.h" index="1">
+<position info="not_deleted" x="555" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="3">
+<position info="not_deleted" x="2204" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="3">
+<position info="not_deleted" x="2729" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="3">
+<position info="not_deleted" x="2448" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="3">
+<position info="not_deleted" x="2525" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="3">
+<position info="not_deleted" x="2541" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="3">
+<position info="not_deleted" x="2562" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="3">
+<position info="not_deleted" x="2546" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="2346" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="3">
+<position/>
+</item>
+<item historyLabel="LCD.h" index="4">
+<position info="not_deleted" x="988" y="0"/>
+</item>
+<item historyLabel="LCD.cc" index="5">
+<position info="not_deleted" x="4157" y="0"/>
+</item>
+<item historyLabel="LCD.h" index="4">
+<position info="not_deleted" x="988" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="3">
+<position/>
+</item>
+<item historyLabel="pins.h" index="6">
+<position info="not_deleted" x="358" y="0"/>
+</item>
+<item historyLabel="Controller.cc" index="3">
+<position info="not_deleted" x="2836" y="0"/>
+</item>
+<item active="true" historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="2346" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -478,50 +482,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pins_arduino.h" tooltip="Arduino-328P/pins_arduino.h">
-<persistable path="/Arduino-328P/pins_arduino.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" tooltip="ROS_mega/src/pins.h">
+<persistable path="/ROS_mega/src/pins.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="txOnlySerial.h" tooltip="ROS_mini/src/lib/txOnlySerial.h">
-<persistable path="/ROS_mini/src/lib/txOnlySerial.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LCD.cc" tooltip="ROS_mega/src/lib/devices/LCD.cc">
+<persistable path="/ROS_mega/src/lib/devices/LCD.cc"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="txOnlySerial.cc" tooltip="ROS_mini/src/lib/txOnlySerial.cc">
-<persistable path="/ROS_mini/src/lib/txOnlySerial.cc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LCD.h" tooltip="ROS_mega/src/lib/devices/LCD.h">
+<persistable path="/ROS_mega/src/lib/devices/LCD.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="NewSoftSerial.h" tooltip="ROS_mini/src/lib/NewSoftSerial.h">
-<persistable path="/ROS_mini/src/lib/NewSoftSerial.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" tooltip="ROS_mega/src/Controller.cc">
+<persistable path="/ROS_mega/src/Controller.cc"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="NewSoftSerial.cc" tooltip="ROS_mini/src/lib/NewSoftSerial.cc">
-<persistable path="/ROS_mini/src/lib/NewSoftSerial.cc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" tooltip="ROS_mega/src/control_struct.h">
+<persistable path="/ROS_mega/src/control_struct.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" tooltip="ROS_mini/src/pins.h">
-<persistable path="/ROS_mini/src/pins.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoders.h" tooltip="ROS_mega/src/lib/sensors/Encoders.h">
+<persistable path="/ROS_mega/src/lib/sensors/Encoders.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" tooltip="ROS_mini/src/lib/Controller.cc">
-<persistable path="/ROS_mini/src/lib/Controller.cc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Gyro.h" tooltip="ROS_mega/src/lib/sensors/Gyro.h">
+<persistable path="/ROS_mega/src/lib/sensors/Gyro.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" tooltip="ROS_mini/src/lib/control_struct.h">
-<persistable path="/ROS_mini/src/lib/control_struct.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Gyro.cc" tooltip="ROS_mega/src/lib/sensors/Gyro.cc">
+<persistable path="/ROS_mega/src/lib/sensors/Gyro.cc"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RoboClaw.cc" tooltip="ROS_mini/src/lib/RoboClaw.cc">
-<persistable path="/ROS_mini/src/lib/RoboClaw.cc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LiquidCrystal.h" tooltip="Arduino-2560/libraries/LiquidCrystal/LiquidCrystal.h">
+<persistable path="/Arduino-2560/libraries/LiquidCrystal/LiquidCrystal.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RoboClaw.h" tooltip="ROS_mini/src/lib/RoboClaw.h">
-<persistable path="/ROS_mini/src/lib/RoboClaw.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LiquidCrystal.cc" tooltip="Arduino-2560/libraries/LiquidCrystal/LiquidCrystal.cc">
+<persistable path="/Arduino-2560/libraries/LiquidCrystal/LiquidCrystal.cc"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Sabertooth.h" tooltip="ROS_mini/src/lib/Sabertooth.h">
-<persistable path="/ROS_mini/src/lib/Sabertooth.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Sabertooth.cc" tooltip="ROS_mega/src/lib/motors/Sabertooth.cc">
+<persistable path="/ROS_mega/src/lib/motors/Sabertooth.cc"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Sabertooth.cc" tooltip="ROS_mini/src/lib/Sabertooth.cc">
-<persistable path="/ROS_mini/src/lib/Sabertooth.cc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Sabertooth.h" tooltip="ROS_mega/src/lib/motors/Sabertooth.h">
+<persistable path="/ROS_mega/src/lib/motors/Sabertooth.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" tooltip="ROS_mini/src/lib/Controller.h">
-<persistable path="/ROS_mini/src/lib/Controller.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mega/src/Main.cc">
+<persistable path="/ROS_mega/src/Main.cc"/>
 </file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="delay.h" tooltip="/usr/lib/avr/include/util/delay.h">
-<persistable path="/usr/lib/avr/include/util/delay.h" project="Arduino-328P"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" tooltip="ROS_mega/src/Controller.h">
+<persistable path="/ROS_mega/src/Controller.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wiring.h" tooltip="Arduino-328P/wiring.h">
-<persistable path="/Arduino-328P/wiring.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Battery.h" tooltip="ROS_mega/src/lib/sensors/Battery.h">
+<persistable path="/ROS_mega/src/lib/sensors/Battery.h"/>
 </file>
 </mruList>
 </workbench>

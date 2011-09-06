@@ -1,0 +1,33 @@
+/*
+ * PID.cpp
+ *
+ *  Created on: Sep 5, 2011
+ *      Author: rbtying
+ */
+
+#include "PID.h"
+
+PID::PID(PID_Params * p) {
+	m_param = p;
+}
+
+void PID::setInput(double in) {
+
+}
+
+void PID::getOutput(double out) {
+
+}
+
+void PID::clear() {
+
+}
+
+void PID::process(double dt) {
+	p->error = p->set - p->input;
+	p->accumulated += p->error * dt;
+	p->accumulated = constrain(p->accumulated, -(p->accLimit), p->accLimit);
+	p->output = p->proportional * p->error + p->integral * p->accumulated
+			+ p->derivative * (p->error - p->previous) / dt;
+	p->previous = p->error;
+}

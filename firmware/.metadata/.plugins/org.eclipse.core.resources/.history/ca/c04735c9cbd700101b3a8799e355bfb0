@@ -1,0 +1,17 @@
+/*
+ * Rangefinder.cpp
+ *
+ *  Created on: Sep 5, 2011
+ *      Author: rbtying
+ */
+
+#include "Rangefinder.h"
+
+Rangefinder::Rangefinder() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Rangefinder::~Rangefinder() {
+	// TODO Auto-generated destructor stub
+}

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="316" key="DIALOG_WIDTH"/>
+		<item value="314" key="DIALOG_WIDTH"/>
 		<item value="109" key="DIALOG_Y_ORIGIN"/>
-		<item value="1129" key="DIALOG_X_ORIGIN"/>
-		<item value="437" key="DIALOG_HEIGHT"/>
+		<item value="1131" key="DIALOG_X_ORIGIN"/>
+		<item value="407" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,8 +13,9 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="txSerial" key="selection"/>
+		<item value="init" key="selection"/>
 		<list key="findhistory">
+			<item value="init"/>
 			<item value="NewSoftSerial"/>
 			<item value="ISR"/>
 			<item value="setSpeed"/>
@@ -22,7 +23,6 @@
 			<item value="controller"/>
 			<item value="leftSpeed"/>
 			<item value="enc.pRightCount"/>
-			<item value="enc.RightCount"/>
 		</list>
 		<list key="replacehistory">
 			<item value="txSerial"/>
@@ -34,5 +34,9 @@
 			<item value="right"/>
 			<item value="ctrl.yaw.val"/>
 		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="308" key="DIALOG_Y_ORIGIN"/>
+		<item value="453" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>

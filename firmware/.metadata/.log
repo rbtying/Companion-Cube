@@ -1455,3 +1455,982 @@ Binding(ALT+CTRL+U,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2011-09-03 11:48:38.074 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2011-09-03 11:48:53.294
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-03 11:48:53.295
+!MESSAGE A conflict occurred for ALT+CTRL+U:
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(de.innot.avreclipse.commands.uploadproject,Upload Project,
+		Upload selected project to the target device,
+		Category(de.innot.avreclipse.commands,AVR,AVR Plugin commands,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2011-09-03 12:12:15.110
+!MESSAGE could not set mark
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.addPosition(AbstractDocument.java:360)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.addPosition(SynchronizableDocument.java:237)
+	at net.sourceforge.vrapper.eclipse.platform.EclipseCursorAndSelection.setMark(EclipseCursorAndSelection.java:209)
+	at net.sourceforge.vrapper.vim.modes.InsertMode.leaveMode(InsertMode.java:132)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.changeMode(DefaultEditorAdaptor.java:161)
+	at net.sourceforge.vrapper.vim.modes.InsertMode.handleKey(InsertMode.java:188)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:305)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:175)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:171)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:97)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:489)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:62)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1025)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5840)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1212)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:706)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:2837)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:703)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:7603)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1185)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1860)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3110)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2011-09-04 14:26:06.968 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2011-09-04 14:26:23.459
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-04 14:26:23.459
+!MESSAGE A conflict occurred for ALT+CTRL+U:
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(de.innot.avreclipse.commands.uploadproject,Upload Project,
+		Upload selected project to the target device,
+		Category(de.innot.avreclipse.commands,AVR,AVR Plugin commands,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-09-04 14:27:04.443
+!MESSAGE Indexed 'Arduino-Mega' (29 sources, 68 headers) in 5.01 sec: 2,824 declarations; 5,386 references; 72 unresolved inclusions; 16 syntax errors; 1,784 unresolved names (17.85%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-09-04 14:27:11.353
+!MESSAGE Indexed 'Arduino-2560' (0 sources, 13 headers) in 0.12 sec: 23 declarations; 160 references; 9 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-09-04 14:30:24.667
+!MESSAGE Indexed 'ROS_mega' (16 sources, 58 headers) in 2.50 sec: 1,880 declarations; 5,553 references; 9 unresolved inclusions; 0 syntax errors; 5 unresolved names (0.07%)
+!SESSION 2011-09-05 07:28:39.568 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2011-09-05 07:28:57.699
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-05 07:28:57.699
+!MESSAGE A conflict occurred for ALT+CTRL+U:
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(de.innot.avreclipse.commands.uploadproject,Upload Project,
+		Upload selected project to the target device,
+		Category(de.innot.avreclipse.commands,AVR,AVR Plugin commands,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2011-09-05 07:43:05.122
+!MESSAGE could not set mark
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.addPosition(AbstractDocument.java:360)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.addPosition(SynchronizableDocument.java:237)
+	at net.sourceforge.vrapper.eclipse.platform.EclipseCursorAndSelection.setMark(EclipseCursorAndSelection.java:209)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:201)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:225)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:305)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:175)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:171)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:97)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:489)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:62)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1025)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5840)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.sendIMKeyEvent(Widget.java:1262)
+	at org.eclipse.swt.widgets.Control.gtk_commit(Control.java:2658)
+	at org.eclipse.swt.widgets.Canvas.gtk_commit(Canvas.java:163)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1560)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_im_context_filter_keypress(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_im_context_filter_keypress(OS.java:7002)
+	at org.eclipse.swt.widgets.Control.filterKey(Control.java:2083)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:2830)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:703)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:7603)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1185)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1860)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3110)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2011-09-05 07:43:56.380
+!MESSAGE could not set mark
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.addPosition(AbstractDocument.java:360)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.addPosition(SynchronizableDocument.java:237)
+	at net.sourceforge.vrapper.eclipse.platform.EclipseCursorAndSelection.setMark(EclipseCursorAndSelection.java:209)
+	at net.sourceforge.vrapper.vim.modes.InsertMode.leaveMode(InsertMode.java:132)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.changeMode(DefaultEditorAdaptor.java:161)
+	at net.sourceforge.vrapper.vim.modes.InsertMode.handleKey(InsertMode.java:188)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:305)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:175)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:171)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:97)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:489)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:62)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1025)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5840)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1212)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:706)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:2837)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:703)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:7603)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1185)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1860)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3110)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2011-09-05 07:44:05.535
+!MESSAGE could not set mark
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.addPosition(AbstractDocument.java:360)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.addPosition(SynchronizableDocument.java:237)
+	at net.sourceforge.vrapper.eclipse.platform.EclipseCursorAndSelection.setMark(EclipseCursorAndSelection.java:209)
+	at net.sourceforge.vrapper.vim.modes.InsertMode.leaveMode(InsertMode.java:132)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.changeMode(DefaultEditorAdaptor.java:161)
+	at net.sourceforge.vrapper.vim.modes.InsertMode.handleKey(InsertMode.java:188)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:305)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:175)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:171)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:97)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:489)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:62)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1025)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5840)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1212)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:706)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:2837)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:703)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:7603)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1185)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1860)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3110)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2011-09-05 07:53:07.147
+!MESSAGE could not set mark
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.addPosition(AbstractDocument.java:360)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.addPosition(SynchronizableDocument.java:237)
+	at net.sourceforge.vrapper.eclipse.platform.EclipseCursorAndSelection.setMark(EclipseCursorAndSelection.java:209)
+	at net.sourceforge.vrapper.vim.modes.InsertMode.leaveMode(InsertMode.java:132)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.changeMode(DefaultEditorAdaptor.java:161)
+	at net.sourceforge.vrapper.vim.modes.InsertMode.handleKey(InsertMode.java:188)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:305)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:175)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:171)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:97)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:489)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:62)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1025)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5840)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1212)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:706)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:2837)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:703)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:7603)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1185)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1860)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3110)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2011-09-05 08:11:55.046
+!MESSAGE could not set mark
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.addPosition(AbstractDocument.java:360)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.addPosition(SynchronizableDocument.java:237)
+	at net.sourceforge.vrapper.eclipse.platform.EclipseCursorAndSelection.setMark(EclipseCursorAndSelection.java:209)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:201)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:225)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:305)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:175)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:171)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:97)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:489)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:62)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1025)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5840)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1212)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:706)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:2837)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:703)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:7603)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1185)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1860)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3110)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2011-09-05 08:11:55.227
+!MESSAGE could not set mark
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.addPosition(AbstractDocument.java:360)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.addPosition(SynchronizableDocument.java:237)
+	at net.sourceforge.vrapper.eclipse.platform.EclipseCursorAndSelection.setMark(EclipseCursorAndSelection.java:209)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:201)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:225)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:305)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:175)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:171)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:97)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:489)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:62)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1025)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5840)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1212)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:706)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:2837)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:703)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:7603)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1185)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1860)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3110)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2011-09-05 08:11:55.400
+!MESSAGE could not set mark
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.addPosition(AbstractDocument.java:360)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.addPosition(SynchronizableDocument.java:237)
+	at net.sourceforge.vrapper.eclipse.platform.EclipseCursorAndSelection.setMark(EclipseCursorAndSelection.java:209)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:201)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:225)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:305)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:175)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:171)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:97)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:489)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:62)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1025)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5840)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1212)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:706)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:2837)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:703)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:7603)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1185)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1860)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3110)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2011-09-05 08:15:24.089
+!MESSAGE could not set mark
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.addPosition(AbstractDocument.java:360)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.addPosition(SynchronizableDocument.java:237)
+	at net.sourceforge.vrapper.eclipse.platform.EclipseCursorAndSelection.setMark(EclipseCursorAndSelection.java:209)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:201)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:225)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:305)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:175)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:171)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:97)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:489)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:62)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1025)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5840)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1212)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:706)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:2837)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:703)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:7603)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1185)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1860)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3110)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2011-09-05 08:15:24.235
+!MESSAGE could not set mark
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.addPosition(AbstractDocument.java:360)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.addPosition(SynchronizableDocument.java:237)
+	at net.sourceforge.vrapper.eclipse.platform.EclipseCursorAndSelection.setMark(EclipseCursorAndSelection.java:209)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:201)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:225)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:305)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:175)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:171)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:97)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:489)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:62)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1025)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5840)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1212)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:706)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:2837)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:703)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:7603)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1185)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1860)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3110)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2011-09-05 08:15:24.409
+!MESSAGE could not set mark
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.addPosition(AbstractDocument.java:360)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.addPosition(SynchronizableDocument.java:237)
+	at net.sourceforge.vrapper.eclipse.platform.EclipseCursorAndSelection.setMark(EclipseCursorAndSelection.java:209)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:201)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:225)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:305)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:175)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:171)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:97)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:489)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:62)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1025)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5840)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1200)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1185)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1212)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:706)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:2837)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:703)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1570)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4594)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4191)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:7603)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1185)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1860)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3110)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2011-09-05 10:50:19.107 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2011-09-05 10:50:28.487
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-05 10:50:28.487
+!MESSAGE A conflict occurred for ALT+CTRL+U:
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(de.innot.avreclipse.commands.uploadproject,Upload Project,
+		Upload selected project to the target device,
+		Category(de.innot.avreclipse.commands,AVR,AVR Plugin commands,true),
+		ActionDelegateHandlerProxy(null,de.innot.avreclipse.ui.actions.UploadProjectAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2011-09-05 12:13:27.443 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2011-09-05 12:14:02.899
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-05 12:14:02.899
+!MESSAGE A conflict occurred for ALT+CTRL+U:
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(de.innot.avreclipse.commands.uploadproject,Upload Project,
+		Upload selected project to the target device,
+		Category(de.innot.avreclipse.commands,AVR,AVR Plugin commands,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2011-09-05 16:44:26.277 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2011-09-05 16:44:37.048
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-09-05 16:44:37.048
+!MESSAGE A conflict occurred for ALT+CTRL+U:
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(de.innot.avreclipse.commands.uploadproject,Upload Project,
+		Upload selected project to the target device,
+		Category(de.innot.avreclipse.commands,AVR,AVR Plugin commands,true),
+		ActionDelegateHandlerProxy(null,de.innot.avreclipse.ui.actions.UploadProjectAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.UpdateCommand,Update,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		ActionDelegateHandlerProxy(null,org.eclipse.team.svn.ui.action.local.UpdateAction),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.cdt.core 2 0 2011-09-05 16:50:16.442
+!MESSAGE Formatting problem(s)
+!SUBENTRY 1 org.eclipse.cdt.core 2 0 2011-09-05 16:50:16.442
+!MESSAGE [28/1] unexpected token type, expecting:13, actual:Token type=1  image =d offset=482
+!STACK 0
+org.eclipse.cdt.internal.formatter.AbortFormatting: [28/1] unexpected token type, expecting:13, actual:Token type=1  image =d offset=482
+	at org.eclipse.cdt.internal.formatter.Scribe.printNextToken(Scribe.java:1260)
+	at org.eclipse.cdt.internal.formatter.Scribe.printNextToken(Scribe.java:1245)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatClosingBrace(CodeFormatterVisitor.java:3140)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatBlock(CodeFormatterVisitor.java:3109)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:1025)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatDeclaration(CodeFormatterVisitor.java:332)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:322)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDefinition.accept(CPPASTFunctionDefinition.java:138)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:297)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:258)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.format(CodeFormatterVisitor.java:238)
+	at org.eclipse.cdt.internal.formatter.CCodeFormatter.format(CCodeFormatter.java:161)
+	at org.eclipse.cdt.internal.corext.util.CodeFormatterUtil.format(CodeFormatterUtil.java:126)
+	at org.eclipse.cdt.internal.ui.text.CFormattingStrategy.format(CFormattingStrategy.java:64)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.formatMaster(MultiPassContentFormatter.java:193)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.format(MultiPassContentFormatter.java:142)
+	at org.eclipse.jface.text.source.SourceViewer.doOperation(SourceViewer.java:882)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.doOperation(ProjectionViewer.java:1450)
+	at org.eclipse.cdt.internal.ui.editor.CSourceViewer.doOperation(CSourceViewer.java:387)
+	at org.eclipse.cdt.internal.ui.editor.CEditor$AdaptedSourceViewer.doOperation(CEditor.java:333)
+	at org.eclipse.ui.texteditor.TextOperationAction$1.run(TextOperationAction.java:131)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.texteditor.TextOperationAction.run(TextOperationAction.java:129)
+	at org.eclipse.ui.texteditor.RetargetTextEditorAction.run(RetargetTextEditorAction.java:237)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1176)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3493)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3112)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.cdt.ui 4 4 2011-09-05 16:54:35.569
+!MESSAGE Error
+!STACK 0
+org.eclipse.cdt.core.dom.ast.DOMException
+	at org.eclipse.cdt.internal.core.dom.parser.ProblemBinding.find(ProblemBinding.java:170)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.findInScope(ASTManager.java:769)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeAstTextMatchPair(ASTManager.java:1239)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeAstMatch(ASTManager.java:1172)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeMacroMatches(ASTManager.java:1061)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeTextMatchesOfTranslationUnit(ASTManager.java:1011)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeTextMatches(ASTManager.java:984)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameProcessorDelegate.analyzeTextMatches(CRenameProcessorDelegate.java:240)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameMacroProcessor.analyzeTextMatches(CRenameMacroProcessor.java:45)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameProcessorDelegate.checkFinalConditions(CRenameProcessorDelegate.java:169)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameProcessor.checkFinalConditions(CRenameProcessor.java:187)
+	at org.eclipse.ltk.core.refactoring.participants.ProcessorBasedRefactoring.checkFinalConditions(ProcessorBasedRefactoring.java:224)
+	at org.eclipse.ltk.core.refactoring.CheckConditionsOperation.run(CheckConditionsOperation.java:85)
+	at org.eclipse.ltk.core.refactoring.CreateChangeOperation.run(CreateChangeOperation.java:121)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.cdt.ui 4 4 2011-09-05 16:54:44.890
+!MESSAGE Error
+!STACK 0
+org.eclipse.cdt.core.dom.ast.DOMException
+	at org.eclipse.cdt.internal.core.dom.parser.ProblemBinding.find(ProblemBinding.java:170)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.findInScope(ASTManager.java:769)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeAstTextMatchPair(ASTManager.java:1239)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeAstMatch(ASTManager.java:1172)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeMacroMatches(ASTManager.java:1061)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeTextMatchesOfTranslationUnit(ASTManager.java:1011)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeTextMatches(ASTManager.java:984)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameProcessorDelegate.analyzeTextMatches(CRenameProcessorDelegate.java:240)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameMacroProcessor.analyzeTextMatches(CRenameMacroProcessor.java:45)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameProcessorDelegate.checkFinalConditions(CRenameProcessorDelegate.java:169)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameProcessor.checkFinalConditions(CRenameProcessor.java:187)
+	at org.eclipse.ltk.core.refactoring.participants.ProcessorBasedRefactoring.checkFinalConditions(ProcessorBasedRefactoring.java:224)
+	at org.eclipse.ltk.core.refactoring.CheckConditionsOperation.run(CheckConditionsOperation.java:85)
+	at org.eclipse.ltk.core.refactoring.CreateChangeOperation.run(CreateChangeOperation.java:121)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.cdt.ui 4 4 2011-09-05 16:54:57.717
+!MESSAGE Error
+!STACK 0
+org.eclipse.cdt.core.dom.ast.DOMException
+	at org.eclipse.cdt.internal.core.dom.parser.ProblemBinding.find(ProblemBinding.java:170)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.findInScope(ASTManager.java:769)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeAstTextMatchPair(ASTManager.java:1239)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeAstMatch(ASTManager.java:1172)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeMacroMatches(ASTManager.java:1061)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeTextMatchesOfTranslationUnit(ASTManager.java:1011)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.ASTManager.analyzeTextMatches(ASTManager.java:984)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameProcessorDelegate.analyzeTextMatches(CRenameProcessorDelegate.java:240)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameMacroProcessor.analyzeTextMatches(CRenameMacroProcessor.java:45)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameProcessorDelegate.checkFinalConditions(CRenameProcessorDelegate.java:169)
+	at org.eclipse.cdt.internal.ui.refactoring.rename.CRenameProcessor.checkFinalConditions(CRenameProcessor.java:187)
+	at org.eclipse.ltk.core.refactoring.participants.ProcessorBasedRefactoring.checkFinalConditions(ProcessorBasedRefactoring.java:224)
+	at org.eclipse.ltk.core.refactoring.CheckConditionsOperation.run(CheckConditionsOperation.java:85)
+	at org.eclipse.ltk.core.refactoring.CreateChangeOperation.run(CreateChangeOperation.java:121)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)

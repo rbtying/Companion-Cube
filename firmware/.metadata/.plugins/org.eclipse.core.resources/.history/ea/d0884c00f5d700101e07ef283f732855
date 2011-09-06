@@ -1,0 +1,14 @@
+/*
+ * LCD.h
+ *
+ *  Created on: Sep 5, 2011
+ *      Author: rbtying
+ */
+
+#ifndef LCD_H_
+#define LCD_H_
+
+class LCD {
+};
+
+#endif /* LCD_H_ */
