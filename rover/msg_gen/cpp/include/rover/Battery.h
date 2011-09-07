@@ -3,20 +3,23 @@
 #define ROVER_MESSAGE_BATTERY_H
 #include <string>
 #include <vector>
+#include <map>
 #include <ostream>
 #include "ros/serialization.h"
 #include "ros/builtin_message_traits.h"
 #include "ros/message_operations.h"
-#include "ros/message.h"
 #include "ros/time.h"
+
+#include "ros/macros.h"
+
+#include "ros/assert.h"
 
 #include "std_msgs/Header.h"
 
 namespace rover
 {
 template <class ContainerAllocator>
-struct Battery_ : public ros::Message
-{
+struct Battery_ {
   typedef Battery_<ContainerAllocator> Type;
 
   Battery_()
@@ -115,6 +118,7 @@ public:
 
   typedef boost::shared_ptr< ::rover::Battery_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::rover::Battery_<ContainerAllocator>  const> ConstPtr;
+  boost::shared_ptr<std::map<std::string, std::string> > __connection_header;
 }; // struct Battery
 typedef  ::rover::Battery_<std::allocator<void> > Battery;
 
@@ -134,6 +138,8 @@ namespace ros
 {
 namespace message_traits
 {
+template<class ContainerAllocator> struct IsMessage< ::rover::Battery_<ContainerAllocator> > : public TrueType {};
+template<class ContainerAllocator> struct IsMessage< ::rover::Battery_<ContainerAllocator>  const> : public TrueType {};
 template<class ContainerAllocator>
 struct MD5Sum< ::rover::Battery_<ContainerAllocator> > {
   static const char* value() 

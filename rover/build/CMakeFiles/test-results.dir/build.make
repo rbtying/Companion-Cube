@@ -40,7 +40,7 @@ CMAKE_BINARY_DIR = /home/rbtying/robot/rover/build
 # Utility rule file for test-results.
 
 CMakeFiles/test-results:
-	/opt/ros/diamondback/ros/tools/rosunit/scripts/summarize_results.py --nodeps rover
+	/opt/ros/electric/ros/tools/rosunit/scripts/summarize_results.py --nodeps rover
 
 test-results: CMakeFiles/test-results
 test-results: CMakeFiles/test-results.dir/build.make

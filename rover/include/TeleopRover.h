@@ -4,7 +4,7 @@
 #include <ros/ros.h>
 #include <std_msgs/Float64.h>
 #include <geometry_msgs/Twist.h>
-#include <joy/Joy.h>
+#include <sensor_msgs/Joy.h>
 #include "util.h"
 
 #define KINECT_LIMIT_ANGLE 0.523598776
@@ -17,7 +17,7 @@ class TeleopRover {
 public:
   TeleopRover();
 private:
-  void joyCallback(const joy::Joy::ConstPtr& joy);
+  void joyCallback(const sensor_msgs::Joy::ConstPtr& joy);
   void kinectCallback(const std_msgs::Float64::ConstPtr& angle);
 
   ros::NodeHandle m_n;

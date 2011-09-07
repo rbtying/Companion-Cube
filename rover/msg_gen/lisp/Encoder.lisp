@@ -31,6 +31,16 @@
     :reader rightCount
     :initarg :rightCount
     :type cl:integer
+    :initform 0)
+   (leftMotor
+    :reader leftMotor
+    :initarg :leftMotor
+    :type cl:integer
+    :initform 0)
+   (rightMotor
+    :reader rightMotor
+    :initarg :rightMotor
+    :type cl:integer
     :initform 0))
 )
 
@@ -66,6 +76,16 @@
 (cl:defmethod rightCount-val ((m <Encoder>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader rover-msg:rightCount-val is deprecated.  Use rover-msg:rightCount instead.")
   (rightCount m))
+
+(cl:ensure-generic-function 'leftMotor-val :lambda-list '(m))
+(cl:defmethod leftMotor-val ((m <Encoder>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader rover-msg:leftMotor-val is deprecated.  Use rover-msg:leftMotor instead.")
+  (leftMotor m))
+
+(cl:ensure-generic-function 'rightMotor-val :lambda-list '(m))
+(cl:defmethod rightMotor-val ((m <Encoder>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader rover-msg:rightMotor-val is deprecated.  Use rover-msg:rightMotor instead.")
+  (rightMotor m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <Encoder>) ostream)
   "Serializes a message object of type '<Encoder>"
   (roslisp-msg-protocol:serialize (cl:slot-value msg 'header) ostream)
@@ -86,6 +106,18 @@
     (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
     )
   (cl:let* ((signed (cl:slot-value msg 'rightCount)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
+    )
+  (cl:let* ((signed (cl:slot-value msg 'leftMotor)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
+    )
+  (cl:let* ((signed (cl:slot-value msg 'rightMotor)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
     (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
@@ -119,6 +151,18 @@
       (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
       (cl:setf (cl:slot-value msg 'rightCount) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'leftMotor) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'rightMotor) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<Encoder>)))
@@ -129,19 +173,21 @@
   "rover/Encoder")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Encoder>)))
   "Returns md5sum for a message object of type '<Encoder>"
-  "de119eee212c1abe8e3499aeef85f36a")
+  "f5a780441881442a5284c561b1ce2744")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'Encoder)))
   "Returns md5sum for a message object of type 'Encoder"
-  "de119eee212c1abe8e3499aeef85f36a")
+  "f5a780441881442a5284c561b1ce2744")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Encoder>)))
   "Returns full string definition for message of type '<Encoder>"
-  (cl:format cl:nil "Header header~%float32 left~%float32 right~%int32 leftCount~%int32 rightCount~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.secs: seconds (stamp_secs) since epoch~%# * stamp.nsecs: nanoseconds since stamp_secs~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
+  (cl:format cl:nil "Header header~%float32 left~%float32 right~%int32 leftCount~%int32 rightCount~%int32 leftMotor~%int32 rightMotor~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.secs: seconds (stamp_secs) since epoch~%# * stamp.nsecs: nanoseconds since stamp_secs~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Encoder)))
   "Returns full string definition for message of type 'Encoder"
-  (cl:format cl:nil "Header header~%float32 left~%float32 right~%int32 leftCount~%int32 rightCount~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.secs: seconds (stamp_secs) since epoch~%# * stamp.nsecs: nanoseconds since stamp_secs~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
+  (cl:format cl:nil "Header header~%float32 left~%float32 right~%int32 leftCount~%int32 rightCount~%int32 leftMotor~%int32 rightMotor~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.secs: seconds (stamp_secs) since epoch~%# * stamp.nsecs: nanoseconds since stamp_secs~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Encoder>))
   (cl:+ 0
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'header))
+     4
+     4
      4
      4
      4
@@ -155,4 +201,6 @@
     (cl:cons ':right (right msg))
     (cl:cons ':leftCount (leftCount msg))
     (cl:cons ':rightCount (rightCount msg))
+    (cl:cons ':leftMotor (leftMotor msg))
+    (cl:cons ':rightMotor (rightMotor msg))
 ))

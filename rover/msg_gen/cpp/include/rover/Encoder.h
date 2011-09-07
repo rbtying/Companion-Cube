@@ -3,20 +3,23 @@
 #define ROVER_MESSAGE_ENCODER_H
 #include <string>
 #include <vector>
+#include <map>
 #include <ostream>
 #include "ros/serialization.h"
 #include "ros/builtin_message_traits.h"
 #include "ros/message_operations.h"
-#include "ros/message.h"
 #include "ros/time.h"
+
+#include "ros/macros.h"
+
+#include "ros/assert.h"
 
 #include "std_msgs/Header.h"
 
 namespace rover
 {
 template <class ContainerAllocator>
-struct Encoder_ : public ros::Message
-{
+struct Encoder_ {
   typedef Encoder_<ContainerAllocator> Type;
 
   Encoder_()
@@ -25,6 +28,8 @@ struct Encoder_ : public ros::Message
   , right(0.0)
   , leftCount(0)
   , rightCount(0)
+  , leftMotor(0)
+  , rightMotor(0)
   {
   }
 
@@ -34,6 +39,8 @@ struct Encoder_ : public ros::Message
   , right(0.0)
   , leftCount(0)
   , rightCount(0)
+  , leftMotor(0)
+  , rightMotor(0)
   {
   }
 
@@ -52,6 +59,12 @@ struct Encoder_ : public ros::Message
   typedef int32_t _rightCount_type;
   int32_t rightCount;
 
+  typedef int32_t _leftMotor_type;
+  int32_t leftMotor;
+
+  typedef int32_t _rightMotor_type;
+  int32_t rightMotor;
+
 
 private:
   static const char* __s_getDataType_() { return "rover/Encoder"; }
@@ -61,7 +74,7 @@ public:
   ROS_DEPRECATED const std::string __getDataType() const { return __s_getDataType_(); }
 
 private:
-  static const char* __s_getMD5Sum_() { return "de119eee212c1abe8e3499aeef85f36a"; }
+  static const char* __s_getMD5Sum_() { return "f5a780441881442a5284c561b1ce2744"; }
 public:
   ROS_DEPRECATED static const std::string __s_getMD5Sum() { return __s_getMD5Sum_(); }
 
@@ -73,6 +86,8 @@ float32 left\n\
 float32 right\n\
 int32 leftCount\n\
 int32 rightCount\n\
+int32 leftMotor\n\
+int32 rightMotor\n\
 \n\
 ================================================================================\n\
 MSG: std_msgs/Header\n\
@@ -106,6 +121,8 @@ public:
     ros::serialization::serialize(stream, right);
     ros::serialization::serialize(stream, leftCount);
     ros::serialization::serialize(stream, rightCount);
+    ros::serialization::serialize(stream, leftMotor);
+    ros::serialization::serialize(stream, rightMotor);
     return stream.getData();
   }
 
@@ -117,6 +134,8 @@ public:
     ros::serialization::deserialize(stream, right);
     ros::serialization::deserialize(stream, leftCount);
     ros::serialization::deserialize(stream, rightCount);
+    ros::serialization::deserialize(stream, leftMotor);
+    ros::serialization::deserialize(stream, rightMotor);
     return stream.getData();
   }
 
@@ -128,11 +147,14 @@ public:
     size += ros::serialization::serializationLength(right);
     size += ros::serialization::serializationLength(leftCount);
     size += ros::serialization::serializationLength(rightCount);
+    size += ros::serialization::serializationLength(leftMotor);
+    size += ros::serialization::serializationLength(rightMotor);
     return size;
   }
 
   typedef boost::shared_ptr< ::rover::Encoder_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::rover::Encoder_<ContainerAllocator>  const> ConstPtr;
+  boost::shared_ptr<std::map<std::string, std::string> > __connection_header;
 }; // struct Encoder
 typedef  ::rover::Encoder_<std::allocator<void> > Encoder;
 
@@ -152,16 +174,18 @@ namespace ros
 {
 namespace message_traits
 {
+template<class ContainerAllocator> struct IsMessage< ::rover::Encoder_<ContainerAllocator> > : public TrueType {};
+template<class ContainerAllocator> struct IsMessage< ::rover::Encoder_<ContainerAllocator>  const> : public TrueType {};
 template<class ContainerAllocator>
 struct MD5Sum< ::rover::Encoder_<ContainerAllocator> > {
   static const char* value() 
   {
-    return "de119eee212c1abe8e3499aeef85f36a";
+    return "f5a780441881442a5284c561b1ce2744";
   }
 
   static const char* value(const  ::rover::Encoder_<ContainerAllocator> &) { return value(); } 
-  static const uint64_t static_value1 = 0xde119eee212c1abeULL;
-  static const uint64_t static_value2 = 0x8e3499aeef85f36aULL;
+  static const uint64_t static_value1 = 0xf5a780441881442aULL;
+  static const uint64_t static_value2 = 0x5284c561b1ce2744ULL;
 };
 
 template<class ContainerAllocator>
@@ -183,6 +207,8 @@ float32 left\n\
 float32 right\n\
 int32 leftCount\n\
 int32 rightCount\n\
+int32 leftMotor\n\
+int32 rightMotor\n\
 \n\
 ================================================================================\n\
 MSG: std_msgs/Header\n\
@@ -227,6 +253,8 @@ template<class ContainerAllocator> struct Serializer< ::rover::Encoder_<Containe
     stream.next(m.right);
     stream.next(m.leftCount);
     stream.next(m.rightCount);
+    stream.next(m.leftMotor);
+    stream.next(m.rightMotor);
   }
 
   ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -255,6 +283,10 @@ s << std::endl;
     Printer<int32_t>::stream(s, indent + "  ", v.leftCount);
     s << indent << "rightCount: ";
     Printer<int32_t>::stream(s, indent + "  ", v.rightCount);
+    s << indent << "leftMotor: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.leftMotor);
+    s << indent << "rightMotor: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.rightMotor);
   }
 };
 

@@ -1,7 +1,7 @@
 #include <ros/ros.h>
 #include <std_msgs/Float64.h>		// for servos
 #include <geometry_msgs/Twist.h>	// for drive
-#include <joy/Joy.h>			// for joystick
+#include <sensor_msgs/Joy.h>			// for joystick
 #include "TeleopRover.h"
 
 TeleopRover::TeleopRover():
@@ -28,7 +28,7 @@ TeleopRover::TeleopRover():
 	m_servo_pan_pub = m_n.advertise<std_msgs::Float64>("pan/angle", 1);
 	m_kinect_tilt_pub = m_n.advertise<std_msgs::Float64>("kinect/angle", 1);
 	
-	m_joy_sub = m_n.subscribe<joy::Joy>("joy", 10, &TeleopRover::joyCallback, this);
+	m_joy_sub = m_n.subscribe<sensor_msgs::Joy>("joy", 10, &TeleopRover::joyCallback, this);
 
 	std_msgs::Float64 kinect_msg;
 	m_n.param("kinect_default_angle", kinect_msg.data, 0.0);
@@ -36,7 +36,7 @@ TeleopRover::TeleopRover():
 	m_kinect_tilt_pub.publish(kinect_msg);
 }
 
-void TeleopRover::joyCallback(const joy::Joy::ConstPtr& joy)
+void TeleopRover::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
 {
     if (joy->buttons[m_autonomous_on]) {
         m_autoMode = true;

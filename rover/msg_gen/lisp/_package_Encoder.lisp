@@ -9,4 +9,8 @@
           LEFTCOUNT
           RIGHTCOUNT-VAL
           RIGHTCOUNT
+          LEFTMOTOR-VAL
+          LEFTMOTOR
+          RIGHTMOTOR-VAL
+          RIGHTMOTOR
 ))
