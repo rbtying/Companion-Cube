@@ -40,7 +40,7 @@ CMAKE_BINARY_DIR = /home/rbtying/robot/teleop_twist_keyboard/build
 # Utility rule file for test-results.
 
 CMakeFiles/test-results:
-	/opt/ros/diamondback/ros/tools/rosunit/scripts/summarize_results.py --nodeps teleop_twist_keyboard
+	/opt/ros/electric/ros/tools/rosunit/scripts/summarize_results.py --nodeps teleop_twist_keyboard
 
 test-results: CMakeFiles/test-results
 test-results: CMakeFiles/test-results.dir/build.make

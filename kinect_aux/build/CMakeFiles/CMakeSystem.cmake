@@ -1,4 +1,4 @@
-INCLUDE("/opt/ros/diamondback/ros/core/rosbuild/rostoolchain.cmake")
+INCLUDE("/opt/ros/electric/ros/core/rosbuild/rostoolchain.cmake")
 
 SET(CMAKE_SYSTEM "Linux-2.6.38-11-generic")
 SET(CMAKE_SYSTEM_NAME "Linux")

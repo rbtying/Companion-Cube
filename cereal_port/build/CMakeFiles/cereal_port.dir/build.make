@@ -49,7 +49,23 @@ include CMakeFiles/cereal_port.dir/flags.make
 CMakeFiles/cereal_port.dir/src/CerealPort.o: CMakeFiles/cereal_port.dir/flags.make
 CMakeFiles/cereal_port.dir/src/CerealPort.o: ../src/CerealPort.cpp
 CMakeFiles/cereal_port.dir/src/CerealPort.o: ../manifest.xml
-CMakeFiles/cereal_port.dir/src/CerealPort.o: /home/rbtying/ros_tutorials/roscpp/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/ros/core/rosbuild/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/ros/core/roslang/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/ros/tools/rospack/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/ros/core/roslib/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
+CMakeFiles/cereal_port.dir/src/CerealPort.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/cereal_port/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/cereal_port.dir/src/CerealPort.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/cereal_port.dir/src/CerealPort.o -c /home/rbtying/robot/cereal_port/src/CerealPort.cpp

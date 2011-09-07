@@ -40,7 +40,7 @@ CMAKE_BINARY_DIR = /home/rbtying/robot/kinect_aux/build
 # Utility rule file for test-results.
 
 CMakeFiles/test-results:
-	/opt/ros/diamondback/ros/tools/rosunit/scripts/summarize_results.py --nodeps kinect_aux
+	/opt/ros/electric/ros/tools/rosunit/scripts/summarize_results.py --nodeps kinect_aux
 
 test-results: CMakeFiles/test-results
 test-results: CMakeFiles/test-results.dir/build.make
