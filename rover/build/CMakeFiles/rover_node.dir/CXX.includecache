@@ -11,6 +11,8 @@
 ../include/interface.h
 ros/ros.h
 -
+string
+-
 control_opcodes.h
 ../include/control_opcodes.h
 cereal_port/CerealPort.h
@@ -118,6 +120,8 @@ sensor_msgs/Imu.h
 sensor_msgs/JointState.h
 -
 std_msgs/Float64.h
+-
+std_msgs/String.h
 -
 rover/Battery.h
 -
@@ -1259,6 +1263,28 @@ ros/assert.h
 /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/ros/assert.h
 std_msgs/header_deprecated_def.h
 -
+
+/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/String.h
+string
+-
+vector
+-
+map
+-
+ostream
+-
+ros/serialization.h
+/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/ros/serialization.h
+ros/builtin_message_traits.h
+/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/ros/builtin_message_traits.h
+ros/message_operations.h
+/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/ros/message_operations.h
+ros/time.h
+/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/ros/time.h
+ros/macros.h
+/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/ros/macros.h
+ros/assert.h
+/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/ros/assert.h
 
 /opt/ros/electric/stacks/ros_comm/tools/rosconsole/include/ros/assert.h
 ros/console.h
