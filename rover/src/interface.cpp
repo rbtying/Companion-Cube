@@ -14,7 +14,8 @@ rover::interface::interface(const char * new_serial_port) {
 
 	this->resetOdometry();
 
-	m_lastSensorUpdateTime = ros::Time::now();
+	m_lastEncoderUpdateTime = ros::Time::now();
+    m_lastYawGyroUpdateTime = m_lastEncoderUpdateTime;
 
 	m_port = new cereal::CerealPort();
 
@@ -138,24 +139,21 @@ void rover::interface::processPacket(std::string * packet) {
 	}
 
     ros::Time current_time = ros::Time::now();
-    double dt = (current_time - m_lastSensorUpdateTime).toSec();
 
     int16_t speed, rate, val, voltage, current;
     int32_t count;
     int8_t out;
-    uint8_t sign, angle;
+    uint8_t angle;
 
     switch(data[1]) {
     case MSG_OP_LEFT_ENC:
         if (packet->size() == 11) {
-            double dt = (current_time - m_lastLeftEncoderUpdateTime).toSec();
             speed = data[2] << 8 | data[3];
             count = data[4] << 24u | data[5] << 16u | data[6] << 8 | data[7];
             out = data[8];
 
             m_velocity_left = speed / 10000.0;
             m_encoder_left = count;
-            m_lastLeftEncoderUpdateTime = current_time;
             newLeftEncPacket = true;
         } else {
             ROS_ERROR("Left encoder packet failed");
@@ -163,14 +161,12 @@ void rover::interface::processPacket(std::string * packet) {
         break;
     case MSG_OP_RIGHT_ENC:
         if (packet->size() == 11) {
-            double dt = (current_time - m_lastRightEncoderUpdateTime).toSec();
             speed = data[2] << 8 | data[3];
             count = data[4] << 24u | data[5] << 16u | data[6] << 8 | data[7];
             out = data[8];
 
             m_velocity_right = speed / 10000.0;
             m_encoder_right = count;
-            m_lastRightEncoderUpdateTime = current_time;
             newRightEncPacket = true;
         } else {
             ROS_ERROR("Right encoder packet failed");
@@ -230,6 +226,7 @@ void rover::interface::processPacket(std::string * packet) {
     }
     
     if (newLeftEncPacket && newRightEncPacket) {
+        double dt = (current_time - m_lastEncoderUpdateTime).toSec();
         this->calculateOdometry(dt);
         newLeftEncPacket = false;
         newRightEncPacket = false;

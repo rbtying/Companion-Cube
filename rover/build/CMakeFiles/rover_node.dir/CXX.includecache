@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
+../include/control_opcodes.h
+
 ../include/interface.h
 ros/ros.h
 -
+control_opcodes.h
+../include/control_opcodes.h
 cereal_port/CerealPort.h
 ../include/cereal_port/CerealPort.h
 util.h

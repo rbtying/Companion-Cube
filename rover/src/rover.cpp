@@ -82,6 +82,9 @@ int main(int argc, char** argv) {
     double batt_threshold;
     n.param<double> ("/rover/batt_threshold", batt_threshold, 13.0);
 
+    double mbatt_threshold;
+    n.param<double> ("/rover/motor_threshold", mbatt_threshold, 8.5);
+
     std::string odom_frame_id;
     n.param<std::string> ("/rover/odom_frame_id", odom_frame_id, "/odom");
 

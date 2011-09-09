@@ -73,9 +73,8 @@ public:
     bool newRightEncPacket;
 private:
 	long m_last_enc_left, m_last_enc_right;
-    ros::Time m_lastLeftEncoderUpdateTime;
-    ros::Time m_lastRightEncoderUpdateTime;
-    ros::time m_lastYawGyroUpdateTime;
+    ros::Time m_lastEncoderUpdateTime;
+    ros::Time m_lastYawGyroUpdateTime;
 	std::string m_port_name;
 	cereal::CerealPort * m_port;
 	void calculateOdometry(double dt);
