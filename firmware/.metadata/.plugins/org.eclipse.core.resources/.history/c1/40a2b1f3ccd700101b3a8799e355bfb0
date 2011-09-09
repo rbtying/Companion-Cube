@@ -1,0 +1,13 @@
+/*
+ * DriveController.cc
+ *
+ *  Created on: Sep 5, 2011
+ *      Author: rbtying
+ */
+
+#include "DriveController.h"
+
+DriveController::DriveController() {
+	// TODO Auto-generated constructor stub
+
+}

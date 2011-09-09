@@ -127,8 +127,8 @@ void Controller::processCommand() {
 
 		Serial.write(m_dataPacket, 7);
 	} else if (strstr(m_buf, "gBTY") != NULL) {
-		int16_t batVal = (int16_t) (m_ctrl->batt.getVoltage() * 100);
-		int16_t curVal = (int16_t) (m_ctrl->batt.getCurrent() * 100);
+		int16_t batVal = (int16_t) (m_ctrl->cpu_batt.getVoltage() * 100);
+		int16_t curVal = (int16_t) (m_ctrl->cpu_batt.getCurrent() * 100);
 
 		m_dataPacket[0] = '<';
 		m_dataPacket[1] = highByte(batVal);
@@ -160,9 +160,9 @@ void Controller::processCommand() {
 	} else if (strstr(m_buf, "gRMS") != NULL) {
 		Serial.println(m_ctrl->rightPID.input, DEC);
 	} else if (strstr(m_buf, "gBAT") != NULL) {
-		Serial.print(m_ctrl->batt.getVoltage(), DEC);
+		Serial.print(m_ctrl->cpu_batt.getVoltage(), DEC);
 		Serial.print(" volts, ");
-		Serial.print(m_ctrl->batt.getCurrent(), DEC);
+		Serial.print(m_ctrl->cpu_batt.getCurrent(), DEC);
 		Serial.print(" amps\r\n");
 	} else {
 		Serial.println("INVALID COMMAND");
@@ -185,8 +185,10 @@ void Controller::sendDataPacket() {
 	m_stat.rightCount = abs(m_ctrl->rightEnc.count);
 	m_stat.yawRate = (uint16_t) (abs(m_ctrl->yaw.rate) * 1000);
 	m_stat.yawVal = (uint16_t) (abs(m_ctrl->yaw.val) * 1000);
-	m_stat.voltage = (int16_t) (m_ctrl->batt.getVoltage() * 100);
-	m_stat.current = (int16_t) (m_ctrl->batt.getCurrent() * 100);
+	m_stat.cpu_voltage = (int16_t) (m_ctrl->cpu_batt.getVoltage() * 100);
+	m_stat.cpu_current = (int16_t) (m_ctrl->cpu_batt.getCurrent() * 100);
+	m_stat.mot_voltage = (int16_t) (m_ctrl->mot_batt.getVoltage() * 100);
+	m_stat.mot_current = (int16_t) (m_ctrl->mot_batt.getCurrent() * 100);
 	m_stat.panAngle = (uint8_t) (m_ctrl->pan.read());
 	m_stat.tiltAngle = (uint8_t) (m_ctrl->tilt.read());
 	m_stat.sign = 0;
@@ -217,13 +219,15 @@ void Controller::sendDataPacket() {
 	m_dataPacket[17] = m_stat.yawRate & 0xff;
 	m_dataPacket[18] = m_stat.yawVal >> 8u;
 	m_dataPacket[19] = m_stat.yawVal & 0xff;
-	m_dataPacket[20] = m_stat.voltage >> 8u;
-	m_dataPacket[21] = m_stat.voltage & 0xff;
-	m_dataPacket[22] = m_stat.current >> 8u;
-	m_dataPacket[23] = m_stat.current & 0xff;
-	m_dataPacket[24] = m_stat.tiltAngle & 0xff;
-	m_dataPacket[25] = m_stat.panAngle & 0xff;
-	m_dataPacket[26] = m_stat.endingChar;
+	m_dataPacket[20] = m_stat.cpu_voltage >> 8u;
+	m_dataPacket[21] = m_stat.cpu_voltage & 0xff;
+	m_dataPacket[22] = m_stat.cpu_current >> 8u;
+	m_dataPacket[23] = m_stat.cpu_current & 0xff;
+	m_dataPacket[24] = m_stat.mot_voltage >> 8u;
+	m_dataPacket[25] = m_stat.mot_current & 0xff;
+	m_dataPacket[26] = m_stat.tiltAngle & 0xff;
+	m_dataPacket[27] = m_stat.panAngle & 0xff;
+	m_dataPacket[28] = m_stat.endingChar;
 
 	Serial.write(m_dataPacket, sizeof(statusMessage));
 }

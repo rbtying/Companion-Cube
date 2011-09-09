@@ -1,0 +1,16 @@
+/*
+ * PID.h
+ *
+ *  Created on: Sep 5, 2011
+ *      Author: rbtying
+ */
+
+#ifndef PID_H_
+#define PID_H_
+
+class PID {
+public:
+	PID();
+};
+
+#endif /* PID_H_ */

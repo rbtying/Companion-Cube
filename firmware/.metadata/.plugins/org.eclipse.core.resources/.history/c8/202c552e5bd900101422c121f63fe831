@@ -1,0 +1,184 @@
+/*
+ * Controller.cpp
+ *
+ *  Created on: Feb 21, 2011
+ *      Author: rbtying
+ */
+
+#include "OpcodeController.h"
+#include "pins.h"
+
+Controller::Controller(control_data * ctrl, HardwareSerial * hws) {
+	m_ctrl = ctrl;
+	m_hws = hws;
+
+	comm = false;
+	m_poll = true;
+	m_lastUpdateTime = 0;
+}
+
+/**
+ * Update the buffer
+ */
+void Controller::update() {
+	if (m_poll && (m_lastPacketSendTime - millis() > CMD_PACKET_INTERVAL)) {
+		Controller::sendDataPacket();
+	}
+
+	while (m_hws->available()) {
+		m_lastUpdateTime = millis();
+		char c = m_hws->read();
+
+		byte msg[16];
+
+		switch (c) {
+		case CTRL_OP_TOGGLE_POLL:
+			m_poll = nextByte(250);
+			break;
+		case CTRL_OP_SET_DRIVE:
+			for (uint8_t i = 0; i < 4; i++) {
+				msg[i] = nextByte(250);
+			}
+			m_ctrl->leftPID.set = ((msg[0] << 8) | msg[1]) * 0.1; // mm/s -> cm/s
+			m_ctrl->rightPID.set = ((msg[2] << 8) | msg[3]) * 0.1; // mm/s -> cm/s
+			break;
+		case CTRL_OP_SET_SERVO:
+			msg[0] = nextByte(100);
+			msg[1] = nextByte(100);
+			msg[0] = constrain(msg[0], 0, 180);
+			msg[1] = constrain(msg[1], 0, 180);
+			m_ctrl->pan.write(msg[0]);
+			m_ctrl->tilt.write(msg[1]);
+			break;
+		case CTRL_OP_SET_PID:
+			for (uint8_t i = 0; i < 12; i++) {
+				msg[i] = nextByte(250);
+			}
+			m_ctrl->leftPID.proportional = ((msg[0] << 8) | msg[1]) * 0.01;
+			m_ctrl->leftPID.integral = ((msg[2] << 8) | msg[3]) * 0.01;
+			m_ctrl->leftPID.derivative = ((msg[4] << 8) | msg[5]) * 0.01;
+
+			m_ctrl->rightPID.proportional = ((msg[6] << 8) | msg[7]) * 0.01;
+			m_ctrl->rightPID.integral = ((msg[8] << 8) | msg[9]) * 0.01;
+			m_ctrl->rightPID.derivative = ((msg[10] << 8) | msg[11]) * 0.01;
+			break;
+		case CTRL_OP_SET_CONV:
+			for (uint8_t i = 0; i < 4; i++) {
+				msg[i] = nextByte(250);
+			}
+			m_ctrl->leftEnc.cmPerCount = ((msg[0] << 8) | msg[1]) * 0.0001;
+			m_ctrl->rightEnc.cmPerCount = ((msg[2] << 8) | msg[3]) * 0.0001;
+			break;
+		case CTRL_OP_SET_MOTOR:
+			msg[0] = nextByte(250);
+			msg[1] = nextByte(250);
+			m_ctrl->mot.leftSpeed = (int8_t) msg[0];
+			m_ctrl->mot.rightSpeed = (int8_t) msg[1];
+			break;
+		case CTRL_OP_SET_LCD:
+			char lcd_msg[LCD_COLS + 1];
+			msg[0] = nextByte(250);
+			for (uint8_t i = 0; i < LCD_COLS; i++) {
+				lcd_msg[i] = nextByte(250);
+			}
+			lcd_msg[LCD_COLS] = '\0';
+			m_ctrl->lcd->setCursor(0, constrain(msg[0], 0, LCD_LINES));
+			m_ctrl->lcd->print(lcd_msg);
+			break;
+		case CTRL_OP_GET_BATTERY_HUMAN:
+			m_hws->print("BAT0: ");
+			m_hws->print(m_ctrl->cpu_batt.getVoltage(), DEC);
+			m_hws->print(" volts, ");
+			m_hws->print(m_ctrl->cpu_batt.getCurrent(), DEC);
+			m_hws->print(" amps\r\n");
+			m_hws->print("BAT1: ");
+			m_hws->print(m_ctrl->mot_batt.getVoltage(), DEC);
+			m_hws->print(" volts, ");
+			m_hws->print(m_ctrl->mot_batt.getCurrent(), DEC);
+			m_hws->print(" amps\r\n");
+			break;
+		default:
+			m_hws->print("Invalid opcode");
+		}
+	}
+	comm = (millis() - m_lastUpdateTime) <= CMD_TIMEOUT;
+}
+
+void Controller::sendMessage(uint8_t op, uint8_t * contents, uint8_t length) {
+	uint8_t msg[length + 4]; // checksum byte + op + leading + ending
+	msg[0] = '<';
+	msg[1] = op;
+	for (uint8_t i = 0; i < length; i++) {
+		msg[2 + i] = contents[i];
+	}
+	msg[length + 2] = checksum(op, contents, length);
+	msg[length + 3] = '>';
+}
+/**
+ * Send a full data packet
+ */
+void Controller::sendDataPacket() {
+	m_stat.leadingChar = '<';
+	m_stat.endingChar = '>';
+	m_stat.leftSpeed = (uint16_t) (abs(m_ctrl->leftEnc.velocity * 100)); // cm to mm & truncate
+	m_stat.rightSpeed = (uint16_t) (abs(m_ctrl->rightEnc.velocity * 100)); // cm to mm & truncate
+	m_stat.leftOutSpeed = m_ctrl->mot.leftSpeed & 0xff;
+	m_stat.rightOutSpeed = m_ctrl->mot.rightSpeed & 0xff;
+	m_stat.leftCount = abs(m_ctrl->leftEnc.count);
+	m_stat.rightCount = abs(m_ctrl->rightEnc.count);
+	m_stat.yawRate = (uint16_t) (abs(m_ctrl->yaw.rate) * 1000);
+	m_stat.yawVal = (uint16_t) (abs(m_ctrl->yaw.val) * 1000);
+	m_stat.cpu_voltage = (int16_t) (m_ctrl->cpu_batt.getVoltage() * 100);
+	m_stat.cpu_current = (int16_t) (m_ctrl->cpu_batt.getCurrent() * 100);
+	m_stat.mot_voltage = (int16_t) (m_ctrl->mot_batt.getVoltage() * 100);
+	m_stat.mot_current = (int16_t) (m_ctrl->mot_batt.getCurrent() * 100);
+	m_stat.panAngle = (uint8_t) (m_ctrl->pan.read());
+	m_stat.tiltAngle = (uint8_t) (m_ctrl->tilt.read());
+	m_stat.sign = 0;
+
+	m_dataPacket[0] = m_stat.leadingChar;
+	m_dataPacket[1] = m_stat.sign & 0xff;
+	m_dataPacket[2] = m_stat.leftSpeed >> 8u;
+	m_dataPacket[3] = m_stat.leftSpeed & 0xff;
+	m_dataPacket[4] = m_stat.rightSpeed >> 8u;
+	m_dataPacket[5] = m_stat.rightSpeed & 0xff;
+	m_dataPacket[6] = m_stat.leftOutSpeed & 0xff;
+	m_dataPacket[7] = m_stat.rightOutSpeed & 0xff;
+	m_dataPacket[8] = m_stat.leftCount >> 24u;
+	m_dataPacket[9] = m_stat.leftCount >> 16u;
+	m_dataPacket[10] = m_stat.leftCount >> 8u;
+	m_dataPacket[11] = m_stat.leftCount & 0xff;
+	m_dataPacket[12] = m_stat.rightCount >> 24u;
+	m_dataPacket[13] = m_stat.rightCount >> 16u;
+	m_dataPacket[14] = m_stat.rightCount >> 8u;
+	m_dataPacket[15] = m_stat.rightCount & 0xff;
+	m_dataPacket[16] = m_stat.yawRate >> 8u;
+	m_dataPacket[17] = m_stat.yawRate & 0xff;
+	m_dataPacket[18] = m_stat.yawVal >> 8u;
+	m_dataPacket[19] = m_stat.yawVal & 0xff;
+	m_dataPacket[20] = m_stat.cpu_voltage >> 8u;
+	m_dataPacket[21] = m_stat.cpu_voltage & 0xff;
+	m_dataPacket[22] = m_stat.cpu_current >> 8u;
+	m_dataPacket[23] = m_stat.cpu_current & 0xff;
+	m_dataPacket[24] = m_stat.mot_voltage >> 8u;
+	m_dataPacket[25] = m_stat.mot_current & 0xff;
+	m_dataPacket[26] = m_stat.tiltAngle & 0xff;
+	m_dataPacket[27] = m_stat.panAngle & 0xff;
+	m_dataPacket[28] = m_stat.endingChar;
+
+	Serial.write(m_dataPacket, sizeof(statusMessage));
+}
+
+/**
+ * Request a byte from Serial
+ */
+char Controller::nextByte(unsigned long timeout) {
+	unsigned long timeOutTime = millis() + timeout;
+	while (millis() < timeOutTime && !m_hws->available()) {
+		// do nothing
+	}
+	if (m_hws->available())
+		return m_hws->read();
+	else
+		return 0x00;
+}

@@ -1,0 +1,2371 @@
+Archive member included because of file (symbol)
+
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                              ./src/Main.o (HardwareSerial::begin(long))
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                              ./src/lib/LEDDisplay.o (Print::write(char const*))
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+                              ./src/Main.o (attachInterrupt)
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+                              ./src/lib/RC_CTRL.o (map(long, long, long, long, long))
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o) (String::operator[](unsigned int) const)
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(missing.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o) (__cxa_pure_virtual)
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(pins_arduino.o)
+                              ./src/lib/NewSoftSerial.o (port_to_output_PGM)
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                              ./src/lib/Controller.o (millis)
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+                              ./src/lib/CD74HC4067.o (analogRead)
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+                              ./src/lib/CD74HC4067.o (pinMode)
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_pulse.o)
+                              ./src/lib/Ping.o (pulseIn)
+/home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                              ./src/Main.o (Servo::Servo())
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mulsi3.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o) (__mulsi3)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodqi4.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o) (__udivmodqi4)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+                              ./src/lib/Ping.o (__udivmodhi4)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodhi4.o)
+                              ./src/lib/LEDDisplay.o (__divmodhi4)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodsi4.o)
+                              ./src/lib/TSL1401.o (__udivmodsi4)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodsi4.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o) (__divmodsi4)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o (exit)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+                              ./src/lib/Controller.o (__do_copy_data)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+                              ./src/lib/FlexiTimer2.o (__do_clear_bss)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ctors.o)
+                              ./src/Main.o (__do_global_ctors)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o) (__fixunssfsi)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+                              ./src/lib/Gyro.o (__subsf3)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                              ./src/lib/Controller.o (__mulsf3)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_div_sf.o)
+                              ./src/lib/Gyro.o (__divsf3)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_eq_sf.o)
+                              ./src/Main.o (__eqsf2)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                              ./src/Main.o (__gtsf2)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                              ./src/Main.o (__gesf2)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o) (__ltsf2)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_le_sf.o)
+                              ./src/Main.o (__lesf2)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_si_to_sf.o)
+                              ./src/lib/Controller.o (__floatsisf)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                              ./src/lib/Controller.o (__fixsfsi)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o) (__thenan_sf)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_usi_to_sf.o)
+                              ./src/lib/Gyro.o (__floatunsisf)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o) (__prologue_saves__)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o) (__epilogue_restores__)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_tablejump.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ctors.o) (__tablejump__)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clzsi2.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_si_to_sf.o) (__clzsi2)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_pack_sf.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o) (__pack_f)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_unpack_sf.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o) (__unpack_f)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fpcmp_parts_sf.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_eq_sf.o) (__fpcmp_parts_f)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clz.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clzsi2.o) (__clz_tab)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o)
+                              ./src/lib/Sharp_IR.o (pow)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o) (exp)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_inf.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o) (__fp_inf)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_nan.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o) (__fp_nan)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_powser.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o) (__fp_powser)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_split3.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o) (__fp_splitA)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_zero.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o) (__fp_zero)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(inverse.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o) (inverse)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(ldexp.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o) (ldexp)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o) (log)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(modf.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o) (modf)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_powser.o) (__mulsf3x)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_powser.o) (__addsf3x)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_mpack.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(ldexp.o) (__fp_mpack)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscA.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o) (__fp_pscA)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscB.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o) (__fp_pscB)
+/home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_round.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o) (__fp_round)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (malloc)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o) (random)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(isspace.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (isspace)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(tolower.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (tolower)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(toupper.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (toupper)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcat.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (strcat)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strchr.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (strchr)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcmp.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (strcmp)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcpy.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (strcpy)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncmp.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (strncmp)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncpy.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (strncpy)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrchr.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (strrchr)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strstr.o)
+                              ./src/lib/Controller.o (strstr)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(itoa.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (itoa)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ltoa.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (ltoa)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ultoa.o)
+                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o) (ultoa)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(cty_isfalse.o)
+                              /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(isspace.o) (__ctype_isfalse)
+/usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrev.o)
+                              /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(itoa.o) (strrev)
+
+Allocating common symbols
+Common symbol       size              file
+
+__brkval            0x2               /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+__flp               0x2               /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+ .text          0x0000000000000000        0x0 ./src/lib/CD74HC4067.o
+ .data          0x0000000000000000        0x0 ./src/lib/CD74HC4067.o
+ .bss           0x0000000000000000        0x0 ./src/lib/CD74HC4067.o
+ .text._ZN10CD74HC406711readDigitalEh
+                0x0000000000000000       0x22 ./src/lib/CD74HC4067.o
+ .text._ZN10CD74HC4067C2Ehhhhh
+                0x0000000000000000       0x56 ./src/lib/CD74HC4067.o
+ .text          0x0000000000000000        0x0 ./src/lib/Controller.o
+ .bss           0x0000000000000000        0x0 ./src/lib/Controller.o
+ .text._ZN10ControllerC2EPdS0_S0_S0_PlS1_P12PowerMonitorS0_S0_P5ServoS5_
+                0x0000000000000000       0x80 ./src/lib/Controller.o
+ .text._ZN10Controller5flushEv
+                0x0000000000000000       0x14 ./src/lib/Controller.o
+ .text          0x0000000000000000        0x0 ./src/lib/FlexiTimer2.o
+ .data          0x0000000000000000        0x0 ./src/lib/FlexiTimer2.o
+ .bss           0x0000000000000000        0x0 ./src/lib/FlexiTimer2.o
+ .text._ZN11FlexiTimer23setEmPFvvE
+                0x0000000000000000       0x18 ./src/lib/FlexiTimer2.o
+ .text._ZN11FlexiTimer24stopEv
+                0x0000000000000000        0xc ./src/lib/FlexiTimer2.o
+ .text          0x0000000000000000        0x0 ./src/lib/Gyro.o
+ .data          0x0000000000000000        0x0 ./src/lib/Gyro.o
+ .bss           0x0000000000000000        0x0 ./src/lib/Gyro.o
+ .text._ZN4GyroC2EP10CD74HC4067hhf
+                0x0000000000000000       0x28 ./src/lib/Gyro.o
+ .text._ZN4GyroC1Ehhf
+                0x0000000000000000       0x4a ./src/lib/Gyro.o
+ .text._ZN4GyroC2Ehhf
+                0x0000000000000000       0x4a ./src/lib/Gyro.o
+ .text          0x0000000000000000        0x0 ./src/lib/LEDDisplay.o
+ .data          0x0000000000000000        0xd ./src/lib/LEDDisplay.o
+ .bss           0x0000000000000000        0x0 ./src/lib/LEDDisplay.o
+ .text._ZN10LEDDisplay13findNumDigitsEii
+                0x0000000000000000       0x30 ./src/lib/LEDDisplay.o
+ .text._ZN10LEDDisplay7displayEic
+                0x0000000000000000      0x1b4 ./src/lib/LEDDisplay.o
+ .text._ZN10LEDDisplay7setDotsEbbbbbb
+                0x0000000000000000       0x66 ./src/lib/LEDDisplay.o
+ .text._ZN10LEDDisplayC1Eh
+                0x0000000000000000       0x3a ./src/lib/LEDDisplay.o
+ .text._ZN10LEDDisplayC2Eh
+                0x0000000000000000       0x3a ./src/lib/LEDDisplay.o
+ .rodata._ZTV10LEDDisplay
+                0x0000000000000000        0xa ./src/lib/LEDDisplay.o
+ .text          0x0000000000000000        0x0 ./src/lib/LineSensor.o
+ .data          0x0000000000000000        0x0 ./src/lib/LineSensor.o
+ .bss           0x0000000000000000        0x0 ./src/lib/LineSensor.o
+ .text._ZN10LineSensor8nextByteEm
+                0x0000000000000000       0x76 ./src/lib/LineSensor.o
+ .text._ZN10LineSensor15getSensorValuesEPj
+                0x0000000000000000       0x7a ./src/lib/LineSensor.o
+ .text._ZN10LineSensor10getLinePosEv
+                0x0000000000000000       0x4a ./src/lib/LineSensor.o
+ .text._ZN10LineSensor12setCalibrateEb
+                0x0000000000000000       0x14 ./src/lib/LineSensor.o
+ .text._ZN10LineSensorC1Ehh
+                0x0000000000000000       0x2a ./src/lib/LineSensor.o
+ .text._ZN10LineSensorC2Ehh
+                0x0000000000000000       0x2a ./src/lib/LineSensor.o
+ .rodata._ZTV10LineSensor
+                0x0000000000000000        0xa ./src/lib/LineSensor.o
+ .text          0x0000000000000000        0x0 ./src/lib/MaxSonar.o
+ .data          0x0000000000000000        0x0 ./src/lib/MaxSonar.o
+ .bss           0x0000000000000000        0x0 ./src/lib/MaxSonar.o
+ .text._ZN8MaxSonarC2Eh
+                0x0000000000000000        0x6 ./src/lib/MaxSonar.o
+ .text._ZN8MaxSonarC1Eh
+                0x0000000000000000        0x6 ./src/lib/MaxSonar.o
+ .text._ZN8MaxSonar8get_distEv
+                0x0000000000000000       0x52 ./src/lib/MaxSonar.o
+ .text          0x0000000000000000        0x0 ./src/lib/NewSoftSerial.o
+ .data          0x0000000000000000        0x0 ./src/lib/NewSoftSerial.o
+ .bss           0x0000000000000000        0x0 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial8activateEv
+                0x0000000000000000       0x38 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial12tx_pin_writeEh
+                0x0000000000000000       0x1e ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial11rx_pin_readEv
+                0x0000000000000000       0x14 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial5beginEl
+                0x0000000000000000      0x152 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial3endEv
+                0x0000000000000000       0x6a ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerialD1Ev
+                0x0000000000000000       0x12 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerialD2Ev
+                0x0000000000000000       0x12 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial4readEv
+                0x0000000000000000       0x3c ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial9availableEv
+                0x0000000000000000       0x28 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial5writeEh
+                0x0000000000000000      0x11c ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial13enable_timer0Eb
+                0x0000000000000000       0x18 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial5flushEv
+                0x0000000000000000       0x22 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial5setRXEh
+                0x0000000000000000       0x56 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerial5setTXEh
+                0x0000000000000000       0x56 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerialC1Ehhb
+                0x0000000000000000       0x48 ./src/lib/NewSoftSerial.o
+ .text._ZN13NewSoftSerialC2Ehhb
+                0x0000000000000000       0x48 ./src/lib/NewSoftSerial.o
+ .rodata._ZTV13NewSoftSerial
+                0x0000000000000000        0xa ./src/lib/NewSoftSerial.o
+ .progmem.data  0x0000000000000000       0x90 ./src/lib/NewSoftSerial.o
+ .text          0x0000000000000000        0x0 ./src/lib/Ping.o
+ .data          0x0000000000000000        0x0 ./src/lib/Ping.o
+ .bss           0x0000000000000000        0x0 ./src/lib/Ping.o
+ .text._ZN4PingC2Eh
+                0x0000000000000000        0x6 ./src/lib/Ping.o
+ .text._ZN4PingC1Eh
+                0x0000000000000000        0x6 ./src/lib/Ping.o
+ .text._ZN4Ping11getDistanceEv
+                0x0000000000000000       0x6e ./src/lib/Ping.o
+ .text          0x0000000000000000        0x0 ./src/lib/PowerMonitor.o
+ .data          0x0000000000000000        0x0 ./src/lib/PowerMonitor.o
+ .bss           0x0000000000000000        0x0 ./src/lib/PowerMonitor.o
+ .text._ZN12PowerMonitorC2Ehh
+                0x0000000000000000       0x38 ./src/lib/PowerMonitor.o
+ .text          0x0000000000000000        0x0 ./src/lib/RC_CTRL.o
+ .data          0x0000000000000000        0x0 ./src/lib/RC_CTRL.o
+ .bss           0x0000000000000000        0x0 ./src/lib/RC_CTRL.o
+ .text._ZN7RC_CTRL10getChannelEh
+                0x0000000000000000       0x16 ./src/lib/RC_CTRL.o
+ .text._ZN7RC_CTRL7getKnobEv
+                0x0000000000000000        0x6 ./src/lib/RC_CTRL.o
+ .text._ZN7RC_CTRL6readRCEh
+                0x0000000000000000       0xb4 ./src/lib/RC_CTRL.o
+ .text._ZN7RC_CTRL6updateEv
+                0x0000000000000000       0x46 ./src/lib/RC_CTRL.o
+ .text._ZN7RC_CTRL17deadBandProcessorEah
+                0x0000000000000000       0xbc ./src/lib/RC_CTRL.o
+ .text._ZN7RC_CTRL6getYawEbh
+                0x0000000000000000       0x16 ./src/lib/RC_CTRL.o
+ .text._ZN7RC_CTRL11getThrottleEbh
+                0x0000000000000000       0x16 ./src/lib/RC_CTRL.o
+ .text._ZN7RC_CTRLC1Ehhhhh
+                0x0000000000000000       0x44 ./src/lib/RC_CTRL.o
+ .text._ZN7RC_CTRLC2Ehhhhh
+                0x0000000000000000       0x44 ./src/lib/RC_CTRL.o
+ .text          0x0000000000000000        0x0 ./src/lib/RoboClaw.o
+ .data          0x0000000000000000        0x0 ./src/lib/RoboClaw.o
+ .bss           0x0000000000000000        0x0 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw6advPtrEv
+                0x0000000000000000       0x28 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw8nextByteEm
+                0x0000000000000000       0x74 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw22getMotorBatteryVoltageEv
+                0x0000000000000000       0x8c ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw11getEncRightEPl
+                0x0000000000000000      0x1c6 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw10getEncLeftEPl
+                0x0000000000000000      0x1c6 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw9updateEncEPlS0_
+                0x0000000000000000       0x22 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw20getEncoderSpeedRightEPd
+                0x0000000000000000      0x1b0 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw19getEncoderSpeedLeftEPd
+                0x0000000000000000      0x1b0 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw11updateSpeedEPdS0_
+                0x0000000000000000       0x22 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw11updateStateEPdS0_PlS1_
+                0x0000000000000000      0x758 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw5resetEv
+                0x0000000000000000       0x42 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw11setSpeedPIDEdd
+                0x0000000000000000      0x152 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw17setSpeedDutyCycleEii
+                0x0000000000000000       0xd0 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClaw6setPIDEllll
+                0x0000000000000000      0x22c ./src/lib/RoboClaw.o
+ .text._ZN8RoboClawC1Ehhh
+                0x0000000000000000       0xa8 ./src/lib/RoboClaw.o
+ .text._ZN8RoboClawC2Ehhh
+                0x0000000000000000       0xa8 ./src/lib/RoboClaw.o
+ .rodata._ZTV8RoboClaw
+                0x0000000000000000        0xa ./src/lib/RoboClaw.o
+ .rodata._ZZN8RoboClawC1EhhhE3C.1
+                0x0000000000000000        0x8 ./src/lib/RoboClaw.o
+ .text          0x0000000000000000        0x0 ./src/lib/Sharp_IR.o
+ .data          0x0000000000000000        0x0 ./src/lib/Sharp_IR.o
+ .bss           0x0000000000000000        0x0 ./src/lib/Sharp_IR.o
+ .text._ZN8Sharp_IR8get_distEv
+                0x0000000000000000       0x8a ./src/lib/Sharp_IR.o
+ .text._ZN8Sharp_IRC1Ehh
+                0x0000000000000000       0x22 ./src/lib/Sharp_IR.o
+ .text._ZN8Sharp_IRC2Ehh
+                0x0000000000000000       0x22 ./src/lib/Sharp_IR.o
+ .text          0x0000000000000000        0x0 ./src/lib/TSL1401.o
+ .data          0x0000000000000000        0x0 ./src/lib/TSL1401.o
+ .bss           0x0000000000000000        0x0 ./src/lib/TSL1401.o
+ .text._ZN7TSL140114getDataPointerEv
+                0x0000000000000000        0xa ./src/lib/TSL1401.o
+ .text._ZN7TSL140111getDataSizeEv
+                0x0000000000000000        0x4 ./src/lib/TSL1401.o
+ .text._ZN7TSL14017setExpoEj
+                0x0000000000000000        0xc ./src/lib/TSL1401.o
+ .text._ZN7TSL14015flushEv
+                0x0000000000000000       0x1a ./src/lib/TSL1401.o
+ .text._ZN7TSL140110getLinePosEjj
+                0x0000000000000000      0x126 ./src/lib/TSL1401.o
+ .text._ZN7TSL14019prepFrameEv
+                0x0000000000000000       0x3c ./src/lib/TSL1401.o
+ .text._ZN7TSL140111resetSensorEv
+                0x0000000000000000       0x34 ./src/lib/TSL1401.o
+ .text._ZN7TSL1401D1Ev
+                0x0000000000000000        0x8 ./src/lib/TSL1401.o
+ .text._ZN7TSL1401D2Ev
+                0x0000000000000000        0x8 ./src/lib/TSL1401.o
+ .text._ZN7TSL140114updateReadingsEv
+                0x0000000000000000       0x5e ./src/lib/TSL1401.o
+ .text._ZN7TSL1401C1Ehhhj
+                0x0000000000000000       0x4e ./src/lib/TSL1401.o
+ .text._ZN7TSL1401C2Ehhhj
+                0x0000000000000000       0x4e ./src/lib/TSL1401.o
+ .text          0x0000000000000000        0x0 ./src/Main.o
+ .bss           0x0000000000000000        0x0 ./src/Main.o
+ .bss.motorTime
+                0x0000000000000000        0x4 ./src/Main.o
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+ .text._ZN14HardwareSerialC2EP11ring_bufferPVhS3_S3_S3_S3_hhhhh
+                0x0000000000000000       0x60 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+ .text._ZN14HardwareSerialC1EP11ring_bufferPVhS3_S3_S3_S3_hhhhh
+                0x0000000000000000       0x60 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+ .text._ZN14HardwareSerial3endEv
+                0x0000000000000000       0x54 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+ .rodata._ZTV6Stream
+                0x0000000000000000       0x10 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .text._ZN5Print5printERK6String
+                0x0000000000000000       0x54 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .text._ZN5Print5printEji
+                0x0000000000000000       0x22 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .text._ZN5Print5printEci
+                0x0000000000000000       0x24 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .text._ZN5Print7printlnEmi
+                0x0000000000000000       0x16 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .text._ZN5Print7printlnEji
+                0x0000000000000000       0x32 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .text._ZN5Print7printlnEhi
+                0x0000000000000000       0x34 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .text._ZN5Print7printlnERK6String
+                0x0000000000000000       0x16 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .text._ZN5Print7printlnEli
+                0x0000000000000000       0x16 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .text._ZN5Print7printlnEii
+                0x0000000000000000       0x36 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .text._ZN5Print7printlnEci
+                0x0000000000000000       0x34 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .rodata._ZTV5Print
+                0x0000000000000000        0xa /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+ .text.detachInterrupt
+                0x0000000000000000       0x26 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+ .text._Z8makeWordj
+                0x0000000000000000        0x2 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+ .text._Z8makeWordhh
+                0x0000000000000000        0xe /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+ .text._Z6randoml
+                0x0000000000000000       0x44 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+ .text._Z6randomll
+                0x0000000000000000       0x3c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+ .text._Z10randomSeedj
+                0x0000000000000000       0x10 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .data          0x0000000000000000        0x1 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String6charAtEj
+                0x0000000000000000       0x10 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6String9setCharAtEjc
+                0x0000000000000000       0x22 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringixEj
+                0x0000000000000000       0x2a /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6StringixEj
+                0x0000000000000000       0x10 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6String11toCharArrayEPcj
+                0x0000000000000000       0x44 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6String8getBytesEPhj
+                0x0000000000000000       0x44 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringD1Ev
+                0x0000000000000000       0x20 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String10startsWithERKS_j
+                0x0000000000000000       0x3c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String10startsWithERKS_
+                0x0000000000000000       0x26 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String11lastIndexOfEcj
+                0x0000000000000000       0x6a /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String11lastIndexOfEc
+                0x0000000000000000       0x10 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String7indexOfERKS_j
+                0x0000000000000000       0x3c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String7indexOfERKS_
+                0x0000000000000000        0xa /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String7indexOfEcj
+                0x0000000000000000       0x38 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String7indexOfEc
+                0x0000000000000000        0xa /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String6equalsERKS_
+                0x0000000000000000       0x32 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String8endsWithERKS_
+                0x0000000000000000       0x3a /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6StringgeERKS_
+                0x0000000000000000       0x28 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6StringleERKS_
+                0x0000000000000000       0x22 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6StringgtERKS_
+                0x0000000000000000       0x22 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6StringltERKS_
+                0x0000000000000000       0x24 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6StringneERKS_
+                0x0000000000000000       0x30 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6StringeqERKS_
+                0x0000000000000000       0x34 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String9compareToERKS_
+                0x0000000000000000       0x12 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6String9getBufferEj
+                0x0000000000000000       0x28 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringpLERKS_
+                0x0000000000000000       0x6c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6String6concatERKS_
+                0x0000000000000000        0x6 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringaSERKS_
+                0x0000000000000000       0x60 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC1Eh
+                0x0000000000000000       0x34 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC2Eh
+                0x0000000000000000       0x34 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC1Ec
+                0x0000000000000000       0x34 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC2Ec
+                0x0000000000000000       0x34 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC1ERKS_
+                0x0000000000000000       0x36 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC2ERKS_
+                0x0000000000000000       0x36 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC1Emi
+                0x0000000000000000       0x7e /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC2Emi
+                0x0000000000000000       0x7e /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC1Eji
+                0x0000000000000000       0x7c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC2Eji
+                0x0000000000000000       0x7c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC1EPKc
+                0x0000000000000000       0x50 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String11toUpperCaseEv
+                0x0000000000000000       0x72 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String11toLowerCaseEv
+                0x0000000000000000       0x72 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String16equalsIgnoreCaseERKS_
+                0x0000000000000000       0x98 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String9substringEjj
+                0x0000000000000000       0x6e /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String9substringEj
+                0x0000000000000000       0x18 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String11lastIndexOfERKS_j
+                0x0000000000000000       0xca /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String11lastIndexOfERKS_
+                0x0000000000000000       0x1c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZNK6String4trimEv
+                0x0000000000000000       0xd6 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6String7replaceERKS_S1_
+                0x0000000000000000      0x136 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6String7replaceEcc
+                0x0000000000000000       0x7e /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC2EPKc
+                0x0000000000000000       0x50 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC1Eli
+                0x0000000000000000       0x7a /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC2Eli
+                0x0000000000000000       0x7a /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC1Eii
+                0x0000000000000000       0x78 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text._ZN6StringC2Eii
+                0x0000000000000000       0x78 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .bss._ZZN6StringixEjE19dummy_writable_char
+                0x0000000000000000        0x1 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(missing.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(missing.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(missing.o)
+ .text.__cxa_pure_virtual
+                0x0000000000000000        0x2 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(missing.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(pins_arduino.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(pins_arduino.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(pins_arduino.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+ .text.delayMicroseconds
+                0x0000000000000000       0x14 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+ .text.analogReference
+                0x0000000000000000        0x6 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+ .text.analogWrite
+                0x0000000000000000       0xb2 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+ .text.digitalRead
+                0x0000000000000000       0x9e /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_pulse.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_pulse.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_pulse.o)
+ .text.pulseIn  0x0000000000000000      0x11e /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_pulse.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+ .text._ZN5ServoC2Ev
+                0x0000000000000000       0x34 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+ .text._ZN5Servo6detachEv
+                0x0000000000000000       0x54 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+ .text._ZN5Servo8attachedEv
+                0x0000000000000000       0x24 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mulsi3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mulsi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mulsi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodqi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodqi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodqi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodhi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodhi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodhi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodsi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodsi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodsi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodsi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodsi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodsi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ctors.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ctors.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ctors.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ctors.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_div_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_div_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_eq_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_eq_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_le_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_le_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_si_to_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_si_to_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_usi_to_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_usi_to_sf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_tablejump.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_tablejump.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_tablejump.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clzsi2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clzsi2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_pack_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_pack_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_unpack_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_unpack_sf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clz.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clz.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o)
+ .text.fplib    0x0000000000000000       0x9c /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+ .text.fplib    0x0000000000000000       0x62 /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+ .progmem.gcc_fplib
+                0x0000000000000000       0x28 /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_inf.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_inf.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_inf.o)
+ .text.fplib    0x0000000000000000        0xc /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_inf.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_nan.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_nan.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_nan.o)
+ .text.fplib    0x0000000000000000        0x6 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_nan.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_powser.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_powser.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_powser.o)
+ .text.fplib    0x0000000000000000       0x6e /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_powser.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_split3.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_split3.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_split3.o)
+ .text.fplib    0x0000000000000000       0x44 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_split3.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_zero.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_zero.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_zero.o)
+ .text.fplib    0x0000000000000000       0x10 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_zero.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(inverse.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(inverse.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(inverse.o)
+ .text.fplib    0x0000000000000000       0x12 /home/rbtying/workspace/Arduino-328/Debug/libm.a(inverse.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(ldexp.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(ldexp.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(ldexp.o)
+ .text.fplib    0x0000000000000000       0x6c /home/rbtying/workspace/Arduino-328/Debug/libm.a(ldexp.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+ .text.fplib    0x0000000000000000       0x94 /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+ .progmem.gcc_fplib
+                0x0000000000000000       0x5a /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(modf.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(modf.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(modf.o)
+ .text.fplib    0x0000000000000000       0x72 /home/rbtying/workspace/Arduino-328/Debug/libm.a(modf.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+ .text.fplib    0x0000000000000000       0xd2 /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+ .text.fplib    0x0000000000000000       0xca /home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_mpack.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_mpack.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_mpack.o)
+ .text.fplib    0x0000000000000000       0x1c /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_mpack.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscA.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscA.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscA.o)
+ .text.fplib    0x0000000000000000        0xe /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscA.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscB.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscB.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscB.o)
+ .text.fplib    0x0000000000000000        0xe /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscB.o)
+ .text          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_round.o)
+ .data          0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_round.o)
+ .bss           0x0000000000000000        0x0 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_round.o)
+ .text.fplib    0x0000000000000000       0x22 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_round.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+ .data          0x0000000000000000        0x6 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+ .text.avr-libc
+                0x0000000000000000      0x20a /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+ COMMON         0x0000000000000000        0x4 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+ .data          0x0000000000000000        0x4 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+ .text.avr-libc
+                0x0000000000000000       0xc2 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(isspace.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(isspace.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(isspace.o)
+ .text.avr-libc
+                0x0000000000000000       0x10 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(isspace.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(tolower.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(tolower.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(tolower.o)
+ .text.avr-libc
+                0x0000000000000000       0x10 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(tolower.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(toupper.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(toupper.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(toupper.o)
+ .text.avr-libc
+                0x0000000000000000       0x10 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(toupper.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcat.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcat.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcat.o)
+ .text.avr-libc
+                0x0000000000000000       0x16 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcat.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strchr.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strchr.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strchr.o)
+ .text.avr-libc
+                0x0000000000000000       0x16 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strchr.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcmp.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcmp.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcmp.o)
+ .text.avr-libc
+                0x0000000000000000       0x12 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcmp.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcpy.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcpy.o)
+ .text.avr-libc
+                0x0000000000000000        0xe /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcpy.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncmp.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncmp.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncmp.o)
+ .text.avr-libc
+                0x0000000000000000       0x1c /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncmp.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncpy.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncpy.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncpy.o)
+ .text.avr-libc
+                0x0000000000000000       0x1e /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncpy.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrchr.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrchr.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrchr.o)
+ .text.avr-libc
+                0x0000000000000000       0x16 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrchr.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strstr.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strstr.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strstr.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(itoa.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(itoa.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(itoa.o)
+ .text.avr-libc
+                0x0000000000000000       0x42 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(itoa.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ltoa.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ltoa.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ltoa.o)
+ .text.avr-libc
+                0x0000000000000000       0x68 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ltoa.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ultoa.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ultoa.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ultoa.o)
+ .text.avr-libc
+                0x0000000000000000       0x4a /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ultoa.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(cty_isfalse.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(cty_isfalse.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(cty_isfalse.o)
+ .text.avr-libc
+                0x0000000000000000        0x6 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(cty_isfalse.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrev.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrev.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrev.o)
+ .text.avr-libc
+                0x0000000000000000       0x20 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrev.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000020000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000400 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+LOAD ./src/lib/CD74HC4067.o
+LOAD ./src/lib/Controller.o
+LOAD ./src/lib/FlexiTimer2.o
+LOAD ./src/lib/Gyro.o
+LOAD ./src/lib/LEDDisplay.o
+LOAD ./src/lib/LineSensor.o
+LOAD ./src/lib/MaxSonar.o
+LOAD ./src/lib/NewSoftSerial.o
+LOAD ./src/lib/Ping.o
+LOAD ./src/lib/PowerMonitor.o
+LOAD ./src/lib/RC_CTRL.o
+LOAD ./src/lib/RoboClaw.o
+LOAD ./src/lib/Sharp_IR.o
+LOAD ./src/lib/TSL1401.o
+LOAD ./src/Main.o
+LOAD /home/rbtying/workspace/Arduino-328/Debug/libArduino.a
+LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
+LOAD /home/rbtying/workspace/Arduino-328/Debug/libm.a
+LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x3be4
+ *(.vectors)
+ .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x0000000000000068       0x5a /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(pins_arduino.o)
+                0x0000000000000068                port_to_mode_PGM
+                0x0000000000000072                port_to_output_PGM
+                0x000000000000007c                port_to_input_PGM
+                0x0000000000000086                digital_pin_to_port_PGM
+                0x000000000000009a                digital_pin_to_bit_mask_PGM
+                0x00000000000000ae                digital_pin_to_timer_PGM
+                0x00000000000000c2                . = ALIGN (0x2)
+                0x00000000000000c2                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000000000000c2        0x0 linker stubs
+ *(.trampolines*)
+                0x00000000000000c2                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000000000000c2                __ctors_start = .
+ *(.ctors)
+ .ctors         0x00000000000000c2        0x2 ./src/Main.o
+ .ctors         0x00000000000000c4        0x2 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000000000c6                __ctors_end = .
+                0x00000000000000c6                __dtors_start = .
+ *(.dtors)
+                0x00000000000000c6                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000000000000c6        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+                0x00000000000000c6                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000000000000c6        0xc /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000000000000d2       0x16 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+                0x00000000000000d2                __do_copy_data
+ .init4         0x00000000000000e8       0x10 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+                0x00000000000000e8                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ .init6         0x00000000000000f8       0x16 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ctors.o)
+                0x00000000000000f8                __do_global_ctors
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000000000010e        0x8 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+ *(.init9)
+ *(.text)
+ .text          0x0000000000000116        0x4 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+                0x0000000000000116                __vector_22
+                0x0000000000000116                __vector_24
+                0x0000000000000116                __vector_12
+                0x0000000000000116                __bad_interrupt
+                0x0000000000000116                __vector_6
+                0x0000000000000116                __vector_23
+                0x0000000000000116                __vector_25
+                0x0000000000000116                __vector_13
+                0x0000000000000116                __vector_17
+                0x0000000000000116                __vector_19
+                0x0000000000000116                __vector_7
+                0x0000000000000116                __vector_21
+                0x0000000000000116                __vector_15
+                0x0000000000000116                __vector_8
+                0x0000000000000116                __vector_14
+                0x0000000000000116                __vector_10
+                0x0000000000000116                __vector_20
+ .text          0x000000000000011a       0x58 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+                0x000000000000011a                __fixunssfsi
+ .text          0x0000000000000172      0x354 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+                0x000000000000040a                __subsf3
+                0x000000000000046c                __addsf3
+ .text          0x00000000000004c6      0x1f4 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                0x00000000000004c6                __mulsf3
+ .text          0x00000000000006ba      0x158 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_div_sf.o)
+                0x00000000000006ba                __divsf3
+ .text          0x0000000000000812       0x60 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_eq_sf.o)
+                0x0000000000000812                __eqsf2
+ .text          0x0000000000000872       0x60 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                0x0000000000000872                __gtsf2
+ .text          0x00000000000008d2       0x60 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                0x00000000000008d2                __gesf2
+ .text          0x0000000000000932       0x60 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                0x0000000000000932                __ltsf2
+ .text          0x0000000000000992       0x60 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_le_sf.o)
+                0x0000000000000992                __lesf2
+ .text          0x00000000000009f2       0xbc /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_si_to_sf.o)
+                0x00000000000009f2                __floatsisf
+ .text          0x0000000000000aae       0xa8 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                0x0000000000000aae                __fixsfsi
+ .text          0x0000000000000b56       0xf2 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_usi_to_sf.o)
+                0x0000000000000b56                __floatunsisf
+ .text          0x0000000000000c48       0x9e /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clzsi2.o)
+                0x0000000000000c48                __clzsi2
+ .text          0x0000000000000ce6      0x1ac /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_pack_sf.o)
+                0x0000000000000ce6                __pack_f
+ .text          0x0000000000000e92       0xf0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_unpack_sf.o)
+                0x0000000000000e92                __unpack_f
+ .text          0x0000000000000f82       0xb2 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fpcmp_parts_sf.o)
+                0x0000000000000f82                __fpcmp_parts_f
+                0x0000000000001034                . = ALIGN (0x2)
+ *(.text.*)
+ .text._ZN10CD74HC40676setMuxEh
+                0x0000000000001034       0x7e ./src/lib/CD74HC4067.o
+                0x0000000000001034                CD74HC4067::setMux(unsigned char)
+ .text._ZN10CD74HC40677readADCEh
+                0x00000000000010b2       0x18 ./src/lib/CD74HC4067.o
+                0x00000000000010b2                CD74HC4067::readADC(unsigned char)
+ .text._ZN10CD74HC4067C1Ehhhhh
+                0x00000000000010ca       0x56 ./src/lib/CD74HC4067.o
+                0x00000000000010ca                CD74HC4067::CD74HC4067(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
+ .text._ZN10ControllerC1EPdS0_S0_S0_PlS1_P12PowerMonitorS0_S0_P5ServoS5_
+                0x0000000000001120       0x80 ./src/lib/Controller.o
+                0x0000000000001120                Controller::Controller(double*, double*, double*, double*, long*, long*, PowerMonitor*, double*, double*, Servo*, Servo*)
+ .text._ZN10Controller8nextByteEm
+                0x00000000000011a0       0x6a ./src/lib/Controller.o
+                0x00000000000011a0                Controller::nextByte(unsigned long)
+ .text._ZN10Controller9printInfoEv
+                0x000000000000120a      0x206 ./src/lib/Controller.o
+                0x000000000000120a                Controller::printInfo()
+ .text._ZN10Controller14processCommandEv
+                0x0000000000001410      0x560 ./src/lib/Controller.o
+                0x0000000000001410                Controller::processCommand()
+ .text._ZN10Controller6updateEv
+                0x0000000000001970       0x96 ./src/lib/Controller.o
+                0x0000000000001970                Controller::update()
+ .text._ZN11FlexiTimer23setEmdPFvvE
+                0x0000000000001a06       0xd0 ./src/lib/FlexiTimer2.o
+                0x0000000000001a06                FlexiTimer2::set(unsigned long, double, void (*)())
+ .text._ZN11FlexiTimer25startEv
+                0x0000000000001ad6       0x2c ./src/lib/FlexiTimer2.o
+                0x0000000000001ad6                FlexiTimer2::start()
+ .text._ZN11FlexiTimer29_overflowEv
+                0x0000000000001b02       0x7e ./src/lib/FlexiTimer2.o
+                0x0000000000001b02                FlexiTimer2::_overflow()
+ .text.__vector_9
+                0x0000000000001b80       0x54 ./src/lib/FlexiTimer2.o
+                0x0000000000001b80                __vector_9
+ .text._ZN4GyroC1EP10CD74HC4067hhf
+                0x0000000000001bd4       0x28 ./src/lib/Gyro.o
+                0x0000000000001bd4                Gyro::Gyro(CD74HC4067*, unsigned char, unsigned char, float)
+ .text._ZN4Gyro8getValueEv
+                0x0000000000001bfc       0x6a ./src/lib/Gyro.o
+                0x0000000000001bfc                Gyro::getValue()
+ .text._ZN4Gyro9calibrateEjb
+                0x0000000000001c66      0x186 ./src/lib/Gyro.o
+                0x0000000000001c66                Gyro::calibrate(unsigned int, bool)
+ .text._ZN13NewSoftSerial4recvEv
+                0x0000000000001dec       0xd4 ./src/lib/NewSoftSerial.o
+                0x0000000000001dec                NewSoftSerial::recv()
+ .text._ZN13NewSoftSerial16handle_interruptEv
+                0x0000000000001ec0       0x12 ./src/lib/NewSoftSerial.o
+                0x0000000000001ec0                NewSoftSerial::handle_interrupt()
+ .text.__vector_3
+                0x0000000000001ed2       0x48 ./src/lib/NewSoftSerial.o
+                0x0000000000001ed2                __vector_3
+ .text.__vector_4
+                0x0000000000001f1a       0x48 ./src/lib/NewSoftSerial.o
+                0x0000000000001f1a                __vector_4
+ .text.__vector_5
+                0x0000000000001f62       0x48 ./src/lib/NewSoftSerial.o
+                0x0000000000001f62                __vector_5
+ .text._ZN12PowerMonitor10getCurrentEv
+                0x0000000000001faa       0x22 ./src/lib/PowerMonitor.o
+                0x0000000000001faa                PowerMonitor::getCurrent()
+ .text._ZN12PowerMonitor10getVoltageEv
+                0x0000000000001fcc       0x22 ./src/lib/PowerMonitor.o
+                0x0000000000001fcc                PowerMonitor::getVoltage()
+ .text._ZN12PowerMonitorC1Ehh
+                0x0000000000001fee       0x38 ./src/lib/PowerMonitor.o
+                0x0000000000001fee                PowerMonitor::PowerMonitor(unsigned char, unsigned char)
+ .text._Z9updateSpdv
+                0x0000000000002026       0xd2 ./src/Main.o
+                0x0000000000002026                updateSpd()
+ .text._Z11lEncHandlerv
+                0x00000000000020f8       0x58 ./src/Main.o
+                0x00000000000020f8                lEncHandler()
+ .text._Z11rEncHandlerv
+                0x0000000000002150       0x5e ./src/Main.o
+                0x0000000000002150                rEncHandler()
+ .text._GLOBAL__I_nexTime
+                0x00000000000021ae      0x102 ./src/Main.o
+ .text._Z9setSpeedsii
+                0x00000000000022b0      0x12a ./src/Main.o
+                0x00000000000022b0                setSpeeds(int, int)
+ .text.main     0x00000000000023da      0x508 ./src/Main.o
+                0x00000000000023da                main
+ .text.__vector_18
+                0x00000000000028e2       0x7a /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000000028e2                __vector_18
+ .text._ZN14HardwareSerial5beginEl
+                0x000000000000295c      0x1e2 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                0x000000000000295c                HardwareSerial::begin(long)
+ .text._ZN14HardwareSerial9availableEv
+                0x0000000000002b3e       0x28 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002b3e                HardwareSerial::available()
+ .text._ZN14HardwareSerial4peekEv
+                0x0000000000002b66       0x34 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002b66                HardwareSerial::peek()
+ .text._ZN14HardwareSerial4readEv
+                0x0000000000002b9a       0x50 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002b9a                HardwareSerial::read()
+ .text._ZN14HardwareSerial5flushEv
+                0x0000000000002bea       0x18 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002bea                HardwareSerial::flush()
+ .text._ZN14HardwareSerial5writeEh
+                0x0000000000002c02       0x26 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002c02                HardwareSerial::write(unsigned char)
+ .text._GLOBAL__I_rx_buffer
+                0x0000000000002c28       0x74 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+ .text._ZN5Print5writeEPKc
+                0x0000000000002c9c       0x30 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000002c9c                Print::write(char const*)
+ .text._ZN5Print5writeEPKhj
+                0x0000000000002ccc       0x3e /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000002ccc                Print::write(unsigned char const*, unsigned int)
+ .text._ZN5Print5printEPKc
+                0x0000000000002d0a       0x10 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000002d0a                Print::print(char const*)
+ .text._ZN5Print11printNumberEmh
+                0x0000000000002d1a      0x130 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000002d1a                Print::printNumber(unsigned long, unsigned char)
+ .text._ZN5Print5printEmi
+                0x0000000000002e4a       0x1e /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000002e4a                Print::print(unsigned long, int)
+ .text._ZN5Print5printEhi
+                0x0000000000002e68       0x24 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000002e68                Print::print(unsigned char, int)
+ .text._ZN5Print5printEli
+                0x0000000000002e8c       0x6c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000002e8c                Print::print(long, int)
+ .text._ZN5Print5printEii
+                0x0000000000002ef8       0x26 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000002ef8                Print::print(int, int)
+ .text._ZN5Print7printlnEv
+                0x0000000000002f1e       0x2e /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000002f1e                Print::println()
+ .text._ZN5Print7printlnEPKc
+                0x0000000000002f4c       0x16 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000002f4c                Print::println(char const*)
+ .text._ZN5Print10printFloatEdh
+                0x0000000000002f62      0x118 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000002f62                Print::printFloat(double, unsigned char)
+ .text._ZN5Print5printEdi
+                0x000000000000307a        0x6 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x000000000000307a                Print::print(double, int)
+ .text._ZN5Print7printlnEdi
+                0x0000000000003080       0x16 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                0x0000000000003080                Print::println(double, int)
+ .text.attachInterrupt
+                0x0000000000003096       0x46 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+                0x0000000000003096                attachInterrupt
+ .text.__vector_1
+                0x00000000000030dc       0x5a /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+                0x00000000000030dc                __vector_1
+ .text.__vector_2
+                0x0000000000003136       0x5a /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+                0x0000000000003136                __vector_2
+ .text._Z3maplllll
+                0x0000000000003190       0x92 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+                0x0000000000003190                map(long, long, long, long, long)
+ .text.__vector_16
+                0x0000000000003222       0x8a /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                0x0000000000003222                __vector_16
+ .text.millis   0x00000000000032ac       0x1c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                0x00000000000032ac                millis
+ .text.micros   0x00000000000032c8       0x50 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                0x00000000000032c8                micros
+ .text.delay    0x0000000000003318       0x4c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                0x0000000000003318                delay
+ .text.init     0x0000000000003364       0x76 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                0x0000000000003364                init
+ .text.analogRead
+                0x00000000000033da       0x44 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+                0x00000000000033da                analogRead
+ .text.pinMode  0x000000000000341e       0x4c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+                0x000000000000341e                pinMode
+ .text.digitalWrite
+                0x000000000000346a       0xa8 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+                0x000000000000346a                digitalWrite
+ .text._ZN5ServoC1Ev
+                0x0000000000003512       0x34 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                0x0000000000003512                Servo::Servo()
+ .text._ZN5Servo17writeMicrosecondsEi
+                0x0000000000003546       0x92 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                0x0000000000003546                Servo::writeMicroseconds(int)
+ .text._ZN5Servo16readMicrosecondsEv
+                0x00000000000035d8       0x3c /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                0x00000000000035d8                Servo::readMicroseconds()
+ .text._ZN5Servo4readEv
+                0x0000000000003614       0xaa /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                0x0000000000003614                Servo::read()
+ .text._ZN5Servo5writeEi
+                0x00000000000036be       0xd0 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                0x00000000000036be                Servo::write(int)
+ .text._ZN5Servo6attachEiii
+                0x000000000000378e       0xfe /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                0x000000000000378e                Servo::attach(int, int, int)
+ .text._ZN5Servo6attachEi
+                0x000000000000388c        0xe /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                0x000000000000388c                Servo::attach(int)
+ .text.__vector_11
+                0x000000000000389a      0x17a /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                0x000000000000389a                __vector_11
+ .text.libgcc   0x0000000000003a14       0x3e /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mulsi3.o)
+                0x0000000000003a14                __mulsi3
+ .text.libgcc   0x0000000000003a52       0x18 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodqi4.o)
+                0x0000000000003a52                __udivmodqi4
+ .text.libgcc   0x0000000000003a6a       0x28 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000003a6a                __udivmodhi4
+ .text.libgcc   0x0000000000003a92       0x26 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodhi4.o)
+                0x0000000000003a92                __divmodhi4
+                0x0000000000003a92                _div
+ .text.libgcc   0x0000000000003ab8       0x44 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000003ab8                __udivmodsi4
+ .text.libgcc   0x0000000000003afc       0x36 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000003afc                __divmodsi4
+ .text.libgcc   0x0000000000003b32       0x38 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+                0x0000000000003b32                __prologue_saves__
+ .text.libgcc   0x0000000000003b6a       0x36 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+                0x0000000000003b6a                __epilogue_restores__
+ .text.libgcc   0x0000000000003ba0        0xc /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_tablejump.o)
+                0x0000000000003ba0                __tablejump2__
+                0x0000000000003ba4                __tablejump__
+ .text.avr-libc
+                0x0000000000003bac       0x34 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strstr.o)
+                0x0000000000003bac                strstr
+                0x0000000000003be0                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000000000003be0        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+                0x0000000000003be0                exit
+                0x0000000000003be0                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000000000003be0        0x4 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000000000003be4                _etext = .
+
+.data           0x0000000000800100      0x1a4 load address 0x0000000000003be4
+                0x0000000000800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800100       0x66 ./src/lib/Controller.o
+ .data          0x0000000000800166        0x8 ./src/Main.o
+ .data          0x000000000080016e        0x2 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+ .data          0x0000000000800170        0x8 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
+                0x0000000000800170                __thenan_sf
+ .data          0x0000000000800178      0x100 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clz.o)
+                0x0000000000800178                __clz_tab
+ *(.data*)
+ .data.lPID     0x0000000000800278        0xc ./src/Main.o
+                0x0000000000800278                lPID
+ .data.rPID     0x0000000000800284        0xc ./src/Main.o
+                0x0000000000800284                rPID
+ .data.analog_reference
+                0x0000000000800290        0x1 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+                0x0000000000800290                analog_reference
+ *(.rodata)
+ *(.rodata*)
+ .rodata._ZTV14HardwareSerial
+                0x0000000000800291       0x12 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800291                vtable for HardwareSerial
+ *(.gnu.linkonce.d*)
+                0x00000000008002a4                . = ALIGN (0x2)
+ *fill*         0x00000000008002a3        0x1 00
+                0x00000000008002a4                _edata = .
+                0x00000000008002a4                PROVIDE (__data_end, .)
+
+.bss            0x00000000008002a4      0x1ad
+                0x00000000008002a4                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss._ZN11FlexiTimer210time_unitsE
+                0x00000000008002a4        0x4 ./src/lib/FlexiTimer2.o
+                0x00000000008002a4                FlexiTimer2::time_units
+ .bss._ZN11FlexiTimer24funcE
+                0x00000000008002a8        0x2 ./src/lib/FlexiTimer2.o
+                0x00000000008002a8                FlexiTimer2::func
+ .bss._ZN11FlexiTimer25countE
+                0x00000000008002aa        0x4 ./src/lib/FlexiTimer2.o
+                0x00000000008002aa                FlexiTimer2::count
+ .bss._ZN11FlexiTimer211overflowingE
+                0x00000000008002ae        0x1 ./src/lib/FlexiTimer2.o
+                0x00000000008002ae                FlexiTimer2::overflowing
+ .bss._ZN11FlexiTimer25tcnt2E
+                0x00000000008002af        0x2 ./src/lib/FlexiTimer2.o
+                0x00000000008002af                FlexiTimer2::tcnt2
+ .bss._ZN13NewSoftSerial13active_objectE
+                0x00000000008002b1        0x2 ./src/lib/NewSoftSerial.o
+                0x00000000008002b1                NewSoftSerial::active_object
+ .bss._ZN13NewSoftSerial15_receive_bufferE
+                0x00000000008002b3       0x40 ./src/lib/NewSoftSerial.o
+                0x00000000008002b3                NewSoftSerial::_receive_buffer
+ .bss._ZN13NewSoftSerial20_receive_buffer_tailE
+                0x00000000008002f3        0x1 ./src/lib/NewSoftSerial.o
+                0x00000000008002f3                NewSoftSerial::_receive_buffer_tail
+ .bss._ZN13NewSoftSerial20_receive_buffer_headE
+                0x00000000008002f4        0x1 ./src/lib/NewSoftSerial.o
+                0x00000000008002f4                NewSoftSerial::_receive_buffer_head
+ .bss.nexTime   0x00000000008002f5        0x4 ./src/Main.o
+                0x00000000008002f5                nexTime
+ .bss.cTime     0x00000000008002f9        0x4 ./src/Main.o
+                0x00000000008002f9                cTime
+ .bss.lSet      0x00000000008002fd        0x4 ./src/Main.o
+                0x00000000008002fd                lSet
+ .bss.rSet      0x0000000000800301        0x4 ./src/Main.o
+                0x0000000000800301                rSet
+ .bss.lMeasSpeed
+                0x0000000000800305        0x4 ./src/Main.o
+                0x0000000000800305                lMeasSpeed
+ .bss.rMeasSpeed
+                0x0000000000800309        0x4 ./src/Main.o
+                0x0000000000800309                rMeasSpeed
+ .bss.lacc      0x000000000080030d        0x4 ./src/Main.o
+                0x000000000080030d                lacc
+ .bss.racc      0x0000000000800311        0x4 ./src/Main.o
+                0x0000000000800311                racc
+ .bss.lprev     0x0000000000800315        0x4 ./src/Main.o
+                0x0000000000800315                lprev
+ .bss.rprev     0x0000000000800319        0x4 ./src/Main.o
+                0x0000000000800319                rprev
+ .bss.lout      0x000000000080031d        0x4 ./src/Main.o
+                0x000000000080031d                lout
+ .bss.rout      0x0000000000800321        0x4 ./src/Main.o
+                0x0000000000800321                rout
+ .bss.leftEncCount
+                0x0000000000800325        0x4 ./src/Main.o
+                0x0000000000800325                leftEncCount
+ .bss.rightEncCount
+                0x0000000000800329        0x4 ./src/Main.o
+                0x0000000000800329                rightEncCount
+ .bss.pleftEncCount
+                0x000000000080032d        0x4 ./src/Main.o
+                0x000000000080032d                pleftEncCount
+ .bss.prightEncCount
+                0x0000000000800331        0x4 ./src/Main.o
+                0x0000000000800331                prightEncCount
+ .bss.leftEncBSet
+                0x0000000000800335        0x1 ./src/Main.o
+                0x0000000000800335                leftEncBSet
+ .bss.rightEncBSet
+                0x0000000000800336        0x1 ./src/Main.o
+                0x0000000000800336                rightEncBSet
+ .bss.lspeed    0x0000000000800337        0x1 ./src/Main.o
+                0x0000000000800337                lspeed
+ .bss.rspeed    0x0000000000800338        0x1 ./src/Main.o
+                0x0000000000800338                rspeed
+ .bss.mux       0x0000000000800339        0x6 ./src/Main.o
+                0x0000000000800339                mux
+ .bss.batt      0x000000000080033f        0x2 ./src/Main.o
+                0x000000000080033f                batt
+ .bss.yawGyro   0x0000000000800341        0xd ./src/Main.o
+                0x0000000000800341                yawGyro
+ .bss.yawVal    0x000000000080034e        0x4 ./src/Main.o
+                0x000000000080034e                yawVal
+ .bss.yawRate   0x0000000000800352        0x4 ./src/Main.o
+                0x0000000000800352                yawRate
+ .bss.panServo  0x0000000000800356        0x3 ./src/Main.o
+                0x0000000000800356                panServo
+ .bss.tiltServo
+                0x0000000000800359        0x3 ./src/Main.o
+                0x0000000000800359                tiltServo
+ .bss.lMot      0x000000000080035c        0x3 ./src/Main.o
+                0x000000000080035c                lMot
+ .bss.rMot      0x000000000080035f        0x3 ./src/Main.o
+                0x000000000080035f                rMot
+ .bss.cmd       0x0000000000800362       0x25 ./src/Main.o
+                0x0000000000800362                cmd
+ .bss.rx_buffer
+                0x0000000000800387       0x84 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800387                rx_buffer
+ .bss.Serial    0x000000000080040b       0x13 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                0x000000000080040b                Serial
+ .bss.intFunc   0x000000000080041e        0x4 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+ .bss.timer0_overflow_count
+                0x0000000000800422        0x4 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                0x0000000000800422                timer0_overflow_count
+ .bss.timer0_millis
+                0x0000000000800426        0x4 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                0x0000000000800426                timer0_millis
+ .bss.timer0_fract
+                0x000000000080042a        0x1 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+ .bss.ServoCount
+                0x000000000080042b        0x1 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                0x000000000080042b                ServoCount
+ .bss._ZL6servos
+                0x000000000080042c       0x24 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+ .bss._ZL7Channel
+                0x0000000000800450        0x1 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+ *(COMMON)
+                0x0000000000800451                PROVIDE (__bss_end, .)
+                0x0000000000003be4                __data_load_start = LOADADDR (.data)
+                0x0000000000003d88                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000800451        0x0
+                0x0000000000800451                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0000000000800451                PROVIDE (__noinit_end, .)
+                0x0000000000800451                _end = .
+                0x0000000000800451                PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x0000000000000000     0x1260
+ *(.stab)
+ .stab          0x0000000000000000      0x6b4 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+ .stab          0x00000000000006b4      0x360 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+                                        0x6fc (size before relaxing)
+ .stab          0x0000000000000a14      0x12c /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+                                        0x33c (size before relaxing)
+ .stab          0x0000000000000b40       0x18 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(isspace.o)
+                                         0xa8 (size before relaxing)
+ .stab          0x0000000000000b58       0x18 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(tolower.o)
+                                         0xa8 (size before relaxing)
+ .stab          0x0000000000000b70       0x18 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(toupper.o)
+                                         0xa8 (size before relaxing)
+ .stab          0x0000000000000b88       0x9c /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcat.o)
+                                         0xa8 (size before relaxing)
+ .stab          0x0000000000000c24       0x9c /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strchr.o)
+                                         0xa8 (size before relaxing)
+ .stab          0x0000000000000cc0       0x84 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcmp.o)
+                                         0x90 (size before relaxing)
+ .stab          0x0000000000000d44       0x6c /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcpy.o)
+                                         0x78 (size before relaxing)
+ .stab          0x0000000000000db0       0xc0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncmp.o)
+                                         0xcc (size before relaxing)
+ .stab          0x0000000000000e70       0xcc /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncpy.o)
+                                         0xd8 (size before relaxing)
+ .stab          0x0000000000000f3c       0x9c /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrchr.o)
+                                         0xa8 (size before relaxing)
+ .stab          0x0000000000000fd8      0x150 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strstr.o)
+                                        0x15c (size before relaxing)
+ .stab          0x0000000000001128       0x18 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(itoa.o)
+                                        0x1bc (size before relaxing)
+ .stab          0x0000000000001140       0x18 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ltoa.o)
+                                        0x2a0 (size before relaxing)
+ .stab          0x0000000000001158       0x18 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ultoa.o)
+                                        0x1ec (size before relaxing)
+ .stab          0x0000000000001170       0x18 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(cty_isfalse.o)
+                                         0x6c (size before relaxing)
+ .stab          0x0000000000001188       0xd8 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrev.o)
+                                         0xe4 (size before relaxing)
+
+.stabstr        0x0000000000000000      0xbf8
+ *(.stabstr)
+ .stabstr       0x0000000000000000      0xbf8 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(ROS_b328.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+CD74HC4067::CD74HC4067(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) ./src/lib/CD74HC4067.o
+CD74HC4067::CD74HC4067(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) ./src/lib/CD74HC4067.o
+                                                  ./src/Main.o
+CD74HC4067::readADC(unsigned char)                ./src/lib/CD74HC4067.o
+                                                  ./src/lib/Gyro.o
+CD74HC4067::readDigital(unsigned char)            ./src/lib/CD74HC4067.o
+CD74HC4067::setMux(unsigned char)                 ./src/lib/CD74HC4067.o
+Controller::Controller(double*, double*, double*, double*, long*, long*, PowerMonitor*, double*, double*, Servo*, Servo*) ./src/lib/Controller.o
+Controller::Controller(double*, double*, double*, double*, long*, long*, PowerMonitor*, double*, double*, Servo*, Servo*) ./src/lib/Controller.o
+                                                  ./src/Main.o
+Controller::flush()                               ./src/lib/Controller.o
+Controller::nextByte(unsigned long)               ./src/lib/Controller.o
+Controller::printInfo()                           ./src/lib/Controller.o
+Controller::processCommand()                      ./src/lib/Controller.o
+Controller::update()                              ./src/lib/Controller.o
+                                                  ./src/Main.o
+FlexiTimer2::_overflow()                          ./src/lib/FlexiTimer2.o
+FlexiTimer2::count                                ./src/lib/FlexiTimer2.o
+FlexiTimer2::func                                 ./src/lib/FlexiTimer2.o
+FlexiTimer2::overflowing                          ./src/lib/FlexiTimer2.o
+FlexiTimer2::set(unsigned long, double, void (*)()) ./src/lib/FlexiTimer2.o
+                                                  ./src/Main.o
+FlexiTimer2::set(unsigned long, void (*)())       ./src/lib/FlexiTimer2.o
+FlexiTimer2::start()                              ./src/lib/FlexiTimer2.o
+                                                  ./src/Main.o
+FlexiTimer2::stop()                               ./src/lib/FlexiTimer2.o
+FlexiTimer2::tcnt2                                ./src/lib/FlexiTimer2.o
+FlexiTimer2::time_units                           ./src/lib/FlexiTimer2.o
+Gyro::Gyro(CD74HC4067*, unsigned char, unsigned char, float) ./src/lib/Gyro.o
+                                                  ./src/Main.o
+Gyro::Gyro(CD74HC4067*, unsigned char, unsigned char, float) ./src/lib/Gyro.o
+Gyro::Gyro(unsigned char, unsigned char, float)   ./src/lib/Gyro.o
+Gyro::Gyro(unsigned char, unsigned char, float)   ./src/lib/Gyro.o
+Gyro::calibrate(unsigned int, bool)               ./src/lib/Gyro.o
+                                                  ./src/Main.o
+Gyro::getValue()                                  ./src/lib/Gyro.o
+                                                  ./src/Main.o
+HardwareSerial::HardwareSerial(ring_buffer*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+HardwareSerial::HardwareSerial(ring_buffer*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+HardwareSerial::available()                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/lib/Controller.o
+HardwareSerial::begin(long)                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/Main.o
+HardwareSerial::end()                             /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+HardwareSerial::flush()                           /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+HardwareSerial::peek()                            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+HardwareSerial::read()                            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/lib/Controller.o
+HardwareSerial::write(unsigned char)              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+LEDDisplay::LEDDisplay(unsigned char)             ./src/lib/LEDDisplay.o
+LEDDisplay::LEDDisplay(unsigned char)             ./src/lib/LEDDisplay.o
+LEDDisplay::display(int, char)                    ./src/lib/LEDDisplay.o
+LEDDisplay::findNumDigits(int, int)               ./src/lib/LEDDisplay.o
+LEDDisplay::setDots(bool, bool, bool, bool, bool, bool) ./src/lib/LEDDisplay.o
+LineSensor::LineSensor(unsigned char, unsigned char) ./src/lib/LineSensor.o
+LineSensor::LineSensor(unsigned char, unsigned char) ./src/lib/LineSensor.o
+LineSensor::getLinePos()                          ./src/lib/LineSensor.o
+LineSensor::getSensorValues(unsigned int*)        ./src/lib/LineSensor.o
+LineSensor::nextByte(unsigned long)               ./src/lib/LineSensor.o
+LineSensor::setCalibrate(bool)                    ./src/lib/LineSensor.o
+MaxSonar::MaxSonar(unsigned char)                 ./src/lib/MaxSonar.o
+MaxSonar::MaxSonar(unsigned char)                 ./src/lib/MaxSonar.o
+MaxSonar::get_dist()                              ./src/lib/MaxSonar.o
+NewSoftSerial::NewSoftSerial(unsigned char, unsigned char, bool) ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/LineSensor.o
+                                                  ./src/lib/LEDDisplay.o
+NewSoftSerial::NewSoftSerial(unsigned char, unsigned char, bool) ./src/lib/NewSoftSerial.o
+NewSoftSerial::_receive_buffer                    ./src/lib/NewSoftSerial.o
+NewSoftSerial::_receive_buffer_head               ./src/lib/NewSoftSerial.o
+NewSoftSerial::_receive_buffer_tail               ./src/lib/NewSoftSerial.o
+NewSoftSerial::activate()                         ./src/lib/NewSoftSerial.o
+NewSoftSerial::active_object                      ./src/lib/NewSoftSerial.o
+NewSoftSerial::available()                        ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/LineSensor.o
+NewSoftSerial::begin(long)                        ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/LineSensor.o
+                                                  ./src/lib/LEDDisplay.o
+NewSoftSerial::enable_timer0(bool)                ./src/lib/NewSoftSerial.o
+NewSoftSerial::end()                              ./src/lib/NewSoftSerial.o
+NewSoftSerial::flush()                            ./src/lib/NewSoftSerial.o
+NewSoftSerial::handle_interrupt()                 ./src/lib/NewSoftSerial.o
+NewSoftSerial::read()                             ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/LineSensor.o
+NewSoftSerial::recv()                             ./src/lib/NewSoftSerial.o
+NewSoftSerial::rx_pin_read()                      ./src/lib/NewSoftSerial.o
+NewSoftSerial::setRX(unsigned char)               ./src/lib/NewSoftSerial.o
+NewSoftSerial::setTX(unsigned char)               ./src/lib/NewSoftSerial.o
+NewSoftSerial::tx_pin_write(unsigned char)        ./src/lib/NewSoftSerial.o
+NewSoftSerial::write(unsigned char)               ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/LineSensor.o
+                                                  ./src/lib/LEDDisplay.o
+NewSoftSerial::~NewSoftSerial()                   ./src/lib/NewSoftSerial.o
+NewSoftSerial::~NewSoftSerial()                   ./src/lib/NewSoftSerial.o
+Ping::Ping(unsigned char)                         ./src/lib/Ping.o
+Ping::Ping(unsigned char)                         ./src/lib/Ping.o
+Ping::getDistance()                               ./src/lib/Ping.o
+PowerMonitor::PowerMonitor(unsigned char, unsigned char) ./src/lib/PowerMonitor.o
+                                                  ./src/Main.o
+PowerMonitor::PowerMonitor(unsigned char, unsigned char) ./src/lib/PowerMonitor.o
+PowerMonitor::getCurrent()                        ./src/lib/PowerMonitor.o
+                                                  ./src/lib/Controller.o
+PowerMonitor::getVoltage()                        ./src/lib/PowerMonitor.o
+                                                  ./src/lib/Controller.o
+Print::print(String const&)                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::print(char const*)                         /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/LEDDisplay.o
+                                                  ./src/lib/Controller.o
+Print::print(char, int)                           /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/lib/LineSensor.o
+                                                  ./src/lib/LEDDisplay.o
+Print::print(double, int)                         /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/lib/Controller.o
+Print::print(int, int)                            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/LEDDisplay.o
+                                                  ./src/lib/Controller.o
+Print::print(long, int)                           /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::print(unsigned char, int)                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/LEDDisplay.o
+                                                  ./src/lib/Controller.o
+Print::print(unsigned int, int)                   /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::print(unsigned long, int)                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::printFloat(double, unsigned char)          /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::printNumber(unsigned long, unsigned char)  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::println()                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::println(String const&)                     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::println(char const*)                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/lib/Controller.o
+Print::println(char, int)                         /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::println(double, int)                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/lib/Controller.o
+Print::println(int, int)                          /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::println(long, int)                         /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::println(unsigned char, int)                /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::println(unsigned int, int)                 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::println(unsigned long, int)                /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+Print::write(char const*)                         /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/LineSensor.o
+                                                  ./src/lib/LEDDisplay.o
+Print::write(unsigned char const*, unsigned int)  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/LineSensor.o
+                                                  ./src/lib/LEDDisplay.o
+RC_CTRL::RC_CTRL(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) ./src/lib/RC_CTRL.o
+RC_CTRL::RC_CTRL(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) ./src/lib/RC_CTRL.o
+RC_CTRL::deadBandProcessor(signed char, unsigned char) ./src/lib/RC_CTRL.o
+RC_CTRL::getChannel(unsigned char)                ./src/lib/RC_CTRL.o
+RC_CTRL::getKnob()                                ./src/lib/RC_CTRL.o
+RC_CTRL::getThrottle(bool, unsigned char)         ./src/lib/RC_CTRL.o
+RC_CTRL::getYaw(bool, unsigned char)              ./src/lib/RC_CTRL.o
+RC_CTRL::readRC(unsigned char)                    ./src/lib/RC_CTRL.o
+RC_CTRL::update()                                 ./src/lib/RC_CTRL.o
+RoboClaw::RoboClaw(unsigned char, unsigned char, unsigned char) ./src/lib/RoboClaw.o
+RoboClaw::RoboClaw(unsigned char, unsigned char, unsigned char) ./src/lib/RoboClaw.o
+RoboClaw::advPtr()                                ./src/lib/RoboClaw.o
+RoboClaw::getEncLeft(long*)                       ./src/lib/RoboClaw.o
+RoboClaw::getEncRight(long*)                      ./src/lib/RoboClaw.o
+RoboClaw::getEncoderSpeedLeft(double*)            ./src/lib/RoboClaw.o
+RoboClaw::getEncoderSpeedRight(double*)           ./src/lib/RoboClaw.o
+RoboClaw::getMotorBatteryVoltage()                ./src/lib/RoboClaw.o
+RoboClaw::nextByte(unsigned long)                 ./src/lib/RoboClaw.o
+RoboClaw::reset()                                 ./src/lib/RoboClaw.o
+RoboClaw::setPID(long, long, long, long)          ./src/lib/RoboClaw.o
+RoboClaw::setSpeedDutyCycle(int, int)             ./src/lib/RoboClaw.o
+RoboClaw::setSpeedPID(double, double)             ./src/lib/RoboClaw.o
+RoboClaw::updateEnc(long*, long*)                 ./src/lib/RoboClaw.o
+RoboClaw::updateSpeed(double*, double*)           ./src/lib/RoboClaw.o
+RoboClaw::updateState(double*, double*, long*, long*) ./src/lib/RoboClaw.o
+Serial                                            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/Controller.o
+Servo::Servo()                                    /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+Servo::Servo()                                    /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  ./src/Main.o
+Servo::attach(int)                                /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  ./src/Main.o
+Servo::attach(int, int, int)                      /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+Servo::attached()                                 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+Servo::detach()                                   /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+Servo::read()                                     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  ./src/lib/Controller.o
+Servo::readMicroseconds()                         /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+Servo::write(int)                                 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/Controller.o
+Servo::writeMicroseconds(int)                     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  ./src/Main.o
+ServoCount                                        /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+Sharp_IR::Sharp_IR(unsigned char, unsigned char)  ./src/lib/Sharp_IR.o
+Sharp_IR::Sharp_IR(unsigned char, unsigned char)  ./src/lib/Sharp_IR.o
+Sharp_IR::get_dist()                              ./src/lib/Sharp_IR.o
+String::String(String const&)                     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(String const&)                     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(char const*)                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(char const*)                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(char)                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(char)                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(int, int)                          /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(int, int)                          /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(long, int)                         /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(long, int)                         /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(unsigned char)                     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(unsigned char)                     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(unsigned int, int)                 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(unsigned int, int)                 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(unsigned long, int)                /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::String(unsigned long, int)                /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::charAt(unsigned int) const                /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::compareTo(String const&) const            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::concat(String const&)                     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::endsWith(String const&) const             /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::equals(String const&) const               /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::equalsIgnoreCase(String const&) const     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::getBuffer(unsigned int)                   /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::getBytes(unsigned char*, unsigned int)    /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::indexOf(String const&) const              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::indexOf(String const&, unsigned int) const /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::indexOf(char) const                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::indexOf(char, unsigned int) const         /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::lastIndexOf(String const&) const          /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::lastIndexOf(String const&, unsigned int) const /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::lastIndexOf(char) const                   /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::lastIndexOf(char, unsigned int) const     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::operator!=(String const&) const           /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::operator+=(String const&)                 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::operator<(String const&) const            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::operator<=(String const&) const           /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::operator=(String const&)                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::operator==(String const&) const           /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::operator>(String const&) const            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::operator>=(String const&) const           /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::operator[](unsigned int)                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::operator[](unsigned int) const            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+String::replace(String const&, String const&)     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::replace(char, char)                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::setCharAt(unsigned int, char)             /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::startsWith(String const&) const           /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::startsWith(String const&, unsigned int) const /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::substring(unsigned int) const             /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::substring(unsigned int, unsigned int) const /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::toCharArray(char*, unsigned int)          /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::toLowerCase() const                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::toUpperCase() const                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::trim() const                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+String::~String()                                 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+TSL1401::TSL1401(unsigned char, unsigned char, unsigned char, unsigned int) ./src/lib/TSL1401.o
+TSL1401::TSL1401(unsigned char, unsigned char, unsigned char, unsigned int) ./src/lib/TSL1401.o
+TSL1401::flush()                                  ./src/lib/TSL1401.o
+TSL1401::getDataPointer()                         ./src/lib/TSL1401.o
+TSL1401::getDataSize()                            ./src/lib/TSL1401.o
+TSL1401::getLinePos(unsigned int, unsigned int)   ./src/lib/TSL1401.o
+TSL1401::prepFrame()                              ./src/lib/TSL1401.o
+TSL1401::resetSensor()                            ./src/lib/TSL1401.o
+TSL1401::setExpo(unsigned int)                    ./src/lib/TSL1401.o
+TSL1401::updateReadings()                         ./src/lib/TSL1401.o
+TSL1401::~TSL1401()                               ./src/lib/TSL1401.o
+TSL1401::~TSL1401()                               ./src/lib/TSL1401.o
+__addsf3                                          /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/Gyro.o
+__addsf3x                                         /home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_powser.o)
+__bad_interrupt                                   /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__brkval                                          /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+__bss_end                                         /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+__clz_tab                                         /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clz.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clzsi2.o)
+__clzsi2                                          /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clzsi2.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_usi_to_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_si_to_sf.o)
+__ctors_end                                       /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ctors.o)
+__ctors_start                                     /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ctors.o)
+__ctype_isfalse                                   /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(cty_isfalse.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(isspace.o)
+__ctype_istrue                                    /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(cty_isfalse.o)
+__cxa_pure_virtual                                /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(missing.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+__data_end                                        /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+__data_start                                      /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+__divmodhi4                                       /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodhi4.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/lib/Sharp_IR.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/LEDDisplay.o
+__divmodsi4                                       /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodsi4.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+__divsf3                                          /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_div_sf.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(inverse.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/Gyro.o
+__do_clear_bss                                    /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/FlexiTimer2.o
+__do_copy_data                                    /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clz.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/LineSensor.o
+                                                  ./src/lib/LEDDisplay.o
+                                                  ./src/lib/Controller.o
+__do_global_ctors                                 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ctors.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/Main.o
+__epilogue_restores__                             /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_usi_to_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_si_to_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_le_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_eq_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_div_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+__eqsf2                                           /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_eq_sf.o)
+                                                  ./src/Main.o
+__fixsfsi                                         /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/MaxSonar.o
+                                                  ./src/lib/FlexiTimer2.o
+                                                  ./src/lib/Controller.o
+__fixunssfsi                                      /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+__floatsisf                                       /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_si_to_sf.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/Sharp_IR.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/MaxSonar.o
+                                                  ./src/lib/Gyro.o
+                                                  ./src/lib/Controller.o
+__floatunsisf                                     /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_usi_to_sf.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/PowerMonitor.o
+                                                  ./src/lib/Gyro.o
+__flp                                             /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+__fp_inf                                          /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_inf.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(ldexp.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+__fp_mpack                                        /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_mpack.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(ldexp.o)
+__fp_mpack_finite                                 /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_mpack.o)
+__fp_nan                                          /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_nan.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o)
+__fp_powser                                       /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_powser.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+__fp_pscA                                         /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscA.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+__fp_pscB                                         /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_pscB.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+__fp_round                                        /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_round.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+__fp_split3                                       /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_split3.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+__fp_splitA                                       /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_split3.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(ldexp.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+__fp_szero                                        /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_zero.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(ldexp.o)
+__fp_zero                                         /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_zero.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(addsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+__fpcmp_parts_f                                   /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fpcmp_parts_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_le_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_eq_sf.o)
+__gesf2                                           /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+                                                  ./src/Main.o
+__gtsf2                                           /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                                                  ./src/Main.o
+__heap_end                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+__heap_start                                      /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+__init                                            /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__lesf2                                           /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_le_sf.o)
+                                                  ./src/Main.o
+__ltsf2                                           /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+__malloc_heap_end                                 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+__malloc_heap_start                               /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+__malloc_margin                                   /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+__mulsf3                                          /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/Sharp_IR.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/PowerMonitor.o
+                                                  ./src/lib/MaxSonar.o
+                                                  ./src/lib/Gyro.o
+                                                  ./src/lib/FlexiTimer2.o
+                                                  ./src/lib/Controller.o
+__mulsf3_pse                                      /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+__mulsf3x                                         /home/rbtying/workspace/Arduino-328/Debug/libm.a(mulsf3x.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(fp_powser.o)
+__mulsi3                                          /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mulsi3.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_pulse.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+__pack_f                                          /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_pack_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_usi_to_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_si_to_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_div_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+__prologue_saves__                                /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_usi_to_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_si_to_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_le_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_eq_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_div_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+__stack                                           /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__subsf3                                          /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(modf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/Gyro.o
+__tablejump2__                                    /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_tablejump.o)
+__tablejump__                                     /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_tablejump.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ctors.o)
+__thenan_sf                                       /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_div_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+__udivmodhi4                                      /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(itoa.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodhi4.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/Ping.o
+__udivmodqi4                                      /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodqi4.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+__udivmodsi4                                      /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodsi4.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ultoa.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ltoa.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodsi4.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_pulse.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/lib/TSL1401.o
+__unpack_f                                        /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_unpack_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_le_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_eq_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_div_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+__vector_1                                        /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_10                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_11                                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_12                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_13                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_14                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_15                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_16                                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_17                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_18                                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_19                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_2                                        /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_20                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_21                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_22                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_23                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_24                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_25                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_3                                        ./src/lib/NewSoftSerial.o
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_4                                        ./src/lib/NewSoftSerial.o
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_5                                        ./src/lib/NewSoftSerial.o
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_6                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_7                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_8                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_9                                        ./src/lib/FlexiTimer2.o
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_default                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vectors                                         /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+_div                                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_divmodhi4.o)
+_exit                                             /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+analogRead                                        /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+                                                  ./src/lib/TSL1401.o
+                                                  ./src/lib/Sharp_IR.o
+                                                  ./src/lib/PowerMonitor.o
+                                                  ./src/lib/MaxSonar.o
+                                                  ./src/lib/Gyro.o
+                                                  ./src/lib/CD74HC4067.o
+analogReference                                   /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+analogWrite                                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+analog_reference                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+attachInterrupt                                   /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+                                                  ./src/Main.o
+batt                                              ./src/Main.o
+cTime                                             ./src/Main.o
+cmd                                               ./src/Main.o
+delay                                             /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/Gyro.o
+delayMicroseconds                                 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                                                  ./src/lib/TSL1401.o
+                                                  ./src/lib/Ping.o
+detachInterrupt                                   /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WInterrupts.o)
+digitalRead                                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+                                                  ./src/lib/CD74HC4067.o
+digitalWrite                                      /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/TSL1401.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/PowerMonitor.o
+                                                  ./src/lib/Ping.o
+                                                  ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/Gyro.o
+                                                  ./src/lib/CD74HC4067.o
+digital_pin_to_bit_mask_PGM                       /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(pins_arduino.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_pulse.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+                                                  ./src/lib/NewSoftSerial.o
+digital_pin_to_port_PGM                           /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(pins_arduino.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_pulse.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+                                                  ./src/lib/NewSoftSerial.o
+digital_pin_to_timer_PGM                          /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(pins_arduino.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+exit                                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+exp                                               /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o)
+free                                              /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+                                                  ./src/lib/TSL1401.o
+init                                              /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                                                  ./src/Main.o
+inverse                                           /home/rbtying/workspace/Arduino-328/Debug/libm.a(inverse.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+isspace                                           /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(isspace.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+itoa                                              /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(itoa.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+lEncHandler()                                     ./src/Main.o
+lMeasSpeed                                        ./src/Main.o
+lMot                                              ./src/Main.o
+lPID                                              ./src/Main.o
+lSet                                              ./src/Main.o
+lacc                                              ./src/Main.o
+ldexp                                             /home/rbtying/workspace/Arduino-328/Debug/libm.a(ldexp.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+leftEncBSet                                       ./src/Main.o
+leftEncCount                                      ./src/Main.o
+log                                               /home/rbtying/workspace/Arduino-328/Debug/libm.a(log.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o)
+lout                                              ./src/Main.o
+lprev                                             ./src/Main.o
+lspeed                                            ./src/Main.o
+ltoa                                              /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ltoa.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+main                                              ./src/Main.o
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+makeWord(unsigned char, unsigned char)            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+makeWord(unsigned int)                            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+malloc                                            /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(malloc.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+map(long, long, long, long, long)                 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/TSL1401.o
+                                                  ./src/lib/RC_CTRL.o
+micros                                            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+millis                                            /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/LineSensor.o
+                                                  ./src/lib/Controller.o
+modf                                              /home/rbtying/workspace/Arduino-328/Debug/libm.a(modf.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libm.a(exp.o)
+motorTime                                         ./src/Main.o
+mux                                               ./src/Main.o
+nexTime                                           ./src/Main.o
+panServo                                          ./src/Main.o
+pinMode                                           /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Servo.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_analog.o)
+                                                  ./src/Main.o
+                                                  ./src/lib/TSL1401.o
+                                                  ./src/lib/Sharp_IR.o
+                                                  ./src/lib/RoboClaw.o
+                                                  ./src/lib/RC_CTRL.o
+                                                  ./src/lib/PowerMonitor.o
+                                                  ./src/lib/Ping.o
+                                                  ./src/lib/NewSoftSerial.o
+                                                  ./src/lib/LEDDisplay.o
+                                                  ./src/lib/Gyro.o
+                                                  ./src/lib/CD74HC4067.o
+pleftEncCount                                     ./src/Main.o
+port_to_input_PGM                                 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(pins_arduino.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_pulse.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+                                                  ./src/lib/NewSoftSerial.o
+port_to_mode_PGM                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(pins_arduino.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+port_to_output_PGM                                /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(pins_arduino.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_digital.o)
+                                                  ./src/lib/NewSoftSerial.o
+pow                                               /home/rbtying/workspace/Arduino-328/Debug/libm.a(pow.o)
+                                                  ./src/lib/Sharp_IR.o
+prightEncCount                                    ./src/Main.o
+pulseIn                                           /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring_pulse.o)
+                                                  ./src/lib/RC_CTRL.o
+                                                  ./src/lib/Ping.o
+rEncHandler()                                     ./src/Main.o
+rMeasSpeed                                        ./src/Main.o
+rMot                                              ./src/Main.o
+rPID                                              ./src/Main.o
+rSet                                              ./src/Main.o
+racc                                              ./src/Main.o
+random                                            /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+random(long)                                      /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+random(long, long)                                /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+randomSeed(unsigned int)                          /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+random_r                                          /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+rightEncBSet                                      ./src/Main.o
+rightEncCount                                     ./src/Main.o
+rout                                              ./src/Main.o
+rprev                                             ./src/Main.o
+rspeed                                            ./src/Main.o
+rx_buffer                                         /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+setSpeeds(int, int)                               ./src/Main.o
+srandom                                           /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(random.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WMath.o)
+strcat                                            /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcat.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+strchr                                            /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strchr.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+strcmp                                            /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcmp.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+strcpy                                            /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strcpy.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+strncmp                                           /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncmp.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+strncpy                                           /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strncpy.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+strrchr                                           /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrchr.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+strrev                                            /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strrev.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ultoa.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ltoa.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(itoa.o)
+strstr                                            /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(strstr.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+                                                  ./src/lib/Controller.o
+tiltServo                                         ./src/Main.o
+timer0_millis                                     /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+timer0_overflow_count                             /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(wiring.o)
+tolower                                           /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(tolower.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+toupper                                           /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(toupper.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+ultoa                                             /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a(ultoa.o)
+                                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(WString.o)
+updateSpd()                                       ./src/Main.o
+vtable for HardwareSerial                         /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+vtable for LEDDisplay                             ./src/lib/LEDDisplay.o
+vtable for LineSensor                             ./src/lib/LineSensor.o
+vtable for NewSoftSerial                          ./src/lib/NewSoftSerial.o
+vtable for Print                                  /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(Print.o)
+vtable for RoboClaw                               ./src/lib/RoboClaw.o
+vtable for Stream                                 /home/rbtying/workspace/Arduino-328/Debug/libArduino.a(HardwareSerial.o)
+yawGyro                                           ./src/Main.o
+yawRate                                           ./src/Main.o
+yawVal                                            ./src/Main.o

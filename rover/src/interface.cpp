@@ -39,34 +39,13 @@ int rover::interface::openSerialPort() {
 		return (-1);
 	}
 
-	char cmd[5];
-	cmd[0] = ':';
-	cmd[1] = 's';
-	cmd[2] = 's';
-	cmd[3] = '!';
-	cmd[4] = 0x01;
-
-	try {
-		m_port->write(cmd, 5);
-	} catch (cereal::Exception& e) {
-		return (-1);
-	}
-
 	return (0);
 }
 
 int rover::interface::closeSerialPort() {
 	this->drive(0.0, 0.0);
 
-	char cmd[5];
-	cmd[0] = ':';
-	cmd[1] = 's';
-	cmd[2] = 's';
-	cmd[3] = '!';
-	cmd[4] = 0x00;
-
 	try {
-		m_port->write(cmd, 5);
 		m_port->close();
 	} catch (cereal::Exception& e) {
 		return (-1);
@@ -94,20 +73,15 @@ int rover::interface::driveDirect(int left_speed, int right_speed) {
 	// ROS_INFO("Driving at [left: %i mm/s, right: %i mm/s]", left_speed_mm, right_speed_mm);
 
 	// Compose comand
-	char cmd_buffer[10];
-	cmd_buffer[0] = START_CHAR;
-	cmd_buffer[1] = 's';
-	cmd_buffer[2] = 'D';
-	cmd_buffer[3] = 'R';
-	cmd_buffer[4] = 'V';
-	cmd_buffer[5] = END_CHAR;
-	cmd_buffer[6] = (char) (left_speed_mm >> 8); // high byte
-	cmd_buffer[7] = (char) (left_speed_mm & 0xff); // low byte
-	cmd_buffer[8] = (char) (right_speed_mm >> 8); // high byte
-	cmd_buffer[9] = (char) (right_speed_mm & 0xff); // low byte
+	char cmd_buffer[5];
+    cmd_buffer[0] = CTRL_OP_SET_DRIVE;
+	cmd_buffer[1] = (char) (left_speed_mm >> 8); // high byte
+	cmd_buffer[2] = (char) (left_speed_mm & 0xff); // low byte
+	cmd_buffer[3] = (char) (right_speed_mm >> 8); // high byte
+	cmd_buffer[4] = (char) (right_speed_mm & 0xff); // low byte
 
 	try {
-		m_port->write(cmd_buffer, 10);
+		m_port->write(cmd_buffer, 5);
 	} catch (cereal::Exception& e) {
 		return (-1);
 	}
@@ -116,18 +90,13 @@ int rover::interface::driveDirect(int left_speed, int right_speed) {
 }
 
 int rover::interface::setMotorsRaw(int8_t left, int8_t right) {
-	char cmd_buffer[8];
-	cmd_buffer[0] = START_CHAR;
-	cmd_buffer[1] = 's';
-	cmd_buffer[2] = 'M';
-	cmd_buffer[3] = 'O';
-	cmd_buffer[4] = 'T';
-	cmd_buffer[5] = END_CHAR;
-	cmd_buffer[6] = (char) (left & 0xFF);
-	cmd_buffer[7] = (char) (right & 0xFF);
+	char cmd_buffer[3];
+	cmd_buffer[0] = CTRL_OP_SET_MOTOR;
+	cmd_buffer[1] = (char) (left & 0xFF);
+	cmd_buffer[2] = (char) (right & 0xFF);
 
 	try {
-		m_port->write(cmd_buffer, 8);
+		m_port->write(cmd_buffer, 3);
 	} catch (cereal::Exception& e) {
 		return (-1);
 	}
@@ -149,18 +118,13 @@ int rover::interface::setServos(double panAngle, double tiltAngle) {
 
 	// ROS_INFO("Setting servos to pan: %i degrees, tilt: %i degrees", panDeg, tiltDeg);
 
-	char cmd_buffer[8];
-	cmd_buffer[0] = START_CHAR;
-	cmd_buffer[1] = 's';
-	cmd_buffer[2] = 'S';
-	cmd_buffer[3] = 'E';
-	cmd_buffer[4] = 'R';
-	cmd_buffer[5] = END_CHAR;
-	cmd_buffer[6] = (char) (panDeg & 0xFF);
-	cmd_buffer[7] = (char) (tiltDeg & 0xFF);
+	char cmd_buffer[3];
+	cmd_buffer[0] = CTRL_OP_SET_SERVO;
+	cmd_buffer[1] = (char) (panDeg & 0xFF);
+	cmd_buffer[2] = (char) (tiltDeg & 0xFF);
 
 	try {
-		m_port->write(cmd_buffer, 8);
+		m_port->write(cmd_buffer, 3);
 	} catch (cereal::Exception& e) {
 		return (-1);
 	}
@@ -173,60 +137,104 @@ void rover::interface::processPacket(std::string * packet) {
 		data[i] = static_cast<uint8_t>(packet->at(i));
 	}
 
-	if (packet->size() == 27) {
-		ros::Time current_time = ros::Time::now();
-		double dt = (current_time - m_lastSensorUpdateTime).toSec();
+    ros::Time current_time = ros::Time::now();
+    double dt = (current_time - m_lastSensorUpdateTime).toSec();
 
-        uint32_t leftCount, rightCount;
-        uint16_t leftSpeed, rightSpeed, yawRate, yawVal;
-        int16_t voltage, current;
-        uint8_t sign, panAngle, tiltAngle;
-        int8_t leftOutSpeed, rightOutSpeed;
+    int16_t speed, rate, val, voltage, current;
+    int32_t count;
+    int8_t out;
+    uint8_t sign, angle;
 
-#define SIGN_LEFT_VEL (1 << 0)
-#define SIGN_RIGHT_VEL (1 << 1)
-#define SIGN_YAW_RATE (1 << 2)
-#define SIGN_YAW_VAL (1 << 3)
-#define SIGN_LEFT_ENC (1 << 4)
-#define SIGN_RIGHT_ENC (1 << 5)
-#define SIGN(x) ((sign & (x)) ? (1) : (-1))
+    switch(data[1]) {
+    case MSG_OP_LEFT_ENC:
+        if (packet->size() == 11) {
+            double dt = (current_time - m_lastLeftEncoderUpdateTime).toSec();
+            speed = data[2] << 8 | data[3];
+            count = data[4] << 24u | data[5] << 16u | data[6] << 8 | data[7];
+            out = data[8];
 
-        sign = data[1];
-        leftSpeed = data[2] << 8u | data[3];
-        rightSpeed = data[4] << 8u | data[5];
-        leftOutSpeed = data[6];
-        rightOutSpeed = data[7];
-        leftCount = data[8] << 24u | data[9] << 16u | data[10] << 8u | data[11];
-        rightCount = data[12] << 24u | data[13] << 16u | data[14] << 8u | data[15];
-        yawRate = data[16] << 8u | data[17];
-        yawVal = data[18] << 8u | data[19];
-        voltage = data[20] << 8u | data[21];
-        current = data[22] << 8u | data[23];
-        tiltAngle = data[24];
-        panAngle = data[25];
+            m_velocity_left = speed / 10000.0;
+            m_encoder_left = count;
+            m_lastLeftEncoderUpdateTime = current_time;
+            newLeftEncPacket = true;
+        } else {
+            ROS_ERROR("Left encoder packet failed");
+        }
+        break;
+    case MSG_OP_RIGHT_ENC:
+        if (packet->size() == 11) {
+            double dt = (current_time - m_lastRightEncoderUpdateTime).toSec();
+            speed = data[2] << 8 | data[3];
+            count = data[4] << 24u | data[5] << 16u | data[6] << 8 | data[7];
+            out = data[8];
 
-        m_left_raw = leftOutSpeed;
-        m_right_raw = rightOutSpeed;
+            m_velocity_right = speed / 10000.0;
+            m_encoder_right = count;
+            m_lastRightEncoderUpdateTime = current_time;
+            newRightEncPacket = true;
+        } else {
+            ROS_ERROR("Right encoder packet failed");
+        }
+        break;
+    case MSG_OP_YAW_GYRO:
+        if (packet->size() == 8) {
+            double dt = (current_time - m_lastYawGyroUpdateTime).toSec();
+            rate = data[2] << 8 | data[3];
+            val = data[4] << 8 | data[5];
 
-		m_velocity_left = leftSpeed / 10000.0 * SIGN(SIGN_LEFT_VEL);
-		m_velocity_right = rightSpeed / 10000.0 * SIGN(SIGN_RIGHT_VEL);
+            m_gyro_yawrate = rate / 1000.0 * m_gyro_correction;
+            m_gyro_yaw += m_gyro_yawrate * dt - m_gyro_offset;
+            m_lastYawGyroUpdateTime = current_time;
+        } else {
+            ROS_ERROR("Yaw gyro packet failed");
+        }
+        break;
+    case MSG_OP_CPU_BAT:
+        if (packet->size() == 8) {
+            voltage = data[2] << 8 | data[3];
+            current = data[4] << 8 | data[5];
 
-        m_encoder_left = leftCount * SIGN(SIGN_LEFT_ENC);
-        m_encoder_right = rightCount * SIGN(SIGN_RIGHT_ENC);
+            m_battery_voltage = voltage / 100.0;
+            m_battery_current = current / 100.0;
+        } else {
+            ROS_ERROR("CPU battery packet failed");
+        }
+        break;
+    case MSG_OP_MOTOR_BAT:
+        if (packet->size() == 8) {
+            voltage = data[2] << 8 | data[3];
+            current = data[4] << 8 | data[5];
 
-        m_gyro_yawrate = yawRate / 1000.0 * m_gyro_correction * SIGN(SIGN_YAW_RATE);
-        m_gyro_yaw += m_gyro_yawrate * dt - m_gyro_offset;
-		
-		m_battery_voltage = voltage / 100.0;
-		m_battery_current = current / 100.0;
-
-		m_pan_angle = panAngle * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
-		m_tilt_angle = tiltAngle * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
-	
-		this->calculateOdometry(dt);
-		m_lastSensorUpdateTime = current_time;
-		newPacket = true;
-	}
+            m_motor_voltage = voltage / 100.0;
+            m_motor_current = current / 100.0;
+        } else {
+            ROS_ERROR("Motor battery packet failed");
+        }
+        break;
+    case MSG_OP_PAN_SERVO:
+        if (packet->size() == 5) {
+            angle = data[2];
+            m_pan_angle = angle * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+        } else {
+            ROS_ERROR("Pan servo packet failed");
+        }
+        break;
+    case MSG_OP_TILT_SERVO:
+        if (packet->size() == 5) {
+            angle = data[2];
+            m_tilt_angle = angle * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+        } else {
+            ROS_ERROR("Tilt servo packet failed");
+        }
+        break;
+    }
+    
+    if (newLeftEncPacket && newRightEncPacket) {
+        this->calculateOdometry(dt);
+        newLeftEncPacket = false;
+        newRightEncPacket = false;
+    }
+    newPacket = true;
 }
 
 int rover::interface::getSensorPackets(int timeout) {
@@ -251,21 +259,15 @@ void rover::interface::setConversionFactors(double left, double right) {
     int16_t left_conv = left * 10000;
     int16_t right_conv = right * 10000;
 
-    char msg[11];
-    msg[0] = ':';
-    msg[1] = 's';
-    msg[2] = 'C';
-    msg[3] = 'O';
-    msg[4] = 'N';
-    msg[5] = 'V';
-    msg[6] = '!';
-    msg[7] = left_conv >> 8;
-    msg[8] = left_conv & 0xff;
-    msg[9] = right_conv >> 8;
-    msg[10] = right_conv & 0xff;
+    char msg[5];
+    msg[0] = CTRL_OP_SET_CONV;
+    msg[1] = left_conv >> 8;
+    msg[2] = left_conv & 0xff;
+    msg[3] = right_conv >> 8;
+    msg[4] = right_conv & 0xff;
 
     try {
-        m_port->write(msg, 11);
+        m_port->write(msg, 5);
     } catch (cereal::Exception& e) {
 
     }
@@ -280,34 +282,23 @@ void rover::interface::setPID(double lP, double lI, double lD, double rP, double
 	int16_t rit = (int16_t) (rI * 100);
 	int16_t rdt = (int16_t) (rD * 100);
 
-	char msg[18];
-	msg[0] = ':';
-	msg[1] = 's';
-	msg[2] = 'P';
-	msg[3] = 'I';
-	msg[4] = 'D';
-	msg[5] = '!';
-
-	msg[6] = lpt >> 8;
-	msg[7] = lpt & 0xff;
-
-	msg[8] = lit >> 8;
-	msg[9] = lit & 0xff;
-
-	msg[10] = ldt >> 8;
-	msg[11] = ldt & 0xff;
-
-	msg[12] = rpt >> 8;
-	msg[13] = rpt & 0xff;
-
-	msg[14] = rit >> 8;
-	msg[15] = rit & 0xff;
-
-	msg[16] = rdt >> 8;
-	msg[17] = rdt & 0xff;
+	char msg[13];
+    msg[0] = CTRL_OP_SET_PID;
+	msg[1] = lpt >> 8;
+	msg[2] = lpt & 0xff;
+	msg[3] = lit >> 8;
+	msg[4] = lit & 0xff;
+	msg[5] = ldt >> 8;
+	msg[6] = ldt & 0xff;
+	msg[7] = rpt >> 8;
+	msg[8] = rpt & 0xff;
+	msg[9] = rit >> 8;
+	msg[10] = rit & 0xff;
+	msg[11] = rdt >> 8;
+	msg[12] = rdt & 0xff;
 
 	try {
-		m_port->write(msg, 18);
+		m_port->write(msg, 13);
 	} catch (cereal::Exception& e) {
 		
 	}

@@ -1,0 +1,13 @@
+/*
+ * ServoMotor.cpp
+ *
+ *  Created on: Sep 5, 2011
+ *      Author: rbtying
+ */
+
+#include "ServoMotor.h"
+
+ServoMotor::ServoMotor() {
+	// TODO Auto-generated constructor stub
+
+}

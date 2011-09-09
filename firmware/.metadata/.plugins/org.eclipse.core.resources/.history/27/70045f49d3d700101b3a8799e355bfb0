@@ -1,0 +1,19 @@
+/*
+ * ServoMotor.h
+ *
+ *  Created on: Sep 5, 2011
+ *      Author: rbtying
+ */
+
+#ifndef SERVOMOTOR_H_
+#define SERVOMOTOR_H_
+
+#include "DualMotor.h"
+
+class ServoMotor: DualMotor {
+public:
+	ServoMotor();
+	void setSpeed(motor_data * m);
+};
+
+#endif /* SERVOMOTOR_H_ */

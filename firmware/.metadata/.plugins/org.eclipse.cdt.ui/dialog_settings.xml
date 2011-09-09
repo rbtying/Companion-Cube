@@ -3,6 +3,24 @@
 	<item value="Default C++ header template" key="LastUsedHeaderTemplate"/>
 	<section name="completion_proposal_size">
 	</section>
+	<section name="org.eclipse.cdt.internal.ui.wizards.classwizard.NewBaseClassSelectionDialogSettings">
+		<item value="true" key="show_structs"/>
+		<item value="false" key="show_lowlevel"/>
+		<item value="false" key="show_macros"/>
+		<item value="false" key="show_variables"/>
+		<item value="420" key="width"/>
+		<item value="false" key="show_functions"/>
+		<item value="false" key="show_enums"/>
+		<item value="721" key="height"/>
+		<item value="true" key="show_classes"/>
+		<item value="false" key="show_typedefs"/>
+		<item value="false" key="show_namespaces"/>
+		<item value="false" key="show_unions"/>
+		<item value="185" key="y"/>
+		<item value="735" key="x"/>
+	</section>
+	<section name="PDOMSearchPage">
+	</section>
 	<section name="CRenameRefactoringInputPage">
 		<item value="false" key="preprocessor"/>
 		<item value="3" key="scope"/>
