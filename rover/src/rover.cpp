@@ -97,7 +97,8 @@ int main(int argc, char** argv) {
 	ros::Publisher enc_pub = n.advertise<rover::Encoder> ("/encoders", 50);
 	ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu> ("/imu/raw", 50);
     ros::Publisher imu_bias_pub = n.advertise<sensor_msgs::Imu> ("/imu/data", 50);
-	ros::Publisher batt_pub = n.advertise<rover::Battery> ("/battery", 50);
+	ros::Publisher batt_pub = n.advertise<rover::Battery> ("/battery_cpu", 50);
+    ros::Publisher motor_batt_pub = n.advertise<rover::Battery> ("/battery_mot", 50);
 	ros::Publisher joint_pub = n.advertise<sensor_msgs::JointState> ("/joint_states", 1);
 	ros::Publisher pan_pub = n.advertise<std_msgs::Float64> ("/pan/cur_angle", 1);
 	ros::Publisher tilt_pub = n.advertise<std_msgs::Float64> ("/tilt/cur_angle", 1);
@@ -230,7 +231,22 @@ int main(int argc, char** argv) {
 			batt_pub.publish(batt_msg);
 
             if (bot->m_battery_voltage < batt_threshold) {
-                ROS_ERROR("Battery voltage low: %.02f volts", bot->m_battery_voltage);
+                ROS_ERROR("Battery voltage low: %.02f volts, %.02f amps"
+                        , bot->m_battery_voltage, bot->m_battery_current);
+            }
+
+            // prepare another battery state message
+            rover::Battery mbatt_msg;
+            mbatt_msg.header.stamp = current_time;
+            mbatt_msg.header.frame_id = "base_footprint";
+            mbatt_msg.voltage = bot->m_motor_voltage;
+            mbatt_msg.current = bot->m_motor_current;
+
+			motor_batt_pub.publish(mbatt_msg);
+
+            if (bot->m_motor_voltage < mbatt_threshold) {
+                ROS_ERROR("Motor battery voltage low: %.02f volts, %.02f amps"
+                        , bot->m_motor_voltage, bot->m_motor_current);
             }
 
 			// prepare an encoder message

@@ -402,6 +402,31 @@ Discarded input sections
                 0x0000000000000000       0x14 ./src/Controller.o
  .text          0x0000000000000000        0x0 ./src/Main.o
  .bss           0x0000000000000000        0x0 ./src/Main.o
+ .text          0x0000000000000000        0x0 ./src/OpcodeController.o
+ .data          0x0000000000000000       0x2e ./src/OpcodeController.o
+ .bss           0x0000000000000000        0x0 ./src/OpcodeController.o
+ .text._ZN16OpcodeControllerC2EP12control_dataP14HardwareSerial
+                0x0000000000000000       0x1a ./src/OpcodeController.o
+ .text._ZN16OpcodeControllerC1EP12control_dataP14HardwareSerial
+                0x0000000000000000       0x1a ./src/OpcodeController.o
+ .text._ZN16OpcodeController8checksumEhPhh
+                0x0000000000000000       0x36 ./src/OpcodeController.o
+ .text._ZN16OpcodeController8nextByteEm
+                0x0000000000000000       0x9e ./src/OpcodeController.o
+ .text._ZN16OpcodeController11sendMessageEhPhh
+                0x0000000000000000      0x102 ./src/OpcodeController.o
+ .text._ZN16OpcodeController16sendServoMessageEhh
+                0x0000000000000000       0x20 ./src/OpcodeController.o
+ .text._ZN16OpcodeController18sendBatteryMessageEhP7Battery
+                0x0000000000000000       0x9c ./src/OpcodeController.o
+ .text._ZN16OpcodeController15sendGyroMessageEhP9gyro_data
+                0x0000000000000000       0xa4 ./src/OpcodeController.o
+ .text._ZN16OpcodeController18sendEncoderMessageEhP12encoder_datah
+                0x0000000000000000       0xb2 ./src/OpcodeController.o
+ .text._ZN16OpcodeController14sendDataPacketEv
+                0x0000000000000000       0x9c ./src/OpcodeController.o
+ .text._ZN16OpcodeController6updateEv
+                0x0000000000000000      0x61a ./src/OpcodeController.o
  .text          0x0000000000000000        0x0 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
  .data          0x0000000000000000        0x0 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
  .bss           0x0000000000000000        0x0 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
@@ -910,6 +935,7 @@ LOAD ./src/lib/devices/CD74HC4067.o
 LOAD ./src/lib/devices/LCD.o
 LOAD ./src/Controller.o
 LOAD ./src/Main.o
+LOAD ./src/OpcodeController.o
 LOAD /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a
 LOAD /usr/lib/gcc/avr/4.3.5/avr6/libgcc.a
 LOAD /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr6/libm.a
@@ -1816,9 +1842,11 @@ Battery::Battery(CD74HC4067*, unsigned char, unsigned char) ./src/lib/sensors/Ba
 Battery::Battery(unsigned char, unsigned char)    ./src/lib/sensors/Battery.o
 Battery::Battery(unsigned char, unsigned char)    ./src/lib/sensors/Battery.o
 Battery::getCurrent()                             ./src/lib/sensors/Battery.o
+                                                  ./src/OpcodeController.o
                                                   ./src/Main.o
                                                   ./src/Controller.o
 Battery::getVoltage()                             ./src/lib/sensors/Battery.o
+                                                  ./src/OpcodeController.o
                                                   ./src/Main.o
                                                   ./src/Controller.o
 Battery::set(CD74HC4067*, unsigned char, unsigned char) ./src/lib/sensors/Battery.o
@@ -1914,6 +1942,7 @@ LCD::scrollDisplayLeft()                          ./src/lib/devices/LCD.o
 LCD::scrollDisplayRight()                         ./src/lib/devices/LCD.o
 LCD::send(unsigned char, unsigned char)           ./src/lib/devices/LCD.o
 LCD::setCursor(unsigned char, unsigned char)      ./src/lib/devices/LCD.o
+                                                  ./src/OpcodeController.o
                                                   ./src/Main.o
                                                   ./src/Controller.o
 LCD::write(unsigned char)                         ./src/lib/devices/LCD.o
@@ -1921,6 +1950,17 @@ LCD::write4bits(unsigned char)                    ./src/lib/devices/LCD.o
 MaxSonar::MaxSonar(unsigned char)                 ./src/lib/sensors/rangefinders/MaxSonar.o
 MaxSonar::MaxSonar(unsigned char)                 ./src/lib/sensors/rangefinders/MaxSonar.o
 MaxSonar::get_dist()                              ./src/lib/sensors/rangefinders/MaxSonar.o
+OpcodeController::OpcodeController(control_data*, HardwareSerial*) ./src/OpcodeController.o
+OpcodeController::OpcodeController(control_data*, HardwareSerial*) ./src/OpcodeController.o
+OpcodeController::checksum(unsigned char, unsigned char*, unsigned char) ./src/OpcodeController.o
+OpcodeController::nextByte(unsigned long)         ./src/OpcodeController.o
+OpcodeController::sendBatteryMessage(unsigned char, Battery*) ./src/OpcodeController.o
+OpcodeController::sendDataPacket()                ./src/OpcodeController.o
+OpcodeController::sendEncoderMessage(unsigned char, encoder_data*, unsigned char) ./src/OpcodeController.o
+OpcodeController::sendGyroMessage(unsigned char, gyro_data*) ./src/OpcodeController.o
+OpcodeController::sendMessage(unsigned char, unsigned char*, unsigned char) ./src/OpcodeController.o
+OpcodeController::sendServoMessage(unsigned char, unsigned char) ./src/OpcodeController.o
+OpcodeController::update()                        ./src/OpcodeController.o
 PID::PID(PID_params*)                             ./src/lib/utilities/PID.o
 PID::PID(PID_params*)                             ./src/lib/utilities/PID.o
                                                   ./src/Main.o
@@ -1936,10 +1976,12 @@ Ping::Ping(unsigned char)                         ./src/lib/sensors/rangefinders
 Ping::get_dist()                                  ./src/lib/sensors/rangefinders/Ping.o
 Print::print(String const&)                       /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
 Print::print(char const*)                         /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                                                  ./src/OpcodeController.o
                                                   ./src/Main.o
                                                   ./src/Controller.o
 Print::print(char, int)                           /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
 Print::print(double, int)                         /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                                                  ./src/OpcodeController.o
                                                   ./src/Controller.o
 Print::print(int, int)                            /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
 Print::print(long, int)                           /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
@@ -2016,10 +2058,12 @@ Servo::attach(int, int, int)                      /home/rbtying/robot/firmware/A
 Servo::attached()                                 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
 Servo::detach()                                   /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
 Servo::read()                                     /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                                                  ./src/OpcodeController.o
                                                   ./src/Main.o
                                                   ./src/Controller.o
 Servo::readMicroseconds()                         /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
 Servo::write(int)                                 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                                                  ./src/OpcodeController.o
                                                   ./src/Main.o
                                                   ./src/Controller.o
 Servo::writeMicroseconds(int)                     /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
@@ -2161,6 +2205,7 @@ __do_copy_data                                    /usr/lib/gcc/avr/4.3.5/../../.
                                                   /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WString.o)
                                                   /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
                                                   /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                                                  ./src/OpcodeController.o
                                                   ./src/Main.o
                                                   ./src/Controller.o
                                                   ./src/lib/devices/LCD.o
@@ -2189,6 +2234,7 @@ __eqsf2                                           /usr/lib/gcc/avr/4.3.5/avr6/li
 __fixsfsi                                         /usr/lib/gcc/avr/4.3.5/avr6/libgcc.a(_sf_to_si.o)
                                                   /usr/lib/gcc/avr/4.3.5/avr6/libgcc.a(_fixunssfsi.o)
                                                   /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                                                  ./src/OpcodeController.o
                                                   ./src/Main.o
                                                   ./src/Controller.o
                                                   ./src/lib/utilities/FlexiTimer2.o
@@ -2199,6 +2245,7 @@ __fixunssfsi                                      /usr/lib/gcc/avr/4.3.5/avr6/li
 __floatsisf                                       /usr/lib/gcc/avr/4.3.5/avr6/libgcc.a(_si_to_sf.o)
                                                   /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr6/libm.a(log.o)
                                                   /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                                                  ./src/OpcodeController.o
                                                   ./src/Main.o
                                                   ./src/Controller.o
                                                   ./src/lib/sensors/Gyro.o
@@ -2281,6 +2328,7 @@ __malloc_margin                                   /usr/lib/gcc/avr/4.3.5/../../.
 __mulsf3                                          /usr/lib/gcc/avr/4.3.5/avr6/libgcc.a(_mul_sf.o)
                                                   /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr6/libm.a(pow.o)
                                                   /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                                                  ./src/OpcodeController.o
                                                   ./src/Main.o
                                                   ./src/Controller.o
                                                   ./src/lib/motors/Sabertooth.o
@@ -2525,6 +2573,7 @@ map(long, long, long, long, long)                 /home/rbtying/robot/firmware/A
 micros                                            /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
                                                   ./src/Main.o
 millis                                            /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                                                  ./src/OpcodeController.o
                                                   ./src/Main.o
                                                   ./src/Controller.o
 modf                                              /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr6/libm.a(modf.o)

@@ -2,6 +2,7 @@
 #define INTERFACE_H_
 
 #include <ros/ros.h>
+#include "control_opcodes.h"
 #include "cereal_port/CerealPort.h"
 #include "util.h"
 
@@ -48,9 +49,13 @@ public:
 	double m_velocity_yaw;
 	double m_gyro_yawrate;
 	double m_gyro_offset;
+
 	double m_battery_voltage;
 	double m_battery_current;
-	double m_velocity_left, m_velocity_right;
+    double m_motor_voltage;
+    double m_motor_current;
+	
+    double m_velocity_left, m_velocity_right;
     long m_encoder_left, m_encoder_right;
 
     int8_t m_left_raw;
@@ -64,9 +69,13 @@ public:
     double m_gyro_correction;
 
 	bool newPacket;
+    bool newLeftEncPacket;
+    bool newRightEncPacket;
 private:
 	long m_last_enc_left, m_last_enc_right;
-	ros::Time m_lastSensorUpdateTime;
+    ros::Time m_lastLeftEncoderUpdateTime;
+    ros::Time m_lastRightEncoderUpdateTime;
+    ros::time m_lastYawGyroUpdateTime;
 	std::string m_port_name;
 	cereal::CerealPort * m_port;
 	void calculateOdometry(double dt);
