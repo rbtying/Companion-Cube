@@ -13,9 +13,6 @@
 
 #define QPPS_TO_M_S 9.78134873e-6
 
-#define START_CHAR ':'
-#define END_CHAR '!'
-
 namespace rover {
 class interface {
 public:
