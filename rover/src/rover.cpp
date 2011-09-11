@@ -231,16 +231,21 @@ int main(int argc, char** argv) {
 			imu_msg.header.frame_id = "base_footprint";
 			
 			imu_msg.orientation = imu_quat;
+            imu_msg.orientation_covariance[0] = 1e6;
+            imu_msg.orientation_covariance[4] = 1e6;
+            imu_msg.orientation_covariance[8] = 1e-6;
 
 			imu_msg.angular_velocity.x = 0.0;
 			imu_msg.angular_velocity.y = 0.0;
 			imu_msg.angular_velocity.z = bot->m_gyro_yawrate;
-
-			imu_msg.linear_acceleration_covariance[0] = -1; // no accelerometers, so just set covariance to -1
-
+            imu_msg.angular_velocity_covariance[0] = 1e6;
+            imu_msg.angular_velocity_covariance[4] = 1e6;
+            imu_msg.angular_velocity_covariance[8] = 1e-6;
+                
 			imu_msg.linear_acceleration.x = 0.0;
 			imu_msg.linear_acceleration.y = 0.0;
 			imu_msg.linear_acceleration.z = 0.0;
+			imu_msg.linear_acceleration_covariance[0] = -1; // no accelerometers, so just set covariance to -1
 
 			// send the message
 			imu_pub.publish(imu_msg);
