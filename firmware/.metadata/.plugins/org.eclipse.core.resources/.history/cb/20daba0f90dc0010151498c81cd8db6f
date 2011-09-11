@@ -210,32 +210,19 @@ void OpcodeController::sendServoMessage(uint8_t op, uint8_t angle) {
 	sendMessage(op, buf, 1);
 }
 
-void OpcodeController::sendServosMessage(uint8_t op, uint8_t angle1,
-		uint8_t angle2) {
-	uint8_t buf[2];
-	buf[0] = angle1;
-	buf[1] = angle2;
-	sendMessage(op, buf, 2);
-}
-
 /**
  * Send a full data packet
  */
 void OpcodeController::sendDataPacket() {
-	//	sendEncoderMessage(MSG_OP_LEFT_ENC, &(m_ctrl->leftEnc),
-	//			(uint8_t) (m_ctrl->mot.leftSpeed & 0xff));
-	//	sendEncoderMessage(MSG_OP_RIGHT_ENC, &(m_ctrl->rightEnc),
-	//			(uint8_t) (m_ctrl->mot.rightSpeed & 0xff));
-	sendEncodersMessage(MSG_OP_BOTH_ENC, &(m_ctrl->leftEnc),
-			&(m_ctrl->rightEnc), (uint8_t) (m_ctrl->mot.leftSpeed & 0xff),
+	sendEncoderMessage(MSG_OP_LEFT_ENC, &(m_ctrl->leftEnc),
+			(uint8_t) (m_ctrl->mot.leftSpeed & 0xff));
+	sendEncoderMessage(MSG_OP_RIGHT_ENC, &(m_ctrl->rightEnc),
 			(uint8_t) (m_ctrl->mot.rightSpeed & 0xff));
 	sendGyroMessage(MSG_OP_YAW_GYRO, &(m_ctrl->yaw));
 	sendBatteryMessage(MSG_OP_CPU_BAT, &(m_ctrl->cpu_batt));
 	sendBatteryMessage(MSG_OP_MOTOR_BAT, &(m_ctrl->mot_batt));
-	sendServosMessage(MSG_OP_BOTH_SERVO, m_ctrl->pan.read(),
-			m_ctrl->tilt.read());
-	//	sendServoMessage(MSG_OP_PAN_SERVO, m_ctrl->pan.read());
-	//	sendServoMessage(MSG_OP_TILT_SERVO, m_ctrl->tilt.read());
+	sendServoMessage(MSG_OP_PAN_SERVO, m_ctrl->pan.read());
+	sendServoMessage(MSG_OP_TILT_SERVO, m_ctrl->tilt.read());
 }
 
 /**

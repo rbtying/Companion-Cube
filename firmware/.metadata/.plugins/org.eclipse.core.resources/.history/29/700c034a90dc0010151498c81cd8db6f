@@ -228,12 +228,10 @@ void OpcodeController::sendDataPacket() {
 	//			(uint8_t) (m_ctrl->mot.rightSpeed & 0xff));
 	sendEncodersMessage(MSG_OP_BOTH_ENC, &(m_ctrl->leftEnc),
 			&(m_ctrl->rightEnc), (uint8_t) (m_ctrl->mot.leftSpeed & 0xff),
-			(uint8_t) (m_ctrl->mot.rightSpeed & 0xff));
+			(uint8_t) (ctrl->mot.rightSpeed & 0xff));
 	sendGyroMessage(MSG_OP_YAW_GYRO, &(m_ctrl->yaw));
 	sendBatteryMessage(MSG_OP_CPU_BAT, &(m_ctrl->cpu_batt));
 	sendBatteryMessage(MSG_OP_MOTOR_BAT, &(m_ctrl->mot_batt));
-	sendServosMessage(MSG_OP_BOTH_SERVO, m_ctrl->pan.read(),
-			m_ctrl->tilt.read());
 	//	sendServoMessage(MSG_OP_PAN_SERVO, m_ctrl->pan.read());
 	//	sendServoMessage(MSG_OP_TILT_SERVO, m_ctrl->tilt.read());
 }

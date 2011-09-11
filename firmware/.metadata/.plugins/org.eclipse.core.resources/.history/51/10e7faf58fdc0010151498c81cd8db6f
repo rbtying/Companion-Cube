@@ -150,32 +150,6 @@ void OpcodeController::sendEncoderMessage(uint8_t op, encoder_data * d,
 	sendMessage(op, buf, 7);
 }
 
-void OpcodeController::sendEncodersMessage(uint8_t op, encoder_data * d1,
-		encoder_data * d2, uint8_t out1, uint8_t out2) {
-	uint8_t buf[14];
-	int16_t speed1 = d1->velocity * 100;
-	int32_t count1 = d1->count;
-	int16_t speed2 = d2->velocity * 100;
-	int32_t count2 = d2->count;
-
-	buf[0] = speed1 >> 8u;
-	buf[1] = speed1 & 0xff;
-	buf[2] = count1 >> 24u;
-	buf[3] = count1 >> 16u;
-	buf[4] = count1 >> 8u;
-	buf[5] = count1 & 0xff;
-	buf[6] = out1 & 0xff;
-	buf[7] = speed2 >> 8u;
-	buf[8] = speed2 & 0xff;
-	buf[9] = count2 >> 24u;
-	buf[10] = count2 >> 16u;
-	buf[11] = count2 >> 8u;
-	buf[12] = count2 & 0xff;
-	buf[13] = out2 & 0xff;
-
-	sendMessage(op, buf, 14);
-}
-
 void OpcodeController::sendGyroMessage(uint8_t op, gyro_data * d) {
 	uint8_t buf[4];
 
@@ -210,32 +184,19 @@ void OpcodeController::sendServoMessage(uint8_t op, uint8_t angle) {
 	sendMessage(op, buf, 1);
 }
 
-void OpcodeController::sendServosMessage(uint8_t op, uint8_t angle1,
-		uint8_t angle2) {
-	uint8_t buf[2];
-	buf[0] = angle1;
-	buf[1] = angle2;
-	sendMessage(op, buf, 2);
-}
-
 /**
  * Send a full data packet
  */
 void OpcodeController::sendDataPacket() {
-	//	sendEncoderMessage(MSG_OP_LEFT_ENC, &(m_ctrl->leftEnc),
-	//			(uint8_t) (m_ctrl->mot.leftSpeed & 0xff));
-	//	sendEncoderMessage(MSG_OP_RIGHT_ENC, &(m_ctrl->rightEnc),
-	//			(uint8_t) (m_ctrl->mot.rightSpeed & 0xff));
-	sendEncodersMessage(MSG_OP_BOTH_ENC, &(m_ctrl->leftEnc),
-			&(m_ctrl->rightEnc), (uint8_t) (m_ctrl->mot.leftSpeed & 0xff),
+	sendEncoderMessage(MSG_OP_LEFT_ENC, &(m_ctrl->leftEnc),
+			(uint8_t) (m_ctrl->mot.leftSpeed & 0xff));
+	sendEncoderMessage(MSG_OP_RIGHT_ENC, &(m_ctrl->rightEnc),
 			(uint8_t) (m_ctrl->mot.rightSpeed & 0xff));
 	sendGyroMessage(MSG_OP_YAW_GYRO, &(m_ctrl->yaw));
 	sendBatteryMessage(MSG_OP_CPU_BAT, &(m_ctrl->cpu_batt));
 	sendBatteryMessage(MSG_OP_MOTOR_BAT, &(m_ctrl->mot_batt));
-	sendServosMessage(MSG_OP_BOTH_SERVO, m_ctrl->pan.read(),
-			m_ctrl->tilt.read());
-	//	sendServoMessage(MSG_OP_PAN_SERVO, m_ctrl->pan.read());
-	//	sendServoMessage(MSG_OP_TILT_SERVO, m_ctrl->tilt.read());
+	sendServoMessage(MSG_OP_PAN_SERVO, m_ctrl->pan.read());
+	sendServoMessage(MSG_OP_TILT_SERVO, m_ctrl->tilt.read());
 }
 
 /**

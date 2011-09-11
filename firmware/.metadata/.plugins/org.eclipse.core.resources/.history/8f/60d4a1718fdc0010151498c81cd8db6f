@@ -25,7 +25,5 @@
 #define MSG_OP_MOTOR_BAT 0x05
 #define MSG_OP_PAN_SERVO 0x06
 #define MSG_OP_TILT_SERVO 0x07
-#define MSG_OP_BOTH_ENC 0x08
-#define MSG_OP_BOTH_SERVO 0x09
 
 #endif /* CONTROL_OPCODES_H_ */

@@ -33,11 +33,9 @@ private:
 	void sendDataPacket();
 	void sendMessage(uint8_t op, uint8_t * contents, uint8_t length);
 	void sendEncoderMessage(uint8_t op, encoder_data * d, uint8_t out);
-	void sendEncodersMessage(uint8_t op, encoder_data * d1, encoder_data * d2, uint8_t out1, uint8_t out2);
 	void sendGyroMessage(uint8_t op, gyro_data * d);
 	void sendBatteryMessage(uint8_t op, Battery * b);
 	void sendServoMessage(uint8_t op, uint8_t angle);
-	void sendServosMessage(uint8_t op, uint8_t angle1, uint8_t angle2);
 	uint8_t checksum(uint8_t op, uint8_t * contents, uint8_t length);
 	char nextByte(unsigned long timeout);
 };
