@@ -103,6 +103,10 @@ int main() {
 
 	lcd.begin(LCD_COLS, LCD_LINES);
 	lcd.clear();
+	lcd.setCursor(0, 0);
+	lcd.print("Companion Cube");
+	lcd.setCursor(0, 1);
+	lcd.print("Deactivated");
 
 	ctrl.lcd = &lcd;
 
