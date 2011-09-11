@@ -73,8 +73,8 @@
 // ======= END BATT =============
 
 // ======= START GYRO ===========
-#define YAW_GYRO 0
-#define YAW_REF 1
+#define YAW_GYRO 14
+#define YAW_REF 15
 // ======= END GYRO =============
 
 // ======= START LED ============

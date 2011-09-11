@@ -4006,8 +4006,8 @@ Disassembly of section .text:
     2168:	88 e7       	ldi	r24, 0x78	; 120
     216a:	94 e0       	ldi	r25, 0x04	; 4
     216c:	b3 01       	movw	r22, r6
-    216e:	4e e0       	ldi	r20, 0x0E	; 14
-    2170:	2f e0       	ldi	r18, 0x0F	; 15
+    216e:	40 e0       	ldi	r20, 0x00	; 0
+    2170:	21 e0       	ldi	r18, 0x01	; 1
     2172:	0f 2e       	mov	r0, r31
     2174:	f8 e5       	ldi	r31, 0x58	; 88
     2176:	ef 2e       	mov	r14, r31

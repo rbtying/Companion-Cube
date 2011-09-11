@@ -4,10 +4,10 @@
  *  Created on: September 4th, 2011
  *      Author: rbtying
  */
-#include "WProgram.h"
+#include <WProgram.h>
 #include "pins.h"
 #include "control_struct.h"
-#include "Controller.h"
+#include "OpcodeController.h"
 #include "sensors/Gyro.h"
 #include "sensors/Battery.h"
 #include "utilities/fastIO.h"
@@ -45,7 +45,7 @@ Gyro yawGyro(&mux, YAW_GYRO, YAW_REF, LPR510_CONVERSION_FACTOR);
 // Motors
 Sabertooth m(SBT_ADDRESS, &Serial3);
 
-Controller cmd(&ctrl);
+OpcodeController cmd(&ctrl, &Serial);
 
 /**
  * Encoder handlers
@@ -69,24 +69,20 @@ void rEncHandler() {
 }
 
 void printLCD() {
-	char buf[2][20];
-	sprintf(buf[0], "L: %.02f cm/s R: %.02f cm/s P: %i T: %i          ",
-			ctrl.leftEnc.velocity, ctrl.rightEnc.velocity, ctrl.pan.read(),
-			ctrl.tilt.read());
-	sprintf(buf[1], "BAT0: %.02fV, %.02fA BAT1: %.02fV, %.02fA  ",
-			(double) ctrl.cpu_batt.getVoltage(),
-			(double) ctrl.cpu_batt.getCurrent(),
-			(double) ctrl.mot_batt.getVoltage(),
-			(double) ctrl.mot_batt.getCurrent());
-
-	// null-terminate the strings
-	buf[0][16] = '\0';
-	buf[1][16] = '\0';
-
-	lcd.setCursor(0, 0);
-	lcd.print(buf[0]);
 	lcd.setCursor(0, 1);
-	lcd.print(buf[1]);
+	lcd.print(ctrl.yaw.rate, 2);
+	lcd.setCursor(0, 2);
+	lcd.print(ctrl.leftEnc.velocity, 1);
+	lcd.print("cm/s | ");
+	lcd.print(ctrl.rightEnc.velocity, 1);
+	lcd.print("cm/s     ");
+	lcd.setCursor(0, 3);
+	lcd.print(ctrl.cpu_batt.getVoltage(), 0);
+	lcd.print("V | ");
+	lcd.print(ctrl.mot_batt.getVoltage(), 0);
+	lcd.print("V ");
+	lcd.print(ctrl.mot_batt.getCurrent(), 1);
+	lcd.print("A    ");
 }
 
 /**
@@ -107,19 +103,23 @@ int main() {
 	ctrl.tilt.write(90);
 	ctrl.tilt.attach(TILTSERVO);
 
-	lcd.begin(20, 4);
+	lcd.begin(LCD_COLS, LCD_LINES);
 	lcd.clear();
+	lcd.setCursor(0, 0);
+	lcd.print("Companion Cube");
+	lcd.setCursor(0, 1);
+	lcd.print("Deactivated");
 
 	ctrl.lcd = &lcd;
 
 	// PID
-	ctrl.leftPID.proportional = 0.3;
-	ctrl.leftPID.integral = 0.05;
+	ctrl.leftPID.proportional = 0.6;
+	ctrl.leftPID.integral = 0.1;
 	ctrl.leftPID.derivative = 0;
 	ctrl.leftPID.accLimit = 127;
 
-	ctrl.rightPID.proportional = 0.3;
-	ctrl.rightPID.integral = 0.05;
+	ctrl.rightPID.proportional = 0.6;
+	ctrl.rightPID.integral = 0.1;
 	ctrl.rightPID.derivative = 0;
 	ctrl.rightPID.accLimit = 127;
 
@@ -127,7 +127,7 @@ int main() {
 	ctrl.rightEnc.cmPerCount = QP_TO_CM_RIGHT;
 
 	// Motors
-	ctrl.mot.leftFwd = true;
+	ctrl.mot.leftFwd = false;
 	ctrl.mot.rightFwd = false;
 
 	// setup encoders
@@ -165,8 +165,8 @@ int main() {
 			yawGyro.update(&ctrl.yaw, dt);
 
 			// correct for zero drift
-			if (abs(ctrl.yaw.rate) <= 0.001 && ctrl.leftPID.set == 0
-					&& ctrl.rightPID.set == 0) {// bot is not moving
+			if (abs(ctrl.yaw.rate) <= 0.001 && ctrl.leftEnc.velocity== 0
+					&& ctrl.rightEnc.velocity == 0) {// bot is not moving
 				yawGyro.calibrate(1000, true); // update calibration
 			}
 
