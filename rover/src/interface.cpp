@@ -181,6 +181,7 @@ void rover::interface::processPacket(std::string * packet) {
             m_gyro_yawrate = rate / 1000.0 * m_gyro_correction;
             m_gyro_yaw += m_gyro_yawrate * dt - m_gyro_offset;
             m_lastYawGyroUpdateTime = current_time;
+            ROS_DEBUG("Gyro dt: %.04f rate: %.02f val: %.02f", dt, m_gyro_yawrate, m_gyro_yaw);
         } else {
             ROS_WARN("Yaw gyro length incorrect");
         }
@@ -227,6 +228,7 @@ void rover::interface::processPacket(std::string * packet) {
     
     if (newLeftEncPacket && newRightEncPacket) {
         double dt = (current_time - m_lastEncoderUpdateTime).toSec();
+        ROS_DEBUG("encoder dt: %.04f", dt);
         this->calculateOdometry(dt);
         newLeftEncPacket = false;
         newRightEncPacket = false;
