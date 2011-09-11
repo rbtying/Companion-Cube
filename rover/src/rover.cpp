@@ -150,7 +150,7 @@ int main(int argc, char** argv) {
     bot->setConversionFactors(le, re);
     bot->setMotorsRaw(left_initial, right_initial);
 
-    unsigned long count;
+    unsigned long count = 0;
 
     std::string firstLine = "Companion Cube";
     bot->setLCD(firstLine, 0);

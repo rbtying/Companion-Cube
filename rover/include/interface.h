@@ -71,6 +71,7 @@ public:
 	bool newPacket;
     bool newLeftEncPacket;
     bool newRightEncPacket;
+    bool newEncPacket;
 private:
 	long m_last_enc_left, m_last_enc_right;
     ros::Time m_lastEncoderUpdateTime;

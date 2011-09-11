@@ -146,14 +146,38 @@ void rover::interface::processPacket(std::string * packet) {
     uint8_t angle;
 
     switch(data[1]) {
-    case MSG_OP_LEFT_ENC:
-        if (packet->size() == 11) {
-            speed = data[2] << 8 | data[3];
-            count = data[4] << 24u | data[5] << 16u | data[6] << 8 | data[7];
+    case MSG_OP_BOTH_ENC:
+        if (packet->size() == 18) {
+            speed = data[2] << 8u | data[3];
+            count = data[4] << 24u | data[5] << 16u | data[6] << 8u | data[7];
             out = data[8];
 
             m_velocity_left = speed / 10000.0;
             m_encoder_left = count;
+            m_left_raw = out;
+
+            speed = data[9] << 8u | data[10];
+            count = data[11] << 24u | data[12] << 16u | data[13] << 8u | data[14];
+            out = data[9];
+
+            m_velocity_right = speed / 10000.0;
+            m_encoder_right = count;
+            m_right_raw = out;
+
+            newEncPacket = true;
+        } else {
+            ROS_WARN("Encoder packet length incorrect");
+        }
+        break;
+    case MSG_OP_LEFT_ENC:
+        if (packet->size() == 11) {
+            speed = data[2] << 8u | data[3];
+            count = data[4] << 24u | data[5] << 16u | data[6] << 8u | data[7];
+            out = data[8];
+
+            m_velocity_left = speed / 10000.0;
+            m_encoder_left = count;
+            m_left_raw = out;
             newLeftEncPacket = true;
         } else {
             ROS_WARN("Left encoder length incorrect");
@@ -161,12 +185,13 @@ void rover::interface::processPacket(std::string * packet) {
         break;
     case MSG_OP_RIGHT_ENC:
         if (packet->size() == 11) {
-            speed = data[2] << 8 | data[3];
-            count = data[4] << 24u | data[5] << 16u | data[6] << 8 | data[7];
+            speed = data[2] << 8u | data[3];
+            count = data[4] << 24u | data[5] << 16u | data[6] << 8u | data[7];
             out = data[8];
 
             m_velocity_right = speed / 10000.0;
             m_encoder_right = count;
+            m_right_raw = out;
             newRightEncPacket = true;
         } else {
             ROS_WARN("Right encoder length incorrect");
@@ -208,6 +233,17 @@ void rover::interface::processPacket(std::string * packet) {
             ROS_WARN("Motor battery length incorrect");
         }
         break;
+    case MSG_OP_BOTH_SERVO:
+        if (packet->size() == 6) {
+            angle = data[2];
+            m_pan_angle = angle * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+
+            angle = data[3];
+            m_tilt_angle = angle * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
+        } else {
+            ROS_WARN("Servo packet length incorrect");
+        }
+        break;
     case MSG_OP_PAN_SERVO:
         if (packet->size() == 5) {
             angle = data[2];
@@ -226,12 +262,14 @@ void rover::interface::processPacket(std::string * packet) {
         break;
     }
     
-    if (newLeftEncPacket && newRightEncPacket) {
+    if ((newLeftEncPacket && newRightEncPacket) || newEncPacket) {
         double dt = (current_time - m_lastEncoderUpdateTime).toSec();
         ROS_DEBUG("encoder dt: %.04f", dt);
         this->calculateOdometry(dt);
         newLeftEncPacket = false;
         newRightEncPacket = false;
+        newEncPacket = false;
+        m_lastEncoderUpdateTime = current_time;
     }
     newPacket = true;
 }
