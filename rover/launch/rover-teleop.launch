@@ -3,14 +3,14 @@
     <include file="$(find rover)/launch/rover-base.launch" />
 
     <!-- PS3 controller node -->
-    <node respawn="true" pkg="ps3joy" type="ps3_joy_node" name="PS3_joy" >
+    <node respawn="true" pkg="joy" type="joy_node" name="PS3_joy" >
         <param name="dev" type="string" value="/dev/input/js0" />
         <param name="deadzone" value="0.25" />
     </node>
 
     <!-- ps3 teleoperation -->
-    <param name="speed" type="double" value="0.25" />
-    <param name="angular_speed" type="double" value="1.25" />
+    <param name="speed" type="double" value="0.6" />
+    <param name="angular_speed" type="double" value="2.5" />
     <param name="kinect_default_angle" type="double" value="0.0" />
     <node pkg="rover" type="rover_teleop_joy" name="teleop" />
 </launch>
