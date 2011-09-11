@@ -104,8 +104,7 @@ void OpcodeController::update() {
 	comm = (millis() - m_lastUpdateTime) <= CMD_TIMEOUT;
 }
 
-void OpcodeController::sendMessage(uint8_t op, uint8_t * contents,
-		uint8_t length) {
+void OpcodeController::sendMessage(uint8_t op, uint8_t * contents, uint8_t length) {
 	uint8_t msg[length + 4]; // checksum byte + op + leading + ending
 	msg[0] = '<';
 	msg[1] = op;
@@ -114,17 +113,14 @@ void OpcodeController::sendMessage(uint8_t op, uint8_t * contents,
 			msg[2 + i] = contents[i];
 		} else {
 			msg[2 + i] = '=';
-			contents[i] = '=';
 		}
 	}
-	uint8_t chk = checksum(op, contents, length);
-	msg[length + 2] = (chk == '>' || chk == '<') ? '=' : chk;
+	msg[length + 2] = checksum(op, contents, length);
 	msg[length + 3] = '>';
 	m_hws->write(msg, length + 4);
 }
 
-uint8_t OpcodeController::checksum(uint8_t op, uint8_t * contents,
-		uint8_t length) {
+uint8_t OpcodeController::checksum(uint8_t op, uint8_t * contents, uint8_t length) {
 	uint32_t temp = op;
 	for (uint8_t i = 0; i < length; i++) {
 		temp += contents[i];
@@ -132,8 +128,7 @@ uint8_t OpcodeController::checksum(uint8_t op, uint8_t * contents,
 	return temp & 0b01111111;
 }
 
-void OpcodeController::sendEncoderMessage(uint8_t op, encoder_data * d,
-		uint8_t out) {
+void OpcodeController::sendEncoderMessage(uint8_t op, encoder_data * d, uint8_t out) {
 	uint8_t buf[7];
 
 	int16_t speed = d->velocity * 100;
