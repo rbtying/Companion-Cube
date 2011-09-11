@@ -140,6 +140,7 @@ CMakeFiles/rover_node.dir/src/rover.o: /opt/ros/electric/stacks/ros_comm/clients
 CMakeFiles/rover_node.dir/src/rover.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/include/std_msgs/header_deprecated_def.h
 CMakeFiles/rover_node.dir/src/rover.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/Float64.h
 CMakeFiles/rover_node.dir/src/rover.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/Header.h
+CMakeFiles/rover_node.dir/src/rover.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/String.h
 CMakeFiles/rover_node.dir/src/rover.o: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/include/ros/assert.h
 CMakeFiles/rover_node.dir/src/rover.o: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/include/ros/console.h
 CMakeFiles/rover_node.dir/src/rover.o: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/include/ros/static_assert.h

@@ -5,6 +5,7 @@
 #include <sensor_msgs/Imu.h>			// imu
 #include <sensor_msgs/JointState.h>		// joints
 #include <std_msgs/Float64.h>			// floats
+#include <std_msgs/String.h>            // strings
 #include <rover/Battery.h>			// battery
 #include <rover/Encoder.h>			// encoders
 #include "interface.h"
@@ -46,6 +47,14 @@ void recvPanServoAngle(const std_msgs::Float64::ConstPtr& panAngle) {
 
 void cmdVelReceived(const geometry_msgs::Twist::ConstPtr& cmd_vel) {
 	bot->drive(cmd_vel->linear.x, cmd_vel->angular.z);
+}
+
+void recvLine2(const std_msgs::String::ConstPtr& str) {
+    bot->setLCD(str->data, 0);
+}
+
+void recvLine1(const std_msgs::String::ConstPtr& str) {
+    bot->setLCD(str->data, 1);
 }
 
 int main(int argc, char** argv) {
@@ -116,6 +125,10 @@ int main(int argc, char** argv) {
 			"/pan/angle", 1, recvPanServoAngle);
 	ros::Subscriber tilt_servo_sub = n.subscribe<std_msgs::Float64> (
 			"/tilt/angle", 1, recvTiltServoAngle);
+    ros::Subscriber lcd_line_1_sub = n.subscribe<std_msgs::String> (
+            "/lcd/line1", 1, recvLine1);
+    ros::Subscriber lcd_line_2_sub = n.subscribe<std_msgs::String> (
+            "/lcd/line2", 1, recvLine2);
 
 	// open serial port
 	if (bot->openSerialPort() == 0) {
@@ -137,9 +150,21 @@ int main(int argc, char** argv) {
     bot->setConversionFactors(le, re);
     bot->setMotorsRaw(left_initial, right_initial);
 
+    unsigned long count;
+
+    std::string firstLine = "Companion Cube";
+    bot->setLCD(firstLine, 0);
+
 	// main processing loop
 	while (n.ok()) {
 		current_time = ros::Time::now();
+        if ((current_time - last_time).toSec() > 1) {
+            char beat[] = {'\\', '|', '/', '-'};
+            std::string str = "Heartbeat: ";
+            str.append(1, beat[++count % 4]);
+            bot->setLCD(str, 1);
+            last_time = current_time;
+        }
 
 		if (bot->newPacket) {
 			bot->newPacket = false;

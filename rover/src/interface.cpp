@@ -252,6 +252,23 @@ int rover::interface::getSensorPackets(int timeout) {
 	return 0;
 }
 
+void rover::interface::setLCD(std::string text, int lineNum) {
+    char msg[22];
+    msg[0] = CTRL_OP_SET_LCD;
+    msg[1] = (uint8_t) lineNum;
+    if (text.length() < 20) {
+        text.append(20 - text.length(), ' ');
+    }
+    for (int i = 0; i < 20; i++) {
+        msg[i + 2] = text[i];
+    }
+    try {
+        m_port->write(msg, 22);
+    } catch (cereal::Exception& e) {
+
+    }
+}
+
 void rover::interface::setConversionFactors(double left, double right) {
     int16_t left_conv = left * 10000;
     int16_t right_conv = right * 10000;
