@@ -1,3 +1,3 @@
 #!/bin/bash
-
-avrdude -pm328p -carduino -P/dev/ttyRoverFTDI -b57600 -Uflash:w:ROS_mini/Debug/ROS_mini.hex:a
+stty -F /dev/ttyRoverFTDI hupcl
+avrdude -pm2560 -cstk500v2 -P/dev/ttyRoverFTDI -b115200 -Uflash:w:ROS_mega/Debug/ROS_mega.hex:a

@@ -25,21 +25,22 @@
 // ======= START LCD ============
 #define LCD_LINES 4
 #define LCD_COLS 20
-#define LCD_RS 30
-#define LCD_RW 31
-#define LCD_EN 32
-#define LCD_D4 33
-#define LCD_D5 34
-#define LCD_D6 35
-#define LCD_D7 36
+#define LCD_V0 30
+#define LCD_RS 31
+#define LCD_RW 32
+#define LCD_EN 33
+#define LCD_D4 34
+#define LCD_D5 35
+#define LCD_D6 36
+#define LCD_D7 37
 // ======= END LCD ==============
 
 // ======= START ENCODERS =======
 // encoder pins
 #define LENC_A 2
-#define LENC_B 7
+#define LENC_B 25
 #define RENC_A 3
-#define RENC_B 8
+#define RENC_B 24
 // encoder interrupts
 #define LENC_INT 0
 #define RENC_INT 1
@@ -52,8 +53,8 @@
 // ======= END MOTORS ===========
 
 // ======= START SERVOS =========
-#define PANSERVO 24
-#define TILTSERVO 25
+#define PANSERVO 22
+#define TILTSERVO 23
 // ======= END SERVOS ===========
 
 // ======= START MUX ============
@@ -65,10 +66,10 @@
 // ======= END MUX ==============
 
 // ======= START BATT ===========
-#define VOLTAGE_SENS 15
-#define CURRENT_SENS 14
-#define MOTOR_VOLTAGE_SENS 13
-#define MOTOR_CURRENT_SENS 12
+#define VOLTAGE_SENS 13
+#define CURRENT_SENS 12
+#define MOTOR_VOLTAGE_SENS 15
+#define MOTOR_CURRENT_SENS 14
 // ======= END BATT =============
 
 // ======= START GYRO ===========
@@ -77,7 +78,7 @@
 // ======= END GYRO =============
 
 // ======= START LED ============
-#define LED 23
+#define LED 5
 // ======= END LED ==============
 
 #endif /* PINS_H_ */

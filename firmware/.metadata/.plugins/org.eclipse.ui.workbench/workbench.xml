@@ -41,17 +41,17 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="OpcodeController.h" partName="OpcodeController.h" path="/home/rbtying/robot/firmware/ROS_mega/src/OpcodeController.h" title="OpcodeController.h" tooltip="ROS_mega/src/OpcodeController.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/OpcodeController.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="695" selectionTopPixel="209"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/Main.cc" title="Main.cc" tooltip="ROS_mega/src/Main.cc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/Main.cc"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="934" selectionTopPixel="600"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="control_opcodes.h" partName="control_opcodes.h" path="/home/rbtying/robot/firmware/ROS_mega/src/control_opcodes.h" title="control_opcodes.h" tooltip="ROS_mega/src/control_opcodes.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/control_opcodes.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="423" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" partName="pins.h" path="/home/rbtying/robot/firmware/ROS_mega/src/pins.h" title="pins.h" tooltip="ROS_mega/src/pins.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/pins.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1057" selectionTopPixel="719"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="OpcodeController.cc" partName="OpcodeController.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/OpcodeController.cc" title="OpcodeController.cc" tooltip="ROS_mega/src/OpcodeController.cc" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/OpcodeController.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="271" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Sabertooth.cc" partName="Sabertooth.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/lib/motors/Sabertooth.cc" title="Sabertooth.cc" tooltip="ROS_mega/src/lib/motors/Sabertooth.cc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/lib/motors/Sabertooth.cc"/>
+<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="1761" selectionTopPixel="1127"/>
 </editor>
 </editors>
 <views>
@@ -315,165 +315,171 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/OpcodeController.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/OpcodeController.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/sensors/Encoders.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/Controller.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/control_opcodes.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/OpcodeController.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/OpcodeController.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/OpcodeController.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/control_opcodes.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/OpcodeController.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/control_opcodes.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/pins.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/Main.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/pins.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/devices/LCD.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/pins.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/Main.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/motors/Sabertooth.cc"/>
 </editors>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3116" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3172" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4611" y="0"/>
-</item>
-<item historyLabel="OpcodeController.h" index="1">
-<position/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position/>
-</item>
-<item historyLabel="OpcodeController.h" index="1">
-<position/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4564" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4573" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4385" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4404" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4424" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4443" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3946" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4057" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4079" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4102" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4123" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4145" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4221" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position/>
-</item>
-<item historyLabel="Encoders.h" index="2">
-<position info="not_deleted" x="155" y="5"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position/>
-</item>
-<item historyLabel="Controller.h" index="3">
-<position info="not_deleted" x="807" y="9"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3620" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3643" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3667" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3691" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3715" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3738" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3762" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3784" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position/>
-</item>
-<item historyLabel="control_opcodes.h" index="4">
+<item historyLabel="control_opcodes.h" index="1">
 <position info="not_deleted" x="398" y="231"/>
 </item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="4779" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="5177" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="5174" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3493" y="0"/>
-</item>
-<item historyLabel="OpcodeController.h" index="1">
-<position info="not_deleted" x="721" y="0"/>
-</item>
-<item historyLabel="OpcodeController.cc" index="0">
-<position info="not_deleted" x="3493" y="0"/>
-</item>
-<item historyLabel="control_opcodes.h" index="4">
-<position info="not_deleted" x="398" y="231"/>
-</item>
-<item historyLabel="OpcodeController.h" index="1">
+<item historyLabel="OpcodeController.h" index="0">
 <position info="not_deleted" x="518" y="0"/>
 </item>
-<item historyLabel="control_opcodes.h" index="4">
+<item historyLabel="control_opcodes.h" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="OpcodeController.h" index="5">
+<item historyLabel="OpcodeController.h" index="2">
 <position info="not_deleted" x="695" y="0"/>
 </item>
-<item historyLabel="OpcodeController.cc" index="6">
+<item historyLabel="OpcodeController.cc" index="3">
 <position info="not_deleted" x="3487" y="18"/>
 </item>
-<item historyLabel="OpcodeController.h" index="7">
+<item historyLabel="OpcodeController.h" index="4">
 <position info="not_deleted" x="695" y="0"/>
 </item>
-<item historyLabel="control_opcodes.h" index="8">
+<item historyLabel="control_opcodes.h" index="5">
 <position info="not_deleted" x="423" y="0"/>
 </item>
-<item active="true" historyLabel="OpcodeController.cc" index="6">
-<position info="not_deleted" x="4180" y="0"/>
+<item historyLabel="OpcodeController.cc" index="3">
+<position info="not_deleted" x="271" y="0"/>
+</item>
+<item historyLabel="OpcodeController.h" index="6">
+<position info="not_deleted" x="695" y="0"/>
+</item>
+<item historyLabel="control_opcodes.h" index="7">
+<position info="not_deleted" x="423" y="0"/>
+</item>
+<item historyLabel="pins.h" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="9">
+<position info="not_deleted" x="1003" y="0"/>
+</item>
+<item historyLabel="pins.h" index="8">
+<position info="not_deleted" x="1318" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="9">
+<position info="not_deleted" x="1003" y="0"/>
+</item>
+<item historyLabel="OpcodeController.cc" index="3">
+<position info="not_deleted" x="271" y="0"/>
+</item>
+<item historyLabel="OpcodeController.h" index="6">
+<position info="not_deleted" x="695" y="0"/>
+</item>
+<item historyLabel="control_opcodes.h" index="7">
+<position info="not_deleted" x="423" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="pins.h" index="10">
+<position info="not_deleted" x="501" y="0"/>
+</item>
+<item historyLabel="LCD.h" index="11">
+<position info="not_deleted" x="4187" y="0"/>
+</item>
+<item historyLabel="pins.h" index="10">
+<position info="not_deleted" x="502" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="9">
+<position info="not_deleted" x="4291" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="9">
+<position info="not_deleted" x="2440" y="0"/>
+</item>
+<item historyLabel="pins.h" index="10">
+<position info="not_deleted" x="502" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="9">
+<position info="not_deleted" x="2440" y="0"/>
+</item>
+<item historyLabel="pins.h" index="12">
+<position info="not_deleted" x="502" y="0"/>
+</item>
+<item historyLabel="pins.h" index="12">
+<position info="not_deleted" x="501" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="1898" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="1340" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="1806" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="1451" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="1540" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="1750" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="1683" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="1750" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="1412" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position/>
+</item>
+<item historyLabel="pins.h" index="12">
+<position info="not_deleted" x="988" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="2558" y="0"/>
+</item>
+<item historyLabel="Sabertooth.cc" index="14">
+<position info="not_deleted" x="1761" y="1"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="2342" y="0"/>
+</item>
+<item historyLabel="pins.h" index="12">
+<position info="not_deleted" x="1261" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position/>
+</item>
+<item historyLabel="pins.h" index="12">
+<position info="not_deleted" x="1057" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position/>
+</item>
+<item historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="1416" y="0"/>
+</item>
+<item active="true" historyLabel="Main.cc" index="13">
+<position info="not_deleted" x="1416" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -492,6 +498,18 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Sabertooth.cc" tooltip="ROS_mega/src/lib/motors/Sabertooth.cc">
+<persistable path="/ROS_mega/src/lib/motors/Sabertooth.cc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LCD.h" tooltip="ROS_mega/src/lib/devices/LCD.h">
+<persistable path="/ROS_mega/src/lib/devices/LCD.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" tooltip="ROS_mega/src/pins.h">
+<persistable path="/ROS_mega/src/pins.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mega/src/Main.cc">
+<persistable path="/ROS_mega/src/Main.cc"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OpcodeController.cc" tooltip="ROS_mega/src/OpcodeController.cc">
 <persistable path="/ROS_mega/src/OpcodeController.cc"/>
 </file>
@@ -524,18 +542,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="FlexiTimer2.h" tooltip="ROS_mega/src/lib/utilities/FlexiTimer2.h">
 <persistable path="/ROS_mega/src/lib/utilities/FlexiTimer2.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fastIO.h" tooltip="ROS_mega/src/lib/utilities/fastIO.h">
-<persistable path="/ROS_mega/src/lib/utilities/fastIO.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TSL1401.h" tooltip="ROS_mega/src/lib/sensors/TSL1401.h">
-<persistable path="/ROS_mega/src/lib/sensors/TSL1401.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Gyro.h" tooltip="ROS_mega/src/lib/sensors/Gyro.h">
-<persistable path="/ROS_mega/src/lib/sensors/Gyro.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Battery.h" tooltip="ROS_mega/src/lib/sensors/Battery.h">
-<persistable path="/ROS_mega/src/lib/sensors/Battery.h"/>
 </file>
 </mruList>
 </workbench>
