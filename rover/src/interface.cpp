@@ -156,7 +156,7 @@ void rover::interface::processPacket(std::string * packet) {
             m_encoder_left = count;
             newLeftEncPacket = true;
         } else {
-            ROS_ERROR("Left encoder packet failed");
+            ROS_WARN("Left encoder length incorrect");
         }
         break;
     case MSG_OP_RIGHT_ENC:
@@ -169,7 +169,7 @@ void rover::interface::processPacket(std::string * packet) {
             m_encoder_right = count;
             newRightEncPacket = true;
         } else {
-            ROS_ERROR("Right encoder packet failed");
+            ROS_WARN("Right encoder length incorrect");
         }
         break;
     case MSG_OP_YAW_GYRO:
@@ -182,7 +182,7 @@ void rover::interface::processPacket(std::string * packet) {
             m_gyro_yaw += m_gyro_yawrate * dt - m_gyro_offset;
             m_lastYawGyroUpdateTime = current_time;
         } else {
-            ROS_ERROR("Yaw gyro packet failed");
+            ROS_WARN("Yaw gyro length incorrect");
         }
         break;
     case MSG_OP_CPU_BAT:
@@ -193,7 +193,7 @@ void rover::interface::processPacket(std::string * packet) {
             m_battery_voltage = voltage / 100.0;
             m_battery_current = current / 100.0;
         } else {
-            ROS_ERROR("CPU battery packet failed");
+            ROS_WARN("CPU battery length incorrect");
         }
         break;
     case MSG_OP_MOTOR_BAT:
@@ -204,7 +204,7 @@ void rover::interface::processPacket(std::string * packet) {
             m_motor_voltage = voltage / 100.0;
             m_motor_current = current / 100.0;
         } else {
-            ROS_ERROR("Motor battery packet failed");
+            ROS_WARN("Motor battery length incorrect");
         }
         break;
     case MSG_OP_PAN_SERVO:
@@ -212,7 +212,7 @@ void rover::interface::processPacket(std::string * packet) {
             angle = data[2];
             m_pan_angle = angle * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
         } else {
-            ROS_ERROR("Pan servo packet failed");
+            ROS_WARN("Pan servo length incorrect");
         }
         break;
     case MSG_OP_TILT_SERVO:
@@ -220,7 +220,7 @@ void rover::interface::processPacket(std::string * packet) {
             angle = data[2];
             m_tilt_angle = angle * DEG_TO_RAD - HALF_PI; // convert to +- pi/2
         } else {
-            ROS_ERROR("Tilt servo packet failed");
+            ROS_WARN("Tilt servo length incorrect");
         }
         break;
     }
