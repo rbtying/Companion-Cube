@@ -158,10 +158,10 @@ int main(int argc, char** argv) {
 	// main processing loop
 	while (n.ok()) {
 		current_time = ros::Time::now();
-        if ((current_time - last_time).toSec() > 1) {
-            char beat[] = {'\\', '|', '/', '-'};
+        if ((current_time - last_time).toSec() > .5) {
+            std::string beat[] = {"---", ">--", "->-", "-->", "---", "--<", "-<-", "<--"};
             std::string str = "Heartbeat: ";
-            str.append(1, beat[++count % 4]);
+            str.append(beat[++count % 8]);
             bot->setLCD(str, 1);
             last_time = current_time;
         }
@@ -333,6 +333,8 @@ int main(int argc, char** argv) {
 		r.sleep();
 	}
 
+    std::string endmsg = "Deactivated";
+    bot->setLCD(endmsg, 1);
 	// on exit close the serial port
 	bot->closeSerialPort();
 }
