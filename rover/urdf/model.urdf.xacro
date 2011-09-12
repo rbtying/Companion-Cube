@@ -58,6 +58,7 @@
 
   <!-- Links --> 
   <link name="base_footprint" />
+  <link name="base_link" />
 
   <!-- Robot movement base representation -->
   <xacro:property name="robot_base_dim" value="0.205 0.13 0.065" />
@@ -259,6 +260,13 @@
 
   <joint name="base_joint" type="fixed">
     <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_link" />
     <child link="robot_base" />
     <origin xyz="0 0 0.0335" rpy="0 0 0" />
     <axis xyz="0 1 0" />
