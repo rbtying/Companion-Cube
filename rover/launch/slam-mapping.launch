@@ -1,0 +1,14 @@
+<launch>
+    <!-- base (drive train, gps, odometry, kinect, imu, robot state) -->
+    <include file="$(find rover)/launch/base.launch" />
+
+    <!-- teleoperation -->
+    <include file="$(find rover)/launch/teleop.launch" />
+
+    <!-- gmapping -->
+    <include file="$(find rover)/launch/gmapping.launch" />
+
+    <!-- motion planner -->
+    <include file="$(find rover)/launch/move_base.launch" />
+
+</launch>
