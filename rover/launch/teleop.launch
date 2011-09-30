@@ -6,8 +6,8 @@
     </node>
 
     <!-- ps3 teleoperation -->
-    <param name="speed" type="double" value="0.3" />
-    <param name="angular_speed" type="double" value="1.5" />
+    <param name="speed" type="double" value="0.4" />
+    <param name="angular_speed" type="double" value="1.75" />
     <param name="kinect_default_angle" type="double" value="0.0" />
     <node pkg="rover" type="rover_teleop_joy" name="teleop" />
 </launch>

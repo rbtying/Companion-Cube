@@ -1,14 +1,14 @@
 <launch>
     <param name="/rover/port" value="/dev/ttyRoverFTDI" type="str" />
 
-    <param name="/rover/axleLength" value="0.102046966" type="double" />
+    <param name="/rover/axleLength" value="0.16" type="double" />
 
     <param name="/rover/maxSpeed" value="0.75" type="double" />
 
     <param name="/rover/left/proportional" value="0.6" type="double" />
     <param name="/rover/left/integral" value="0.2" type="double" />
     <param name="/rover/left/derivative" value="0.05" type="double" />
-    <param name="/rover/left/conversion_factor" value="0.004" type="double" />
+    <param name="/rover/left/conversion_factor" value="0.0044" type="double" />
 
     <param name="/rover/right/proportional" value="0.6" type="double" />
     <param name="/rover/right/integral" value="0.2" type="double" />
