@@ -4,22 +4,18 @@
 #include <sensor_msgs/Joy.h>			// for joystick
 #include "TeleopRover.h"
 
-TeleopRover::TeleopRover():
-	m_linear(1), m_angular(0), m_panservo(2), m_tiltservo(3)
-	, m_tiltkinect_up(4), m_tiltkinect_down(6)
-    , m_enable_cam(11), m_autonomous_on(14), m_autonomous_off(15)
-    , m_enable_motors(10), m_kinect_angle(0)
+TeleopRover::TeleopRover()
 {
-	m_n.param("axis_linear", m_linear, m_linear);
-	m_n.param("axis_angular", m_angular, m_angular);
-	m_n.param("axis_pan", m_panservo, m_panservo);
-	m_n.param("axis_tilt", m_tiltservo, m_tiltservo);
-	m_n.param("button_kinect_up", m_tiltkinect_up, m_tiltkinect_up);
-	m_n.param("button_kinect_down", m_tiltkinect_down, m_tiltkinect_down);
-    m_n.param("button_autonomous_mode_on", m_autonomous_on, m_autonomous_on);
-    m_n.param("button_autonomous_mode_off", m_autonomous_off, m_autonomous_off);
-    m_n.param("button_enable_cam", m_enable_cam, m_enable_cam);
-    m_n.param("button_enable_move", m_enable_motors, m_enable_motors);
+	m_n.param("axis_linear", m_linear, 1);
+	m_n.param("axis_angular", m_angular, 0);
+	m_n.param("axis_pan", m_panservo, 2);
+	m_n.param("axis_tilt", m_tiltservo, 3);
+	m_n.param("button_kinect_up", m_tiltkinect_up, 4);
+	m_n.param("button_kinect_down", m_tiltkinect_down, 6);
+    m_n.param("button_autonomous_mode_on", m_autonomous_on, 14);
+    m_n.param("button_autonomous_mode_off", m_autonomous_off, 15);
+    m_n.param("button_enable_cam", m_enable_cam, 11);
+    m_n.param("button_enable_move", m_enable_motors, 10);
 	m_n.param("speed", m_limit_speed, 0.5);
 	m_n.param("angular_speed", m_limit_angular_speed, PI);
 

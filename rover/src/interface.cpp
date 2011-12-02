@@ -27,7 +27,6 @@ rover::interface::interface(const char * new_serial_port) {
 }
 
 rover::interface::~interface() {
-    driveDirect(0, 0);
     // Clean up!
     delete m_port;
 }
@@ -44,7 +43,7 @@ int rover::interface::openSerialPort() {
 
 int rover::interface::closeSerialPort() {
     this->drive(0.0, 0.0);
-        this->sendData();
+    this->sendData();
 
     try {
         m_port->close();
@@ -58,6 +57,7 @@ int rover::interface::closeSerialPort() {
 int rover::interface::sendData() {
         char cmd[STATE_STRUCT_SIZE + 2];
         uint8_t buf[STATE_STRUCT_SIZE];
+        memset(&m_state, 0, STATE_STRUCT_SIZE);
 
         // populate robot state based on given data
         // PID
@@ -152,13 +152,13 @@ void rover::interface::processPacket(std::string * packet) {
     for(uint8_t i = 0; i < packet->size(); i++) {
         data[i] = static_cast<uint8_t>(packet->at(i));
     }
-    
+
     if (packet->size() == STATE_STRUCT_SIZE + 2) {
         ros::Time current_time = ros::Time::now();
         double dt = (current_time - m_last_time).toSec();
         robot_state rs;
-        uint8_t buf[STATE_STRUCT_SIZE];
-        for (int i = 0; i < STATE_STRUCT_SIZE; i++) {
+        uint8_t buf[STATE_STRUCT_SIZE + 1];
+        for (int i = 0; i < STATE_STRUCT_SIZE + 1; i++) {
                 buf[i] = data[i+1];
         }
         // process byte array and fill state struct

@@ -124,6 +124,7 @@ CMakeFiles/umbmark.dir/src/umbmark.o.provides: CMakeFiles/umbmark.dir/src/umbmar
 .PHONY : CMakeFiles/umbmark.dir/src/umbmark.o.provides
 
 CMakeFiles/umbmark.dir/src/umbmark.o.provides.build: CMakeFiles/umbmark.dir/src/umbmark.o
+.PHONY : CMakeFiles/umbmark.dir/src/umbmark.o.provides.build
 
 # Object files for target umbmark
 umbmark_OBJECTS = \

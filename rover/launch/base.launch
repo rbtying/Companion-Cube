@@ -9,7 +9,7 @@
     <include file="$(find rover)/launch/kinect_fakelaser.launch" />
 
     <!-- camera -->
-    <include file="$(find rover)/launch/lifecam.launch" />
+    <!--<include file="$(find rover)/launch/lifecam.launch" />-->
 
     <!-- robot state -->
     <include file="$(find rover)/launch/urdf.launch" />
