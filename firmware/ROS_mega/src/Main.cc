@@ -7,7 +7,6 @@
 #include <WProgram.h>
 #include "pins.h"
 #include "control_struct.h"
-#include "OpcodeController.h"
 #include "sensors/Gyro.h"
 #include "sensors/Battery.h"
 #include "utilities/fastIO.h"
@@ -37,8 +36,6 @@ Gyro yawGyro(YAW_GYRO, YAW_REF, LPR510_CONVERSION_FACTOR);
 
 // Motors
 Sabertooth m(SBT_ADDRESS, &Serial3);
-
-OpcodeController cmd(&ctrl, &Serial);
 
 /**
  * Encoder handlers
@@ -108,19 +105,7 @@ int main() {
 	yawGyro.calibrate(1000);
 
 	for (uint32_t loops = 0;; loops++) {
-		cmd.update();
-
 		cTime = millis();
-		/*
-		 if (ledTime <= cTime) {
-		 if (cmd.comm) {
-		 fastIOWrite(LED, !fastIORead(LED));
-		 } else {
-		 fastIOWrite(LED, LOW);
-		 }
-		 ledTime = cTime + LED_INTERVAL;
-		 }
-		 */
 
 		if (nexTime <= cTime) {
 			float dt = (TIME_INTERVAL + (cTime - nexTime)) * 0.001;

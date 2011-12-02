@@ -1,0 +1,48 @@
+/*
+ * state_struct.h
+ *
+ *  Created on: Dec 1, 2011
+ *      Author: rbtying
+ */
+
+#ifndef STATE_STRUCT_H_
+#define STATE_STRUCT_H_
+
+struct robot_state {
+	uint8_t servo_pan_val;
+	uint8_t servo_tilt_val;
+	int16_t batt_motor_voltage;
+	int16_t batt_motor_current;
+	int16_t gyro_yaw_rate;
+	int16_t gyro_yaw_val;
+	int16_t enc_left_speed;
+	int16_t enc_right_speed;
+	int32_t enc_left_count;
+	int32_t enc_right_count;
+	int16_t enc_left_conv;
+	int16_t enc_right_conv;
+	int8_t motor_left_val;
+	int8_t motor_right_val;
+	int16_t pid_left_proportional;
+	int16_t pid_left_integral;
+	int16_t pid_left_derivative;
+	int16_t pid_left_setpoint;
+	int16_t pid_right_proportional;
+	int16_t pid_right_integral;
+	int16_t pid_right_derivative;
+	int16_t pid_right_setpoint;
+};
+
+#define STATE_STRUCT_SIZE 44
+
+void byteToStateStruct(uint8_t * buf, robot_state * state) {
+
+}
+
+void stateStructToByte(robot_state * state, uint8_t * buf) {
+
+}
+
+typedef struct robot_state robot_state;
+
+#endif /* STATE_STRUCT_H_ */

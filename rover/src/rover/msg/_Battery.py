@@ -79,7 +79,7 @@ string frame_id
       buff.write(_struct_3I.pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
       _x = self.header.frame_id
       length = len(_x)
-      buff.write(struct.pack('<I%ss'%length, length, _x.encode()))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
       buff.write(_struct_2f.pack(_x.voltage, _x.current))
     except struct.error as se: self._check_types(se)
@@ -127,7 +127,7 @@ string frame_id
       buff.write(_struct_3I.pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
       _x = self.header.frame_id
       length = len(_x)
-      buff.write(struct.pack('<I%ss'%length, length, _x.encode()))
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
       buff.write(_struct_2f.pack(_x.voltage, _x.current))
     except struct.error as se: self._check_types(se)

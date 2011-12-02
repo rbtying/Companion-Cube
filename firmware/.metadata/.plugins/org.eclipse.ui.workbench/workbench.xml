@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="18" version="2.0">
+<workbench progressCount="26" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="61" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -30,14 +30,34 @@
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="4"/>
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/Main.cc" title="Main.cc" tooltip="ROS_mega/src/Main.cc" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="StateController.h" partName="StateController.h" path="/home/rbtying/robot/firmware/ROS_mega/src/StateController.h" title="StateController.h" tooltip="ROS_mega/src/StateController.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/StateController.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="146" selectionTopPixel="32"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/Main.cc" title="Main.cc" tooltip="ROS_mega/src/Main.cc" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3359" selectionTopPixel="2137"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="1180" selectionTopPixel="1011"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" partName="control_struct.h" path="/home/rbtying/robot/firmware/ROS_mega/src/control_struct.h" title="control_struct.h" tooltip="ROS_mega/src/control_struct.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/control_struct.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="313" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="state_struct.h" partName="state_struct.h" path="/home/rbtying/robot/firmware/ROS_mega/src/state_struct.h" title="state_struct.h" tooltip="ROS_mega/src/state_struct.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/state_struct.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1989" selectionTopPixel="504"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="StateController.cc" partName="StateController.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/StateController.cc" title="StateController.cc" tooltip="ROS_mega/src/StateController.cc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/StateController.cc"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="357" selectionTopPixel="1443"/>
 </editor>
 </editors>
 <views>
@@ -60,6 +80,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 <category IMemento.internal.id="Warnings (2 items)"/>
 </expanded>
@@ -404,34 +425,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/Controller.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/state_struct.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/control_struct.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/StateController.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/StateController.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/Main.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/OpcodeController.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/sensors/Encoders.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/sensors/Battery.cc"/>
 </editors>
-<item historyLabel="Controller.cc" index="0">
-<position info="not_deleted" x="3354" y="0"/>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1093" y="0"/>
 </item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1267" y="0"/>
 </item>
-<item historyLabel="OpcodeController.cc" index="2">
-<position info="not_deleted" x="3488" y="0"/>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1286" y="0"/>
 </item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2851" y="0"/>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1287" y="0"/>
 </item>
-<item historyLabel="Encoders.h" index="3">
-<position info="not_deleted" x="319" y="0"/>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1091" y="0"/>
 </item>
-<item historyLabel="Main.cc" index="1">
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1142" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1157" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1164" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1174" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1181" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1182" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="2644" y="0"/>
+</item>
+<item historyLabel="state_struct.h" index="0">
+<position info="not_deleted" x="364" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="2644" y="0"/>
+</item>
+<item historyLabel="state_struct.h" index="0">
+<position info="not_deleted" x="408" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="2926" y="0"/>
+</item>
+<item historyLabel="state_struct.h" index="0">
+<position info="not_deleted" x="816" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="2926" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="639" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="660" y="0"/>
+</item>
+<item historyLabel="StateController.h" index="3">
+<position info="not_deleted" x="726" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="660" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="681" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="625" y="0"/>
+</item>
+<item historyLabel="StateController.h" index="3">
+<position info="not_deleted" x="726" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="1202" y="0"/>
+</item>
+<item historyLabel="state_struct.h" index="0">
 <position info="not_deleted" x="2" y="0"/>
 </item>
-<item historyLabel="OpcodeController.cc" index="2">
+<item historyLabel="control_struct.h" index="1">
+<position info="not_deleted" x="313" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="4">
+<position info="not_deleted" x="774" y="0"/>
+</item>
+<item historyLabel="StateController.h" index="3">
+<position info="not_deleted" x="726" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="4">
+<position info="not_deleted" x="1243" y="0"/>
+</item>
+<item historyLabel="Battery.cc" index="5">
+<position info="not_deleted" x="443" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="4">
+<position info="not_deleted" x="1243" y="0"/>
+</item>
+<item historyLabel="StateController.h" index="3">
+<position info="not_deleted" x="920" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="357" y="0"/>
+</item>
+<item historyLabel="StateController.h" index="3">
+<position info="not_deleted" x="920" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="4">
+<position info="not_deleted" x="1180" y="10"/>
+</item>
+<item historyLabel="StateController.h" index="3">
+<position info="not_deleted" x="920" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="357" y="0"/>
+</item>
+<item historyLabel="StateController.h" index="3">
+<position info="not_deleted" x="331" y="0"/>
+</item>
+<item historyLabel="state_struct.h" index="0">
 <position info="not_deleted" x="2" y="0"/>
 </item>
-<item active="true" historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2" y="0"/>
+<item historyLabel="StateController.h" index="3">
+<position info="not_deleted" x="146" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="357" y="0"/>
+</item>
+<item historyLabel="state_struct.h" index="0">
+<position info="not_deleted" x="2553" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="357" y="0"/>
+</item>
+<item historyLabel="StateController.h" index="3">
+<position info="not_deleted" x="146" y="0"/>
+</item>
+<item historyLabel="state_struct.h" index="0">
+<position info="not_deleted" x="1679" y="0"/>
+</item>
+<item historyLabel="StateController.h" index="3">
+<position info="not_deleted" x="146" y="0"/>
+</item>
+<item historyLabel="StateController.cc" index="2">
+<position info="not_deleted" x="357" y="0"/>
+</item>
+<item active="true" historyLabel="state_struct.h" index="0">
+<position info="not_deleted" x="1679" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -450,14 +599,35 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Battery.cc" tooltip="ROS_mega/src/lib/sensors/Battery.cc">
+<persistable path="/ROS_mega/src/lib/sensors/Battery.cc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DualMotor.h" tooltip="ROS_mega/src/lib/motors/DualMotor.h">
+<persistable path="/ROS_mega/src/lib/motors/DualMotor.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="state_struct.h" tooltip="ROS_mega/src/state_struct.h">
+<persistable path="/ROS_mega/src/state_struct.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" tooltip="ROS_mega/src/control_struct.h">
+<persistable path="/ROS_mega/src/control_struct.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mega/src/Main.cc">
+<persistable path="/ROS_mega/src/Main.cc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="control_opcodes.h" tooltip="ROS_mega/src/control_opcodes.h">
+<persistable path="/ROS_mega/src/control_opcodes.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="StateController.cc" tooltip="ROS_mega/src/StateController.cc">
+<persistable path="/ROS_mega/src/StateController.cc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="StateController.h" tooltip="ROS_mega/src/StateController.h">
+<persistable path="/ROS_mega/src/StateController.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoders.h" tooltip="ROS_mega/src/lib/sensors/Encoders.h">
 <persistable path="/ROS_mega/src/lib/sensors/Encoders.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OpcodeController.cc" tooltip="ROS_mega/src/OpcodeController.cc">
 <persistable path="/ROS_mega/src/OpcodeController.cc"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mega/src/Main.cc">
-<persistable path="/ROS_mega/src/Main.cc"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cc" tooltip="ROS_mega/src/Controller.cc">
 <persistable path="/ROS_mega/src/Controller.cc"/>
@@ -473,9 +643,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" tooltip="Blinkenlights/src/pins.h">
 <persistable path="/Blinkenlights/src/pins.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="Blinkenlights/src/Main.cc">
-<persistable path="/Blinkenlights/src/Main.cc"/>
 </file>
 </mruList>
 </workbench>

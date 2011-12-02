@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-../include/control_opcodes.h
-
 ../include/interface.h
 ros/ros.h
 -
 string
 -
-control_opcodes.h
-../include/control_opcodes.h
+state_struct.h
+../include/state_struct.h
 cereal_port/CerealPort.h
 ../include/cereal_port/CerealPort.h
 util.h
 ../include/util.h
+
+../include/state_struct.h
 
 ../include/util.h
 
@@ -203,6 +203,8 @@ ros/service_client.h
 /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/include/ros/ros/service_client.h
 ros/timer.h
 /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/include/ros/ros/timer.h
+ros/rate.h
+/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/include/ros/ros/rate.h
 ros/wall_timer.h
 /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/include/ros/ros/wall_timer.h
 ros/advertise_options.h

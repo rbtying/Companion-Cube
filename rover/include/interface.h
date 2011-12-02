@@ -3,7 +3,7 @@
 
 #include <ros/ros.h>
 #include <string>
-#include "control_opcodes.h"
+#include "state_struct.h"
 #include "cereal_port/CerealPort.h"
 #include "util.h"
 
@@ -15,6 +15,24 @@
 #define QPPS_TO_M_S 9.78134873e-6
 
 namespace rover {
+
+struct desired_state {
+    int16_t left_speed;
+    int16_t right_speed;
+    uint8_t pan_angle;
+    uint8_t tilt_angle;
+    int16_t cfl;
+    int16_t cfr;
+    int16_t lP;
+    int16_t lI;
+    int16_t lD;
+    int16_t rP;
+    int16_t rI;
+    int16_t rD;
+};
+
+typedef struct desired_state desired_state;
+
 class interface {
 public:
 
@@ -30,15 +48,14 @@ public:
 	int driveDirect(int left_speed, int right_speed);
 
 	int setServos(double panAngle, double tiltAngle);
-    int setMotorsRaw(int8_t left, int8_t right);
 
     void setConversionFactors(double left, double right);
 	void setPID(double lP, double lI, double lD, double rP, double rI, double rD);
     
-    void setLCD(std::string text, int lineNum);
-
 	void resetOdometry();
 	void setOdometry(double new_x, double new_y, double new_yaw);
+
+    int sendData();
 
 	double m_odometry_x;
 	double m_odometry_y;
@@ -50,8 +67,6 @@ public:
 	double m_gyro_yawrate;
 	double m_gyro_offset;
 
-	double m_battery_voltage;
-	double m_battery_current;
     double m_motor_voltage;
     double m_motor_current;
 	
@@ -73,11 +88,11 @@ public:
     bool newRightEncPacket;
     bool newEncPacket;
 private:
-	long m_last_enc_left, m_last_enc_right;
-    ros::Time m_lastEncoderUpdateTime;
-    ros::Time m_lastYawGyroUpdateTime;
+    ros::Time m_last_time;
 	std::string m_port_name;
 	cereal::CerealPort * m_port;
+    robot_state m_state;
+    desired_state m_ds;
 	void calculateOdometry(double dt);
 	void processPacket(std::string * packet);
 };

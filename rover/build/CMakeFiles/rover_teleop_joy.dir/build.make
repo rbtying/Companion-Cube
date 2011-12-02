@@ -124,7 +124,6 @@ CMakeFiles/rover_teleop_joy.dir/src/ps3_control.o.provides: CMakeFiles/rover_tel
 .PHONY : CMakeFiles/rover_teleop_joy.dir/src/ps3_control.o.provides
 
 CMakeFiles/rover_teleop_joy.dir/src/ps3_control.o.provides.build: CMakeFiles/rover_teleop_joy.dir/src/ps3_control.o
-.PHONY : CMakeFiles/rover_teleop_joy.dir/src/ps3_control.o.provides.build
 
 CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.o: CMakeFiles/rover_teleop_joy.dir/flags.make
 CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.o: ../src/TeleopRover.cpp
@@ -204,7 +203,6 @@ CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.o.provides: CMakeFiles/rover_tel
 .PHONY : CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.o.provides
 
 CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.o.provides.build: CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.o
-.PHONY : CMakeFiles/rover_teleop_joy.dir/src/TeleopRover.o.provides.build
 
 # Object files for target rover_teleop_joy
 rover_teleop_joy_OBJECTS = \

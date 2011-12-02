@@ -3,6 +3,8 @@
 	<item value="Default C++ header template" key="LastUsedHeaderTemplate"/>
 	<section name="completion_proposal_size">
 	</section>
+	<section name="PDOMSearchPage">
+	</section>
 	<section name="org.eclipse.cdt.internal.ui.wizards.classwizard.NewBaseClassSelectionDialogSettings">
 		<item value="true" key="show_structs"/>
 		<item value="false" key="show_lowlevel"/>
@@ -19,15 +21,13 @@
 		<item value="185" key="y"/>
 		<item value="735" key="x"/>
 	</section>
-	<section name="PDOMSearchPage">
-	</section>
 	<section name="CRenameRefactoringInputPage">
 		<item value="false" key="preprocessor"/>
-		<item value="3" key="scope"/>
 		<item value="false" key="macroDefinition"/>
+		<item value="3" key="scope"/>
 		<item value="false" key="comment"/>
-		<item value="false" key="references_inv"/>
 		<item value="" key="workingset"/>
+		<item value="false" key="references_inv"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>

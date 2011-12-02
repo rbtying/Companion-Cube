@@ -124,7 +124,6 @@ CMakeFiles/wanderer.dir/src/obstacle_avoid.o.provides: CMakeFiles/wanderer.dir/s
 .PHONY : CMakeFiles/wanderer.dir/src/obstacle_avoid.o.provides
 
 CMakeFiles/wanderer.dir/src/obstacle_avoid.o.provides.build: CMakeFiles/wanderer.dir/src/obstacle_avoid.o
-.PHONY : CMakeFiles/wanderer.dir/src/obstacle_avoid.o.provides.build
 
 # Object files for target wanderer
 wanderer_OBJECTS = \

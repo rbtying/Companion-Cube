@@ -14,7 +14,6 @@ src/Main.d src/Main.o: ../src/Main.cc \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/Encoders.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/PID.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/DualMotor.h \
- ../src/OpcodeController.h ../src/control_opcodes.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/fastIO.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/Sabertooth.h \
  /home/rbtying/robot/firmware/Arduino-2560/HardwareSerial.h \
@@ -51,10 +50,6 @@ src/Main.d src/Main.o: ../src/Main.cc \
 /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/PID.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/DualMotor.h:
-
-../src/OpcodeController.h:
-
-../src/control_opcodes.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/fastIO.h:
 

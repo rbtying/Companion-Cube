@@ -49,13 +49,6 @@ void cmdVelReceived(const geometry_msgs::Twist::ConstPtr& cmd_vel) {
 	bot->drive(cmd_vel->linear.x, cmd_vel->angular.z);
 }
 
-void recvLine2(const std_msgs::String::ConstPtr& str) {
-    bot->setLCD(str->data, 0);
-}
-
-void recvLine1(const std_msgs::String::ConstPtr& str) {
-    bot->setLCD(str->data, 1);
-}
 
 int main(int argc, char** argv) {
 	ros::init(argc, argv, "rover_node");
@@ -88,9 +81,6 @@ int main(int argc, char** argv) {
     n.param<double> ("/rover/gyro_bias", gyro_bias, 0.0);
     n.param<double> ("/rover/gyro_correction", bot->m_gyro_correction, 1.0);
 
-    double batt_threshold;
-    n.param<double> ("/rover/batt_threshold", batt_threshold, 13.0);
-
     double mbatt_threshold;
     n.param<double> ("/rover/motor_threshold", mbatt_threshold, 8.5);
 
@@ -100,16 +90,11 @@ int main(int argc, char** argv) {
     bool publish_tf;
     n.param<bool> ("/rover/publish_tf", publish_tf, true);
 
-    int left_initial, right_initial;
-    n.param<int> ("/rover/initial_left_motor", left_initial, 0);
-    n.param<int> ("/rover/initial_right_motor", right_initial, 0);
-
 	// publishers
 	ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry> ("/odom", 50);
 	ros::Publisher enc_pub = n.advertise<rover::Encoder> ("/encoders", 50);
 	ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu> ("/imu/raw", 50);
     ros::Publisher imu_bias_pub = n.advertise<sensor_msgs::Imu> ("/imu/data", 50);
-	ros::Publisher batt_pub = n.advertise<rover::Battery> ("/battery_cpu", 50);
     ros::Publisher motor_batt_pub = n.advertise<rover::Battery> ("/battery_mot", 50);
 	ros::Publisher joint_pub = n.advertise<sensor_msgs::JointState> ("/joint_states", 1);
 	ros::Publisher pan_pub = n.advertise<std_msgs::Float64> ("/pan/cur_angle", 1);
@@ -125,10 +110,6 @@ int main(int argc, char** argv) {
 			"/pan/angle", 1, recvPanServoAngle);
 	ros::Subscriber tilt_servo_sub = n.subscribe<std_msgs::Float64> (
 			"/tilt/angle", 1, recvTiltServoAngle);
-    ros::Subscriber lcd_line_1_sub = n.subscribe<std_msgs::String> (
-            "/lcd/line1", 1, recvLine1);
-    ros::Subscriber lcd_line_2_sub = n.subscribe<std_msgs::String> (
-            "/lcd/line2", 1, recvLine2);
 
 	// open serial port
 	if (bot->openSerialPort() == 0) {
@@ -140,33 +121,22 @@ int main(int argc, char** argv) {
 
 	usleep(5e6);
 
-	ros::Time current_time, last_time;
-
 	ros::Rate r(25.0);
 
+    ros::Time current_time;
 	sensor_msgs::JointState joint_state;
 
 	bot->setPID(lP, lI, lD, rP, rI, rD);
     bot->setConversionFactors(le, re);
-    bot->setMotorsRaw(left_initial, right_initial);
-
-    unsigned long count = 0;
-
-    std::string firstLine = "Companion Cube";
-    bot->setLCD(firstLine, 0);
+    bot->drive(0.0, 0.0);
+    bot->setServos(0.0, 0.0);
 
 	// main processing loop
 	while (n.ok()) {
-		current_time = ros::Time::now();
-        if ((current_time - last_time).toSec() > .5) {
-            std::string beat[] = {"---", ">--", "->-", "-->", "---", "--<", "-<-", "<--"};
-            std::string str = "Heartbeat: ";
-            str.append(beat[++count % 8]);
-            bot->setLCD(str, 1);
-            last_time = current_time;
-        }
+        bot->sendData();
 
 		if (bot->newPacket) {
+            current_time = ros::Time::now();
 			bot->newPacket = false;
 			// generate quaternion from odometry yaw
 			geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(
@@ -253,22 +223,7 @@ int main(int argc, char** argv) {
             imu_msg.angular_velocity.z = bot->m_gyro_yawrate - gyro_bias;
             imu_bias_pub.publish(imu_msg);
 
-			// prepare a battery state message
-			rover::Battery batt_msg;
-			batt_msg.header.stamp = current_time;
-			batt_msg.header.frame_id = "base_footprint";
-			batt_msg.voltage = bot->m_battery_voltage;
-			batt_msg.current = bot->m_battery_current;
-			
-			// send the message
-			batt_pub.publish(batt_msg);
-
-            if (bot->m_battery_voltage < batt_threshold) {
-                ROS_ERROR("Battery voltage low: %.02f volts, %.02f amps"
-                        , bot->m_battery_voltage, bot->m_battery_current);
-            }
-
-            // prepare another battery state message
+            // prepare a battery state message
             rover::Battery mbatt_msg;
             mbatt_msg.header.stamp = current_time;
             mbatt_msg.header.frame_id = "base_footprint";
@@ -299,8 +254,8 @@ int main(int argc, char** argv) {
 			// prepare a joint state message
 			joint_state.header.stamp = current_time;
 
-			joint_state.name.resize(7);
-			joint_state.position.resize(7);
+			joint_state.name.resize(4);
+			joint_state.position.resize(4);
 
 			joint_state.name[0]="front_left_wheel_joint";
 			joint_state.position[0]=bot->m_velocity_left / 0.027051;
@@ -308,16 +263,10 @@ int main(int argc, char** argv) {
 			joint_state.name[1]="front_right_wheel_joint";
 			joint_state.position[1]=bot->m_velocity_right / 0.027051;
 
-			joint_state.name[2]="back_left_wheel_joint";
-			joint_state.position[2]=bot->m_velocity_left / 0.027051;
-
-			joint_state.name[3]="back_right_wheel_joint";
-			joint_state.position[3]=bot->m_velocity_right / 0.027051;
-
-			joint_state.name[4]="pan_servo_joint";
+			joint_state.name[2]="pan_servo_joint";
 			joint_state.position[4]=-(bot->m_pan_angle);
 
-			joint_state.name[5]="tilt_servo_joint";
+			joint_state.name[3]="tilt_servo_joint";
 			joint_state.position[5]=(bot->m_tilt_angle);
 
 			joint_pub.publish(joint_state);
@@ -338,8 +287,6 @@ int main(int argc, char** argv) {
 		r.sleep();
 	}
 
-    std::string endmsg = "Deactivated";
-    bot->setLCD(endmsg, 1);
 	// on exit close the serial port
 	bot->closeSerialPort();
 }
