@@ -8,6 +8,7 @@ _Website:_ [http://tpmo.im](http://tpmo.im)
 Companion Cube is my ongoing project to explore ROS-based robotics, including both the ROS nodes and the microcontroller firmware used. As the robot is a constantly evolving system, the code stored in this repository is fluid, and may not always work. 
 
 As of Dec. 1, 2011, the hardware involved in the project includes (but is not limited to):
+
  - ATMega2560 microcontroller
  - Atom-based netbook
  - Microsoft Kinect
