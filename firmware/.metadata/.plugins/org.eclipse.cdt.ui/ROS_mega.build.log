@@ -1,0 +1,37 @@
+
+**** Build of configuration Debug for project ROS_mega ****
+
+make all 
+Building file: ../src/Main.cc
+Invoking: AVR C++ Compiler
+avr-g++ -I"/home/rbtying/robot/firmware/Arduino-2560/Debug" -I"/home/rbtying/robot/firmware/ROS_mega/src/lib" -I"/home/rbtying/robot/firmware/Arduino-2560" -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"src/Main.d" -MT"src/Main.d" -c -o"src/Main.o" "../src/Main.cc"
+Finished building: ../src/Main.cc
+ 
+Building target: ROS_mega.elf
+Invoking: AVR C++ Linker
+avr-g++ -Wl,-Map,ROS_mega.map,--cref -Wl,--gc-sections -L"/home/rbtying/robot/firmware/Arduino-2560/Debug" -mmcu=atmega2560 -o"ROS_mega.elf"  ./src/lib/utilities/FlexiTimer2.o ./src/lib/utilities/PID.o ./src/lib/utilities/RC_CTRL.o  ./src/lib/sensors/rangefinders/MaxSonar.o ./src/lib/sensors/rangefinders/Ping.o ./src/lib/sensors/rangefinders/Sharp_IR.o  ./src/lib/sensors/Battery.o ./src/lib/sensors/Gyro.o ./src/lib/sensors/TSL1401.o  ./src/lib/motors/Sabertooth.o ./src/lib/motors/ServoMotor.o  ./src/lib/devices/CD74HC4067.o ./src/lib/devices/LCD.o  ./src/Controller.o ./src/Main.o ./src/OpcodeController.o   -lArduino
+Finished building target: ROS_mega.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ROS_mega.elf  >"ROS_mega.lss"
+Finished building: ROS_mega.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex ROS_mega.elf  "ROS_mega.hex"
+Finished building: ROS_mega.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 ROS_mega.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:   17734 bytes (6.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1328 bytes (16.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

@@ -83,20 +83,7 @@ void Controller::processCommand() {
 		msg[1] = nextByte(250);
 		m_ctrl->mot.leftSpeed = msg[0];
 		m_ctrl->mot.rightSpeed = msg[1];
-	} else if (strstr(m_buf, "sLIN")) {
-		char msg[LCD_COLS + 1];
-		uint8_t line = nextByte(250);
-		for (uint8_t i = 0; i < LCD_COLS; i++) {
-			msg[i] = nextByte(250);
-		}
-		msg[LCD_COLS] = '\0';
-		m_ctrl->lcd->setCursor(0, constrain(line, 0, LCD_LINES));
-		m_ctrl->lcd->print(msg);
 	} else if (strstr(m_buf, "gBAT") != NULL) {
-		Serial.print("BAT0: ");
-		Serial.print(m_ctrl->cpu_batt.getVoltage(), DEC);
-		Serial.print(" volts, ");
-		Serial.print(m_ctrl->cpu_batt.getCurrent(), DEC);
 		Serial.print(" amps\r\n");
 		Serial.print("BAT1: ");
 		Serial.print(m_ctrl->mot_batt.getVoltage(), DEC);
@@ -124,8 +111,6 @@ void Controller::sendDataPacket() {
 	m_stat.rightCount = abs(m_ctrl->rightEnc.count);
 	m_stat.yawRate = (uint16_t) (abs(m_ctrl->yaw.rate) * 1000);
 	m_stat.yawVal = (uint16_t) (abs(m_ctrl->yaw.val) * 1000);
-	m_stat.cpu_voltage = (int16_t) (m_ctrl->cpu_batt.getVoltage() * 100);
-	m_stat.cpu_current = (int16_t) (m_ctrl->cpu_batt.getCurrent() * 100);
 	m_stat.mot_voltage = (int16_t) (m_ctrl->mot_batt.getVoltage() * 100);
 	m_stat.mot_current = (int16_t) (m_ctrl->mot_batt.getCurrent() * 100);
 	m_stat.panAngle = (uint8_t) (m_ctrl->pan.read());

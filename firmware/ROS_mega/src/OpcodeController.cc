@@ -75,22 +75,17 @@ void OpcodeController::update() {
 			m_ctrl->mot.leftSpeed = (int8_t) msg[0];
 			m_ctrl->mot.rightSpeed = (int8_t) msg[1];
 			break;
-		case CTRL_OP_SET_LCD:
-			char lcd_msg[LCD_COLS + 1];
-			msg[0] = nextByte(250);
-			for (uint8_t i = 0; i < LCD_COLS; i++) {
-				lcd_msg[i] = nextByte(250);
-			}
-			lcd_msg[LCD_COLS] = '\0';
-			m_ctrl->lcd->setCursor(0, constrain(msg[0], 0, LCD_LINES));
-			m_ctrl->lcd->print(lcd_msg);
-			break;
+			//		case CTRL_OP_SET_LCD:
+			//			char lcd_msg[LCD_COLS + 1];
+			//			msg[0] = nextByte(250);
+			//			for (uint8_t i = 0; i < LCD_COLS; i++) {
+			//				lcd_msg[i] = nextByte(250);
+			//			}
+			//			lcd_msg[LCD_COLS] = '\0';
+			//			m_ctrl->lcd->setCursor(0, constrain(msg[0], 0, LCD_LINES));
+			//			m_ctrl->lcd->print(lcd_msg);
+			//			break;
 		case CTRL_OP_GET_BATTERY_HUMAN:
-			m_hws->print("BAT0: ");
-			m_hws->print(m_ctrl->cpu_batt.getVoltage(), DEC);
-			m_hws->print(" volts, ");
-			m_hws->print(m_ctrl->cpu_batt.getCurrent(), DEC);
-			m_hws->print(" amps\r\n");
 			m_hws->print("BAT1: ");
 			m_hws->print(m_ctrl->mot_batt.getVoltage(), DEC);
 			m_hws->print(" volts, ");
@@ -230,7 +225,7 @@ void OpcodeController::sendDataPacket() {
 			&(m_ctrl->rightEnc), (uint8_t) (m_ctrl->mot.leftSpeed & 0xff),
 			(uint8_t) (m_ctrl->mot.rightSpeed & 0xff));
 	sendGyroMessage(MSG_OP_YAW_GYRO, &(m_ctrl->yaw));
-	sendBatteryMessage(MSG_OP_CPU_BAT, &(m_ctrl->cpu_batt));
+	//sendBatteryMessage(MSG_OP_CPU_BAT, &(m_ctrl->cpu_batt));
 	sendBatteryMessage(MSG_OP_MOTOR_BAT, &(m_ctrl->mot_batt));
 	sendServosMessage(MSG_OP_BOTH_SERVO, m_ctrl->pan.read(),
 			m_ctrl->tilt.read());

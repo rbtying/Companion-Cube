@@ -3,6 +3,7 @@
 	<name>Blinkenlights</name>
 	<comment></comment>
 	<projects>
+		<project>Arduino-328P</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

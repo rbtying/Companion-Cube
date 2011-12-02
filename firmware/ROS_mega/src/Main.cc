@@ -14,7 +14,6 @@
 #include "utilities/PID.h"
 #include "motors/Sabertooth.h"
 #include "devices/CD74HC4067.h"
-#include "devices/LCD.h"
 #include "libraries/Servo/Servo.h"
 
 // Control
@@ -29,18 +28,12 @@ control_data ctrl;
 #define QP_TO_CM_LEFT (0.004)
 #define QP_TO_CM_RIGHT (0.004)
 
-// adc mux:
-CD74HC4067 mux(MUX_1, MUX_2, MUX_3, MUX_4, MUX_ADC);
-
-// LCD
-LCD lcd(LCD_RS, LCD_RW, LCD_EN, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
-
 // PID
 PID leftPID(&ctrl.leftPID);
 PID rightPID(&ctrl.rightPID);
 
 // Yaw Gyroscope
-Gyro yawGyro(&mux, YAW_GYRO, YAW_REF, LPR510_CONVERSION_FACTOR);
+Gyro yawGyro(YAW_GYRO, YAW_REF, LPR510_CONVERSION_FACTOR);
 
 // Motors
 Sabertooth m(SBT_ADDRESS, &Serial3);
@@ -68,21 +61,6 @@ void rEncHandler() {
 	Encoder::count(&ctrl.rightEnc);
 }
 
-void printLCD() {
-	lcd.setCursor(0, 2);
-	lcd.print(ctrl.leftEnc.velocity, 1);
-	lcd.print("cm/s | ");
-	lcd.print(ctrl.rightEnc.velocity, 1);
-	lcd.print("cm/s     ");
-	lcd.setCursor(0, 3);
-	lcd.print(ctrl.cpu_batt.getVoltage(), 0);
-	lcd.print("V | ");
-	lcd.print(ctrl.mot_batt.getVoltage(), 0);
-	lcd.print("V ");
-	lcd.print(ctrl.mot_batt.getCurrent(), 1);
-	lcd.print("A    ");
-}
-
 /**
  * Main execution loop
  */
@@ -92,7 +70,6 @@ int main() {
 	Serial.begin(115200);
 
 	// battery
-	ctrl.cpu_batt.set(NULL, VOLTAGE_SENS, CURRENT_SENS);
 	ctrl.mot_batt.set(NULL, MOTOR_VOLTAGE_SENS, MOTOR_CURRENT_SENS);
 
 	// servos
@@ -100,15 +77,6 @@ int main() {
 	ctrl.pan.attach(PANSERVO);
 	ctrl.tilt.write(90);
 	ctrl.tilt.attach(TILTSERVO);
-
-	lcd.begin(LCD_COLS, LCD_LINES);
-	lcd.clear();
-	lcd.setCursor(0, 0);
-	lcd.print("Companion Cube");
-	lcd.setCursor(0, 1);
-	lcd.print("Deactivated");
-
-	ctrl.lcd = &lcd;
 
 	// PID
 	ctrl.leftPID.proportional = 0.6;
@@ -137,24 +105,22 @@ int main() {
 	attachInterrupt(LENC_INT, lEncHandler, RISING);
 	attachInterrupt(RENC_INT, rEncHandler, RISING);
 
-	pinMode(LED, OUTPUT);
-	digitalWrite(LED, HIGH);
-
 	yawGyro.calibrate(1000);
 
 	for (uint32_t loops = 0;; loops++) {
 		cmd.update();
 
 		cTime = millis();
-
-		if (ledTime <= cTime) {
-			if (cmd.comm) {
-				fastIOWrite(LED, !fastIORead(LED));
-			} else {
-				fastIOWrite(LED, LOW);
-			}
-			ledTime = cTime + LED_INTERVAL;
-		}
+		/*
+		 if (ledTime <= cTime) {
+		 if (cmd.comm) {
+		 fastIOWrite(LED, !fastIORead(LED));
+		 } else {
+		 fastIOWrite(LED, LOW);
+		 }
+		 ledTime = cTime + LED_INTERVAL;
+		 }
+		 */
 
 		if (nexTime <= cTime) {
 			float dt = (TIME_INTERVAL + (cTime - nexTime)) * 0.001;
@@ -163,7 +129,7 @@ int main() {
 			yawGyro.update(&ctrl.yaw, dt);
 
 			// correct for zero drift
-			if (abs(ctrl.yaw.rate) <= 0.001 && ctrl.leftEnc.velocity== 0
+			if (abs(ctrl.yaw.rate) <= 0.001 && ctrl.leftEnc.velocity == 0
 					&& ctrl.rightEnc.velocity == 0) {// bot is not moving
 				yawGyro.calibrate(1000, true); // update calibration
 			}
@@ -185,8 +151,6 @@ int main() {
 			ctrl.mot.rightSpeed = constrain(ctrl.mot.rightSpeed, -127, 127);
 
 			m.setSpeed(&ctrl.mot);
-
-			printLCD();
 
 			nexTime = cTime + TIME_INTERVAL;
 		}

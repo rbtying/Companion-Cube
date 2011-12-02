@@ -9,7 +9,6 @@
 #define CONTROL_STRUCT_H_
 
 #include "libraries/Servo/Servo.h"
-#include "devices/LCD.h"
 #include "sensors/Battery.h"
 #include "sensors/Gyro.h"
 #include "sensors/Encoders.h"
@@ -17,7 +16,6 @@
 #include "motors/DualMotor.h"
 
 struct control_data {
-	Battery cpu_batt;
 	Battery mot_batt;
 	gyro_data yaw;
 	Servo pan;
@@ -27,7 +25,6 @@ struct control_data {
 	encoder_data leftEnc;
 	encoder_data rightEnc;
 	motor_data mot;
-	LCD * lcd;
 };
 
 typedef struct control_data control_data;
