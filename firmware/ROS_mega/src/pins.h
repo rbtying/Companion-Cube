@@ -16,6 +16,7 @@
 #define LENC_B 19
 #define RENC_A 20
 #define RENC_B 21
+#define RENCREV 1 // right-side encoder is reversed
 // encoder interrupts
 #define LENC_INT 5
 #define RENC_INT 3
