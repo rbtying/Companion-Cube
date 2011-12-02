@@ -1,6 +1,7 @@
 #Companion Cube#
 ##Project Details##
-_Author:_ Robert Ying ([mailto:me@robertying.com](me@robertying.com))
+_Author:_ Robert Ying ([me@robertying.com](mailto:me@robertying.com))
+
 _Website:_ [http://tpmo.im](http://tpmo.im)
 
 ##Description##
