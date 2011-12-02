@@ -6,7 +6,7 @@ src/Main.d src/Main.o: ../src/Main.cc \
  /home/rbtying/robot/firmware/Arduino-2560/HardwareSerial.h \
  /home/rbtying/robot/firmware/Arduino-2560/Stream.h \
  /home/rbtying/robot/firmware/Arduino-2560/Print.h ../src/pins.h \
- ../src/control_struct.h \
+ ../src/StateController.h ../src/control_struct.h \
  /home/rbtying/robot/firmware/Arduino-2560/libraries/Servo/Servo.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/Battery.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/devices/CD74HC4067.h \
@@ -14,6 +14,7 @@ src/Main.d src/Main.o: ../src/Main.cc \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/Encoders.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/PID.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/DualMotor.h \
+ ../src/state_struct.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/fastIO.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/Sabertooth.h \
  /home/rbtying/robot/firmware/Arduino-2560/HardwareSerial.h \
@@ -35,6 +36,8 @@ src/Main.d src/Main.o: ../src/Main.cc \
 
 ../src/pins.h:
 
+../src/StateController.h:
+
 ../src/control_struct.h:
 
 /home/rbtying/robot/firmware/Arduino-2560/libraries/Servo/Servo.h:
@@ -50,6 +53,8 @@ src/Main.d src/Main.o: ../src/Main.cc \
 /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/PID.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/DualMotor.h:
+
+../src/state_struct.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/fastIO.h:
 

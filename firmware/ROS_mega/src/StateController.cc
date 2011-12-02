@@ -71,7 +71,8 @@ void StateController::readDataPacket(uint8_t * contents, uint8_t length,
 	}
 }
 
-void robotStateToControl(robot_state * state, control_data * ctrl) {
+void StateController::robotStateToControl(robot_state * state,
+		control_data * ctrl) {
 	ctrl->pan.write(state->servo_pan_val);
 	ctrl->tilt.write(state->servo_tilt_val);
 	// read only values
@@ -98,7 +99,8 @@ void robotStateToControl(robot_state * state, control_data * ctrl) {
 	ctrl->rightPID.set = state->pid_right_setpoint * 0.1;
 }
 
-void controlToRobotState(control_data * ctrl, robot_state * state) {
+void StateController::controlToRobotState(control_data * ctrl,
+		robot_state * state) {
 	state->servo_pan_val = ctrl->pan.read();
 	state->servo_tilt_val = ctrl->tilt.read();
 	state->batt_motor_voltage = ctrl->mot_batt.getVoltage() * 100;

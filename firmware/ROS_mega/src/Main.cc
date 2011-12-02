@@ -6,6 +6,7 @@
  */
 #include <WProgram.h>
 #include "pins.h"
+#include "StateController.h"
 #include "control_struct.h"
 #include "sensors/Gyro.h"
 #include "sensors/Battery.h"
@@ -36,6 +37,9 @@ Gyro yawGyro(YAW_GYRO, YAW_REF, LPR510_CONVERSION_FACTOR);
 
 // Motors
 Sabertooth m(SBT_ADDRESS, &Serial3);
+
+// Controller
+StateController cmd(&ctrl, &Serial);
 
 /**
  * Encoder handlers
@@ -106,6 +110,7 @@ int main() {
 
 	for (uint32_t loops = 0;; loops++) {
 		cTime = millis();
+		cmd.update();
 
 		if (nexTime <= cTime) {
 			float dt = (TIME_INTERVAL + (cTime - nexTime)) * 0.001;
