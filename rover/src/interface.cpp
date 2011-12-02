@@ -84,7 +84,11 @@ int rover::interface::sendData() {
 
         // copy values into proper buffer
         for (int i = 0; i < STATE_STRUCT_SIZE; i++) {
+            if (buf[i] == '<' || buf[i] == '>') {
+                cmd[i+1] = '=';
+            } else {
                 cmd[i+1] = (char) buf[i];
+            }
         }
         cmd[0] = '<';
         cmd[45] = '>';
@@ -189,7 +193,7 @@ void rover::interface::processPacket(std::string * packet) {
         m_last_time = current_time;
         newPacket = true;
     } else {
-        ROS_ERROR("Packet length error: %d", packet->size());
+        ROS_ERROR("Packet length error: %d", (int) packet->size());
     }
 }
 
