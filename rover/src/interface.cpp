@@ -114,7 +114,7 @@ void rover::interface::enable() {
 }
 
 void rover::interface::disable() {
-    m_ds.flag &= 1 << FLAG_MOTOR_ENABLED;
+    m_ds.flag &= ~(1 << FLAG_MOTOR_ENABLED);
     sendData();
 }
 
