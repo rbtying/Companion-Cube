@@ -1,6 +1,6 @@
 <launch>
     <!-- base (drive train, odometry, imu) -->
-    <include file="$(find rover)/launch/urdf.launch" />
+    <!--<include file="$(find rover)/launch/urdf.launch" />-->
 
     <!-- robot state -->
     <include file="$(find rover)/launch/drive.launch" />

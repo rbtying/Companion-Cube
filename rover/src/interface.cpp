@@ -17,9 +17,9 @@ rover::interface::interface(const char * new_serial_port) {
     m_port = new cereal::CerealPort();
 
     m_roverAxleLength = ROVER_DEFAULT_AXLE_LENGTH;
-        m_max_vel = ROVER_MAX_VEL_MM;
+    m_max_vel = ROVER_MAX_VEL_MM;
 
-        m_last_time = ros::Time::now();
+    m_last_time = ros::Time::now();
 
     boost::function<void(std::string*)> callback;
     callback = boost::bind(&rover::interface::processPacket, this, _1);
@@ -55,45 +55,48 @@ int rover::interface::closeSerialPort() {
 }
 
 int rover::interface::sendData() {
-        char cmd[STATE_STRUCT_SIZE + 2];
-        uint8_t buf[STATE_STRUCT_SIZE];
-        memset(&m_state, 0, STATE_STRUCT_SIZE);
+    char cmd[STATE_STRUCT_SIZE + 2];
+    uint8_t buf[STATE_STRUCT_SIZE];
+    memset(&m_state, 0, STATE_STRUCT_SIZE);
+    memset(cmd, 0, STATE_STRUCT_SIZE + 2);
+    memset(buf, 0, STATE_STRUCT_SIZE);
 
-        // populate robot state based on given data
-        // PID
-        m_state.pid_left_proportional = m_ds.lP;
-        m_state.pid_left_integral = m_ds.lI;
-        m_state.pid_left_derivative = m_ds.lD;
-        m_state.pid_left_setpoint = m_ds.left_speed;
+    // populate robot state based on given data
+    // PID
+    m_state.pid_left_proportional = m_ds.lP;
+    m_state.pid_left_integral = m_ds.lI;
+    m_state.pid_left_derivative = m_ds.lD;
+    m_state.pid_left_setpoint = m_ds.left_speed;
 
-        m_state.pid_right_proportional = m_ds.rP;
-        m_state.pid_right_integral = m_ds.rI;
-        m_state.pid_right_derivative = m_ds.rD;
-        m_state.pid_right_setpoint = m_ds.right_speed;
+    m_state.pid_right_proportional = m_ds.rP;
+    m_state.pid_right_integral = m_ds.rI;
+    m_state.pid_right_derivative = m_ds.rD;
+    m_state.pid_right_setpoint = m_ds.right_speed;
 
-        // servos
-        m_state.servo_pan_val = m_ds.pan_angle;
-        m_state.servo_tilt_val = m_ds.tilt_angle;
+    // servos
+    m_state.servo_pan_val = m_ds.pan_angle;
+    m_state.servo_tilt_val = m_ds.tilt_angle;
 
-        // conversion factors
-        m_state.enc_left_conv = m_ds.cfl;
-        m_state.enc_right_conv = m_ds.cfr;
+    // conversion factors
+    m_state.enc_left_conv = m_ds.cfl;
+    m_state.enc_right_conv = m_ds.cfr;
 
-        // convert robot state into byte*
-        stateStructToByte(&m_state, buf);
+    // convert robot state into byte*
+    stateStructToByte(&m_state, buf);
 
-        // copy values into proper buffer
-        for (int i = 0; i < STATE_STRUCT_SIZE; i++) {
-            if (buf[i] == '<' || buf[i] == '>') {
-                cmd[i+1] = '=';
-            } else {
-                cmd[i+1] = (char) buf[i];
-            }
+    // copy values into proper buffer
+    for (int i = 0; i < STATE_STRUCT_SIZE; i++) {
+        if (buf[i] == '<' || buf[i] == '>') {
+            cmd[i+1] = '='; // ensure that no start or end characters
+                            // end up in the output
+        } else {
+            cmd[i+1] = (char) buf[i];
         }
-        cmd[0] = '<';
-        cmd[45] = '>';
-    
-        try {
+    }
+    cmd[0] = '<';
+    cmd[STATE_STRUCT_SIZE + 1] = '>';
+
+    try {
         m_port->write(cmd, STATE_STRUCT_SIZE + 2);
     } catch (cereal::Exception& e) {
         return (-1);
@@ -120,8 +123,8 @@ int rover::interface::driveDirect(int left_speed, int right_speed) {
 
     // ROS_INFO("Driving at [left: %i mm/s, right: %i mm/s]", left_speed_mm, right_speed_mm);
 
-        m_ds.left_speed = left_speed_mm;
-        m_ds.right_speed = right_speed_mm;
+    m_ds.left_speed = left_speed_mm;
+    m_ds.right_speed = right_speed_mm;
 
     return (0);
 }
@@ -141,8 +144,8 @@ int rover::interface::setServos(double panAngle, double tiltAngle) {
 
     // ROS_INFO("Setting servos to pan: %i degrees, tilt: %i degrees", panDeg, tiltDeg);
 
-        m_ds.pan_angle = (uint8_t) panDeg;
-        m_ds.tilt_angle = (uint8_t) tiltDeg;
+    m_ds.pan_angle = (uint8_t) panDeg;
+    m_ds.tilt_angle = (uint8_t) tiltDeg;
 
     return (0);
 }
@@ -159,7 +162,7 @@ void rover::interface::processPacket(std::string * packet) {
         robot_state rs;
         uint8_t buf[STATE_STRUCT_SIZE + 1];
         for (int i = 0; i < STATE_STRUCT_SIZE + 1; i++) {
-                buf[i] = data[i+1];
+            buf[i] = data[i+1];
         }
         // process byte array and fill state struct
         byteToStateStruct(buf, &rs);
@@ -216,8 +219,8 @@ int rover::interface::getSensorPackets(int timeout) {
 }
 
 void rover::interface::setConversionFactors(double left, double right) {
-        m_ds.cfl = left * 10000;
-        m_ds.cfr = right * 10000;
+    m_ds.cfl = left * 10000;
+    m_ds.cfr = right * 10000;
 }
 
 void rover::interface::setPID(double lP, double lI, double lD, double rP, double rI, double rD) {
@@ -232,11 +235,9 @@ void rover::interface::setPID(double lP, double lI, double lD, double rP, double
 
 void rover::interface::calculateOdometry(double dt) {
     double linSpeed = (m_velocity_left + m_velocity_right) / 2; // m/s
-    this->m_velocity_yaw
-            = normalize((m_velocity_right - m_velocity_left) / (m_roverAxleLength * 2)); // rad/s
 
-    this->m_odometry_yaw
-            = normalize(this->m_odometry_yaw + this->m_velocity_yaw * dt); // rad
+    this->m_velocity_yaw = normalize((m_velocity_right - m_velocity_left) / (m_roverAxleLength * 2)); // rad/s
+    this->m_odometry_yaw = normalize(this->m_odometry_yaw + this->m_velocity_yaw * dt); // rad
 
     this->m_velocity_x = linSpeed * cos(this->m_odometry_yaw); // m/s
     this->m_velocity_y = linSpeed * sin(this->m_odometry_yaw); // m/s
