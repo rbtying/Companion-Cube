@@ -1,0 +1,18 @@
+/*
+ * Relay.h
+ *
+ *  Created on: Dec 10, 2011
+ *      Author: rbtying
+ */
+
+#ifndef RELAY_H_
+#define RELAY_H_
+
+class Relay {
+public:
+	Relay(uint8_t pin);
+private:
+
+};
+
+#endif /* RELAY_H_ */

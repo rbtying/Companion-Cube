@@ -26,6 +26,7 @@
 #define SBT_ADDRESS 128
 #define SBT_PIN1 14 // Serial3 Tx
 #define SBT_PIN2 15 // Serial3 Rx
+#define RELAY_PIN 42 // motor enabled relay
 // ======= END MOTORS ===========
 
 // ======= START SERVOS =========

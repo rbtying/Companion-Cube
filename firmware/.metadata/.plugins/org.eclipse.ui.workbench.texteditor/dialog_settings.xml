@@ -3,26 +3,26 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="338" key="DIALOG_WIDTH"/>
 		<item value="126" key="DIALOG_Y_ORIGIN"/>
-		<item value="1044" key="DIALOG_X_ORIGIN"/>
 		<item value="472" key="DIALOG_HEIGHT"/>
+		<item value="1044" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
 		<item value="" key="selection"/>
 		<list key="findhistory">
+			<item value="reset()"/>
+			<item value="BAUDING"/>
+			<item value="SBT_BAUDING"/>
+			<item value="SBT_BAUD"/>
+			<item value="0xAA"/>
 			<item value="readDataPacket"/>
 			<item value="#include &quot;WProgram.h&quot;"/>
 			<item value="#include &quot;WProgram.h&quot;;"/>
-			<item value="init"/>
-			<item value="NewSoftSerial"/>
-			<item value="ISR"/>
-			<item value="setSpeed"/>
-			<item value="ctrl.leftPID."/>
 		</list>
 		<list key="replacehistory">
 			<item value="#include &lt;WProgram.h&gt;"/>

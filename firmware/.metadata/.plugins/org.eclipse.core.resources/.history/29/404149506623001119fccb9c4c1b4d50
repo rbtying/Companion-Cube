@@ -1,0 +1,13 @@
+/*
+ * Relay.cc
+ *
+ *  Created on: Dec 10, 2011
+ *      Author: rbtying
+ */
+
+#include "Relay.h"
+
+Relay::Relay() {
+	// TODO Auto-generated constructor stub
+
+}

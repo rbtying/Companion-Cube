@@ -25,6 +25,7 @@ struct control_data {
 	encoder_data leftEnc;
 	encoder_data rightEnc;
 	motor_data mot;
+	bool enabled;
 };
 
 typedef struct control_data control_data;

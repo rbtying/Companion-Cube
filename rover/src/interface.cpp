@@ -81,6 +81,9 @@ int rover::interface::sendData() {
     m_state.enc_left_conv = m_ds.cfl;
     m_state.enc_right_conv = m_ds.cfr;
 
+    // flags
+    m_state.flag = m_ds.flag;
+
     // convert robot state into byte*
     stateStructToByte(&m_state, buf);
 
@@ -103,6 +106,16 @@ int rover::interface::sendData() {
     }
 
     return (0);
+}
+
+void rover::interface::enable() {
+    m_ds.flag |= 1 << FLAG_MOTOR_ENABLED;
+    sendData();
+}
+
+void rover::interface::disable() {
+    m_ds.flag &= 1 << FLAG_MOTOR_ENABLED;
+    sendData();
 }
 
 int rover::interface::drive(double linear_speed, double angular_speed) {

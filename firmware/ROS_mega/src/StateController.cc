@@ -97,6 +97,7 @@ void StateController::robotStateToControl(robot_state * state,
 	ctrl->rightPID.integral = state->pid_right_integral * 0.01;
 	ctrl->rightPID.derivative = state->pid_right_derivative * 0.01;
 	ctrl->rightPID.set = state->pid_right_setpoint * 0.1;
+	ctrl->enabled = state->flag & (1 << FLAG_MOTOR_ENABLED);
 }
 
 void StateController::controlToRobotState(control_data * ctrl,
@@ -116,6 +117,7 @@ void StateController::controlToRobotState(control_data * ctrl,
 	//	state->enc_right_conv * 1000;
 	state->motor_left_val = ctrl->mot.leftSpeed;
 	state->motor_right_val = ctrl->mot.rightSpeed;
+	state->flag = ctrl->enabled << FLAG_MOTOR_ENABLED;
 	//  more write only values
 	//	state->pid_left_proportional * 100;
 	//	state->pid_left_integral * 100;

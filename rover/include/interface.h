@@ -29,6 +29,7 @@ struct desired_state {
     int16_t rP;
     int16_t rI;
     int16_t rD;
+    uint8_t flag;
 };
 
 typedef struct desired_state desired_state;
@@ -41,6 +42,8 @@ public:
 
 	int openSerialPort();
 	int closeSerialPort();
+    void enable();
+    void disable();
 
 	int getSensorPackets(int timeout);
 

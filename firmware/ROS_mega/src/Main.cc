@@ -14,6 +14,7 @@
 #include "utilities/PID.h"
 #include "motors/Sabertooth.h"
 #include "devices/CD74HC4067.h"
+#include "devices/StrongDriveOutput.h"
 #include "libraries/Servo/Servo.h"
 
 // Control
@@ -37,6 +38,7 @@ Gyro yawGyro(YAW_GYRO, YAW_REF, LPR510_CONVERSION_FACTOR);
 
 // Motors
 Sabertooth m(SBT_ADDRESS, &Serial3);
+StrongDriveOutput motorRelay(RELAY_PIN);
 
 // Controller
 StateController cmd(&ctrl, &Serial);
@@ -97,6 +99,8 @@ int main() {
 	ctrl.mot.leftFwd = false;
 	ctrl.mot.rightFwd = false;
 
+	ctrl.enabled = false;
+
 	// setup encoders
 	uint8_t enc_pins[4] = { RENC_A, RENC_B, LENC_A, LENC_B };
 	for (uint8_t i = 0; i < 4; i++) {
@@ -108,21 +112,26 @@ int main() {
 
 	yawGyro.calibrate(1000);
 
+	uint8_t wasEnabled = false;
+
 	for (uint32_t loops = 0;; loops++) {
 		cTime = millis();
 		cmd.update();
 
-		if (nexTime <= cTime) {
+		if (!wasEnabled && ctrl.enabled) { // just enabled
+			motorRelay.on();
+			delay(2000); // wait two seconds
+			m.reset(); // send bauding char
+		} else if (wasEnabled && !ctrl.enabled) { // just disabled
+			motorRelay.off();
+		}
+		wasEnabled = ctrl.enabled;
+
+		if (nexTime <= cTime && ctrl.enabled) {
 			float dt = (TIME_INTERVAL + (cTime - nexTime)) * 0.001;
 
 			// update gyro
 			yawGyro.update(&ctrl.yaw, dt);
-
-			// correct for zero drift
-			if (abs(ctrl.yaw.rate) <= 0.001 && ctrl.leftEnc.velocity == 0
-					&& ctrl.rightEnc.velocity == 0) {// bot is not moving
-				yawGyro.calibrate(1000, true); // update calibration
-			}
 
 			// Encoder processing
 			Encoder::update(&ctrl.leftEnc, dt);
@@ -133,6 +142,12 @@ int main() {
 
 			leftPID.process(dt);
 			rightPID.process(dt);
+
+			// correct for zero drift
+			if (abs(ctrl.yaw.rate) <= 0.001 && ctrl.leftEnc.velocity == 0
+					&& ctrl.rightEnc.velocity == 0) {// bot is not moving
+				yawGyro.calibrate(1000, true); // update calibration
+			}
 
 			ctrl.mot.leftSpeed += leftPID.getOutput();
 			ctrl.mot.rightSpeed += rightPID.getOutput();

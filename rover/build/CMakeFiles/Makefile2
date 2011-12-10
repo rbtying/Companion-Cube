@@ -503,8 +503,8 @@ clean: CMakeFiles/roverInterface.dir/clean
 # Target rules for target CMakeFiles/rover_node.dir
 
 # All Build rule for target.
-CMakeFiles/rover_node.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 CMakeFiles/rover_node.dir/all: CMakeFiles/roverInterface.dir/all
+CMakeFiles/rover_node.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/depend
 	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles  9 10

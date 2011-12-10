@@ -114,7 +114,7 @@
 #endif
 #endif
 
-#if !defined(digitalWriteFast)
+#if !defined(fastIOWrite)
 #define fastIOWrite(P, V) \
 if (__builtin_constant_p(P) && __builtin_constant_p(V)) { \
                 if (digitalPinToTimer(P)) \
@@ -125,7 +125,7 @@ if (__builtin_constant_p(P) && __builtin_constant_p(V)) { \
         }
 #endif
 
-#if !defined(pinModeFast)
+#if !defined(fastIOMode)
 #define fastIOMode(P, V) \
 if (__builtin_constant_p(P) && __builtin_constant_p(V)) { \
                 bitWrite(*digitalPinToDDRReg(P), digitalPinToBit(P), (V)); \
@@ -134,7 +134,7 @@ if (__builtin_constant_p(P) && __builtin_constant_p(V)) { \
         }
 #endif
 
-#if !defined(digitalReadFast)
+#if !defined(fastIORead)
 #define fastIORead(P) ( (int) __digitalReadFast__((P)) )
 #define __digitalReadFast__(P ) \
 (__builtin_constant_p(P) ) ? ( \

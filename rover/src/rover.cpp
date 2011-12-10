@@ -119,6 +119,8 @@ int main(int argc, char** argv) {
 		ROS_BREAK();
 	}
 
+    bot->enable();
+
 	usleep(5e6);
 
 	ros::Rate r(25.0);
@@ -287,6 +289,7 @@ int main(int argc, char** argv) {
 		r.sleep();
 	}
 
+    bot->disable();
 	// on exit close the serial port
 	bot->closeSerialPort();
 }

@@ -18,7 +18,8 @@ src/Main.d src/Main.o: ../src/Main.cc \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/fastIO.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/Sabertooth.h \
  /home/rbtying/robot/firmware/Arduino-2560/HardwareSerial.h \
- /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/DualMotor.h
+ /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/DualMotor.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/lib/devices/StrongDriveOutput.h
 
 /home/rbtying/robot/firmware/Arduino-2560/WProgram.h:
 
@@ -63,3 +64,5 @@ src/Main.d src/Main.o: ../src/Main.cc \
 /home/rbtying/robot/firmware/Arduino-2560/HardwareSerial.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/DualMotor.h:
+
+/home/rbtying/robot/firmware/ROS_mega/src/lib/devices/StrongDriveOutput.h:

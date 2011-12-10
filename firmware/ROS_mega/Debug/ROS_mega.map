@@ -291,22 +291,18 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./src/lib/motors/Sabertooth.o
  .data          0x0000000000000000        0x0 ./src/lib/motors/Sabertooth.o
  .bss           0x0000000000000000        0x0 ./src/lib/motors/Sabertooth.o
+ .text._ZN10SabertoothC2Ehh
+                0x0000000000000000       0x64 ./src/lib/motors/Sabertooth.o
  .text._ZN10Sabertooth12getLeftSpeedEv
                 0x0000000000000000        0x6 ./src/lib/motors/Sabertooth.o
  .text._ZN10Sabertooth13getRightSpeedEv
                 0x0000000000000000        0x6 ./src/lib/motors/Sabertooth.o
  .text._ZN10Sabertooth13setMaxVoltageEf
-                0x0000000000000000       0x2e ./src/lib/motors/Sabertooth.o
+                0x0000000000000000       0x2a ./src/lib/motors/Sabertooth.o
  .text._ZN10Sabertooth13setMinVoltageEf
-                0x0000000000000000       0x76 ./src/lib/motors/Sabertooth.o
+                0x0000000000000000       0x72 ./src/lib/motors/Sabertooth.o
  .text._ZN10Sabertooth8checksumEhh
                 0x0000000000000000        0xe ./src/lib/motors/Sabertooth.o
- .text._ZN10SabertoothC2EhP14HardwareSerial
-                0x0000000000000000       0x34 ./src/lib/motors/Sabertooth.o
- .text._ZN10SabertoothC1Ehh
-                0x0000000000000000       0x80 ./src/lib/motors/Sabertooth.o
- .text._ZN10SabertoothC2Ehh
-                0x0000000000000000       0x80 ./src/lib/motors/Sabertooth.o
  .rodata._ZTV9DualMotor
                 0x0000000000000000        0x6 ./src/lib/motors/Sabertooth.o
  .text          0x0000000000000000        0x0 ./src/lib/motors/ServoMotor.o
@@ -325,12 +321,10 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./src/lib/devices/CD74HC4067.o
  .data          0x0000000000000000        0x0 ./src/lib/devices/CD74HC4067.o
  .bss           0x0000000000000000        0x0 ./src/lib/devices/CD74HC4067.o
- .text._ZN10CD74HC406711readDigitalEh
-                0x0000000000000000       0x22 ./src/lib/devices/CD74HC4067.o
- .text._ZN10CD74HC4067C1Ehhhhh
-                0x0000000000000000       0x56 ./src/lib/devices/CD74HC4067.o
  .text._ZN10CD74HC4067C2Ehhhhh
-                0x0000000000000000       0x56 ./src/lib/devices/CD74HC4067.o
+                0x0000000000000000       0x54 ./src/lib/devices/CD74HC4067.o
+ .text._ZN10CD74HC406711readDigitalEh
+                0x0000000000000000       0x20 ./src/lib/devices/CD74HC4067.o
  .text          0x0000000000000000        0x0 ./src/lib/devices/LCD.o
  .data          0x0000000000000000        0x0 ./src/lib/devices/LCD.o
  .bss           0x0000000000000000        0x0 ./src/lib/devices/LCD.o
@@ -414,6 +408,11 @@ Discarded input sections
                 0x0000000000000000       0xca ./src/lib/devices/LCD.o
  .rodata._ZTV3LCD
                 0x0000000000000000        0xa ./src/lib/devices/LCD.o
+ .text          0x0000000000000000        0x0 ./src/lib/devices/StrongDriveOutput.o
+ .data          0x0000000000000000        0x0 ./src/lib/devices/StrongDriveOutput.o
+ .bss           0x0000000000000000        0x0 ./src/lib/devices/StrongDriveOutput.o
+ .text._ZN17StrongDriveOutput3setEb
+                0x0000000000000000       0x10 ./src/lib/devices/StrongDriveOutput.o
  .text          0x0000000000000000        0x0 ./src/Main.o
  .data          0x0000000000000000        0x0 ./src/Main.o
  .bss           0x0000000000000000        0x0 ./src/Main.o
@@ -937,6 +936,7 @@ LOAD ./src/lib/motors/Sabertooth.o
 LOAD ./src/lib/motors/ServoMotor.o
 LOAD ./src/lib/devices/CD74HC4067.o
 LOAD ./src/lib/devices/LCD.o
+LOAD ./src/lib/devices/StrongDriveOutput.o
 LOAD ./src/Main.o
 LOAD ./src/StateController.o
 LOAD /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a
@@ -1036,7 +1036,7 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x3fbc
+.text           0x0000000000000000     0x4226
  *(.vectors)
  .vectors       0x0000000000000000       0xe4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/crtm2560.o
                 0x0000000000000000                __vectors
@@ -1220,235 +1220,249 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
  .text._ZN4GyroC1Ehhf
                 0x0000000000001678       0x4a ./src/lib/sensors/Gyro.o
                 0x0000000000001678                _ZN4GyroC1Ehhf
- .text._ZN10Sabertooth5resetEv
-                0x00000000000016c2       0x16 ./src/lib/motors/Sabertooth.o
-                0x00000000000016c2                _ZN10Sabertooth5resetEv
- .text._ZN10Sabertooth10sendPacketEhh
-                0x00000000000016d8       0x70 ./src/lib/motors/Sabertooth.o
-                0x00000000000016d8                _ZN10Sabertooth10sendPacketEhh
- .text._ZN10Sabertooth13setMotorSpeedEhh
-                0x0000000000001748        0xa ./src/lib/motors/Sabertooth.o
-                0x0000000000001748                _ZN10Sabertooth13setMotorSpeedEhh
- .text._ZN10Sabertooth10setM1SpeedEa
-                0x0000000000001752       0x28 ./src/lib/motors/Sabertooth.o
-                0x0000000000001752                _ZN10Sabertooth10setM1SpeedEa
- .text._ZN10Sabertooth10setM2SpeedEa
-                0x000000000000177a       0x28 ./src/lib/motors/Sabertooth.o
-                0x000000000000177a                _ZN10Sabertooth10setM2SpeedEa
- .text._ZN10Sabertooth8setSpeedEaa
-                0x00000000000017a2       0x2c ./src/lib/motors/Sabertooth.o
-                0x00000000000017a2                _ZN10Sabertooth8setSpeedEaa
- .text._ZN10Sabertooth8setSpeedEaabb
-                0x00000000000017ce       0x56 ./src/lib/motors/Sabertooth.o
-                0x00000000000017ce                _ZN10Sabertooth8setSpeedEaabb
- .text._ZN10Sabertooth8setSpeedEP10motor_data
-                0x0000000000001824       0x48 ./src/lib/motors/Sabertooth.o
-                0x0000000000001824                _ZN10Sabertooth8setSpeedEP10motor_data
+ .text._ZN10Sabertooth10tunedDelayEj
+                0x00000000000016c2        0xe ./src/lib/motors/Sabertooth.o
+                0x00000000000016c2                _ZN10Sabertooth10tunedDelayEj
  .text._ZN10Sabertooth5writeEh
-                0x000000000000186c       0xd8 ./src/lib/motors/Sabertooth.o
-                0x000000000000186c                _ZN10Sabertooth5writeEh
- .text._ZN10SabertoothC1EhP14HardwareSerial
-                0x0000000000001944       0x34 ./src/lib/motors/Sabertooth.o
-                0x0000000000001944                _ZN10SabertoothC1EhP14HardwareSerial
+                0x00000000000016d0       0xda ./src/lib/motors/Sabertooth.o
+                0x00000000000016d0                _ZN10Sabertooth5writeEh
+ .text._ZN10Sabertooth5resetEv
+                0x00000000000017aa       0x12 ./src/lib/motors/Sabertooth.o
+                0x00000000000017aa                _ZN10Sabertooth5resetEv
+ .text._ZN10SabertoothC2EhP14HardwareSerial
+                0x00000000000017bc       0x32 ./src/lib/motors/Sabertooth.o
+                0x00000000000017bc                _ZN10SabertoothC1EhP14HardwareSerial
+                0x00000000000017bc                _ZN10SabertoothC2EhP14HardwareSerial
+ .text._ZN10Sabertooth10sendPacketEhh
+                0x00000000000017ee       0x5c ./src/lib/motors/Sabertooth.o
+                0x00000000000017ee                _ZN10Sabertooth10sendPacketEhh
+ .text._ZN10Sabertooth13setMotorSpeedEhh
+                0x000000000000184a        0xa ./src/lib/motors/Sabertooth.o
+                0x000000000000184a                _ZN10Sabertooth13setMotorSpeedEhh
+ .text._ZN10Sabertooth10setM1SpeedEa
+                0x0000000000001854       0x32 ./src/lib/motors/Sabertooth.o
+                0x0000000000001854                _ZN10Sabertooth10setM1SpeedEa
+ .text._ZN10Sabertooth10setM2SpeedEa
+                0x0000000000001886       0x32 ./src/lib/motors/Sabertooth.o
+                0x0000000000001886                _ZN10Sabertooth10setM2SpeedEa
+ .text._ZN10Sabertooth8setSpeedEaa
+                0x00000000000018b8       0x3a ./src/lib/motors/Sabertooth.o
+                0x00000000000018b8                _ZN10Sabertooth8setSpeedEaa
+ .text._ZN10Sabertooth8setSpeedEaabb
+                0x00000000000018f2       0x2a ./src/lib/motors/Sabertooth.o
+                0x00000000000018f2                _ZN10Sabertooth8setSpeedEaabb
+ .text._ZN10Sabertooth8setSpeedEP10motor_data
+                0x000000000000191c       0x44 ./src/lib/motors/Sabertooth.o
+                0x000000000000191c                _ZN10Sabertooth8setSpeedEP10motor_data
  .text._ZN10CD74HC40676setMuxEh
-                0x0000000000001978       0x7e ./src/lib/devices/CD74HC4067.o
-                0x0000000000001978                _ZN10CD74HC40676setMuxEh
+                0x0000000000001960       0x82 ./src/lib/devices/CD74HC4067.o
+                0x0000000000001960                _ZN10CD74HC40676setMuxEh
  .text._ZN10CD74HC40677readADCEh
-                0x00000000000019f6       0x18 ./src/lib/devices/CD74HC4067.o
-                0x00000000000019f6                _ZN10CD74HC40677readADCEh
+                0x00000000000019e2       0x16 ./src/lib/devices/CD74HC4067.o
+                0x00000000000019e2                _ZN10CD74HC40677readADCEh
+ .text._ZN17StrongDriveOutputC2Ehb
+                0x00000000000019f8      0x160 ./src/lib/devices/StrongDriveOutput.o
+                0x00000000000019f8                _ZN17StrongDriveOutputC1Ehb
+                0x00000000000019f8                _ZN17StrongDriveOutputC2Ehb
+ .text._ZN17StrongDriveOutput2onEv
+                0x0000000000001b58       0x46 ./src/lib/devices/StrongDriveOutput.o
+                0x0000000000001b58                _ZN17StrongDriveOutput2onEv
+ .text._ZN17StrongDriveOutput3offEv
+                0x0000000000001b9e       0x46 ./src/lib/devices/StrongDriveOutput.o
+                0x0000000000001b9e                _ZN17StrongDriveOutput3offEv
  .text._ZN7Encoder5countEP12encoder_data
-                0x0000000000001a0e       0x58 ./src/Main.o
-                0x0000000000001a0e                _ZN7Encoder5countEP12encoder_data
+                0x0000000000001be4       0x58 ./src/Main.o
+                0x0000000000001be4                _ZN7Encoder5countEP12encoder_data
  .text._Z11rEncHandlerv
-                0x0000000000001a66       0x16 ./src/Main.o
-                0x0000000000001a66                _Z11rEncHandlerv
+                0x0000000000001c3c       0x16 ./src/Main.o
+                0x0000000000001c3c                _Z11rEncHandlerv
  .text._Z11lEncHandlerv
-                0x0000000000001a7c       0x14 ./src/Main.o
-                0x0000000000001a7c                _Z11lEncHandlerv
+                0x0000000000001c52       0x14 ./src/Main.o
+                0x0000000000001c52                _Z11lEncHandlerv
  .text._ZN7Encoder6updateEP12encoder_dataf
-                0x0000000000001a90       0x6c ./src/Main.o
-                0x0000000000001a90                _ZN7Encoder6updateEP12encoder_dataf
+                0x0000000000001c66       0x6c ./src/Main.o
+                0x0000000000001c66                _ZN7Encoder6updateEP12encoder_dataf
  .text._ZN12control_dataC1Ev
-                0x0000000000001afc       0x20 ./src/Main.o
-                0x0000000000001afc                _ZN12control_dataC1Ev
- .text.main     0x0000000000001b1c      0x422 ./src/Main.o
-                0x0000000000001b1c                main
+                0x0000000000001cd2       0x20 ./src/Main.o
+                0x0000000000001cd2                _ZN12control_dataC1Ev
+ .text.main     0x0000000000001cf2      0x472 ./src/Main.o
+                0x0000000000001cf2                main
  .text._GLOBAL__I_nexTime
-                0x0000000000001f3e       0x68 ./src/Main.o
+                0x0000000000002164       0x74 ./src/Main.o
  .text._Z17byteToStateStructPhP11robot_state
-                0x0000000000001fa6      0x206 ./src/StateController.o
-                0x0000000000001fa6                _Z17byteToStateStructPhP11robot_state
+                0x00000000000021d8      0x20e ./src/StateController.o
+                0x00000000000021d8                _Z17byteToStateStructPhP11robot_state
  .text._Z17stateStructToByteP11robot_statePh
-                0x00000000000021ac      0x162 ./src/StateController.o
-                0x00000000000021ac                _Z17stateStructToByteP11robot_statePh
+                0x00000000000023e6      0x16a ./src/StateController.o
+                0x00000000000023e6                _Z17stateStructToByteP11robot_statePh
  .text._ZN15StateControllerC2EP12control_dataP14HardwareSerial
-                0x000000000000230e       0x24 ./src/StateController.o
-                0x000000000000230e                _ZN15StateControllerC1EP12control_dataP14HardwareSerial
-                0x000000000000230e                _ZN15StateControllerC2EP12control_dataP14HardwareSerial
+                0x0000000000002550       0x24 ./src/StateController.o
+                0x0000000000002550                _ZN15StateControllerC1EP12control_dataP14HardwareSerial
+                0x0000000000002550                _ZN15StateControllerC2EP12control_dataP14HardwareSerial
  .text._ZN15StateController14sendDataPacketEP11robot_state
-                0x0000000000002332       0xb6 ./src/StateController.o
-                0x0000000000002332                _ZN15StateController14sendDataPacketEP11robot_state
+                0x0000000000002574       0xb6 ./src/StateController.o
+                0x0000000000002574                _ZN15StateController14sendDataPacketEP11robot_state
  .text._ZN15StateController19robotStateToControlEP11robot_stateP12control_data
-                0x00000000000023e8      0x1e4 ./src/StateController.o
-                0x00000000000023e8                _ZN15StateController19robotStateToControlEP11robot_stateP12control_data
+                0x000000000000262a      0x202 ./src/StateController.o
+                0x000000000000262a                _ZN15StateController19robotStateToControlEP11robot_stateP12control_data
  .text._ZN15StateController14readDataPacketEPhhP11robot_state
-                0x00000000000025cc       0x30 ./src/StateController.o
-                0x00000000000025cc                _ZN15StateController14readDataPacketEPhhP11robot_state
+                0x000000000000282c       0x30 ./src/StateController.o
+                0x000000000000282c                _ZN15StateController14readDataPacketEPhhP11robot_state
  .text._ZN15StateController19controlToRobotStateEP12control_dataP11robot_state
-                0x00000000000025fc      0x118 ./src/StateController.o
-                0x00000000000025fc                _ZN15StateController19controlToRobotStateEP12control_dataP11robot_state
+                0x000000000000285c      0x122 ./src/StateController.o
+                0x000000000000285c                _ZN15StateController19controlToRobotStateEP12control_dataP11robot_state
  .text._ZN15StateController6updateEv
-                0x0000000000002714      0x144 ./src/StateController.o
-                0x0000000000002714                _ZN15StateController6updateEv
+                0x000000000000297e      0x144 ./src/StateController.o
+                0x000000000000297e                _ZN15StateController6updateEv
  .text._Z10store_charhP11ring_buffer
-                0x0000000000002858       0x4e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000002858                _Z10store_charhP11ring_buffer
+                0x0000000000002ac2       0x4e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002ac2                _Z10store_charhP11ring_buffer
  .text.__vector_25
-                0x00000000000028a6       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000028a6                __vector_25
+                0x0000000000002b10       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002b10                __vector_25
  .text.__vector_36
-                0x00000000000028fe       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000028fe                __vector_36
+                0x0000000000002b68       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002b68                __vector_36
  .text.__vector_51
-                0x0000000000002956       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000002956                __vector_51
+                0x0000000000002bc0       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002bc0                __vector_51
  .text.__vector_54
-                0x00000000000029ae       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000029ae                __vector_54
+                0x0000000000002c18       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002c18                __vector_54
  .text._ZN14HardwareSerial5beginEl
-                0x0000000000002a06      0x1e2 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000002a06                _ZN14HardwareSerial5beginEl
+                0x0000000000002c70      0x1e2 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002c70                _ZN14HardwareSerial5beginEl
  .text._ZN14HardwareSerial9availableEv
-                0x0000000000002be8       0x28 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000002be8                _ZN14HardwareSerial9availableEv
+                0x0000000000002e52       0x28 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002e52                _ZN14HardwareSerial9availableEv
  .text._ZN14HardwareSerial4peekEv
-                0x0000000000002c10       0x34 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000002c10                _ZN14HardwareSerial4peekEv
+                0x0000000000002e7a       0x34 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002e7a                _ZN14HardwareSerial4peekEv
  .text._ZN14HardwareSerial4readEv
-                0x0000000000002c44       0x50 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000002c44                _ZN14HardwareSerial4readEv
+                0x0000000000002eae       0x50 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002eae                _ZN14HardwareSerial4readEv
  .text._ZN14HardwareSerial5flushEv
-                0x0000000000002c94       0x18 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000002c94                _ZN14HardwareSerial5flushEv
+                0x0000000000002efe       0x18 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002efe                _ZN14HardwareSerial5flushEv
  .text._ZN14HardwareSerial5writeEh
-                0x0000000000002cac       0x26 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000002cac                _ZN14HardwareSerial5writeEh
+                0x0000000000002f16       0x26 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002f16                _ZN14HardwareSerial5writeEh
  .text._GLOBAL__I_rx_buffer
-                0x0000000000002cd2      0x1a0 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000002f3c      0x1a0 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
  .text._ZN5Print5writeEPKc
-                0x0000000000002e72       0x30 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
-                0x0000000000002e72                _ZN5Print5writeEPKc
+                0x00000000000030dc       0x30 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                0x00000000000030dc                _ZN5Print5writeEPKc
  .text._ZN5Print5writeEPKhj
-                0x0000000000002ea2       0x3e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
-                0x0000000000002ea2                _ZN5Print5writeEPKhj
+                0x000000000000310c       0x3e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                0x000000000000310c                _ZN5Print5writeEPKhj
  .text.attachInterrupt
-                0x0000000000002ee0       0xf8 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
-                0x0000000000002ee0                attachInterrupt
+                0x000000000000314a       0xf8 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
+                0x000000000000314a                attachInterrupt
  .text.__vector_1
-                0x0000000000002fd8       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
-                0x0000000000002fd8                __vector_1
+                0x0000000000003242       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
+                0x0000000000003242                __vector_1
  .text.__vector_2
-                0x000000000000303a       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
-                0x000000000000303a                __vector_2
+                0x00000000000032a4       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
+                0x00000000000032a4                __vector_2
  .text.__vector_3
-                0x000000000000309c       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
-                0x000000000000309c                __vector_3
+                0x0000000000003306       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
+                0x0000000000003306                __vector_3
  .text.__vector_4
-                0x00000000000030fe       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
-                0x00000000000030fe                __vector_4
+                0x0000000000003368       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
+                0x0000000000003368                __vector_4
  .text.__vector_5
-                0x0000000000003160       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
-                0x0000000000003160                __vector_5
+                0x00000000000033ca       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
+                0x00000000000033ca                __vector_5
  .text.__vector_6
-                0x00000000000031c2       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
-                0x00000000000031c2                __vector_6
+                0x000000000000342c       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
+                0x000000000000342c                __vector_6
  .text.__vector_7
-                0x0000000000003224       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
-                0x0000000000003224                __vector_7
+                0x000000000000348e       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
+                0x000000000000348e                __vector_7
  .text.__vector_8
-                0x0000000000003286       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
-                0x0000000000003286                __vector_8
+                0x00000000000034f0       0x62 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
+                0x00000000000034f0                __vector_8
  .text._Z3maplllll
-                0x00000000000032e8       0x92 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WMath.o)
-                0x00000000000032e8                _Z3maplllll
+                0x0000000000003552       0x92 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WMath.o)
+                0x0000000000003552                _Z3maplllll
  .text.__vector_23
-                0x000000000000337a       0x90 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x000000000000337a                __vector_23
- .text.millis   0x000000000000340a       0x1c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x000000000000340a                millis
- .text.micros   0x0000000000003426       0x4c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x0000000000003426                micros
- .text.delay    0x0000000000003472       0x4c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x0000000000003472                delay
- .text.init     0x00000000000034be       0xc4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x00000000000034be                init
+                0x00000000000035e4       0x90 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x00000000000035e4                __vector_23
+ .text.millis   0x0000000000003674       0x1c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x0000000000003674                millis
+ .text.micros   0x0000000000003690       0x4c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x0000000000003690                micros
+ .text.delay    0x00000000000036dc       0x4c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x00000000000036dc                delay
+ .text.init     0x0000000000003728       0xc4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x0000000000003728                init
  .text.analogRead
-                0x0000000000003582       0x68 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_analog.o)
-                0x0000000000003582                analogRead
- .text.pinMode  0x00000000000035ea       0x4c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_digital.o)
-                0x00000000000035ea                pinMode
+                0x00000000000037ec       0x68 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_analog.o)
+                0x00000000000037ec                analogRead
+ .text.pinMode  0x0000000000003854       0x4c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_digital.o)
+                0x0000000000003854                pinMode
  .text.digitalWrite
-                0x0000000000003636      0x122 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_digital.o)
-                0x0000000000003636                digitalWrite
+                0x00000000000038a0      0x122 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_digital.o)
+                0x00000000000038a0                digitalWrite
  .text._ZN5ServoC1Ev
-                0x0000000000003758       0x34 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000003758                _ZN5ServoC1Ev
+                0x00000000000039c2       0x34 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x00000000000039c2                _ZN5ServoC1Ev
  .text._ZN5Servo17writeMicrosecondsEi
-                0x000000000000378c       0x8e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x000000000000378c                _ZN5Servo17writeMicrosecondsEi
+                0x00000000000039f6       0x8e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x00000000000039f6                _ZN5Servo17writeMicrosecondsEi
  .text._ZN5Servo16readMicrosecondsEv
-                0x000000000000381a       0x3e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x000000000000381a                _ZN5Servo16readMicrosecondsEv
+                0x0000000000003a84       0x3e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000003a84                _ZN5Servo16readMicrosecondsEv
  .text._ZN5Servo4readEv
-                0x0000000000003858       0xaa /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000003858                _ZN5Servo4readEv
+                0x0000000000003ac2       0xaa /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000003ac2                _ZN5Servo4readEv
  .text._ZN5Servo5writeEi
-                0x0000000000003902       0xd0 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000003902                _ZN5Servo5writeEi
+                0x0000000000003b6c       0xd0 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000003b6c                _ZN5Servo5writeEi
  .text._ZN5Servo6attachEiii
-                0x00000000000039d2      0x158 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x00000000000039d2                _ZN5Servo6attachEiii
+                0x0000000000003c3c      0x158 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000003c3c                _ZN5Servo6attachEiii
  .text._ZN5Servo6attachEi
-                0x0000000000003b2a        0xe /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000003b2a                _ZN5Servo6attachEi
+                0x0000000000003d94        0xe /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000003d94                _ZN5Servo6attachEi
  .text._ZL17handle_interrupts18timer16_Sequence_tPVjS1_
-                0x0000000000003b38      0x184 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000003da2      0x184 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
  .text.__vector_47
-                0x0000000000003cbc       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000003cbc                __vector_47
+                0x0000000000003f26       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000003f26                __vector_47
  .text.__vector_42
-                0x0000000000003d16       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000003d16                __vector_42
+                0x0000000000003f80       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000003f80                __vector_42
  .text.__vector_32
-                0x0000000000003d70       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000003d70                __vector_32
+                0x0000000000003fda       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000003fda                __vector_32
  .text.__vector_17
-                0x0000000000003dca       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000003dca                __vector_17
- .text.libgcc   0x0000000000003e24       0x3e /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_mulsi3.o)
-                0x0000000000003e24                __mulsi3
- .text.libgcc   0x0000000000003e62       0x18 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodqi4.o)
-                0x0000000000003e62                __udivmodqi4
- .text.libgcc   0x0000000000003e7a       0x28 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodhi4.o)
-                0x0000000000003e7a                __udivmodhi4
- .text.libgcc   0x0000000000003ea2       0x26 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodhi4.o)
-                0x0000000000003ea2                __divmodhi4
-                0x0000000000003ea2                _div
- .text.libgcc   0x0000000000003ec8       0x44 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodsi4.o)
-                0x0000000000003ec8                __udivmodsi4
- .text.libgcc   0x0000000000003f0c       0x36 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodsi4.o)
-                0x0000000000003f0c                __divmodsi4
- .text.libgcc   0x0000000000003f42       0x38 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_prologue.o)
-                0x0000000000003f42                __prologue_saves__
- .text.libgcc   0x0000000000003f7a       0x36 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_epilogue.o)
-                0x0000000000003f7a                __epilogue_restores__
- .text.libgcc   0x0000000000003fb0        0x8 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_tablejump_elpm.o)
-                0x0000000000003fb0                __tablejump_elpm__
-                0x0000000000003fb8                . = ALIGN (0x2)
+                0x0000000000004034       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000004034                __vector_17
+ .text.libgcc   0x000000000000408e       0x3e /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_mulsi3.o)
+                0x000000000000408e                __mulsi3
+ .text.libgcc   0x00000000000040cc       0x18 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodqi4.o)
+                0x00000000000040cc                __udivmodqi4
+ .text.libgcc   0x00000000000040e4       0x28 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodhi4.o)
+                0x00000000000040e4                __udivmodhi4
+ .text.libgcc   0x000000000000410c       0x26 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodhi4.o)
+                0x000000000000410c                __divmodhi4
+                0x000000000000410c                _div
+ .text.libgcc   0x0000000000004132       0x44 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodsi4.o)
+                0x0000000000004132                __udivmodsi4
+ .text.libgcc   0x0000000000004176       0x36 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodsi4.o)
+                0x0000000000004176                __divmodsi4
+ .text.libgcc   0x00000000000041ac       0x38 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_prologue.o)
+                0x00000000000041ac                __prologue_saves__
+ .text.libgcc   0x00000000000041e4       0x36 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_epilogue.o)
+                0x00000000000041e4                __epilogue_restores__
+ .text.libgcc   0x000000000000421a        0x8 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_tablejump_elpm.o)
+                0x000000000000421a                __tablejump_elpm__
+                0x0000000000004222                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000003fb8        0x0 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
-                0x0000000000003fb8                exit
-                0x0000000000003fb8                _exit
+ .fini9         0x0000000000004222        0x0 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
+                0x0000000000004222                exit
+                0x0000000000004222                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1467,11 +1481,11 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000003fb8        0x4 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
+ .fini0         0x0000000000004222        0x4 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000003fbc                _etext = .
+                0x0000000000004226                _etext = .
 
-.data           0x0000000000800200      0x124 load address 0x0000000000003fbc
+.data           0x0000000000800200      0x124 load address 0x0000000000004226
                 0x0000000000800200                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800200        0x8 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_thenan_sf.o)
@@ -1496,7 +1510,7 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
                 0x0000000000800324                _edata = .
                 0x0000000000800324                PROVIDE (__data_end, .)
 
-.bss            0x0000000000800324      0x43d
+.bss            0x0000000000800324      0x444
                 0x0000000000800324                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
@@ -1516,65 +1530,68 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
                 0x000000000080032f                nexTime
  .bss.cTime     0x0000000000800333        0x4 ./src/Main.o
                 0x0000000000800333                cTime
- .bss.ctrl      0x0000000000800337       0x9b ./src/Main.o
+ .bss.ctrl      0x0000000000800337       0x9c ./src/Main.o
                 0x0000000000800337                ctrl
- .bss.leftPID   0x00000000008003d2        0x2 ./src/Main.o
-                0x00000000008003d2                leftPID
- .bss.rightPID  0x00000000008003d4        0x2 ./src/Main.o
-                0x00000000008003d4                rightPID
- .bss.yawGyro   0x00000000008003d6        0xd ./src/Main.o
-                0x00000000008003d6                yawGyro
- .bss.m         0x00000000008003e3        0xd ./src/Main.o
-                0x00000000008003e3                m
- .bss.cmd       0x00000000008003f0       0x67 ./src/Main.o
-                0x00000000008003f0                cmd
+ .bss.leftPID   0x00000000008003d3        0x2 ./src/Main.o
+                0x00000000008003d3                leftPID
+ .bss.rightPID  0x00000000008003d5        0x2 ./src/Main.o
+                0x00000000008003d5                rightPID
+ .bss.yawGyro   0x00000000008003d7        0xd ./src/Main.o
+                0x00000000008003d7                yawGyro
+ .bss.m         0x00000000008003e4        0xd ./src/Main.o
+                0x00000000008003e4                m
+ .bss.motorRelay
+                0x00000000008003f1        0x4 ./src/Main.o
+                0x00000000008003f1                motorRelay
+ .bss.cmd       0x00000000008003f5       0x69 ./src/Main.o
+                0x00000000008003f5                cmd
  .bss.rx_buffer
-                0x0000000000800457       0x84 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800457                rx_buffer
+                0x000000000080045e       0x84 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x000000000080045e                rx_buffer
  .bss.rx_buffer1
-                0x00000000008004db       0x84 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000008004db                rx_buffer1
+                0x00000000008004e2       0x84 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000008004e2                rx_buffer1
  .bss.rx_buffer2
-                0x000000000080055f       0x84 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x000000000080055f                rx_buffer2
+                0x0000000000800566       0x84 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800566                rx_buffer2
  .bss.rx_buffer3
-                0x00000000008005e3       0x84 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000008005e3                rx_buffer3
- .bss.Serial    0x0000000000800667       0x13 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800667                Serial
- .bss.Serial1   0x000000000080067a       0x13 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x000000000080067a                Serial1
- .bss.Serial2   0x000000000080068d       0x13 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x000000000080068d                Serial2
- .bss.Serial3   0x00000000008006a0       0x13 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000008006a0                Serial3
- .bss.intFunc   0x00000000008006b3       0x10 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
+                0x00000000008005ea       0x84 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000008005ea                rx_buffer3
+ .bss.Serial    0x000000000080066e       0x13 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x000000000080066e                Serial
+ .bss.Serial1   0x0000000000800681       0x13 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800681                Serial1
+ .bss.Serial2   0x0000000000800694       0x13 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800694                Serial2
+ .bss.Serial3   0x00000000008006a7       0x13 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000008006a7                Serial3
+ .bss.intFunc   0x00000000008006ba       0x10 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WInterrupts.o)
  .bss.timer0_overflow_count
-                0x00000000008006c3        0x4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x00000000008006c3                timer0_overflow_count
+                0x00000000008006ca        0x4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x00000000008006ca                timer0_overflow_count
  .bss.timer0_millis
-                0x00000000008006c7        0x4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x00000000008006c7                timer0_millis
+                0x00000000008006ce        0x4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x00000000008006ce                timer0_millis
  .bss.timer0_fract
-                0x00000000008006cb        0x1 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x00000000008006d2        0x1 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
  .bss.ServoCount
-                0x00000000008006cc        0x1 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x00000000008006cc                ServoCount
+                0x00000000008006d3        0x1 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x00000000008006d3                ServoCount
  .bss._ZL6servos
-                0x00000000008006cd       0x90 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x00000000008006d4       0x90 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
  .bss._ZL7Channel
-                0x000000000080075d        0x4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000800764        0x4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
  *(COMMON)
-                0x0000000000800761                PROVIDE (__bss_end, .)
-                0x0000000000003fbc                __data_load_start = LOADADDR (.data)
-                0x00000000000040e0                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000000000800768                PROVIDE (__bss_end, .)
+                0x0000000000004226                __data_load_start = LOADADDR (.data)
+                0x000000000000434a                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800761        0x0
-                0x0000000000800761                PROVIDE (__noinit_start, .)
+.noinit         0x0000000000800768        0x0
+                0x0000000000800768                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0000000000800761                PROVIDE (__noinit_end, .)
-                0x0000000000800761                _end = .
-                0x0000000000800761                PROVIDE (__heap_start, .)
+                0x0000000000800768                PROVIDE (__noinit_end, .)
+                0x0000000000800768                _end = .
+                0x0000000000800768                PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
  *(.eeprom*)
@@ -1886,6 +1903,7 @@ Sabertooth::checksum(unsigned char, unsigned char) ./src/lib/motors/Sabertooth.o
 Sabertooth::getLeftSpeed()                        ./src/lib/motors/Sabertooth.o
 Sabertooth::getRightSpeed()                       ./src/lib/motors/Sabertooth.o
 Sabertooth::reset()                               ./src/lib/motors/Sabertooth.o
+                                                  ./src/Main.o
 Sabertooth::sendPacket(unsigned char, unsigned char) ./src/lib/motors/Sabertooth.o
 Sabertooth::setM1Speed(signed char)               ./src/lib/motors/Sabertooth.o
 Sabertooth::setM2Speed(signed char)               ./src/lib/motors/Sabertooth.o
@@ -1896,6 +1914,7 @@ Sabertooth::setSpeed(motor_data*)                 ./src/lib/motors/Sabertooth.o
                                                   ./src/Main.o
 Sabertooth::setSpeed(signed char, signed char)    ./src/lib/motors/Sabertooth.o
 Sabertooth::setSpeed(signed char, signed char, bool, bool) ./src/lib/motors/Sabertooth.o
+Sabertooth::tunedDelay(unsigned int)              ./src/lib/motors/Sabertooth.o
 Sabertooth::write(unsigned char)                  ./src/lib/motors/Sabertooth.o
 Serial                                            /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
                                                   ./src/Main.o
@@ -1992,6 +2011,14 @@ String::toLowerCase() const                       /home/rbtying/robot/firmware/A
 String::toUpperCase() const                       /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WString.o)
 String::trim() const                              /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WString.o)
 String::~String()                                 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WString.o)
+StrongDriveOutput::StrongDriveOutput(unsigned char, bool) ./src/lib/devices/StrongDriveOutput.o
+                                                  ./src/Main.o
+StrongDriveOutput::StrongDriveOutput(unsigned char, bool) ./src/lib/devices/StrongDriveOutput.o
+StrongDriveOutput::off()                          ./src/lib/devices/StrongDriveOutput.o
+                                                  ./src/Main.o
+StrongDriveOutput::on()                           ./src/lib/devices/StrongDriveOutput.o
+                                                  ./src/Main.o
+StrongDriveOutput::set(bool)                      ./src/lib/devices/StrongDriveOutput.o
 TSL1401::TSL1401(unsigned char, unsigned char, unsigned char, unsigned int) ./src/lib/sensors/TSL1401.o
 TSL1401::TSL1401(unsigned char, unsigned char, unsigned char, unsigned int) ./src/lib/sensors/TSL1401.o
 TSL1401::flush()                                  ./src/lib/sensors/TSL1401.o
@@ -2353,6 +2380,7 @@ cmd                                               ./src/Main.o
 control_data::control_data()                      ./src/Main.o
 ctrl                                              ./src/Main.o
 delay                                             /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                                                  ./src/Main.o
                                                   ./src/lib/sensors/Gyro.o
 delayMicroseconds                                 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
                                                   ./src/lib/devices/LCD.o
@@ -2428,11 +2456,13 @@ millis                                            /home/rbtying/robot/firmware/A
 modf                                              /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libm.a(modf.o)
                                                   /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libm.a(exp.o)
 modff                                             /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libm.a(modf.o)
+motorRelay                                        ./src/Main.o
 nexTime                                           ./src/Main.o
 pinMode                                           /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_digital.o)
                                                   /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
                                                   /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_analog.o)
                                                   ./src/Main.o
+                                                  ./src/lib/devices/StrongDriveOutput.o
                                                   ./src/lib/devices/LCD.o
                                                   ./src/lib/devices/CD74HC4067.o
                                                   ./src/lib/motors/Sabertooth.o

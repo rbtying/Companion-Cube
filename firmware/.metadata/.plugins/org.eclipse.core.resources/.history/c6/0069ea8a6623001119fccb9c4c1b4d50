@@ -1,0 +1,23 @@
+/*
+ * StrongDriveOutput.h
+ *
+ *  Created on: Dec 10, 2011
+ *      Author: rbtying
+ */
+
+#ifndef STRONGDRIVEOUTPUT_H_
+#define STRONGDRIVEOUTPUT_H_
+
+class StrongDriveOutput {
+public:
+	StrongDriveOutput(uint8_t pin);
+	void set(bool b);
+	void on();
+	void off();
+	bool get();
+private:
+	uint8_t m_port;
+	uint8_t m_pin;
+};
+
+#endif /* STRONGDRIVEOUTPUT_H_ */
