@@ -5,3 +5,5 @@ int32 leftCount
 int32 rightCount
 int32 leftMotor
 int32 rightMotor
+float32 left_conversion_factor
+float32 right_conversion_factor

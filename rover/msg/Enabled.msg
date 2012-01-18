@@ -1,0 +1,2 @@
+bool motorsEnabled
+bool settingsDumpEnabled

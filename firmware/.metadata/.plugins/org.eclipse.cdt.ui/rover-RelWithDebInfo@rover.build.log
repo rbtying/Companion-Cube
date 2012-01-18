@@ -1,0 +1,157 @@
+/usr/bin/make all 
+mkdir -p bin
+cd build && cmake -Wdev -DCMAKE_TOOLCHAIN_FILE=`rospack find rosbuild`/rostoolchain.cmake  ..
+Re-run cmake no build system arguments
+-- Action Files:
+[rosbuild] Building package rover
+[rosbuild] Including /opt/ros/electric/stacks/ros_comm/clients/roslisp/cmake/roslisp.cmake
+[rosbuild] Including /opt/ros/electric/stacks/ros_comm/clients/rospy/cmake/rospy.cmake
+[rosbuild] Including /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/cmake/roscpp.cmake
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rbtying/robot/rover/build
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_TOOLCHAIN_FILE
+
+
+cd build && /usr/bin/make 
+make[1]: Entering directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -H/home/rbtying/robot/rover -B/home/rbtying/robot/rover/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/rbtying/robot/rover/build/CMakeFiles /home/rbtying/robot/rover/build/CMakeFiles/progress.marks
+/usr/bin/make -f CMakeFiles/Makefile2 all
+make[2]: Entering directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/ROSBUILD_genaction_msgs.dir/build.make CMakeFiles/ROSBUILD_genaction_msgs.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/ROSBUILD_genaction_msgs.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/ROSBUILD_genaction_msgs.dir/build.make CMakeFiles/ROSBUILD_genaction_msgs.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/ROSBUILD_genaction_msgs.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles 
+[  0%] Built target ROSBUILD_genaction_msgs
+/usr/bin/make -f CMakeFiles/rosbuild_premsgsrvgen.dir/build.make CMakeFiles/rosbuild_premsgsrvgen.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/rosbuild_premsgsrvgen.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/rosbuild_premsgsrvgen.dir/build.make CMakeFiles/rosbuild_premsgsrvgen.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/rosbuild_premsgsrvgen.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles 
+[  0%] Built target rosbuild_premsgsrvgen
+/usr/bin/make -f CMakeFiles/ROSBUILD_genmsg_cpp.dir/build.make CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/ROSBUILD_genmsg_cpp.dir/build.make CMakeFiles/ROSBUILD_genmsg_cpp.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/ROSBUILD_genmsg_cpp.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles  1 2 3 4 5 6
+[ 24%] Built target ROSBUILD_genmsg_cpp
+/usr/bin/make -f CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make CMakeFiles/ROSBUILD_genmsg_lisp.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/ROSBUILD_genmsg_lisp.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles  7 8 9 10 11 12
+[ 48%] Built target ROSBUILD_genmsg_lisp
+/usr/bin/make -f CMakeFiles/ROSBUILD_genmsg_py.dir/build.make CMakeFiles/ROSBUILD_genmsg_py.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/ROSBUILD_genmsg_py.dir/build.make CMakeFiles/ROSBUILD_genmsg_py.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/ROSBUILD_genmsg_py.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles  13 14 15 16 17 18 19
+[ 76%] Built target ROSBUILD_genmsg_py
+/usr/bin/make -f CMakeFiles/rospack_genmsg.dir/build.make CMakeFiles/rospack_genmsg.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/rospack_genmsg.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg.dir/build.make CMakeFiles/rospack_genmsg.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/rospack_genmsg.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles 
+[ 76%] Built target rospack_genmsg
+/usr/bin/make -f CMakeFiles/rospack_genmsg_all.dir/build.make CMakeFiles/rospack_genmsg_all.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/rospack_genmsg_all.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_all.dir/build.make CMakeFiles/rospack_genmsg_all.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/rospack_genmsg_all.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles 
+[ 76%] Built target rospack_genmsg_all
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/rospack_genmsg_libexe.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles 
+[ 76%] Built target rospack_genmsg_libexe
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/rosbuild_precompile.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles 
+[ 76%] Built target rosbuild_precompile
+/usr/bin/make -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/rover_node.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/rover_node.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles  20 21
+[ 84%] Built target rover_node
+/usr/bin/make -f CMakeFiles/rover_teleop_joy.dir/build.make CMakeFiles/rover_teleop_joy.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/rover_teleop_joy.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/rover_teleop_joy.dir/build.make CMakeFiles/rover_teleop_joy.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/rover_teleop_joy.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles  22 23
+[ 92%] Built target rover_teleop_joy
+/usr/bin/make -f CMakeFiles/umbmark.dir/build.make CMakeFiles/umbmark.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/umbmark.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/umbmark.dir/build.make CMakeFiles/umbmark.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/umbmark.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles  24
+[ 96%] Built target umbmark
+/usr/bin/make -f CMakeFiles/wanderer.dir/build.make CMakeFiles/wanderer.dir/depend
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+cd /home/rbtying/robot/rover/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rbtying/robot/rover /home/rbtying/robot/rover /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build /home/rbtying/robot/rover/build/CMakeFiles/wanderer.dir/DependInfo.cmake --color=
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/make -f CMakeFiles/wanderer.dir/build.make CMakeFiles/wanderer.dir/build
+make[3]: Entering directory `/home/rbtying/robot/rover/build'
+make[3]: Nothing to be done for `CMakeFiles/wanderer.dir/build'.
+make[3]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles  25
+[100%] Built target wanderer
+make[2]: Leaving directory `/home/rbtying/robot/rover/build'
+/usr/bin/cmake -E cmake_progress_start /home/rbtying/robot/rover/build/CMakeFiles 0
+make[1]: Leaving directory `/home/rbtying/robot/rover/build'

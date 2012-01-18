@@ -33,11 +33,12 @@ rosbuild_genmsg()
 #rosbuild_add_executable(example examples/example.cpp)
 #target_link_libraries(example ${PROJECT_NAME})
 
-rosbuild_add_library(roverInterface src/interface.cpp)
+#rosbuild_add_library(roverInterface src/interface.cpp)
 
-rosbuild_add_executable(rover_node src/rover.cpp src/interface.cpp)
-target_link_libraries(rover_node cereal_port)
-target_link_libraries(rover_node roverInterface)
+rosbuild_add_executable(rover_node src/rover_main.cpp src/wrapper.cpp)
+#rosbuild_add_executable(rover_node src/rover.cpp src/interface.cpp)
+#target_link_libraries(rover_node cereal_port)
+#target_link_libraries(rover_node roverInterface)
 
 rosbuild_add_executable(umbmark src/umbmark.cpp)
 

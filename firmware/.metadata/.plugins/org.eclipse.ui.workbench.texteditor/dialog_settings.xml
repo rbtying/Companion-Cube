@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="338" key="DIALOG_WIDTH"/>
+		<item value="326" key="DIALOG_WIDTH"/>
 		<item value="126" key="DIALOG_Y_ORIGIN"/>
-		<item value="472" key="DIALOG_HEIGHT"/>
 		<item value="1044" key="DIALOG_X_ORIGIN"/>
+		<item value="445" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item value="false" key="wrap"/>
-		<item value="false" key="isRegEx"/>
+		<item value="true" key="wrap"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="" key="selection"/>
+		<item value="115" key="selection"/>
 		<list key="findhistory">
-			<item value="reset()"/>
-			<item value="BAUDING"/>
-			<item value="SBT_BAUDING"/>
-			<item value="SBT_BAUD"/>
-			<item value="0xAA"/>
-			<item value="readDataPacket"/>
-			<item value="#include &quot;WProgram.h&quot;"/>
-			<item value="#include &quot;WProgram.h&quot;;"/>
+			<item value="115"/>
+			<item value="~"/>
+			<item value="joint_state"/>
+			<item value="Encoder"/>
+			<item value="bat"/>
+			<item value="battCallback"/>
+			<item value="gyro"/>
+			<item value="settings"/>
 		</list>
 		<list key="replacehistory">
+			<item value="enablemsg"/>
+			<item value="right"/>
 			<item value="#include &lt;WProgram.h&gt;"/>
 			<item value="#include &lt;WProgram.h&gt;;"/>
 			<item value="txSerial"/>
 			<item value="p-&gt;"/>
 			<item value="rightEnc.pCount"/>
 			<item value="leftEnc.pCount"/>
-			<item value="leftEnc.count"/>
-			<item value="leftEnc.dir"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">

@@ -5,7 +5,7 @@ import struct
 import std_msgs.msg
 
 class Encoder(roslib.message.Message):
-  _md5sum = "f5a780441881442a5284c561b1ce2744"
+  _md5sum = "63b24db5a3c143c57912a66b55703ac8"
   _type = "rover/Encoder"
   _has_header = True #flag to mark the presence of a Header object
   _full_text = """Header header
@@ -15,6 +15,8 @@ int32 leftCount
 int32 rightCount
 int32 leftMotor
 int32 rightMotor
+float32 left_conversion_factor
+float32 right_conversion_factor
 
 ================================================================================
 MSG: std_msgs/Header
@@ -35,8 +37,8 @@ time stamp
 string frame_id
 
 """
-  __slots__ = ['header','left','right','leftCount','rightCount','leftMotor','rightMotor']
-  _slot_types = ['Header','float32','float32','int32','int32','int32','int32']
+  __slots__ = ['header','left','right','leftCount','rightCount','leftMotor','rightMotor','left_conversion_factor','right_conversion_factor']
+  _slot_types = ['Header','float32','float32','int32','int32','int32','int32','float32','float32']
 
   def __init__(self, *args, **kwds):
     """
@@ -46,7 +48,7 @@ string frame_id
     changes.  You cannot mix in-order arguments and keyword arguments.
     
     The available fields are:
-       header,left,right,leftCount,rightCount,leftMotor,rightMotor
+       header,left,right,leftCount,rightCount,leftMotor,rightMotor,left_conversion_factor,right_conversion_factor
     
     @param args: complete set of field values, in .msg order
     @param kwds: use keyword arguments corresponding to message field names
@@ -69,6 +71,10 @@ string frame_id
         self.leftMotor = 0
       if self.rightMotor is None:
         self.rightMotor = 0
+      if self.left_conversion_factor is None:
+        self.left_conversion_factor = 0.
+      if self.right_conversion_factor is None:
+        self.right_conversion_factor = 0.
     else:
       self.header = std_msgs.msg._Header.Header()
       self.left = 0.
@@ -77,6 +83,8 @@ string frame_id
       self.rightCount = 0
       self.leftMotor = 0
       self.rightMotor = 0
+      self.left_conversion_factor = 0.
+      self.right_conversion_factor = 0.
 
   def _get_types(self):
     """
@@ -97,7 +105,7 @@ string frame_id
       length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_2f4i.pack(_x.left, _x.right, _x.leftCount, _x.rightCount, _x.leftMotor, _x.rightMotor))
+      buff.write(_struct_2f4i2f.pack(_x.left, _x.right, _x.leftCount, _x.rightCount, _x.leftMotor, _x.rightMotor, _x.left_conversion_factor, _x.right_conversion_factor))
     except struct.error as se: self._check_types(se)
     except TypeError as te: self._check_types(te)
 
@@ -123,8 +131,8 @@ string frame_id
       self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 24
-      (_x.left, _x.right, _x.leftCount, _x.rightCount, _x.leftMotor, _x.rightMotor,) = _struct_2f4i.unpack(str[start:end])
+      end += 32
+      (_x.left, _x.right, _x.leftCount, _x.rightCount, _x.leftMotor, _x.rightMotor, _x.left_conversion_factor, _x.right_conversion_factor,) = _struct_2f4i2f.unpack(str[start:end])
       return self
     except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
@@ -145,7 +153,7 @@ string frame_id
       length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_2f4i.pack(_x.left, _x.right, _x.leftCount, _x.rightCount, _x.leftMotor, _x.rightMotor))
+      buff.write(_struct_2f4i2f.pack(_x.left, _x.right, _x.leftCount, _x.rightCount, _x.leftMotor, _x.rightMotor, _x.left_conversion_factor, _x.right_conversion_factor))
     except struct.error as se: self._check_types(se)
     except TypeError as te: self._check_types(te)
 
@@ -173,12 +181,12 @@ string frame_id
       self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 24
-      (_x.left, _x.right, _x.leftCount, _x.rightCount, _x.leftMotor, _x.rightMotor,) = _struct_2f4i.unpack(str[start:end])
+      end += 32
+      (_x.left, _x.right, _x.leftCount, _x.rightCount, _x.leftMotor, _x.rightMotor, _x.left_conversion_factor, _x.right_conversion_factor,) = _struct_2f4i2f.unpack(str[start:end])
       return self
     except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = roslib.message.struct_I
-_struct_2f4i = struct.Struct("<2f4i")
 _struct_3I = struct.Struct("<3I")
+_struct_2f4i2f = struct.Struct("<2f4i2f")

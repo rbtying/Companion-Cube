@@ -22,7 +22,7 @@
 <entry path="/usr/lib/jvm/java-6-openjdk/jre/lib/endorsed"/>
 </endorsedDirs>
 </libraryInfo>
-<libraryInfo home="/usr/lib/jvm/java-6-openjdk" version="1.6.0_22">
+<libraryInfo home="/usr/lib/jvm/java-6-openjdk" version="1.6.0_23">
 <bootpath>
 <entry path="/usr/lib/jvm/java-6-openjdk/jre/lib/resources.jar"/>
 <entry path="/usr/lib/jvm/java-6-openjdk/jre/lib/rt.jar"/>

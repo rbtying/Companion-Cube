@@ -1,11 +1,23 @@
 # Hashes of file build rules.
 2262e12a8e1f0d828aa82e8c823db2be ../msg_gen/cpp/include/rover/Battery.h
+5ad4322e00ac86968f76ebd810f00f91 ../msg_gen/cpp/include/rover/Enabled.h
 645fd90590b9fb3f974b2286265c9b78 ../msg_gen/cpp/include/rover/Encoder.h
+b2943a918db9ece6f5b9cbed0dd4c7be ../msg_gen/cpp/include/rover/Gyro.h
+b813efaae07c3658087eb7c5ed4fcaa9 ../msg_gen/cpp/include/rover/Motors.h
+67f525babb26335a8e46ea4e4e6f3d64 ../msg_gen/cpp/include/rover/Settings.h
 b369094bdb079905a2fe812853d0e214 ../msg_gen/lisp/Battery.lisp
+d7e311b8c076f22876422b25ef931866 ../msg_gen/lisp/Enabled.lisp
 98bb85ab3820b724b50109a9f437951f ../msg_gen/lisp/Encoder.lisp
+9998eb5db6650d22ef3518adba58c0e9 ../msg_gen/lisp/Gyro.lisp
+058ae4a840b92faa1d1efcdc735865d2 ../msg_gen/lisp/Motors.lisp
+c21f11d6a24bf7ec10616d8b1d5f1826 ../msg_gen/lisp/Settings.lisp
 96138c07aea5940c735fca353a430878 ../src/rover/msg/_Battery.py
+20ed4787f7bb883c673933d6115ee345 ../src/rover/msg/_Enabled.py
 f314ccf06353138ce934b969cd7fe5bd ../src/rover/msg/_Encoder.py
-c827303c7dd6e58a116c1d4735fadbba ../src/rover/msg/__init__.py
+257766e6137b514e93577557d889f5d6 ../src/rover/msg/_Gyro.py
+bf087a88aacdeec7aa31ada78d6621d0 ../src/rover/msg/_Motors.py
+2da2f497c8164ad152841b9e8ab61402 ../src/rover/msg/_Settings.py
+75dc1767ecd15359e02a7f04a28852ac ../src/rover/msg/__init__.py
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genaction_msgs
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genmsg_cpp
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genmsg_lisp

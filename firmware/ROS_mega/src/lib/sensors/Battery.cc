@@ -8,7 +8,7 @@
 #include "Battery.h"
 
 Battery::Battery() {
-	Battery::Battery(0, 0);
+	Battery(0, 0);
 }
 
 Battery::Battery(uint8_t vPin, uint8_t iPin) {

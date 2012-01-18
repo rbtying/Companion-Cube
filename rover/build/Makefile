@@ -265,19 +265,6 @@ rospack_gensrv/fast:
 .PHONY : rospack_gensrv/fast
 
 #=============================================================================
-# Target rules for targets named roverInterface
-
-# Build rule for target.
-roverInterface: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roverInterface
-.PHONY : roverInterface
-
-# fast build rule for target.
-roverInterface/fast:
-	$(MAKE) -f CMakeFiles/roverInterface.dir/build.make CMakeFiles/roverInterface.dir/build
-.PHONY : roverInterface/fast
-
-#=============================================================================
 # Target rules for targets named rover_node
 
 # Build rule for target.
@@ -410,24 +397,6 @@ src/TeleopRover.s:
 .PHONY : src/TeleopRover.s
 
 # target to build an object file
-src/interface.o:
-	$(MAKE) -f CMakeFiles/roverInterface.dir/build.make CMakeFiles/roverInterface.dir/src/interface.o
-	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/interface.o
-.PHONY : src/interface.o
-
-# target to preprocess a source file
-src/interface.i:
-	$(MAKE) -f CMakeFiles/roverInterface.dir/build.make CMakeFiles/roverInterface.dir/src/interface.i
-	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/interface.i
-.PHONY : src/interface.i
-
-# target to generate assembly for a file
-src/interface.s:
-	$(MAKE) -f CMakeFiles/roverInterface.dir/build.make CMakeFiles/roverInterface.dir/src/interface.s
-	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/interface.s
-.PHONY : src/interface.s
-
-# target to build an object file
 src/obstacle_avoid.o:
 	$(MAKE) -f CMakeFiles/wanderer.dir/build.make CMakeFiles/wanderer.dir/src/obstacle_avoid.o
 .PHONY : src/obstacle_avoid.o
@@ -458,19 +427,19 @@ src/ps3_control.s:
 .PHONY : src/ps3_control.s
 
 # target to build an object file
-src/rover.o:
-	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/rover.o
-.PHONY : src/rover.o
+src/rover_main.o:
+	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/rover_main.o
+.PHONY : src/rover_main.o
 
 # target to preprocess a source file
-src/rover.i:
-	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/rover.i
-.PHONY : src/rover.i
+src/rover_main.i:
+	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/rover_main.i
+.PHONY : src/rover_main.i
 
 # target to generate assembly for a file
-src/rover.s:
-	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/rover.s
-.PHONY : src/rover.s
+src/rover_main.s:
+	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/rover_main.s
+.PHONY : src/rover_main.s
 
 # target to build an object file
 src/umbmark.o:
@@ -486,6 +455,21 @@ src/umbmark.i:
 src/umbmark.s:
 	$(MAKE) -f CMakeFiles/umbmark.dir/build.make CMakeFiles/umbmark.dir/src/umbmark.s
 .PHONY : src/umbmark.s
+
+# target to build an object file
+src/wrapper.o:
+	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/wrapper.o
+.PHONY : src/wrapper.o
+
+# target to preprocess a source file
+src/wrapper.i:
+	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/wrapper.i
+.PHONY : src/wrapper.i
+
+# target to generate assembly for a file
+src/wrapper.s:
+	$(MAKE) -f CMakeFiles/rover_node.dir/build.make CMakeFiles/rover_node.dir/src/wrapper.s
+.PHONY : src/wrapper.s
 
 # Help Target
 help:
@@ -508,7 +492,6 @@ help:
 	@echo "... rospack_genmsg_all"
 	@echo "... rospack_genmsg_libexe"
 	@echo "... rospack_gensrv"
-	@echo "... roverInterface"
 	@echo "... rover_node"
 	@echo "... rover_teleop_joy"
 	@echo "... test"
@@ -521,21 +504,21 @@ help:
 	@echo "... src/TeleopRover.o"
 	@echo "... src/TeleopRover.i"
 	@echo "... src/TeleopRover.s"
-	@echo "... src/interface.o"
-	@echo "... src/interface.i"
-	@echo "... src/interface.s"
 	@echo "... src/obstacle_avoid.o"
 	@echo "... src/obstacle_avoid.i"
 	@echo "... src/obstacle_avoid.s"
 	@echo "... src/ps3_control.o"
 	@echo "... src/ps3_control.i"
 	@echo "... src/ps3_control.s"
-	@echo "... src/rover.o"
-	@echo "... src/rover.i"
-	@echo "... src/rover.s"
+	@echo "... src/rover_main.o"
+	@echo "... src/rover_main.i"
+	@echo "... src/rover_main.s"
 	@echo "... src/umbmark.o"
 	@echo "... src/umbmark.i"
 	@echo "... src/umbmark.s"
+	@echo "... src/wrapper.o"
+	@echo "... src/wrapper.i"
+	@echo "... src/wrapper.s"
 .PHONY : help
 
 

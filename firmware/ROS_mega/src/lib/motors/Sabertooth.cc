@@ -26,7 +26,6 @@ const int XMIT_START_ADJUSTMENT = 6;
 #endif
 
 Sabertooth::Sabertooth(uint8_t address, uint8_t txPin) {
-
 	m_address = address;
 
 	pinMode(txPin, OUTPUT);
@@ -37,7 +36,7 @@ Sabertooth::Sabertooth(uint8_t address, uint8_t txPin) {
 	tunedDelay(TX_DELAY);
 
 	m_usinghws = false;
-	reset();
+	m_enabled = false;
 }
 
 Sabertooth::Sabertooth(uint8_t address, HardwareSerial * hws) {
@@ -45,7 +44,7 @@ Sabertooth::Sabertooth(uint8_t address, HardwareSerial * hws) {
 	m_address = address;
 	m_usinghws = true;
 	m_hws->begin(19200);
-	reset();
+	m_enabled = false;
 }
 
 inline void Sabertooth::tunedDelay(uint16_t delay) {
@@ -61,8 +60,17 @@ inline void Sabertooth::tunedDelay(uint16_t delay) {
 	);
 }
 
-void Sabertooth::reset() {
+void Sabertooth::enable() {
+	m_enabled = true;
 	write(SBT_BAUDING_CHAR);
+}
+
+void Sabertooth::disable() {
+	m_enabled = false;
+}
+
+bool Sabertooth::enabled() {
+	return m_enabled;
 }
 
 void Sabertooth::setMinVoltage(float voltage) {
@@ -77,7 +85,7 @@ void Sabertooth::setMaxVoltage(float voltage) {
 }
 
 void Sabertooth::setSpeed(int8_t left, int8_t right) {
-	reset();
+	enable();
 	setM2Speed(left);
 	setM1Speed(right);
 }
@@ -123,10 +131,12 @@ void Sabertooth::setMotorSpeed(uint8_t op, uint8_t spd) {
 }
 
 void Sabertooth::sendPacket(uint8_t op, uint8_t data) {
-	write(m_address);
-	write(op);
-	write(data);
-	write(checksum(op, data));
+	if (m_enabled) {
+		write(m_address);
+		write(op);
+		write(data);
+		write(checksum(op, data));
+	}
 }
 
 uint8_t Sabertooth::checksum(uint8_t op, uint8_t data) {

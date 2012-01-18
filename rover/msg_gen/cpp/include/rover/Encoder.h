@@ -30,6 +30,8 @@ struct Encoder_ {
   , rightCount(0)
   , leftMotor(0)
   , rightMotor(0)
+  , left_conversion_factor(0.0)
+  , right_conversion_factor(0.0)
   {
   }
 
@@ -41,6 +43,8 @@ struct Encoder_ {
   , rightCount(0)
   , leftMotor(0)
   , rightMotor(0)
+  , left_conversion_factor(0.0)
+  , right_conversion_factor(0.0)
   {
   }
 
@@ -65,6 +69,12 @@ struct Encoder_ {
   typedef int32_t _rightMotor_type;
   int32_t rightMotor;
 
+  typedef float _left_conversion_factor_type;
+  float left_conversion_factor;
+
+  typedef float _right_conversion_factor_type;
+  float right_conversion_factor;
+
 
 private:
   static const char* __s_getDataType_() { return "rover/Encoder"; }
@@ -74,7 +84,7 @@ public:
   ROS_DEPRECATED const std::string __getDataType() const { return __s_getDataType_(); }
 
 private:
-  static const char* __s_getMD5Sum_() { return "f5a780441881442a5284c561b1ce2744"; }
+  static const char* __s_getMD5Sum_() { return "63b24db5a3c143c57912a66b55703ac8"; }
 public:
   ROS_DEPRECATED static const std::string __s_getMD5Sum() { return __s_getMD5Sum_(); }
 
@@ -88,6 +98,8 @@ int32 leftCount\n\
 int32 rightCount\n\
 int32 leftMotor\n\
 int32 rightMotor\n\
+float32 left_conversion_factor\n\
+float32 right_conversion_factor\n\
 \n\
 ================================================================================\n\
 MSG: std_msgs/Header\n\
@@ -123,6 +135,8 @@ public:
     ros::serialization::serialize(stream, rightCount);
     ros::serialization::serialize(stream, leftMotor);
     ros::serialization::serialize(stream, rightMotor);
+    ros::serialization::serialize(stream, left_conversion_factor);
+    ros::serialization::serialize(stream, right_conversion_factor);
     return stream.getData();
   }
 
@@ -136,6 +150,8 @@ public:
     ros::serialization::deserialize(stream, rightCount);
     ros::serialization::deserialize(stream, leftMotor);
     ros::serialization::deserialize(stream, rightMotor);
+    ros::serialization::deserialize(stream, left_conversion_factor);
+    ros::serialization::deserialize(stream, right_conversion_factor);
     return stream.getData();
   }
 
@@ -149,6 +165,8 @@ public:
     size += ros::serialization::serializationLength(rightCount);
     size += ros::serialization::serializationLength(leftMotor);
     size += ros::serialization::serializationLength(rightMotor);
+    size += ros::serialization::serializationLength(left_conversion_factor);
+    size += ros::serialization::serializationLength(right_conversion_factor);
     return size;
   }
 
@@ -180,12 +198,12 @@ template<class ContainerAllocator>
 struct MD5Sum< ::rover::Encoder_<ContainerAllocator> > {
   static const char* value() 
   {
-    return "f5a780441881442a5284c561b1ce2744";
+    return "63b24db5a3c143c57912a66b55703ac8";
   }
 
   static const char* value(const  ::rover::Encoder_<ContainerAllocator> &) { return value(); } 
-  static const uint64_t static_value1 = 0xf5a780441881442aULL;
-  static const uint64_t static_value2 = 0x5284c561b1ce2744ULL;
+  static const uint64_t static_value1 = 0x63b24db5a3c143c5ULL;
+  static const uint64_t static_value2 = 0x7912a66b55703ac8ULL;
 };
 
 template<class ContainerAllocator>
@@ -209,6 +227,8 @@ int32 leftCount\n\
 int32 rightCount\n\
 int32 leftMotor\n\
 int32 rightMotor\n\
+float32 left_conversion_factor\n\
+float32 right_conversion_factor\n\
 \n\
 ================================================================================\n\
 MSG: std_msgs/Header\n\
@@ -255,6 +275,8 @@ template<class ContainerAllocator> struct Serializer< ::rover::Encoder_<Containe
     stream.next(m.rightCount);
     stream.next(m.leftMotor);
     stream.next(m.rightMotor);
+    stream.next(m.left_conversion_factor);
+    stream.next(m.right_conversion_factor);
   }
 
   ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -287,6 +309,10 @@ s << std::endl;
     Printer<int32_t>::stream(s, indent + "  ", v.leftMotor);
     s << indent << "rightMotor: ";
     Printer<int32_t>::stream(s, indent + "  ", v.rightMotor);
+    s << indent << "left_conversion_factor: ";
+    Printer<float>::stream(s, indent + "  ", v.left_conversion_factor);
+    s << indent << "right_conversion_factor: ";
+    Printer<float>::stream(s, indent + "  ", v.right_conversion_factor);
   }
 };
 

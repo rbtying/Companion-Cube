@@ -28,7 +28,9 @@ public:
 	Sabertooth(uint8_t address, uint8_t txPin);
 	Sabertooth(uint8_t address, HardwareSerial * hws);
 
-	void reset();
+	void disable();
+	void enable();
+	bool enabled();
 
 	void setMinVoltage(float voltage);
 	void setMaxVoltage(float voltage);
@@ -43,6 +45,7 @@ public:
 
 private:
 	bool m_usinghws;
+	bool m_enabled;
 	HardwareSerial * m_hws;
 	uint8_t m_address;
 	int16_t m_left_speed, m_right_speed;

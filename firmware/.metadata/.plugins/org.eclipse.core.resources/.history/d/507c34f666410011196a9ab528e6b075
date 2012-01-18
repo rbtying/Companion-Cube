@@ -1,0 +1,26 @@
+/*
+ * servomapping.h
+ *
+ *  Created on: Jan 17, 2012
+ *      Author: rbtying
+ */
+
+#ifndef SERVOMAPPING_H_
+#define SERVOMAPPING_H_
+
+#include <string>
+
+#define NUM_SERVOS 2
+
+std::string servomapping[NUM_SERVOS];
+
+std::string default_slug("servo ");
+
+std::string servoname(uint8_t i) {
+	if (i < NUM_SERVOS)
+		return servomapping[i];
+	else
+		return default_slug.append(i);
+}
+
+#endif /* SERVOMAPPING_H_ */

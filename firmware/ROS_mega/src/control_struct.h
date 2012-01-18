@@ -15,16 +15,17 @@
 #include "utilities/PID.h"
 #include "motors/DualMotor.h"
 
+#define NUM_SERVOS 2
+
 struct control_data {
 	Battery mot_batt;
 	gyro_data yaw;
-	Servo pan;
-	Servo tilt;
 	PID_params leftPID;
 	PID_params rightPID;
 	encoder_data leftEnc;
 	encoder_data rightEnc;
 	motor_data mot;
+	Servo servos[NUM_SERVOS];
 	bool enabled;
 };
 

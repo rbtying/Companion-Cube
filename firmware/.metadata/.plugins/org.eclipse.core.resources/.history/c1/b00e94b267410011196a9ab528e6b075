@@ -1,0 +1,28 @@
+/*
+ * servomapping.h
+ *
+ *  Created on: Jan 17, 2012
+ *      Author: rbtying
+ */
+
+#ifndef SERVOMAPPING_H_
+#define SERVOMAPPING_H_
+
+#include <string>
+
+std::string servoname(uint8_t i) {
+	switch (i) {
+	case 0:
+		return (std::string) "panservo";
+	case 1:
+		return (std::string) "tiltservo";
+	default:
+		return ((std::string) "servo_") + i;
+	}
+}
+
+uint8_t servoid(std::string name) {
+
+}
+
+#endif /* SERVOMAPPING_H_ */

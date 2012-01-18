@@ -1,0 +1,30 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CC_SRCS += \
+../src/ros_lib/lib/sensors/rangefinders/MaxSonar.cc \
+../src/ros_lib/lib/sensors/rangefinders/Ping.cc \
+../src/ros_lib/lib/sensors/rangefinders/Sharp_IR.cc 
+
+OBJS += \
+./src/ros_lib/lib/sensors/rangefinders/MaxSonar.o \
+./src/ros_lib/lib/sensors/rangefinders/Ping.o \
+./src/ros_lib/lib/sensors/rangefinders/Sharp_IR.o 
+
+CC_DEPS += \
+./src/ros_lib/lib/sensors/rangefinders/MaxSonar.d \
+./src/ros_lib/lib/sensors/rangefinders/Ping.d \
+./src/ros_lib/lib/sensors/rangefinders/Sharp_IR.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+src/ros_lib/lib/sensors/rangefinders/%.o: ../src/ros_lib/lib/sensors/rangefinders/%.cc
+	@echo 'Building file: $<'
+	@echo 'Invoking: AVR C++ Compiler'
+	avr-g++ -I"/home/rbtying/robot/firmware/Arduino-2560/Debug" -I"/home/rbtying/robot/firmware/Arduino-2560" -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

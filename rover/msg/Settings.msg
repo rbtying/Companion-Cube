@@ -1,0 +1,11 @@
+Header header
+
+float32 left_proportional
+float32 left_integral
+float32 left_derivative
+float32 left_conversion_factor
+
+float32 right_proportional
+float32 right_integral
+float32 right_derivative
+float32 right_conversion_factor

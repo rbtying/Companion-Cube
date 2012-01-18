@@ -1,0 +1,19 @@
+/*
+ * servomapping.h
+ *
+ *  Created on: Jan 17, 2012
+ *      Author: rbtying
+ */
+
+#ifndef SERVOMAPPING_H_
+#define SERVOMAPPING_H_
+
+#include <string>
+
+char* servoname(uint8_t i) {
+	switch (i) {
+	case 0:
+return}
+}
+
+#endif /* SERVOMAPPING_H_ */

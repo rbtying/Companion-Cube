@@ -73,8 +73,8 @@ void StateController::readDataPacket(uint8_t * contents, uint8_t length,
 
 void StateController::robotStateToControl(robot_state * state,
 		control_data * ctrl) {
-	ctrl->pan.write(state->servo_pan_val);
-	ctrl->tilt.write(state->servo_tilt_val);
+	//	ctrl->pan.write(state->servo_pan_val);
+	//	ctrl->tilt.write(state->servo_tilt_val);
 	// read only values
 	//	state->batt_motor_voltage * 0.01;
 	//	state->batt_motor_current * 0.01;
@@ -102,8 +102,8 @@ void StateController::robotStateToControl(robot_state * state,
 
 void StateController::controlToRobotState(control_data * ctrl,
 		robot_state * state) {
-	state->servo_pan_val = ctrl->pan.read();
-	state->servo_tilt_val = ctrl->tilt.read();
+	//	state->servo_pan_val = ctrl->pan.read();
+	//	state->servo_tilt_val = ctrl->tilt.read();
 	state->batt_motor_voltage = ctrl->mot_batt.getVoltage() * 100;
 	state->batt_motor_current = ctrl->mot_batt.getCurrent() * 100;
 	state->gyro_yaw_rate = ctrl->yaw.rate * 1000;

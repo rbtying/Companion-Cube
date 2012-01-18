@@ -1,27 +1,34 @@
 <launch>
-    <param name="/rover/port" value="/dev/ttyRoverFTDI" type="str" />
+    <node name="rosserial_node" type="serial_node.py" pkg="rosserial_python" />
 
-    <param name="/rover/axleLength" value="0.16" type="double" />
+    <node pkg="rover" name="roverBot" type="rover_node">
+        <param name="axleLength" value="0.26" type="double" />
+        <param name="maxSpeed" value="0.75" type="double" />
+        <param name="left/proportional" value="0.6" type="double" />
+        <param name="left/integral" value="0.2" type="double" />
+        <param name="left/derivative" value="0.05" type="double" />
+        <param name="right/proportional" value="0.6" type="double" />
+        <param name="right/integral" value="0.2" type="double" />
+        <param name="right/derivative" value="0.05" type="double" />
+        <param name="left/conversion_factor" value="0.00004" type="double" />
+        <param name="right/conversion_factor" value="0.00004" type="double" />
+        <param name="gyro_correction" value="1.0" type="double" />
+        <param name="odom_frame_id" value="odom" />
+        <param name="publish_tf" value="false" />
 
-    <param name="/rover/maxSpeed" value="0.75" type="double" />
-
-    <param name="/rover/left/proportional" value="0.6" type="double" />
-    <param name="/rover/left/integral" value="0.2" type="double" />
-    <param name="/rover/left/derivative" value="0.05" type="double" />
-    <param name="/rover/left/conversion_factor" value="0.0044" type="double" />
-
-    <param name="/rover/right/proportional" value="0.6" type="double" />
-    <param name="/rover/right/integral" value="0.2" type="double" />
-    <param name="/rover/right/derivative" value="0.05" type="double" />
-    <param name="/rover/right/conversion_factor" value="0.004" type="double" />
-
-    <param name="/rover/gyro_bias" value="0.0" />
-    <param name="/rover/gyro_correction" value="0.940015506" />
-
-    <param name="/rover/odom_frame_id" value="/odom" />
-    <param name="/rover/publish_tf" value="false" />
-
-    <node pkg="rover" name="roverBot" type="rover_node" />
+        <remap from="roverBot/odom" to="/odom" />
+        <remap from="roverBot/imu" to="/imu" />
+        <remap from="roverBot/enable" to="/enable" />
+        <remap from="roverBot/drive" to="/drive" />
+        <remap from="roverBot/settings" to="/settings" />
+        <remap from="roverBot/servos" to="/servos" />
+        <remap from="roverBot/servos_curr" to="/servos_curr" />
+        <remap from="roverBot/joint_states" to="/joint_states" />
+        <remap from="roverBot/cmd_vel" to="/cmd_vel" />
+        <remap from="roverBot/battery/motor" to="/battery/motor" />
+        <remap from="roverBot/encoders" to="/encoders" />
+        <remap from="roverBot/yaw/gyro" to="/yaw/gyro" />
+    </node>
 
     <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
         <param name="output_frame" value="odom"/>
@@ -32,7 +39,7 @@
         <param name="self_diagnose" value="true" />
         <param name="publish_tf" value="true" />
 
-        <remap from="imu_data" to="imu/data" />
+        <remap from="imu_data" to="imu" />
     </node>
 
 </launch>

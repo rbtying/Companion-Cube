@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="25" version="2.0">
+<workbench progressCount="26" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="61" y="24">
+<window height="768" maximized="true" width="1024" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -15,11 +15,11 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="38"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="110" y="32"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="38"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="96" y="38"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="38"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="38"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -29,51 +29,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="1"/>
-<part id="0"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/Main.cc" title="Main.cc" tooltip="ROS_mega/src/Main.cc" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2384" selectionTopPixel="1796"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="StateController.cc" partName="StateController.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/StateController.cc" title="StateController.cc" tooltip="ROS_mega/src/StateController.cc" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/StateController.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2717" selectionTopPixel="710"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" partName="pins.h" path="/home/rbtying/robot/firmware/ROS_mega/src/pins.h" title="pins.h" tooltip="ROS_mega/src/pins.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/pins.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="566" selectionTopPixel="83"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" partName="control_struct.h" path="/home/rbtying/robot/firmware/ROS_mega/src/control_struct.h" title="control_struct.h" tooltip="ROS_mega/src/control_struct.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/control_struct.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="509" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="state_struct.h" partName="state_struct.h" path="/home/rbtying/robot/firmware/ROS_mega/src/state_struct.h" title="state_struct.h" tooltip="ROS_mega/src/state_struct.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/state_struct.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="159" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Sabertooth.cc" partName="Sabertooth.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/lib/motors/Sabertooth.cc" title="Sabertooth.cc" tooltip="ROS_mega/src/lib/motors/Sabertooth.cc" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/lib/motors/Sabertooth.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1079" selectionTopPixel="546"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="StrongDriveOutput.h" partName="StrongDriveOutput.h" path="/home/rbtying/robot/firmware/ROS_mega/src/lib/devices/StrongDriveOutput.h" title="StrongDriveOutput.h" tooltip="ROS_mega/src/lib/devices/StrongDriveOutput.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/lib/devices/StrongDriveOutput.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="322" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="StrongDriveOutput.cc" partName="StrongDriveOutput.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/lib/devices/StrongDriveOutput.cc" title="StrongDriveOutput.cc" tooltip="ROS_mega/src/lib/devices/StrongDriveOutput.cc" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/lib/devices/StrongDriveOutput.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="254" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
@@ -95,10 +54,11 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Warnings (1 item)"/>
+<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (2 items)"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="966" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<columnWidths org.eclipse.ui.ide.locationField="509" org.eclipse.ui.ide.markerType="966" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="865"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -139,7 +99,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="&lt;C/C++&gt;">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="&lt;C/C++&gt;">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -323,7 +283,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottom" ratio="0.7826087" ratioLeft="576" ratioRight="160" relationship="4" relative="org.eclipse.ui.internal.ViewStack@892399">
+<info folder="true" part="bottom" ratio="0.8004484" ratioLeft="714" ratioRight="178" relationship="4" relative="org.eclipse.ui.internal.ViewStack@892399">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -437,169 +397,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/state_struct.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/Main.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/devices/StrongDriveOutput.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/devices/StrongDriveOutput.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/StateController.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/control_struct.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/pins.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/motors/Sabertooth.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/motors/Sabertooth.h"/>
-</editors>
-<item historyLabel="control_struct.h" index="5">
-<position info="not_deleted" x="509" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2347" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2375" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2606" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2584" y="0"/>
-</item>
-<item historyLabel="pins.h" index="6">
-<position info="not_deleted" x="342" y="0"/>
-</item>
-<item historyLabel="StrongDriveOutput.h" index="3">
-<position info="not_deleted" x="280" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="5">
-<position info="not_deleted" x="509" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2584" y="0"/>
-</item>
-<item historyLabel="StateController.cc" index="4">
-<position info="not_deleted" x="2718" y="0"/>
-</item>
-<item historyLabel="state_struct.h" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="StateController.cc" index="4">
-<position info="not_deleted" x="3893" y="0"/>
-</item>
-<item historyLabel="state_struct.h" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="StateController.cc" index="4">
-<position info="not_deleted" x="3556" y="0"/>
-</item>
-<item historyLabel="state_struct.h" index="0">
-<position info="not_deleted" x="159" y="0"/>
-</item>
-<item historyLabel="StrongDriveOutput.cc" index="2">
-<position info="not_deleted" x="655" y="0"/>
-</item>
-<item historyLabel="state_struct.h" index="0">
-<position info="not_deleted" x="159" y="0"/>
-</item>
-<item historyLabel="StrongDriveOutput.h" index="3">
-<position info="not_deleted" x="280" y="0"/>
-</item>
-<item historyLabel="state_struct.h" index="0">
-<position info="not_deleted" x="159" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="5">
-<position info="not_deleted" x="509" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2584" y="0"/>
-</item>
-<item historyLabel="StateController.cc" index="4">
-<position info="not_deleted" x="2717" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2584" y="0"/>
-</item>
-<item historyLabel="pins.h" index="6">
-<position info="not_deleted" x="597" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="5">
-<position info="not_deleted" x="509" y="0"/>
-</item>
-<item historyLabel="pins.h" index="6">
-<position info="not_deleted" x="566" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2584" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position/>
-</item>
-<item historyLabel="Sabertooth.cc" index="7">
-<position info="not_deleted" x="1439" y="0"/>
-</item>
-<item historyLabel="Sabertooth.h" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="7">
-<position info="not_deleted" x="1439" y="0"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="7">
-<position/>
-</item>
-<item historyLabel="Sabertooth.cc" index="7">
-<position info="not_deleted" x="1358" y="0"/>
-</item>
-<item historyLabel="StateController.cc" index="4">
-<position info="not_deleted" x="2717" y="0"/>
-</item>
-<item historyLabel="Sabertooth.cc" index="7">
-<position info="not_deleted" x="1079" y="0"/>
-</item>
-<item historyLabel="state_struct.h" index="0">
-<position info="not_deleted" x="159" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position/>
-</item>
-<item historyLabel="StateController.cc" index="4">
-<position info="not_deleted" x="2717" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2527" y="0"/>
-</item>
-<item historyLabel="StrongDriveOutput.h" index="3">
-<position info="not_deleted" x="322" y="16"/>
-</item>
-<item historyLabel="StrongDriveOutput.h" index="3">
-<position info="not_deleted" x="411" y="0"/>
-</item>
-<item historyLabel="state_struct.h" index="0">
-<position info="not_deleted" x="159" y="0"/>
-</item>
-<item historyLabel="control_struct.h" index="5">
-<position info="not_deleted" x="509" y="0"/>
-</item>
-<item historyLabel="pins.h" index="6">
-<position info="not_deleted" x="566" y="0"/>
-</item>
-<item historyLabel="StrongDriveOutput.h" index="3">
-<position info="not_deleted" x="411" y="0"/>
-</item>
-<item historyLabel="StrongDriveOutput.cc" index="2">
-<position info="not_deleted" x="254" y="0"/>
-</item>
-<item historyLabel="StrongDriveOutput.h" index="3">
-<position info="not_deleted" x="331" y="0"/>
-</item>
-<item historyLabel="StrongDriveOutput.cc" index="2">
-<position info="not_deleted" x="254" y="0"/>
-</item>
-<item historyLabel="StrongDriveOutput.h" index="3">
-<position info="not_deleted" x="322" y="0"/>
-</item>
-<item active="true" historyLabel="Main.cc" index="1">
-<position info="not_deleted" x="2566" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -616,50 +414,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="StrongDriveOutput.cc" tooltip="ROS_mega/src/lib/devices/StrongDriveOutput.cc">
-<persistable path="/ROS_mega/src/lib/devices/StrongDriveOutput.cc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mega/src/Main.cc">
+<persistable path="/ROS_mega/src/Main.cc"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="StrongDriveOutput.h" tooltip="ROS_mega/src/lib/devices/StrongDriveOutput.h">
-<persistable path="/ROS_mega/src/lib/devices/StrongDriveOutput.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wrapper.h" tooltip="rover-RelWithDebInfo@rover/include/wrapper.h">
+<persistable path="/rover-RelWithDebInfo@rover/include/wrapper.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Sabertooth.h" tooltip="ROS_mega/src/lib/motors/Sabertooth.h">
-<persistable path="/ROS_mega/src/lib/motors/Sabertooth.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wrapper.cpp" tooltip="rover-RelWithDebInfo@rover/src/wrapper.cpp">
+<persistable path="/rover-RelWithDebInfo@rover/src/wrapper.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Sabertooth.cc" tooltip="ROS_mega/src/lib/motors/Sabertooth.cc">
-<persistable path="/ROS_mega/src/lib/motors/Sabertooth.cc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TeleopRover.cpp" tooltip="rover-RelWithDebInfo@rover/src/TeleopRover.cpp">
+<persistable path="/rover-RelWithDebInfo@rover/src/TeleopRover.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="state_struct.h" tooltip="ROS_mega/src/state_struct.h">
-<persistable path="/ROS_mega/src/state_struct.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rover_main.cpp" tooltip="rover-RelWithDebInfo@rover/src/rover_main.cpp">
+<persistable path="/rover-RelWithDebInfo@rover/src/rover_main.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rover.cpp" tooltip="rover-RelWithDebInfo@rover/src/rover.cpp">
+<persistable path="/rover-RelWithDebInfo@rover/src/rover.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="CMakeLists.txt" tooltip="rover-RelWithDebInfo@rover/CMakeLists.txt">
+<persistable path="/rover-RelWithDebInfo@rover/CMakeLists.txt"/>
+</file>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="transform_broadcaster.h" tooltip="/opt/ros/electric/stacks/geometry/tf/include/tf/transform_broadcaster.h">
+<persistable path="/opt/ros/electric/stacks/geometry/tf/include/tf/transform_broadcaster.h" project="rover-RelWithDebInfo@rover"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="servomapping.h" tooltip="rover-RelWithDebInfo@rover/include/servomapping.h">
+<persistable path="/rover-RelWithDebInfo@rover/include/servomapping.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="interface.cpp" tooltip="rover-RelWithDebInfo@rover/src/interface.cpp">
+<persistable path="/rover-RelWithDebInfo@rover/src/interface.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="state_struct.h" tooltip="rover-RelWithDebInfo@rover/include/state_struct.h">
+<persistable path="/rover-RelWithDebInfo@rover/include/state_struct.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="util.h" tooltip="rover-RelWithDebInfo@rover/include/util.h">
+<persistable path="/rover-RelWithDebInfo@rover/include/util.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" tooltip="ROS_mega/src/control_struct.h">
 <persistable path="/ROS_mega/src/control_struct.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fastIO.h" tooltip="ROS_mega/src/lib/utilities/fastIO.h">
-<persistable path="/ROS_mega/src/lib/utilities/fastIO.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Relay.h" tooltip="ROS_mega/src/lib/devices/Relay.h">
-<persistable path="/ROS_mega/src/lib/devices/Relay.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Relay.cc" tooltip="ROS_mega/src/lib/devices/Relay.cc">
-<persistable path="/ROS_mega/src/lib/devices/Relay.cc"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" tooltip="ROS_mega/src/pins.h">
 <persistable path="/ROS_mega/src/pins.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Battery.cc" tooltip="ROS_mega/src/lib/sensors/Battery.cc">
-<persistable path="/ROS_mega/src/lib/sensors/Battery.cc"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DualMotor.h" tooltip="ROS_mega/src/lib/motors/DualMotor.h">
-<persistable path="/ROS_mega/src/lib/motors/DualMotor.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mega/src/Main.cc">
-<persistable path="/ROS_mega/src/Main.cc"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="control_opcodes.h" tooltip="ROS_mega/src/control_opcodes.h">
-<persistable path="/ROS_mega/src/control_opcodes.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="StateController.cc" tooltip="ROS_mega/src/StateController.cc">
-<persistable path="/ROS_mega/src/StateController.cc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoder.h" tooltip="ROS_mega/src/ros_lib/rover/Encoder.h">
+<persistable path="/ROS_mega/src/ros_lib/rover/Encoder.h"/>
 </file>
 </mruList>
 </workbench>

@@ -131,6 +131,7 @@
 <definedSymbol symbol="AVR=1"/>
 <definedSymbol symbol="__AVR_ARCH__=2"/>
 <definedSymbol symbol="__AVR_ARCH__=6"/>
+<definedSymbol symbol="__AVR_ARCH__=51"/>
 <definedSymbol symbol="__AVR_2_BYTE_PC__=1"/>
 <definedSymbol symbol="__AVR_ATmega2560__=1"/>
 <definedSymbol symbol="__AVR_HAVE_RAMPZ__=1"/>
@@ -224,6 +225,7 @@
 <definedSymbol symbol="__PRAGMA_REDEFINE_EXTNAME=1"/>
 <definedSymbol symbol="__AVR_HAVE_16BIT_SP__=1"/>
 <definedSymbol symbol="__BIGGEST_ALIGNMENT__=1"/>
+<definedSymbol symbol="__AVR_ATmega1280__=1"/>
 </collector>
 </instance>
 <instance id="de.innot.avreclipse.configuration.lib.debug.1350487359;de.innot.avreclipse.configuration.lib.debug.1350487359.;de.innot.avreclipse.tool.cppcompiler.lib.debug.587731906;de.innot.avreclipse.cppcompiler.input.380459637">
@@ -359,6 +361,7 @@
 <definedSymbol symbol="AVR=1"/>
 <definedSymbol symbol="__AVR_ARCH__=2"/>
 <definedSymbol symbol="__AVR_ARCH__=6"/>
+<definedSymbol symbol="__AVR_ARCH__=51"/>
 <definedSymbol symbol="__AVR_2_BYTE_PC__=1"/>
 <definedSymbol symbol="__AVR_ATmega2560__=1"/>
 <definedSymbol symbol="__AVR_HAVE_RAMPZ__=1"/>
@@ -452,6 +455,7 @@
 <definedSymbol symbol="__PRAGMA_REDEFINE_EXTNAME=1"/>
 <definedSymbol symbol="__AVR_HAVE_16BIT_SP__=1"/>
 <definedSymbol symbol="__BIGGEST_ALIGNMENT__=1"/>
+<definedSymbol symbol="__AVR_ATmega1280__=1"/>
 </collector>
 </instance>
 <instance id="de.innot.avreclipse.configuration.lib.release.541486057;de.innot.avreclipse.configuration.lib.release.541486057.">
@@ -818,6 +822,7 @@
 <definedSymbol symbol="__AVR_ARCH__=2"/>
 <definedSymbol symbol="__AVR_ARCH__=5"/>
 <definedSymbol symbol="__AVR_ARCH__=6"/>
+<definedSymbol symbol="__AVR_ARCH__=51"/>
 <definedSymbol symbol="__AVR_2_BYTE_PC__=1"/>
 <definedSymbol symbol="__AVR_ATmega328P__=1"/>
 <definedSymbol symbol="__AVR_HAVE_MOVW__=1"/>
@@ -912,6 +917,7 @@
 <definedSymbol symbol="__PRAGMA_REDEFINE_EXTNAME=1"/>
 <definedSymbol symbol="__AVR_HAVE_16BIT_SP__=1"/>
 <definedSymbol symbol="__BIGGEST_ALIGNMENT__=1"/>
+<definedSymbol symbol="__AVR_ATmega1280__=1"/>
 </collector>
 </instance>
 </scannerInfo>

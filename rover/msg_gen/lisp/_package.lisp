@@ -1,9 +1,17 @@
 (cl:defpackage rover-msg
   (:use )
   (:export
-   "<ENCODER>"
-   "ENCODER"
+   "<SETTINGS>"
+   "SETTINGS"
+   "<GYRO>"
+   "GYRO"
+   "<MOTORS>"
+   "MOTORS"
    "<BATTERY>"
    "BATTERY"
+   "<ENCODER>"
+   "ENCODER"
+   "<ENABLED>"
+   "ENABLED"
   ))
 
