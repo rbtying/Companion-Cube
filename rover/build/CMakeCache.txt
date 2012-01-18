@@ -162,7 +162,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 EXECUTABLE_OUTPUT_PATH:PATH=
 
 //gtest-config executable
-GTEST_EXE:FILEPATH=GTEST_EXE-NOTFOUND
+GTEST_EXE:FILEPATH=/usr/bin/gtest-config
 
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
@@ -212,7 +212,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=2
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=8
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=5
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.

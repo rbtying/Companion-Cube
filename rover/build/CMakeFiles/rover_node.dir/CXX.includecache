@@ -40,6 +40,7 @@ util.h
 string
 -
 
+<<<<<<< HEAD
 ../msg_gen/cpp/include/rover/Battery.h
 string
 -
@@ -87,6 +88,13 @@ ros/assert.h
 ../msg_gen/cpp/include/rover/ros/assert.h
 
 ../msg_gen/cpp/include/rover/Encoder.h
+=======
+/home/rbtying/robot/cereal_port/include/cereal_port/CerealPort.h
+stdexcept
+-
+termios.h
+-
+>>>>>>> origin/master
 string
 -
 vector
@@ -115,6 +123,7 @@ string
 -
 vector
 -
+<<<<<<< HEAD
 map
 -
 ostream
@@ -773,6 +782,10 @@ ros/assert.h
 /opt/ros/electric/stacks/geometry/tf/msg_gen/cpp/include/tf/ros/assert.h
 geometry_msgs/TransformStamped.h
 /opt/ros/electric/stacks/geometry/tf/msg_gen/cpp/include/tf/geometry_msgs/TransformStamped.h
+=======
+interface.h
+/home/rbtying/robot/rover/src/interface.h
+>>>>>>> origin/master
 
 /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/include/ros/advertise_options.h
 ros/forwards.h
@@ -1250,10 +1263,6 @@ ros/time.h
 
 /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/include/ros/message_forward.h
 
-/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/include/ros/message_operations.h
-ostream
--
-
 /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/include/ros/message_traits.h
 message_forward.h
 /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/include/ros/message_forward.h
@@ -1274,6 +1283,7 @@ boost/type_traits/remove_reference.hpp
 boost/type_traits/remove_const.hpp
 -
 
+<<<<<<< HEAD
 /opt/ros/electric/stacks/ros_comm/messages/std_msgs/include/std_msgs/header_deprecated_def.h
 
 /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/Header.h
@@ -1370,6 +1380,8 @@ ros/assert.h
 std_msgs/MultiArrayLayout.h
 /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include/std_msgs/std_msgs/MultiArrayLayout.h
 
+=======
+>>>>>>> origin/master
 /opt/ros/electric/stacks/ros_comm/tools/rosconsole/include/ros/assert.h
 ros/console.h
 /opt/ros/electric/stacks/ros_comm/tools/rosconsole/include/ros/ros/console.h
