@@ -1,5 +1,7 @@
 <launch>
-    <node name="rosserial_node" type="serial_node.py" pkg="rosserial_python" />
+    <node name="rosserial_node" type="serial_node.py" pkg="rosserial_python">
+        <param name="port" value="/dev/ttyRoverFTDI" />
+    </node>
 
     <node pkg="rover" name="roverBot" type="rover_node">
         <param name="axleLength" value="0.26" type="double" />
