@@ -4,7 +4,7 @@
      Movement and odometry for a rover-bot.
 
   </description>
-  <author></author>
+  <author>Robert Ying</author>
   <license>GPL</license>
   <review status="unreviewed" notes=""/>
   <url></url>
@@ -12,6 +12,7 @@
     <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib"/>
   </export>
   <depend package="roscpp"/>
+  <depend package="rospy"/>
   <depend package="actionlib"/>
   <depend package="actionlib_msgs"/>
   <depend package="tf"/>
