@@ -43,11 +43,8 @@ private:
 	double m_axlelength, m_maxvel;
 	double m_minBatVoltage;
 
-	ros::Time m_previous_odom_calc_time;
-	ros::Time m_previous_gyro_calc_time;
-
-	int32_t m_previous_left_count;
-	int32_t m_previous_right_count;
+	rover::Encoder::ConstPtr m_p_enc_msg;
+	rover::Gyro::ConstPtr m_p_gyr_msg;
 
 	double m_odom_x;
 	double m_odom_y;

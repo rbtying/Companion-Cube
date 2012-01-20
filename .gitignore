@@ -1,2 +1,5 @@
 firmware/.metadata/.plugins/*/*.log
 firmware/.metadata/.plugins/org.eclipse.core.resources/.history/*
+firmware/.metadata/.plugins/org.eclipse.core.resources/.projects/*/.indexes
+firmware/.metadata/.plugins/org.eclipse.core.resources/.projects/*/*.snap
+firmware/.metadata/.plugins/org.eclipse.core.resources/*.snap

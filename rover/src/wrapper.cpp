@@ -53,9 +53,6 @@ Wrapper::Wrapper() :
 
 	//	usleep(5e6);
 
-	m_previous_gyro_calc_time = ros::Time::now();
-	m_previous_odom_calc_time = ros::Time::now();
-
 	setSettings(lP, lI, lD, le, rP, rI, rD, re);
 
 	rover::Enabled msg;
@@ -98,41 +95,44 @@ void Wrapper::battCallback(const rover::Battery::ConstPtr& bat) {
 }
 
 void Wrapper::gyrCallback(const rover::Gyro::ConstPtr& gyr) {
-	ros::Time current_time = ros::Time::now();
-	double dt = (m_previous_gyro_calc_time - current_time).toSec();
+	if (m_p_gyr_msg != NULL) {
+		double dt = (gyr->header.stamp - m_p_gyr_msg->header.stamp).toSec();
 
-	m_yaw_gyro_rate = gyr->rate * m_yaw_gyro_correction_factor;
-	m_yaw_gyro_value += dt * m_yaw_gyro_rate;
+		m_yaw_gyro_rate = gyr->rate * m_yaw_gyro_correction_factor;
+		m_yaw_gyro_value += dt * m_yaw_gyro_rate;
 
-	// create a quaternion for the gyro
-	geometry_msgs::Quaternion imu_quat = tf::createQuaternionMsgFromYaw(
-			m_yaw_gyro_value);
+		// create a quaternion for the gyro
+		geometry_msgs::Quaternion imu_quat = tf::createQuaternionMsgFromYaw(
+				m_yaw_gyro_value);
 
-	// create a sensor msg for the gyro
-	sensor_msgs::Imu imu_msg;
-	imu_msg.header.stamp = current_time;
-	imu_msg.header.frame_id = "base_footprint";
+		// create a sensor msg for the gyro
+		sensor_msgs::Imu imu_msg;
+		imu_msg.header.stamp = ros::Time::now();
+		imu_msg.header.frame_id = "base_footprint";
 
-	imu_msg.orientation = imu_quat;
-	imu_msg.orientation_covariance[0] = 1e6;
-	imu_msg.orientation_covariance[4] = 1e6;
-	imu_msg.orientation_covariance[8] = 1e-6;
+		imu_msg.orientation = imu_quat;
+		imu_msg.orientation_covariance[0] = 1e6;
+		imu_msg.orientation_covariance[4] = 1e6;
+		imu_msg.orientation_covariance[8] = 1e-6;
 
-	imu_msg.angular_velocity.x = 0.0;
-	imu_msg.angular_velocity.y = 0.0;
-	imu_msg.angular_velocity.z = m_yaw_gyro_rate;
-	imu_msg.angular_velocity_covariance[0] = 1e6;
-	imu_msg.angular_velocity_covariance[4] = 1e6;
-	imu_msg.angular_velocity_covariance[8] = 1e-6;
+		imu_msg.angular_velocity.x = 0.0;
+		imu_msg.angular_velocity.y = 0.0;
+		imu_msg.angular_velocity.z = m_yaw_gyro_rate;
+		imu_msg.angular_velocity_covariance[0] = 1e6;
+		imu_msg.angular_velocity_covariance[4] = 1e6;
+		imu_msg.angular_velocity_covariance[8] = 1e-6;
 
-	imu_msg.linear_acceleration.x = 0.0;
-	imu_msg.linear_acceleration.y = 0.0;
-	imu_msg.linear_acceleration.z = 0.0;
-	imu_msg.linear_acceleration_covariance[0] = -1; // no accelerometers, so just set covariance to -1
+		imu_msg.linear_acceleration.x = 0.0;
+		imu_msg.linear_acceleration.y = 0.0;
+		imu_msg.linear_acceleration.z = 0.0;
+		imu_msg.linear_acceleration_covariance[0] = -1; // no accelerometers, so just set covariance to -1
 
-	// send the message
-	m_imu_pub.publish(imu_msg);
-	m_previous_gyro_calc_time = current_time;
+		// send the message
+		m_imu_pub.publish(imu_msg);
+	}
+
+	// save this message
+	m_p_gyr_msg = gyr;
 }
 
 void Wrapper::servoCallback(const std_msgs::UInt8MultiArray::ConstPtr& serv) {
@@ -153,77 +153,76 @@ void Wrapper::servoCallback(const std_msgs::UInt8MultiArray::ConstPtr& serv) {
 }
 
 void Wrapper::encCallback(const rover::Encoder::ConstPtr& enc) {
-	ros::Time current_time = ros::Time::now();
-	double dt = (m_previous_odom_calc_time - current_time).toSec();
+	if (m_p_enc_msg != NULL) {
+		double dt = (enc->header.stamp - m_p_enc_msg->header.stamp).toSec();
 
-	double left_avg_vel = (enc->leftCount - m_previous_left_count)
-			* enc->left_conversion_factor / dt;
-	double right_avg_vel = (enc->rightCount - m_previous_right_count)
-			* enc->right_conversion_factor / dt;
+		double left_avg_vel = (enc->leftCount - m_p_enc_msg->leftCount)
+				* enc->left_conversion_factor / dt;
+		double right_avg_vel = (enc->rightCount - m_p_enc_msg->rightCount)
+				* enc->right_conversion_factor / dt;
 
-	double linSpeed = (left_avg_vel + right_avg_vel) / 2; // m/s
+		double linSpeed = (left_avg_vel + right_avg_vel) / 2; // m/s
 
-	m_vel_yaw = normalize((left_avg_vel - right_avg_vel) / (m_axlelength * 2)); // rad/s
-	m_odom_yaw = normalize(m_odom_yaw + m_vel_yaw * dt); // rad
+		m_vel_yaw
+				= normalize((left_avg_vel - right_avg_vel) / (m_axlelength * 2)); // rad/s
+		m_odom_yaw = normalize(m_odom_yaw + m_vel_yaw * dt); // rad
 
-	m_vel_x = linSpeed * cos(m_odom_yaw);
-	m_vel_y = linSpeed * sin(m_odom_yaw);
+		m_vel_x = linSpeed * cos(m_odom_yaw);
+		m_vel_y = linSpeed * sin(m_odom_yaw);
 
-	// Update odometry
-	m_odom_x += m_vel_x * dt; // m
-	m_odom_y += m_vel_y * dt; // m
+		// Update odometry
+		m_odom_x += m_vel_x * dt; // m
+		m_odom_y += m_vel_y * dt; // m
 
-	geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(
-			m_odom_yaw);
+		geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(
+				m_odom_yaw);
 
-	if (m_publish_tf) {
-		// create a tf message
-		geometry_msgs::TransformStamped odom_trans;
-		odom_trans.header.stamp = ros::Time::now();
-		odom_trans.header.frame_id = m_odom_frame_id.c_str();
-		odom_trans.child_frame_id = "base_footprint";
+		if (m_publish_tf) {
+			// create a tf message
+			geometry_msgs::TransformStamped odom_trans;
+			odom_trans.header.stamp = ros::Time::now();
+			odom_trans.header.frame_id = m_odom_frame_id.c_str();
+			odom_trans.child_frame_id = "base_footprint";
 
-		odom_trans.transform.translation.x = m_odom_x;
-		odom_trans.transform.translation.y = m_odom_y;
-		odom_trans.transform.translation.z = 0.0;
-		odom_trans.transform.rotation = odom_quat;
+			odom_trans.transform.translation.x = m_odom_x;
+			odom_trans.transform.translation.y = m_odom_y;
+			odom_trans.transform.translation.z = 0.0;
+			odom_trans.transform.rotation = odom_quat;
 
-		//send the transform
-		m_odom_broadcaster.sendTransform(odom_trans);
+			//send the transform
+			m_odom_broadcaster.sendTransform(odom_trans);
+		}
+
+		// create a odometry msg
+		nav_msgs::Odometry odom;
+		odom.header.stamp = ros::Time::now();
+		odom.header.frame_id = m_odom_frame_id.c_str();
+
+		// set the position
+		odom.pose.pose.position.x = m_odom_x;
+		odom.pose.pose.position.y = m_odom_y;
+		odom.pose.pose.position.z = 0.0;
+		odom.pose.pose.orientation = odom_quat;
+
+		// set the velocity
+		odom.child_frame_id = "base_footprint";
+		odom.twist.twist.linear.x = m_vel_x;
+		odom.twist.twist.linear.y = m_vel_y;
+		odom.twist.twist.angular.z = m_vel_yaw;
+
+		// set the covariance
+		double covariance[36] = { 1e-3, 0, 0, 0, 0, 0, 0, 1e-3, 0, 0, 0, 0, 0,
+				0, 1e6, 0, 0, 0, 0, 0, 0, 1e6, 0, 0, 0, 0, 0, 0, 1e6, 0, 0, 0,
+				0, 0, 0, 1e3 };
+
+		for (int i = 0; i < 36; i++) {
+			odom.pose.covariance[i] = covariance[i];
+			odom.twist.covariance[i] = covariance[i];
+		}
+
+		// publish the message
+		m_odom_pub.publish(odom);
 	}
-
-	// create a odometry msg
-	nav_msgs::Odometry odom;
-	odom.header.stamp = current_time;
-	odom.header.frame_id = m_odom_frame_id.c_str();
-
-	// set the position
-	odom.pose.pose.position.x = m_odom_x;
-	odom.pose.pose.position.y = m_odom_y;
-	odom.pose.pose.position.z = 0.0;
-	odom.pose.pose.orientation = odom_quat;
-
-	// set the velocity
-	odom.child_frame_id = "base_footprint";
-	odom.twist.twist.linear.x = m_vel_x;
-	odom.twist.twist.linear.y = m_vel_y;
-	odom.twist.twist.angular.z = m_vel_yaw;
-
-	// set the covariance
-	double covariance[36] = { 1e-3, 0, 0, 0, 0, 0, 0, 1e-3, 0, 0, 0, 0, 0, 0,
-			1e6, 0, 0, 0, 0, 0, 0, 1e6, 0, 0, 0, 0, 0, 0, 1e6, 0, 0, 0, 0, 0,
-			0, 1e3 };
-
-	for (int i = 0; i < 36; i++) {
-		odom.pose.covariance[i] = covariance[i];
-		odom.twist.covariance[i] = covariance[i];
-	}
-
-	// publish the message
-	m_odom_pub.publish(odom);
-
-	m_previous_left_count = enc->leftCount;
-	m_previous_right_count = enc->rightCount;
-
-	m_previous_odom_calc_time = current_time;
+	// save this message for later
+	m_p_enc_msg = enc;
 }
