@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="19" version="2.0">
+<workbench progressCount="26" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -31,13 +31,23 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/Main.cc" title="Main.cc" tooltip="ROS_mega/src/Main.cc" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5342" selectionTopPixel="3145"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="wrapper.cpp" partName="wrapper.cpp" path="/home/rbtying/robot/rover/src/wrapper.cpp" title="wrapper.cpp" tooltip="rover-RelWithDebInfo@rover/src/wrapper.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rover-RelWithDebInfo@rover/src/wrapper.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5058" selectionTopPixel="2108"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="wrapper.h" partName="wrapper.h" path="/home/rbtying/robot/rover/include/wrapper.h" title="wrapper.h" tooltip="rover-RelWithDebInfo@rover/include/wrapper.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rover-RelWithDebInfo@rover/include/wrapper.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2088" selectionTopPixel="884"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Gyro.h" partName="Gyro.h" path="/home/rbtying/robot/rover/msg_gen/cpp/include/rover/Gyro.h" title="Gyro.h" tooltip="rover-RelWithDebInfo@rover/msg_gen/cpp/include/rover/Gyro.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rover-RelWithDebInfo@rover/msg_gen/cpp/include/rover/Gyro.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3353" selectionTopPixel="1853"/>
 </editor>
 </editors>
 <views>
@@ -61,6 +71,7 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Warnings (1 item)"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="509" org.eclipse.ui.ide.markerType="966" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="865"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -405,6 +416,10 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/Main.cc"/>
 <editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/opt/ros/electric/stacks/rosserial/rosserial_arduino/libraries/ros_lib/ArduinoHardware.h" project="ROS_mega"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rover-RelWithDebInfo@rover/src/wrapper.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rover-RelWithDebInfo@rover/src/rover_main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rover-RelWithDebInfo@rover/include/wrapper.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rover-RelWithDebInfo@rover/msg_gen/cpp/include/rover/Gyro.h"/>
 </editors>
 <item historyLabel="Main.cc" index="0">
 <position info="not_deleted" x="5366" y="0"/>
@@ -412,8 +427,92 @@
 <item historyLabel="ArduinoHardware.h" index="1">
 <position info="not_deleted" x="2518" y="0"/>
 </item>
-<item active="true" historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="5366" y="0"/>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="5342" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="rover_main.cpp" index="3">
+<position info="not_deleted" x="147" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="162" y="0"/>
+</item>
+<item historyLabel="wrapper.h" index="4">
+<position info="not_deleted" x="1521" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position/>
+</item>
+<item historyLabel="wrapper.h" index="4">
+<position info="not_deleted" x="1299" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position/>
+</item>
+<item historyLabel="wrapper.h" index="4">
+<position info="not_deleted" x="1009" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="5367" y="0"/>
+</item>
+<item historyLabel="wrapper.h" index="4">
+<position info="not_deleted" x="1360" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="5367" y="0"/>
+</item>
+<item historyLabel="wrapper.h" index="4">
+<position info="not_deleted" x="1324" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="1014" y="0"/>
+</item>
+<item historyLabel="wrapper.h" index="4">
+<position info="not_deleted" x="1357" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="1003" y="0"/>
+</item>
+<item historyLabel="wrapper.h" index="4">
+<position info="not_deleted" x="1357" y="0"/>
+</item>
+<item historyLabel="wrapper.h" index="4">
+<position info="not_deleted" x="986" y="51"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="1003" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="4473" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position/>
+</item>
+<item historyLabel="Gyro.h" index="5">
+<position info="not_deleted" x="3353" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position/>
+</item>
+<item historyLabel="wrapper.h" index="4">
+<position info="not_deleted" x="1238" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="3255" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="6498" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="5058" y="0"/>
+</item>
+<item active="true" historyLabel="wrapper.h" index="4">
+<position info="not_deleted" x="1238" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -432,23 +531,26 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Gyro.h" tooltip="rover-RelWithDebInfo@rover/msg_gen/cpp/include/rover/Gyro.h">
+<persistable path="/rover-RelWithDebInfo@rover/msg_gen/cpp/include/rover/Gyro.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wrapper.h" tooltip="rover-RelWithDebInfo@rover/include/wrapper.h">
+<persistable path="/rover-RelWithDebInfo@rover/include/wrapper.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rover_main.cpp" tooltip="rover-RelWithDebInfo@rover/src/rover_main.cpp">
+<persistable path="/rover-RelWithDebInfo@rover/src/rover_main.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wrapper.cpp" tooltip="rover-RelWithDebInfo@rover/src/wrapper.cpp">
+<persistable path="/rover-RelWithDebInfo@rover/src/wrapper.cpp"/>
+</file>
 <file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ArduinoHardware.h" tooltip="/opt/ros/electric/stacks/rosserial/rosserial_arduino/libraries/ros_lib/ArduinoHardware.h">
 <persistable path="/opt/ros/electric/stacks/rosserial/rosserial_arduino/libraries/ros_lib/ArduinoHardware.h" project="ROS_mega"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mega/src/Main.cc">
 <persistable path="/ROS_mega/src/Main.cc"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wrapper.h" tooltip="rover-RelWithDebInfo@rover/include/wrapper.h">
-<persistable path="/rover-RelWithDebInfo@rover/include/wrapper.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wrapper.cpp" tooltip="rover-RelWithDebInfo@rover/src/wrapper.cpp">
-<persistable path="/rover-RelWithDebInfo@rover/src/wrapper.cpp"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TeleopRover.cpp" tooltip="rover-RelWithDebInfo@rover/src/TeleopRover.cpp">
 <persistable path="/rover-RelWithDebInfo@rover/src/TeleopRover.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rover_main.cpp" tooltip="rover-RelWithDebInfo@rover/src/rover_main.cpp">
-<persistable path="/rover-RelWithDebInfo@rover/src/rover_main.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rover.cpp" tooltip="rover-RelWithDebInfo@rover/src/rover.cpp">
 <persistable path="/rover-RelWithDebInfo@rover/src/rover.cpp"/>
@@ -473,9 +575,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="control_struct.h" tooltip="ROS_mega/src/control_struct.h">
 <persistable path="/ROS_mega/src/control_struct.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" tooltip="ROS_mega/src/pins.h">
-<persistable path="/ROS_mega/src/pins.h"/>
 </file>
 </mruList>
 </workbench>
