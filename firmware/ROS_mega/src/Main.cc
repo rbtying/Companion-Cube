@@ -191,7 +191,7 @@ void publish() {
 int main() {
 	init();
 
-	//	nh.getHardware()->setBaud(115200);
+	nh.getHardware()->setBaud(250000);
 	nh.initNode();
 	//	Serial.begin(115200);
 
