@@ -7,6 +7,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/rbtying/robot/rover/msg_gen/lisp/_package.lisp" "/home/rbtying/robot/rover/msg_gen/lisp/Settings.lisp"
   "/home/rbtying/robot/rover/msg_gen/lisp/_package_Battery.lisp" "/home/rbtying/robot/rover/msg_gen/lisp/Battery.lisp"
+  "/home/rbtying/robot/rover/msg_gen/lisp/_package_CondensedIMU.lisp" "/home/rbtying/robot/rover/msg_gen/lisp/CondensedIMU.lisp"
   "/home/rbtying/robot/rover/msg_gen/lisp/_package_Enabled.lisp" "/home/rbtying/robot/rover/msg_gen/lisp/Enabled.lisp"
   "/home/rbtying/robot/rover/msg_gen/lisp/_package_Encoder.lisp" "/home/rbtying/robot/rover/msg_gen/lisp/Encoder.lisp"
   "/home/rbtying/robot/rover/msg_gen/lisp/_package_Gyro.lisp" "/home/rbtying/robot/rover/msg_gen/lisp/Gyro.lisp"

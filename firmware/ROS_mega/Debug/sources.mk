@@ -33,6 +33,7 @@ SUBDIRS := \
 src/ros_lib \
 src/lib/utilities \
 src/lib/sensors/rangefinders \
+src/lib/sensors/imu \
 src/lib/sensors \
 src/lib/motors \
 src/lib/devices \

@@ -15,6 +15,8 @@
     (:file "_package_Battery" :depends-on ("_package"))
     (:file "Encoder" :depends-on ("_package_Encoder"))
     (:file "_package_Encoder" :depends-on ("_package"))
+    (:file "CondensedIMU" :depends-on ("_package_CondensedIMU"))
+    (:file "_package_CondensedIMU" :depends-on ("_package"))
     (:file "Enabled" :depends-on ("_package_Enabled"))
     (:file "_package_Enabled" :depends-on ("_package"))
   ))

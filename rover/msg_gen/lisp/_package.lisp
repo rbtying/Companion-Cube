@@ -11,6 +11,8 @@
    "BATTERY"
    "<ENCODER>"
    "ENCODER"
+   "<CONDENSEDIMU>"
+   "CONDENSEDIMU"
    "<ENABLED>"
    "ENABLED"
   ))

@@ -4,16 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CC_SRCS += \
-../src/Main.cc \
-../src/StateController.cc 
+../src/Main.cc 
 
 OBJS += \
-./src/Main.o \
-./src/StateController.o 
+./src/Main.o 
 
 CC_DEPS += \
-./src/Main.d \
-./src/StateController.d 
+./src/Main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -9,6 +9,7 @@ FILE(REMOVE_RECURSE
   "../src/rover/msg/_Motors.py"
   "../src/rover/msg/_Battery.py"
   "../src/rover/msg/_Encoder.py"
+  "../src/rover/msg/_CondensedIMU.py"
   "../src/rover/msg/_Enabled.py"
 )
 

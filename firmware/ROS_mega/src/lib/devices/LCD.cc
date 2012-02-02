@@ -40,39 +40,36 @@ LCD::LCD(uint8_t rs, uint8_t rw,
 	init(rs, rw, enable, 255, d4, d5, d6, d7, NULL);
 }
 
-LCD::LCD(uint8_t rs, uint8_t rw, uint8_t enable,
-		uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3) {
+LCD::LCD(uint8_t rs, uint8_t rw, uint8_t enable, uint8_t d0, uint8_t d1,
+		uint8_t d2, uint8_t d3) {
 	init(rs, rw, enable, 255, d0, d1, d2, d3, NULL);
 }
-LCD::LCD(uint8_t rs, uint8_t rw, uint8_t enable,
-		uint8_t en2, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3) //4x40  4 data pins 2 enable pins
+LCD::LCD(uint8_t rs, uint8_t rw, uint8_t enable, uint8_t en2, uint8_t d0,
+		uint8_t d1, uint8_t d2, uint8_t d3) //4x40  4 data pins 2 enable pins
 {
 	init(rs, rw, enable, en2, d0, d1, d2, d3, NULL);
 }
-LCD::LCD(uint8_t rs, uint8_t rw, uint8_t enable,
-		uint8_t en2, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3,
-		void userBusy(int8_t chip)) //4x40  4 data pins 2 enable pins
+LCD::LCD(uint8_t rs, uint8_t rw, uint8_t enable, uint8_t en2, uint8_t d0,
+		uint8_t d1, uint8_t d2, uint8_t d3, void userBusy(int8_t chip)) //4x40  4 data pins 2 enable pins
 {
 	init(rs, rw, enable, en2, d0, d1, d2, d3, userBusy);
 }
 
-LCD::LCD(uint8_t rs, uint8_t enable, uint8_t d0,
-		uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6,
-		uint8_t d7) {
+LCD::LCD(uint8_t rs, uint8_t enable, uint8_t d0, uint8_t d1, uint8_t d2,
+		uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7) {
 	init(rs, 255, enable, 255, d4, d5, d6, d7, NULL);
 }
-LCD::LCD(uint8_t rs, uint8_t enable, uint8_t d0,
-		uint8_t d1, uint8_t d2, uint8_t d3) {
+LCD::LCD(uint8_t rs, uint8_t enable, uint8_t d0, uint8_t d1, uint8_t d2,
+		uint8_t d3) {
 	init(rs, 255, enable, 255, d0, d1, d2, d3, NULL);
 }
-LCD::LCD(uint8_t rs, uint8_t enable, uint8_t d0,
-		uint8_t d1, uint8_t d2, uint8_t d3, void userBusy(int8_t chip)) {
+LCD::LCD(uint8_t rs, uint8_t enable, uint8_t d0, uint8_t d1, uint8_t d2,
+		uint8_t d3, void userBusy(int8_t chip)) {
 	init(rs, 255, enable, 255, d0, d1, d2, d3, userBusy);
 }
 
-void LCD::init(uint8_t rs, uint8_t rw, uint8_t enable, uint8_t en2,
-		uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, void userBusy(
-				int8_t chip)) {
+void LCD::init(uint8_t rs, uint8_t rw, uint8_t enable, uint8_t en2, uint8_t d0,
+		uint8_t d1, uint8_t d2, uint8_t d3, void userBusy(int8_t chip)) {
 	_rs_pin = rs;
 	_rw_pin = 255;
 	userFunc = NULL; // this game is needed to get through the init on the 40x4
@@ -133,8 +130,7 @@ void LCD::begin(uint8_t cols, uint8_t lines, uint8_t dotsize) {
 	}
 }
 
-void LCD::begin2(uint8_t cols, uint8_t lines, uint8_t dotsize,
-		uint8_t enable) {
+void LCD::begin2(uint8_t cols, uint8_t lines, uint8_t dotsize, uint8_t enable) {
 
 	uint8_t displayfunction = LCD_4BITMODE | LCD_1LINE | LCD_5x8DOTS;
 	if (lines > 1) {
@@ -228,7 +224,7 @@ void LCD::noDisplay() {
 }
 void LCD::display() {
 	_displaycontrol |= LCD_DISPLAYON;
-	commandBoth(LCD_DISPLAYCONTROL | _displaycontrol & LCD_CURSORS_MASK); //both chips on, both cursors off
+	commandBoth(LCD_DISPLAYCONTROL | (_displaycontrol & LCD_CURSORS_MASK)); //both chips on, both cursors off
 	command(LCD_DISPLAYCONTROL | _displaycontrol); //selected chip gets cursor on
 }
 // Turns the underline cursor on/off
@@ -321,7 +317,7 @@ void LCD::setCursor(uint8_t col, uint8_t row) // this can be called by the user 
 		offset += 40;
 	offset |= high_bit;
 	if (_chip != (row & 0b10)) {
-		command(LCD_DISPLAYCONTROL | _displaycontrol & LCD_CURSORS_MASK); //turn off cursors on chip we are leaving
+		command(LCD_DISPLAYCONTROL | (_displaycontrol & LCD_CURSORS_MASK)); //turn off cursors on chip we are leaving
 		_chip = row & 0b10; //if it is row 0 or 1 this is 0; if it is row 2 or 3 this is 2
 		command(LCD_DISPLAYCONTROL | _displaycontrol); //turn on cursor on chip we moved to
 	}
@@ -397,7 +393,6 @@ void LCD::send(uint8_t value, uint8_t mode) {
 				delayMicroseconds(DELAYPERCHAR);
 		}
 	} else {
-		uint8_t *pinptr = _data_pins;
 		pinMode(_data_pins[0], INPUT);
 		pinMode(_data_pins[1], INPUT);
 		pinMode(_data_pins[2], INPUT);

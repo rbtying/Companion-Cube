@@ -5,18 +5,15 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CC_SRCS += \
 ../src/lib/utilities/FlexiTimer2.cc \
-../src/lib/utilities/PID.cc \
-../src/lib/utilities/RC_CTRL.cc 
+../src/lib/utilities/PID.cc 
 
 OBJS += \
 ./src/lib/utilities/FlexiTimer2.o \
-./src/lib/utilities/PID.o \
-./src/lib/utilities/RC_CTRL.o 
+./src/lib/utilities/PID.o 
 
 CC_DEPS += \
 ./src/lib/utilities/FlexiTimer2.d \
-./src/lib/utilities/PID.d \
-./src/lib/utilities/RC_CTRL.d 
+./src/lib/utilities/PID.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

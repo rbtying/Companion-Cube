@@ -29,22 +29,23 @@ src/Main.d src/Main.o: ../src/Main.cc \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Battery.h \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Encoder.h \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Settings.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/CondensedIMU.h \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/UInt8MultiArray.h \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/MultiArrayLayout.h \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/MultiArrayDimension.h \
- /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Gyro.h \
  ../src/pins.h ../src/control_struct.h \
  /home/rbtying/robot/firmware/Arduino-2560/libraries/Servo/Servo.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/Battery.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/devices/CD74HC4067.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/Gyro.h \
- /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/Encoders.h \
- /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/PID.h \
- /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/DualMotor.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/fastIO.h \
- /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/Sabertooth.h \
- /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/DualMotor.h \
- /home/rbtying/robot/firmware/ROS_mega/src/lib/devices/StrongDriveOutput.h
+ /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/PID.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/RoboClaw.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/lib/devices/StrongDriveOutput.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/imu/IMU.h \
+ /home/rbtying/robot/firmware/Arduino-2560/libraries/Wire/Wire.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/imu/L3G4200D.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/imu/LSM303.h
 
 /home/rbtying/robot/firmware/Arduino-2560/WProgram.h:
 
@@ -106,13 +107,13 @@ src/Main.d src/Main.o: ../src/Main.cc \
 
 /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Settings.h:
 
+/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/CondensedIMU.h:
+
 /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/UInt8MultiArray.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/MultiArrayLayout.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/MultiArrayDimension.h:
-
-/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Gyro.h:
 
 ../src/pins.h:
 
@@ -126,16 +127,18 @@ src/Main.d src/Main.o: ../src/Main.cc \
 
 /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/Gyro.h:
 
-/home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/Encoders.h:
+/home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/fastIO.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/PID.h:
 
-/home/rbtying/robot/firmware/ROS_mega/src/lib/motors/DualMotor.h:
-
-/home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/fastIO.h:
-
-/home/rbtying/robot/firmware/ROS_mega/src/lib/motors/Sabertooth.h:
-
-/home/rbtying/robot/firmware/ROS_mega/src/lib/motors/DualMotor.h:
+/home/rbtying/robot/firmware/ROS_mega/src/lib/motors/RoboClaw.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/lib/devices/StrongDriveOutput.h:
+
+/home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/imu/IMU.h:
+
+/home/rbtying/robot/firmware/Arduino-2560/libraries/Wire/Wire.h:
+
+/home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/imu/L3G4200D.h:
+
+/home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/imu/LSM303.h:

@@ -1,5 +1,5 @@
-src/lib/utilities/RC_CTRL.d src/lib/utilities/RC_CTRL.o: \
- ../src/lib/utilities/RC_CTRL.cc ../src/lib/utilities/RC_CTRL.h \
+src/lib/motors/RoboClaw.d src/lib/motors/RoboClaw.o: \
+ ../src/lib/motors/RoboClaw.cpp ../src/lib/motors/RoboClaw.h \
  /home/rbtying/robot/firmware/Arduino-2560/WProgram.h \
  /home/rbtying/robot/firmware/Arduino-2560/wiring.h \
  /home/rbtying/robot/firmware/Arduino-2560/binary.h \
@@ -8,7 +8,7 @@ src/lib/utilities/RC_CTRL.d src/lib/utilities/RC_CTRL.o: \
  /home/rbtying/robot/firmware/Arduino-2560/Stream.h \
  /home/rbtying/robot/firmware/Arduino-2560/Print.h
 
-../src/lib/utilities/RC_CTRL.h:
+../src/lib/motors/RoboClaw.h:
 
 /home/rbtying/robot/firmware/Arduino-2560/WProgram.h:
 

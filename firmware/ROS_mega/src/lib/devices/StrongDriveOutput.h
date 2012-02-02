@@ -16,10 +16,12 @@ public:
 	void on();
 	void off();
 	void set(bool b);
+	bool get();
 private:
 	volatile uint8_t *m_port;
 	uint8_t m_pin;
 	bool m_inverted;
+	bool m_value;
 };
 
 #endif /* STRONGDRIVEOUTPUT_H_ */

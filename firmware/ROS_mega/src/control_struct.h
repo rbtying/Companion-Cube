@@ -10,22 +10,23 @@
 
 #include "libraries/Servo/Servo.h"
 #include "sensors/Battery.h"
-#include "sensors/Gyro.h"
-#include "sensors/Encoders.h"
-#include "utilities/PID.h"
-#include "motors/DualMotor.h"
 
 #define NUM_SERVOS 2
 
+struct Motor {
+	uint32_t p;
+	uint32_t i;
+	uint32_t d;
+	double qp_to_m;
+	int32_t count;
+	int32_t vel;
+};
+
 struct control_data {
 	Battery mot_batt;
-	gyro_data yaw;
-	PID_params leftPID;
-	PID_params rightPID;
-	encoder_data leftEnc;
-	encoder_data rightEnc;
-	motor_data mot;
 	Servo servos[NUM_SERVOS];
+	Motor left;
+	Motor right;
 	bool enabled;
 };
 
