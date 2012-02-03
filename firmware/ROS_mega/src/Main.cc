@@ -67,10 +67,13 @@ uint32_t nextCommTime;
 bool publishSettingsDump = false;
 
 void drivecb(const rover::Motors& msg) {
-	uint32_t left = (uint32_t)(msg.left / ctrl.left.qp_to_m);
-	uint32_t right = (uint32_t)(msg.right / ctrl.right.qp_to_m);
-	m.SpeedM1(RB_ADDRESS, (left != 0) ? left : 1);
-	m.SpeedM2(RB_ADDRESS, (right != 0) ? right : 1);
+	int32_t l = (int32_t)(msg.left / ctrl.left.qp_to_m);
+	int32_t r = (int32_t)(msg.right / ctrl.right.qp_to_m);
+	Serial3.print(l);
+	Serial3.print(", ");
+	Serial3.println(r);
+	m.SpeedM1(RB_ADDRESS, l);
+	m.SpeedM2(RB_ADDRESS, r);
 }
 ros::Subscriber<rover::Motors> drivesub("drive", &drivecb);
 
@@ -178,6 +181,7 @@ int main() {
 
 	pinMode(13, OUTPUT);
 
+	m.DutyM1M2(RB_ADDRESS, 0, 0);
 	m.SetMinVoltageLogicBattery(RB_ADDRESS, 0x00);
 	m.SetMinVoltageMainBattery(RB_ADDRESS, 0x00);
 	m.SetM1Constants(RB_ADDRESS, ctrl.left.d, ctrl.left.p, ctrl.left.i,
@@ -189,13 +193,12 @@ int main() {
 		cTime = millis();
 
 		if (IMU::updateIMU()) {
-			IMU::printdata();
+			//			IMU::printdata();
 		}
 
 		if (ctrl.enabled) {
 			if (!motorRelay.get()) {
 				motorRelay.on();
-				m.DutyM1M2(RB_ADDRESS, 0, 0);
 				m.SetMinVoltageLogicBattery(RB_ADDRESS, 0x00);
 				m.SetMinVoltageMainBattery(RB_ADDRESS, 0x00);
 				m.SetM1Constants(RB_ADDRESS, ctrl.left.d, ctrl.left.p,
@@ -205,6 +208,7 @@ int main() {
 			}
 		} else {
 			motorRelay.off();
+			m.DutyM1M2(RB_ADDRESS, 0, 0);
 		}
 
 		if (nexTime <= cTime && ctrl.enabled) {
@@ -227,6 +231,7 @@ int main() {
 
 		if (!nh.connected()) {
 			ctrl.enabled = false;
+			m.DutyM1M2(RB_ADDRESS, 0, 0);
 		}
 
 		nh.spinOnce();

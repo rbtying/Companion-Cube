@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="338" key="DIALOG_WIDTH"/>
+		<item value="350" key="DIALOG_WIDTH"/>
 		<item value="180" key="DIALOG_Y_ORIGIN"/>
+		<item value="499" key="DIALOG_HEIGHT"/>
 		<item value="1174" key="DIALOG_X_ORIGIN"/>
-		<item value="472" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="MAG_Heading" key="selection"/>
+		<item value="imu" key="selection"/>
 		<list key="findhistory">
+			<item value="imu"/>
+			<item value="print"/>
 			<item value="MAG_Heading"/>
 			<item value="Accel_Vector"/>
 			<item value="GRAVITY"/>
 			<item value="Gyro_Scaled_X"/>
 			<item value="dec"/>
 			<item value="dectofloat"/>
-			<item value="matrix_update"/>
-			<item value="readAccel"/>
 		</list>
 		<list key="replacehistory">
 			<item value="IMUAHRS::initAccel"/>

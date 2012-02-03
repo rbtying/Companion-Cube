@@ -4,9 +4,9 @@
 CMakeFiles/rover_node.dir/src/rover_main.o: ../include/util.h
 CMakeFiles/rover_node.dir/src/rover_main.o: ../include/wrapper.h
 CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/Battery.h
+CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/CondensedIMU.h
 CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/Enabled.h
 CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/Encoder.h
-CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/Gyro.h
 CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/Motors.h
 CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/Settings.h
 CMakeFiles/rover_node.dir/src/rover_main.o: ../src/rover_main.cpp
@@ -103,9 +103,9 @@ CMakeFiles/rover_node.dir/src/rover_main.o: /opt/ros/electric/stacks/ros_comm/ut
 CMakeFiles/rover_node.dir/src/wrapper.o: ../include/util.h
 CMakeFiles/rover_node.dir/src/wrapper.o: ../include/wrapper.h
 CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/Battery.h
+CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/CondensedIMU.h
 CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/Enabled.h
 CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/Encoder.h
-CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/Gyro.h
 CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/Motors.h
 CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/Settings.h
 CMakeFiles/rover_node.dir/src/wrapper.o: ../src/wrapper.cpp

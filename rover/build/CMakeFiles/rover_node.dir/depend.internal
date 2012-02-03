@@ -5,9 +5,9 @@ CMakeFiles/rover_node.dir/src/rover_main.o
  ../include/util.h
  ../include/wrapper.h
  ../msg_gen/cpp/include/rover/Battery.h
+ ../msg_gen/cpp/include/rover/CondensedIMU.h
  ../msg_gen/cpp/include/rover/Enabled.h
  ../msg_gen/cpp/include/rover/Encoder.h
- ../msg_gen/cpp/include/rover/Gyro.h
  ../msg_gen/cpp/include/rover/Motors.h
  ../msg_gen/cpp/include/rover/Settings.h
  /home/rbtying/robot/rover/src/rover_main.cpp
@@ -104,9 +104,9 @@ CMakeFiles/rover_node.dir/src/wrapper.o
  ../include/util.h
  ../include/wrapper.h
  ../msg_gen/cpp/include/rover/Battery.h
+ ../msg_gen/cpp/include/rover/CondensedIMU.h
  ../msg_gen/cpp/include/rover/Enabled.h
  ../msg_gen/cpp/include/rover/Encoder.h
- ../msg_gen/cpp/include/rover/Gyro.h
  ../msg_gen/cpp/include/rover/Motors.h
  ../msg_gen/cpp/include/rover/Settings.h
  /home/rbtying/robot/rover/src/wrapper.cpp

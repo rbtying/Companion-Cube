@@ -238,11 +238,11 @@ void RoboClaw::DutyM1M2(uint8_t address, uint16_t duty1, uint16_t duty2) {
 	write_n(6, address, MIXEDDUTY, SetWORDval(duty1), SetWORDval(duty2));
 }
 
-void RoboClaw::SpeedM1(uint8_t address, uint32_t speed) {
+void RoboClaw::SpeedM1(uint8_t address, int32_t speed) {
 	write_n(6, address, M1SPEED, SetDWORDval(speed));
 }
 
-void RoboClaw::SpeedM2(uint8_t address, uint32_t speed) {
+void RoboClaw::SpeedM2(uint8_t address, int32_t speed) {
 	write_n(6, address, M2SPEED, SetDWORDval(speed));
 }
 

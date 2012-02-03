@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="23" version="2.0">
+<workbench progressCount="26" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -35,9 +35,9 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/Main.cc" title="Main.cc" tooltip="ROS_mega/src/Main.cc" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1555" selectionTopPixel="833"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="wrapper.cpp" partName="wrapper.cpp" path="/home/rbtying/robot/rover/src/wrapper.cpp" title="wrapper.cpp" tooltip="rover-RelWithDebInfo@rover/src/wrapper.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rover-RelWithDebInfo@rover/src/wrapper.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2796" selectionTopPixel="1088"/>
 </editor>
 </editors>
 <views>
@@ -61,7 +61,6 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Warnings (1 item)"/>
-<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="509" org.eclipse.ui.ide.markerType="966" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="865"/>
@@ -406,161 +405,161 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/Main.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/sensors/imu/IMU.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/sensors/imu/LSM303.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/sensors/imu/LSM303.cc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/sensors/imu/L3G4200D.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/ros_lib/rover/CondensedIMU.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rover-RelWithDebInfo@rover/src/rover_main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rover-RelWithDebInfo@rover/src/wrapper.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rover-RelWithDebInfo@rover/include/wrapper.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/motors/RoboClaw.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/motors/RoboClaw.h"/>
 </editors>
-<item historyLabel="IMU.h" index="1">
-<position/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="15081" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="11553" y="49"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3838" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="15239" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="4996" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="4521" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="4996" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="1306" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="1317" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="5849" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="2314" y="7"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="2831" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="2800" y="3"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="12068" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="2044" y="2"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="5191" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="12328" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3070" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="12328" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="12042" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="12029" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="11240" y="0"/>
-</item>
-<item historyLabel="LSM303.h" index="2">
-<position/>
-</item>
-<item historyLabel="LSM303.cc" index="3">
-<position info="not_deleted" x="6043" y="0"/>
-</item>
-<item historyLabel="LSM303.h" index="2">
-<position/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="9479" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3070" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3011" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="7830" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3011" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3051" y="0"/>
-</item>
 <item historyLabel="Main.cc" index="0">
 <position/>
 </item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="150" y="0"/>
-</item>
-<item historyLabel="L3G4200D.h" index="4">
-<position info="not_deleted" x="1492" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="172" y="0"/>
-</item>
-<item historyLabel="LSM303.h" index="2">
-<position info="not_deleted" x="4075" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="172" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3170" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="6122" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3165" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="1">
-<position info="not_deleted" x="2380" y="11"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3146" y="0"/>
-</item>
-<item historyLabel="CondensedIMU.h" index="5">
+<item historyLabel="rover_main.cpp" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="CondensedIMU.h" index="5">
-<position info="not_deleted" x="2299" y="0"/>
+<item historyLabel="wrapper.cpp" index="2">
+<position/>
+</item>
+<item historyLabel="wrapper.h" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="wrapper.h" index="3">
+<position info="not_deleted" x="1865" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="927" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="964" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="952" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position/>
+</item>
+<item historyLabel="wrapper.h" index="3">
+<position info="not_deleted" x="1300" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="4328" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="2208" y="0"/>
+</item>
+<item historyLabel="wrapper.h" index="3">
+<position info="not_deleted" x="1450" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="2678" y="0"/>
+</item>
+<item historyLabel="wrapper.h" index="3">
+<position info="not_deleted" x="1012" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="1379" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="2766" y="41"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="3293" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="424" y="0"/>
+</item>
+<item historyLabel="wrapper.h" index="3">
+<position info="not_deleted" x="1930" y="0"/>
+</item>
+<item historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="62" y="0"/>
+</item>
+<item historyLabel="wrapper.h" index="3">
+<position info="not_deleted" x="1930" y="0"/>
+</item>
+<item historyLabel="rover_main.cpp" index="1">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="3146" y="0"/>
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="1764" y="0"/>
+<position info="not_deleted" x="1776" y="0"/>
 </item>
-<item active="true" historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="1801" y="0"/>
+<item historyLabel="RoboClaw.cpp" index="4">
+<position/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="4">
+<position/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="4">
+<position/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1778" y="0"/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="4">
+<position/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="4">
+<position/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="4">
+<position/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1805" y="0"/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="4">
+<position info="not_deleted" x="5946" y="7"/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="4">
+<position info="not_deleted" x="5971" y="0"/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="4">
+<position info="not_deleted" x="5820" y="56"/>
+</item>
+<item historyLabel="RoboClaw.h" index="5">
+<position info="not_deleted" x="3636" y="0"/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="4">
+<position info="not_deleted" x="6193" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1805" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1724" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1745" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1746" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="1767" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="5467" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="6067" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="5376" y="0"/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="4">
+<position info="not_deleted" x="6193" y="0"/>
+</item>
+<item historyLabel="RoboClaw.h" index="5">
+<position info="not_deleted" x="3636" y="0"/>
+</item>
+<item active="true" historyLabel="wrapper.cpp" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -568,12 +567,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@892399"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="topRight"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -581,11 +574,28 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wrapper.cpp" tooltip="rover-RelWithDebInfo@rover/src/wrapper.cpp">
+<persistable path="/rover-RelWithDebInfo@rover/src/wrapper.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RoboClaw.h" tooltip="ROS_mega/src/lib/motors/RoboClaw.h">
+<persistable path="/ROS_mega/src/lib/motors/RoboClaw.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RoboClaw.cpp" tooltip="ROS_mega/src/lib/motors/RoboClaw.cpp">
+<persistable path="/ROS_mega/src/lib/motors/RoboClaw.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mega/src/Main.cc">
+<persistable path="/ROS_mega/src/Main.cc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wrapper.h" tooltip="rover-RelWithDebInfo@rover/include/wrapper.h">
+<persistable path="/rover-RelWithDebInfo@rover/include/wrapper.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rover_main.cpp" tooltip="rover-RelWithDebInfo@rover/src/rover_main.cpp">
+<persistable path="/rover-RelWithDebInfo@rover/src/rover_main.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="CondensedIMU.h" tooltip="ROS_mega/src/ros_lib/rover/CondensedIMU.h">
 <persistable path="/ROS_mega/src/ros_lib/rover/CondensedIMU.h"/>
 </file>
@@ -610,26 +620,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LCD.cc" tooltip="ROS_mega/src/lib/devices/LCD.cc">
 <persistable path="/ROS_mega/src/lib/devices/LCD.cc"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mega/src/Main.cc">
-<persistable path="/ROS_mega/src/Main.cc"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="node_handle.h" tooltip="ROS_mega/src/ros_lib/ros/node_handle.h">
 <persistable path="/ROS_mega/src/ros_lib/ros/node_handle.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="IMU9AHRS.cpp" tooltip="ROS_mega/src/lib/sensors/imu/IMU9AHRS.cpp">
-<persistable path="/ROS_mega/src/lib/sensors/imu/IMU9AHRS.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LSM303.cpp" tooltip="ROS_mega/src/lib/sensors/imu/LSM303.cpp">
-<persistable path="/ROS_mega/src/lib/sensors/imu/LSM303.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="L3G4200D.cpp" tooltip="ROS_mega/src/lib/sensors/imu/L3G4200D.cpp">
-<persistable path="/ROS_mega/src/lib/sensors/imu/L3G4200D.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pins.h" tooltip="ROS_mega/src/pins.h">
-<persistable path="/ROS_mega/src/pins.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RoboClaw.h" tooltip="ROS_mega/src/lib/motors/RoboClaw.h">
-<persistable path="/ROS_mega/src/lib/motors/RoboClaw.h"/>
 </file>
 </mruList>
 </workbench>

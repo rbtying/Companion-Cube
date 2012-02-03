@@ -112,8 +112,8 @@ public:
 	void DutyM1(uint8_t address, uint16_t duty);
 	void DutyM2(uint8_t address, uint16_t duty);
 	void DutyM1M2(uint8_t address, uint16_t duty1, uint16_t duty2);
-	void SpeedM1(uint8_t address, uint32_t speed);
-	void SpeedM2(uint8_t address, uint32_t speed);
+	void SpeedM1(uint8_t address, int32_t speed);
+	void SpeedM2(uint8_t address, int32_t speed);
 	void SpeedM1M2(uint8_t address, uint32_t speed1, uint32_t speed2);
 	void SpeedAccelM1(uint8_t address, uint32_t accel, uint32_t speed);
 	void SpeedAccelM2(uint8_t address, uint32_t accel, uint32_t speed);

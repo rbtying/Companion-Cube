@@ -7,42 +7,32 @@
     <node pkg="rover" name="roverBot" type="rover_node">
         <param name="axleLength" value="0.26" type="double" />
         <param name="maxSpeed" value="0.75" type="double" />
-        <param name="left/proportional" value="0.6" type="double" />
-        <param name="left/integral" value="0.2" type="double" />
-        <param name="left/derivative" value="0.05" type="double" />
-        <param name="right/proportional" value="0.6" type="double" />
-        <param name="right/integral" value="0.2" type="double" />
-        <param name="right/derivative" value="0.05" type="double" />
-        <param name="left/conversion_factor" value="0.00004" type="double" />
-        <param name="right/conversion_factor" value="0.00004" type="double" />
-        <param name="gyro_correction" value="1.0" type="double" />
         <param name="odom_frame_id" value="odom" />
         <param name="publish_tf" value="false" />
 
         <remap from="roverBot/odom" to="/odom" />
-        <remap from="roverBot/imu" to="/imu" />
+        <remap from="roverBot/imu/raw" to="/imu/raw" />
+        <remap from="roverBot/imu/data" to="/imu/data" />
         <remap from="roverBot/enable" to="/enable" />
         <remap from="roverBot/drive" to="/drive" />
-        <remap from="roverBot/settings" to="/settings" />
         <remap from="roverBot/servos" to="/servos" />
         <remap from="roverBot/servos_curr" to="/servos_curr" />
         <remap from="roverBot/joint_states" to="/joint_states" />
         <remap from="roverBot/cmd_vel" to="/cmd_vel" />
         <remap from="roverBot/battery/motor" to="/battery/motor" />
         <remap from="roverBot/encoders" to="/encoders" />
-        <remap from="roverBot/yaw/gyro" to="/yaw/gyro" />
     </node>
 
     <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
         <param name="output_frame" value="odom"/>
         <param name="sensor_timeout" value="1.0" />
-        <param name="odom_used" value="false" />
-        <param name="imu_used" value="false" />
+        <param name="odom_used" value="true" />
+        <param name="imu_used" value="true" />
         <param name="vo_used" value="false" />
         <param name="self_diagnose" value="true" />
         <param name="publish_tf" value="true" />
 
-        <remap from="imu_data" to="imu" />
+        <remap from="imu_data" to="imu/data" />
     </node>
 
 </launch>

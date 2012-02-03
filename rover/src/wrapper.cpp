@@ -10,10 +10,9 @@ Wrapper::~Wrapper() {
 Wrapper::Wrapper() :
 	m_n("~") {
 	m_odom_pub = m_n.advertise<nav_msgs::Odometry> ("odom", 1);
-	m_imu_pub = m_n.advertise<sensor_msgs::Imu> ("imu", 1);
+	m_imu_pub = m_n.advertise<sensor_msgs::Imu> ("imu/data", 1);
 	m_enable_pub = m_n.advertise<rover::Enabled> ("enable", 1, true);
 	m_motors_pub = m_n.advertise<rover::Motors> ("drive", 1);
-	m_settings_pub = m_n.advertise<rover::Settings> ("settings", 1, true);
 	m_servos_pub = m_n.advertise<std_msgs::UInt8MultiArray> ("servos", 1);
 	m_joint_pub = m_n.advertise<sensor_msgs::JointState> ("joint_states", 1);
 
@@ -23,12 +22,10 @@ Wrapper::Wrapper() :
 			&Wrapper::battCallback, this);
 	m_enc_sub = m_n.subscribe<rover::Encoder> ("encoders", 10,
 			&Wrapper::encCallback, this);
-	m_gyro_sub = m_n.subscribe<rover::Gyro> ("yaw/gyro", 10,
-			&Wrapper::gyrCallback, this);
+	m_imu_sub = m_n.subscribe<rover::CondensedIMU> ("imu/raw", 10,
+			&Wrapper::imuCallback, this);
 	m_servos_sub = m_n.subscribe<std_msgs::UInt8MultiArray> ("servos_curr", 10,
 			&Wrapper::servoCallback, this);
-
-	double lP, lI, lD, rP, rI, rD, le, re;
 
 	// parameters
 	m_n.param<double> ("axleLength", m_axlelength, 0.10);
@@ -36,24 +33,10 @@ Wrapper::Wrapper() :
 
 	m_n.param<double> ("motor_battery_threshold", m_minBatVoltage, 8.5);
 
-	m_n.param<double> ("left/proportional", lP, 0.3);
-	m_n.param<double> ("left/integral", lI, 0.05);
-	m_n.param<double> ("left/derivative", lD, 0);
-
-	m_n.param<double> ("right/proportional", rP, 0.3);
-	m_n.param<double> ("right/integral", rI, 0.05);
-	m_n.param<double> ("right/derivative", rD, 0);
-
-	m_n.param<double> ("left/conversion_factor", le, 0.00004);
-	m_n.param<double> ("right/conversion_factor", re, 0.00004);
-
 	m_n.param<std::string> ("odom_frame_id", m_odom_frame_id, "odom");
 	m_n.param<bool> ("publish_tf", m_publish_tf, true);
-	m_n.param<double> ("gyro_correction", m_yaw_gyro_correction_factor, 1.0);
 
 	//	usleep(5e6);
-
-	setSettings(lP, lI, lD, le, rP, rI, rD, re);
 
 	rover::Enabled msg;
 	msg.motorsEnabled = true;
@@ -64,20 +47,6 @@ Wrapper::Wrapper() :
 	servomsg.data[0] = HALF_PI * RAD_TO_DEG;
 	servomsg.data[1] = HALF_PI * RAD_TO_DEG;
 	m_servos_pub.publish(servomsg);
-}
-
-void Wrapper::setSettings(double lp, double li, double ld, double lc,
-		double rp, double ri, double rd, double rc) {
-	rover::Settings m;
-	m.left_proportional = lp;
-	m.left_integral = li;
-	m.left_derivative = ld;
-	m.left_conversion_factor = lc;
-	m.right_proportional = rp;
-	m.right_integral = ri;
-	m.right_derivative = rd;
-	m.right_conversion_factor = rc;
-	m_settings_pub.publish(m);
 }
 
 void Wrapper::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& cmd_vel) {
@@ -94,45 +63,38 @@ void Wrapper::battCallback(const rover::Battery::ConstPtr& bat) {
 	}
 }
 
-void Wrapper::gyrCallback(const rover::Gyro::ConstPtr& gyr) {
-	if (m_p_gyr_msg != NULL) {
-		double dt = (gyr->header.stamp - m_p_gyr_msg->header.stamp).toSec();
+void Wrapper::imuCallback(const rover::CondensedIMU::ConstPtr& imu) {
+	// create a quaternion for the gyro
+	geometry_msgs::Quaternion imu_quat =
+			tf::createQuaternionMsgFromRollPitchYaw(imu->roll, imu->pitch,
+					imu->yaw);
 
-		m_yaw_gyro_rate = gyr->rate * m_yaw_gyro_correction_factor;
-		m_yaw_gyro_value += dt * m_yaw_gyro_rate;
+	// create a sensor msg for the gyro
+	sensor_msgs::Imu imu_msg;
+	imu_msg.header.stamp = ros::Time::now();
+	imu_msg.header.frame_id = "base_footprint";
 
-		// create a quaternion for the gyro
-		geometry_msgs::Quaternion imu_quat = tf::createQuaternionMsgFromYaw(
-				m_yaw_gyro_value);
+	imu_msg.orientation = imu_quat;
+	imu_msg.orientation_covariance[0] = 1e6;
+	imu_msg.orientation_covariance[4] = 1e6;
+	imu_msg.orientation_covariance[8] = 1e-6;
 
-		// create a sensor msg for the gyro
-		sensor_msgs::Imu imu_msg;
-		imu_msg.header.stamp = ros::Time::now();
-		imu_msg.header.frame_id = "base_footprint";
+	imu_msg.angular_velocity.x = imu->gyro_x;
+	imu_msg.angular_velocity.y = imu->gyro_y;
+	imu_msg.angular_velocity.z = -imu->gyro_z;
+	imu_msg.angular_velocity_covariance[0] = 1e6;
+	imu_msg.angular_velocity_covariance[4] = 1e6;
+	imu_msg.angular_velocity_covariance[8] = 1e-6;
 
-		imu_msg.orientation = imu_quat;
-		imu_msg.orientation_covariance[0] = 1e6;
-		imu_msg.orientation_covariance[4] = 1e6;
-		imu_msg.orientation_covariance[8] = 1e-6;
+	imu_msg.linear_acceleration.x = imu->accel_x;
+	imu_msg.linear_acceleration.y = imu->accel_y;
+	imu_msg.linear_acceleration.z = imu->accel_z;
+	imu_msg.linear_acceleration_covariance[0] = 1e6;
+	imu_msg.linear_acceleration_covariance[4] = 1e6;
+	imu_msg.linear_acceleration_covariance[8] = 1e-6;
 
-		imu_msg.angular_velocity.x = 0.0;
-		imu_msg.angular_velocity.y = 0.0;
-		imu_msg.angular_velocity.z = m_yaw_gyro_rate;
-		imu_msg.angular_velocity_covariance[0] = 1e6;
-		imu_msg.angular_velocity_covariance[4] = 1e6;
-		imu_msg.angular_velocity_covariance[8] = 1e-6;
-
-		imu_msg.linear_acceleration.x = 0.0;
-		imu_msg.linear_acceleration.y = 0.0;
-		imu_msg.linear_acceleration.z = 0.0;
-		imu_msg.linear_acceleration_covariance[0] = -1; // no accelerometers, so just set covariance to -1
-
-		// send the message
-		m_imu_pub.publish(imu_msg);
-	}
-
-	// save this message
-	m_p_gyr_msg = gyr;
+	// send the message
+	m_imu_pub.publish(imu_msg);
 }
 
 void Wrapper::servoCallback(const std_msgs::UInt8MultiArray::ConstPtr& serv) {

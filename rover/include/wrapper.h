@@ -18,7 +18,7 @@
 #include <rover/Battery.h>			    // battery
 #include <rover/Encoder.h>			    // encoders
 #include <rover/Settings.h>             // settings
-#include <rover/Gyro.h>                 // gyro
+#include <rover/CondensedIMU.h>			// imu
 #include <rover/Motors.h>				// motors
 #include <rover/Enabled.h>              // enablemessage
 //#include "servomapping.h"
@@ -34,7 +34,7 @@ private:
 	void cmdVelCallback(const geometry_msgs::Twist::ConstPtr& cmd_vel);
 	void battCallback(const rover::Battery::ConstPtr& bat);
 	void encCallback(const rover::Encoder::ConstPtr& enc);
-	void gyrCallback(const rover::Gyro::ConstPtr& gyr);
+	void imuCallback(const rover::CondensedIMU::ConstPtr& gyr);
 	void servoCallback(const std_msgs::UInt8MultiArray::ConstPtr& serv);
 	void setSettings(double lp, double li, double ld, double lc, double rp,
 			double ri, double rd, double rc);
@@ -44,7 +44,6 @@ private:
 	double m_minBatVoltage;
 
 	rover::Encoder::ConstPtr m_p_enc_msg;
-	rover::Gyro::ConstPtr m_p_gyr_msg;
 
 	double m_odom_x;
 	double m_odom_y;
@@ -52,10 +51,6 @@ private:
 	double m_vel_x;
 	double m_vel_y;
 	double m_vel_yaw;
-
-	double m_yaw_gyro_rate;
-	double m_yaw_gyro_value;
-	double m_yaw_gyro_correction_factor;
 
 	bool m_publish_tf;
 
@@ -65,7 +60,6 @@ private:
 	ros::Publisher m_odom_pub;
 	ros::Publisher m_imu_pub;
 	ros::Publisher m_motors_pub;
-	ros::Publisher m_settings_pub;
 	ros::Publisher m_servos_pub;
 	ros::Publisher m_joint_pub;
 	ros::Publisher m_enable_pub;
@@ -75,7 +69,7 @@ private:
 	ros::Subscriber m_cmd_vel_sub;
 	ros::Subscriber m_batt_sub;
 	ros::Subscriber m_enc_sub;
-	ros::Subscriber m_gyro_sub;
+	ros::Subscriber m_imu_sub;
 	ros::Subscriber m_servos_sub;
 };
 
