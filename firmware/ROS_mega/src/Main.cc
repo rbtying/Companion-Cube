@@ -113,9 +113,9 @@ void publish() {
 	imudata.gyro_x = IMU::Gyro_Vector[0];
 	imudata.gyro_y = IMU::Gyro_Vector[1];
 	imudata.gyro_z = IMU::Gyro_Vector[2];
-	imudata.accel_x = (IMU::Accel_Vector[0] * 9.81) / GRAVITY;
-	imudata.accel_y = (IMU::Accel_Vector[1] * 9.81) / GRAVITY;
-	imudata.accel_z = (IMU::Accel_Vector[2] * 9.81) / GRAVITY;
+	imudata.accel_x = Accel_To_M_s_2(IMU::Accel_Vector[0]);
+	imudata.accel_y = Accel_To_M_s_2(IMU::Accel_Vector[1]);
+	imudata.accel_z = Accel_To_M_s_2(IMU::Accel_Vector[2]);
 	imudata.mag_heading = (IMU::MAG_Heading);
 
 	imupub.publish(&imudata);
@@ -166,12 +166,12 @@ int main() {
 	ctrl.left.p = 0x00010000;
 	ctrl.left.i = 0x00008000;
 	ctrl.left.d = 0x00004000;
-	ctrl.left.qp_to_m = 3.14159265 * 0.07 / 1865;
+	ctrl.left.qp_to_m = 3.14159265 * 0.07265 / 1865;
 
 	ctrl.right.p = 0x00010000;
 	ctrl.right.i = 0x00008000;
 	ctrl.right.d = 0x00004000;
-	ctrl.right.qp_to_m = 3.14159265 * 0.07 / 1865;
+	ctrl.right.qp_to_m = 3.14159265 * 0.07265 / 1865;
 
 	// battery
 	ctrl.mot_batt.set(NULL, MOTOR_VOLTAGE_SENS, MOTOR_CURRENT_SENS);

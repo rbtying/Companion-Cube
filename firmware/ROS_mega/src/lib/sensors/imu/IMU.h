@@ -14,10 +14,11 @@
 
 namespace IMU {
 
-int SENSOR_SIGN[9] = { -1, 1, 1, 1, -1, -1, -1, 1, 1 };
+int SENSOR_SIGN[9] = { -1, 1, -1, 1, -1, 1, -1, 1, -1 };
 // LSM303 accelerometer: 8 g sensitivity
 // 3.8 mg/digit; 1 g = 256
 #define GRAVITY 256  //this equivalent to 1G in the raw data coming from the accelerometer
+#define Accel_To_M_s_2(x) (x * 9.81 * 0.0038)
 #define ToRad(x) ((x)*0.01745329252)  // *pi/180
 #define ToDeg(x) ((x)*57.2957795131)  // *180/pi
 // L3G4200D gyro: 2000 dps full scale
@@ -30,12 +31,12 @@ int SENSOR_SIGN[9] = { -1, 1, 1, 1, -1, -1, -1, 1, 1 };
 #define Gyro_Scaled_Z(x) ((x)*ToRad(Gyro_Gain_Z)) //Return the scaled ADC raw data of the gyro in radians for second
 // LSM303 magnetometer calibration constants; use the Calibrate example from
 // the Pololu LSM303 library to find the right values for your board
-#define M_X_MIN -796
-#define M_Y_MIN -457
-#define M_Z_MIN -424
-#define M_X_MAX 197
-#define M_Y_MAX 535
-#define M_Z_MAX 397
+#define M_X_MIN -433
+#define M_Y_MIN -406
+#define M_Z_MIN -197
+#define M_X_MAX -95
+#define M_Y_MAX 41
+#define M_Z_MAX 203
 
 #define Kp_ROLLPITCH 0.02
 #define Ki_ROLLPITCH 0.00002
@@ -125,10 +126,9 @@ void initIMU() {
 
 	initI2C();
 
-	Serial3.println("Pololu MinIMU-9 + Arduino AHRS");
-
 	digitalWrite(STATUS_LED, LOW);
-	delay(1500);
+	delay(150);
+	//	delay(1500);
 
 	initAccel();
 	initCompass();
@@ -151,14 +151,13 @@ void initIMU() {
 	AN_OFFSET[5] -= GRAVITY * SENSOR_SIGN[5];
 
 	//Serial3.println("Offset:");
-	for (int y = 0; y < 6; y++)
-		Serial3.println(AN_OFFSET[y]);
+	//	for (int y = 0; y < 6; y++)
+	//		Serial3.println(AN_OFFSET[y]);
 
-	delay(2000);
 	digitalWrite(STATUS_LED, HIGH);
 
 	timer = millis();
-	delay(20);
+	//	delay(20);
 	counter = 0;
 }
 

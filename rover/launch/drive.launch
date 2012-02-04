@@ -5,7 +5,7 @@
     </node>
 
     <node pkg="rover" name="roverBot" type="rover_node">
-        <param name="axleLength" value="0.26" type="double" />
+        <param name="axleLength" value="0.235" type="double" />
         <param name="maxSpeed" value="0.75" type="double" />
         <param name="odom_frame_id" value="odom" />
         <param name="publish_tf" value="false" />

@@ -28,7 +28,7 @@ Wrapper::Wrapper() :
 			&Wrapper::servoCallback, this);
 
 	// parameters
-	m_n.param<double> ("axleLength", m_axlelength, 0.10);
+	m_n.param<double> ("axleLength", m_axlelength, 0.235);
 	m_n.param<double> ("maxSpeed", m_maxvel, 0.75);
 
 	m_n.param<double> ("motor_battery_threshold", m_minBatVoltage, 8.5);
@@ -81,7 +81,7 @@ void Wrapper::imuCallback(const rover::CondensedIMU::ConstPtr& imu) {
 
 	imu_msg.angular_velocity.x = imu->gyro_x;
 	imu_msg.angular_velocity.y = imu->gyro_y;
-	imu_msg.angular_velocity.z = -imu->gyro_z;
+	imu_msg.angular_velocity.z = imu->gyro_z;
 	imu_msg.angular_velocity_covariance[0] = 1e6;
 	imu_msg.angular_velocity_covariance[4] = 1e6;
 	imu_msg.angular_velocity_covariance[8] = 1e-6;

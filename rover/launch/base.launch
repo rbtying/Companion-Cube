@@ -1,16 +1,17 @@
 <launch>
+    <!-- robot state -->
+    <include file="$(find rover)/launch/urdf.launch" />
+
     <!-- drive train, odometry, and IMU -->
     <include file="$(find rover)/launch/drive.launch" />
-
-    <!-- gps client -->
-    <!--<node name="gpsd_client" pkg="gpsd_client" type="gpsd_client" />-->
 
     <!-- kinect and laserscan -->
     <include file="$(find rover)/launch/kinect_fakelaser.launch" />
 
+    <!-- gps client -->
+    <!--<node name="gpsd_client" pkg="gpsd_client" type="gpsd_client" />-->
+
     <!-- camera -->
     <!--<include file="$(find rover)/launch/lifecam.launch" />-->
 
-    <!-- robot state -->
-    <include file="$(find rover)/launch/urdf.launch" />
 </launch>

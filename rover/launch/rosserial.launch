@@ -1,5 +1,0 @@
-<launch>
-    <node name="rosserial_node" type="serial_node.py" pkg="rosserial_python">
-        <param name="baud" value="115200" />
-    </node>
-</launch>
