@@ -182,6 +182,12 @@ ros/assert.h
 std_msgs/Header.h
 ../msg_gen/cpp/include/rover/std_msgs/Header.h
 
+/home/rbtying/robot/rover/src/rover_main.cpp
+ros/ros.h
+-
+wrapper.h
+/home/rbtying/robot/rover/src/wrapper.h
+
 /home/rbtying/robot/rover/src/wrapper.cpp
 wrapper.h
 /home/rbtying/robot/rover/src/wrapper.h

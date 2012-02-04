@@ -42,24 +42,24 @@ CMAKE_BINARY_DIR = /home/rbtying/robot/rover/build
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Settings.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Settings.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Enabled.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Enabled.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Gyro.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Gyro.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Motors.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/CondensedIMU.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Motors.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_CondensedIMU.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Battery.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Battery.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Encoder.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Encoder.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/CondensedIMU.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Motors.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_CondensedIMU.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Enabled.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Enabled.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Motors.lisp
 
 ../msg_gen/lisp/Settings.lisp: ../msg/Settings.msg
 ../msg_gen/lisp/Settings.lisp: /opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
@@ -129,6 +129,73 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Enabled.lisp
 
 ../msg_gen/lisp/_package_Settings.lisp: ../msg_gen/lisp/Settings.lisp
 
+../msg_gen/lisp/Enabled.lisp: ../msg/Enabled.msg
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/core/roslib/scripts/gendeps
+../msg_gen/lisp/Enabled.lisp: ../manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/core/rosbuild/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/core/roslang/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/tools/rospack/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/core/roslib/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/tools/rosclean/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/tools/rosunit/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common/actionlib/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/bullet/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/geometry/angles/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosnode/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmsg/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostopic/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosservice/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/utilities/roswtf/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/utilities/message_filters/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/geometry/tf/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /home/rbtying/robot/cereal_port/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/joystick_drivers/ps3joy/manifest.xml
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/msg_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common/actionlib/msg_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/geometry/tf/msg_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
+../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Enabled.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Enabled.lisp"
+	/opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/Enabled.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/Enabled.lisp
+
+../msg_gen/lisp/_package_Enabled.lisp: ../msg_gen/lisp/Enabled.lisp
+
 ../msg_gen/lisp/Gyro.lisp: ../msg/Gyro.msg
 ../msg_gen/lisp/Gyro.lisp: /opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
 ../msg_gen/lisp/Gyro.lisp: /opt/ros/electric/ros/core/roslib/scripts/gendeps
@@ -189,7 +256,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Enabled.lisp
 ../msg_gen/lisp/Gyro.lisp: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
 ../msg_gen/lisp/Gyro.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
 ../msg_gen/lisp/Gyro.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Gyro.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Gyro.lisp"
 	/opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/Gyro.msg
 
@@ -197,73 +264,73 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Enabled.lisp
 
 ../msg_gen/lisp/_package_Gyro.lisp: ../msg_gen/lisp/Gyro.lisp
 
-../msg_gen/lisp/Motors.lisp: ../msg/Motors.msg
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/core/roslib/scripts/gendeps
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg/Header.msg
-../msg_gen/lisp/Motors.lisp: ../manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/core/rosbuild/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/core/roslang/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/tools/rospack/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/core/roslib/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/tools/rosclean/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/tools/rosunit/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common/actionlib/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/bullet/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/geometry/angles/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosnode/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmsg/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostopic/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosservice/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/utilities/roswtf/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/utilities/message_filters/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/geometry/tf/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
-../msg_gen/lisp/Motors.lisp: /home/rbtying/robot/cereal_port/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/joystick_drivers/ps3joy/manifest.xml
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/msg_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common/actionlib/msg_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/geometry/tf/msg_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
-../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Motors.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Motors.lisp"
-	/opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/Motors.msg
+../msg_gen/lisp/CondensedIMU.lisp: ../msg/CondensedIMU.msg
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/core/roslib/scripts/gendeps
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg/Header.msg
+../msg_gen/lisp/CondensedIMU.lisp: ../manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/core/rosbuild/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/core/roslang/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/tools/rospack/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/core/roslib/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/tools/rosclean/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/tools/rosunit/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common/actionlib/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/bullet/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/geometry/angles/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosnode/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmsg/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostopic/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosservice/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/utilities/roswtf/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/utilities/message_filters/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/geometry/tf/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /home/rbtying/robot/cereal_port/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/joystick_drivers/ps3joy/manifest.xml
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/msg_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common/actionlib/msg_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/geometry/tf/msg_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
+../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/CondensedIMU.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_CondensedIMU.lisp"
+	/opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/CondensedIMU.msg
 
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/Motors.lisp
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/CondensedIMU.lisp
 
-../msg_gen/lisp/_package_Motors.lisp: ../msg_gen/lisp/Motors.lisp
+../msg_gen/lisp/_package_CondensedIMU.lisp: ../msg_gen/lisp/CondensedIMU.lisp
 
 ../msg_gen/lisp/Battery.lisp: ../msg/Battery.msg
 ../msg_gen/lisp/Battery.lisp: /opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
@@ -325,7 +392,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Enabled.lisp
 ../msg_gen/lisp/Battery.lisp: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
 ../msg_gen/lisp/Battery.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
 ../msg_gen/lisp/Battery.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Battery.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Battery.lisp"
 	/opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/Battery.msg
 
@@ -393,7 +460,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Enabled.lisp
 ../msg_gen/lisp/Encoder.lisp: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
 ../msg_gen/lisp/Encoder.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
 ../msg_gen/lisp/Encoder.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Encoder.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Encoder.lisp"
 	/opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/Encoder.msg
 
@@ -401,163 +468,96 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Enabled.lisp
 
 ../msg_gen/lisp/_package_Encoder.lisp: ../msg_gen/lisp/Encoder.lisp
 
-../msg_gen/lisp/CondensedIMU.lisp: ../msg/CondensedIMU.msg
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/core/roslib/scripts/gendeps
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg/Header.msg
-../msg_gen/lisp/CondensedIMU.lisp: ../manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/core/rosbuild/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/core/roslang/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/tools/rospack/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/core/roslib/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/tools/rosclean/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/ros/tools/rosunit/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common/actionlib/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/bullet/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/geometry/angles/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosnode/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmsg/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostopic/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosservice/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/utilities/roswtf/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/utilities/message_filters/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/geometry/tf/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /home/rbtying/robot/cereal_port/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/joystick_drivers/ps3joy/manifest.xml
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/msg_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common/actionlib/msg_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/geometry/tf/msg_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
-../msg_gen/lisp/CondensedIMU.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/CondensedIMU.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_CondensedIMU.lisp"
-	/opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/CondensedIMU.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/CondensedIMU.lisp
-
-../msg_gen/lisp/_package_CondensedIMU.lisp: ../msg_gen/lisp/CondensedIMU.lisp
-
-../msg_gen/lisp/Enabled.lisp: ../msg/Enabled.msg
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/core/roslib/scripts/gendeps
-../msg_gen/lisp/Enabled.lisp: ../manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/core/rosbuild/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/core/roslang/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/tools/rospack/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/core/roslib/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/tools/rosclean/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/ros/tools/rosunit/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common/actionlib/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/bullet/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/geometry/angles/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosnode/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmsg/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostopic/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosservice/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/utilities/roswtf/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/utilities/message_filters/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/geometry/tf/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /home/rbtying/robot/cereal_port/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/joystick_drivers/ps3joy/manifest.xml
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/msg_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common/actionlib/msg_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/geometry/tf/msg_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
-../msg_gen/lisp/Enabled.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
+../msg_gen/lisp/Motors.lisp: ../msg/Motors.msg
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/core/roslib/scripts/gendeps
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg/Header.msg
+../msg_gen/lisp/Motors.lisp: ../manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/core/rosbuild/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/core/roslang/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/tools/rospack/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/core/roslib/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/tools/rosclean/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/ros/tools/rosunit/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common/actionlib/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/bullet/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/geometry/angles/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosnode/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosmsg/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rostopic/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/rosservice/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/utilities/roswtf/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/utilities/message_filters/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/geometry/tf/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
+../msg_gen/lisp/Motors.lisp: /home/rbtying/robot/cereal_port/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/joystick_drivers/ps3joy/manifest.xml
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/actionlib_msgs/msg_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common/actionlib/msg_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/geometry/tf/msg_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
+../msg_gen/lisp/Motors.lisp: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Enabled.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Enabled.lisp"
-	/opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/Enabled.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/Motors.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_Motors.lisp"
+	/opt/ros/electric/stacks/ros_comm/clients/roslisp/scripts/genmsg_lisp.py /home/rbtying/robot/rover/msg/Motors.msg
 
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/Enabled.lisp
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/Motors.lisp
 
-../msg_gen/lisp/_package_Enabled.lisp: ../msg_gen/lisp/Enabled.lisp
+../msg_gen/lisp/_package_Motors.lisp: ../msg_gen/lisp/Motors.lisp
 
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Settings.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Settings.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Enabled.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Enabled.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Gyro.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Gyro.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Motors.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/CondensedIMU.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Motors.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_CondensedIMU.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Battery.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Battery.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Encoder.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Encoder.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/CondensedIMU.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Motors.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_CondensedIMU.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/Enabled.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Enabled.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_Motors.lisp
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make
 .PHONY : ROSBUILD_genmsg_lisp
 

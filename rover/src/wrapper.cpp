@@ -51,8 +51,8 @@ Wrapper::Wrapper() :
 
 void Wrapper::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& cmd_vel) {
 	rover::Motors m;
-	m.left = cmd_vel->linear.x - m_axlelength * cmd_vel->angular.z;
-	m.right = cmd_vel->linear.x + m_axlelength * cmd_vel->angular.z;
+	m.left = cmd_vel->linear.x + m_axlelength * cmd_vel->angular.z;
+	m.right = cmd_vel->linear.x - m_axlelength * cmd_vel->angular.z;
 	m_motors_pub.publish(m);
 }
 

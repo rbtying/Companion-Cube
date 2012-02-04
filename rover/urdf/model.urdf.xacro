@@ -155,6 +155,7 @@
 
     <!-- Links --> 
     <link name="base_link" />
+    <link name="base_footprint" />
     
     <!-- useful definition -->
     <xacro:property name="halfpi" value="1.57079633" />
@@ -208,6 +209,11 @@
     </xacro:prism>
 
     <!-- Joints -->
+    <joint name="nav_joint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link" />
+        <origin xyz="0 0 0" />
+    </joint>
     <joint name="base_joint" type="fixed">
         <parent link="base_link" />
         <child link="robot_base" />

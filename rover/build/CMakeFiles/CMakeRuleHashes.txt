@@ -20,7 +20,7 @@ f314ccf06353138ce934b969cd7fe5bd ../src/rover/msg/_Encoder.py
 257766e6137b514e93577557d889f5d6 ../src/rover/msg/_Gyro.py
 bf087a88aacdeec7aa31ada78d6621d0 ../src/rover/msg/_Motors.py
 2da2f497c8164ad152841b9e8ab61402 ../src/rover/msg/_Settings.py
-5127df72a3d12f297bf53a87a5cf991a ../src/rover/msg/__init__.py
+06d9029b11fec13d0532a8cec3fd874f ../src/rover/msg/__init__.py
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genaction_msgs
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genmsg_cpp
 eedaae2bb010de2d89c9809077e6af71 CMakeFiles/ROSBUILD_genmsg_lisp

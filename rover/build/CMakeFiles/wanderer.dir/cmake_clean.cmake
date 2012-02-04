@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
-  "../msg_gen"
   "../src/rover/msg"
+  "../msg_gen"
   "../msg_gen"
   "CMakeFiles/wanderer.dir/src/obstacle_avoid.o"
   "../bin/wanderer.pdb"
