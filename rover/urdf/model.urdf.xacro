@@ -20,9 +20,27 @@
         </material>
     </xacro:macro>
 
+    <xacro:macro name="color_black">
+        <material name="black">
+            <color rgba="0.1 0.1 0.1 1.0" />
+        </material>
+    </xacro:macro>
+
     <xacro:macro name="color_dark_gray">
         <material name="dark_gray">
             <color rgba="0.3 0.3 0.3 1.0" />
+        </material>
+    </xacro:macro>
+    
+    <xacro:macro name="color_gray">
+        <material name="gray">
+            <color rgba="0.5 0.5 0.5 1.0" />
+        </material>
+    </xacro:macro>
+    
+    <xacro:macro name="color_silver">
+        <material name="silver">
+            <color rgba="0.9 0.9 0.9 1.0" />
         </material>
     </xacro:macro>
 
@@ -38,6 +56,12 @@
         </material>
     </xacro:macro>
 
+    <xacro:macro name="color_orange">
+        <material name="orange">
+            <color rgba="1.0 0.65 0 1.0" />
+        </material>
+    </xacro:macro>
+    
     <xacro:macro name="color_aqua">
         <material name="aqua">
             <color rgba="0.25 0.3 0 1.0" />
@@ -89,150 +113,141 @@
         </link>
     </xacro:macro>
 
-    <xacro:macro name="tslot_x" params="prefix length">
-        <xacro:prism name="${prefix}_x_tslot" x="${length}" y="0.01" z="0.01">
-            <xacro:color_dark_gray />
-        </xacro:prism>
-    </xacro:macro>
-    
-    <xacro:macro name="tslot_y" params="prefix length">
-        <xacro:prism name="${prefix}_y_tslot" x="0.01" y="${length}" z="0.01">
-            <xacro:color_dark_gray />
-        </xacro:prism>
-    </xacro:macro>
-
-    <xacro:macro name="tslot_z" params="prefix length">
-        <xacro:prism name="${prefix}_z_tslot" x="0.01" y="0.01" z="${length}">
-            <xacro:color_dark_gray />
-        </xacro:prism>
+    <xacro:property name="wheel_diameter" value="0.07265" />
+    <xacro:property name="wheel_thickness" value="0.02" />
+    <xacro:property name="motor_length" value="0.055" />
+    <xacro:macro name="wheel" params="name parent offsetx offsety offsetz side">
+        <xacro:cyl name="${name}" radius="${wheel_diameter / 2}" length="${wheel_thickness - 0.001}">
+            <xacro:color_orange />
+        </xacro:cyl>
+        <xacro:cyl name="${name}_inner" radius="${(wheel_diameter / 2) - 0.0075}" length="${wheel_thickness}">
+            <xacro:color_black />
+        </xacro:cyl>
+        <xacro:cyl name="${name}_motor" radius="0.0185" length="${motor_length}">
+            <xacro:color_silver />
+        </xacro:cyl>
+        <xacro:cyl name="${name}_motor_axle" radius="0.003" length="0.01">
+            <xacro:color_silver />
+        </xacro:cyl>
+        <joint name="${name}_motor_joint" type="fixed">
+            <parent link="${parent}" />
+            <child link="${name}_motor" />
+            <origin xyz="${offsetx} ${offsety + side * (0.01 + motor_length / 2)} ${offsetz}" rpy="${halfpi * side} 0 0" />
+        </joint>
+        <joint name="${name}_motor_axle_joint" type="fixed">
+            <parent link="${name}_motor" />
+            <child link="${name}_motor_axle" />
+            <axis xyz="0 1 0" />
+            <origin xyz="0 0 ${((motor_length + 0.01) / 2)}" rpy="0 0 0" />
+        </joint>
+        <joint name="${name}_joint" type="fixed">
+            <parent link="${name}_motor_axle" />
+            <child link="${name}" />
+            <axis xyz="0 1 0" />
+            <origin xyz="0 0 ${((0.01 + wheel_thickness) / 2)}" rpy="0 0 0" />
+        </joint>
+        <joint name="${name}_inner_joint" type="fixed">
+            <parent link="${name}" />
+            <child link="${name}_inner" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </joint>
     </xacro:macro>
 
     <!-- Links --> 
-    <link name="base_footprint" />
     <link name="base_link" />
+    
+    <!-- useful definition -->
+    <xacro:property name="halfpi" value="1.57079633" />
+    <xacro:property name="sixthpi" value="0.523598776" />
 
     <!-- Robot movement base representation -->
-    <xacro:prism name="robot_base" x="0.30" y="0.24" z="0.01">
+    <xacro:property name="robot_base_height" value="0.065" />
+    <xacro:property name="robot_base_length" value="0.30" />
+    <xacro:property name="robot_base_width" value="0.32" />
+    <xacro:prism name="robot_base" x="${robot_base_length}" y="${robot_base_width}" z="${robot_base_height}">
+        <xacro:color_dark_gray />
+    </xacro:prism>
+    <xacro:prism name="robot_back_left" x="0.01" y="0.01" z="0.245">
+        <xacro:color_gray />
+    </xacro:prism>
+    <xacro:prism name="robot_back_right" x="0.01" y="0.01" z="0.245">
+        <xacro:color_gray />
+    </xacro:prism>
+    <xacro:prism name="robot_back_top" x="0.01" y="${robot_base_width}" z="0.01">
+        <xacro:color_gray />
+    </xacro:prism>
+
+    <xacro:property name="laptop_length" value="0.19" />
+    <xacro:property name="laptop_width" value="0.265" />
+    <xacro:prism name="laptop_lid" x="${laptop_length}" y="${laptop_width}" z="0.0075">
+        <xacro:color_blue />
+    </xacro:prism>
+    <xacro:prism name="laptop_base" x="${laptop_length}" y="${laptop_width}" z="0.02">
         <xacro:color_blue />
     </xacro:prism>
 
-    <!-- Robot tslot frame -->
-    <xacro:tslot_x prefix="lb" length="0.30" />
-    <xacro:tslot_x prefix="lt" length="0.28" />
-    <xacro:tslot_x prefix="rb" length="0.30" />
-    <xacro:tslot_x prefix="rt" length="0.28" />
-    <xacro:tslot_y prefix="fb" length="0.30" />
-    <xacro:tslot_y prefix="ft" length="0.30" />
-    <xacro:tslot_y prefix="rt" length="0.30" />
-    <xacro:tslot_y prefix="rb" length="0.30" />
-    <xacro:tslot_z prefix="lf" length="0.30" />
-    <xacro:tslot_z prefix="lb" length="0.30" />
-    <xacro:tslot_z prefix="rf" length="0.30" />
-    <xacro:tslot_z prefix="rb" length="0.30" />
-
-    <!-- useful definition -->
-    <xacro:property name="halfpi" value="1.57079633" />
-
-    <!-- frame joints -->
     <xacro:property name="fwd_offset" value="-.105" />
     <xacro:property name="wid_offset" value=".155" />
-    <xacro:property name="height_offset" value=".07" />
+    <xacro:property name="height_offset" value=".065" />
 
-    <joint name="base_joint" type="fixed">
+    <!-- wheels and locomotion -->
+    <xacro:wheel name="left_wheel" parent="base_link" offsetx="0" offsety="0.1175" offsetz="${wheel_diameter / 2}" side="-1" />
+    <xacro:wheel name="right_wheel" parent="base_link" offsetx="0" offsety="-0.1175" offsetz="${wheel_diameter / 2}" side="1" />
+    <xacro:cyl name="caster" radius="0.025" length="0.025">
+        <xacro:color_black />
+    </xacro:cyl>
+    <joint name="caster_joint" type="fixed">
         <parent link="base_link" />
-        <child link="robot_base" />
-        <origin xyz="${fwd_offset} 0 ${height_offset}" rpy="0 0 0" />
+        <child link="caster" />
+        <origin xyz="${fwd_offset - 0.10} 0 0.025" rpy="${halfpi} 0 0" />
     </joint>
-    <joint name="lbx" type="fixed">
-        <parent link="base_link" />
-        <child link="lb_x_tslot" />
-        <origin xyz="${fwd_offset} -${wid_offset} ${height_offset}" rpy="0 0 0" />
-    </joint>
-    <joint name="ltx" type="fixed">
-        <parent link="base_link" />
-        <child link="lt_x_tslot" />
-        <origin xyz="${fwd_offset + .005} -${wid_offset} ${height_offset + 0.29}" rpy="0 0 0" />
-    </joint>
-    <joint name="rbx" type="fixed">
-        <parent link="base_link" />
-        <child link="rb_x_tslot" />
-        <origin xyz="${fwd_offset} ${wid_offset} ${height_offset}" rpy="0 0 0" />
-    </joint>
-    <joint name="rtx" type="fixed">
-        <parent link="base_link" />
-        <child link="rt_x_tslot" />
-        <origin xyz="${fwd_offset + .005} ${wid_offset} ${height_offset + .29}" rpy="0 0 0" />
-    </joint>
-    <joint name="fby" type="fixed">
-        <parent link="base_link" />
-        <child link="fb_y_tslot" />
-        <origin xyz="${fwd_offset + .15} 0 ${height_offset}" rpy="0 0 0" />
-    </joint>
-    <joint name="fty" type="fixed">
-        <parent link="base_link" />
-        <child link="ft_y_tslot" />
-        <origin xyz="${fwd_offset + .15} 0 ${height_offset + .29}" rpy="0 0 0" />
-    </joint>
-    <joint name="rby" type="fixed">
-        <parent link="base_link" />
-        <child link="rb_y_tslot" />
-        <origin xyz="${fwd_offset - .15} 0 ${height_offset}" rpy="0 0 0" />
-    </joint>
-    <joint name="rty" type="fixed">
-        <parent link="base_link" />
-        <child link="rt_y_tslot" />
-        <origin xyz="${fwd_offset - .15} 0 ${height_offset + .29}" rpy="0 0 0" />
-    </joint>
-    <joint name="lfz" type="fixed">
-        <parent link="base_link" />
-        <child link="lf_z_tslot" />
-        <origin xyz="${fwd_offset + .15} -${wid_offset} ${height_offset + .15}" rpy="0 0 0" />
-    </joint>
-    <joint name="lbz" type="fixed">
-        <parent link="base_link" />
-        <child link="lb_z_tslot" />
-        <origin xyz="${fwd_offset - .15} -${wid_offset} ${height_offset + .15}" rpy="0 0 0" />
-    </joint>
-    <joint name="rfz" type="fixed">
-        <parent link="base_link" />
-        <child link="rf_z_tslot" />
-        <origin xyz="${fwd_offset + .15} ${wid_offset} ${height_offset + .15}" rpy="0 0 0" />
-    </joint>
-    <joint name="rbz" type="fixed">
-        <parent link="base_link" />
-        <child link="rb_z_tslot" />
-        <origin xyz="${fwd_offset - .15} ${wid_offset} ${height_offset + .15}" rpy="0 0 0" />
-    </joint>
-
+    
     <!-- kinect representation -->
-    <xacro:prism name="kinect_base" x="0.06" y="0.075" z="0.03">
-        <xacro:color_dark_purple />
-    </xacro:prism>
-
     <xacro:prism name="openni_camera" x="0.06" y="0.285" z="0.035">
-        <xacro:color_magenta />
+        <xacro:color_black />
     </xacro:prism>
 
     <!-- Joints -->
-
-    <joint name="base_link_footprint_joint" type="fixed">
-        <parent link="base_footprint" />
-        <child link="base_link" />
-        <origin xyz="0 0 0" rpy="0 0 0" />
+    <joint name="base_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="robot_base" />
+        <origin xyz="${fwd_offset} 0 ${height_offset + (robot_base_height / 2)}" rpy="0 0 0" />
     </joint>
 
-    <joint name="kinect_base_joint" type="fixed">
-        <parent link="base_link" />
-        <child link="kinect_base" />
-        <origin xyz="0.015 0 0.115" rpy="0 0 0" />
+    <joint name="back_left_joint" type="fixed">
+        <parent link="robot_base" />
+        <child link="robot_back_left" />
+        <origin xyz="${0.005 - robot_base_length / 2} ${robot_base_width / 2 - 0.005} ${0.245 / 2 + robot_base_height / 2}" rpy="0 0 0" />
+    </joint>
+    
+    <joint name="back_right_joint" type="fixed">
+        <parent link="robot_base" />
+        <child link="robot_back_right" />
+        <origin xyz="${0.005 - robot_base_length / 2} -${robot_base_width / 2 - 0.005} ${0.245 / 2 + robot_base_height / 2}" rpy="0 0 0" />
+    </joint>
+
+    <joint name="back_top_joint" type="fixed">
+        <parent link="robot_base" />
+        <child link="robot_back_top" />
+        <origin xyz="${0.005 - robot_base_length / 2} 0 ${0.24 + robot_base_height / 2}" rpy="0 0 0" />
+    </joint>
+
+    <joint name="laptop_joint" type="fixed">
+        <parent link="robot_base" />
+        <child link="laptop_base" />
+        <origin xyz="0.045 0 ${0.01 + robot_base_height / 2}" rpy="0 0 0" />
+    </joint>
+
+    <joint name="lid_joint" type="fixed">
+        <parent link="laptop_base" />
+        <child link="laptop_lid" />
+        <origin xyz="-${laptop_length / 2 + laptop_length / 4} 0 ${laptop_length * 0.866025404 /2 + 0.01}" rpy="0 ${halfpi - sixthpi} 0" />
     </joint>
 
     <joint name="kinect_joint" type="fixed">
-        <parent link="kinect_base" />
+        <parent link="robot_base" />
         <child link="openni_camera" />
-        <origin xyz="0 0 0.0375" rpy="0 0 0" />
-        <axis xyz="0 1 0" />
-        <!--<limit effort="1000.0" lower="-0.523598776" upper="0.523598776" velocity="0.5" />-->
+        <origin xyz="-0.13 0 ${0.22 + robot_base_height / 2}" rpy="0 0 0" />
     </joint>
 
 </robot>

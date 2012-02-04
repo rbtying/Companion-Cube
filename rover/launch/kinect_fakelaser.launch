@@ -42,8 +42,8 @@
     <!--
     <node pkg="nodelet" type="nodelet" name="tilt_laser" args="load pcl_to_laser/CloudToScanHoriz openni_manager">
         <remap from="cloud_in" to="cloud_throttled"/>
-        <param name="base_frame" value="/base_footprint"/>
-        <param name="laser_frame" value="/base_footprint"/>
+        <param name="base_frame" value="/base_link"/>
+        <param name="laser_frame" value="/base_link"/>
         <param name="min_height" value="-0.2"/>
         <param name="max_height" value="0.50"/>
     </node>

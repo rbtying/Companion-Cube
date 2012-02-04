@@ -72,7 +72,7 @@ void Wrapper::imuCallback(const rover::CondensedIMU::ConstPtr& imu) {
 	// create a sensor msg for the gyro
 	sensor_msgs::Imu imu_msg;
 	imu_msg.header.stamp = ros::Time::now();
-	imu_msg.header.frame_id = "base_footprint";
+	imu_msg.header.frame_id = "base_link";
 
 	imu_msg.orientation = imu_quat;
 	imu_msg.orientation_covariance[0] = 1e6;
@@ -144,7 +144,7 @@ void Wrapper::encCallback(const rover::Encoder::ConstPtr& enc) {
 			geometry_msgs::TransformStamped odom_trans;
 			odom_trans.header.stamp = ros::Time::now();
 			odom_trans.header.frame_id = m_odom_frame_id.c_str();
-			odom_trans.child_frame_id = "base_footprint";
+			odom_trans.child_frame_id = "base_link";
 
 			odom_trans.transform.translation.x = m_odom_x;
 			odom_trans.transform.translation.y = m_odom_y;
@@ -167,7 +167,7 @@ void Wrapper::encCallback(const rover::Encoder::ConstPtr& enc) {
 		odom.pose.pose.orientation = odom_quat;
 
 		// set the velocity
-		odom.child_frame_id = "base_footprint";
+		odom.child_frame_id = "base_link";
 		odom.twist.twist.linear.x = m_vel_x;
 		odom.twist.twist.linear.y = m_vel_y;
 		odom.twist.twist.angular.z = m_vel_yaw;

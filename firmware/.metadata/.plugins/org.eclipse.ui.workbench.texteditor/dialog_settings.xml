@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="362" key="DIALOG_WIDTH"/>
+		<item value="374" key="DIALOG_WIDTH"/>
 		<item value="180" key="DIALOG_Y_ORIGIN"/>
+		<item value="553" key="DIALOG_HEIGHT"/>
 		<item value="1174" key="DIALOG_X_ORIGIN"/>
-		<item value="526" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="imu" key="selection"/>
+		<item value="base_link" key="selection"/>
 		<list key="findhistory">
+			<item value="base_footprint"/>
+			<item value="base_"/>
+			<item value="base_link"/>
 			<item value="IMU"/>
 			<item value="accel_x"/>
 			<item value="Accel_vector"/>
 			<item value="GRAVITY"/>
 			<item value="256"/>
-			<item value="drift"/>
-			<item value="dirft"/>
-			<item value="m_axlelength"/>
 		</list>
 		<list key="replacehistory">
+			<item value="base_link"/>
 			<item value="IMUAHRS::initAccel"/>
 			<item value="IMUAHRS::initI2C"/>
 			<item value="IMUAHRS::initIMU"/>
@@ -32,7 +33,6 @@
 			<item value="m_an"/>
 			<item value="Wire.receive"/>
 			<item value="Wire.send"/>
-			<item value="ReadByte(500)"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">

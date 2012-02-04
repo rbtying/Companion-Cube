@@ -27,7 +27,7 @@ public:
   bool driveForwardOdom(double distance)
   {
     //wait for the listener to get the first message
-    listener_.waitForTransform("base_footprint", "odom", 
+    listener_.waitForTransform("base_link", "odom",
                                ros::Time(0), ros::Duration(1.0));
     
     //we will record transforms here
@@ -35,7 +35,7 @@ public:
     tf::StampedTransform current_transform;
 
     //record the starting transform from the odometry to the base frame
-    listener_.lookupTransform("base_footprint", "odom", 
+    listener_.lookupTransform("base_link", "odom",
                               ros::Time(0), start_transform);
     
     //we will be sending commands of type "twist"
@@ -54,7 +54,7 @@ public:
       //get the current transform
       try
       {
-        listener_.lookupTransform("base_footprint", "odom", 
+        listener_.lookupTransform("base_link", "odom",
                                   ros::Time(0), current_transform);
       }
       catch (tf::TransformException ex)
@@ -81,7 +81,7 @@ public:
     while(radians > 2*M_PI) radians -= 2*M_PI;
 
     //wait for the listener to get the first message
-    listener_.waitForTransform("base_footprint", "odom", 
+    listener_.waitForTransform("base_link", "odom",
                                ros::Time(0), ros::Duration(1.0));
     
     //we will record transforms here
@@ -89,7 +89,7 @@ public:
     tf::StampedTransform current_transform;
 
     //record the starting transform from the odometry to the base frame
-    listener_.lookupTransform("base_footprint", "odom", 
+    listener_.lookupTransform("base_link", "odom",
                               ros::Time(0), start_transform);
     
     //we will be sending commands of type "twist"
@@ -113,7 +113,7 @@ public:
       //get the current transform
       try
       {
-        listener_.lookupTransform("base_footprint", "odom", 
+        listener_.lookupTransform("base_link", "odom",
                                   ros::Time(0), current_transform);
       }
       catch (tf::TransformException ex)

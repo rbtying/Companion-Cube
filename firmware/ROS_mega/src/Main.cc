@@ -61,7 +61,7 @@ std_msgs::UInt8MultiArray servodata;
 ros::Publisher servopub("servos_curr", &servodata);
 
 // globals for message publication
-char frameid[] = "base_footprint";
+char frameid[] = "base_link";
 uint32_t seq = 0;
 uint32_t nextCommTime;
 bool publishSettingsDump = false;
