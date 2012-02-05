@@ -72,8 +72,17 @@ void drivecb(const rover::Motors& msg) {
 	Serial3.print(l);
 	Serial3.print(", ");
 	Serial3.println(r);
-	m.SpeedM1(RB_ADDRESS, l);
-	m.SpeedM2(RB_ADDRESS, r);
+	if (l == 0) {
+		m.SpeedM1(RB_ADDRESS, 1);
+	} else {
+		m.SpeedM1(RB_ADDRESS, l);
+	}
+
+	if (r == 0) {
+		m.SpeedM2(RB_ADDRESS, 1);
+	} else {
+		m.SpeedM2(RB_ADDRESS, r);
+	}
 }
 ros::Subscriber<rover::Motors> drivesub("drive", &drivecb);
 

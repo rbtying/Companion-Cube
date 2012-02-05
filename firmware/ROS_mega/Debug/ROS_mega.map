@@ -1213,7 +1213,7 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x82f2
+.text           0x0000000000000000     0x8310
  *(.vectors)
  .vectors       0x0000000000000000       0xe4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/crtm2560.o
                 0x0000000000000000                __vectors
@@ -1667,440 +1667,440 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
                 0x000000000000327c       0x50 ./src/Main.o
                 0x000000000000327c                _Z7servocbRKN8std_msgs15UInt8MultiArrayE
  .text._Z7drivecbRKN5rover6MotorsE
-                0x00000000000032cc       0xd2 ./src/Main.o
+                0x00000000000032cc       0xf0 ./src/Main.o
                 0x00000000000032cc                _Z7drivecbRKN5rover6MotorsE
  .text._ZN3ros9Publisher7publishEPKNS_3MsgE
-                0x000000000000339e       0x22 ./src/Main.o
-                0x000000000000339e                _ZN3ros9Publisher7publishEPKNS_3MsgE
+                0x00000000000033bc       0x22 ./src/Main.o
+                0x00000000000033bc                _ZN3ros9Publisher7publishEPKNS_3MsgE
  .text._ZN15ArduinoHardware4initEv
-                0x00000000000033c0       0x14 ./src/Main.o
-                0x00000000000033c0                _ZN15ArduinoHardware4initEv
+                0x00000000000033de       0x14 ./src/Main.o
+                0x00000000000033de                _ZN15ArduinoHardware4initEv
  .text._ZN3IMU15Compass_HeadingEv
-                0x00000000000033d4      0x348 ./src/Main.o
-                0x00000000000033d4                _ZN3IMU15Compass_HeadingEv
+                0x00000000000033f2      0x348 ./src/Main.o
+                0x00000000000033f2                _ZN3IMU15Compass_HeadingEv
  .text._ZN3IMU12Euler_anglesEv
-                0x000000000000371c       0x90 ./src/Main.o
-                0x000000000000371c                _ZN3IMU12Euler_anglesEv
+                0x000000000000373a       0x90 ./src/Main.o
+                0x000000000000373a                _ZN3IMU12Euler_anglesEv
  .text._ZN3IMU7initI2CEv
-                0x00000000000037ac        0xa ./src/Main.o
-                0x00000000000037ac                _ZN3IMU7initI2CEv
+                0x00000000000037ca        0xa ./src/Main.o
+                0x00000000000037ca                _ZN3IMU7initI2CEv
  .text._ZN3IMU8initGyroEv
-                0x00000000000037b6       0x22 ./src/Main.o
-                0x00000000000037b6                _ZN3IMU8initGyroEv
+                0x00000000000037d4       0x22 ./src/Main.o
+                0x00000000000037d4                _ZN3IMU8initGyroEv
  .text._ZN3IMU8readGyroEv
-                0x00000000000037d8       0xf2 ./src/Main.o
-                0x00000000000037d8                _ZN3IMU8readGyroEv
+                0x00000000000037f6       0xf2 ./src/Main.o
+                0x00000000000037f6                _ZN3IMU8readGyroEv
  .text._ZN3IMU9initAccelEv
-                0x00000000000038ca       0x22 ./src/Main.o
-                0x00000000000038ca                _ZN3IMU9initAccelEv
+                0x00000000000038e8       0x22 ./src/Main.o
+                0x00000000000038e8                _ZN3IMU9initAccelEv
  .text._ZN3IMU9readAccelEv
-                0x00000000000038ec       0xf2 ./src/Main.o
-                0x00000000000038ec                _ZN3IMU9readAccelEv
+                0x000000000000390a       0xf2 ./src/Main.o
+                0x000000000000390a                _ZN3IMU9readAccelEv
  .text._ZN3IMU11initCompassEv
-                0x00000000000039de       0x22 ./src/Main.o
-                0x00000000000039de                _ZN3IMU11initCompassEv
+                0x00000000000039fc       0x22 ./src/Main.o
+                0x00000000000039fc                _ZN3IMU11initCompassEv
  .text._ZN3IMU7initIMUEv
-                0x0000000000003a00      0x106 ./src/Main.o
-                0x0000000000003a00                _ZN3IMU7initIMUEv
+                0x0000000000003a1e      0x106 ./src/Main.o
+                0x0000000000003a1e                _ZN3IMU7initIMUEv
  .text._ZN3IMU11readCompassEv
-                0x0000000000003b06       0xa6 ./src/Main.o
-                0x0000000000003b06                _ZN3IMU11readCompassEv
+                0x0000000000003b24       0xa6 ./src/Main.o
+                0x0000000000003b24                _ZN3IMU11readCompassEv
  .text._ZN3IMU16vectorDotProductEPfS0_
-                0x0000000000003bac       0x86 ./src/Main.o
-                0x0000000000003bac                _ZN3IMU16vectorDotProductEPfS0_
+                0x0000000000003bca       0x86 ./src/Main.o
+                0x0000000000003bca                _ZN3IMU16vectorDotProductEPfS0_
  .text._ZN3IMU18vectorCrossProductEPfS0_S0_
-                0x0000000000003c32      0x102 ./src/Main.o
-                0x0000000000003c32                _ZN3IMU18vectorCrossProductEPfS0_S0_
+                0x0000000000003c50      0x102 ./src/Main.o
+                0x0000000000003c50                _ZN3IMU18vectorCrossProductEPfS0_S0_
  .text._ZN3IMU11vectorScaleEPfS0_f
-                0x0000000000003d34       0x74 ./src/Main.o
-                0x0000000000003d34                _ZN3IMU11vectorScaleEPfS0_f
+                0x0000000000003d52       0x74 ./src/Main.o
+                0x0000000000003d52                _ZN3IMU11vectorScaleEPfS0_f
  .text._ZN3IMU9vectorAddEPfS0_S0_
-                0x0000000000003da8       0x62 ./src/Main.o
-                0x0000000000003da8                _ZN3IMU9vectorAddEPfS0_S0_
+                0x0000000000003dc6       0x62 ./src/Main.o
+                0x0000000000003dc6                _ZN3IMU9vectorAddEPfS0_S0_
  .text._ZN3IMU16Drift_correctionEv
-                0x0000000000003e0a      0x324 ./src/Main.o
-                0x0000000000003e0a                _ZN3IMU16Drift_correctionEv
+                0x0000000000003e28      0x324 ./src/Main.o
+                0x0000000000003e28                _ZN3IMU16Drift_correctionEv
  .text._ZN3IMU9NormalizeEv
-                0x000000000000412e      0x172 ./src/Main.o
-                0x000000000000412e                _ZN3IMU9NormalizeEv
+                0x000000000000414c      0x172 ./src/Main.o
+                0x000000000000414c                _ZN3IMU9NormalizeEv
  .text._ZN3IMU14matrixMultiplyEPA3_fS1_S1_
-                0x00000000000042a0      0x134 ./src/Main.o
-                0x00000000000042a0                _ZN3IMU14matrixMultiplyEPA3_fS1_S1_
+                0x00000000000042be      0x134 ./src/Main.o
+                0x00000000000042be                _ZN3IMU14matrixMultiplyEPA3_fS1_S1_
  .text._ZN3IMU13Matrix_updateEv
-                0x00000000000043d4      0x366 ./src/Main.o
-                0x00000000000043d4                _ZN3IMU13Matrix_updateEv
+                0x00000000000043f2      0x366 ./src/Main.o
+                0x00000000000043f2                _ZN3IMU13Matrix_updateEv
  .text._ZN3IMU9updateIMUEv
-                0x000000000000473a      0x112 ./src/Main.o
-                0x000000000000473a                _ZN3IMU9updateIMUEv
+                0x0000000000004758      0x112 ./src/Main.o
+                0x0000000000004758                _ZN3IMU9updateIMUEv
  .text._ZN12control_dataC1Ev
-                0x000000000000484c       0x20 ./src/Main.o
-                0x000000000000484c                _ZN12control_dataC1Ev
+                0x000000000000486a       0x20 ./src/Main.o
+                0x000000000000486a                _ZN12control_dataC1Ev
  .text._Z41__static_initialization_and_destruction_0ii.clone.11
-                0x000000000000486c      0x2da ./src/Main.o
+                0x000000000000488a      0x2da ./src/Main.o
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3nowEv
-                0x0000000000004b46       0xcc ./src/Main.o
-                0x0000000000004b46                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3nowEv
+                0x0000000000004b64       0xcc ./src/Main.o
+                0x0000000000004b64                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3nowEv
  .text._Z7publishv
-                0x0000000000004c12      0x41e ./src/Main.o
-                0x0000000000004c12                _Z7publishv
+                0x0000000000004c30      0x41e ./src/Main.o
+                0x0000000000004c30                _Z7publishv
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9advertiseERNS_9PublisherE
-                0x0000000000005030       0x4e ./src/Main.o
-                0x0000000000005030                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9advertiseERNS_9PublisherE
+                0x000000000000504e       0x4e ./src/Main.o
+                0x000000000000504e                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9advertiseERNS_9PublisherE
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN5rover7EnabledEEEbRNS_10SubscriberIT_EE
-                0x000000000000507e       0x42 ./src/Main.o
-                0x000000000000507e                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN5rover7EnabledEEEbRNS_10SubscriberIT_EE
+                0x000000000000509c       0x42 ./src/Main.o
+                0x000000000000509c                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN5rover7EnabledEEEbRNS_10SubscriberIT_EE
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN5rover6MotorsEEEbRNS_10SubscriberIT_EE
-                0x00000000000050c0       0x42 ./src/Main.o
-                0x00000000000050c0                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN5rover6MotorsEEEbRNS_10SubscriberIT_EE
+                0x00000000000050de       0x42 ./src/Main.o
+                0x00000000000050de                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN5rover6MotorsEEEbRNS_10SubscriberIT_EE
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN8std_msgs15UInt8MultiArrayEEEbRNS_10SubscriberIT_EE
-                0x0000000000005102       0x42 ./src/Main.o
-                0x0000000000005102                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN8std_msgs15UInt8MultiArrayEEEbRNS_10SubscriberIT_EE
+                0x0000000000005120       0x42 ./src/Main.o
+                0x0000000000005120                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN8std_msgs15UInt8MultiArrayEEEbRNS_10SubscriberIT_EE
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15requestSyncTimeEv
-                0x0000000000005144       0x70 ./src/Main.o
-                0x0000000000005144                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15requestSyncTimeEv
+                0x0000000000005162       0x70 ./src/Main.o
+                0x0000000000005162                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15requestSyncTimeEv
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15negotiateTopicsEv
-                0x00000000000051b4      0x1da ./src/Main.o
-                0x00000000000051b4                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15negotiateTopicsEv
+                0x00000000000051d2      0x1da ./src/Main.o
+                0x00000000000051d2                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15negotiateTopicsEv
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE6setNowERNS_4TimeE
-                0x000000000000538e       0x9e ./src/Main.o
-                0x000000000000538e                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE6setNowERNS_4TimeE
+                0x00000000000053ac       0x9e ./src/Main.o
+                0x00000000000053ac                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE6setNowERNS_4TimeE
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8syncTimeEPh
-                0x000000000000542c       0xfc ./src/Main.o
-                0x000000000000542c                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8syncTimeEPh
+                0x000000000000544a       0xfc ./src/Main.o
+                0x000000000000544a                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8syncTimeEPh
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8spinOnceEv
-                0x0000000000005528      0x3cc ./src/Main.o
-                0x0000000000005528                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8spinOnceEv
- .text.main     0x00000000000058f4      0x502 ./src/Main.o
-                0x00000000000058f4                main
+                0x0000000000005546      0x3cc ./src/Main.o
+                0x0000000000005546                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8spinOnceEv
+ .text.main     0x0000000000005912      0x502 ./src/Main.o
+                0x0000000000005912                main
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3logEcPKc
-                0x0000000000005df6       0x44 ./src/Main.o
-                0x0000000000005df6                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3logEcPKc
+                0x0000000000005e14       0x44 ./src/Main.o
+                0x0000000000005e14                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3logEcPKc
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8logerrorEPKc
-                0x0000000000005e3a        0xa ./src/Main.o
-                0x0000000000005e3a                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8logerrorEPKc
+                0x0000000000005e58        0xa ./src/Main.o
+                0x0000000000005e58                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8logerrorEPKc
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE7publishEiPKNS_3MsgE
-                0x0000000000005e44      0x102 ./src/Main.o
-                0x0000000000005e44                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE7publishEiPKNS_3MsgE
+                0x0000000000005e62      0x102 ./src/Main.o
+                0x0000000000005e62                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE7publishEiPKNS_3MsgE
  .text._GLOBAL__I__ZN3IMU11SENSOR_SIGNE
-                0x0000000000005f46        0xa ./src/Main.o
+                0x0000000000005f64        0xa ./src/Main.o
  .text._GLOBAL__D__ZN3IMU11SENSOR_SIGNE
-                0x0000000000005f50        0xa ./src/Main.o
+                0x0000000000005f6e        0xa ./src/Main.o
  .text._ZN14HardwareSerial9availableEv
-                0x0000000000005f5a       0x2c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005f5a                _ZN14HardwareSerial9availableEv
+                0x0000000000005f78       0x2c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000005f78                _ZN14HardwareSerial9availableEv
  .text._ZN14HardwareSerial4peekEv
-                0x0000000000005f86       0x34 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005f86                _ZN14HardwareSerial4peekEv
+                0x0000000000005fa4       0x34 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000005fa4                _ZN14HardwareSerial4peekEv
  .text._ZN14HardwareSerial4readEv
-                0x0000000000005fba       0x48 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005fba                _ZN14HardwareSerial4readEv
+                0x0000000000005fd8       0x48 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000005fd8                _ZN14HardwareSerial4readEv
  .text._ZN14HardwareSerial5flushEv
-                0x0000000000006002       0x22 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000006002                _ZN14HardwareSerial5flushEv
+                0x0000000000006020       0x22 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006020                _ZN14HardwareSerial5flushEv
  .text._ZN14HardwareSerial5writeEh
-                0x0000000000006024       0x26 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000006024                _ZN14HardwareSerial5writeEh
+                0x0000000000006042       0x26 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006042                _ZN14HardwareSerial5writeEh
  .text._Z10store_charhP11ring_buffer
-                0x000000000000604a       0x46 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x000000000000604a                _Z10store_charhP11ring_buffer
+                0x0000000000006068       0x46 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006068                _Z10store_charhP11ring_buffer
  .text.__vector_25
-                0x0000000000006090       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000006090                __vector_25
+                0x00000000000060ae       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000000060ae                __vector_25
  .text.__vector_36
-                0x00000000000060e8       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000060e8                __vector_36
+                0x0000000000006106       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006106                __vector_36
  .text.__vector_51
-                0x0000000000006140       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000006140                __vector_51
+                0x000000000000615e       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x000000000000615e                __vector_51
  .text.__vector_54
-                0x0000000000006198       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000006198                __vector_54
+                0x00000000000061b6       0x58 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000000061b6                __vector_54
  .text._ZN14HardwareSerial5beginEl
-                0x00000000000061f0      0x1ce /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000061f0                _ZN14HardwareSerial5beginEl
+                0x000000000000620e      0x1ce /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x000000000000620e                _ZN14HardwareSerial5beginEl
  .text._GLOBAL__I_rx_buffer
-                0x00000000000063be      0x1a0 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000000063dc      0x1a0 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(HardwareSerial.o)
  .text._ZN5Print5writeEPKc
-                0x000000000000655e       0x32 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
-                0x000000000000655e                _ZN5Print5writeEPKc
+                0x000000000000657c       0x32 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                0x000000000000657c                _ZN5Print5writeEPKc
  .text._ZN5Print5writeEPKhj
-                0x0000000000006590       0x3e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
-                0x0000000000006590                _ZN5Print5writeEPKhj
+                0x00000000000065ae       0x3e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                0x00000000000065ae                _ZN5Print5writeEPKhj
  .text._ZN5Print5printEPKc
-                0x00000000000065ce       0x10 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
-                0x00000000000065ce                _ZN5Print5printEPKc
+                0x00000000000065ec       0x10 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                0x00000000000065ec                _ZN5Print5printEPKc
  .text._ZN5Print11printNumberEmh
-                0x00000000000065de      0x106 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
-                0x00000000000065de                _ZN5Print11printNumberEmh
+                0x00000000000065fc      0x106 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                0x00000000000065fc                _ZN5Print11printNumberEmh
  .text._ZN5Print5printEli
-                0x00000000000066e4       0x6c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
-                0x00000000000066e4                _ZN5Print5printEli
+                0x0000000000006702       0x6c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                0x0000000000006702                _ZN5Print5printEli
  .text._ZN5Print7printlnEv
-                0x0000000000006750       0x2e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
-                0x0000000000006750                _ZN5Print7printlnEv
+                0x000000000000676e       0x2e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                0x000000000000676e                _ZN5Print7printlnEv
  .text._ZN5Print7printlnEli
-                0x000000000000677e       0x16 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
-                0x000000000000677e                _ZN5Print7printlnEli
+                0x000000000000679c       0x16 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Print.o)
+                0x000000000000679c                _ZN5Print7printlnEli
  .text._Z3maplllll
-                0x0000000000006794       0x92 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WMath.o)
-                0x0000000000006794                _Z3maplllll
+                0x00000000000067b2       0x92 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(WMath.o)
+                0x00000000000067b2                _Z3maplllll
  .text.__vector_23
-                0x0000000000006826       0x90 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x0000000000006826                __vector_23
- .text.millis   0x00000000000068b6       0x1c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x00000000000068b6                millis
- .text.micros   0x00000000000068d2       0x4c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x00000000000068d2                micros
- .text.delay    0x000000000000691e       0x4e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x000000000000691e                delay
- .text.init     0x000000000000696c       0xc4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
-                0x000000000000696c                init
+                0x0000000000006844       0x90 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x0000000000006844                __vector_23
+ .text.millis   0x00000000000068d4       0x1c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x00000000000068d4                millis
+ .text.micros   0x00000000000068f0       0x4c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x00000000000068f0                micros
+ .text.delay    0x000000000000693c       0x4e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x000000000000693c                delay
+ .text.init     0x000000000000698a       0xc4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring.o)
+                0x000000000000698a                init
  .text.analogRead
-                0x0000000000006a30       0x66 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_analog.o)
-                0x0000000000006a30                analogRead
- .text.pinMode  0x0000000000006a96       0x48 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_digital.o)
-                0x0000000000006a96                pinMode
+                0x0000000000006a4e       0x66 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_analog.o)
+                0x0000000000006a4e                analogRead
+ .text.pinMode  0x0000000000006ab4       0x48 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_digital.o)
+                0x0000000000006ab4                pinMode
  .text.digitalWrite
-                0x0000000000006ade      0x11e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_digital.o)
-                0x0000000000006ade                digitalWrite
+                0x0000000000006afc      0x11e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(wiring_digital.o)
+                0x0000000000006afc                digitalWrite
  .text._ZN7TwoWire5beginEv
-                0x0000000000006bfc       0x16 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
-                0x0000000000006bfc                _ZN7TwoWire5beginEv
+                0x0000000000006c1a       0x16 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
+                0x0000000000006c1a                _ZN7TwoWire5beginEv
  .text._ZN7TwoWire11requestFromEhh
-                0x0000000000006c12       0x1a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
-                0x0000000000006c12                _ZN7TwoWire11requestFromEhh
+                0x0000000000006c30       0x1a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
+                0x0000000000006c30                _ZN7TwoWire11requestFromEhh
  .text._ZN7TwoWire11requestFromEii
-                0x0000000000006c2c        0x6 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
-                0x0000000000006c2c                _ZN7TwoWire11requestFromEii
+                0x0000000000006c4a        0x6 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
+                0x0000000000006c4a                _ZN7TwoWire11requestFromEii
  .text._ZN7TwoWire17beginTransmissionEh
-                0x0000000000006c32       0x14 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
-                0x0000000000006c32                _ZN7TwoWire17beginTransmissionEh
+                0x0000000000006c50       0x14 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
+                0x0000000000006c50                _ZN7TwoWire17beginTransmissionEh
  .text._ZN7TwoWire17beginTransmissionEi
-                0x0000000000006c46        0x6 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
-                0x0000000000006c46                _ZN7TwoWire17beginTransmissionEi
+                0x0000000000006c64        0x6 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
+                0x0000000000006c64                _ZN7TwoWire17beginTransmissionEi
  .text._ZN7TwoWire15endTransmissionEv
-                0x0000000000006c4c       0x20 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
-                0x0000000000006c4c                _ZN7TwoWire15endTransmissionEv
+                0x0000000000006c6a       0x20 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
+                0x0000000000006c6a                _ZN7TwoWire15endTransmissionEv
  .text._ZN7TwoWire4sendEh
-                0x0000000000006c6c       0x48 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
-                0x0000000000006c6c                _ZN7TwoWire4sendEh
+                0x0000000000006c8a       0x48 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
+                0x0000000000006c8a                _ZN7TwoWire4sendEh
  .text._ZN7TwoWire4sendEi
-                0x0000000000006cb4        0x6 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
-                0x0000000000006cb4                _ZN7TwoWire4sendEi
+                0x0000000000006cd2        0x6 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
+                0x0000000000006cd2                _ZN7TwoWire4sendEi
  .text._ZN7TwoWire9availableEv
-                0x0000000000006cba        0xc /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
-                0x0000000000006cba                _ZN7TwoWire9availableEv
+                0x0000000000006cd8        0xc /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
+                0x0000000000006cd8                _ZN7TwoWire9availableEv
  .text._ZN7TwoWire7receiveEv
-                0x0000000000006cc6       0x22 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
-                0x0000000000006cc6                _ZN7TwoWire7receiveEv
+                0x0000000000006ce4       0x22 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
+                0x0000000000006ce4                _ZN7TwoWire7receiveEv
  .text._GLOBAL__I__ZN7TwoWire8rxBufferE
-                0x0000000000006ce8        0x2 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
+                0x0000000000006d06        0x2 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Wire.o)
  .text._ZL17handle_interrupts18timer16_Sequence_tPVjS1_
-                0x0000000000006cea      0x18e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000006d08      0x18e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
  .text.__vector_17
-                0x0000000000006e78       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000006e78                __vector_17
+                0x0000000000006e96       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000006e96                __vector_17
  .text.__vector_32
-                0x0000000000006ed2       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000006ed2                __vector_32
+                0x0000000000006ef0       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000006ef0                __vector_32
  .text.__vector_42
-                0x0000000000006f2c       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000006f2c                __vector_42
+                0x0000000000006f4a       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000006f4a                __vector_42
  .text.__vector_47
-                0x0000000000006f86       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000006f86                __vector_47
+                0x0000000000006fa4       0x5a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000006fa4                __vector_47
  .text._ZN5ServoC2Ev
-                0x0000000000006fe0       0x34 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000006fe0                _ZN5ServoC2Ev
-                0x0000000000006fe0                _ZN5ServoC1Ev
+                0x0000000000006ffe       0x34 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000006ffe                _ZN5ServoC2Ev
+                0x0000000000006ffe                _ZN5ServoC1Ev
  .text._ZN5Servo17writeMicrosecondsEi
-                0x0000000000007014       0x8a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000007014                _ZN5Servo17writeMicrosecondsEi
+                0x0000000000007032       0x8a /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000007032                _ZN5Servo17writeMicrosecondsEi
  .text._ZN5Servo5writeEi
-                0x000000000000709e       0xc8 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x000000000000709e                _ZN5Servo5writeEi
+                0x00000000000070bc       0xc8 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x00000000000070bc                _ZN5Servo5writeEi
  .text._ZN5Servo16readMicrosecondsEv
-                0x0000000000007166       0x3e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x0000000000007166                _ZN5Servo16readMicrosecondsEv
+                0x0000000000007184       0x3e /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x0000000000007184                _ZN5Servo16readMicrosecondsEv
  .text._ZN5Servo4readEv
-                0x00000000000071a4       0xb2 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
-                0x00000000000071a4                _ZN5Servo4readEv
+                0x00000000000071c2       0xb2 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(Servo.o)
+                0x00000000000071c2                _ZN5Servo4readEv
  .text.twi_init
-                0x0000000000007256       0x26 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
-                0x0000000000007256                twi_init
+                0x0000000000007274       0x26 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
+                0x0000000000007274                twi_init
  .text.twi_readFrom
-                0x000000000000727c       0x6c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
-                0x000000000000727c                twi_readFrom
+                0x000000000000729a       0x6c /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
+                0x000000000000729a                twi_readFrom
  .text.twi_writeTo
-                0x00000000000072e8       0x80 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
-                0x00000000000072e8                twi_writeTo
+                0x0000000000007306       0x80 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
+                0x0000000000007306                twi_writeTo
  .text.twi_transmit
-                0x0000000000007368       0x34 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
-                0x0000000000007368                twi_transmit
+                0x0000000000007386       0x34 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
+                0x0000000000007386                twi_transmit
  .text.twi_reply
-                0x000000000000739c       0x10 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
-                0x000000000000739c                twi_reply
+                0x00000000000073ba       0x10 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
+                0x00000000000073ba                twi_reply
  .text.twi_stop
-                0x00000000000073ac       0x14 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
-                0x00000000000073ac                twi_stop
+                0x00000000000073ca       0x14 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
+                0x00000000000073ca                twi_stop
  .text.twi_releaseBus
-                0x00000000000073c0        0xc /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
-                0x00000000000073c0                twi_releaseBus
+                0x00000000000073de        0xc /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
+                0x00000000000073de                twi_releaseBus
  .text.__vector_39
-                0x00000000000073cc      0x2b4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
-                0x00000000000073cc                __vector_39
+                0x00000000000073ea      0x2b4 /home/rbtying/robot/firmware/Arduino-2560/Debug/libArduino.a(twi.o)
+                0x00000000000073ea                __vector_39
  .text.avr-libc
-                0x0000000000007680      0x266 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(malloc.o)
-                0x0000000000007680                malloc
-                0x00000000000077b4                free
+                0x000000000000769e      0x266 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(malloc.o)
+                0x000000000000769e                malloc
+                0x00000000000077d2                free
  .text.avr-libc
-                0x00000000000078e6      0x1b2 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(realloc.o)
-                0x00000000000078e6                realloc
+                0x0000000000007904      0x1b2 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(realloc.o)
+                0x0000000000007904                realloc
  .text.avr-libc
-                0x0000000000007a98        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(exit.o)
-                0x0000000000007a98                exit
+                0x0000000000007ab6        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(exit.o)
+                0x0000000000007ab6                exit
  .text.avr-libc
-                0x0000000000007a9e       0x12 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(memcpy.o)
-                0x0000000000007a9e                memcpy
+                0x0000000000007abc       0x12 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(memcpy.o)
+                0x0000000000007abc                memcpy
  .text.avr-libc.fplib
-                0x0000000000007ab0        0xa /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(addsf3.o)
-                0x0000000000007ab0                __subsf3
-                0x0000000000007ab2                __addsf3
+                0x0000000000007ace        0xa /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(addsf3.o)
+                0x0000000000007ace                __subsf3
+                0x0000000000007ad0                __addsf3
  .text.avr-libc.fplib
-                0x0000000000007aba       0xc0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(addsf3x.o)
-                0x0000000000007ad4                __addsf3x
+                0x0000000000007ad8       0xc0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(addsf3x.o)
+                0x0000000000007af2                __addsf3x
  .text.avr-libc.fplib
-                0x0000000000007b7a       0x2e /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(asin.o)
-                0x0000000000007b7a                asin
+                0x0000000000007b98       0x2e /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(asin.o)
+                0x0000000000007b98                asin
  .text.avr-libc.fplib
-                0x0000000000007ba8       0x74 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan2.o)
-                0x0000000000007bc6                atan2
+                0x0000000000007bc6       0x74 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan2.o)
+                0x0000000000007be4                atan2
  .text.avr-libc.fplib
-                0x0000000000007c1c       0x50 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan.o)
-                0x0000000000007c1c                atan
+                0x0000000000007c3a       0x50 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan.o)
+                0x0000000000007c3a                atan
  .text.avr-libc.fplib
-                0x0000000000007c6c        0x8 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cmpsf2.o)
-                0x0000000000007c6c                __lesf2
-                0x0000000000007c6c                __nesf2
-                0x0000000000007c6c                __eqsf2
-                0x0000000000007c6c                __cmpsf2
-                0x0000000000007c6c                __ltsf2
+                0x0000000000007c8a        0x8 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cmpsf2.o)
+                0x0000000000007c8a                __lesf2
+                0x0000000000007c8a                __nesf2
+                0x0000000000007c8a                __eqsf2
+                0x0000000000007c8a                __cmpsf2
+                0x0000000000007c8a                __ltsf2
  .text.avr-libc.fplib
-                0x0000000000007c74        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cos.o)
-                0x0000000000007c74                cos
+                0x0000000000007c92        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cos.o)
+                0x0000000000007c92                cos
  .text.avr-libc.fplib
-                0x0000000000007c7a        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(divsf3.o)
-                0x0000000000007c7a                __divsf3
+                0x0000000000007c98        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(divsf3.o)
+                0x0000000000007c98                __divsf3
  .text.avr-libc.fplib
-                0x0000000000007c7e       0xcc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(divsf3x.o)
-                0x0000000000007c94                __divsf3x
-                0x0000000000007c98                __divsf3_pse
+                0x0000000000007c9c       0xcc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(divsf3x.o)
+                0x0000000000007cb2                __divsf3x
+                0x0000000000007cb6                __divsf3_pse
  .text.avr-libc.fplib
-                0x0000000000007d4a        0xa /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fixsfsi.o)
-                0x0000000000007d4a                __fixsfsi
+                0x0000000000007d68        0xa /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fixsfsi.o)
+                0x0000000000007d68                __fixsfsi
  .text.avr-libc.fplib
-                0x0000000000007d54       0x58 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fixunssfsi.o)
-                0x0000000000007d54                __fixunssfsi
+                0x0000000000007d72       0x58 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fixunssfsi.o)
+                0x0000000000007d72                __fixunssfsi
  .text.avr-libc.fplib
-                0x0000000000007dac       0x7a /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(floatsisf.o)
-                0x0000000000007dac                __floatunsisf
-                0x0000000000007db0                __floatsisf
+                0x0000000000007dca       0x7a /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(floatsisf.o)
+                0x0000000000007dca                __floatunsisf
+                0x0000000000007dce                __floatsisf
  .text.avr-libc.fplib
-                0x0000000000007e26       0x36 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_arccos.o)
-                0x0000000000007e26                __fp_arccos
+                0x0000000000007e44       0x36 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_arccos.o)
+                0x0000000000007e44                __fp_arccos
  .text.avr-libc.fplib
-                0x0000000000007e5c       0x48 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_cmp.o)
-                0x0000000000007e5c                __fp_cmp
+                0x0000000000007e7a       0x48 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_cmp.o)
+                0x0000000000007e7a                __fp_cmp
  .text.avr-libc.fplib
-                0x0000000000007ea4        0xc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_inf.o)
-                0x0000000000007ea4                __fp_inf
+                0x0000000000007ec2        0xc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_inf.o)
+                0x0000000000007ec2                __fp_inf
  .text.avr-libc.fplib
-                0x0000000000007eb0        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_nan.o)
-                0x0000000000007eb0                __fp_nan
+                0x0000000000007ece        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_nan.o)
+                0x0000000000007ece                __fp_nan
  .text.avr-libc.fplib
-                0x0000000000007eb6       0x4a /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powser.o)
-                0x0000000000007eb6                __fp_powser
+                0x0000000000007ed4       0x4a /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powser.o)
+                0x0000000000007ed4                __fp_powser
  .text.avr-libc.fplib
-                0x0000000000007f00       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powsodd.o)
-                0x0000000000007f00                __fp_powsodd
+                0x0000000000007f1e       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powsodd.o)
+                0x0000000000007f1e                __fp_powsodd
  .text.avr-libc.fplib
-                0x0000000000007f22        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_pscA.o)
-                0x0000000000007f22                __fp_pscA
+                0x0000000000007f40        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_pscA.o)
+                0x0000000000007f40                __fp_pscA
  .text.avr-libc.fplib
-                0x0000000000007f30        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_pscB.o)
-                0x0000000000007f30                __fp_pscB
+                0x0000000000007f4e        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_pscB.o)
+                0x0000000000007f4e                __fp_pscB
  .text.avr-libc.fplib
-                0x0000000000007f3e       0x50 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_rempio2.o)
-                0x0000000000007f40                __fp_rempio2
+                0x0000000000007f5c       0x50 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_rempio2.o)
+                0x0000000000007f5e                __fp_rempio2
  .text.avr-libc.fplib
-                0x0000000000007f8e       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_round.o)
-                0x0000000000007f8e                __fp_round
+                0x0000000000007fac       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_round.o)
+                0x0000000000007fac                __fp_round
  .text.avr-libc.fplib
-                0x0000000000007fb0       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_sinus.o)
-                0x0000000000007fb0                __fp_sinus
+                0x0000000000007fce       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_sinus.o)
+                0x0000000000007fce                __fp_sinus
  .text.avr-libc.fplib
-                0x0000000000007fd2       0x44 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_split3.o)
-                0x0000000000007fd2                __fp_split3
-                0x0000000000007fe2                __fp_splitA
+                0x0000000000007ff0       0x44 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_split3.o)
+                0x0000000000007ff0                __fp_split3
+                0x0000000000008000                __fp_splitA
  .text.avr-libc.fplib
-                0x0000000000008016        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_zero.o)
-                0x0000000000008016                __fp_zero
-                0x0000000000008018                __fp_szero
+                0x0000000000008034        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_zero.o)
+                0x0000000000008034                __fp_zero
+                0x0000000000008036                __fp_szero
  .text.avr-libc.fplib
-                0x0000000000008024        0x8 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(gesf2.o)
-                0x0000000000008024                __gtsf2
-                0x0000000000008024                __gesf2
+                0x0000000000008042        0x8 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(gesf2.o)
+                0x0000000000008042                __gtsf2
+                0x0000000000008042                __gesf2
  .text.avr-libc.fplib
-                0x000000000000802c        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(inverse.o)
-                0x000000000000802c                inverse
+                0x000000000000804a        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(inverse.o)
+                0x000000000000804a                inverse
  .text.avr-libc.fplib
-                0x000000000000803a        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(mulsf3.o)
-                0x000000000000803a                __mulsf3
+                0x0000000000008058        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(mulsf3.o)
+                0x0000000000008058                __mulsf3
  .text.avr-libc.fplib
-                0x000000000000803e       0xc2 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(mulsf3x.o)
-                0x0000000000008052                __mulsf3x
-                0x0000000000008056                __mulsf3_pse
+                0x000000000000805c       0xc2 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(mulsf3x.o)
+                0x0000000000008070                __mulsf3x
+                0x0000000000008074                __mulsf3_pse
  .text.avr-libc.fplib
-                0x0000000000008100        0xc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sin.o)
-                0x0000000000008100                sin
+                0x000000000000811e        0xc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sin.o)
+                0x000000000000811e                sin
  .text.avr-libc.fplib
-                0x000000000000810c       0x84 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sqrt.o)
-                0x0000000000008114                sqrt
+                0x000000000000812a       0x84 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sqrt.o)
+                0x0000000000008132                sqrt
  .text.avr-libc.fplib
-                0x0000000000008190        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(square.o)
-                0x0000000000008190                square
+                0x00000000000081ae        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(square.o)
+                0x00000000000081ae                square
  .text.avr-libc.fplib
-                0x0000000000008196       0x1c /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_mpack.o)
-                0x0000000000008196                __fp_mpack
-                0x000000000000819a                __fp_mpack_finite
+                0x00000000000081b4       0x1c /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_mpack.o)
+                0x00000000000081b4                __fp_mpack
+                0x00000000000081b8                __fp_mpack_finite
  .text.avr-libc.fplib
-                0x00000000000081b2        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_norm2.o)
-                0x00000000000081b2                __fp_norm2
- .text.libgcc   0x00000000000081c0       0x3e /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_mulsi3.o)
-                0x00000000000081c0                __mulsi3
- .text.libgcc   0x00000000000081fe       0x28 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodhi4.o)
-                0x00000000000081fe                __udivmodhi4
- .text.libgcc   0x0000000000008226       0x26 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodhi4.o)
-                0x0000000000008226                __divmodhi4
-                0x0000000000008226                _div
- .text.libgcc   0x000000000000824c       0x44 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodsi4.o)
-                0x000000000000824c                __udivmodsi4
- .text.libgcc   0x0000000000008290       0x36 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodsi4.o)
-                0x0000000000008290                __divmodsi4
- .text.libgcc   0x00000000000082c6        0x8 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_tablejump_elpm.o)
-                0x00000000000082c6                __tablejump_elpm__
-                0x00000000000082ce                . = ALIGN (0x2)
+                0x00000000000081d0        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_norm2.o)
+                0x00000000000081d0                __fp_norm2
+ .text.libgcc   0x00000000000081de       0x3e /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_mulsi3.o)
+                0x00000000000081de                __mulsi3
+ .text.libgcc   0x000000000000821c       0x28 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodhi4.o)
+                0x000000000000821c                __udivmodhi4
+ .text.libgcc   0x0000000000008244       0x26 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodhi4.o)
+                0x0000000000008244                __divmodhi4
+                0x0000000000008244                _div
+ .text.libgcc   0x000000000000826a       0x44 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodsi4.o)
+                0x000000000000826a                __udivmodsi4
+ .text.libgcc   0x00000000000082ae       0x36 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodsi4.o)
+                0x00000000000082ae                __divmodsi4
+ .text.libgcc   0x00000000000082e4        0x8 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_tablejump_elpm.o)
+                0x00000000000082e4                __tablejump_elpm__
+                0x00000000000082ec                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000000000082ce        0x0 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
-                0x00000000000082ce                _exit
+ .fini9         0x00000000000082ec        0x0 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
+                0x00000000000082ec                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
  *(.fini7)
  *(.fini7)
  *(.fini6)
- .fini6         0x00000000000082ce       0x20 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_dtors.o)
-                0x00000000000082ce                __do_global_dtors
+ .fini6         0x00000000000082ec       0x20 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_dtors.o)
+                0x00000000000082ec                __do_global_dtors
  *(.fini6)
  *(.fini5)
  *(.fini5)
@@ -2113,11 +2113,11 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000000000082ee        0x4 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
+ .fini0         0x000000000000830c        0x4 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
  *(.fini0)
-                0x00000000000082f2                _etext = .
+                0x0000000000008310                _etext = .
 
-.data           0x0000000000800200      0x484 load address 0x00000000000082f2
+.data           0x0000000000800200      0x484 load address 0x0000000000008310
                 0x0000000000800200                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800200      0x31d ./src/Main.o
@@ -2467,8 +2467,8 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
                 0x000000000080118d                __brkval
                 0x000000000080118f                __flp
                 0x0000000000801191                PROVIDE (__bss_end, .)
-                0x00000000000082f2                __data_load_start = LOADADDR (.data)
-                0x0000000000008776                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000000000008310                __data_load_start = LOADADDR (.data)
+                0x0000000000008794                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0000000000801191        0x0
                 0x0000000000801191                PROVIDE (__noinit_start, .)

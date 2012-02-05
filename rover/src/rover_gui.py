@@ -84,7 +84,7 @@ class GUIWindow(wx.Frame):
         remaining_capacity_re = re.compile(r'^remaining capacity:\W+(\d+) mAh')
         full_capacity_re = re.compile(r'^design capacity:\W+(\d+) mAh')
 
-        b_state_file = open('/proc/acpi/battery/BAT0/state', 'r')
+        b_state_file = open('/proc/acpi/battery/BAT1/state', 'r')
         b_state = b_state_file.readlines()
         b_state_file.close()
 
@@ -94,7 +94,7 @@ class GUIWindow(wx.Frame):
                 self.main_battery_remaining_capacity = float(m.group(1))
 
 
-        b_info_file = open('/proc/acpi/battery/BAT0/info', 'r')
+        b_info_file = open('/proc/acpi/battery/BAT1/info', 'r')
         b_info = b_info_file.readlines()
         b_info_file.close()
 

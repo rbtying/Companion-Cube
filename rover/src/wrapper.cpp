@@ -51,8 +51,8 @@ Wrapper::Wrapper() :
 
 void Wrapper::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& cmd_vel) {
 	rover::Motors m;
-	m.left = cmd_vel->linear.x + m_axlelength * cmd_vel->angular.z;
-	m.right = cmd_vel->linear.x - m_axlelength * cmd_vel->angular.z;
+	m.left = cmd_vel->linear.x - m_axlelength * cmd_vel->angular.z;
+	m.right = cmd_vel->linear.x + m_axlelength * cmd_vel->angular.z;
 	m_motors_pub.publish(m);
 }
 
@@ -65,9 +65,10 @@ void Wrapper::battCallback(const rover::Battery::ConstPtr& bat) {
 
 void Wrapper::imuCallback(const rover::CondensedIMU::ConstPtr& imu) {
 	// create a quaternion for the gyro
+#define radians(x) ((x) * DEG_TO_RAD)
 	geometry_msgs::Quaternion imu_quat =
-			tf::createQuaternionMsgFromRollPitchYaw(imu->roll, imu->pitch,
-					imu->yaw);
+			tf::createQuaternionMsgFromRollPitchYaw(radians(imu->roll),
+					radians(imu->pitch), radians(imu->yaw));
 
 	// create a sensor msg for the gyro
 	sensor_msgs::Imu imu_msg;
