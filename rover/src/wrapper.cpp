@@ -119,8 +119,10 @@ void Wrapper::encCallback(const rover::Encoder::ConstPtr& enc) {
 	if (m_p_enc_msg != NULL) {
 		double dt = (enc->header.stamp - m_p_enc_msg->header.stamp).toSec();
 
-		double left_avg_vel = (enc->leftCount - m_p_enc_msg->leftCount)
-				* enc->left_conversion_factor / dt;
+		double dl = (enc->leftCount - m_p_enc_msg->leftCount) * enc->left_conversion_factor;
+        double dr = (enc->rightCount - m_p_enc_msg->rightCount)	* enc->right_conversion_factor;
+
+		double left_avg_vel = dl / dt;
 		double right_avg_vel = (enc->rightCount - m_p_enc_msg->rightCount)
 				* enc->right_conversion_factor / dt;
 
