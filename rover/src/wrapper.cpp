@@ -124,7 +124,7 @@ void Wrapper::encCallback(const rover_msgs::Encoder::ConstPtr& enc) {
 		double dr = (enc->rightCount - m_p_enc_msg->rightCount)
 				* enc->right_conversion_factor;
 
-		double dth = (dl - dr) / (m_axlelength * 2);
+		double dth = -(dl - dr) / (m_axlelength);
 
 		m_vel_yaw = normalize(dth/dt); // rad/s
 		m_odom_yaw = normalize(m_odom_yaw + dth); // rad

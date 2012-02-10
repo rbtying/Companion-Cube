@@ -40,12 +40,12 @@ CMAKE_BINARY_DIR = /home/rbtying/robot/rover_msgs/build
 # Utility rule file for ROSBUILD_genmsg_cpp.
 
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Settings.h
+CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Enabled.h
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Gyro.h
-CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Motors.h
+CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/CondensedIMU.h
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Battery.h
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Encoder.h
-CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/CondensedIMU.h
-CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Enabled.h
+CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Motors.h
 
 ../msg_gen/cpp/include/rover_msgs/Settings.h: ../msg/Settings.msg
 ../msg_gen/cpp/include/rover_msgs/Settings.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py
@@ -94,6 +94,52 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Enabled.h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/rover_msgs/Settings.h"
 	/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py /home/rbtying/robot/rover_msgs/msg/Settings.msg
 
+../msg_gen/cpp/include/rover_msgs/Enabled.h: ../msg/Enabled.msg
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/core/roslib/scripts/gendeps
+../msg_gen/cpp/include/rover_msgs/Enabled.h: ../manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/core/rosbuild/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/core/roslang/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/tools/rospack/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/core/roslib/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/tools/rosclean/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/tools/rosunit/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/rover_msgs/Enabled.h"
+	/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py /home/rbtying/robot/rover_msgs/msg/Enabled.msg
+
 ../msg_gen/cpp/include/rover_msgs/Gyro.h: ../msg/Gyro.msg
 ../msg_gen/cpp/include/rover_msgs/Gyro.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py
 ../msg_gen/cpp/include/rover_msgs/Gyro.h: /opt/ros/electric/ros/core/roslib/scripts/gendeps
@@ -137,56 +183,56 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Enabled.h
 ../msg_gen/cpp/include/rover_msgs/Gyro.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
 ../msg_gen/cpp/include/rover_msgs/Gyro.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
 ../msg_gen/cpp/include/rover_msgs/Gyro.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/rover_msgs/Gyro.h"
 	/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py /home/rbtying/robot/rover_msgs/msg/Gyro.msg
 
-../msg_gen/cpp/include/rover_msgs/Motors.h: ../msg/Motors.msg
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/core/roslib/scripts/gendeps
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg/Header.msg
-../msg_gen/cpp/include/rover_msgs/Motors.h: ../manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/core/rosbuild/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/core/roslang/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/tools/rospack/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/core/roslib/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/tools/rosclean/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/tools/rosunit/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/rover_msgs/Motors.h"
-	/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py /home/rbtying/robot/rover_msgs/msg/Motors.msg
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: ../msg/CondensedIMU.msg
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/core/roslib/scripts/gendeps
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg/Header.msg
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: ../manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/core/rosbuild/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/core/roslang/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/tools/rospack/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/core/roslib/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/tools/rosclean/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/tools/rosunit/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/rover_msgs/CondensedIMU.h"
+	/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py /home/rbtying/robot/rover_msgs/msg/CondensedIMU.msg
 
 ../msg_gen/cpp/include/rover_msgs/Battery.h: ../msg/Battery.msg
 ../msg_gen/cpp/include/rover_msgs/Battery.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py
@@ -231,7 +277,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Enabled.h
 ../msg_gen/cpp/include/rover_msgs/Battery.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
 ../msg_gen/cpp/include/rover_msgs/Battery.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
 ../msg_gen/cpp/include/rover_msgs/Battery.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/rover_msgs/Battery.h"
 	/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py /home/rbtying/robot/rover_msgs/msg/Battery.msg
 
@@ -278,111 +324,65 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Enabled.h
 ../msg_gen/cpp/include/rover_msgs/Encoder.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
 ../msg_gen/cpp/include/rover_msgs/Encoder.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
 ../msg_gen/cpp/include/rover_msgs/Encoder.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_msgs/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/rover_msgs/Encoder.h"
 	/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py /home/rbtying/robot/rover_msgs/msg/Encoder.msg
 
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: ../msg/CondensedIMU.msg
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/core/roslib/scripts/gendeps
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg/Header.msg
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: ../manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/core/rosbuild/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/core/roslang/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/tools/rospack/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/core/roslib/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/tools/rosclean/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/ros/tools/rosunit/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/CondensedIMU.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_msgs/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/rover_msgs/CondensedIMU.h"
-	/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py /home/rbtying/robot/rover_msgs/msg/CondensedIMU.msg
-
-../msg_gen/cpp/include/rover_msgs/Enabled.h: ../msg/Enabled.msg
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/core/roslib/scripts/gendeps
-../msg_gen/cpp/include/rover_msgs/Enabled.h: ../manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/core/rosbuild/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/core/roslang/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/tools/rospack/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/core/roslib/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/tools/rosclean/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/ros/tools/rosunit/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
-../msg_gen/cpp/include/rover_msgs/Enabled.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
+../msg_gen/cpp/include/rover_msgs/Motors.h: ../msg/Motors.msg
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/core/roslib/scripts/gendeps
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg/Header.msg
+../msg_gen/cpp/include/rover_msgs/Motors.h: ../manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/core/rosbuild/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/core/roslang/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/utilities/rostime/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/tools/rospack/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/core/roslib/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosconsole/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/tools/rosclean/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/ros/tools/rosunit/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
+../msg_gen/cpp/include/rover_msgs/Motors.h: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover_msgs/build/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/rover_msgs/Enabled.h"
-	/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py /home/rbtying/robot/rover_msgs/msg/Enabled.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/rover_msgs/Motors.h"
+	/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/scripts/genmsg_cpp.py /home/rbtying/robot/rover_msgs/msg/Motors.msg
 
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Settings.h
+ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Enabled.h
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Gyro.h
-ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Motors.h
+ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/CondensedIMU.h
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Battery.h
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Encoder.h
-ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/CondensedIMU.h
-ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Enabled.h
+ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/rover_msgs/Motors.h
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp.dir/build.make
 .PHONY : ROSBUILD_genmsg_cpp
 

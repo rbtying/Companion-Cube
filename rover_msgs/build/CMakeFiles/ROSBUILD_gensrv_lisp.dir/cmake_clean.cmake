@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
-  "../msg_gen"
   "../src/rover_msgs/msg"
+  "../msg_gen"
   "../msg_gen"
   "CMakeFiles/ROSBUILD_gensrv_lisp"
 )
