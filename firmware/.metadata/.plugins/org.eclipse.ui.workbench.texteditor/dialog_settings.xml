@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="300" key="DIALOG_WIDTH"/>
+		<item value="326" key="DIALOG_WIDTH"/>
 		<item value="167" key="DIALOG_Y_ORIGIN"/>
+		<item value="435" key="DIALOG_HEIGHT"/>
 		<item value="720" key="DIALOG_X_ORIGIN"/>
-		<item value="408" key="DIALOG_HEIGHT"/>
-		<item value="1|Droid Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="imu" key="selection"/>
+		<item value="odom" key="selection"/>
 		<list key="findhistory">
+			<item value="odom"/>
+			<item value="300"/>
+			<item value="setLED"/>
+			<item value="SPI.transfer"/>
+			<item value="led"/>
+			<item value="rover::"/>
 			<item value="imu"/>
 			<item value="base_footprint"/>
-			<item value="base_"/>
-			<item value="base_link"/>
-			<item value="IMU"/>
-			<item value="accel_x"/>
-			<item value="Accel_vector"/>
-			<item value="GRAVITY"/>
 		</list>
 		<list key="replacehistory">
+			<item value="sendByte"/>
+			<item value="rover_msgs::"/>
 			<item value="base_link"/>
 			<item value="IMUAHRS::initAccel"/>
 			<item value="IMUAHRS::initI2C"/>
 			<item value="IMUAHRS::initIMU"/>
 			<item value="Serial3"/>
 			<item value="m_an"/>
-			<item value="Wire.receive"/>
-			<item value="Wire.send"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
