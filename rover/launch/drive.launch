@@ -1,4 +1,7 @@
 <launch>
+    <node name="cmd_vel_throttle_node" type="throttle" pkg="topic_tools" args="messages cmd_vel 30 cmd_vel_throttle">
+    </node>
+
     <node name="rosserial_node" type="serial_node.py" pkg="rosserial_python">
         <param name="port" value="/dev/ttyRoverFTDI" />
         <param name="baud" value="250000" />
@@ -18,7 +21,7 @@
         <remap from="roverBot/servos" to="/servos" />
         <remap from="roverBot/servos_curr" to="/servos_curr" />
         <remap from="roverBot/joint_states" to="/joint_states" />
-        <remap from="roverBot/cmd_vel" to="/cmd_vel" />
+        <remap from="roverBot/cmd_vel" to="/cmd_vel_throttle" />
         <remap from="roverBot/battery/motor" to="/battery/motor" />
         <remap from="roverBot/encoders" to="/encoders" />
     </node>

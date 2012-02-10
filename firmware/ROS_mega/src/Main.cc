@@ -29,7 +29,7 @@
 // Control
 #define TIME_INTERVAL 100 // 10 Hz
 #define COMM_INTERVAL 40 // 25 Hz
-#define LED_INTERVAL 33 // 30Hz
+#define LED_INTERVAL 100 // 10 Hz
 unsigned long nexTime = 0, cTime = 0, ledTime = 0;
 
 // control data
@@ -303,13 +303,13 @@ int main() {
 
 		if (nextLEDTime < cTime) {
 			static int sign = 1;
-			if (ctrl.LED.back.r > 0.99) {
+			if (ctrl.LED.back.r > 0.95) {
 				sign = -1;
 			}
-			if (ctrl.LED.back.r < 0.015) {
+			if (ctrl.LED.back.r < 0.05) {
 				sign = +1;
 			}
-			ctrl.LED.back.r += sign * 0.015;
+			ctrl.LED.back.r += sign * 0.05;
 
 			nextLEDTime = nextLEDTime + LED_INTERVAL;
 			setLEDs();
