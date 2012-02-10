@@ -6,12 +6,12 @@
  */
 #include <WProgram.h>
 #include "ros.h"
-#include "rover/Enabled.h"
-#include "rover/Motors.h"
-#include "rover/Battery.h"
-#include "rover/Encoder.h"
-#include "rover/Settings.h"
-#include "rover/CondensedIMU.h"
+#include "rover_msgs/Enabled.h"
+#include "rover_msgs/Motors.h"
+#include "rover_msgs/Battery.h"
+#include "rover_msgs/Encoder.h"
+#include "rover_msgs/Settings.h"
+#include "rover_msgs/CondensedIMU.h"
 #include "std_msgs/UInt8MultiArray.h"
 #include "pins.h"
 #include "control_struct.h"
@@ -22,21 +22,22 @@
 #include "motors/RoboClaw.h"
 #include "devices/CD74HC4067.h"
 #include "devices/StrongDriveOutput.h"
+#include "devices/ShiftBrite.h"
 #include "libraries/Servo/Servo.h"
 #include "sensors/imu/IMU.h"
 
 // Control
 #define TIME_INTERVAL 100 // 10 Hz
-#define COMM_INTERVAL 50 // 20 Hz
-#define LED_INTERVAL 500
-
+#define COMM_INTERVAL 40 // 25 Hz
+#define LED_INTERVAL 33 // 30Hz
 unsigned long nexTime = 0, cTime = 0, ledTime = 0;
 
 // control data
 control_data ctrl;
 
-#define QP_TO_CM_LEFT (0.004)
-#define QP_TO_CM_RIGHT (0.004)
+// Shiftbrite
+ShiftBrite sb(MOSI, LATCH, SS, SCK);
+uint32_t nextLEDTime;
 
 // Motors
 RoboClaw m(&Serial1, 38400);
@@ -45,16 +46,16 @@ StrongDriveOutput motorRelay(RELAY_PIN);
 // ROS
 ros::NodeHandle nh;
 
-rover::Enabled enablemsg;
+rover_msgs::Enabled enablemsg;
 ros::Publisher enablepub("enabled", &enablemsg);
 
-rover::Encoder encdata;
+rover_msgs::Encoder encdata;
 ros::Publisher encpub("encoders", &encdata);
 
-rover::Battery batterydata;
+rover_msgs::Battery batterydata;
 ros::Publisher batterypub("battery/motor", &batterydata);
 
-rover::CondensedIMU imudata;
+rover_msgs::CondensedIMU imudata;
 ros::Publisher imupub("imu/raw", &imudata);
 
 std_msgs::UInt8MultiArray servodata;
@@ -66,12 +67,9 @@ uint32_t seq = 0;
 uint32_t nextCommTime;
 bool publishSettingsDump = false;
 
-void drivecb(const rover::Motors& msg) {
+void drivecb(const rover_msgs::Motors& msg) {
 	int32_t l = (int32_t)(msg.left / ctrl.left.qp_to_m);
 	int32_t r = (int32_t)(msg.right / ctrl.right.qp_to_m);
-	Serial3.print(l);
-	Serial3.print(", ");
-	Serial3.println(r);
 	if (l == 0) {
 		m.SpeedM1(RB_ADDRESS, 1);
 	} else {
@@ -84,13 +82,13 @@ void drivecb(const rover::Motors& msg) {
 		m.SpeedM2(RB_ADDRESS, r);
 	}
 }
-ros::Subscriber<rover::Motors> drivesub("drive", &drivecb);
+ros::Subscriber<rover_msgs::Motors> drivesub("drive", &drivecb);
 
-void enablecb(const rover::Enabled& msg) {
+void enablecb(const rover_msgs::Enabled& msg) {
 	ctrl.enabled = msg.motorsEnabled;
 	publishSettingsDump = msg.settingsDumpEnabled;
 }
-ros::Subscriber<rover::Enabled> enablesub("enable", &enablecb);
+ros::Subscriber<rover_msgs::Enabled> enablesub("enable", &enablecb);
 
 void servocb(const std_msgs::UInt8MultiArray& msg) {
 	for (uint8_t i = 0; i < msg.data_length && i < NUM_SERVOS; i++) {
@@ -148,6 +146,46 @@ void publish() {
 	}
 }
 
+void setLEDs() {
+	int r, g, b;
+
+	r = 1023 * ctrl.LED.front.r;
+	g = 1023 * ctrl.LED.front.g;
+	b = 1023 * ctrl.LED.front.b;
+	if (ctrl.enabled) {
+		sb.setColor(r, g, b);
+	} else {
+		sb.setColor(200 * ctrl.LED.back.r, 0, 0);
+	}
+
+	r = 1023 * ctrl.LED.left.r;
+	g = 1023 * ctrl.LED.left.g;
+	b = 1023 * ctrl.LED.left.b;
+	if (ctrl.enabled) {
+		sb.setColor(r, g, b);
+	} else {
+		sb.setColor(200 * ctrl.LED.back.r, 0, 0);
+	}
+
+	r = 1023 * ctrl.LED.back.r;
+	g = 1023 * ctrl.LED.back.g;
+	b = 1023 * ctrl.LED.back.b;
+	if (ctrl.enabled) {
+		sb.setColor(r, g, b);
+	} else {
+		sb.setColor(200 * ctrl.LED.back.r, 0, 0);
+	}
+
+	r = 1023 * ctrl.LED.right.r;
+	g = 1023 * ctrl.LED.right.g;
+	b = 1023 * ctrl.LED.right.b;
+	if (ctrl.enabled) {
+		sb.setColor(r, g, b);
+	} else {
+		sb.setColor(200 * ctrl.LED.back.r, 0, 0);
+	}
+}
+
 /**
  * Main execution loop
  */
@@ -188,6 +226,26 @@ int main() {
 	// Motors
 	ctrl.enabled = false;
 
+	ctrl.LED.left.r = 0.0;
+	ctrl.LED.left.g = 0.0;
+	ctrl.LED.left.b = 0.0;
+	ctrl.LED.right.r = 0.0;
+	ctrl.LED.right.g = 0.0;
+	ctrl.LED.right.b = 0.0;
+	ctrl.LED.front.r = 1.0;
+	ctrl.LED.front.g = 1.0;
+	ctrl.LED.front.b = 1.0;
+	ctrl.LED.back.r = 0.0;
+	ctrl.LED.back.g = 0.0;
+	ctrl.LED.back.b = 0.0;
+
+	sb.setPower(127);
+	sb.setPower(127);
+	sb.setPower(127);
+	sb.setPower(127);
+	setLEDs();
+	ledTime = 0;
+
 	pinMode(13, OUTPUT);
 
 	m.DutyM1M2(RB_ADDRESS, 0, 0);
@@ -220,7 +278,7 @@ int main() {
 			m.DutyM1M2(RB_ADDRESS, 0, 0);
 		}
 
-		if (nexTime <= cTime && ctrl.enabled) {
+		if (nexTime <= cTime) {
 			uint8_t status;
 			bool valid;
 
@@ -229,6 +287,11 @@ int main() {
 			ctrl.left.vel = m.ReadISpeedM1(RB_ADDRESS, &status, &valid);
 			ctrl.right.vel = m.ReadISpeedM2(RB_ADDRESS, &status, &valid);
 
+			ctrl.LED.left.b = (ctrl.left.vel * 0.5 / RB_MAX_QPPS) + 0.5;
+			ctrl.LED.left.r = 1.0 - ctrl.LED.left.b;
+			ctrl.LED.right.b = (ctrl.right.vel * 0.5 / RB_MAX_QPPS) + 0.5;
+			ctrl.LED.right.r = 1.0 - ctrl.LED.right.b;
+
 			nexTime = nexTime + TIME_INTERVAL;
 		}
 
@@ -236,6 +299,20 @@ int main() {
 			publish();
 			digitalWrite(13, nh.connected());
 			nextCommTime = nextCommTime + COMM_INTERVAL;
+		}
+
+		if (nextLEDTime < cTime) {
+			static int sign = 1;
+			if (ctrl.LED.back.r > 0.99) {
+				sign = -1;
+			}
+			if (ctrl.LED.back.r < 0.015) {
+				sign = +1;
+			}
+			ctrl.LED.back.r += sign * 0.015;
+
+			nextLEDTime = nextLEDTime + LED_INTERVAL;
+			setLEDs();
 		}
 
 		if (!nh.connected()) {

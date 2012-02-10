@@ -17,9 +17,9 @@
   <depend package="actionlib_msgs"/>
   <depend package="tf"/>
   <depend package="nav_msgs"/>
+  <depend package="rover_msgs"/>
   <depend package="geometry_msgs"/>
   <depend package="sensor_msgs" />
-  <depend package="cereal_port" />
   <depend package="ps3joy" />
 </package>
 

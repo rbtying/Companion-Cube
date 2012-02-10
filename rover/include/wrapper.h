@@ -15,12 +15,12 @@
 #include <geometry_msgs/Twist.h>		// cmd_vel
 #include <sensor_msgs/Imu.h>			// imu
 #include <sensor_msgs/JointState.h>		// joints
-#include <rover/Battery.h>			    // battery
-#include <rover/Encoder.h>			    // encoders
-#include <rover/Settings.h>             // settings
-#include <rover/CondensedIMU.h>			// imu
-#include <rover/Motors.h>				// motors
-#include <rover/Enabled.h>              // enablemessage
+#include <rover_msgs/Battery.h>			    // battery
+#include <rover_msgs/Encoder.h>			    // encoders
+#include <rover_msgs/Settings.h>             // settings
+#include <rover_msgs/CondensedIMU.h>			// imu
+#include <rover_msgs/Motors.h>				// motors
+#include <rover_msgs/Enabled.h>              // enablemessage
 //#include "servomapping.h"
 #include "util.h"
 #include <string>
@@ -32,9 +32,9 @@ public:
 
 private:
 	void cmdVelCallback(const geometry_msgs::Twist::ConstPtr& cmd_vel);
-	void battCallback(const rover::Battery::ConstPtr& bat);
-	void encCallback(const rover::Encoder::ConstPtr& enc);
-	void imuCallback(const rover::CondensedIMU::ConstPtr& gyr);
+	void battCallback(const rover_msgs::Battery::ConstPtr& bat);
+	void encCallback(const rover_msgs::Encoder::ConstPtr& enc);
+	void imuCallback(const rover_msgs::CondensedIMU::ConstPtr& gyr);
 	void servoCallback(const std_msgs::UInt8MultiArray::ConstPtr& serv);
 	void setSettings(double lp, double li, double ld, double lc, double rp,
 			double ri, double rd, double rc);
@@ -43,7 +43,7 @@ private:
 	double m_axlelength, m_maxvel;
 	double m_minBatVoltage;
 
-	rover::Encoder::ConstPtr m_p_enc_msg;
+	rover_msgs::Encoder::ConstPtr m_p_enc_msg;
 
 	double m_odom_x;
 	double m_odom_y;

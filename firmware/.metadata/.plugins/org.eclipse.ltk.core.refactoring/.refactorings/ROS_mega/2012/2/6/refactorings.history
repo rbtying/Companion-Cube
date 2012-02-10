@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ROS_mega/src/lib/devices/ShiftBrite.cpp&apos; to &apos;ShiftBrite.cc&apos;" description="Rename resource &apos;ShiftBrite.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/lib/devices/ShiftBrite.cpp" name="ShiftBrite.cc" stamp="1328838302156" updateReferences="true"/>
+</session>

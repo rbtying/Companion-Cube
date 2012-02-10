@@ -28,6 +28,13 @@
 #define MOTOR_CURRENT_SENS 11
 // ======= END BATT =============
 
+// ======= START SHIFTBRITE =====
+#define MOSI 51
+#define SS 53
+#define SCK 52
+#define LATCH 17
+// ======= END SHIFTBRITE =======
+
 // ======= START IMU ============
 #define IMU_POWER_PIN 49
 // ======= END IMU ==============

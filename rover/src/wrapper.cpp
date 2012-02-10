@@ -2,7 +2,7 @@
 #include <string>
 
 Wrapper::~Wrapper() {
-	rover::Enabled msg;
+	rover_msgs::Enabled msg;
 	msg.motorsEnabled = false;
 	m_enable_pub.publish(msg);
 }
@@ -11,18 +11,18 @@ Wrapper::Wrapper() :
 	m_n("~") {
 	m_odom_pub = m_n.advertise<nav_msgs::Odometry> ("odom", 1);
 	m_imu_pub = m_n.advertise<sensor_msgs::Imu> ("imu/data", 1);
-	m_enable_pub = m_n.advertise<rover::Enabled> ("enable", 1, true);
-	m_motors_pub = m_n.advertise<rover::Motors> ("drive", 1);
+	m_enable_pub = m_n.advertise<rover_msgs::Enabled> ("enable", 1, true);
+	m_motors_pub = m_n.advertise<rover_msgs::Motors> ("drive", 1);
 	m_servos_pub = m_n.advertise<std_msgs::UInt8MultiArray> ("servos", 1);
 	m_joint_pub = m_n.advertise<sensor_msgs::JointState> ("joint_states", 1);
 
 	m_cmd_vel_sub = m_n.subscribe<geometry_msgs::Twist> ("cmd_vel", 10,
 			&Wrapper::cmdVelCallback, this);
-	m_batt_sub = m_n.subscribe<rover::Battery> ("battery/motor", 10,
+	m_batt_sub = m_n.subscribe<rover_msgs::Battery> ("battery/motor", 10,
 			&Wrapper::battCallback, this);
-	m_enc_sub = m_n.subscribe<rover::Encoder> ("encoders", 10,
+	m_enc_sub = m_n.subscribe<rover_msgs::Encoder> ("encoders", 10,
 			&Wrapper::encCallback, this);
-	m_imu_sub = m_n.subscribe<rover::CondensedIMU> ("imu/raw", 10,
+	m_imu_sub = m_n.subscribe<rover_msgs::CondensedIMU> ("imu/raw", 10,
 			&Wrapper::imuCallback, this);
 	m_servos_sub = m_n.subscribe<std_msgs::UInt8MultiArray> ("servos_curr", 10,
 			&Wrapper::servoCallback, this);
@@ -38,7 +38,7 @@ Wrapper::Wrapper() :
 
 	//	usleep(5e6);
 
-	rover::Enabled msg;
+	rover_msgs::Enabled msg;
 	msg.motorsEnabled = true;
 	m_enable_pub.publish(msg);
 
@@ -50,20 +50,20 @@ Wrapper::Wrapper() :
 }
 
 void Wrapper::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& cmd_vel) {
-	rover::Motors m;
+	rover_msgs::Motors m;
 	m.left = cmd_vel->linear.x - m_axlelength * cmd_vel->angular.z;
 	m.right = cmd_vel->linear.x + m_axlelength * cmd_vel->angular.z;
 	m_motors_pub.publish(m);
 }
 
-void Wrapper::battCallback(const rover::Battery::ConstPtr& bat) {
+void Wrapper::battCallback(const rover_msgs::Battery::ConstPtr& bat) {
 	if (bat->voltage < m_minBatVoltage) {
 		ROS_ERROR("Motor battery voltage low: %.02f volts, %.02f amps"
 				, bat->voltage, bat->current);
 	}
 }
 
-void Wrapper::imuCallback(const rover::CondensedIMU::ConstPtr& imu) {
+void Wrapper::imuCallback(const rover_msgs::CondensedIMU::ConstPtr& imu) {
 	// create a quaternion for the gyro
 #define radians(x) ((x) * DEG_TO_RAD)
 	geometry_msgs::Quaternion imu_quat =
@@ -115,29 +115,30 @@ void Wrapper::servoCallback(const std_msgs::UInt8MultiArray::ConstPtr& serv) {
 	m_joint_pub.publish(joint_state);
 }
 
-void Wrapper::encCallback(const rover::Encoder::ConstPtr& enc) {
+void Wrapper::encCallback(const rover_msgs::Encoder::ConstPtr& enc) {
 	if (m_p_enc_msg != NULL) {
 		double dt = (enc->header.stamp - m_p_enc_msg->header.stamp).toSec();
 
-		double dl = (enc->leftCount - m_p_enc_msg->leftCount) * enc->left_conversion_factor;
-        double dr = (enc->rightCount - m_p_enc_msg->rightCount)	* enc->right_conversion_factor;
+		double dl = (enc->leftCount - m_p_enc_msg->leftCount)
+				* enc->left_conversion_factor;
+		double dr = (enc->rightCount - m_p_enc_msg->rightCount)
+				* enc->right_conversion_factor;
 
-		double left_avg_vel = dl / dt;
-		double right_avg_vel = (enc->rightCount - m_p_enc_msg->rightCount)
-				* enc->right_conversion_factor / dt;
+		double dth = (dl - dr) / (m_axlelength * 2);
 
-		double linSpeed = (left_avg_vel + right_avg_vel) / 2; // m/s
+		m_vel_yaw = normalize(dth/dt); // rad/s
+		m_odom_yaw = normalize(m_odom_yaw + dth); // rad
 
-		m_vel_yaw
-				= normalize((left_avg_vel - right_avg_vel) / (m_axlelength * 2)); // rad/s
-		m_odom_yaw = normalize(m_odom_yaw + m_vel_yaw * dt); // rad
+		double dvect = (dl + dr) / 2;
+		double dx = dvect * cos(m_odom_yaw);
+		double dy = dvect * sin(m_odom_yaw);
 
-		m_vel_x = linSpeed * cos(m_odom_yaw);
-		m_vel_y = linSpeed * sin(m_odom_yaw);
+		m_vel_x = dx / dt;
+		m_vel_y = dy / dt;
 
 		// Update odometry
-		m_odom_x += m_vel_x * dt; // m
-		m_odom_y += m_vel_y * dt; // m
+		m_odom_x += dx; // m
+		m_odom_y += dy; // m
 
 		geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(
 				m_odom_yaw);

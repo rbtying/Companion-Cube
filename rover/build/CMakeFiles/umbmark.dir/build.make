@@ -88,7 +88,7 @@ CMakeFiles/umbmark.dir/src/umbmark.o: /opt/ros/electric/stacks/ros_comm/utilitie
 CMakeFiles/umbmark.dir/src/umbmark.o: /opt/ros/electric/stacks/ros_comm/utilities/message_filters/manifest.xml
 CMakeFiles/umbmark.dir/src/umbmark.o: /opt/ros/electric/stacks/geometry/tf/manifest.xml
 CMakeFiles/umbmark.dir/src/umbmark.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
-CMakeFiles/umbmark.dir/src/umbmark.o: /home/rbtying/robot/cereal_port/manifest.xml
+CMakeFiles/umbmark.dir/src/umbmark.o: /home/rbtying/robot/rover_msgs/manifest.xml
 CMakeFiles/umbmark.dir/src/umbmark.o: /opt/ros/electric/stacks/joystick_drivers/ps3joy/manifest.xml
 CMakeFiles/umbmark.dir/src/umbmark.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
 CMakeFiles/umbmark.dir/src/umbmark.o: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
@@ -104,6 +104,7 @@ CMakeFiles/umbmark.dir/src/umbmark.o: /opt/ros/electric/stacks/geometry/tf/msg_g
 CMakeFiles/umbmark.dir/src/umbmark.o: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
 CMakeFiles/umbmark.dir/src/umbmark.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
 CMakeFiles/umbmark.dir/src/umbmark.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
+CMakeFiles/umbmark.dir/src/umbmark.o: /home/rbtying/robot/rover_msgs/msg_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rbtying/robot/rover/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/umbmark.dir/src/umbmark.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/umbmark.dir/src/umbmark.o -c /home/rbtying/robot/rover/src/umbmark.cpp

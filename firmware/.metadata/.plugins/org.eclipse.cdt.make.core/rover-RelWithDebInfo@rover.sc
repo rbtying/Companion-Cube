@@ -16,6 +16,7 @@
 <includePath path="/opt/ros/electric/stacks/bullet/include"/>
 <includePath path="/opt/ros/electric/stacks/geometry/angles/include"/>
 <includePath path="/opt/ros/electric/stacks/ros_comm/utilities/message_filters/include"/>
+<includePath path="/home/rbtying/robot/rover_msgs/msg_gen/cpp/include"/>
 <includePath path="/opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/cpp/include"/>
 <includePath path="/opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/cpp/include"/>
 <includePath path="/opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include"/>

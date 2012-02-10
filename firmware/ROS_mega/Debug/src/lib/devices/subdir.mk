@@ -6,16 +6,19 @@
 CC_SRCS += \
 ../src/lib/devices/CD74HC4067.cc \
 ../src/lib/devices/LCD.cc \
+../src/lib/devices/ShiftBrite.cc \
 ../src/lib/devices/StrongDriveOutput.cc 
 
 OBJS += \
 ./src/lib/devices/CD74HC4067.o \
 ./src/lib/devices/LCD.o \
+./src/lib/devices/ShiftBrite.o \
 ./src/lib/devices/StrongDriveOutput.o 
 
 CC_DEPS += \
 ./src/lib/devices/CD74HC4067.d \
 ./src/lib/devices/LCD.d \
+./src/lib/devices/ShiftBrite.d \
 ./src/lib/devices/StrongDriveOutput.d 
 
 

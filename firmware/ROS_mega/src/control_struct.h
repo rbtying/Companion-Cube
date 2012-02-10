@@ -22,11 +22,21 @@ struct Motor {
 	int32_t vel;
 };
 
+struct LED {
+	float r, g, b;
+};
+
 struct control_data {
 	Battery mot_batt;
 	Servo servos[NUM_SERVOS];
 	Motor left;
 	Motor right;
+	struct {
+		LED front;
+		LED left;
+		LED right;
+		LED back;
+	} LED;
 	bool enabled;
 };
 

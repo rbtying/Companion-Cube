@@ -4,13 +4,13 @@
 CMakeFiles/rover_node.dir/src/rover_main.o
  ../include/util.h
  ../include/wrapper.h
- ../msg_gen/cpp/include/rover/Battery.h
- ../msg_gen/cpp/include/rover/CondensedIMU.h
- ../msg_gen/cpp/include/rover/Enabled.h
- ../msg_gen/cpp/include/rover/Encoder.h
- ../msg_gen/cpp/include/rover/Motors.h
- ../msg_gen/cpp/include/rover/Settings.h
  /home/rbtying/robot/rover/src/rover_main.cpp
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Battery.h
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/CondensedIMU.h
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Enabled.h
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Encoder.h
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Motors.h
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Settings.h
  /opt/ros/electric/stacks/bullet/include/LinearMath/btMatrix3x3.h
  /opt/ros/electric/stacks/bullet/include/LinearMath/btMinMax.h
  /opt/ros/electric/stacks/bullet/include/LinearMath/btQuadWord.h
@@ -103,13 +103,13 @@ CMakeFiles/rover_node.dir/src/rover_main.o
 CMakeFiles/rover_node.dir/src/wrapper.o
  ../include/util.h
  ../include/wrapper.h
- ../msg_gen/cpp/include/rover/Battery.h
- ../msg_gen/cpp/include/rover/CondensedIMU.h
- ../msg_gen/cpp/include/rover/Enabled.h
- ../msg_gen/cpp/include/rover/Encoder.h
- ../msg_gen/cpp/include/rover/Motors.h
- ../msg_gen/cpp/include/rover/Settings.h
  /home/rbtying/robot/rover/src/wrapper.cpp
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Battery.h
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/CondensedIMU.h
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Enabled.h
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Encoder.h
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Motors.h
+ /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Settings.h
  /opt/ros/electric/stacks/bullet/include/LinearMath/btMatrix3x3.h
  /opt/ros/electric/stacks/bullet/include/LinearMath/btMinMax.h
  /opt/ros/electric/stacks/bullet/include/LinearMath/btQuadWord.h

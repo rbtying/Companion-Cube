@@ -23,13 +23,13 @@ src/Main.d src/Main.o: ../src/Main.cc \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/ros/service_client.h \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/ArduinoHardware.h \
  /home/rbtying/robot/firmware/Arduino-2560/HardwareSerial.h \
- /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Enabled.h \
- /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Motors.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/Enabled.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/Motors.h \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/Header.h \
- /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Battery.h \
- /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Encoder.h \
- /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Settings.h \
- /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/CondensedIMU.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/Battery.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/Encoder.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/Settings.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/CondensedIMU.h \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/UInt8MultiArray.h \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/MultiArrayLayout.h \
  /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/MultiArrayDimension.h \
@@ -42,6 +42,7 @@ src/Main.d src/Main.o: ../src/Main.cc \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/utilities/PID.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/RoboClaw.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/devices/StrongDriveOutput.h \
+ /home/rbtying/robot/firmware/ROS_mega/src/lib/devices/ShiftBrite.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/imu/IMU.h \
  /home/rbtying/robot/firmware/Arduino-2560/libraries/Wire/Wire.h \
  /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/imu/L3G4200D.h \
@@ -95,19 +96,19 @@ src/Main.d src/Main.o: ../src/Main.cc \
 
 /home/rbtying/robot/firmware/Arduino-2560/HardwareSerial.h:
 
-/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Enabled.h:
+/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/Enabled.h:
 
-/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Motors.h:
+/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/Motors.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/Header.h:
 
-/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Battery.h:
+/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/Battery.h:
 
-/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Encoder.h:
+/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/Encoder.h:
 
-/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/Settings.h:
+/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/Settings.h:
 
-/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover/CondensedIMU.h:
+/home/rbtying/robot/firmware/ROS_mega/src/ros_lib/rover_msgs/CondensedIMU.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/ros_lib/std_msgs/UInt8MultiArray.h:
 
@@ -134,6 +135,8 @@ src/Main.d src/Main.o: ../src/Main.cc \
 /home/rbtying/robot/firmware/ROS_mega/src/lib/motors/RoboClaw.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/lib/devices/StrongDriveOutput.h:
+
+/home/rbtying/robot/firmware/ROS_mega/src/lib/devices/ShiftBrite.h:
 
 /home/rbtying/robot/firmware/ROS_mega/src/lib/sensors/imu/IMU.h:
 

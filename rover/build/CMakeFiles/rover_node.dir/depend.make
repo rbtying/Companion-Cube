@@ -3,13 +3,13 @@
 
 CMakeFiles/rover_node.dir/src/rover_main.o: ../include/util.h
 CMakeFiles/rover_node.dir/src/rover_main.o: ../include/wrapper.h
-CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/Battery.h
-CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/CondensedIMU.h
-CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/Enabled.h
-CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/Encoder.h
-CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/Motors.h
-CMakeFiles/rover_node.dir/src/rover_main.o: ../msg_gen/cpp/include/rover/Settings.h
 CMakeFiles/rover_node.dir/src/rover_main.o: ../src/rover_main.cpp
+CMakeFiles/rover_node.dir/src/rover_main.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Battery.h
+CMakeFiles/rover_node.dir/src/rover_main.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/CondensedIMU.h
+CMakeFiles/rover_node.dir/src/rover_main.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Enabled.h
+CMakeFiles/rover_node.dir/src/rover_main.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Encoder.h
+CMakeFiles/rover_node.dir/src/rover_main.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Motors.h
+CMakeFiles/rover_node.dir/src/rover_main.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Settings.h
 CMakeFiles/rover_node.dir/src/rover_main.o: /opt/ros/electric/stacks/bullet/include/LinearMath/btMatrix3x3.h
 CMakeFiles/rover_node.dir/src/rover_main.o: /opt/ros/electric/stacks/bullet/include/LinearMath/btMinMax.h
 CMakeFiles/rover_node.dir/src/rover_main.o: /opt/ros/electric/stacks/bullet/include/LinearMath/btQuadWord.h
@@ -102,13 +102,13 @@ CMakeFiles/rover_node.dir/src/rover_main.o: /opt/ros/electric/stacks/ros_comm/ut
 
 CMakeFiles/rover_node.dir/src/wrapper.o: ../include/util.h
 CMakeFiles/rover_node.dir/src/wrapper.o: ../include/wrapper.h
-CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/Battery.h
-CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/CondensedIMU.h
-CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/Enabled.h
-CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/Encoder.h
-CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/Motors.h
-CMakeFiles/rover_node.dir/src/wrapper.o: ../msg_gen/cpp/include/rover/Settings.h
 CMakeFiles/rover_node.dir/src/wrapper.o: ../src/wrapper.cpp
+CMakeFiles/rover_node.dir/src/wrapper.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Battery.h
+CMakeFiles/rover_node.dir/src/wrapper.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/CondensedIMU.h
+CMakeFiles/rover_node.dir/src/wrapper.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Enabled.h
+CMakeFiles/rover_node.dir/src/wrapper.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Encoder.h
+CMakeFiles/rover_node.dir/src/wrapper.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Motors.h
+CMakeFiles/rover_node.dir/src/wrapper.o: /home/rbtying/robot/rover_msgs/msg_gen/cpp/include/rover_msgs/Settings.h
 CMakeFiles/rover_node.dir/src/wrapper.o: /opt/ros/electric/stacks/bullet/include/LinearMath/btMatrix3x3.h
 CMakeFiles/rover_node.dir/src/wrapper.o: /opt/ros/electric/stacks/bullet/include/LinearMath/btMinMax.h
 CMakeFiles/rover_node.dir/src/wrapper.o: /opt/ros/electric/stacks/bullet/include/LinearMath/btQuadWord.h
