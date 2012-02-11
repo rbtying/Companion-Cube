@@ -23,18 +23,18 @@
 #if defined(__AVR_ATmega8__)
 
 // 3 PWM
-#define digitalPinToTimer(P) \
+#define pinToTimer(P) \
 (((P) ==  9 || (P) == 10) ? &TCCR1A : (((P) == 11) ? &TCCR2 : 0))
-#define digitalPinToTimerBit(P) \
+#define pinToTimerBit(P) \
 (((P) ==  9) ? COM1A1 : (((P) == 10) ? COM1B1 : COM21))
 #else
 
 // 6 PWM
-#define digitalPinToTimer(P) \
+#define pinToTimer(P) \
 (((P) ==  6 || (P) ==  5) ? &TCCR0A : \
         (((P) ==  9 || (P) == 10) ? &TCCR1A : \
         (((P) == 11 || (P) ==  3) ? &TCCR2A : 0)))
-#define digitalPinToTimerBit(P) \
+#define pinToTimerBit(P) \
 (((P) ==  6) ? COM0A1 : (((P) ==  5) ? COM0B1 : \
         (((P) ==  9) ? COM1A1 : (((P) == 10) ? COM1B1 : \
         (((P) == 11) ? COM2A1 : COM2B1)))))
@@ -96,14 +96,14 @@
         (((P) == 3 || (P) == 4) ? 5 : 7)))))))))))))))
 
 // 15 PWM
-#define digitalPinToTimer(P) \
+#define pinToTimer(P) \
 (((P) == 13 || (P) ==  4) ? &TCCR0A : \
         (((P) == 11 || (P) == 12) ? &TCCR1A : \
         (((P) == 10 || (P) ==  9) ? &TCCR2A : \
         (((P) ==  5 || (P) ==  2 || (P) ==  3) ? &TCCR3A : \
         (((P) ==  6 || (P) ==  7 || (P) ==  8) ? &TCCR4A : \
         (((P) == 46 || (P) == 45 || (P) == 44) ? &TCCR5A : 0))))))
-#define digitalPinToTimerBit(P) \
+#define pinToTimerBit(P) \
 (((P) == 13) ? COM0A1 : (((P) ==  4) ? COM0B1 : \
         (((P) == 11) ? COM1A1 : (((P) == 12) ? COM1B1 : \
         (((P) == 10) ? COM2A1 : (((P) ==  9) ? COM2B1 : \
@@ -117,8 +117,8 @@
 #if !defined(fastIOWrite)
 #define fastIOWrite(P, V) \
 if (__builtin_constant_p(P) && __builtin_constant_p(V)) { \
-                if (digitalPinToTimer(P)) \
-                        bitClear(*digitalPinToTimer(P), digitalPinToTimerBit(P)); \
+                if (pinToTimer(P)) \
+                        bitClear(*pinToTimer(P), pinToTimerBit(P)); \
                 bitWrite(*digitalPinToPortReg(P), digitalPinToBit(P), (V)); \
         } else { \
                 digitalWrite((P), (V)); \
@@ -138,8 +138,8 @@ if (__builtin_constant_p(P) && __builtin_constant_p(V)) { \
 #define fastIORead(P) ( (int) __digitalReadFast__((P)) )
 #define __digitalReadFast__(P ) \
 (__builtin_constant_p(P) ) ? ( \
-                digitalPinToTimer(P) ? ( \
-                       bitClear(*digitalPinToTimer(P), digitalPinToTimerBit(P)) ,  \
+                pinToTimer(P) ? ( \
+                       bitClear(*pinToTimer(P), pinToTimerBit(P)) ,  \
                              bitRead(*digitalPinToPINReg(P), digitalPinToBit(P))) : \
                   bitRead(*digitalPinToPINReg(P), digitalPinToBit(P)))  : \
                 digitalRead((P))
@@ -157,8 +157,8 @@ if (__builtin_constant_p(P) && __builtin_constant_p(V)) { \
 #if !defined(pinModeFast2)
 #define pinModeFast2(P, V) \
 if (__builtin_constant_p(P) && __builtin_constant_p(V)) { \
-                if (digitalPinToTimer(P)) \
-                        bitClear(*digitalPinToTimer(P), digitalPinToTimerBit(P)); \
+                if (pinToTimer(P)) \
+                        bitClear(*pinToTimer(P), pinToTimerBit(P)); \
                 bitWrite(*digitalPinToDDRReg(P), digitalPinToBit(P), (V)); \
         } else {  \
                 pinMode((P), (V)); \

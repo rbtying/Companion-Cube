@@ -1,6 +1,6 @@
 src/OpcodeController.d src/OpcodeController.o: ../src/OpcodeController.cc \
  ../src/OpcodeController.h \
- /home/rbtying/robot/firmware/Arduino-2560/WProgram.h \
+ /home/rbtying/robot/firmware/Arduino-2560/Arduino.h \
  /home/rbtying/robot/firmware/Arduino-2560/wiring.h \
  /home/rbtying/robot/firmware/Arduino-2560/binary.h \
  /home/rbtying/robot/firmware/Arduino-2560/WString.h \
@@ -19,7 +19,7 @@ src/OpcodeController.d src/OpcodeController.o: ../src/OpcodeController.cc \
 
 ../src/OpcodeController.h:
 
-/home/rbtying/robot/firmware/Arduino-2560/WProgram.h:
+/home/rbtying/robot/firmware/Arduino-2560/Arduino.h:
 
 /home/rbtying/robot/firmware/Arduino-2560/wiring.h:
 

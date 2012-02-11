@@ -1,7 +1,7 @@
 #ifndef L3G4200D_h
 #define L3G4200D_h
 
-#include <WProgram.h> // for byte data type
+#include <Arduino.h> // for byte data type
 // register addresses
 
 #define L3G4200D_WHO_AM_I      0x0F

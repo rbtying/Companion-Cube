@@ -5,7 +5,7 @@
  *      Author: rbtying
  */
 
-#include "WProgram.h"
+#include "Arduino.h"
 
 #ifndef STRONGDRIVEOUTPUT_H_
 #define STRONGDRIVEOUTPUT_H_

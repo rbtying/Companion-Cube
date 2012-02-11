@@ -23,10 +23,11 @@ void RoboClaw::write_n(uint8_t cnt, ...) {
 	for (uint8_t index = 0; index < cnt; index++) {
 		uint8_t data = va_arg(marker, uint16_t);
 		crc += data;
-		m_hws->write(data);
+		m_hws->write((uint8_t) data);
+
 	}
 	va_end(marker); /* Reset variable arguments.      */
-	m_hws->write(crc & 0x7F);
+	m_hws->write((uint8_t)(crc & 0x7F));
 }
 
 void RoboClaw::ForwardM1(uint8_t address, uint8_t speed) {
@@ -88,34 +89,38 @@ void RoboClaw::LeftRightMixed(uint8_t address, uint8_t speed) {
 uint32_t RoboClaw::Read4_1(uint8_t address, uint8_t cmd, uint8_t *status,
 		bool *valid) {
 	uint8_t crc;
-	m_hws->write(address);
+	m_hws->write((uint8_t) address);
+
 	crc = address;
-	m_hws->write(cmd);
+	m_hws->write((uint8_t) cmd);
+
 	crc += cmd;
 
+	m_hws->flush();
+
 	uint32_t value;
-	uint8_t data = ReadByte(500);
+	uint8_t data = ReadByte(50);
 	crc += data;
 	value = (uint32_t) data << 24;
 
-	data = ReadByte(500);
+	data = ReadByte(50);
 	crc += data;
 	value |= (uint32_t) data << 16;
 
-	data = ReadByte(500);
+	data = ReadByte(50);
 	crc += data;
 	value |= (uint32_t) data << 8;
 
-	data = ReadByte(500);
+	data = ReadByte(50);
 	crc += data;
 	value |= (uint32_t) data;
 
-	data = ReadByte(500);
+	data = ReadByte(50);
 	crc += data;
 	if (status)
 		*status = data;
 
-	data = ReadByte(500);
+	data = ReadByte(50);
 	if (valid)
 		*valid = ((crc & 0x7F) == data);
 
@@ -144,16 +149,18 @@ void RoboClaw::ResetEncoders(uint8_t address) {
 
 bool RoboClaw::ReadVersion(uint8_t address, char *version) {
 	uint8_t crc;
-	m_hws->write(address);
+	m_hws->write((uint8_t) address);
+
 	crc = address;
-	m_hws->write(GETVERSION);
+	m_hws->write((uint8_t) GETVERSION);
+
 	crc += GETVERSION;
 
 	for (uint8_t i = 0; i < 32; i++) {
-		version[i] = ReadByte(500);
+		version[i] = ReadByte(50);
 		crc += version[i];
 		if (version[i] == 0) {
-			if ((crc & 0x7F) == ReadByte(500))
+			if ((crc & 0x7F) == ReadByte(50))
 				return true;
 			else
 				return false;
@@ -164,21 +171,25 @@ bool RoboClaw::ReadVersion(uint8_t address, char *version) {
 
 uint16_t RoboClaw::Read2(uint8_t address, uint8_t cmd, bool *valid) {
 	uint8_t crc;
-	m_hws->write(address);
+	m_hws->write((uint8_t) address);
+
 	crc = address;
-	m_hws->write(cmd);
+	m_hws->write((uint8_t) cmd);
+
+	m_hws->flush();
+
 	crc += cmd;
 
 	uint16_t value;
-	uint8_t data = ReadByte(500);
+	uint8_t data = ReadByte(50);
 	crc += data;
 	value = (uint16_t) data << 8;
 
-	data = ReadByte(500);
+	data = ReadByte(50);
 	crc += data;
 	value |= (uint16_t) data;
 
-	data = ReadByte(500);
+	data = ReadByte(50);
 	if (valid)
 		*valid = ((crc & 0x7F) == data);
 
@@ -365,18 +376,20 @@ void RoboClaw::DutyAccelM1M2(uint8_t address, uint16_t duty1, uint16_t accel1,
 
 uint8_t RoboClaw::ReadError(uint8_t address, bool *valid) {
 	uint8_t crc;
-	m_hws->write(address);
+	m_hws->write((uint8_t) address);
+
 	crc = address;
-	m_hws->write(GETERROR);
+	m_hws->write((uint8_t) GETERROR);
+
 	crc += GETERROR;
 
-	uint8_t value = ReadByte(500);
+	uint8_t value = ReadByte(50);
 	crc += value;
 
 	if (valid)
-		*valid = ((crc & 0x7F) == ReadByte(500));
+		*valid = ((crc & 0x7F) == ReadByte(50));
 	else
-		ReadByte(500);
+		ReadByte(50);
 
 	return value;
 }
@@ -387,7 +400,10 @@ void RoboClaw::WriteNVM(uint8_t address) {
 
 uint8_t RoboClaw::ReadByte(uint32_t timeout) {
 	uint32_t t = millis();
-	while (millis() - t <= /*timeout*/10) {
+
+	m_hws->flush();
+
+	while (millis() - t <= timeout) {
 		if (m_hws->available()) {
 			return m_hws->read();
 		}

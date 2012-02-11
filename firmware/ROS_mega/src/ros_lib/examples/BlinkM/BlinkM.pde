@@ -4,7 +4,7 @@
 *  from an arduino using RosSerial
 */
 
-#include "WProgram.h" //include the Arduino library
+#include "Arduino.h" //include the Arduino library
 #include <stdlib.h>
 
 

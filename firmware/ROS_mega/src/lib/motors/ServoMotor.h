@@ -9,7 +9,7 @@
 #define SERVOMOTOR_H_
 
 #include "DualMotor.h"
-#include "libraries/Servo/Servo.h"
+#include "Servo.h"
 
 class ServoMotor: DualMotor {
 public:

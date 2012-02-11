@@ -1,5 +1,5 @@
 #include "ShiftBrite.h"
-#include "libraries/SPI/SPI.h"
+#include "SPI.h"
 
 ShiftBrite::ShiftBrite(int dp, int lp, int ep, int cp) {
 	m_mosi = dp;
@@ -9,7 +9,7 @@ ShiftBrite::ShiftBrite(int dp, int lp, int ep, int cp) {
 	initPins();
 	SPI.begin();
 	SPI.setBitOrder(MSBFIRST);
-	SPI.setClockDivider(SPI_CLOCK_DIV2);
+	//	SPI.setClockDivider(SPI_CLOCK_DIV16);
 }
 
 void ShiftBrite::setPower(int r, int g, int b) {
@@ -26,10 +26,10 @@ void ShiftBrite::setColor(int r, int g, int b) {
 }
 
 void ShiftBrite::initPins() {
-	//	pinMode(m_mosi, OUTPUT);
+	pinMode(m_mosi, OUTPUT);
 	pinMode(m_latch, OUTPUT);
 	pinMode(m_ss, OUTPUT);
-	//	pinMode(m_sck, OUTPUT);
+	pinMode(m_sck, OUTPUT);
 	digitalWrite(m_latch, LOW);
 	digitalWrite(m_ss, HIGH);
 }
@@ -43,6 +43,10 @@ void ShiftBrite::sendPacket(int mode, int r, int g, int b) {
 	SB_CommandPacket = (SB_CommandPacket << 10) | (g & 1023);
 
 	digitalWrite(m_ss, LOW);
+	//	shiftOut(m_mosi, m_sck, MSBFIRST, SB_CommandPacket >> 24);
+	//	shiftOut(m_mosi, m_sck, MSBFIRST, SB_CommandPacket >> 16);
+	//	shiftOut(m_mosi, m_sck, MSBFIRST, SB_CommandPacket >> 8);
+	//	shiftOut(m_mosi, m_sck, MSBFIRST, SB_CommandPacket);
 	SPI.transfer(SB_CommandPacket >> 24);
 	SPI.transfer(SB_CommandPacket >> 16);
 	SPI.transfer(SB_CommandPacket >> 8);

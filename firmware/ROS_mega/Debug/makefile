@@ -69,7 +69,7 @@ all: ROS_mega.elf secondary-outputs
 ROS_mega.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-g++  -lc -lm -Wl,-Map,ROS_mega.map,--cref -Wl,--gc-sections -L"/home/rbtying/robot/firmware/Arduino-2560/Debug" -mmcu=atmega2560 -o"ROS_mega.elf"  $(OBJS) $(USER_OBJS) $(LIBS)  -lc
+	avr-g++  -lc -lm -Wl,-Map,ROS_mega.map,--cref -Wl,--gc-sections -L"/home/rbtying/robot/firmware/Arduino1.0/Debug" -mmcu=atmega2560 -o"ROS_mega.elf"  $(OBJS) $(USER_OBJS) $(LIBS)  -lc
 	@echo 'Finished building target: $@'
 	@echo ' '
 

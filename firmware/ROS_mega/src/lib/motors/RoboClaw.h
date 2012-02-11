@@ -1,7 +1,7 @@
 #ifndef RoboClaw_h
 #define RoboClaw_h
 
-#include <WProgram.h>
+#include <Arduino.h>
 #include <stdarg.h>
 
 /******************************************************************************

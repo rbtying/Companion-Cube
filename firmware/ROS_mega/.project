@@ -3,7 +3,7 @@
 	<name>ROS_mega</name>
 	<comment></comment>
 	<projects>
-		<project>Arduino-2560</project>
+		<project>Arduino1.0</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

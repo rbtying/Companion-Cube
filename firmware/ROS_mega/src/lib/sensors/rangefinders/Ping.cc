@@ -6,7 +6,7 @@
  */
 
 #include "Ping.h"
-#include "WProgram.h"
+#include <Arduino.h>
 
 /**
  * Constructs a Ping object

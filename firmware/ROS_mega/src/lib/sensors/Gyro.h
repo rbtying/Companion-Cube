@@ -5,7 +5,7 @@
  *      Author: rbtying
  */
 
-#include <WProgram.h>
+#include <Arduino.h>
 #include "devices/CD74HC4067.h"
 
 #ifndef GYRO_H_

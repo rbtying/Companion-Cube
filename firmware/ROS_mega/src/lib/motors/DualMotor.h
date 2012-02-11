@@ -8,7 +8,7 @@
 #ifndef DUALMOTOR_H_
 #define DUALMOTOR_H_
 
-#include <WProgram.h>
+#include <Arduino.h>
 
 struct motor_data {
 	int16_t leftSpeed;

@@ -9,7 +9,7 @@
  * in the area to come do your bidding.
  */
 
-#include <WProgram.h>
+#include <Arduino.h>
 
 #include <ros.h>
 #include <std_msgs/Empty.h>

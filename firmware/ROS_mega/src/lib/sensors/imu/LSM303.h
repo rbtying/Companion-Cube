@@ -1,7 +1,7 @@
 #ifndef LSM303_h
 #define LSM303_h
 
-#include <WProgram.h>
+#include <Arduino.h>
 // device types
 
 #define LSM303DLH_DEVICE   0

@@ -6,7 +6,7 @@
  * an analog value into ROS in a pinch.
  */
 
-#include <WProgram.h>
+#include <Arduino.h>
 #include <ros.h>
 #include <rosserial_arduino/Adc.h>
 

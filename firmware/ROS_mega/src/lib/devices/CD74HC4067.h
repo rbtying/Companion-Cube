@@ -5,7 +5,7 @@
  *      Author: rbtying
  */
 
-#include <WProgram.h>
+#include <Arduino.h>
 
 #ifndef CD74HC4067_H_
 #define CD74HC4067_H_

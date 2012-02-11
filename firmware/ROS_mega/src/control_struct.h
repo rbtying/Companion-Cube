@@ -8,7 +8,7 @@
 #ifndef CONTROL_STRUCT_H_
 #define CONTROL_STRUCT_H_
 
-#include "libraries/Servo/Servo.h"
+#include "Servo.h"
 #include "sensors/Battery.h"
 
 #define NUM_SERVOS 2

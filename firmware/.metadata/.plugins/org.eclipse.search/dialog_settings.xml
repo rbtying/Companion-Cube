@@ -3,11 +3,14 @@
 	<section name="">
 		<item value="1000" key="org.eclipse.search.resultpage.limit"/>
 	</section>
+	<section name="">
+		<item value="1000" key="org.eclipse.search.resultpage.limit"/>
+	</section>
 	<section name="DialogBounds_SearchDialog">
 		<item value="694" key="DIALOG_WIDTH"/>
 		<item value="23" key="DIALOG_Y_ORIGIN"/>
-		<item value="453" key="DIALOG_X_ORIGIN"/>
 		<item value="514" key="DIALOG_HEIGHT"/>
+		<item value="453" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="Search">
@@ -33,11 +36,23 @@
 		<item value="false" key="CASE_SENSITIVE"/>
 		<item value="false" key="REG_EX_SEARCH"/>
 		<item value="false" key="SEARCH_DERIVED"/>
-		<item value="1" key="HISTORY_SIZE"/>
+		<item value="4" key="HISTORY_SIZE"/>
+		<section name="HISTORY2">
+			<item value="false" key="isRegExSearch"/>
+			<item value="WProgram.h" key="textPattern"/>
+			<item value="2" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*"/>
+			</list>
+			<list key="workingSets">
+				<item value="ros"/>
+			</list>
+		</section>
 		<section name="EXTENSIONS">
 			<item value="*" key="0"/>
 		</section>
-		<section name="HISTORY0">
+		<section name="HISTORY3">
 			<item value="false" key="isRegExSearch"/>
 			<item value="base_footprint" key="textPattern"/>
 			<item value="0" key="scope"/>
@@ -48,8 +63,40 @@
 			<list key="workingSets">
 			</list>
 		</section>
+		<section name="HISTORY0">
+			<item value="false" key="isRegExSearch"/>
+			<item value="(uint8_t)" key="textPattern"/>
+			<item value="2" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*"/>
+			</list>
+			<list key="workingSets">
+				<item value="ros"/>
+			</list>
+		</section>
+		<section name="HISTORY1">
+			<item value="false" key="isRegExSearch"/>
+			<item value="flush()" key="textPattern"/>
+			<item value="2" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*"/>
+			</list>
+			<list key="workingSets">
+				<item value="ros"/>
+			</list>
+		</section>
+	</section>
+	<section name="ReplaceDialog2">
+		<list key="replace_with">
+			<item value="Arduino.h"/>
+		</list>
 	</section>
 	<section name="SearchDialog.ScopePart">
-		<item value="0" key="scope"/>
+		<item value="2" key="scope"/>
+		<list key="lastUsedWorkingSetNames">
+			<item value="ros"/>
+		</list>
 	</section>
 </section>

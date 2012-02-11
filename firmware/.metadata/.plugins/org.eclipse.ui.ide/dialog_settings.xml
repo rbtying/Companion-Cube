@@ -8,12 +8,12 @@
 		<item value="true" key="ShowStatusLine"/>
 		<item value="false" key="ShowDerived"/>
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
-		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/sensors/Gyro.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/sensors/Encoders.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/Arduino-2560/libraries/LiquidCrystal/LiquidCrystal.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/control_struct.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/motors/Sabertooth.cc&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/motors/RoboClaw.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/motors/RoboClaw.cpp&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/devices/ShiftBrite.cc&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/pins.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/Main.cc&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/sensors/Gyro.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/sensors/Encoders.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/control_struct.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/motors/Sabertooth.cc&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/motors/RoboClaw.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/pins.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/Main.cc&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/devices/ShiftBrite.cc&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/motors/RoboClaw.cpp&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/ros_lib/sensor_msgs/Imu.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/ROS_mega/src/lib/sensors/imu/IMU.h&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;" key="History"/>
 		<section name="DialogBoundsSettings">
-			<item value="452" key="DIALOG_WIDTH"/>
+			<item value="476" key="DIALOG_WIDTH"/>
 			<item value="23" key="DIALOG_Y_ORIGIN"/>
-			<item value="585" key="DIALOG_HEIGHT"/>
-			<item value="574" key="DIALOG_X_ORIGIN"/>
+			<item value="639" key="DIALOG_HEIGHT"/>
+			<item value="562" key="DIALOG_X_ORIGIN"/>
 			<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		</section>
 	</section>

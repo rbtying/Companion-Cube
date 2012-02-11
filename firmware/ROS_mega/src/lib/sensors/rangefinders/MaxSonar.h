@@ -8,7 +8,7 @@
 #ifndef MAXSONAR_H_
 #define MAXSONAR_H_
 
-#include <WProgram.h>
+#include <Arduino.h>
 #include "Rangefinder.h"
 
 class MaxSonar : Rangefinder {

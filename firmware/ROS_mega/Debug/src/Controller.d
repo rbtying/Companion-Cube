@@ -1,5 +1,5 @@
 src/Controller.d src/Controller.o: ../src/Controller.cc \
- ../src/Controller.h /home/rbtying/robot/firmware/Arduino-2560/WProgram.h \
+ ../src/Controller.h /home/rbtying/robot/firmware/Arduino-2560/Arduino.h \
  /home/rbtying/robot/firmware/Arduino-2560/wiring.h \
  /home/rbtying/robot/firmware/Arduino-2560/binary.h \
  /home/rbtying/robot/firmware/Arduino-2560/WString.h \
@@ -18,7 +18,7 @@ src/Controller.d src/Controller.o: ../src/Controller.cc \
 
 ../src/Controller.h:
 
-/home/rbtying/robot/firmware/Arduino-2560/WProgram.h:
+/home/rbtying/robot/firmware/Arduino-2560/Arduino.h:
 
 /home/rbtying/robot/firmware/Arduino-2560/wiring.h:
 

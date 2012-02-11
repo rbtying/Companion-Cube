@@ -8,7 +8,7 @@
 #ifndef POWERMONITOR_H_
 #define POWERMONITOR_H_
 
-#include <WProgram.h>
+#include <Arduino.h>
 #include "devices/CD74HC4067.h"
 
 class Battery {

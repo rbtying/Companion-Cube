@@ -10,7 +10,7 @@
 #ifndef SABERTOOTH_H_
 #define SABERTOOTH_H_
 
-#include <WProgram.h>
+#include <Arduino.h>
 #include <HardwareSerial.h>
 #include "DualMotor.h"
 

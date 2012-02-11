@@ -8,7 +8,7 @@
 #ifndef IMU_H_
 #define IMU_H_
 
-#include <libraries/Wire/Wire.h>
+#include <Wire.h>
 #include "L3G4200D.h"
 #include "LSM303.h"
 
@@ -464,7 +464,6 @@ void printdata(void) {
 	 Serial3.print(convert_to_dec(DCM_Matrix[2][2]));
 	 #endif*/
 	Serial3.println();
-
 }
 
 long convertToDec(float x) {

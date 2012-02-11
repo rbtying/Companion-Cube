@@ -12,7 +12,7 @@
  * http://www.arduino.cc/en/Reference/Servo
  */
 
-#include <WProgram.h>
+#include <Arduino.h>
 
 #include <Servo.h> 
 #include <ros.h>

@@ -6,7 +6,7 @@
  */
 
 #include "TSL1401.h"
-#include "WProgram.h"
+#include "Arduino.h"
 
 /**
  * Constructs a new TSL1401

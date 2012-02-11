@@ -35,46 +35,53 @@
 #ifndef ROS_ARDUINO_HARDWARE_H_
 #define ROS_ARDUINO_HARDWARE_H_
 
-#include "WProgram.h"
+#include <Arduino.h>
 #include <HardwareSerial.h>
 
 class ArduinoHardware {
-  public:
-    ArduinoHardware(HardwareSerial* io , long baud= 57600){
-      iostream = io;
-      baud_ = baud;
-    }
-    ArduinoHardware()
-    {
-      iostream = &Serial;
-      baud_ = 57600;
-    }
-    ArduinoHardware(ArduinoHardware& h){
-      this->iostream = iostream;
-      this->baud_ = h.baud_;
-    }
-  
-    void setBaud(long baud){
-      this->baud_= baud;
-    }
-  
-    int getBaud(){return baud_;}
+public:
+	ArduinoHardware(HardwareSerial* io, long baud = 57600) {
+		iostream = io;
+		baud_ = baud;
+	}
+	ArduinoHardware() {
+		iostream = &Serial;
+		baud_ = 57600;
+	}
+	ArduinoHardware(ArduinoHardware& h) {
+		this->iostream = iostream;
+		this->baud_ = h.baud_;
+	}
 
-    void init(){
-      iostream->begin(baud_);
-    }
+	void setBaud(long baud) {
+		this->baud_ = baud;
+	}
 
-    int read(){return iostream->read();};
-    void write(uint8_t* data, int length){
-      for(int i=0; i<length; i++)
-        iostream->write(data[i]);
-    }
+	int getBaud() {
+		return baud_;
+	}
 
-    unsigned long time(){return millis();}
+	void init() {
+		iostream->begin(baud_);
+	}
 
-  protected:
-    HardwareSerial* iostream;
-    long baud_;
+	int read() {
+		return iostream->read();
+	}
+	;
+	void write(uint8_t* data, int length) {
+		for (int i = 0; i < length; i++) {
+			iostream->write((uint8_t) data[i]);
+		}
+	}
+
+	unsigned long time() {
+		return millis();
+	}
+
+protected:
+	HardwareSerial* iostream;
+	long baud_;
 };
 
 #endif

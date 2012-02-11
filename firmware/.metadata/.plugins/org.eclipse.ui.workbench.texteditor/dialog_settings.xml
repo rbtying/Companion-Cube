@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="326" key="DIALOG_WIDTH"/>
+		<item value="350" key="DIALOG_WIDTH"/>
 		<item value="167" key="DIALOG_Y_ORIGIN"/>
-		<item value="435" key="DIALOG_HEIGHT"/>
+		<item value="489" key="DIALOG_HEIGHT"/>
 		<item value="720" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
@@ -13,26 +13,26 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="odom" key="selection"/>
+		<item value="Read" key="selection"/>
 		<list key="findhistory">
-			<item value="odom"/>
-			<item value="300"/>
-			<item value="setLED"/>
-			<item value="SPI.transfer"/>
-			<item value="led"/>
-			<item value="rover::"/>
-			<item value="imu"/>
-			<item value="base_footprint"/>
+			<item value="Read"/>
+			<item value="delay"/>
+			<item value="m_hws-&gt;write("/>
+			<item value="m_hws-&gt;write"/>
+			<item value="Write"/>
+			<item value="write"/>
+			<item value="500"/>
+			<item value="m_hws-&gt;flush();"/>
 		</list>
 		<list key="replacehistory">
-			<item value="sendByte"/>
-			<item value="rover_msgs::"/>
-			<item value="base_link"/>
-			<item value="IMUAHRS::initAccel"/>
-			<item value="IMUAHRS::initI2C"/>
-			<item value="IMUAHRS::initIMU"/>
-			<item value="Serial3"/>
-			<item value="m_an"/>
+			<item value="m_hws-&gt;write((uint8_t)"/>
+			<item value="m_hws-&gt;write("/>
+			<item value="50"/>
+			<item value=""/>
+			<item value="&lt;"/>
+			<item value=".h&gt;"/>
+			<item value="&lt;r"/>
+			<item value="Wire.read"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">

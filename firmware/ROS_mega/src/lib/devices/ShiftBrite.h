@@ -1,7 +1,7 @@
 #ifndef ShiftBrite_h
 #define ShiftBrite_h
 
-#include "WProgram.h"
+#include "Arduino.h"
 
 class ShiftBrite {
 private:

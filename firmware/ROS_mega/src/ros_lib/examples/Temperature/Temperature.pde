@@ -9,7 +9,7 @@
  * http://wiring.org.co/learning/libraries/tmp102sparkfun.html
  */
 
-#include <WProgram.h>
+#include <Arduino.h>
 #include <Wire.h>
 #include <ros.h>
 #include <std_msgs/Float32.h>

@@ -24,7 +24,7 @@
  *
  */
 
-#include "WProgram.h"
+#include "Arduino.h"
 #include "wiring.h"
 #include <Wire.h>
 

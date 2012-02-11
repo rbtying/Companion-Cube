@@ -8,7 +8,6 @@
  */
 
 #include "Sabertooth.h"
-#include "WConstants.h"
 #include "pins_arduino.h"
 
 // 19200 baud

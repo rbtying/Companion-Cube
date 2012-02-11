@@ -1,5 +1,5 @@
 #include "LSM303.h"
-#include <libraries/Wire/Wire.h>
+#include <Wire.h>
 #include <math.h>
 
 // Defines ////////////////////////////////////////////////////////////////
@@ -80,8 +80,8 @@ void LSM303::enableDefault(void) {
 // Writes an accelerometer register
 void LSM303::writeAccReg(byte reg, byte value) {
 	Wire.beginTransmission(acc_address);
-	Wire.send(reg);
-	Wire.send(value);
+	Wire.write(reg);
+	Wire.write(value);
 	Wire.endTransmission();
 }
 
@@ -90,10 +90,10 @@ byte LSM303::readAccReg(byte reg) {
 	byte value;
 
 	Wire.beginTransmission(acc_address);
-	Wire.send(reg);
+	Wire.write(reg);
 	Wire.endTransmission();
 	Wire.requestFrom(acc_address, (byte) 1);
-	value = Wire.receive();
+	value = Wire.read();
 	Wire.endTransmission();
 
 	return value;
@@ -102,8 +102,8 @@ byte LSM303::readAccReg(byte reg) {
 // Writes a magnetometer register
 void LSM303::writeMagReg(byte reg, byte value) {
 	Wire.beginTransmission(MAG_ADDRESS);
-	Wire.send(reg);
-	Wire.send(value);
+	Wire.write(reg);
+	Wire.write(value);
 	Wire.endTransmission();
 }
 
@@ -134,10 +134,10 @@ byte LSM303::readMagReg(int reg) {
 	}
 
 	Wire.beginTransmission(MAG_ADDRESS);
-	Wire.send(reg);
+	Wire.write(reg);
 	Wire.endTransmission();
 	Wire.requestFrom(MAG_ADDRESS, 1);
-	value = Wire.receive();
+	value = Wire.read();
 	Wire.endTransmission();
 
 	return value;
@@ -148,19 +148,19 @@ void LSM303::readAcc(void) {
 	Wire.beginTransmission(acc_address);
 	// assert the MSB of the address to get the accelerometer 
 	// to do slave-transmit subaddress updating.
-	Wire.send(LSM303_OUT_X_L_A | (1 << 7));
+	Wire.write(LSM303_OUT_X_L_A | (1 << 7));
 	Wire.endTransmission();
 	Wire.requestFrom(acc_address, (byte) 6);
 
 	while (Wire.available() < 6)
 		;
 
-	byte xla = Wire.receive();
-	byte xha = Wire.receive();
-	byte yla = Wire.receive();
-	byte yha = Wire.receive();
-	byte zla = Wire.receive();
-	byte zha = Wire.receive();
+	byte xla = Wire.read();
+	byte xha = Wire.read();
+	byte yla = Wire.read();
+	byte yha = Wire.read();
+	byte zla = Wire.read();
+	byte zha = Wire.read();
 
 	a.x = (xha << 8 | xla) >> 4;
 	a.y = (yha << 8 | yla) >> 4;
@@ -170,30 +170,30 @@ void LSM303::readAcc(void) {
 // Reads the 3 magnetometer channels and stores them in vector m
 void LSM303::readMag(void) {
 	Wire.beginTransmission(MAG_ADDRESS);
-	Wire.send(LSM303_OUT_X_H_M);
+	Wire.write(LSM303_OUT_X_H_M);
 	Wire.endTransmission();
 	Wire.requestFrom(MAG_ADDRESS, 6);
 
 	while (Wire.available() < 6)
 		;
 
-	byte xhm = Wire.receive();
-	byte xlm = Wire.receive();
+	byte xhm = Wire.read();
+	byte xlm = Wire.read();
 
 	byte yhm, ylm, zhm, zlm;
 
 	if (_device == LSM303DLH_DEVICE) {
 		// DLH: register address for Y comes before Z
-		yhm = Wire.receive();
-		ylm = Wire.receive();
-		zhm = Wire.receive();
-		zlm = Wire.receive();
+		yhm = Wire.read();
+		ylm = Wire.read();
+		zhm = Wire.read();
+		zlm = Wire.read();
 	} else {
 		// DLM, DLHC: register address for Z comes before Y
-		zhm = Wire.receive();
-		zlm = Wire.receive();
-		yhm = Wire.receive();
-		ylm = Wire.receive();
+		zhm = Wire.read();
+		zlm = Wire.read();
+		yhm = Wire.read();
+		ylm = Wire.read();
 
 	}
 
@@ -272,11 +272,11 @@ void LSM303::vector_normalize(vector *a) {
 
 byte LSM303::detectSA0_A(void) {
 	Wire.beginTransmission(ACC_ADDRESS_SA0_A_LOW);
-	Wire.send(LSM303_CTRL_REG1_A);
+	Wire.write(LSM303_CTRL_REG1_A);
 	Wire.endTransmission();
 	Wire.requestFrom(ACC_ADDRESS_SA0_A_LOW, 1);
 	if (Wire.available()) {
-		Wire.receive();
+		Wire.read();
 		return LSM303_SA0_A_LOW;
 	} else
 		return LSM303_SA0_A_HIGH;

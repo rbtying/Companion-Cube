@@ -4,32 +4,32 @@
  *  Created on: September 4th, 2011
  *      Author: rbtying
  */
-#include <WProgram.h>
-#include "ros.h"
-#include "rover_msgs/Enabled.h"
-#include "rover_msgs/Motors.h"
-#include "rover_msgs/Battery.h"
-#include "rover_msgs/Encoder.h"
-#include "rover_msgs/Settings.h"
-#include "rover_msgs/CondensedIMU.h"
-#include "std_msgs/UInt8MultiArray.h"
+#include <Arduino.h>
+#include <Servo.h>
+
 #include "pins.h"
 #include "control_struct.h"
-#include "sensors/Gyro.h"
-#include "sensors/Battery.h"
-#include "utilities/fastIO.h"
-#include "utilities/PID.h"
-#include "motors/RoboClaw.h"
-#include "devices/CD74HC4067.h"
-#include "devices/StrongDriveOutput.h"
-#include "devices/ShiftBrite.h"
-#include "libraries/Servo/Servo.h"
-#include "sensors/imu/IMU.h"
+
+#include <ros.h>
+#include <rover_msgs/Enabled.h>
+#include <rover_msgs/Motors.h>
+#include <rover_msgs/Battery.h>
+#include <rover_msgs/Encoder.h>
+#include <rover_msgs/Settings.h>
+#include <rover_msgs/CondensedIMU.h>
+#include <std_msgs/UInt8MultiArray.h>
+
+#include <sensors/Gyro.h>
+#include <sensors/Battery.h>
+#include <sensors/imu/IMU.h>
+#include <motors/RoboClaw.h>
+#include <devices/StrongDriveOutput.h>
+#include <devices/ShiftBrite.h>
 
 // Control
 #define TIME_INTERVAL 100 // 10 Hz
 #define COMM_INTERVAL 40 // 25 Hz
-#define LED_INTERVAL 100 // 10 Hz
+#define LED_INTERVAL 10 // 100 Hz
 unsigned long nexTime = 0, cTime = 0, ledTime = 0;
 
 // control data
@@ -67,20 +67,11 @@ uint32_t seq = 0;
 uint32_t nextCommTime;
 bool publishSettingsDump = false;
 
-void drivecb(const rover_msgs::Motors& msg) {
-	int32_t l = (int32_t)(msg.left / ctrl.left.qp_to_m);
-	int32_t r = (int32_t)(msg.right / ctrl.right.qp_to_m);
-	if (l == 0) {
-		m.SpeedM1(RB_ADDRESS, 1);
-	} else {
-		m.SpeedM1(RB_ADDRESS, l);
-	}
+int32_t leftMotorSetting, rightMotorSetting;
 
-	if (r == 0) {
-		m.SpeedM2(RB_ADDRESS, 1);
-	} else {
-		m.SpeedM2(RB_ADDRESS, r);
-	}
+void drivecb(const rover_msgs::Motors& msg) {
+	leftMotorSetting = (int32_t)(msg.left / ctrl.left.qp_to_m);
+	rightMotorSetting = (int32_t)(msg.right / ctrl.right.qp_to_m);
 }
 ros::Subscriber<rover_msgs::Motors> drivesub("drive", &drivecb);
 
@@ -96,6 +87,20 @@ void servocb(const std_msgs::UInt8MultiArray& msg) {
 	}
 }
 ros::Subscriber<std_msgs::UInt8MultiArray> servosub("servos", &servocb);
+
+void setMotor() {
+	if (leftMotorSetting == 0) {
+		m.SpeedM1(RB_ADDRESS, 1);
+	} else {
+		m.SpeedM1(RB_ADDRESS, leftMotorSetting);
+	}
+
+	if (rightMotorSetting == 0) {
+		m.SpeedM2(RB_ADDRESS, 1);
+	} else {
+		m.SpeedM2(RB_ADDRESS, rightMotorSetting);
+	}
+}
 
 void publish() {
 	seq++;
@@ -259,9 +264,9 @@ int main() {
 	for (uint32_t loops = 0;; loops++) {
 		cTime = millis();
 
-		if (IMU::updateIMU()) {
-			//			IMU::printdata();
-		}
+		//		if (IMU::updateIMU()) {
+		//			IMU::printdata();
+		//		}
 
 		if (ctrl.enabled) {
 			if (!motorRelay.get()) {
@@ -287,10 +292,9 @@ int main() {
 			ctrl.left.vel = m.ReadISpeedM1(RB_ADDRESS, &status, &valid);
 			ctrl.right.vel = m.ReadISpeedM2(RB_ADDRESS, &status, &valid);
 
-			ctrl.LED.left.b = (ctrl.left.vel * 0.5 / RB_MAX_QPPS) + 0.5;
-			ctrl.LED.left.r = 1.0 - ctrl.LED.left.b;
-			ctrl.LED.right.b = (ctrl.right.vel * 0.5 / RB_MAX_QPPS) + 0.5;
-			ctrl.LED.right.r = 1.0 - ctrl.LED.right.b;
+			if (ctrl.enabled) {
+				setMotor();
+			}
 
 			nexTime = nexTime + TIME_INTERVAL;
 		}
@@ -302,17 +306,31 @@ int main() {
 		}
 
 		if (nextLEDTime < cTime) {
-			static int sign = 1;
-			if (ctrl.LED.back.r > 0.95) {
-				sign = -1;
+			if (ctrl.enabled) {
+				ctrl.LED.front.r = 1.0;
+				ctrl.LED.front.g = 1.0;
+				ctrl.LED.front.b = 1.0;
+				ctrl.LED.left.r = 1.0;
+				ctrl.LED.left.g = 1.0;
+				ctrl.LED.left.b = 1.0;
+				ctrl.LED.right.r = 1.0;
+				ctrl.LED.right.g = 1.0;
+				ctrl.LED.right.b = 1.0;
+				ctrl.LED.back.r = 1.0;
+				ctrl.LED.back.g = 1.0;
+				ctrl.LED.back.b = 1.0;
+			} else {
+				static int sign = 1;
+				if (ctrl.LED.back.r > 0.95) {
+					sign = -1;
+				}
+				if (ctrl.LED.back.r < 0.05) {
+					sign = +1;
+				}
+				ctrl.LED.back.r += sign * 0.05;
 			}
-			if (ctrl.LED.back.r < 0.05) {
-				sign = +1;
-			}
-			ctrl.LED.back.r += sign * 0.05;
-
-			nextLEDTime = nextLEDTime + LED_INTERVAL;
 			setLEDs();
+			nextLEDTime = nextLEDTime + LED_INTERVAL;
 		}
 
 		if (!nh.connected()) {
@@ -320,6 +338,9 @@ int main() {
 			m.DutyM1M2(RB_ADDRESS, 0, 0);
 		}
 
+		// run serial event loop
 		nh.spinOnce();
+		if (serialEventRun)
+			serialEventRun();
 	}
 }
