@@ -146,6 +146,7 @@ public:
 			uint16_t duty2, uint16_t accel2);
 	uint8_t ReadError(uint8_t address, bool *valid = NULL);
 	void WriteNVM(uint8_t address);
+	HardwareSerial * getSerial();
 
 private:
 	uint8_t ReadByte(uint32_t timeout);

@@ -57,6 +57,6 @@ void ShiftBrite::sendPacket(int mode, int r, int g, int b) {
 
 void ShiftBrite::latch() {
 	digitalWrite(m_latch, HIGH); // latch data into registers
-	delayMicroseconds(1); // adjustment may be necessary depending on chain length
+	delayMicroseconds(10); // adjustment may be necessary depending on chain length
 	digitalWrite(m_latch, LOW);
 }

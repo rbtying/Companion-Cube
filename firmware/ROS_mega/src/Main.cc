@@ -100,6 +100,7 @@ void setMotor() {
 	} else {
 		m.SpeedM2(RB_ADDRESS, rightMotorSetting);
 	}
+	m.getSerial()->flush();
 }
 
 void publish() {
@@ -152,43 +153,22 @@ void publish() {
 }
 
 void setLEDs() {
-	int r, g, b;
+	sb.setPower(127);
+	sb.setPower(127);
+	sb.setPower(127);
+	sb.setPower(127);
+#define rgb(x) (1023 * x.r), (1023 * x.g), (1023 * x.b)
+	sb.setColor(rgb(ctrl.LED.left));
+	sb.setColor(rgb(ctrl.LED.front));
+	sb.setColor(rgb(ctrl.LED.right));
+	sb.setColor(rgb(ctrl.LED.back));
+#undef rgb
+}
 
-	r = 1023 * ctrl.LED.front.r;
-	g = 1023 * ctrl.LED.front.g;
-	b = 1023 * ctrl.LED.front.b;
-	if (ctrl.enabled) {
-		sb.setColor(r, g, b);
-	} else {
-		sb.setColor(200 * ctrl.LED.back.r, 0, 0);
-	}
-
-	r = 1023 * ctrl.LED.left.r;
-	g = 1023 * ctrl.LED.left.g;
-	b = 1023 * ctrl.LED.left.b;
-	if (ctrl.enabled) {
-		sb.setColor(r, g, b);
-	} else {
-		sb.setColor(200 * ctrl.LED.back.r, 0, 0);
-	}
-
-	r = 1023 * ctrl.LED.back.r;
-	g = 1023 * ctrl.LED.back.g;
-	b = 1023 * ctrl.LED.back.b;
-	if (ctrl.enabled) {
-		sb.setColor(r, g, b);
-	} else {
-		sb.setColor(200 * ctrl.LED.back.r, 0, 0);
-	}
-
-	r = 1023 * ctrl.LED.right.r;
-	g = 1023 * ctrl.LED.right.g;
-	b = 1023 * ctrl.LED.right.b;
-	if (ctrl.enabled) {
-		sb.setColor(r, g, b);
-	} else {
-		sb.setColor(200 * ctrl.LED.back.r, 0, 0);
-	}
+void setRGB(LED * s, double r, double g, double b) {
+	s->r = r;
+	s->g = g;
+	s->b = b;
 }
 
 /**
@@ -230,24 +210,14 @@ int main() {
 
 	// Motors
 	ctrl.enabled = false;
+	leftMotorSetting = 0;
+	rightMotorSetting = 0;
 
-	ctrl.LED.left.r = 0.0;
-	ctrl.LED.left.g = 0.0;
-	ctrl.LED.left.b = 0.0;
-	ctrl.LED.right.r = 0.0;
-	ctrl.LED.right.g = 0.0;
-	ctrl.LED.right.b = 0.0;
-	ctrl.LED.front.r = 1.0;
-	ctrl.LED.front.g = 1.0;
-	ctrl.LED.front.b = 1.0;
-	ctrl.LED.back.r = 0.0;
-	ctrl.LED.back.g = 0.0;
-	ctrl.LED.back.b = 0.0;
+	setRGB(&ctrl.LED.left, 0.3, 0.0, 0.0);
+	setRGB(&ctrl.LED.right, 0.3, 0.0, 0.0);
+	setRGB(&ctrl.LED.front, 0.3, 0.0, 0.0);
+	setRGB(&ctrl.LED.back, 0.3, 0.0, 0.0);
 
-	sb.setPower(127);
-	sb.setPower(127);
-	sb.setPower(127);
-	sb.setPower(127);
 	setLEDs();
 	ledTime = 0;
 
@@ -281,6 +251,8 @@ int main() {
 		} else {
 			motorRelay.off();
 			m.DutyM1M2(RB_ADDRESS, 0, 0);
+			leftMotorSetting = 0;
+			rightMotorSetting = 0;
 		}
 
 		if (nexTime <= cTime) {
@@ -294,6 +266,8 @@ int main() {
 
 			if (ctrl.enabled) {
 				setMotor();
+			} else {
+				m.DutyM1M2(RB_ADDRESS, 0, 0);
 			}
 
 			nexTime = nexTime + TIME_INTERVAL;
@@ -305,32 +279,29 @@ int main() {
 			nextCommTime = nextCommTime + COMM_INTERVAL;
 		}
 
-		if (nextLEDTime < cTime) {
-			if (ctrl.enabled) {
-				ctrl.LED.front.r = 1.0;
-				ctrl.LED.front.g = 1.0;
-				ctrl.LED.front.b = 1.0;
-				ctrl.LED.left.r = 1.0;
-				ctrl.LED.left.g = 1.0;
-				ctrl.LED.left.b = 1.0;
-				ctrl.LED.right.r = 1.0;
-				ctrl.LED.right.g = 1.0;
-				ctrl.LED.right.b = 1.0;
-				ctrl.LED.back.r = 1.0;
-				ctrl.LED.back.g = 1.0;
-				ctrl.LED.back.b = 1.0;
+		if (ledTime <= cTime) {
+			static double fade = 0.0;
+			static bool inc;
+			if (fade >= 0.3) {
+				inc = false;
+			} else if (fade <= 0.0) {
+				inc = true;
+			}
+			fade += ((inc) ? (1) : (-1)) * 0.01;
+			if (!ctrl.enabled) {
+				setRGB(&ctrl.LED.left, fade, 0.0, 0.0);
+				setRGB(&ctrl.LED.right, fade, 0.0, 0.0);
+				setRGB(&ctrl.LED.front, fade, 0.0, 0.0);
+				setRGB(&ctrl.LED.back, fade, 0.0, 0.0);
 			} else {
-				static int sign = 1;
-				if (ctrl.LED.back.r > 0.95) {
-					sign = -1;
-				}
-				if (ctrl.LED.back.r < 0.05) {
-					sign = +1;
-				}
-				ctrl.LED.back.r += sign * 0.05;
+				setRGB(&ctrl.LED.left, 1.0, 0.0, 1.0);
+				setRGB(&ctrl.LED.right, 1.0, 0.0, 1.0);
+				setRGB(&ctrl.LED.front, 1.0, 1.0, 1.0);
+				setRGB(&ctrl.LED.back, 1.0, 0.0, 0.0);
+
 			}
 			setLEDs();
-			nextLEDTime = nextLEDTime + LED_INTERVAL;
+			ledTime = ledTime + LED_INTERVAL;
 		}
 
 		if (!nh.connected()) {

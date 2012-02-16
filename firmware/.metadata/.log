@@ -126,3 +126,18 @@ org.eclipse.cdt.core.dom.ast.DOMException
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
 	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SESSION 2012-02-15 13:54:39.835 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-02-15 13:55:50.129
+!MESSAGE Indexed 'Arduino1.0' (40 sources, 105 headers) in 19.71 sec: 6,003 declarations; 16,806 references; 9 unresolved inclusions; 1 syntax errors; 31 unresolved names (0.14%)
+
+!ENTRY org.eclipse.osgi 2 1 2012-02-15 14:04:57.747
+!MESSAGE NLS unused message: RenameCSourceFolderChange_ErrorMsg in: org.eclipse.cdt.internal.ui.refactoring.rename.Messages
+
+!ENTRY org.eclipse.osgi 2 1 2012-02-15 14:04:57.760
+!MESSAGE NLS missing message: RenameCSourceFolderChange_ErroMsg in: org.eclipse.cdt.internal.ui.refactoring.rename.Messages

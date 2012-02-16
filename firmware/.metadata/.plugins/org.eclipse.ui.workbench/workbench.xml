@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="26" version="2.0">
+<workbench progressCount="25" version="2.0">
 <workbenchAdvisor/>
 <window height="741" maximized="true" width="1038" x="336" y="26">
 <fastViewData fastViewLocation="1024"/>
@@ -8,16 +8,16 @@
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="166" y="38"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="154" y="34"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="de.innot.avreclipse.actionset.avrdude" itemType="typeToolBarContribution" x="48" y="38"/>
-<coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="82" y="38"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="38"/>
+<coolItem id="de.innot.avreclipse.actionset.avrdude" itemType="typeToolBarContribution" x="44" y="34"/>
+<coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="76" y="34"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="146" y="34"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="110" y="32"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="38"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="96" y="38"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="70" y="34"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="88" y="34"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="38"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="172" y="34"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -31,13 +31,38 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" partName="Main.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/Main.cc" title="Main.cc" tooltip="ROS_mega/src/Main.cc" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/Main.cc"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4145" selectionTopPixel="2431"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4079" selectionTopPixel="2533"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ShiftBrite.h" partName="ShiftBrite.h" path="/home/rbtying/robot/firmware/ROS_mega/src/lib/devices/ShiftBrite.h" title="ShiftBrite.h" tooltip="ROS_mega/src/lib/devices/ShiftBrite.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/lib/devices/ShiftBrite.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="71" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ShiftBrite.cc" partName="ShiftBrite.cc" path="/home/rbtying/robot/firmware/ROS_mega/src/lib/devices/ShiftBrite.cc" title="ShiftBrite.cc" tooltip="ROS_mega/src/lib/devices/ShiftBrite.cc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/lib/devices/ShiftBrite.cc"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1680" selectionTopPixel="679"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RoboClaw.cpp" partName="RoboClaw.cpp" path="/home/rbtying/robot/firmware/ROS_mega/src/lib/motors/RoboClaw.cpp" title="RoboClaw.cpp" tooltip="ROS_mega/src/lib/motors/RoboClaw.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/lib/motors/RoboClaw.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="242" selectionTopPixel="7"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RoboClaw.h" partName="RoboClaw.h" path="/home/rbtying/robot/firmware/ROS_mega/src/lib/motors/RoboClaw.h" title="RoboClaw.h" tooltip="ROS_mega/src/lib/motors/RoboClaw.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ROS_mega/src/lib/motors/RoboClaw.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5449" selectionTopPixel="2166"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Arduino.h" partName="Arduino.h" path="/home/rbtying/robot/firmware/Arduino1.0/Arduino.h" title="Arduino.h" tooltip="Arduino1.0/Arduino.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Arduino1.0/Arduino.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="1602" selectionTopPixel="1054"/>
 </editor>
 </editors>
 <views>
@@ -65,8 +90,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (3 items)"/>
-<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (4 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="509" org.eclipse.ui.ide.markerType="966" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="865"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -213,7 +237,7 @@
 </mainWindow>
 </layout>
 </perspective>
-<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor descriptor="org.eclipse.cdt.ui.CPerspective" id="&lt;C/C++&gt;" label="&lt;C/C++&gt;"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -258,14 +282,27 @@
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
-<view id="org.eclipse.ui.views.ProblemView"/>
-<view id="org.eclipse.ui.views.TaskList"/>
-<view id="org.eclipse.ui.views.PropertySheet"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.ui.views.ProgressView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<fastViewBars/>
+<fastViewBars>
+<fastViewBar fastViewLocation="16384" id="org.eclipse.ui.internal.ViewStack@892399" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="1">
+<fastViews>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="topRight" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="1">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
+<fastViews>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
+<view id="org.eclipse.ui.views.PropertySheet" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.ProgressView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="topLeft">
@@ -285,38 +322,28 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@892399" ratio="0.15185444" ratioLeft="217" ratioRight="1212" relationship="2" relative="topLeft">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="bottom" ratio="0.8004484" ratioLeft="714" ratioRight="178" relationship="4" relative="org.eclipse.ui.internal.ViewStack@892399">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
-<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.ui.includeBrowser" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="topRight" ratio="0.8684395" ratioLeft="1241" ratioRight="188" relationship="2" relative="org.eclipse.ui.internal.ViewStack@892399">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.make.ui.views.MakeView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.2536349" ratioLeft="314" ratioRight="924" relationship="2" relative="org.eclipse.ui.internal.ViewStack@892399"/>
@@ -409,131 +436,22 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/Main.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/motors/RoboClaw.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/motors/RoboClaw.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/ros_lib/ros.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/ros_lib/ArduinoHardware.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/ros_lib/sensor_msgs/Imu.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/sensors/imu/IMU.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/ROS_mega/Debug/b328.map"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/sensors/TSL1401.cc"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/pins.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/devices/ShiftBrite.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/devices/ShiftBrite.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/devices/ShiftBrite.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/motors/Sabertooth.cc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/motors/RoboClaw.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ROS_mega/src/lib/motors/RoboClaw.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Arduino1.0/Arduino.h"/>
 </editors>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="8049" y="0"/>
-</item>
-<item historyLabel="RoboClaw.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="8049" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="7987" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="984" y="0"/>
-</item>
-<item historyLabel="ros.h" index="3">
-<position info="not_deleted" x="1968" y="0"/>
-</item>
-<item historyLabel="ArduinoHardware.h" index="4">
-<position/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="984" y="0"/>
-</item>
-<item historyLabel="RoboClaw.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="RoboClaw.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="RoboClaw.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="906" y="6"/>
-</item>
-<item historyLabel="Imu.h" index="5">
-<position info="not_deleted" x="948" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="991" y="0"/>
-</item>
-<item historyLabel="IMU.h" index="6">
-<position info="not_deleted" x="13935" y="0"/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="7868" y="0"/>
-</item>
-<item historyLabel="b328.map" index="7">
-<position info="not_deleted" x="76161" y="7"/>
-</item>
-<item historyLabel="ArduinoHardware.h" index="4">
-<position/>
-</item>
-<item historyLabel="IMU.h" index="6">
-<position info="not_deleted" x="13918" y="0"/>
-</item>
-<item historyLabel="ArduinoHardware.h" index="4">
-<position/>
-</item>
-<item historyLabel="TSL1401.cc" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ArduinoHardware.h" index="4">
-<position/>
-</item>
-<item historyLabel="RoboClaw.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="6824" y="0"/>
-</item>
-<item historyLabel="RoboClaw.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="2136" y="0"/>
-</item>
-<item historyLabel="RoboClaw.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="RoboClaw.h" index="2">
-<position info="not_deleted" x="5524" y="0"/>
-</item>
-<item historyLabel="RoboClaw.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="RoboClaw.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="2136" y="0"/>
-</item>
-<item historyLabel="ArduinoHardware.h" index="4">
-<position/>
-</item>
-<item historyLabel="Main.cc" index="0">
-<position info="not_deleted" x="2136" y="0"/>
-</item>
-<item historyLabel="RoboClaw.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="pins.h" index="9">
-<position info="not_deleted" x="464" y="0"/>
-</item>
-<item historyLabel="RoboClaw.cpp" index="1">
-<position info="not_deleted" x="471" y="9"/>
-</item>
 <item historyLabel="RoboClaw.cpp" index="1">
 <position info="not_deleted" x="581" y="0"/>
 </item>
 <item historyLabel="RoboClaw.cpp" index="1">
 <position info="not_deleted" x="2220" y="9"/>
 </item>
-<item historyLabel="pins.h" index="9">
+<item historyLabel="pins.h" index="2">
 <position info="not_deleted" x="464" y="0"/>
 </item>
 <item historyLabel="Main.cc" index="0">
@@ -563,11 +481,119 @@
 <item historyLabel="Main.cc" index="0">
 <position info="not_deleted" x="4145" y="0"/>
 </item>
-<item historyLabel="ShiftBrite.cc" index="10">
+<item historyLabel="ShiftBrite.cc" index="3">
 <position info="not_deleted" x="202" y="0"/>
 </item>
-<item active="true" historyLabel="Main.cc" index="0">
+<item historyLabel="Main.cc" index="0">
 <position info="not_deleted" x="4145" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="824" y="0"/>
+</item>
+<item historyLabel="ShiftBrite.h" index="4">
+<position info="not_deleted" x="71" y="10"/>
+</item>
+<item historyLabel="ShiftBrite.cc" index="5">
+<position info="not_deleted" x="1680" y="0"/>
+</item>
+<item historyLabel="ShiftBrite.h" index="4">
+<position info="not_deleted" x="71" y="10"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="824" y="0"/>
+</item>
+<item historyLabel="ShiftBrite.cc" index="5">
+<position info="not_deleted" x="1680" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="824" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="6307" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="2480" y="0"/>
+</item>
+<item historyLabel="Sabertooth.cc" index="6">
+<position info="not_deleted" x="197" y="14"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="2480" y="0"/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="7">
+<position info="not_deleted" x="705" y="0"/>
+</item>
+<item historyLabel="RoboClaw.h" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="RoboClaw.h" index="8">
+<position info="not_deleted" x="5449" y="0"/>
+</item>
+<item historyLabel="RoboClaw.cpp" index="7">
+<position info="not_deleted" x="242" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position/>
+</item>
+<item historyLabel="Arduino.h" index="9">
+<position info="not_deleted" x="1602" y="12"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="4069" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="7002" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="4166" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="4166" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="4137" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="4151" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="4368" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="5307" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="7073" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="7119" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="7160" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="7173" y="0"/>
+</item>
+<item historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="7204" y="0"/>
+</item>
+<item active="true" historyLabel="Main.cc" index="0">
+<position info="not_deleted" x="6793" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -575,6 +601,12 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@892399"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="topRight"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -582,15 +614,28 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ShiftBrite.cc" tooltip="ROS_mega/src/lib/devices/ShiftBrite.cc">
-<persistable path="/ROS_mega/src/lib/devices/ShiftBrite.cc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Arduino.h" tooltip="Arduino1.0/Arduino.h">
+<persistable path="/Arduino1.0/Arduino.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RoboClaw.h" tooltip="ROS_mega/src/lib/motors/RoboClaw.h">
+<persistable path="/ROS_mega/src/lib/motors/RoboClaw.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RoboClaw.cpp" tooltip="ROS_mega/src/lib/motors/RoboClaw.cpp">
 <persistable path="/ROS_mega/src/lib/motors/RoboClaw.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Sabertooth.cc" tooltip="ROS_mega/src/lib/motors/Sabertooth.cc">
+<persistable path="/ROS_mega/src/lib/motors/Sabertooth.cc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ShiftBrite.cc" tooltip="ROS_mega/src/lib/devices/ShiftBrite.cc">
+<persistable path="/ROS_mega/src/lib/devices/ShiftBrite.cc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ShiftBrite.h" tooltip="ROS_mega/src/lib/devices/ShiftBrite.h">
+<persistable path="/ROS_mega/src/lib/devices/ShiftBrite.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.cc" tooltip="ROS_mega/src/Main.cc">
 <persistable path="/ROS_mega/src/Main.cc"/>
@@ -613,23 +658,11 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ros.h" tooltip="ROS_mega/src/ros_lib/ros.h">
 <persistable path="/ROS_mega/src/ros_lib/ros.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RoboClaw.h" tooltip="ROS_mega/src/lib/motors/RoboClaw.h">
-<persistable path="/ROS_mega/src/lib/motors/RoboClaw.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="CD74HC4067.cc" tooltip="ROS_mega/src/lib/devices/CD74HC4067.cc">
 <persistable path="/ROS_mega/src/lib/devices/CD74HC4067.cc"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fastIO.h" tooltip="ROS_mega/src/lib/utilities/fastIO.h">
 <persistable path="/ROS_mega/src/lib/utilities/fastIO.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HardwareSerial.cpp" tooltip="Arduino1.0/HardwareSerial.cpp">
-<persistable path="/Arduino1.0/HardwareSerial.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="IPAddress.h" tooltip="Arduino1.0/IPAddress.h">
-<persistable path="/Arduino1.0/IPAddress.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="EthernetUdp.cpp" tooltip="Arduino1.0/Ethernet/EthernetUdp.cpp">
-<persistable path="/Arduino1.0/Ethernet/EthernetUdp.cpp"/>
 </file>
 </mruList>
 </workbench>

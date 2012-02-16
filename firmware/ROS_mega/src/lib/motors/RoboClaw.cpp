@@ -14,6 +14,10 @@ RoboClaw::RoboClaw(HardwareSerial * hws, uint32_t baud) {
 RoboClaw::~RoboClaw() {
 }
 
+HardwareSerial * RoboClaw::getSerial() {
+	return m_hws;
+}
+
 void RoboClaw::write_n(uint8_t cnt, ...) {
 	uint8_t crc = 0;
 
