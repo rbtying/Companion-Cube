@@ -280,8 +280,6 @@ Discarded input sections
                 0x0000000000000000       0x52 ./src/lib/sensors/imu/LSM303.o
  .text._ZN6LSM30313enableDefaultEv
                 0x0000000000000000       0x1e ./src/lib/sensors/imu/LSM303.o
- .text._ZN6LSM3037readMagEv
-                0x0000000000000000      0x12c ./src/lib/sensors/imu/LSM303.o
  .text._ZN6LSM3034readEv
                 0x0000000000000000       0x16 ./src/lib/sensors/imu/LSM303.o
  .text._ZN6LSM30312vector_crossEPKNS_6vectorES2_PS0_
@@ -497,74 +495,16 @@ Discarded input sections
                 0x0000000000000000       0x10 ./src/lib/devices/StrongDriveOutput.o
  .text          0x0000000000000000        0x0 ./src/Main.o
  .bss           0x0000000000000000        0x0 ./src/Main.o
- .text._ZN3IMU15Compass_HeadingEv
-                0x0000000000000000      0x348 ./src/Main.o
- .text._ZN3IMU12Euler_anglesEv
-                0x0000000000000000       0x90 ./src/Main.o
- .text._ZN3IMU11readCompassEv
-                0x0000000000000000       0xa6 ./src/Main.o
  .text._ZN3IMU9printdataEv
                 0x0000000000000000       0xc2 ./src/Main.o
  .text._ZN3IMU12convertToDecEf
                 0x0000000000000000       0x12 ./src/Main.o
- .text._ZN3IMU16vectorDotProductEPfS0_
-                0x0000000000000000       0x86 ./src/Main.o
- .text._ZN3IMU18vectorCrossProductEPfS0_S0_
-                0x0000000000000000      0x102 ./src/Main.o
- .text._ZN3IMU11vectorScaleEPfS0_f
-                0x0000000000000000       0x74 ./src/Main.o
- .text._ZN3IMU9vectorAddEPfS0_S0_
-                0x0000000000000000       0x62 ./src/Main.o
- .text._ZN3IMU16Drift_correctionEv
-                0x0000000000000000      0x324 ./src/Main.o
- .text._ZN3IMU9NormalizeEv
-                0x0000000000000000      0x172 ./src/Main.o
- .text._ZN3IMU14matrixMultiplyEPA3_fS1_S1_
-                0x0000000000000000      0x134 ./src/Main.o
- .text._ZN3IMU13Matrix_updateEv
-                0x0000000000000000      0x366 ./src/Main.o
- .text._ZN3IMU9updateIMUEv
-                0x0000000000000000      0x112 ./src/Main.o
  .text._Z6setRGBP3LEDddd
                 0x0000000000000000       0x34 ./src/Main.o
- .data._ZN3IMU4G_DtE
-                0x0000000000000000        0x4 ./src/Main.o
- .bss._ZN3IMU9timer_oldE
-                0x0000000000000000        0x4 ./src/Main.o
  .bss._ZN3IMU7timer24E
                 0x0000000000000000        0x4 ./src/Main.o
- .bss._ZN3IMU10magnetom_xE
-                0x0000000000000000        0x2 ./src/Main.o
- .bss._ZN3IMU10magnetom_yE
-                0x0000000000000000        0x2 ./src/Main.o
- .bss._ZN3IMU10magnetom_zE
-                0x0000000000000000        0x2 ./src/Main.o
- .bss._ZN3IMU12c_magnetom_xE
-                0x0000000000000000        0x4 ./src/Main.o
- .bss._ZN3IMU12c_magnetom_yE
-                0x0000000000000000        0x4 ./src/Main.o
- .bss._ZN3IMU12c_magnetom_zE
-                0x0000000000000000        0x4 ./src/Main.o
- .bss._ZN3IMU12Omega_VectorE
-                0x0000000000000000        0xc ./src/Main.o
- .bss._ZN3IMU7Omega_PE
-                0x0000000000000000        0xc ./src/Main.o
- .bss._ZN3IMU7Omega_IE
-                0x0000000000000000        0xc ./src/Main.o
- .bss._ZN3IMU5OmegaE
-                0x0000000000000000        0xc ./src/Main.o
- .bss._ZN3IMU14errorRollPitchE
-                0x0000000000000000        0xc ./src/Main.o
- .bss._ZN3IMU8errorYawE
-                0x0000000000000000        0xc ./src/Main.o
  .bss._ZN3IMU8gyro_satE
                 0x0000000000000000        0x1 ./src/Main.o
- .data._ZN3IMU10DCM_MatrixE
-                0x0000000000000000       0x24 ./src/Main.o
- .data._ZN3IMU13Update_MatrixE
-                0x0000000000000000       0x24 ./src/Main.o
- .bss._ZN3IMU16Temporary_MatrixE
-                0x0000000000000000       0x24 ./src/Main.o
  .bss.nextLEDTime
                 0x0000000000000000        0x4 ./src/Main.o
  .rodata._ZTVN3ros3MsgE
@@ -572,10 +512,6 @@ Discarded input sections
  .rodata._ZTVN3ros15NodeHandleBase_E
                 0x0000000000000000        0xa ./src/Main.o
  .rodata._ZTVN3ros11Subscriber_E
-                0x0000000000000000        0xc ./src/Main.o
- .bss._ZZN3IMU16Drift_correctionEvE14Scaled_Omega_I
-                0x0000000000000000        0xc ./src/Main.o
- .bss._ZZN3IMU16Drift_correctionEvE14Scaled_Omega_P
                 0x0000000000000000        0xc ./src/Main.o
  .text          0x0000000000000000        0x0 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
  .data          0x0000000000000000        0x0 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
@@ -984,30 +920,18 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(asin.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(asin.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(asin.o)
- .text.avr-libc.fplib
-                0x0000000000000000       0x2e /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(asin.o)
- .progmem.gcc_fplib
-                0x0000000000000000       0x14 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(asin.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan2.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan2.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan2.o)
- .text.avr-libc.fplib
-                0x0000000000000000       0x74 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan2.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan.o)
- .text.avr-libc.fplib
-                0x0000000000000000       0x50 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan.o)
- .progmem.gcc_fplib
-                0x0000000000000000       0x2d /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cmpsf2.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cmpsf2.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cmpsf2.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cos.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cos.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cos.o)
- .text.avr-libc.fplib
-                0x0000000000000000        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cos.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(divsf3.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(divsf3.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(divsf3.o)
@@ -1026,10 +950,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_arccos.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_arccos.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_arccos.o)
- .text.avr-libc.fplib
-                0x0000000000000000       0x36 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_arccos.o)
- .progmem.gcc_fplib
-                0x0000000000000000       0x28 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_arccos.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_cmp.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_cmp.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_cmp.o)
@@ -1042,13 +962,9 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powser.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powser.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powser.o)
- .text.avr-libc.fplib
-                0x0000000000000000       0x4a /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powser.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powsodd.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powsodd.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powsodd.o)
- .text.avr-libc.fplib
-                0x0000000000000000       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powsodd.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_pscA.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_pscA.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_pscA.o)
@@ -1058,18 +974,12 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_rempio2.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_rempio2.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_rempio2.o)
- .text.avr-libc.fplib
-                0x0000000000000000       0x50 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_rempio2.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_round.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_round.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_round.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_sinus.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_sinus.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_sinus.o)
- .text.avr-libc.fplib
-                0x0000000000000000       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_sinus.o)
- .progmem.gcc_fplib
-                0x0000000000000000       0x1e /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_sinus.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_split3.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_split3.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_split3.o)
@@ -1082,8 +992,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(inverse.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(inverse.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(inverse.o)
- .text.avr-libc.fplib
-                0x0000000000000000        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(inverse.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(mulsf3.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(mulsf3.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(mulsf3.o)
@@ -1098,18 +1006,12 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sin.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sin.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sin.o)
- .text.avr-libc.fplib
-                0x0000000000000000        0xc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sin.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sqrt.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sqrt.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sqrt.o)
- .text.avr-libc.fplib
-                0x0000000000000000       0x84 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sqrt.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(square.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(square.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(square.o)
- .text.avr-libc.fplib
-                0x0000000000000000        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(square.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cty_isfalse.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cty_isfalse.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cty_isfalse.o)
@@ -1130,13 +1032,9 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_mpack.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_mpack.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_mpack.o)
- .text.avr-libc.fplib
-                0x0000000000000000       0x1c /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_mpack.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_norm2.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_norm2.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_norm2.o)
- .text.avr-libc.fplib
-                0x0000000000000000        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_norm2.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(ldexp.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(ldexp.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(ldexp.o)
@@ -1330,853 +1228,947 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x775e
+.text           0x0000000000000000     0x8eac
  *(.vectors)
  .vectors       0x0000000000000000       0xe4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/crtm2560.o
                 0x0000000000000000                __vectors
                 0x0000000000000000                __vector_default
  *(.vectors)
  *(.progmem.gcc*)
+ .progmem.gcc_fplib
+                0x00000000000000e4       0x14 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(asin.o)
+ .progmem.gcc_fplib
+                0x00000000000000f8       0x2d /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan.o)
+ .progmem.gcc_fplib
+                0x0000000000000125       0x28 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_arccos.o)
+ .progmem.gcc_fplib
+                0x000000000000014d       0x1e /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_sinus.o)
  *(.progmem*)
- .progmem.data  0x00000000000000e4      0x120 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_digital.o)
-                0x00000000000000e4                port_to_mode_PGM
-                0x00000000000000fe                port_to_output_PGM
-                0x0000000000000118                port_to_input_PGM
-                0x0000000000000132                digital_pin_to_port_PGM
-                0x0000000000000178                digital_pin_to_bit_mask_PGM
-                0x00000000000001be                digital_pin_to_timer_PGM
-                0x0000000000000204                . = ALIGN (0x2)
-                0x0000000000000204                __trampolines_start = .
+ .progmem.data  0x000000000000016b      0x120 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_digital.o)
+                0x000000000000016b                port_to_mode_PGM
+                0x0000000000000185                port_to_output_PGM
+                0x000000000000019f                port_to_input_PGM
+                0x00000000000001b9                digital_pin_to_port_PGM
+                0x00000000000001ff                digital_pin_to_bit_mask_PGM
+                0x0000000000000245                digital_pin_to_timer_PGM
+                0x000000000000028c                . = ALIGN (0x2)
+ *fill*         0x000000000000028b        0x1 00
+                0x000000000000028c                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x0000000000000204        0x0 linker stubs
+ .trampolines   0x000000000000028c        0x0 linker stubs
  *(.trampolines*)
-                0x0000000000000204                __trampolines_end = .
+                0x000000000000028c                __trampolines_end = .
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x0000000000000204                __ctors_start = .
+                0x000000000000028c                __ctors_start = .
  *(.ctors)
- .ctors         0x0000000000000204        0x2 ./src/Main.o
- .ctors         0x0000000000000206        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
- .ctors         0x0000000000000208        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x000000000000020a                __ctors_end = .
-                0x000000000000020a                __dtors_start = .
+ .ctors         0x000000000000028c        0x2 ./src/Main.o
+ .ctors         0x000000000000028e        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+ .ctors         0x0000000000000290        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x0000000000000292                __ctors_end = .
+                0x0000000000000292                __dtors_start = .
  *(.dtors)
- .dtors         0x000000000000020a        0x2 ./src/Main.o
-                0x000000000000020c                __dtors_end = .
+ .dtors         0x0000000000000292        0x2 ./src/Main.o
+                0x0000000000000294                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000000000000020c        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/crtm2560.o
-                0x000000000000020c                __init
+ .init0         0x0000000000000294        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/crtm2560.o
+                0x0000000000000294                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000000000000020c       0x10 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/crtm2560.o
+ .init2         0x0000000000000294       0x10 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/crtm2560.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000000000000021c       0x1a /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_copy_data.o)
-                0x000000000000021c                __do_copy_data
- .init4         0x0000000000000236       0x10 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_clear_bss.o)
-                0x0000000000000236                __do_clear_bss
+ .init4         0x00000000000002a4       0x1a /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_copy_data.o)
+                0x00000000000002a4                __do_copy_data
+ .init4         0x00000000000002be       0x10 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_clear_bss.o)
+                0x00000000000002be                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
  *(.init6)
- .init6         0x0000000000000246       0x20 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_ctors.o)
-                0x0000000000000246                __do_global_ctors
+ .init6         0x00000000000002ce       0x20 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_ctors.o)
+                0x00000000000002ce                __do_global_ctors
  *(.init6)
  *(.init7)
  *(.init7)
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000000000000266        0x8 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/crtm2560.o
+ .init9         0x00000000000002ee        0x8 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/crtm2560.o
  *(.init9)
  *(.text)
- .text          0x000000000000026e        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/crtm2560.o
-                0x000000000000026e                __vector_38
-                0x000000000000026e                __vector_22
-                0x000000000000026e                __vector_28
-                0x000000000000026e                __vector_1
-                0x000000000000026e                __vector_34
-                0x000000000000026e                __vector_24
-                0x000000000000026e                __vector_12
-                0x000000000000026e                __vector_46
-                0x000000000000026e                __bad_interrupt
-                0x000000000000026e                __vector_6
-                0x000000000000026e                __vector_31
-                0x000000000000026e                __vector_35
-                0x000000000000026e                __vector_3
-                0x000000000000026e                __vector_30
-                0x000000000000026e                __vector_45
-                0x000000000000026e                __vector_11
-                0x000000000000026e                __vector_13
-                0x000000000000026e                __vector_19
-                0x000000000000026e                __vector_56
-                0x000000000000026e                __vector_7
-                0x000000000000026e                __vector_49
-                0x000000000000026e                __vector_41
-                0x000000000000026e                __vector_43
-                0x000000000000026e                __vector_27
-                0x000000000000026e                __vector_5
-                0x000000000000026e                __vector_33
-                0x000000000000026e                __vector_4
-                0x000000000000026e                __vector_44
-                0x000000000000026e                __vector_9
-                0x000000000000026e                __vector_2
-                0x000000000000026e                __vector_21
-                0x000000000000026e                __vector_29
-                0x000000000000026e                __vector_40
-                0x000000000000026e                __vector_8
-                0x000000000000026e                __vector_48
-                0x000000000000026e                __vector_14
-                0x000000000000026e                __vector_53
-                0x000000000000026e                __vector_10
-                0x000000000000026e                __vector_50
-                0x000000000000026e                __vector_16
-                0x000000000000026e                __vector_18
-                0x000000000000026e                __vector_20
-                0x0000000000000272                . = ALIGN (0x2)
+ .text          0x00000000000002f6        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/crtm2560.o
+                0x00000000000002f6                __vector_38
+                0x00000000000002f6                __vector_22
+                0x00000000000002f6                __vector_28
+                0x00000000000002f6                __vector_1
+                0x00000000000002f6                __vector_34
+                0x00000000000002f6                __vector_24
+                0x00000000000002f6                __vector_12
+                0x00000000000002f6                __vector_46
+                0x00000000000002f6                __bad_interrupt
+                0x00000000000002f6                __vector_6
+                0x00000000000002f6                __vector_31
+                0x00000000000002f6                __vector_35
+                0x00000000000002f6                __vector_3
+                0x00000000000002f6                __vector_30
+                0x00000000000002f6                __vector_45
+                0x00000000000002f6                __vector_11
+                0x00000000000002f6                __vector_13
+                0x00000000000002f6                __vector_19
+                0x00000000000002f6                __vector_56
+                0x00000000000002f6                __vector_7
+                0x00000000000002f6                __vector_49
+                0x00000000000002f6                __vector_41
+                0x00000000000002f6                __vector_43
+                0x00000000000002f6                __vector_27
+                0x00000000000002f6                __vector_5
+                0x00000000000002f6                __vector_33
+                0x00000000000002f6                __vector_4
+                0x00000000000002f6                __vector_44
+                0x00000000000002f6                __vector_9
+                0x00000000000002f6                __vector_2
+                0x00000000000002f6                __vector_21
+                0x00000000000002f6                __vector_29
+                0x00000000000002f6                __vector_40
+                0x00000000000002f6                __vector_8
+                0x00000000000002f6                __vector_48
+                0x00000000000002f6                __vector_14
+                0x00000000000002f6                __vector_53
+                0x00000000000002f6                __vector_10
+                0x00000000000002f6                __vector_50
+                0x00000000000002f6                __vector_16
+                0x00000000000002f6                __vector_18
+                0x00000000000002f6                __vector_20
+                0x00000000000002fa                . = ALIGN (0x2)
  *(.text.*)
  .text._ZN3ros16normalizeSecNSecERmS0_
-                0x0000000000000272       0x62 ./src/ros_lib/time.o
-                0x0000000000000272                _ZN3ros16normalizeSecNSecERmS0_
+                0x00000000000002fa       0x62 ./src/ros_lib/time.o
+                0x00000000000002fa                _ZN3ros16normalizeSecNSecERmS0_
  .text._ZN11FlexiTimer29_overflowEv
-                0x00000000000002d4       0x7e ./src/lib/utilities/FlexiTimer2.o
-                0x00000000000002d4                _ZN11FlexiTimer29_overflowEv
+                0x000000000000035c       0x7e ./src/lib/utilities/FlexiTimer2.o
+                0x000000000000035c                _ZN11FlexiTimer29_overflowEv
  .text.__vector_15
-                0x0000000000000352       0x50 ./src/lib/utilities/FlexiTimer2.o
-                0x0000000000000352                __vector_15
+                0x00000000000003da       0x50 ./src/lib/utilities/FlexiTimer2.o
+                0x00000000000003da                __vector_15
  .text._ZN8L3G4200D8writeRegEhh
-                0x00000000000003a2       0x4c ./src/lib/sensors/imu/L3G4200D.o
-                0x00000000000003a2                _ZN8L3G4200D8writeRegEhh
+                0x000000000000042a       0x4c ./src/lib/sensors/imu/L3G4200D.o
+                0x000000000000042a                _ZN8L3G4200D8writeRegEhh
  .text._ZN8L3G4200D4readEv
-                0x00000000000003ee       0xfc ./src/lib/sensors/imu/L3G4200D.o
-                0x00000000000003ee                _ZN8L3G4200D4readEv
+                0x0000000000000476       0xfc ./src/lib/sensors/imu/L3G4200D.o
+                0x0000000000000476                _ZN8L3G4200D4readEv
  .text._ZN6LSM303C2Ev
-                0x00000000000004ea       0x6c ./src/lib/sensors/imu/LSM303.o
-                0x00000000000004ea                _ZN6LSM303C2Ev
-                0x00000000000004ea                _ZN6LSM303C1Ev
+                0x0000000000000572       0x6c ./src/lib/sensors/imu/LSM303.o
+                0x0000000000000572                _ZN6LSM303C2Ev
+                0x0000000000000572                _ZN6LSM303C1Ev
  .text._ZN6LSM30311writeAccRegEhh
-                0x0000000000000556       0x4c ./src/lib/sensors/imu/LSM303.o
-                0x0000000000000556                _ZN6LSM30311writeAccRegEhh
+                0x00000000000005de       0x4c ./src/lib/sensors/imu/LSM303.o
+                0x00000000000005de                _ZN6LSM30311writeAccRegEhh
  .text._ZN6LSM30311writeMagRegEhh
-                0x00000000000005a2       0x4c ./src/lib/sensors/imu/LSM303.o
-                0x00000000000005a2                _ZN6LSM30311writeMagRegEhh
+                0x000000000000062a       0x4c ./src/lib/sensors/imu/LSM303.o
+                0x000000000000062a                _ZN6LSM30311writeMagRegEhh
  .text._ZN6LSM30310readMagRegEi
-                0x00000000000005ee       0xb8 ./src/lib/sensors/imu/LSM303.o
-                0x00000000000005ee                _ZN6LSM30310readMagRegEi
+                0x0000000000000676       0xb8 ./src/lib/sensors/imu/LSM303.o
+                0x0000000000000676                _ZN6LSM30310readMagRegEi
  .text._ZN6LSM3037readAccEv
-                0x00000000000006a6      0x114 ./src/lib/sensors/imu/LSM303.o
-                0x00000000000006a6                _ZN6LSM3037readAccEv
+                0x000000000000072e      0x114 ./src/lib/sensors/imu/LSM303.o
+                0x000000000000072e                _ZN6LSM3037readAccEv
+ .text._ZN6LSM3037readMagEv
+                0x0000000000000842      0x12c ./src/lib/sensors/imu/LSM303.o
+                0x0000000000000842                _ZN6LSM3037readMagEv
  .text._ZN6LSM30311detectSA0_AEv
-                0x00000000000007ba       0x4a ./src/lib/sensors/imu/LSM303.o
-                0x00000000000007ba                _ZN6LSM30311detectSA0_AEv
+                0x000000000000096e       0x4a ./src/lib/sensors/imu/LSM303.o
+                0x000000000000096e                _ZN6LSM30311detectSA0_AEv
  .text._ZN6LSM3034initEhh
-                0x0000000000000804       0x5c ./src/lib/sensors/imu/LSM303.o
-                0x0000000000000804                _ZN6LSM3034initEhh
+                0x00000000000009b8       0x5c ./src/lib/sensors/imu/LSM303.o
+                0x00000000000009b8                _ZN6LSM3034initEhh
  .text._ZN7Battery3setEP10CD74HC4067hh
-                0x0000000000000860       0x50 ./src/lib/sensors/Battery.o
-                0x0000000000000860                _ZN7Battery3setEP10CD74HC4067hh
+                0x0000000000000a14       0x50 ./src/lib/sensors/Battery.o
+                0x0000000000000a14                _ZN7Battery3setEP10CD74HC4067hh
  .text._ZN7BatteryC2Ehh
-                0x00000000000008b0       0x10 ./src/lib/sensors/Battery.o
-                0x00000000000008b0                _ZN7BatteryC1Ehh
-                0x00000000000008b0                _ZN7BatteryC2Ehh
+                0x0000000000000a64       0x10 ./src/lib/sensors/Battery.o
+                0x0000000000000a64                _ZN7BatteryC1Ehh
+                0x0000000000000a64                _ZN7BatteryC2Ehh
  .text._ZN7BatteryC2Ev
-                0x00000000000008c0       0x2a ./src/lib/sensors/Battery.o
-                0x00000000000008c0                _ZN7BatteryC1Ev
-                0x00000000000008c0                _ZN7BatteryC2Ev
+                0x0000000000000a74       0x2a ./src/lib/sensors/Battery.o
+                0x0000000000000a74                _ZN7BatteryC1Ev
+                0x0000000000000a74                _ZN7BatteryC2Ev
  .text._ZN7Battery10getVoltageEv
-                0x00000000000008ea       0x36 ./src/lib/sensors/Battery.o
-                0x00000000000008ea                _ZN7Battery10getVoltageEv
+                0x0000000000000a9e       0x36 ./src/lib/sensors/Battery.o
+                0x0000000000000a9e                _ZN7Battery10getVoltageEv
  .text._ZN7Battery10getCurrentEv
-                0x0000000000000920       0x36 ./src/lib/sensors/Battery.o
-                0x0000000000000920                _ZN7Battery10getCurrentEv
+                0x0000000000000ad4       0x36 ./src/lib/sensors/Battery.o
+                0x0000000000000ad4                _ZN7Battery10getCurrentEv
  .text._ZN8RoboClawC2EP14HardwareSerialm
-                0x0000000000000956       0x12 ./src/lib/motors/RoboClaw.o
-                0x0000000000000956                _ZN8RoboClawC1EP14HardwareSerialm
-                0x0000000000000956                _ZN8RoboClawC2EP14HardwareSerialm
+                0x0000000000000b0a       0x12 ./src/lib/motors/RoboClaw.o
+                0x0000000000000b0a                _ZN8RoboClawC1EP14HardwareSerialm
+                0x0000000000000b0a                _ZN8RoboClawC2EP14HardwareSerialm
  .text._ZN8RoboClawD2Ev
-                0x0000000000000968        0x2 ./src/lib/motors/RoboClaw.o
-                0x0000000000000968                _ZN8RoboClawD1Ev
-                0x0000000000000968                _ZN8RoboClawD2Ev
+                0x0000000000000b1c        0x2 ./src/lib/motors/RoboClaw.o
+                0x0000000000000b1c                _ZN8RoboClawD1Ev
+                0x0000000000000b1c                _ZN8RoboClawD2Ev
  .text._ZN8RoboClaw9getSerialEv
-                0x000000000000096a        0x8 ./src/lib/motors/RoboClaw.o
-                0x000000000000096a                _ZN8RoboClaw9getSerialEv
+                0x0000000000000b1e        0x8 ./src/lib/motors/RoboClaw.o
+                0x0000000000000b1e                _ZN8RoboClaw9getSerialEv
  .text._ZN8RoboClaw7write_nEhz
-                0x0000000000000972       0x78 ./src/lib/motors/RoboClaw.o
-                0x0000000000000972                _ZN8RoboClaw7write_nEhz
+                0x0000000000000b26       0x78 ./src/lib/motors/RoboClaw.o
+                0x0000000000000b26                _ZN8RoboClaw7write_nEhz
  .text._ZN8RoboClaw24SetMinVoltageMainBatteryEhh
-                0x00000000000009ea       0x50 ./src/lib/motors/RoboClaw.o
-                0x00000000000009ea                _ZN8RoboClaw24SetMinVoltageMainBatteryEhh
+                0x0000000000000b9e       0x50 ./src/lib/motors/RoboClaw.o
+                0x0000000000000b9e                _ZN8RoboClaw24SetMinVoltageMainBatteryEhh
  .text._ZN8RoboClaw25SetMinVoltageLogicBatteryEhh
-                0x0000000000000a3a       0x50 ./src/lib/motors/RoboClaw.o
-                0x0000000000000a3a                _ZN8RoboClaw25SetMinVoltageLogicBatteryEhh
+                0x0000000000000bee       0x50 ./src/lib/motors/RoboClaw.o
+                0x0000000000000bee                _ZN8RoboClaw25SetMinVoltageLogicBatteryEhh
  .text._ZN8RoboClaw14SetM1ConstantsEhmmmm
-                0x0000000000000a8a       0xc4 ./src/lib/motors/RoboClaw.o
-                0x0000000000000a8a                _ZN8RoboClaw14SetM1ConstantsEhmmmm
+                0x0000000000000c3e       0xc4 ./src/lib/motors/RoboClaw.o
+                0x0000000000000c3e                _ZN8RoboClaw14SetM1ConstantsEhmmmm
  .text._ZN8RoboClaw14SetM2ConstantsEhmmmm
-                0x0000000000000b4e       0xc4 ./src/lib/motors/RoboClaw.o
-                0x0000000000000b4e                _ZN8RoboClaw14SetM2ConstantsEhmmmm
+                0x0000000000000d02       0xc4 ./src/lib/motors/RoboClaw.o
+                0x0000000000000d02                _ZN8RoboClaw14SetM2ConstantsEhmmmm
  .text._ZN8RoboClaw8DutyM1M2Ehjj
-                0x0000000000000c12       0x54 ./src/lib/motors/RoboClaw.o
-                0x0000000000000c12                _ZN8RoboClaw8DutyM1M2Ehjj
+                0x0000000000000dc6       0x54 ./src/lib/motors/RoboClaw.o
+                0x0000000000000dc6                _ZN8RoboClaw8DutyM1M2Ehjj
  .text._ZN8RoboClaw7SpeedM1Ehl
-                0x0000000000000c66       0x54 ./src/lib/motors/RoboClaw.o
-                0x0000000000000c66                _ZN8RoboClaw7SpeedM1Ehl
+                0x0000000000000e1a       0x54 ./src/lib/motors/RoboClaw.o
+                0x0000000000000e1a                _ZN8RoboClaw7SpeedM1Ehl
  .text._ZN8RoboClaw7SpeedM2Ehl
-                0x0000000000000cba       0x54 ./src/lib/motors/RoboClaw.o
-                0x0000000000000cba                _ZN8RoboClaw7SpeedM2Ehl
+                0x0000000000000e6e       0x54 ./src/lib/motors/RoboClaw.o
+                0x0000000000000e6e                _ZN8RoboClaw7SpeedM2Ehl
  .text._ZN8RoboClaw8ReadByteEm
-                0x0000000000000d0e       0x8e ./src/lib/motors/RoboClaw.o
-                0x0000000000000d0e                _ZN8RoboClaw8ReadByteEm
+                0x0000000000000ec2       0x8e ./src/lib/motors/RoboClaw.o
+                0x0000000000000ec2                _ZN8RoboClaw8ReadByteEm
  .text._ZN8RoboClaw7Read4_1EhhPhPb
-                0x0000000000000d9c      0x16c ./src/lib/motors/RoboClaw.o
-                0x0000000000000d9c                _ZN8RoboClaw7Read4_1EhhPhPb
+                0x0000000000000f50      0x16c ./src/lib/motors/RoboClaw.o
+                0x0000000000000f50                _ZN8RoboClaw7Read4_1EhhPhPb
  .text._ZN8RoboClaw12ReadISpeedM2EhPhPb
-                0x0000000000000f08       0x16 ./src/lib/motors/RoboClaw.o
-                0x0000000000000f08                _ZN8RoboClaw12ReadISpeedM2EhPhPb
+                0x00000000000010bc       0x16 ./src/lib/motors/RoboClaw.o
+                0x00000000000010bc                _ZN8RoboClaw12ReadISpeedM2EhPhPb
  .text._ZN8RoboClaw12ReadISpeedM1EhPhPb
-                0x0000000000000f1e       0x16 ./src/lib/motors/RoboClaw.o
-                0x0000000000000f1e                _ZN8RoboClaw12ReadISpeedM1EhPhPb
+                0x00000000000010d2       0x16 ./src/lib/motors/RoboClaw.o
+                0x00000000000010d2                _ZN8RoboClaw12ReadISpeedM1EhPhPb
  .text._ZN8RoboClaw9ReadEncM2EhPhPb
-                0x0000000000000f34       0x16 ./src/lib/motors/RoboClaw.o
-                0x0000000000000f34                _ZN8RoboClaw9ReadEncM2EhPhPb
+                0x00000000000010e8       0x16 ./src/lib/motors/RoboClaw.o
+                0x00000000000010e8                _ZN8RoboClaw9ReadEncM2EhPhPb
  .text._ZN8RoboClaw9ReadEncM1EhPhPb
-                0x0000000000000f4a       0x16 ./src/lib/motors/RoboClaw.o
-                0x0000000000000f4a                _ZN8RoboClaw9ReadEncM1EhPhPb
+                0x00000000000010fe       0x16 ./src/lib/motors/RoboClaw.o
+                0x00000000000010fe                _ZN8RoboClaw9ReadEncM1EhPhPb
  .text._ZN10CD74HC40676setMuxEh
-                0x0000000000000f60       0x82 ./src/lib/devices/CD74HC4067.o
-                0x0000000000000f60                _ZN10CD74HC40676setMuxEh
+                0x0000000000001114       0x82 ./src/lib/devices/CD74HC4067.o
+                0x0000000000001114                _ZN10CD74HC40676setMuxEh
  .text._ZN10CD74HC40677readADCEh
-                0x0000000000000fe2       0x16 ./src/lib/devices/CD74HC4067.o
-                0x0000000000000fe2                _ZN10CD74HC40677readADCEh
+                0x0000000000001196       0x16 ./src/lib/devices/CD74HC4067.o
+                0x0000000000001196                _ZN10CD74HC40677readADCEh
  .text._ZN8SPIClass8transferEh
-                0x0000000000000ff8        0xc ./src/lib/devices/ShiftBrite.o
-                0x0000000000000ff8                _ZN8SPIClass8transferEh
+                0x00000000000011ac        0xc ./src/lib/devices/ShiftBrite.o
+                0x00000000000011ac                _ZN8SPIClass8transferEh
  .text._ZN10ShiftBrite8initPinsEv
-                0x0000000000001004       0x3c ./src/lib/devices/ShiftBrite.o
-                0x0000000000001004                _ZN10ShiftBrite8initPinsEv
+                0x00000000000011b8       0x3c ./src/lib/devices/ShiftBrite.o
+                0x00000000000011b8                _ZN10ShiftBrite8initPinsEv
  .text._ZN10ShiftBriteC2Eiiii
-                0x0000000000001040       0x2a ./src/lib/devices/ShiftBrite.o
-                0x0000000000001040                _ZN10ShiftBriteC2Eiiii
-                0x0000000000001040                _ZN10ShiftBriteC1Eiiii
+                0x00000000000011f4       0x2a ./src/lib/devices/ShiftBrite.o
+                0x00000000000011f4                _ZN10ShiftBriteC2Eiiii
+                0x00000000000011f4                _ZN10ShiftBriteC1Eiiii
  .text._ZN10ShiftBrite5latchEv
-                0x000000000000106a       0x24 ./src/lib/devices/ShiftBrite.o
-                0x000000000000106a                _ZN10ShiftBrite5latchEv
+                0x000000000000121e       0x24 ./src/lib/devices/ShiftBrite.o
+                0x000000000000121e                _ZN10ShiftBrite5latchEv
  .text._ZN10ShiftBrite10sendPacketEiiii
-                0x000000000000108e       0xe0 ./src/lib/devices/ShiftBrite.o
-                0x000000000000108e                _ZN10ShiftBrite10sendPacketEiiii
+                0x0000000000001242       0xe0 ./src/lib/devices/ShiftBrite.o
+                0x0000000000001242                _ZN10ShiftBrite10sendPacketEiiii
  .text._ZN10ShiftBrite8setColorEiii
-                0x000000000000116e       0x5e ./src/lib/devices/ShiftBrite.o
-                0x000000000000116e                _ZN10ShiftBrite8setColorEiii
+                0x0000000000001322       0x5e ./src/lib/devices/ShiftBrite.o
+                0x0000000000001322                _ZN10ShiftBrite8setColorEiii
  .text._ZN10ShiftBrite8setPowerEi
-                0x00000000000011cc       0x18 ./src/lib/devices/ShiftBrite.o
-                0x00000000000011cc                _ZN10ShiftBrite8setPowerEi
+                0x0000000000001380       0x18 ./src/lib/devices/ShiftBrite.o
+                0x0000000000001380                _ZN10ShiftBrite8setPowerEi
  .text._ZN17StrongDriveOutputC2Ehb
-                0x00000000000011e4      0x160 ./src/lib/devices/StrongDriveOutput.o
-                0x00000000000011e4                _ZN17StrongDriveOutputC1Ehb
-                0x00000000000011e4                _ZN17StrongDriveOutputC2Ehb
+                0x0000000000001398      0x160 ./src/lib/devices/StrongDriveOutput.o
+                0x0000000000001398                _ZN17StrongDriveOutputC1Ehb
+                0x0000000000001398                _ZN17StrongDriveOutputC2Ehb
  .text._ZN17StrongDriveOutput2onEv
-                0x0000000000001344       0x42 ./src/lib/devices/StrongDriveOutput.o
-                0x0000000000001344                _ZN17StrongDriveOutput2onEv
+                0x00000000000014f8       0x42 ./src/lib/devices/StrongDriveOutput.o
+                0x00000000000014f8                _ZN17StrongDriveOutput2onEv
  .text._ZN17StrongDriveOutput3offEv
-                0x0000000000001386       0x42 ./src/lib/devices/StrongDriveOutput.o
-                0x0000000000001386                _ZN17StrongDriveOutput3offEv
+                0x000000000000153a       0x42 ./src/lib/devices/StrongDriveOutput.o
+                0x000000000000153a                _ZN17StrongDriveOutput3offEv
  .text._ZN17StrongDriveOutput3getEv
-                0x00000000000013c8        0x6 ./src/lib/devices/StrongDriveOutput.o
-                0x00000000000013c8                _ZN17StrongDriveOutput3getEv
+                0x000000000000157c        0x6 ./src/lib/devices/StrongDriveOutput.o
+                0x000000000000157c                _ZN17StrongDriveOutput3getEv
  .text._ZNK8std_msgs4Time9serializeEPh
-                0x00000000000013ce       0x46 ./src/Main.o
-                0x00000000000013ce                _ZNK8std_msgs4Time9serializeEPh
+                0x0000000000001582       0x46 ./src/Main.o
+                0x0000000000001582                _ZNK8std_msgs4Time9serializeEPh
  .text._ZN8std_msgs4Time11deserializeEPh
-                0x0000000000001414      0x130 ./src/Main.o
-                0x0000000000001414                _ZN8std_msgs4Time11deserializeEPh
+                0x00000000000015c8      0x130 ./src/Main.o
+                0x00000000000015c8                _ZN8std_msgs4Time11deserializeEPh
  .text._ZN8std_msgs4Time7getTypeEv
-                0x0000000000001544        0x6 ./src/Main.o
-                0x0000000000001544                _ZN8std_msgs4Time7getTypeEv
+                0x00000000000016f8        0x6 ./src/Main.o
+                0x00000000000016f8                _ZN8std_msgs4Time7getTypeEv
  .text._ZN8std_msgs4Time6getMD5Ev
-                0x000000000000154a        0x6 ./src/Main.o
-                0x000000000000154a                _ZN8std_msgs4Time6getMD5Ev
+                0x00000000000016fe        0x6 ./src/Main.o
+                0x00000000000016fe                _ZN8std_msgs4Time6getMD5Ev
  .text._ZN14rosserial_msgs9TopicInfo11deserializeEPh
-                0x0000000000001550      0x1ec ./src/Main.o
-                0x0000000000001550                _ZN14rosserial_msgs9TopicInfo11deserializeEPh
+                0x0000000000001704      0x1ec ./src/Main.o
+                0x0000000000001704                _ZN14rosserial_msgs9TopicInfo11deserializeEPh
  .text._ZN14rosserial_msgs9TopicInfo7getTypeEv
-                0x000000000000173c        0x6 ./src/Main.o
-                0x000000000000173c                _ZN14rosserial_msgs9TopicInfo7getTypeEv
+                0x00000000000018f0        0x6 ./src/Main.o
+                0x00000000000018f0                _ZN14rosserial_msgs9TopicInfo7getTypeEv
  .text._ZN14rosserial_msgs9TopicInfo6getMD5Ev
-                0x0000000000001742        0x6 ./src/Main.o
-                0x0000000000001742                _ZN14rosserial_msgs9TopicInfo6getMD5Ev
+                0x00000000000018f6        0x6 ./src/Main.o
+                0x00000000000018f6                _ZN14rosserial_msgs9TopicInfo6getMD5Ev
  .text._ZN14rosserial_msgs3Log11deserializeEPh
-                0x0000000000001748       0x8a ./src/Main.o
-                0x0000000000001748                _ZN14rosserial_msgs3Log11deserializeEPh
+                0x00000000000018fc       0x8a ./src/Main.o
+                0x00000000000018fc                _ZN14rosserial_msgs3Log11deserializeEPh
  .text._ZN14rosserial_msgs3Log7getTypeEv
-                0x00000000000017d2        0x6 ./src/Main.o
-                0x00000000000017d2                _ZN14rosserial_msgs3Log7getTypeEv
+                0x0000000000001986        0x6 ./src/Main.o
+                0x0000000000001986                _ZN14rosserial_msgs3Log7getTypeEv
  .text._ZN14rosserial_msgs3Log6getMD5Ev
-                0x00000000000017d8        0x6 ./src/Main.o
-                0x00000000000017d8                _ZN14rosserial_msgs3Log6getMD5Ev
+                0x000000000000198c        0x6 ./src/Main.o
+                0x000000000000198c                _ZN14rosserial_msgs3Log6getMD5Ev
  .text._ZN14rosserial_msgs20RequestParamResponse7getTypeEv
-                0x00000000000017de        0x6 ./src/Main.o
-                0x00000000000017de                _ZN14rosserial_msgs20RequestParamResponse7getTypeEv
+                0x0000000000001992        0x6 ./src/Main.o
+                0x0000000000001992                _ZN14rosserial_msgs20RequestParamResponse7getTypeEv
  .text._ZN14rosserial_msgs20RequestParamResponse6getMD5Ev
-                0x00000000000017e4        0x6 ./src/Main.o
-                0x00000000000017e4                _ZN14rosserial_msgs20RequestParamResponse6getMD5Ev
+                0x0000000000001998        0x6 ./src/Main.o
+                0x0000000000001998                _ZN14rosserial_msgs20RequestParamResponse6getMD5Ev
  .text._ZNK10rover_msgs7Enabled9serializeEPh
-                0x00000000000017ea       0x16 ./src/Main.o
-                0x00000000000017ea                _ZNK10rover_msgs7Enabled9serializeEPh
+                0x000000000000199e       0x16 ./src/Main.o
+                0x000000000000199e                _ZNK10rover_msgs7Enabled9serializeEPh
  .text._ZN10rover_msgs7Enabled11deserializeEPh
-                0x0000000000001800       0x16 ./src/Main.o
-                0x0000000000001800                _ZN10rover_msgs7Enabled11deserializeEPh
+                0x00000000000019b4       0x16 ./src/Main.o
+                0x00000000000019b4                _ZN10rover_msgs7Enabled11deserializeEPh
  .text._ZN10rover_msgs7Enabled7getTypeEv
-                0x0000000000001816        0x6 ./src/Main.o
-                0x0000000000001816                _ZN10rover_msgs7Enabled7getTypeEv
+                0x00000000000019ca        0x6 ./src/Main.o
+                0x00000000000019ca                _ZN10rover_msgs7Enabled7getTypeEv
  .text._ZN10rover_msgs7Enabled6getMD5Ev
-                0x000000000000181c        0x6 ./src/Main.o
-                0x000000000000181c                _ZN10rover_msgs7Enabled6getMD5Ev
+                0x00000000000019d0        0x6 ./src/Main.o
+                0x00000000000019d0                _ZN10rover_msgs7Enabled6getMD5Ev
  .text._ZN8std_msgs6Header11deserializeEPh
-                0x0000000000001822      0x22a ./src/Main.o
-                0x0000000000001822                _ZN8std_msgs6Header11deserializeEPh
+                0x00000000000019d6      0x22a ./src/Main.o
+                0x00000000000019d6                _ZN8std_msgs6Header11deserializeEPh
  .text._ZN8std_msgs6Header7getTypeEv
-                0x0000000000001a4c        0x6 ./src/Main.o
-                0x0000000000001a4c                _ZN8std_msgs6Header7getTypeEv
+                0x0000000000001c00        0x6 ./src/Main.o
+                0x0000000000001c00                _ZN8std_msgs6Header7getTypeEv
  .text._ZN8std_msgs6Header6getMD5Ev
-                0x0000000000001a52        0x6 ./src/Main.o
-                0x0000000000001a52                _ZN8std_msgs6Header6getMD5Ev
+                0x0000000000001c06        0x6 ./src/Main.o
+                0x0000000000001c06                _ZN8std_msgs6Header6getMD5Ev
  .text._ZN10rover_msgs6Motors11deserializeEPh
-                0x0000000000001a58       0xf2 ./src/Main.o
-                0x0000000000001a58                _ZN10rover_msgs6Motors11deserializeEPh
+                0x0000000000001c0c       0xf2 ./src/Main.o
+                0x0000000000001c0c                _ZN10rover_msgs6Motors11deserializeEPh
  .text._ZN10rover_msgs6Motors7getTypeEv
-                0x0000000000001b4a        0x6 ./src/Main.o
-                0x0000000000001b4a                _ZN10rover_msgs6Motors7getTypeEv
+                0x0000000000001cfe        0x6 ./src/Main.o
+                0x0000000000001cfe                _ZN10rover_msgs6Motors7getTypeEv
  .text._ZN10rover_msgs6Motors6getMD5Ev
-                0x0000000000001b50        0x6 ./src/Main.o
-                0x0000000000001b50                _ZN10rover_msgs6Motors6getMD5Ev
+                0x0000000000001d04        0x6 ./src/Main.o
+                0x0000000000001d04                _ZN10rover_msgs6Motors6getMD5Ev
  .text._ZN10rover_msgs7Battery11deserializeEPh
-                0x0000000000001b56       0xf2 ./src/Main.o
-                0x0000000000001b56                _ZN10rover_msgs7Battery11deserializeEPh
+                0x0000000000001d0a       0xf2 ./src/Main.o
+                0x0000000000001d0a                _ZN10rover_msgs7Battery11deserializeEPh
  .text._ZN10rover_msgs7Battery7getTypeEv
-                0x0000000000001c48        0x6 ./src/Main.o
-                0x0000000000001c48                _ZN10rover_msgs7Battery7getTypeEv
+                0x0000000000001dfc        0x6 ./src/Main.o
+                0x0000000000001dfc                _ZN10rover_msgs7Battery7getTypeEv
  .text._ZN10rover_msgs7Battery6getMD5Ev
-                0x0000000000001c4e        0x6 ./src/Main.o
-                0x0000000000001c4e                _ZN10rover_msgs7Battery6getMD5Ev
+                0x0000000000001e02        0x6 ./src/Main.o
+                0x0000000000001e02                _ZN10rover_msgs7Battery6getMD5Ev
  .text._ZN10rover_msgs7Encoder11deserializeEPh
-                0x0000000000001c54      0x338 ./src/Main.o
-                0x0000000000001c54                _ZN10rover_msgs7Encoder11deserializeEPh
+                0x0000000000001e08      0x338 ./src/Main.o
+                0x0000000000001e08                _ZN10rover_msgs7Encoder11deserializeEPh
  .text._ZN10rover_msgs7Encoder7getTypeEv
-                0x0000000000001f8c        0x6 ./src/Main.o
-                0x0000000000001f8c                _ZN10rover_msgs7Encoder7getTypeEv
+                0x0000000000002140        0x6 ./src/Main.o
+                0x0000000000002140                _ZN10rover_msgs7Encoder7getTypeEv
  .text._ZN10rover_msgs7Encoder6getMD5Ev
-                0x0000000000001f92        0x6 ./src/Main.o
-                0x0000000000001f92                _ZN10rover_msgs7Encoder6getMD5Ev
+                0x0000000000002146        0x6 ./src/Main.o
+                0x0000000000002146                _ZN10rover_msgs7Encoder6getMD5Ev
  .text._ZN10rover_msgs12CondensedIMU11deserializeEPh
-                0x0000000000001f98      0x3e2 ./src/Main.o
-                0x0000000000001f98                _ZN10rover_msgs12CondensedIMU11deserializeEPh
+                0x000000000000214c      0x3e2 ./src/Main.o
+                0x000000000000214c                _ZN10rover_msgs12CondensedIMU11deserializeEPh
  .text._ZN10rover_msgs12CondensedIMU7getTypeEv
-                0x000000000000237a        0x6 ./src/Main.o
-                0x000000000000237a                _ZN10rover_msgs12CondensedIMU7getTypeEv
+                0x000000000000252e        0x6 ./src/Main.o
+                0x000000000000252e                _ZN10rover_msgs12CondensedIMU7getTypeEv
  .text._ZN10rover_msgs12CondensedIMU6getMD5Ev
-                0x0000000000002380        0x6 ./src/Main.o
-                0x0000000000002380                _ZN10rover_msgs12CondensedIMU6getMD5Ev
+                0x0000000000002534        0x6 ./src/Main.o
+                0x0000000000002534                _ZN10rover_msgs12CondensedIMU6getMD5Ev
  .text._ZN8std_msgs19MultiArrayDimension11deserializeEPh
-                0x0000000000002386      0x19c ./src/Main.o
-                0x0000000000002386                _ZN8std_msgs19MultiArrayDimension11deserializeEPh
+                0x000000000000253a      0x19c ./src/Main.o
+                0x000000000000253a                _ZN8std_msgs19MultiArrayDimension11deserializeEPh
  .text._ZN8std_msgs19MultiArrayDimension7getTypeEv
-                0x0000000000002522        0x6 ./src/Main.o
-                0x0000000000002522                _ZN8std_msgs19MultiArrayDimension7getTypeEv
+                0x00000000000026d6        0x6 ./src/Main.o
+                0x00000000000026d6                _ZN8std_msgs19MultiArrayDimension7getTypeEv
  .text._ZN8std_msgs19MultiArrayDimension6getMD5Ev
-                0x0000000000002528        0x6 ./src/Main.o
-                0x0000000000002528                _ZN8std_msgs19MultiArrayDimension6getMD5Ev
+                0x00000000000026dc        0x6 ./src/Main.o
+                0x00000000000026dc                _ZN8std_msgs19MultiArrayDimension6getMD5Ev
  .text._ZNK8std_msgs16MultiArrayLayout9serializeEPh
-                0x000000000000252e       0xb6 ./src/Main.o
-                0x000000000000252e                _ZNK8std_msgs16MultiArrayLayout9serializeEPh
+                0x00000000000026e2       0xb6 ./src/Main.o
+                0x00000000000026e2                _ZNK8std_msgs16MultiArrayLayout9serializeEPh
  .text._ZN8std_msgs16MultiArrayLayout7getTypeEv
-                0x00000000000025e4        0x6 ./src/Main.o
-                0x00000000000025e4                _ZN8std_msgs16MultiArrayLayout7getTypeEv
+                0x0000000000002798        0x6 ./src/Main.o
+                0x0000000000002798                _ZN8std_msgs16MultiArrayLayout7getTypeEv
  .text._ZN8std_msgs16MultiArrayLayout6getMD5Ev
-                0x00000000000025ea        0x6 ./src/Main.o
-                0x00000000000025ea                _ZN8std_msgs16MultiArrayLayout6getMD5Ev
+                0x000000000000279e        0x6 ./src/Main.o
+                0x000000000000279e                _ZN8std_msgs16MultiArrayLayout6getMD5Ev
  .text._ZNK8std_msgs15UInt8MultiArray9serializeEPh
-                0x00000000000025f0       0x84 ./src/Main.o
-                0x00000000000025f0                _ZNK8std_msgs15UInt8MultiArray9serializeEPh
+                0x00000000000027a4       0x84 ./src/Main.o
+                0x00000000000027a4                _ZNK8std_msgs15UInt8MultiArray9serializeEPh
  .text._ZN8std_msgs15UInt8MultiArray7getTypeEv
-                0x0000000000002674        0x6 ./src/Main.o
-                0x0000000000002674                _ZN8std_msgs15UInt8MultiArray7getTypeEv
+                0x0000000000002828        0x6 ./src/Main.o
+                0x0000000000002828                _ZN8std_msgs15UInt8MultiArray7getTypeEv
  .text._ZN8std_msgs15UInt8MultiArray6getMD5Ev
-                0x000000000000267a        0x6 ./src/Main.o
-                0x000000000000267a                _ZN8std_msgs15UInt8MultiArray6getMD5Ev
+                0x000000000000282e        0x6 ./src/Main.o
+                0x000000000000282e                _ZN8std_msgs15UInt8MultiArray6getMD5Ev
  .text._Z7drivecbRKN10rover_msgs6MotorsE
-                0x0000000000002680       0x6c ./src/Main.o
-                0x0000000000002680                _Z7drivecbRKN10rover_msgs6MotorsE
+                0x0000000000002834       0x6c ./src/Main.o
+                0x0000000000002834                _Z7drivecbRKN10rover_msgs6MotorsE
  .text._Z8enablecbRKN10rover_msgs7EnabledE
-                0x00000000000026ec       0x10 ./src/Main.o
-                0x00000000000026ec                _Z8enablecbRKN10rover_msgs7EnabledE
+                0x00000000000028a0       0x10 ./src/Main.o
+                0x00000000000028a0                _Z8enablecbRKN10rover_msgs7EnabledE
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9connectedEv
-                0x00000000000026fc        0xa ./src/Main.o
-                0x00000000000026fc                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9connectedEv
+                0x00000000000028b0        0xa ./src/Main.o
+                0x00000000000028b0                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9connectedEv
  .text._ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE15getEndpointTypeEv
-                0x0000000000002706        0x8 ./src/Main.o
-                0x0000000000002706                _ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE15getEndpointTypeEv
+                0x00000000000028ba        0x8 ./src/Main.o
+                0x00000000000028ba                _ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE15getEndpointTypeEv
  .text._ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE10getMsgTypeEv
-                0x000000000000270e        0x6 ./src/Main.o
-                0x000000000000270e                _ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE10getMsgTypeEv
+                0x00000000000028c2        0x6 ./src/Main.o
+                0x00000000000028c2                _ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE10getMsgTypeEv
  .text._ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE9getMsgMD5Ev
-                0x0000000000002714        0x6 ./src/Main.o
-                0x0000000000002714                _ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE9getMsgMD5Ev
+                0x00000000000028c8        0x6 ./src/Main.o
+                0x00000000000028c8                _ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE9getMsgMD5Ev
  .text._ZN3ros10SubscriberIN10rover_msgs7EnabledEE8callbackEPh
-                0x000000000000271a       0x28 ./src/Main.o
-                0x000000000000271a                _ZN3ros10SubscriberIN10rover_msgs7EnabledEE8callbackEPh
+                0x00000000000028ce       0x28 ./src/Main.o
+                0x00000000000028ce                _ZN3ros10SubscriberIN10rover_msgs7EnabledEE8callbackEPh
  .text._ZN3ros10SubscriberIN10rover_msgs7EnabledEE15getEndpointTypeEv
-                0x0000000000002742        0x8 ./src/Main.o
-                0x0000000000002742                _ZN3ros10SubscriberIN10rover_msgs7EnabledEE15getEndpointTypeEv
+                0x00000000000028f6        0x8 ./src/Main.o
+                0x00000000000028f6                _ZN3ros10SubscriberIN10rover_msgs7EnabledEE15getEndpointTypeEv
  .text._ZN3ros10SubscriberIN10rover_msgs7EnabledEE10getMsgTypeEv
-                0x000000000000274a        0x6 ./src/Main.o
-                0x000000000000274a                _ZN3ros10SubscriberIN10rover_msgs7EnabledEE10getMsgTypeEv
+                0x00000000000028fe        0x6 ./src/Main.o
+                0x00000000000028fe                _ZN3ros10SubscriberIN10rover_msgs7EnabledEE10getMsgTypeEv
  .text._ZN3ros10SubscriberIN10rover_msgs7EnabledEE9getMsgMD5Ev
-                0x0000000000002750        0x6 ./src/Main.o
-                0x0000000000002750                _ZN3ros10SubscriberIN10rover_msgs7EnabledEE9getMsgMD5Ev
+                0x0000000000002904        0x6 ./src/Main.o
+                0x0000000000002904                _ZN3ros10SubscriberIN10rover_msgs7EnabledEE9getMsgMD5Ev
  .text._ZN3ros10SubscriberIN10rover_msgs6MotorsEE8callbackEPh
-                0x0000000000002756       0x28 ./src/Main.o
-                0x0000000000002756                _ZN3ros10SubscriberIN10rover_msgs6MotorsEE8callbackEPh
+                0x000000000000290a       0x28 ./src/Main.o
+                0x000000000000290a                _ZN3ros10SubscriberIN10rover_msgs6MotorsEE8callbackEPh
  .text._ZN3ros10SubscriberIN10rover_msgs6MotorsEE15getEndpointTypeEv
-                0x000000000000277e        0x8 ./src/Main.o
-                0x000000000000277e                _ZN3ros10SubscriberIN10rover_msgs6MotorsEE15getEndpointTypeEv
+                0x0000000000002932        0x8 ./src/Main.o
+                0x0000000000002932                _ZN3ros10SubscriberIN10rover_msgs6MotorsEE15getEndpointTypeEv
  .text._ZN3ros10SubscriberIN10rover_msgs6MotorsEE10getMsgTypeEv
-                0x0000000000002786        0x6 ./src/Main.o
-                0x0000000000002786                _ZN3ros10SubscriberIN10rover_msgs6MotorsEE10getMsgTypeEv
+                0x000000000000293a        0x6 ./src/Main.o
+                0x000000000000293a                _ZN3ros10SubscriberIN10rover_msgs6MotorsEE10getMsgTypeEv
  .text._ZN3ros10SubscriberIN10rover_msgs6MotorsEE9getMsgMD5Ev
-                0x000000000000278c        0x6 ./src/Main.o
-                0x000000000000278c                _ZN3ros10SubscriberIN10rover_msgs6MotorsEE9getMsgMD5Ev
+                0x0000000000002940        0x6 ./src/Main.o
+                0x0000000000002940                _ZN3ros10SubscriberIN10rover_msgs6MotorsEE9getMsgMD5Ev
  .text._ZNK14rosserial_msgs9TopicInfo9serializeEPh
-                0x0000000000002792      0x13e ./src/Main.o
-                0x0000000000002792                _ZNK14rosserial_msgs9TopicInfo9serializeEPh
+                0x0000000000002946      0x13e ./src/Main.o
+                0x0000000000002946                _ZNK14rosserial_msgs9TopicInfo9serializeEPh
  .text._ZNK14rosserial_msgs3Log9serializeEPh
-                0x00000000000028d0       0x4c ./src/Main.o
-                0x00000000000028d0                _ZNK14rosserial_msgs3Log9serializeEPh
+                0x0000000000002a84       0x4c ./src/Main.o
+                0x0000000000002a84                _ZNK14rosserial_msgs3Log9serializeEPh
  .text._ZNK14rosserial_msgs20RequestParamResponse9serializeEPh
-                0x000000000000291c      0x1e8 ./src/Main.o
-                0x000000000000291c                _ZNK14rosserial_msgs20RequestParamResponse9serializeEPh
+                0x0000000000002ad0      0x1e8 ./src/Main.o
+                0x0000000000002ad0                _ZNK14rosserial_msgs20RequestParamResponse9serializeEPh
  .text._ZNK8std_msgs6Header9serializeEPh
-                0x0000000000002b04       0x78 ./src/Main.o
-                0x0000000000002b04                _ZNK8std_msgs6Header9serializeEPh
+                0x0000000000002cb8       0x78 ./src/Main.o
+                0x0000000000002cb8                _ZNK8std_msgs6Header9serializeEPh
  .text._ZNK10rover_msgs7Encoder9serializeEPh
-                0x0000000000002b7c       0xf0 ./src/Main.o
-                0x0000000000002b7c                _ZNK10rover_msgs7Encoder9serializeEPh
+                0x0000000000002d30       0xf0 ./src/Main.o
+                0x0000000000002d30                _ZNK10rover_msgs7Encoder9serializeEPh
  .text._ZNK10rover_msgs7Battery9serializeEPh
-                0x0000000000002c6c       0x54 ./src/Main.o
-                0x0000000000002c6c                _ZNK10rover_msgs7Battery9serializeEPh
+                0x0000000000002e20       0x54 ./src/Main.o
+                0x0000000000002e20                _ZNK10rover_msgs7Battery9serializeEPh
  .text._ZNK10rover_msgs12CondensedIMU9serializeEPh
-                0x0000000000002cc0      0x124 ./src/Main.o
-                0x0000000000002cc0                _ZNK10rover_msgs12CondensedIMU9serializeEPh
+                0x0000000000002e74      0x124 ./src/Main.o
+                0x0000000000002e74                _ZNK10rover_msgs12CondensedIMU9serializeEPh
  .text._ZNK10rover_msgs6Motors9serializeEPh
-                0x0000000000002de4       0x54 ./src/Main.o
-                0x0000000000002de4                _ZNK10rover_msgs6Motors9serializeEPh
+                0x0000000000002f98       0x54 ./src/Main.o
+                0x0000000000002f98                _ZNK10rover_msgs6Motors9serializeEPh
  .text._ZNK8std_msgs19MultiArrayDimension9serializeEPh
-                0x0000000000002e38       0x80 ./src/Main.o
-                0x0000000000002e38                _ZNK8std_msgs19MultiArrayDimension9serializeEPh
+                0x0000000000002fec       0x80 ./src/Main.o
+                0x0000000000002fec                _ZNK8std_msgs19MultiArrayDimension9serializeEPh
  .text._ZN14rosserial_msgs20RequestParamResponse11deserializeEPh
-                0x0000000000002eb8      0x29c ./src/Main.o
-                0x0000000000002eb8                _ZN14rosserial_msgs20RequestParamResponse11deserializeEPh
+                0x000000000000306c      0x29c ./src/Main.o
+                0x000000000000306c                _ZN14rosserial_msgs20RequestParamResponse11deserializeEPh
  .text._ZN8std_msgs16MultiArrayLayout11deserializeEPh
-                0x0000000000003154      0x15e ./src/Main.o
-                0x0000000000003154                _ZN8std_msgs16MultiArrayLayout11deserializeEPh
+                0x0000000000003308      0x15e ./src/Main.o
+                0x0000000000003308                _ZN8std_msgs16MultiArrayLayout11deserializeEPh
  .text._ZN8std_msgs15UInt8MultiArray11deserializeEPh
-                0x00000000000032b2       0x84 ./src/Main.o
-                0x00000000000032b2                _ZN8std_msgs15UInt8MultiArray11deserializeEPh
+                0x0000000000003466       0x84 ./src/Main.o
+                0x0000000000003466                _ZN8std_msgs15UInt8MultiArray11deserializeEPh
  .text._ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE8callbackEPh
-                0x0000000000003336       0x28 ./src/Main.o
-                0x0000000000003336                _ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE8callbackEPh
+                0x00000000000034ea       0x28 ./src/Main.o
+                0x00000000000034ea                _ZN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEE8callbackEPh
  .text._Z7servocbRKN8std_msgs15UInt8MultiArrayE
-                0x000000000000335e       0x50 ./src/Main.o
-                0x000000000000335e                _Z7servocbRKN8std_msgs15UInt8MultiArrayE
+                0x0000000000003512       0x50 ./src/Main.o
+                0x0000000000003512                _Z7servocbRKN8std_msgs15UInt8MultiArrayE
  .text._ZN3ros9Publisher7publishEPKNS_3MsgE
-                0x00000000000033ae       0x22 ./src/Main.o
-                0x00000000000033ae                _ZN3ros9Publisher7publishEPKNS_3MsgE
+                0x0000000000003562       0x22 ./src/Main.o
+                0x0000000000003562                _ZN3ros9Publisher7publishEPKNS_3MsgE
  .text._ZN15ArduinoHardware4initEv
-                0x00000000000033d0       0x14 ./src/Main.o
-                0x00000000000033d0                _ZN15ArduinoHardware4initEv
+                0x0000000000003584       0x14 ./src/Main.o
+                0x0000000000003584                _ZN15ArduinoHardware4initEv
+ .text._ZN3IMU15Compass_HeadingEv
+                0x0000000000003598      0x348 ./src/Main.o
+                0x0000000000003598                _ZN3IMU15Compass_HeadingEv
+ .text._ZN3IMU12Euler_anglesEv
+                0x00000000000038e0       0x90 ./src/Main.o
+                0x00000000000038e0                _ZN3IMU12Euler_anglesEv
  .text._ZN3IMU7initI2CEv
-                0x00000000000033e4        0xa ./src/Main.o
-                0x00000000000033e4                _ZN3IMU7initI2CEv
+                0x0000000000003970        0xa ./src/Main.o
+                0x0000000000003970                _ZN3IMU7initI2CEv
  .text._ZN3IMU8initGyroEv
-                0x00000000000033ee       0x22 ./src/Main.o
-                0x00000000000033ee                _ZN3IMU8initGyroEv
+                0x000000000000397a       0x22 ./src/Main.o
+                0x000000000000397a                _ZN3IMU8initGyroEv
  .text._ZN3IMU8readGyroEv
-                0x0000000000003410       0xf2 ./src/Main.o
-                0x0000000000003410                _ZN3IMU8readGyroEv
+                0x000000000000399c       0xf2 ./src/Main.o
+                0x000000000000399c                _ZN3IMU8readGyroEv
  .text._ZN3IMU9initAccelEv
-                0x0000000000003502       0x22 ./src/Main.o
-                0x0000000000003502                _ZN3IMU9initAccelEv
+                0x0000000000003a8e       0x22 ./src/Main.o
+                0x0000000000003a8e                _ZN3IMU9initAccelEv
  .text._ZN3IMU9readAccelEv
-                0x0000000000003524       0xf2 ./src/Main.o
-                0x0000000000003524                _ZN3IMU9readAccelEv
+                0x0000000000003ab0       0xf2 ./src/Main.o
+                0x0000000000003ab0                _ZN3IMU9readAccelEv
  .text._ZN3IMU11initCompassEv
-                0x0000000000003616       0x22 ./src/Main.o
-                0x0000000000003616                _ZN3IMU11initCompassEv
+                0x0000000000003ba2       0x22 ./src/Main.o
+                0x0000000000003ba2                _ZN3IMU11initCompassEv
  .text._ZN3IMU7initIMUEv
-                0x0000000000003638      0x106 ./src/Main.o
-                0x0000000000003638                _ZN3IMU7initIMUEv
+                0x0000000000003bc4      0x106 ./src/Main.o
+                0x0000000000003bc4                _ZN3IMU7initIMUEv
+ .text._ZN3IMU11readCompassEv
+                0x0000000000003cca       0xa6 ./src/Main.o
+                0x0000000000003cca                _ZN3IMU11readCompassEv
+ .text._ZN3IMU16vectorDotProductEPfS0_
+                0x0000000000003d70       0x86 ./src/Main.o
+                0x0000000000003d70                _ZN3IMU16vectorDotProductEPfS0_
+ .text._ZN3IMU18vectorCrossProductEPfS0_S0_
+                0x0000000000003df6      0x102 ./src/Main.o
+                0x0000000000003df6                _ZN3IMU18vectorCrossProductEPfS0_S0_
+ .text._ZN3IMU11vectorScaleEPfS0_f
+                0x0000000000003ef8       0x74 ./src/Main.o
+                0x0000000000003ef8                _ZN3IMU11vectorScaleEPfS0_f
+ .text._ZN3IMU9vectorAddEPfS0_S0_
+                0x0000000000003f6c       0x62 ./src/Main.o
+                0x0000000000003f6c                _ZN3IMU9vectorAddEPfS0_S0_
+ .text._ZN3IMU16Drift_correctionEv
+                0x0000000000003fce      0x324 ./src/Main.o
+                0x0000000000003fce                _ZN3IMU16Drift_correctionEv
+ .text._ZN3IMU9NormalizeEv
+                0x00000000000042f2      0x172 ./src/Main.o
+                0x00000000000042f2                _ZN3IMU9NormalizeEv
+ .text._ZN3IMU14matrixMultiplyEPA3_fS1_S1_
+                0x0000000000004464      0x134 ./src/Main.o
+                0x0000000000004464                _ZN3IMU14matrixMultiplyEPA3_fS1_S1_
+ .text._ZN3IMU13Matrix_updateEv
+                0x0000000000004598      0x366 ./src/Main.o
+                0x0000000000004598                _ZN3IMU13Matrix_updateEv
+ .text._ZN3IMU9updateIMUEv
+                0x00000000000048fe      0x112 ./src/Main.o
+                0x00000000000048fe                _ZN3IMU9updateIMUEv
  .text._ZN12control_dataC1Ev
-                0x000000000000373e       0x20 ./src/Main.o
-                0x000000000000373e                _ZN12control_dataC1Ev
+                0x0000000000004a10       0x20 ./src/Main.o
+                0x0000000000004a10                _ZN12control_dataC1Ev
  .text._Z41__static_initialization_and_destruction_0ii.clone.11
-                0x000000000000375e      0x2fa ./src/Main.o
- .text._Z8setMotorv
-                0x0000000000003a58       0x80 ./src/Main.o
-                0x0000000000003a58                _Z8setMotorv
+                0x0000000000004a30      0x2fa ./src/Main.o
+ .text._Z8setMotorb
+                0x0000000000004d2a       0xa0 ./src/Main.o
+                0x0000000000004d2a                _Z8setMotorb
  .text._Z7setLEDsv
-                0x0000000000003ad8      0x23e ./src/Main.o
-                0x0000000000003ad8                _Z7setLEDsv
+                0x0000000000004dca      0x23e ./src/Main.o
+                0x0000000000004dca                _Z7setLEDsv
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3nowEv
-                0x0000000000003d16       0xcc ./src/Main.o
-                0x0000000000003d16                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3nowEv
+                0x0000000000005008       0xcc ./src/Main.o
+                0x0000000000005008                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3nowEv
  .text._Z7publishv
-                0x0000000000003de2      0x41e ./src/Main.o
-                0x0000000000003de2                _Z7publishv
+                0x00000000000050d4      0x41e ./src/Main.o
+                0x00000000000050d4                _Z7publishv
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9advertiseERNS_9PublisherE
-                0x0000000000004200       0x4e ./src/Main.o
-                0x0000000000004200                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9advertiseERNS_9PublisherE
+                0x00000000000054f2       0x4e ./src/Main.o
+                0x00000000000054f2                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9advertiseERNS_9PublisherE
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN10rover_msgs7EnabledEEEbRNS_10SubscriberIT_EE
-                0x000000000000424e       0x42 ./src/Main.o
-                0x000000000000424e                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN10rover_msgs7EnabledEEEbRNS_10SubscriberIT_EE
+                0x0000000000005540       0x42 ./src/Main.o
+                0x0000000000005540                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN10rover_msgs7EnabledEEEbRNS_10SubscriberIT_EE
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN10rover_msgs6MotorsEEEbRNS_10SubscriberIT_EE
-                0x0000000000004290       0x42 ./src/Main.o
-                0x0000000000004290                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN10rover_msgs6MotorsEEEbRNS_10SubscriberIT_EE
+                0x0000000000005582       0x42 ./src/Main.o
+                0x0000000000005582                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN10rover_msgs6MotorsEEEbRNS_10SubscriberIT_EE
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN8std_msgs15UInt8MultiArrayEEEbRNS_10SubscriberIT_EE
-                0x00000000000042d2       0x42 ./src/Main.o
-                0x00000000000042d2                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN8std_msgs15UInt8MultiArrayEEEbRNS_10SubscriberIT_EE
+                0x00000000000055c4       0x42 ./src/Main.o
+                0x00000000000055c4                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE9subscribeIN8std_msgs15UInt8MultiArrayEEEbRNS_10SubscriberIT_EE
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15requestSyncTimeEv
-                0x0000000000004314       0x70 ./src/Main.o
-                0x0000000000004314                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15requestSyncTimeEv
+                0x0000000000005606       0x70 ./src/Main.o
+                0x0000000000005606                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15requestSyncTimeEv
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15negotiateTopicsEv
-                0x0000000000004384      0x1da ./src/Main.o
-                0x0000000000004384                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15negotiateTopicsEv
+                0x0000000000005676      0x1da ./src/Main.o
+                0x0000000000005676                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE15negotiateTopicsEv
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE6setNowERNS_4TimeE
-                0x000000000000455e       0x9e ./src/Main.o
-                0x000000000000455e                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE6setNowERNS_4TimeE
+                0x0000000000005850       0x9e ./src/Main.o
+                0x0000000000005850                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE6setNowERNS_4TimeE
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8syncTimeEPh
-                0x00000000000045fc       0xfc ./src/Main.o
-                0x00000000000045fc                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8syncTimeEPh
+                0x00000000000058ee       0xfc ./src/Main.o
+                0x00000000000058ee                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8syncTimeEPh
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8spinOnceEv
-                0x00000000000046f8      0x3cc ./src/Main.o
-                0x00000000000046f8                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8spinOnceEv
- .text.main     0x0000000000004ac4      0x8ca ./src/Main.o
-                0x0000000000004ac4                main
+                0x00000000000059ea      0x3cc ./src/Main.o
+                0x00000000000059ea                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8spinOnceEv
+ .text.main     0x0000000000005db6      0xa4c ./src/Main.o
+                0x0000000000005db6                main
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3logEcPKc
-                0x000000000000538e       0x44 ./src/Main.o
-                0x000000000000538e                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3logEcPKc
+                0x0000000000006802       0x44 ./src/Main.o
+                0x0000000000006802                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE3logEcPKc
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8logerrorEPKc
-                0x00000000000053d2        0xa ./src/Main.o
-                0x00000000000053d2                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8logerrorEPKc
+                0x0000000000006846        0xa ./src/Main.o
+                0x0000000000006846                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE8logerrorEPKc
  .text._ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE7publishEiPKNS_3MsgE
-                0x00000000000053dc      0x102 ./src/Main.o
-                0x00000000000053dc                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE7publishEiPKNS_3MsgE
+                0x0000000000006850      0x102 ./src/Main.o
+                0x0000000000006850                _ZN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EE7publishEiPKNS_3MsgE
  .text._GLOBAL__I__ZN3IMU11SENSOR_SIGNE
-                0x00000000000054de        0xa ./src/Main.o
+                0x0000000000006952        0xa ./src/Main.o
  .text._GLOBAL__D__ZN3IMU11SENSOR_SIGNE
-                0x00000000000054e8        0xa ./src/Main.o
+                0x000000000000695c        0xa ./src/Main.o
  .text._ZN14HardwareSerial9availableEv
-                0x00000000000054f2       0x26 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000054f2                _ZN14HardwareSerial9availableEv
+                0x0000000000006966       0x26 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006966                _ZN14HardwareSerial9availableEv
  .text._ZN14HardwareSerial4peekEv
-                0x0000000000005518       0x38 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005518                _ZN14HardwareSerial4peekEv
+                0x000000000000698c       0x38 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x000000000000698c                _ZN14HardwareSerial4peekEv
  .text._ZN14HardwareSerial4readEv
-                0x0000000000005550       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005550                _ZN14HardwareSerial4readEv
+                0x00000000000069c4       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000000069c4                _ZN14HardwareSerial4readEv
  .text._ZN14HardwareSerial5flushEv
-                0x0000000000005594       0x28 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005594                _ZN14HardwareSerial5flushEv
+                0x0000000000006a08       0x28 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006a08                _ZN14HardwareSerial5flushEv
  .text._ZN14HardwareSerial5writeEh
-                0x00000000000055bc       0x72 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000055bc                _ZN14HardwareSerial5writeEh
+                0x0000000000006a30       0x72 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006a30                _ZN14HardwareSerial5writeEh
  .text._Z10store_charhP11ring_buffer
-                0x000000000000562e       0x34 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x000000000000562e                _Z10store_charhP11ring_buffer
+                0x0000000000006aa2       0x34 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006aa2                _Z10store_charhP11ring_buffer
  .text._Z11serialEventv
-                0x0000000000005662        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005662                _Z11serialEventv
+                0x0000000000006ad6        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006ad6                _Z11serialEventv
  .text.__vector_25
-                0x0000000000005664       0x58 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005664                __vector_25
+                0x0000000000006ad8       0x58 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006ad8                __vector_25
  .text._Z12serialEvent1v
-                0x00000000000056bc        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000056bc                _Z12serialEvent1v
+                0x0000000000006b30        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006b30                _Z12serialEvent1v
  .text.__vector_36
-                0x00000000000056be       0x58 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000056be                __vector_36
+                0x0000000000006b32       0x58 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006b32                __vector_36
  .text._Z12serialEvent2v
-                0x0000000000005716        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005716                _Z12serialEvent2v
+                0x0000000000006b8a        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006b8a                _Z12serialEvent2v
  .text.__vector_51
-                0x0000000000005718       0x58 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005718                __vector_51
+                0x0000000000006b8c       0x58 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006b8c                __vector_51
  .text._Z12serialEvent3v
-                0x0000000000005770        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005770                _Z12serialEvent3v
+                0x0000000000006be4        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006be4                _Z12serialEvent3v
  .text.__vector_54
-                0x0000000000005772       0x58 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005772                __vector_54
+                0x0000000000006be6       0x58 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006be6                __vector_54
  .text._Z14serialEventRunv
-                0x00000000000057ca       0x42 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000057ca                _Z14serialEventRunv
+                0x0000000000006c3e       0x42 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006c3e                _Z14serialEventRunv
  .text.__vector_26
-                0x000000000000580c       0x96 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x000000000000580c                __vector_26
+                0x0000000000006c80       0x96 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006c80                __vector_26
  .text.__vector_37
-                0x00000000000058a2       0x96 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000058a2                __vector_37
+                0x0000000000006d16       0x96 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006d16                __vector_37
  .text.__vector_52
-                0x0000000000005938       0x96 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005938                __vector_52
+                0x0000000000006dac       0x96 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006dac                __vector_52
  .text.__vector_55
-                0x00000000000059ce       0x96 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x00000000000059ce                __vector_55
+                0x0000000000006e42       0x96 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006e42                __vector_55
  .text._ZN14HardwareSerial5beginEm
-                0x0000000000005a64       0xfc /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000005a64                _ZN14HardwareSerial5beginEm
+                0x0000000000006ed8       0xfc /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006ed8                _ZN14HardwareSerial5beginEm
  .text._GLOBAL__I_rx_buffer
-                0x0000000000005b60      0x1ac /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000006fd4      0x1ac /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
  .text._ZN5Print5writeEPKhj
-                0x0000000000005d0c       0x54 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Print.o)
-                0x0000000000005d0c                _ZN5Print5writeEPKhj
+                0x0000000000007180       0x54 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Print.o)
+                0x0000000000007180                _ZN5Print5writeEPKhj
  .text._Z3maplllll
-                0x0000000000005d60       0x92 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(WMath.o)
-                0x0000000000005d60                _Z3maplllll
+                0x00000000000071d4       0x92 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(WMath.o)
+                0x00000000000071d4                _Z3maplllll
  .text.__vector_23
-                0x0000000000005df2       0x90 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
-                0x0000000000005df2                __vector_23
- .text.millis   0x0000000000005e82       0x1c /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
-                0x0000000000005e82                millis
- .text.micros   0x0000000000005e9e       0x4c /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
-                0x0000000000005e9e                micros
- .text.delay    0x0000000000005eea       0x4e /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
-                0x0000000000005eea                delay
+                0x0000000000007266       0x90 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
+                0x0000000000007266                __vector_23
+ .text.millis   0x00000000000072f6       0x1c /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
+                0x00000000000072f6                millis
+ .text.micros   0x0000000000007312       0x4c /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
+                0x0000000000007312                micros
+ .text.delay    0x000000000000735e       0x4e /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
+                0x000000000000735e                delay
  .text.delayMicroseconds
-                0x0000000000005f38       0x14 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
-                0x0000000000005f38                delayMicroseconds
- .text.init     0x0000000000005f4c       0xc4 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
-                0x0000000000005f4c                init
+                0x00000000000073ac       0x14 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
+                0x00000000000073ac                delayMicroseconds
+ .text.init     0x00000000000073c0       0xc4 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
+                0x00000000000073c0                init
  .text.analogRead
-                0x0000000000006010       0x66 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_analog.o)
-                0x0000000000006010                analogRead
+                0x0000000000007484       0x66 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_analog.o)
+                0x0000000000007484                analogRead
  .text.turnOffPWM
-                0x0000000000006076       0xe8 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_digital.o)
- .text.pinMode  0x000000000000615e       0x48 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_digital.o)
-                0x000000000000615e                pinMode
+                0x00000000000074ea       0xe8 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_digital.o)
+ .text.pinMode  0x00000000000075d2       0x48 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_digital.o)
+                0x00000000000075d2                pinMode
  .text.digitalWrite
-                0x00000000000061a6       0x70 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_digital.o)
-                0x00000000000061a6                digitalWrite
+                0x000000000000761a       0x70 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_digital.o)
+                0x000000000000761a                digitalWrite
  .text._ZN7TwoWire9availableEv
-                0x0000000000006216       0x12 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000006216                _ZN7TwoWire9availableEv
+                0x000000000000768a       0x12 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x000000000000768a                _ZN7TwoWire9availableEv
  .text._ZN7TwoWire4readEv
-                0x0000000000006228       0x28 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000006228                _ZN7TwoWire4readEv
+                0x000000000000769c       0x28 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x000000000000769c                _ZN7TwoWire4readEv
  .text._ZN7TwoWire4peekEv
-                0x0000000000006250       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000006250                _ZN7TwoWire4peekEv
+                0x00000000000076c4       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x00000000000076c4                _ZN7TwoWire4peekEv
  .text._ZN7TwoWire5flushEv
-                0x0000000000006270        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000006270                _ZN7TwoWire5flushEv
+                0x00000000000076e4        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x00000000000076e4                _ZN7TwoWire5flushEv
  .text._ZN7TwoWire5writeEPKhj
-                0x0000000000006272       0x64 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000006272                _ZN7TwoWire5writeEPKhj
+                0x00000000000076e6       0x64 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x00000000000076e6                _ZN7TwoWire5writeEPKhj
  .text._ZN7TwoWire5writeEh
-                0x00000000000062d6       0x60 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x00000000000062d6                _ZN7TwoWire5writeEh
+                0x000000000000774a       0x60 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x000000000000774a                _ZN7TwoWire5writeEh
  .text._ZN7TwoWire5beginEv
-                0x0000000000006336       0x16 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000006336                _ZN7TwoWire5beginEv
+                0x00000000000077aa       0x16 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x00000000000077aa                _ZN7TwoWire5beginEv
  .text._ZN7TwoWire11requestFromEhh
-                0x000000000000634c       0x1a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x000000000000634c                _ZN7TwoWire11requestFromEhh
+                0x00000000000077c0       0x1a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x00000000000077c0                _ZN7TwoWire11requestFromEhh
  .text._ZN7TwoWire11requestFromEii
-                0x0000000000006366        0x6 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000006366                _ZN7TwoWire11requestFromEii
+                0x00000000000077da        0x6 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x00000000000077da                _ZN7TwoWire11requestFromEii
  .text._ZN7TwoWire17beginTransmissionEh
-                0x000000000000636c       0x14 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x000000000000636c                _ZN7TwoWire17beginTransmissionEh
+                0x00000000000077e0       0x14 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x00000000000077e0                _ZN7TwoWire17beginTransmissionEh
  .text._ZN7TwoWire17beginTransmissionEi
-                0x0000000000006380        0x6 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000006380                _ZN7TwoWire17beginTransmissionEi
+                0x00000000000077f4        0x6 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x00000000000077f4                _ZN7TwoWire17beginTransmissionEi
  .text._ZN7TwoWire15endTransmissionEv
-                0x0000000000006386       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000006386                _ZN7TwoWire15endTransmissionEv
+                0x00000000000077fa       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x00000000000077fa                _ZN7TwoWire15endTransmissionEv
  .text._GLOBAL__I__ZN7TwoWire8rxBufferE
-                0x00000000000063a6       0x2e /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x000000000000781a       0x2e /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
  .text._ZL17handle_interrupts18timer16_Sequence_tPVjS1_
-                0x00000000000063d4      0x18e /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x0000000000007848      0x18e /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
  .text.__vector_17
-                0x0000000000006562       0x5a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
-                0x0000000000006562                __vector_17
+                0x00000000000079d6       0x5a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x00000000000079d6                __vector_17
  .text.__vector_32
-                0x00000000000065bc       0x5a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
-                0x00000000000065bc                __vector_32
+                0x0000000000007a30       0x5a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x0000000000007a30                __vector_32
  .text.__vector_42
-                0x0000000000006616       0x5a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
-                0x0000000000006616                __vector_42
+                0x0000000000007a8a       0x5a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x0000000000007a8a                __vector_42
  .text.__vector_47
-                0x0000000000006670       0x5a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
-                0x0000000000006670                __vector_47
+                0x0000000000007ae4       0x5a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x0000000000007ae4                __vector_47
  .text._ZN5ServoC2Ev
-                0x00000000000066ca       0x34 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
-                0x00000000000066ca                _ZN5ServoC2Ev
-                0x00000000000066ca                _ZN5ServoC1Ev
+                0x0000000000007b3e       0x34 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x0000000000007b3e                _ZN5ServoC2Ev
+                0x0000000000007b3e                _ZN5ServoC1Ev
  .text._ZN5Servo17writeMicrosecondsEi
-                0x00000000000066fe       0x8a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
-                0x00000000000066fe                _ZN5Servo17writeMicrosecondsEi
+                0x0000000000007b72       0x8a /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x0000000000007b72                _ZN5Servo17writeMicrosecondsEi
  .text._ZN5Servo5writeEi
-                0x0000000000006788       0xc8 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
-                0x0000000000006788                _ZN5Servo5writeEi
+                0x0000000000007bfc       0xc8 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x0000000000007bfc                _ZN5Servo5writeEi
  .text._ZN5Servo16readMicrosecondsEv
-                0x0000000000006850       0x3e /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
-                0x0000000000006850                _ZN5Servo16readMicrosecondsEv
+                0x0000000000007cc4       0x3e /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x0000000000007cc4                _ZN5Servo16readMicrosecondsEv
  .text._ZN5Servo4readEv
-                0x000000000000688e       0xb2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
-                0x000000000000688e                _ZN5Servo4readEv
+                0x0000000000007d02       0xb2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x0000000000007d02                _ZN5Servo4readEv
  .text._ZN8SPIClass5beginEv
-                0x0000000000006940       0x3e /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(SPI.o)
-                0x0000000000006940                _ZN8SPIClass5beginEv
+                0x0000000000007db4       0x3e /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(SPI.o)
+                0x0000000000007db4                _ZN8SPIClass5beginEv
  .text._ZN8SPIClass11setBitOrderEh
-                0x000000000000697e       0x12 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(SPI.o)
-                0x000000000000697e                _ZN8SPIClass11setBitOrderEh
+                0x0000000000007df2       0x12 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(SPI.o)
+                0x0000000000007df2                _ZN8SPIClass11setBitOrderEh
  .text.twi_init
-                0x0000000000006990       0x32 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
-                0x0000000000006990                twi_init
+                0x0000000000007e04       0x32 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000007e04                twi_init
  .text.twi_readFrom
-                0x00000000000069c2       0x6c /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
-                0x00000000000069c2                twi_readFrom
+                0x0000000000007e36       0x6c /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000007e36                twi_readFrom
  .text.twi_writeTo
-                0x0000000000006a2e       0x80 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
-                0x0000000000006a2e                twi_writeTo
+                0x0000000000007ea2       0x80 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000007ea2                twi_writeTo
  .text.twi_transmit
-                0x0000000000006aae       0x34 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
-                0x0000000000006aae                twi_transmit
+                0x0000000000007f22       0x34 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000007f22                twi_transmit
  .text.twi_reply
-                0x0000000000006ae2       0x10 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
-                0x0000000000006ae2                twi_reply
+                0x0000000000007f56       0x10 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000007f56                twi_reply
  .text.twi_stop
-                0x0000000000006af2       0x14 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
-                0x0000000000006af2                twi_stop
+                0x0000000000007f66       0x14 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000007f66                twi_stop
  .text.twi_releaseBus
-                0x0000000000006b06        0xc /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
-                0x0000000000006b06                twi_releaseBus
+                0x0000000000007f7a        0xc /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000007f7a                twi_releaseBus
  .text.__vector_39
-                0x0000000000006b12      0x2b4 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
-                0x0000000000006b12                __vector_39
+                0x0000000000007f86      0x2b4 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000007f86                __vector_39
  .text.avr-libc
-                0x0000000000006dc6      0x266 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(malloc.o)
-                0x0000000000006dc6                malloc
-                0x0000000000006efa                free
+                0x000000000000823a      0x266 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(malloc.o)
+                0x000000000000823a                malloc
+                0x000000000000836e                free
  .text.avr-libc
-                0x000000000000702c      0x1b2 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(realloc.o)
-                0x000000000000702c                realloc
+                0x00000000000084a0      0x1b2 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(realloc.o)
+                0x00000000000084a0                realloc
  .text.avr-libc
-                0x00000000000071de        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(exit.o)
-                0x00000000000071de                exit
+                0x0000000000008652        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(exit.o)
+                0x0000000000008652                exit
  .text.avr-libc
-                0x00000000000071e4       0x12 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(memcpy.o)
-                0x00000000000071e4                memcpy
+                0x0000000000008658       0x12 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(memcpy.o)
+                0x0000000000008658                memcpy
  .text.avr-libc.fplib
-                0x00000000000071f6        0xa /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(addsf3.o)
-                0x00000000000071f6                __subsf3
-                0x00000000000071f8                __addsf3
+                0x000000000000866a        0xa /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(addsf3.o)
+                0x000000000000866a                __subsf3
+                0x000000000000866c                __addsf3
  .text.avr-libc.fplib
-                0x0000000000007200       0xc0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(addsf3x.o)
-                0x000000000000721a                __addsf3x
+                0x0000000000008674       0xc0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(addsf3x.o)
+                0x000000000000868e                __addsf3x
  .text.avr-libc.fplib
-                0x00000000000072c0        0x8 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cmpsf2.o)
-                0x00000000000072c0                __lesf2
-                0x00000000000072c0                __nesf2
-                0x00000000000072c0                __eqsf2
-                0x00000000000072c0                __cmpsf2
-                0x00000000000072c0                __ltsf2
+                0x0000000000008734       0x2e /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(asin.o)
+                0x0000000000008734                asin
  .text.avr-libc.fplib
-                0x00000000000072c8        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(divsf3.o)
-                0x00000000000072c8                __divsf3
+                0x0000000000008762       0x74 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan2.o)
+                0x0000000000008780                atan2
  .text.avr-libc.fplib
-                0x00000000000072cc       0xcc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(divsf3x.o)
-                0x00000000000072e2                __divsf3x
-                0x00000000000072e6                __divsf3_pse
+                0x00000000000087d6       0x50 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(atan.o)
+                0x00000000000087d6                atan
  .text.avr-libc.fplib
-                0x0000000000007398        0xa /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fixsfsi.o)
-                0x0000000000007398                __fixsfsi
+                0x0000000000008826        0x8 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cmpsf2.o)
+                0x0000000000008826                __lesf2
+                0x0000000000008826                __nesf2
+                0x0000000000008826                __eqsf2
+                0x0000000000008826                __cmpsf2
+                0x0000000000008826                __ltsf2
  .text.avr-libc.fplib
-                0x00000000000073a2       0x58 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fixunssfsi.o)
-                0x00000000000073a2                __fixunssfsi
+                0x000000000000882e        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(cos.o)
+                0x000000000000882e                cos
  .text.avr-libc.fplib
-                0x00000000000073fa       0x7a /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(floatsisf.o)
-                0x00000000000073fa                __floatunsisf
-                0x00000000000073fe                __floatsisf
+                0x0000000000008834        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(divsf3.o)
+                0x0000000000008834                __divsf3
  .text.avr-libc.fplib
-                0x0000000000007474       0x48 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_cmp.o)
-                0x0000000000007474                __fp_cmp
+                0x0000000000008838       0xcc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(divsf3x.o)
+                0x000000000000884e                __divsf3x
+                0x0000000000008852                __divsf3_pse
  .text.avr-libc.fplib
-                0x00000000000074bc        0xc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_inf.o)
-                0x00000000000074bc                __fp_inf
+                0x0000000000008904        0xa /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fixsfsi.o)
+                0x0000000000008904                __fixsfsi
  .text.avr-libc.fplib
-                0x00000000000074c8        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_nan.o)
-                0x00000000000074c8                __fp_nan
+                0x000000000000890e       0x58 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fixunssfsi.o)
+                0x000000000000890e                __fixunssfsi
  .text.avr-libc.fplib
-                0x00000000000074ce        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_pscA.o)
-                0x00000000000074ce                __fp_pscA
+                0x0000000000008966       0x7a /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(floatsisf.o)
+                0x0000000000008966                __floatunsisf
+                0x000000000000896a                __floatsisf
  .text.avr-libc.fplib
-                0x00000000000074dc        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_pscB.o)
-                0x00000000000074dc                __fp_pscB
+                0x00000000000089e0       0x36 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_arccos.o)
+                0x00000000000089e0                __fp_arccos
  .text.avr-libc.fplib
-                0x00000000000074ea       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_round.o)
-                0x00000000000074ea                __fp_round
+                0x0000000000008a16       0x48 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_cmp.o)
+                0x0000000000008a16                __fp_cmp
  .text.avr-libc.fplib
-                0x000000000000750c       0x44 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_split3.o)
-                0x000000000000750c                __fp_split3
-                0x000000000000751c                __fp_splitA
+                0x0000000000008a5e        0xc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_inf.o)
+                0x0000000000008a5e                __fp_inf
  .text.avr-libc.fplib
-                0x0000000000007550        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_zero.o)
-                0x0000000000007550                __fp_zero
-                0x0000000000007552                __fp_szero
+                0x0000000000008a6a        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_nan.o)
+                0x0000000000008a6a                __fp_nan
  .text.avr-libc.fplib
-                0x000000000000755e        0x8 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(gesf2.o)
-                0x000000000000755e                __gtsf2
-                0x000000000000755e                __gesf2
+                0x0000000000008a70       0x4a /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powser.o)
+                0x0000000000008a70                __fp_powser
  .text.avr-libc.fplib
-                0x0000000000007566        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(mulsf3.o)
-                0x0000000000007566                __mulsf3
+                0x0000000000008aba       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_powsodd.o)
+                0x0000000000008aba                __fp_powsodd
  .text.avr-libc.fplib
-                0x000000000000756a       0xc2 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(mulsf3x.o)
-                0x000000000000757e                __mulsf3x
-                0x0000000000007582                __mulsf3_pse
- .text.libgcc   0x000000000000762c       0x3e /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_mulsi3.o)
-                0x000000000000762c                __mulsi3
- .text.libgcc   0x000000000000766a       0x28 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodhi4.o)
-                0x000000000000766a                __udivmodhi4
- .text.libgcc   0x0000000000007692       0x26 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodhi4.o)
-                0x0000000000007692                __divmodhi4
-                0x0000000000007692                _div
- .text.libgcc   0x00000000000076b8       0x44 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodsi4.o)
-                0x00000000000076b8                __udivmodsi4
- .text.libgcc   0x00000000000076fc       0x36 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodsi4.o)
-                0x00000000000076fc                __divmodsi4
- .text.libgcc   0x0000000000007732        0x8 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_tablejump_elpm.o)
-                0x0000000000007732                __tablejump_elpm__
-                0x000000000000773a                . = ALIGN (0x2)
+                0x0000000000008adc        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_pscA.o)
+                0x0000000000008adc                __fp_pscA
+ .text.avr-libc.fplib
+                0x0000000000008aea        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_pscB.o)
+                0x0000000000008aea                __fp_pscB
+ .text.avr-libc.fplib
+                0x0000000000008af8       0x50 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_rempio2.o)
+                0x0000000000008afa                __fp_rempio2
+ .text.avr-libc.fplib
+                0x0000000000008b48       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_round.o)
+                0x0000000000008b48                __fp_round
+ .text.avr-libc.fplib
+                0x0000000000008b6a       0x22 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_sinus.o)
+                0x0000000000008b6a                __fp_sinus
+ .text.avr-libc.fplib
+                0x0000000000008b8c       0x44 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_split3.o)
+                0x0000000000008b8c                __fp_split3
+                0x0000000000008b9c                __fp_splitA
+ .text.avr-libc.fplib
+                0x0000000000008bd0        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_zero.o)
+                0x0000000000008bd0                __fp_zero
+                0x0000000000008bd2                __fp_szero
+ .text.avr-libc.fplib
+                0x0000000000008bde        0x8 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(gesf2.o)
+                0x0000000000008bde                __gtsf2
+                0x0000000000008bde                __gesf2
+ .text.avr-libc.fplib
+                0x0000000000008be6        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(inverse.o)
+                0x0000000000008be6                inverse
+ .text.avr-libc.fplib
+                0x0000000000008bf4        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(mulsf3.o)
+                0x0000000000008bf4                __mulsf3
+ .text.avr-libc.fplib
+                0x0000000000008bf8       0xc2 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(mulsf3x.o)
+                0x0000000000008c0c                __mulsf3x
+                0x0000000000008c10                __mulsf3_pse
+ .text.avr-libc.fplib
+                0x0000000000008cba        0xc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sin.o)
+                0x0000000000008cba                sin
+ .text.avr-libc.fplib
+                0x0000000000008cc6       0x84 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sqrt.o)
+                0x0000000000008cce                sqrt
+ .text.avr-libc.fplib
+                0x0000000000008d4a        0x6 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(square.o)
+                0x0000000000008d4a                square
+ .text.avr-libc.fplib
+                0x0000000000008d50       0x1c /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_mpack.o)
+                0x0000000000008d50                __fp_mpack
+                0x0000000000008d54                __fp_mpack_finite
+ .text.avr-libc.fplib
+                0x0000000000008d6c        0xe /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(fp_norm2.o)
+                0x0000000000008d6c                __fp_norm2
+ .text.libgcc   0x0000000000008d7a       0x3e /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_mulsi3.o)
+                0x0000000000008d7a                __mulsi3
+ .text.libgcc   0x0000000000008db8       0x28 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodhi4.o)
+                0x0000000000008db8                __udivmodhi4
+ .text.libgcc   0x0000000000008de0       0x26 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodhi4.o)
+                0x0000000000008de0                __divmodhi4
+                0x0000000000008de0                _div
+ .text.libgcc   0x0000000000008e06       0x44 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_udivmodsi4.o)
+                0x0000000000008e06                __udivmodsi4
+ .text.libgcc   0x0000000000008e4a       0x36 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_divmodsi4.o)
+                0x0000000000008e4a                __divmodsi4
+ .text.libgcc   0x0000000000008e80        0x8 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_tablejump_elpm.o)
+                0x0000000000008e80                __tablejump_elpm__
+                0x0000000000008e88                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000000000773a        0x0 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
-                0x000000000000773a                _exit
+ .fini9         0x0000000000008e88        0x0 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
+                0x0000000000008e88                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
  *(.fini7)
  *(.fini7)
  *(.fini6)
- .fini6         0x000000000000773a       0x20 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_dtors.o)
-                0x000000000000773a                __do_global_dtors
+ .fini6         0x0000000000008e88       0x20 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_dtors.o)
+                0x0000000000008e88                __do_global_dtors
  *(.fini6)
  *(.fini5)
  *(.fini5)
@@ -2189,11 +2181,11 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000000000775a        0x4 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
+ .fini0         0x0000000000008ea8        0x4 /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a(_exit.o)
  *(.fini0)
-                0x000000000000775e                _etext = .
+                0x0000000000008eac                _etext = .
 
-.data           0x0000000000800200      0x45c load address 0x000000000000775e
+.data           0x0000000000800200      0x4a8 load address 0x0000000000008eac
                 0x0000000000800200                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800200      0x333 ./src/Main.o
@@ -2205,327 +2197,382 @@ LOAD /usr/lib/gcc/avr/4.5.3/avr6/libgcc.a
  .data._ZN3IMU11SENSOR_SIGNE
                 0x0000000000800539       0x12 ./src/Main.o
                 0x0000000000800539                _ZN3IMU11SENSOR_SIGNE
- .data.frameid  0x000000000080054b        0xa ./src/Main.o
-                0x000000000080054b                frameid
+ .data._ZN3IMU4G_DtE
+                0x000000000080054b        0x4 ./src/Main.o
+                0x000000000080054b                _ZN3IMU4G_DtE
+ .data._ZN3IMU10DCM_MatrixE
+                0x000000000080054f       0x24 ./src/Main.o
+                0x000000000080054f                _ZN3IMU10DCM_MatrixE
+ .data._ZN3IMU13Update_MatrixE
+                0x0000000000800573       0x24 ./src/Main.o
+                0x0000000000800573                _ZN3IMU13Update_MatrixE
+ .data.frameid  0x0000000000800597        0xa ./src/Main.o
+                0x0000000000800597                frameid
  .data.analog_reference
-                0x0000000000800555        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_analog.o)
-                0x0000000000800555                analog_reference
+                0x00000000008005a1        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring_analog.o)
+                0x00000000008005a1                analog_reference
  *(.rodata)
  *(.rodata*)
  .rodata._ZTVN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EEE
-                0x0000000000800556        0xa ./src/Main.o
-                0x0000000000800556                _ZTVN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EEE
+                0x00000000008005a2        0xa ./src/Main.o
+                0x00000000008005a2                _ZTVN3ros11NodeHandle_I15ArduinoHardwareLi25ELi25ELi512ELi512EEE
  .rodata._ZTVN14rosserial_msgs9TopicInfoE
-                0x0000000000800560        0xc ./src/Main.o
-                0x0000000000800560                _ZTVN14rosserial_msgs9TopicInfoE
- .rodata._ZTVN8std_msgs4TimeE
-                0x000000000080056c        0xc ./src/Main.o
-                0x000000000080056c                _ZTVN8std_msgs4TimeE
- .rodata._ZTVN14rosserial_msgs3LogE
-                0x0000000000800578        0xc ./src/Main.o
-                0x0000000000800578                _ZTVN14rosserial_msgs3LogE
- .rodata._ZTVN14rosserial_msgs20RequestParamResponseE
-                0x0000000000800584        0xc ./src/Main.o
-                0x0000000000800584                _ZTVN14rosserial_msgs20RequestParamResponseE
- .rodata._ZN14rosserial_msgsL12REQUESTPARAME
-                0x0000000000800590       0x1c ./src/Main.o
- .rodata._ZTVN10rover_msgs7EnabledE
                 0x00000000008005ac        0xc ./src/Main.o
-                0x00000000008005ac                _ZTVN10rover_msgs7EnabledE
- .rodata._ZTVN10rover_msgs7EncoderE
+                0x00000000008005ac                _ZTVN14rosserial_msgs9TopicInfoE
+ .rodata._ZTVN8std_msgs4TimeE
                 0x00000000008005b8        0xc ./src/Main.o
-                0x00000000008005b8                _ZTVN10rover_msgs7EncoderE
- .rodata._ZTVN8std_msgs6HeaderE
+                0x00000000008005b8                _ZTVN8std_msgs4TimeE
+ .rodata._ZTVN14rosserial_msgs3LogE
                 0x00000000008005c4        0xc ./src/Main.o
-                0x00000000008005c4                _ZTVN8std_msgs6HeaderE
- .rodata._ZTVN10rover_msgs7BatteryE
+                0x00000000008005c4                _ZTVN14rosserial_msgs3LogE
+ .rodata._ZTVN14rosserial_msgs20RequestParamResponseE
                 0x00000000008005d0        0xc ./src/Main.o
-                0x00000000008005d0                _ZTVN10rover_msgs7BatteryE
+                0x00000000008005d0                _ZTVN14rosserial_msgs20RequestParamResponseE
+ .rodata._ZN14rosserial_msgsL12REQUESTPARAME
+                0x00000000008005dc       0x1c ./src/Main.o
+ .rodata._ZTVN10rover_msgs7EnabledE
+                0x00000000008005f8        0xc ./src/Main.o
+                0x00000000008005f8                _ZTVN10rover_msgs7EnabledE
+ .rodata._ZTVN10rover_msgs7EncoderE
+                0x0000000000800604        0xc ./src/Main.o
+                0x0000000000800604                _ZTVN10rover_msgs7EncoderE
+ .rodata._ZTVN8std_msgs6HeaderE
+                0x0000000000800610        0xc ./src/Main.o
+                0x0000000000800610                _ZTVN8std_msgs6HeaderE
+ .rodata._ZTVN10rover_msgs7BatteryE
+                0x000000000080061c        0xc ./src/Main.o
+                0x000000000080061c                _ZTVN10rover_msgs7BatteryE
  .rodata._ZTVN10rover_msgs12CondensedIMUE
-                0x00000000008005dc        0xc ./src/Main.o
-                0x00000000008005dc                _ZTVN10rover_msgs12CondensedIMUE
+                0x0000000000800628        0xc ./src/Main.o
+                0x0000000000800628                _ZTVN10rover_msgs12CondensedIMUE
  .rodata._ZTVN8std_msgs15UInt8MultiArrayE
-                0x00000000008005e8        0xc ./src/Main.o
-                0x00000000008005e8                _ZTVN8std_msgs15UInt8MultiArrayE
+                0x0000000000800634        0xc ./src/Main.o
+                0x0000000000800634                _ZTVN8std_msgs15UInt8MultiArrayE
  .rodata._ZTVN8std_msgs16MultiArrayLayoutE
-                0x00000000008005f4        0xc ./src/Main.o
-                0x00000000008005f4                _ZTVN8std_msgs16MultiArrayLayoutE
+                0x0000000000800640        0xc ./src/Main.o
+                0x0000000000800640                _ZTVN8std_msgs16MultiArrayLayoutE
  .rodata._ZTVN8std_msgs19MultiArrayDimensionE
-                0x0000000000800600        0xc ./src/Main.o
-                0x0000000000800600                _ZTVN8std_msgs19MultiArrayDimensionE
+                0x000000000080064c        0xc ./src/Main.o
+                0x000000000080064c                _ZTVN8std_msgs19MultiArrayDimensionE
  .rodata._ZTVN3ros10SubscriberIN10rover_msgs6MotorsEEE
-                0x000000000080060c        0xc ./src/Main.o
-                0x000000000080060c                _ZTVN3ros10SubscriberIN10rover_msgs6MotorsEEE
+                0x0000000000800658        0xc ./src/Main.o
+                0x0000000000800658                _ZTVN3ros10SubscriberIN10rover_msgs6MotorsEEE
  .rodata._ZTVN10rover_msgs6MotorsE
-                0x0000000000800618        0xc ./src/Main.o
-                0x0000000000800618                _ZTVN10rover_msgs6MotorsE
+                0x0000000000800664        0xc ./src/Main.o
+                0x0000000000800664                _ZTVN10rover_msgs6MotorsE
  .rodata._ZTVN3ros10SubscriberIN10rover_msgs7EnabledEEE
-                0x0000000000800624        0xc ./src/Main.o
-                0x0000000000800624                _ZTVN3ros10SubscriberIN10rover_msgs7EnabledEEE
+                0x0000000000800670        0xc ./src/Main.o
+                0x0000000000800670                _ZTVN3ros10SubscriberIN10rover_msgs7EnabledEEE
  .rodata._ZTVN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEEE
-                0x0000000000800630        0xc ./src/Main.o
-                0x0000000000800630                _ZTVN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEEE
+                0x000000000080067c        0xc ./src/Main.o
+                0x000000000080067c                _ZTVN3ros10SubscriberIN8std_msgs15UInt8MultiArrayEEE
  .rodata._ZTV14HardwareSerial
-                0x000000000080063c       0x10 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x000000000080063c                _ZTV14HardwareSerial
+                0x0000000000800688       0x10 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800688                _ZTV14HardwareSerial
  .rodata._ZTV7TwoWire
-                0x000000000080064c       0x10 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x000000000080064c                _ZTV7TwoWire
+                0x0000000000800698       0x10 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x0000000000800698                _ZTV7TwoWire
  *(.gnu.linkonce.d*)
-                0x000000000080065c                . = ALIGN (0x2)
-                0x000000000080065c                _edata = .
-                0x000000000080065c                PROVIDE (__data_end, .)
+                0x00000000008006a8                . = ALIGN (0x2)
+                0x00000000008006a8                _edata = .
+                0x00000000008006a8                PROVIDE (__data_end, .)
 
-.bss            0x000000000080065c      0xb07
-                0x000000000080065c                PROVIDE (__bss_start, .)
+.bss            0x00000000008006a8      0xba1
+                0x00000000008006a8                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss._ZN11FlexiTimer210time_unitsE
-                0x000000000080065c        0x4 ./src/lib/utilities/FlexiTimer2.o
-                0x000000000080065c                _ZN11FlexiTimer210time_unitsE
+                0x00000000008006a8        0x4 ./src/lib/utilities/FlexiTimer2.o
+                0x00000000008006a8                _ZN11FlexiTimer210time_unitsE
  .bss._ZN11FlexiTimer24funcE
-                0x0000000000800660        0x2 ./src/lib/utilities/FlexiTimer2.o
-                0x0000000000800660                _ZN11FlexiTimer24funcE
+                0x00000000008006ac        0x2 ./src/lib/utilities/FlexiTimer2.o
+                0x00000000008006ac                _ZN11FlexiTimer24funcE
  .bss._ZN11FlexiTimer25countE
-                0x0000000000800662        0x4 ./src/lib/utilities/FlexiTimer2.o
-                0x0000000000800662                _ZN11FlexiTimer25countE
+                0x00000000008006ae        0x4 ./src/lib/utilities/FlexiTimer2.o
+                0x00000000008006ae                _ZN11FlexiTimer25countE
  .bss._ZN11FlexiTimer211overflowingE
-                0x0000000000800666        0x1 ./src/lib/utilities/FlexiTimer2.o
-                0x0000000000800666                _ZN11FlexiTimer211overflowingE
+                0x00000000008006b2        0x1 ./src/lib/utilities/FlexiTimer2.o
+                0x00000000008006b2                _ZN11FlexiTimer211overflowingE
  .bss._ZN3IMU5timerE
-                0x0000000000800667        0x4 ./src/Main.o
-                0x0000000000800667                _ZN3IMU5timerE
- .bss._ZN3IMU2ANE
-                0x000000000080066b        0xc ./src/Main.o
-                0x000000000080066b                _ZN3IMU2ANE
- .bss._ZN3IMU9AN_OFFSETE
-                0x0000000000800677        0xc ./src/Main.o
-                0x0000000000800677                _ZN3IMU9AN_OFFSETE
- .bss._ZN3IMU6gyro_xE
-                0x0000000000800683        0x2 ./src/Main.o
-                0x0000000000800683                _ZN3IMU6gyro_xE
- .bss._ZN3IMU6gyro_yE
-                0x0000000000800685        0x2 ./src/Main.o
-                0x0000000000800685                _ZN3IMU6gyro_yE
- .bss._ZN3IMU6gyro_zE
-                0x0000000000800687        0x2 ./src/Main.o
-                0x0000000000800687                _ZN3IMU6gyro_zE
- .bss._ZN3IMU7accel_xE
-                0x0000000000800689        0x2 ./src/Main.o
-                0x0000000000800689                _ZN3IMU7accel_xE
- .bss._ZN3IMU7accel_yE
-                0x000000000080068b        0x2 ./src/Main.o
-                0x000000000080068b                _ZN3IMU7accel_yE
- .bss._ZN3IMU7accel_zE
-                0x000000000080068d        0x2 ./src/Main.o
-                0x000000000080068d                _ZN3IMU7accel_zE
- .bss._ZN3IMU11MAG_HeadingE
-                0x000000000080068f        0x4 ./src/Main.o
-                0x000000000080068f                _ZN3IMU11MAG_HeadingE
- .bss._ZN3IMU12Accel_VectorE
-                0x0000000000800693        0xc ./src/Main.o
-                0x0000000000800693                _ZN3IMU12Accel_VectorE
- .bss._ZN3IMU11Gyro_VectorE
-                0x000000000080069f        0xc ./src/Main.o
-                0x000000000080069f                _ZN3IMU11Gyro_VectorE
- .bss._ZN3IMU4rollE
-                0x00000000008006ab        0x4 ./src/Main.o
-                0x00000000008006ab                _ZN3IMU4rollE
- .bss._ZN3IMU5pitchE
-                0x00000000008006af        0x4 ./src/Main.o
-                0x00000000008006af                _ZN3IMU5pitchE
- .bss._ZN3IMU3yawE
                 0x00000000008006b3        0x4 ./src/Main.o
-                0x00000000008006b3                _ZN3IMU3yawE
+                0x00000000008006b3                _ZN3IMU5timerE
+ .bss._ZN3IMU9timer_oldE
+                0x00000000008006b7        0x4 ./src/Main.o
+                0x00000000008006b7                _ZN3IMU9timer_oldE
+ .bss._ZN3IMU2ANE
+                0x00000000008006bb        0xc ./src/Main.o
+                0x00000000008006bb                _ZN3IMU2ANE
+ .bss._ZN3IMU9AN_OFFSETE
+                0x00000000008006c7        0xc ./src/Main.o
+                0x00000000008006c7                _ZN3IMU9AN_OFFSETE
+ .bss._ZN3IMU6gyro_xE
+                0x00000000008006d3        0x2 ./src/Main.o
+                0x00000000008006d3                _ZN3IMU6gyro_xE
+ .bss._ZN3IMU6gyro_yE
+                0x00000000008006d5        0x2 ./src/Main.o
+                0x00000000008006d5                _ZN3IMU6gyro_yE
+ .bss._ZN3IMU6gyro_zE
+                0x00000000008006d7        0x2 ./src/Main.o
+                0x00000000008006d7                _ZN3IMU6gyro_zE
+ .bss._ZN3IMU7accel_xE
+                0x00000000008006d9        0x2 ./src/Main.o
+                0x00000000008006d9                _ZN3IMU7accel_xE
+ .bss._ZN3IMU7accel_yE
+                0x00000000008006db        0x2 ./src/Main.o
+                0x00000000008006db                _ZN3IMU7accel_yE
+ .bss._ZN3IMU7accel_zE
+                0x00000000008006dd        0x2 ./src/Main.o
+                0x00000000008006dd                _ZN3IMU7accel_zE
+ .bss._ZN3IMU10magnetom_xE
+                0x00000000008006df        0x2 ./src/Main.o
+                0x00000000008006df                _ZN3IMU10magnetom_xE
+ .bss._ZN3IMU10magnetom_yE
+                0x00000000008006e1        0x2 ./src/Main.o
+                0x00000000008006e1                _ZN3IMU10magnetom_yE
+ .bss._ZN3IMU10magnetom_zE
+                0x00000000008006e3        0x2 ./src/Main.o
+                0x00000000008006e3                _ZN3IMU10magnetom_zE
+ .bss._ZN3IMU12c_magnetom_xE
+                0x00000000008006e5        0x4 ./src/Main.o
+                0x00000000008006e5                _ZN3IMU12c_magnetom_xE
+ .bss._ZN3IMU12c_magnetom_yE
+                0x00000000008006e9        0x4 ./src/Main.o
+                0x00000000008006e9                _ZN3IMU12c_magnetom_yE
+ .bss._ZN3IMU12c_magnetom_zE
+                0x00000000008006ed        0x4 ./src/Main.o
+                0x00000000008006ed                _ZN3IMU12c_magnetom_zE
+ .bss._ZN3IMU11MAG_HeadingE
+                0x00000000008006f1        0x4 ./src/Main.o
+                0x00000000008006f1                _ZN3IMU11MAG_HeadingE
+ .bss._ZN3IMU12Accel_VectorE
+                0x00000000008006f5        0xc ./src/Main.o
+                0x00000000008006f5                _ZN3IMU12Accel_VectorE
+ .bss._ZN3IMU11Gyro_VectorE
+                0x0000000000800701        0xc ./src/Main.o
+                0x0000000000800701                _ZN3IMU11Gyro_VectorE
+ .bss._ZN3IMU12Omega_VectorE
+                0x000000000080070d        0xc ./src/Main.o
+                0x000000000080070d                _ZN3IMU12Omega_VectorE
+ .bss._ZN3IMU7Omega_PE
+                0x0000000000800719        0xc ./src/Main.o
+                0x0000000000800719                _ZN3IMU7Omega_PE
+ .bss._ZN3IMU7Omega_IE
+                0x0000000000800725        0xc ./src/Main.o
+                0x0000000000800725                _ZN3IMU7Omega_IE
+ .bss._ZN3IMU5OmegaE
+                0x0000000000800731        0xc ./src/Main.o
+                0x0000000000800731                _ZN3IMU5OmegaE
+ .bss._ZN3IMU4rollE
+                0x000000000080073d        0x4 ./src/Main.o
+                0x000000000080073d                _ZN3IMU4rollE
+ .bss._ZN3IMU5pitchE
+                0x0000000000800741        0x4 ./src/Main.o
+                0x0000000000800741                _ZN3IMU5pitchE
+ .bss._ZN3IMU3yawE
+                0x0000000000800745        0x4 ./src/Main.o
+                0x0000000000800745                _ZN3IMU3yawE
+ .bss._ZN3IMU14errorRollPitchE
+                0x0000000000800749        0xc ./src/Main.o
+                0x0000000000800749                _ZN3IMU14errorRollPitchE
+ .bss._ZN3IMU8errorYawE
+                0x0000000000800755        0xc ./src/Main.o
+                0x0000000000800755                _ZN3IMU8errorYawE
  .bss._ZN3IMU7counterE
-                0x00000000008006b7        0x2 ./src/Main.o
-                0x00000000008006b7                _ZN3IMU7counterE
+                0x0000000000800761        0x2 ./src/Main.o
+                0x0000000000800761                _ZN3IMU7counterE
+ .bss._ZN3IMU16Temporary_MatrixE
+                0x0000000000800763       0x24 ./src/Main.o
+                0x0000000000800763                _ZN3IMU16Temporary_MatrixE
  .bss._ZN3IMU4gyroE
-                0x00000000008006b9        0xc ./src/Main.o
-                0x00000000008006b9                _ZN3IMU4gyroE
+                0x0000000000800787        0xc ./src/Main.o
+                0x0000000000800787                _ZN3IMU4gyroE
  .bss._ZN3IMU7compassE
-                0x00000000008006c5       0x32 ./src/Main.o
-                0x00000000008006c5                _ZN3IMU7compassE
- .bss.nexTime   0x00000000008006f7        0x4 ./src/Main.o
-                0x00000000008006f7                nexTime
- .bss.cTime     0x00000000008006fb        0x4 ./src/Main.o
-                0x00000000008006fb                cTime
- .bss.ledTime   0x00000000008006ff        0x4 ./src/Main.o
-                0x00000000008006ff                ledTime
- .bss.ctrl      0x0000000000800703       0x6c ./src/Main.o
-                0x0000000000800703                ctrl
- .bss.sb        0x000000000080076f        0x8 ./src/Main.o
-                0x000000000080076f                sb
- .bss.m         0x0000000000800777        0x2 ./src/Main.o
-                0x0000000000800777                m
+                0x0000000000800793       0x32 ./src/Main.o
+                0x0000000000800793                _ZN3IMU7compassE
+ .bss.nexTime   0x00000000008007c5        0x4 ./src/Main.o
+                0x00000000008007c5                nexTime
+ .bss.cTime     0x00000000008007c9        0x4 ./src/Main.o
+                0x00000000008007c9                cTime
+ .bss.ledTime   0x00000000008007cd        0x4 ./src/Main.o
+                0x00000000008007cd                ledTime
+ .bss.ctrl      0x00000000008007d1       0x6c ./src/Main.o
+                0x00000000008007d1                ctrl
+ .bss.sb        0x000000000080083d        0x8 ./src/Main.o
+                0x000000000080083d                sb
+ .bss.m         0x0000000000800845        0x2 ./src/Main.o
+                0x0000000000800845                m
  .bss.motorRelay
-                0x0000000000800779        0x5 ./src/Main.o
-                0x0000000000800779                motorRelay
- .bss.nh        0x000000000080077e      0x4a5 ./src/Main.o
-                0x000000000080077e                nh
+                0x0000000000800847        0x5 ./src/Main.o
+                0x0000000000800847                motorRelay
+ .bss.nh        0x000000000080084c      0x4a5 ./src/Main.o
+                0x000000000080084c                nh
  .bss.enablemsg
-                0x0000000000800c23        0x4 ./src/Main.o
-                0x0000000000800c23                enablemsg
+                0x0000000000800cf1        0x4 ./src/Main.o
+                0x0000000000800cf1                enablemsg
  .bss.enablepub
-                0x0000000000800c27        0xa ./src/Main.o
-                0x0000000000800c27                enablepub
- .bss.encdata   0x0000000000800c31       0x32 ./src/Main.o
-                0x0000000000800c31                encdata
- .bss.encpub    0x0000000000800c63        0xa ./src/Main.o
-                0x0000000000800c63                encpub
+                0x0000000000800cf5        0xa ./src/Main.o
+                0x0000000000800cf5                enablepub
+ .bss.encdata   0x0000000000800cff       0x32 ./src/Main.o
+                0x0000000000800cff                encdata
+ .bss.encpub    0x0000000000800d31        0xa ./src/Main.o
+                0x0000000000800d31                encpub
  .bss.batterydata
-                0x0000000000800c6d       0x1a ./src/Main.o
-                0x0000000000800c6d                batterydata
+                0x0000000000800d3b       0x1a ./src/Main.o
+                0x0000000000800d3b                batterydata
  .bss.batterypub
-                0x0000000000800c87        0xa ./src/Main.o
-                0x0000000000800c87                batterypub
- .bss.imudata   0x0000000000800c91       0x3a ./src/Main.o
-                0x0000000000800c91                imudata
- .bss.imupub    0x0000000000800ccb        0xa ./src/Main.o
-                0x0000000000800ccb                imupub
+                0x0000000000800d55        0xa ./src/Main.o
+                0x0000000000800d55                batterypub
+ .bss.imudata   0x0000000000800d5f       0x3a ./src/Main.o
+                0x0000000000800d5f                imudata
+ .bss.imupub    0x0000000000800d99        0xa ./src/Main.o
+                0x0000000000800d99                imupub
  .bss.servodata
-                0x0000000000800cd5       0x1b ./src/Main.o
-                0x0000000000800cd5                servodata
- .bss.servopub  0x0000000000800cf0        0xa ./src/Main.o
-                0x0000000000800cf0                servopub
- .bss.seq       0x0000000000800cfa        0x4 ./src/Main.o
-                0x0000000000800cfa                seq
+                0x0000000000800da3       0x1b ./src/Main.o
+                0x0000000000800da3                servodata
+ .bss.servopub  0x0000000000800dbe        0xa ./src/Main.o
+                0x0000000000800dbe                servopub
+ .bss.seq       0x0000000000800dc8        0x4 ./src/Main.o
+                0x0000000000800dc8                seq
  .bss.nextCommTime
-                0x0000000000800cfe        0x4 ./src/Main.o
-                0x0000000000800cfe                nextCommTime
+                0x0000000000800dcc        0x4 ./src/Main.o
+                0x0000000000800dcc                nextCommTime
  .bss.publishSettingsDump
-                0x0000000000800d02        0x1 ./src/Main.o
-                0x0000000000800d02                publishSettingsDump
+                0x0000000000800dd0        0x1 ./src/Main.o
+                0x0000000000800dd0                publishSettingsDump
  .bss.leftMotorSetting
-                0x0000000000800d03        0x4 ./src/Main.o
-                0x0000000000800d03                leftMotorSetting
+                0x0000000000800dd1        0x4 ./src/Main.o
+                0x0000000000800dd1                leftMotorSetting
  .bss.rightMotorSetting
-                0x0000000000800d07        0x4 ./src/Main.o
-                0x0000000000800d07                rightMotorSetting
- .bss.drivesub  0x0000000000800d0b       0x24 ./src/Main.o
-                0x0000000000800d0b                drivesub
+                0x0000000000800dd5        0x4 ./src/Main.o
+                0x0000000000800dd5                rightMotorSetting
+ .bss.drivesub  0x0000000000800dd9       0x24 ./src/Main.o
+                0x0000000000800dd9                drivesub
  .bss.enablesub
-                0x0000000000800d2f        0xe ./src/Main.o
-                0x0000000000800d2f                enablesub
- .bss.servosub  0x0000000000800d3d       0x25 ./src/Main.o
-                0x0000000000800d3d                servosub
+                0x0000000000800dfd        0xe ./src/Main.o
+                0x0000000000800dfd                enablesub
+ .bss.servosub  0x0000000000800e0b       0x25 ./src/Main.o
+                0x0000000000800e0b                servosub
  .bss._ZZ4mainE3inc
-                0x0000000000800d62        0x1 ./src/Main.o
+                0x0000000000800e30        0x1 ./src/Main.o
  .bss._ZZ4mainE4fade
-                0x0000000000800d63        0x4 ./src/Main.o
+                0x0000000000800e31        0x4 ./src/Main.o
+ .bss._ZZN3IMU16Drift_correctionEvE14Scaled_Omega_I
+                0x0000000000800e35        0xc ./src/Main.o
+ .bss._ZZN3IMU16Drift_correctionEvE14Scaled_Omega_P
+                0x0000000000800e41        0xc ./src/Main.o
  .bss.rx_buffer
-                0x0000000000800d67       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800d67                rx_buffer
+                0x0000000000800e4d       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800e4d                rx_buffer
  .bss.tx_buffer
-                0x0000000000800dab       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800dab                tx_buffer
+                0x0000000000800e91       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800e91                tx_buffer
  .bss.rx_buffer1
-                0x0000000000800def       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800def                rx_buffer1
+                0x0000000000800ed5       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800ed5                rx_buffer1
  .bss.tx_buffer1
-                0x0000000000800e33       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800e33                tx_buffer1
+                0x0000000000800f19       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800f19                tx_buffer1
  .bss.rx_buffer2
-                0x0000000000800e77       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800e77                rx_buffer2
+                0x0000000000800f5d       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800f5d                rx_buffer2
  .bss.tx_buffer2
-                0x0000000000800ebb       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800ebb                tx_buffer2
+                0x0000000000800fa1       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800fa1                tx_buffer2
  .bss.rx_buffer3
-                0x0000000000800eff       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800eff                rx_buffer3
+                0x0000000000800fe5       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000800fe5                rx_buffer3
  .bss.tx_buffer3
-                0x0000000000800f43       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800f43                tx_buffer3
- .bss.Serial    0x0000000000800f87       0x1f /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800f87                Serial
- .bss.Serial1   0x0000000000800fa6       0x1f /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800fa6                Serial1
- .bss.Serial2   0x0000000000800fc5       0x1f /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800fc5                Serial2
- .bss.Serial3   0x0000000000800fe4       0x1f /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
-                0x0000000000800fe4                Serial3
+                0x0000000000801029       0x44 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x0000000000801029                tx_buffer3
+ .bss.Serial    0x000000000080106d       0x1f /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x000000000080106d                Serial
+ .bss.Serial1   0x000000000080108c       0x1f /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x000000000080108c                Serial1
+ .bss.Serial2   0x00000000008010ab       0x1f /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000008010ab                Serial2
+ .bss.Serial3   0x00000000008010ca       0x1f /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(HardwareSerial.o)
+                0x00000000008010ca                Serial3
  .bss.timer0_overflow_count
-                0x0000000000801003        0x4 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
-                0x0000000000801003                timer0_overflow_count
+                0x00000000008010e9        0x4 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
+                0x00000000008010e9                timer0_overflow_count
  .bss.timer0_millis
-                0x0000000000801007        0x4 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
-                0x0000000000801007                timer0_millis
+                0x00000000008010ed        0x4 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
+                0x00000000008010ed                timer0_millis
  .bss.timer0_fract
-                0x000000000080100b        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
+                0x00000000008010f1        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(wiring.o)
  .bss._ZN7TwoWire8rxBufferE
-                0x000000000080100c       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x000000000080100c                _ZN7TwoWire8rxBufferE
+                0x00000000008010f2       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x00000000008010f2                _ZN7TwoWire8rxBufferE
  .bss._ZN7TwoWire13rxBufferIndexE
-                0x000000000080102c        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x000000000080102c                _ZN7TwoWire13rxBufferIndexE
+                0x0000000000801112        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x0000000000801112                _ZN7TwoWire13rxBufferIndexE
  .bss._ZN7TwoWire14rxBufferLengthE
-                0x000000000080102d        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x000000000080102d                _ZN7TwoWire14rxBufferLengthE
+                0x0000000000801113        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x0000000000801113                _ZN7TwoWire14rxBufferLengthE
  .bss._ZN7TwoWire9txAddressE
-                0x000000000080102e        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x000000000080102e                _ZN7TwoWire9txAddressE
+                0x0000000000801114        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x0000000000801114                _ZN7TwoWire9txAddressE
  .bss._ZN7TwoWire8txBufferE
-                0x000000000080102f       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x000000000080102f                _ZN7TwoWire8txBufferE
+                0x0000000000801115       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x0000000000801115                _ZN7TwoWire8txBufferE
  .bss._ZN7TwoWire13txBufferIndexE
-                0x000000000080104f        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x000000000080104f                _ZN7TwoWire13txBufferIndexE
+                0x0000000000801135        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x0000000000801135                _ZN7TwoWire13txBufferIndexE
  .bss._ZN7TwoWire14txBufferLengthE
-                0x0000000000801050        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000801050                _ZN7TwoWire14txBufferLengthE
+                0x0000000000801136        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x0000000000801136                _ZN7TwoWire14txBufferLengthE
  .bss._ZN7TwoWire12transmittingE
-                0x0000000000801051        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000801051                _ZN7TwoWire12transmittingE
- .bss.Wire      0x0000000000801052        0xc /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
-                0x0000000000801052                Wire
+                0x0000000000801137        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x0000000000801137                _ZN7TwoWire12transmittingE
+ .bss.Wire      0x0000000000801138        0xc /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Wire.o)
+                0x0000000000801138                Wire
  .bss.ServoCount
-                0x000000000080105e        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
-                0x000000000080105e                ServoCount
+                0x0000000000801144        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x0000000000801144                ServoCount
  .bss._ZL6servos
-                0x000000000080105f       0x90 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x0000000000801145       0x90 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
  .bss._ZL7Channel
-                0x00000000008010ef        0x4 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
+                0x00000000008011d5        0x4 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(Servo.o)
  .bss.twi_slarw
-                0x00000000008010f3        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x00000000008011d9        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_masterBufferIndex
-                0x00000000008010f4        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x00000000008011da        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_masterBufferLength
-                0x00000000008010f5        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x00000000008011db        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_masterBuffer
-                0x00000000008010f6       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x00000000008011dc       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_error
-                0x0000000000801116        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x00000000008011fc        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_state
-                0x0000000000801117        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x00000000008011fd        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_rxBufferIndex
-                0x0000000000801118        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x00000000008011fe        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_rxBuffer
-                0x0000000000801119       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x00000000008011ff       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_onSlaveReceive
-                0x0000000000801139        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x000000000080121f        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_txBufferIndex
-                0x000000000080113b        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000801221        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_txBufferLength
-                0x000000000080113c        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000801222        0x1 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_onSlaveTransmit
-                0x000000000080113d        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000801223        0x2 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  .bss.twi_txBuffer
-                0x000000000080113f       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
+                0x0000000000801225       0x20 /home/rbtying/robot/firmware/Arduino1.0/Debug/libArduino.a(twi.o)
  *(COMMON)
- COMMON         0x000000000080115f        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(malloc.o)
-                0x000000000080115f                __brkval
-                0x0000000000801161                __flp
-                0x0000000000801163                PROVIDE (__bss_end, .)
-                0x000000000000775e                __data_load_start = LOADADDR (.data)
-                0x0000000000007bba                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0000000000801245        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(malloc.o)
+                0x0000000000801245                __brkval
+                0x0000000000801247                __flp
+                0x0000000000801249                PROVIDE (__bss_end, .)
+                0x0000000000008eac                __data_load_start = LOADADDR (.data)
+                0x0000000000009354                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000801163        0x0
-                0x0000000000801163                PROVIDE (__noinit_start, .)
+.noinit         0x0000000000801249        0x0
+                0x0000000000801249                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0000000000801163                PROVIDE (__noinit_end, .)
-                0x0000000000801163                _end = .
-                0x0000000000801163                PROVIDE (__heap_start, .)
+                0x0000000000801249                PROVIDE (__noinit_end, .)
+                0x0000000000801249                _end = .
+                0x0000000000801249                PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
  *(.eeprom*)
@@ -3834,7 +3881,7 @@ servodata                                         ./src/Main.o
 servopub                                          ./src/Main.o
 servosub                                          ./src/Main.o
 setLEDs()                                         ./src/Main.o
-setMotor()                                        ./src/Main.o
+setMotor(bool)                                    ./src/Main.o
 setRGB(LED*, double, double, double)              ./src/Main.o
 sin                                               /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr6/libc.a(sin.o)
                                                   ./src/Main.o

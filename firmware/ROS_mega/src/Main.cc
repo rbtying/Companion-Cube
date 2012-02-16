@@ -27,7 +27,7 @@
 #include <devices/ShiftBrite.h>
 
 // Control
-#define TIME_INTERVAL 100 // 10 Hz
+#define TIME_INTERVAL 80 // 12.5 Hz
 #define COMM_INTERVAL 40 // 25 Hz
 #define LED_INTERVAL 10 // 100 Hz
 unsigned long nexTime = 0, cTime = 0, ledTime = 0;
@@ -88,17 +88,22 @@ void servocb(const std_msgs::UInt8MultiArray& msg) {
 }
 ros::Subscriber<std_msgs::UInt8MultiArray> servosub("servos", &servocb);
 
-void setMotor() {
-	if (leftMotorSetting == 0) {
-		m.SpeedM1(RB_ADDRESS, 1);
-	} else {
-		m.SpeedM1(RB_ADDRESS, leftMotorSetting);
-	}
+void setMotor(bool en = true) {
+	if (en) {
+		if (leftMotorSetting == 0) {
+			m.SpeedM1(RB_ADDRESS, 0);
+		} else {
+			m.SpeedM1(RB_ADDRESS, leftMotorSetting);
+		}
 
-	if (rightMotorSetting == 0) {
-		m.SpeedM2(RB_ADDRESS, 1);
+		if (rightMotorSetting == 0) {
+			m.SpeedM2(RB_ADDRESS, 1);
+		} else {
+			m.SpeedM2(RB_ADDRESS, rightMotorSetting);
+		}
 	} else {
-		m.SpeedM2(RB_ADDRESS, rightMotorSetting);
+		m.SpeedM1(RB_ADDRESS, 0);
+		m.SpeedM2(RB_ADDRESS, 0);
 	}
 	m.getSerial()->flush();
 }
@@ -234,9 +239,9 @@ int main() {
 	for (uint32_t loops = 0;; loops++) {
 		cTime = millis();
 
-		//		if (IMU::updateIMU()) {
-		//			IMU::printdata();
-		//		}
+		if (IMU::updateIMU()) {
+			//			IMU::printdata();
+		}
 
 		if (ctrl.enabled) {
 			if (!motorRelay.get()) {
@@ -250,7 +255,7 @@ int main() {
 			}
 		} else {
 			motorRelay.off();
-			m.DutyM1M2(RB_ADDRESS, 0, 0);
+			//			m.DutyM1M2(RB_ADDRESS, 0, 0);
 			leftMotorSetting = 0;
 			rightMotorSetting = 0;
 		}
@@ -267,7 +272,11 @@ int main() {
 			if (ctrl.enabled) {
 				setMotor();
 			} else {
-				m.DutyM1M2(RB_ADDRESS, 0, 0);
+				leftMotorSetting = 0;
+				rightMotorSetting = 0;
+
+				setMotor(false);
+				//				m.DutyM1M2(RB_ADDRESS, 0, 0);
 			}
 
 			nexTime = nexTime + TIME_INTERVAL;
@@ -282,23 +291,36 @@ int main() {
 		if (ledTime <= cTime) {
 			static double fade = 0.0;
 			static bool inc;
-			if (fade >= 0.3) {
+			if (fade >= 1.0) {
 				inc = false;
 			} else if (fade <= 0.0) {
 				inc = true;
 			}
 			fade += ((inc) ? (1) : (-1)) * 0.01;
 			if (!ctrl.enabled) {
-				setRGB(&ctrl.LED.left, fade, 0.0, 0.0);
-				setRGB(&ctrl.LED.right, fade, 0.0, 0.0);
-				setRGB(&ctrl.LED.front, fade, 0.0, 0.0);
-				setRGB(&ctrl.LED.back, fade, 0.0, 0.0);
+				setRGB(&ctrl.LED.left, fade * 0.3, 0.0, 0.0);
+				setRGB(&ctrl.LED.right, fade * 0.3, 0.0, 0.0);
+				setRGB(&ctrl.LED.front, fade * 0.3, 0.0, 0.0);
+				setRGB(&ctrl.LED.back, fade * 0.3, 0.0, 0.0);
 			} else {
-				setRGB(&ctrl.LED.left, 1.0, 0.0, 1.0);
-				setRGB(&ctrl.LED.right, 1.0, 0.0, 1.0);
+				double scaledLeft = ctrl.left.vel * ctrl.left.qp_to_m;
+				double scaledRight = ctrl.right.vel * ctrl.right.qp_to_m;
+				if (scaledLeft > 0.1) {
+					setRGB(&ctrl.LED.left, 0, 0, 1.0);
+				} else if (scaledLeft < -0.1) {
+					setRGB(&ctrl.LED.left, 1.0, 0, 0);
+				} else {
+					setRGB(&ctrl.LED.left, 1.0, 0, 1.0);
+				}
+				if (scaledRight > 0.1) {
+					setRGB(&ctrl.LED.right, 0, 0, 1.0);
+				} else if (scaledRight < -0.1) {
+					setRGB(&ctrl.LED.right, 1.0, 0, 0);
+				} else {
+					setRGB(&ctrl.LED.right, 1.0, 0, 1.0);
+				}
 				setRGB(&ctrl.LED.front, 1.0, 1.0, 1.0);
-				setRGB(&ctrl.LED.back, 1.0, 0.0, 0.0);
-
+				setRGB(&ctrl.LED.back, fade, 0.0, 0.0);
 			}
 			setLEDs();
 			ledTime = ledTime + LED_INTERVAL;
@@ -306,7 +328,7 @@ int main() {
 
 		if (!nh.connected()) {
 			ctrl.enabled = false;
-			m.DutyM1M2(RB_ADDRESS, 0, 0);
+			//			m.DutyM1M2(RB_ADDRESS, 0, 0);
 		}
 
 		// run serial event loop
