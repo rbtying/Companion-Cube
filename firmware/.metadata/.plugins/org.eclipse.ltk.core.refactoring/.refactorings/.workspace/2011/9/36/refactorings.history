@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/ROS_mini/src/lib/txOnlySerial.cc" element2="/ROS_mini/src/lib/txOnlySerial.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1314866786348"/>
-</session>

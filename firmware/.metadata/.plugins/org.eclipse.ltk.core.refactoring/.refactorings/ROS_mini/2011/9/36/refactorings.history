@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;ROS_mini/src/lib/FlexiTimer2.cpp&apos; to &apos;FlexiTimer2.cc&apos;" description="Rename resource &apos;FlexiTimer2.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/lib/FlexiTimer2.cpp" name="FlexiTimer2.cc" stamp="1315077035516" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;ROS_mini/src/lib/PowerMonitor.cpp&apos; to &apos;PowerMonitor.cc&apos;" description="Rename resource &apos;PowerMonitor.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/lib/PowerMonitor.cpp" name="PowerMonitor.cc" stamp="1315077042264" updateReferences="true"/>
-</session>
